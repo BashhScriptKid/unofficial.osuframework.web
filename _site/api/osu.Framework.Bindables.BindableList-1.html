@@ -1,0 +1,1610 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BindableList&lt;T&gt; | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BindableList&lt;T&gt; | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Bindables_BindableList_1.md&amp;value=---%0Auid%3A%20osu.Framework.Bindables.BindableList%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Bindables.BindableList`1">
+
+
+
+  <h1 id="osu_Framework_Bindables_BindableList_1" data-uid="osu.Framework.Bindables.BindableList`1" class="text-break">
+Class BindableList&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Bindables.html">Bindables</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BindableList&lt;T&gt; : IBindableList&lt;T&gt;, IReadOnlyList&lt;T&gt;, IReadOnlyCollection&lt;T&gt;, INotifyCollectionChanged, IBindable, ICanBeDisabled, IHasDefaultValue, IUnbindable, IHasDescription, IFormattable, IParseable, IList&lt;T&gt;, ICollection&lt;T&gt;, IEnumerable&lt;T&gt;, IList, ICollection, IEnumerable</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">BindableList&lt;T&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Bindables.IBindableList-1.html">IBindableList</a>&lt;T&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;T&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged">INotifyCollectionChanged</a></div>
+      <div><a class="xref" href="osu.Framework.Bindables.IBindable.html">IBindable</a></div>
+      <div><a class="xref" href="osu.Framework.Bindables.ICanBeDisabled.html">ICanBeDisabled</a></div>
+      <div><a class="xref" href="osu.Framework.Bindables.IHasDefaultValue.html">IHasDefaultValue</a></div>
+      <div><a class="xref" href="osu.Framework.Bindables.IUnbindable.html">IUnbindable</a></div>
+      <div><a class="xref" href="osu.Framework.Bindables.IHasDescription.html">IHasDescription</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a></div>
+      <div><a class="xref" href="osu.Framework.Bindables.IParseable.html">IParseable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;T&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ilist">IList</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.ienumerable">IEnumerable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_GetValuesInOrder__1_System_Collections_Generic_IEnumerable___0__">EnumExtensions.GetValuesInOrder&lt;T&gt;(IEnumerable&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__">EnumerableExtensions.ForEach&lt;T&gt;(IEnumerable&lt;T&gt;, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetNext__1_System_Collections_Generic_IEnumerable___0____0_">EnumerableExtensions.GetNext&lt;T&gt;(IEnumerable&lt;T&gt;, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetPrevious__1_System_Collections_Generic_IEnumerable___0____0_">EnumerableExtensions.GetPrevious&lt;T&gt;(IEnumerable&lt;T&gt;, T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.FormattableExtensions.html#osu_Framework_Extensions_FormattableExtensions_ToString_System_IFormattable_System_IFormatProvider_">FormattableExtensions.ToString(IFormattable, IFormatProvider)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.html#osu_Framework_Extensions_LocalisationExtensions_LocalisableStringExtensions_ToLocalisableString_System_IFormattable_System_String_">LocalisableStringExtensions.ToLocalisableString(IFormattable, string?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Bindables_BindableList_1__ctor_" data-uid="osu.Framework.Bindables.BindableList`1.#ctor*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1__ctor_System_Collections_Generic_IEnumerable__0__" data-uid="osu.Framework.Bindables.BindableList`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+  BindableList(IEnumerable&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>, optionally adding the items of the given collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BindableList(IEnumerable&lt;T&gt; items = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>items</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>The items that are going to be contained in the newly created <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_BindTarget_" data-uid="osu.Framework.Bindables.BindableList`1.BindTarget*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_BindTarget" data-uid="osu.Framework.Bindables.BindableList`1.BindTarget">
+  BindTarget
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L612"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An alias of <a class="xref" href="osu.Framework.Bindables.BindableList-1.html#osu_Framework_Bindables_BindableList_1_BindTo_osu_Framework_Bindables_BindableList__0__">BindTo(BindableList&lt;T&gt;)</a> provided for use in object initializer scenarios.
+Passes the provided value as the foreign (more permanent) bindable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IBindableList&lt;T&gt; BindTarget { set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.IBindableList-1.html">IBindableList</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_Count_" data-uid="osu.Framework.Bindables.BindableList`1.Count*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_Count" data-uid="osu.Framework.Bindables.BindableList`1.Count">
+  Count
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L382"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of elements in the collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of elements in the collection.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_Description_" data-uid="osu.Framework.Bindables.BindableList`1.Description*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_Description" data-uid="osu.Framework.Bindables.BindableList`1.Description">
+  Description
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L533"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The description for this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Description { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_Disabled_" data-uid="osu.Framework.Bindables.BindableList`1.Disabled*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_Disabled" data-uid="osu.Framework.Bindables.BindableList`1.Disabled">
+  Disabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L459"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> has been disabled. When disabled, attempting to change the contents of this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> will result in an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Disabled { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_IsDefault_" data-uid="osu.Framework.Bindables.BindableList`1.IsDefault*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_IsDefault" data-uid="osu.Framework.Bindables.BindableList`1.IsDefault">
+  IsDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L691"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check whether this object has its default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_IsReadOnly_" data-uid="osu.Framework.Bindables.BindableList`1.IsReadOnly*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_IsReadOnly" data-uid="osu.Framework.Bindables.BindableList`1.IsReadOnly">
+  IsReadOnly
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection&lt;T&gt;</a> is read-only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection&lt;T&gt;</a> is read-only; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_IsSynchronized_" data-uid="osu.Framework.Bindables.BindableList`1.IsSynchronized*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_IsSynchronized" data-uid="osu.Framework.Bindables.BindableList`1.IsSynchronized">
+  IsSynchronized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L383"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating whether access to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a> is synchronized (thread safe).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSynchronized { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if access to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a> is synchronized (thread safe); otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_Item_" data-uid="osu.Framework.Bindables.BindableList`1.Item*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_Item_System_Int32_" data-uid="osu.Framework.Bindables.BindableList`1.Item(System.Int32)">
+  this[int]
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the item at an index in this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T this[int index] { get; set; }</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the item.</p>
+</dd>
+  </dl>
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when setting a value while this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> is <a class="xref" href="osu.Framework.Bindables.BindableList-1.html#osu_Framework_Bindables_BindableList_1_Disabled">Disabled</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_SyncRoot_" data-uid="osu.Framework.Bindables.BindableList`1.SyncRoot*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_SyncRoot" data-uid="osu.Framework.Bindables.BindableList`1.SyncRoot">
+  SyncRoot
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L384"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets an object that can be used to synchronize access to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object SyncRoot { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>An object that can be used to synchronize access to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.icollection">ICollection</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_Add_" data-uid="osu.Framework.Bindables.BindableList`1.Add*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_Add__0_" data-uid="osu.Framework.Bindables.BindableList`1.Add(`0)">
+  Add(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a single item to this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(T item)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <span class="xref">T</span></dt>
+    <dd><p>The item to be added.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> is <a class="xref" href="osu.Framework.Bindables.BindableList-1.html#osu_Framework_Bindables_BindableList_1_Disabled">Disabled</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_AddRange_" data-uid="osu.Framework.Bindables.BindableList`1.AddRange*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_AddRange_System_Collections_Generic_IEnumerable__0__" data-uid="osu.Framework.Bindables.BindableList`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+  AddRange(IEnumerable&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L544"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a collection of items to this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRange(IEnumerable&lt;T&gt; items)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>items</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>The collection whose items should be added to this collection.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if this collection is <a class="xref" href="osu.Framework.Bindables.BindableList-1.html#osu_Framework_Bindables_BindableList_1_Disabled">Disabled</a></p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_BinarySearch_" data-uid="osu.Framework.Bindables.BindableList`1.BinarySearch*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_BinarySearch__0_" data-uid="osu.Framework.Bindables.BindableList`1.BinarySearch(`0)">
+  BinarySearch(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L380"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BinarySearch(T item)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_BindCollectionChanged_" data-uid="osu.Framework.Bindables.BindableList`1.BindCollectionChanged*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_BindCollectionChanged_System_Collections_Specialized_NotifyCollectionChangedEventHandler_System_Boolean_" data-uid="osu.Framework.Bindables.BindableList`1.BindCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventHandler,System.Boolean)">
+  BindCollectionChanged(NotifyCollectionChangedEventHandler, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L644"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bind an action to <a class="xref" href="osu.Framework.Bindables.BindableList-1.html#osu_Framework_Bindables_BindableList_1_CollectionChanged">CollectionChanged</a> with the option of running the bound action once immediately
+with an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.notifycollectionchangedaction#system-collections-specialized-notifycollectionchangedaction-add">Add</a> event for the entire contents of this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindCollectionChanged(NotifyCollectionChangedEventHandler onChange, bool runOnceImmediately = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>onChange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.notifycollectionchangedeventhandler">NotifyCollectionChangedEventHandler</a></dt>
+    <dd><p>The action to perform when this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> changes.</p>
+</dd>
+    <dt><code>runOnceImmediately</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the action provided in <code class="paramref">onChange</code> should be run once immediately.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_BindDisabledChanged_" data-uid="osu.Framework.Bindables.BindableList`1.BindDisabledChanged*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_BindDisabledChanged_System_Action_System_Boolean__System_Boolean_" data-uid="osu.Framework.Bindables.BindableList`1.BindDisabledChanged(System.Action{System.Boolean},System.Boolean)">
+  BindDisabledChanged(Action&lt;bool&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L473"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Bind an action to <a class="xref" href="osu.Framework.Bindables.ICanBeDisabled.html#osu_Framework_Bindables_ICanBeDisabled_DisabledChanged">DisabledChanged</a> with the option of running the bound action once immediately.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindDisabledChanged(Action&lt;bool&gt; onChange, bool runOnceImmediately = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>onChange</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>The action to perform when <a class="xref" href="osu.Framework.Bindables.ICanBeDisabled.html#osu_Framework_Bindables_ICanBeDisabled_Disabled">Disabled</a> changes.</p>
+</dd>
+    <dt><code>runOnceImmediately</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the action provided in <code class="paramref">onChange</code> should be run once immediately.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_BindTo_" data-uid="osu.Framework.Bindables.BindableList`1.BindTo*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_BindTo_osu_Framework_Bindables_BindableList__0__" data-uid="osu.Framework.Bindables.BindableList`1.BindTo(osu.Framework.Bindables.BindableList{`0})">
+  BindTo(BindableList&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L621"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> to another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindTo(BindableList&lt;T&gt; them)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>them</code> <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList</a>&lt;T&gt;</dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> to be bound to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_Clear_" data-uid="osu.Framework.Bindables.BindableList`1.Clear*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_Clear" data-uid="osu.Framework.Bindables.BindableList`1.Clear">
+  Clear()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the contents of this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> is <a class="xref" href="osu.Framework.Bindables.BindableList-1.html#osu_Framework_Bindables_BindableList_1_Disabled">Disabled</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_Contains_" data-uid="osu.Framework.Bindables.BindableList`1.Contains*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_Contains__0_" data-uid="osu.Framework.Bindables.BindableList`1.Contains(`0)">
+  Contains(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if an item is in this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(T item)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <span class="xref">T</span></dt>
+    <dd><p>The item to locate in this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><pre><code class="lang-csharp">true</code></pre> if this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> contains the given item.
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_CopyTo_" data-uid="osu.Framework.Bindables.BindableList`1.CopyTo*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_CopyTo_System_Array_System_Int32_" data-uid="osu.Framework.Bindables.BindableList`1.CopyTo(System.Array,System.Int32)">
+  CopyTo(Array, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies the contents of this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> to the given array, starting at the given index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(Array array, int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.array">Array</a></dt>
+    <dd><p>The array that is the destination of the items copied from this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index at which the copying begins.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_CopyTo_" data-uid="osu.Framework.Bindables.BindableList`1.CopyTo*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_CopyTo__0___System_Int32_" data-uid="osu.Framework.Bindables.BindableList`1.CopyTo(`0[],System.Int32)">
+  CopyTo(T[], int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L369"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Copies the contents of this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> to the given array, starting at the given index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(T[] array, int arrayIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>array</code> T[]</dt>
+    <dd><p>The array that is the destination of the items copied from this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</dd>
+    <dt><code>arrayIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index at which the copying begins.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_CreateInstance_" data-uid="osu.Framework.Bindables.BindableList`1.CreateInstance*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_CreateInstance" data-uid="osu.Framework.Bindables.BindableList`1.CreateInstance">
+  CreateInstance()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L662"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new instance of this <a class="xref" href="osu.Framework.Bindables.IBindable.html">IBindable</a> for use in <a class="xref" href="osu.Framework.Bindables.IBindable.html#osu_Framework_Bindables_IBindable_GetBoundCopy">GetBoundCopy()</a>.
+The returned instance must have match the most derived type of the bindable class this method is implemented on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual BindableList&lt;T&gt; CreateInstance()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_GetBoundCopy_" data-uid="osu.Framework.Bindables.BindableList`1.GetBoundCopy*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_GetBoundCopy" data-uid="osu.Framework.Bindables.BindableList`1.GetBoundCopy">
+  GetBoundCopy()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L669"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve a new bindable instance weakly bound to the configuration backing.
+If you are further binding to events of a bindable retrieved using this method, ensure to hold
+a local reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BindableList&lt;T&gt; GetBoundCopy()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList</a>&lt;T&gt;</dt>
+    <dd><p>A weakly bound copy of the specified bindable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when attempting to instantiate a copy bindable that's not matching the original's type.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_GetEnumerator_" data-uid="osu.Framework.Bindables.BindableList`1.GetEnumerator*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_GetEnumerator" data-uid="osu.Framework.Bindables.BindableList`1.GetEnumerator">
+  GetEnumerator()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L675"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;T&gt;.Enumerator GetEnumerator()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;T&gt;.<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1.enumerator">Enumerator</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_IndexOf_" data-uid="osu.Framework.Bindables.BindableList`1.IndexOf*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_IndexOf__0_" data-uid="osu.Framework.Bindables.BindableList`1.IndexOf(`0)">
+  IndexOf(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the index of an item in this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int IndexOf(T item)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <span class="xref">T</span></dt>
+    <dd><p>The item to retrieve the index of.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the item, or -1 if the item isn't in this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_Insert_" data-uid="osu.Framework.Bindables.BindableList`1.Insert*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_Insert_System_Int32__0_" data-uid="osu.Framework.Bindables.BindableList`1.Insert(System.Int32,`0)">
+  Insert(int, T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inserts an item at the specified index in this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Insert(int index, T item)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index to insert at.</p>
+</dd>
+    <dt><code>item</code> <span class="xref">T</span></dt>
+    <dd><p>The item to insert.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> is <a class="xref" href="osu.Framework.Bindables.BindableList-1.html#osu_Framework_Bindables_BindableList_1_Disabled">Disabled</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_Move_" data-uid="osu.Framework.Bindables.BindableList`1.Move*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_Move_System_Int32_System_Int32_" data-uid="osu.Framework.Bindables.BindableList`1.Move(System.Int32,System.Int32)">
+  Move(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L569"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Moves an item in this collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Move(int oldIndex, int newIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>oldIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the item to move.</p>
+</dd>
+    <dt><code>newIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index specifying the new location of the item.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_Parse_" data-uid="osu.Framework.Bindables.BindableList`1.Parse*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_Parse_System_Object_System_IFormatProvider_" data-uid="osu.Framework.Bindables.BindableList`1.Parse(System.Object,System.IFormatProvider)">
+  Parse(object, IFormatProvider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parse an object into this instance.
+A collection holding items of type <code class="typeparamref">T</code> can be parsed. Null results in an empty <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Parse(object input, IFormatProvider provider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The input which is to be parsed.</p>
+</dd>
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd><p>Not valid for <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> is <a class="xref" href="osu.Framework.Bindables.BindableList-1.html#osu_Framework_Bindables_BindableList_1_Disabled">Disabled</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_Remove_" data-uid="osu.Framework.Bindables.BindableList`1.Remove*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_Remove__0_" data-uid="osu.Framework.Bindables.BindableList`1.Remove(`0)">
+  Remove(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes an item from this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Remove(T item)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>item</code> <span class="xref">T</span></dt>
+    <dd><p>The item to remove from this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><pre><code class="lang-csharp">true</code></pre> if the removal was successful.
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> is <a class="xref" href="osu.Framework.Bindables.BindableList-1.html#osu_Framework_Bindables_BindableList_1_Disabled">Disabled</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_RemoveAll_" data-uid="osu.Framework.Bindables.BindableList`1.RemoveAll*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_RemoveAll_System_Predicate__0__" data-uid="osu.Framework.Bindables.BindableList`1.RemoveAll(System.Predicate{`0})">
+  RemoveAll(Predicate&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes all items from this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> that match a predicate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RemoveAll(Predicate&lt;T&gt; match)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>match</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;T&gt;</dt>
+    <dd><p>The predicate.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_RemoveAt_" data-uid="osu.Framework.Bindables.BindableList`1.RemoveAt*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_RemoveAt_System_Int32_" data-uid="osu.Framework.Bindables.BindableList`1.RemoveAt(System.Int32)">
+  RemoveAt(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes an item at the specified index from this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAt(int index)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the item to remove.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown if this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> is <a class="xref" href="osu.Framework.Bindables.BindableList-1.html#osu_Framework_Bindables_BindableList_1_Disabled">Disabled</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_RemoveRange_" data-uid="osu.Framework.Bindables.BindableList`1.RemoveRange*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_RemoveRange_System_Int32_System_Int32_" data-uid="osu.Framework.Bindables.BindableList`1.RemoveRange(System.Int32,System.Int32)">
+  RemoveRange(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes <code class="paramref">count</code> items starting from <code class="paramref">index</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveRange(int index, int count)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index to start removing from.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The count of items to be removed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_ReplaceRange_" data-uid="osu.Framework.Bindables.BindableList`1.ReplaceRange*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_ReplaceRange_System_Int32_System_Int32_System_Collections_Generic_IEnumerable__0__" data-uid="osu.Framework.Bindables.BindableList`1.ReplaceRange(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{`0})">
+  ReplaceRange(int, int, IEnumerable&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Replaces <code class="paramref">count</code> items starting from <code class="paramref">index</code> with <code class="paramref">newItems</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReplaceRange(int index, int count, IEnumerable&lt;T&gt; newItems)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index to start removing from.</p>
+</dd>
+    <dt><code>count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The count of items to be removed.</p>
+</dd>
+    <dt><code>newItems</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;T&gt;</dt>
+    <dd><p>The items to replace the removed items with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_UnbindAll_" data-uid="osu.Framework.Bindables.BindableList`1.UnbindAll*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_UnbindAll" data-uid="osu.Framework.Bindables.BindableList`1.UnbindAll">
+  UnbindAll()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L514"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calls <a class="xref" href="osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindEvents">UnbindEvents()</a> and <a class="xref" href="osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindBindings">UnbindBindings()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnbindAll()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_UnbindBindings_" data-uid="osu.Framework.Bindables.BindableList`1.UnbindBindings*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_UnbindBindings" data-uid="osu.Framework.Bindables.BindableList`1.UnbindBindings">
+  UnbindBindings()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L505"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unbinds all bound <a class="xref" href="osu.Framework.Bindables.IBindable.html">IBindable</a>s.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnbindBindings()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_UnbindEvents_" data-uid="osu.Framework.Bindables.BindableList`1.UnbindEvents*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_UnbindEvents" data-uid="osu.Framework.Bindables.BindableList`1.UnbindEvents">
+  UnbindEvents()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L499"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unbinds all bound events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UnbindEvents()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableList_1_UnbindFrom_" data-uid="osu.Framework.Bindables.BindableList`1.UnbindFrom*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_UnbindFrom_osu_Framework_Bindables_IUnbindable_" data-uid="osu.Framework.Bindables.BindableList`1.UnbindFrom(osu.Framework.Bindables.IUnbindable)">
+  UnbindFrom(IUnbindable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L520"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unbinds ourselves from another <a class="xref" href="osu.Framework.Bindables.IBindable.html">IBindable</a> such that we stop receiving updates it.
+The other <a class="xref" href="osu.Framework.Bindables.IBindable.html">IBindable</a> will also stop receiving any events from us.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void UnbindFrom(IUnbindable them)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>them</code> <a class="xref" href="osu.Framework.Bindables.IUnbindable.html">IUnbindable</a></dt>
+    <dd><p>The other bindable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_CollectionChanged" data-uid="osu.Framework.Bindables.BindableList`1.CollectionChanged">
+  CollectionChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An event which is raised when this <a class="xref" href="osu.Framework.Bindables.BindableList-1.html">BindableList&lt;T&gt;</a> changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event NotifyCollectionChangedEventHandler CollectionChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.specialized.notifycollectionchangedeventhandler">NotifyCollectionChangedEventHandler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Bindables_BindableList_1_DisabledChanged" data-uid="osu.Framework.Bindables.BindableList`1.DisabledChanged">
+  DisabledChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An event which is raised when <a class="xref" href="osu.Framework.Bindables.BindableList-1.html#osu_Framework_Bindables_BindableList_1_Disabled">Disabled</a>'s state has changed (or manually via <a class="xref" href="osu.Framework.Bindables.BindableList-1.html#osu_Framework_Bindables_BindableList_1_triggerDisabledChange_System_Boolean_">triggerDisabledChange(bool)</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[CanBeNull]
+public event Action&lt;bool&gt; DisabledChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableList.cs/#L19" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

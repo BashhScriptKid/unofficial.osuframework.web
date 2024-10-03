@@ -1,0 +1,3002 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GameHost | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GameHost | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Platform_GameHost.md&amp;value=---%0Auid%3A%20osu.Framework.Platform.GameHost%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Platform.GameHost">
+
+
+
+  <h1 id="osu_Framework_Platform_GameHost" data-uid="osu.Framework.Platform.GameHost" class="text-break">
+Class GameHost  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Platform.html">Platform</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class GameHost : IIpcHost, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">GameHost</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Platform.IIpcHost.html">IIpcHost</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Platform.SDLGameHost.html">SDLGameHost</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Platform_GameHost__ctor_" data-uid="osu.Framework.Platform.GameHost.#ctor*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost__ctor_System_String_osu_Framework_HostOptions_" data-uid="osu.Framework.Platform.GameHost.#ctor(System.String,osu.Framework.HostOptions)">
+  GameHost(string, HostOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected GameHost(string gameName, HostOptions options = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="osu.Framework.HostOptions.html">HostOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="osu_Framework_Platform_GameHost_AllowScreenSuspension" data-uid="osu.Framework.Platform.GameHost.AllowScreenSuspension">
+  AllowScreenSuspension
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disable any system level timers that might dim or turn off the screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly AggregateBindable&lt;bool&gt; AllowScreenSuspension</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.AggregateBindable-1.html">AggregateBindable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_AllowScreenSuspension_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>To preserve battery life on mobile devices, this should be left on whenever possible.</p>
+</div>
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_GameHost_IsActive" data-uid="osu.Framework.Platform.GameHost.IsActive">
+  IsActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the <a class="xref" href="osu.Framework.Platform.IWindow.html">IWindow</a> is active (in the foreground).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly IBindable&lt;bool&gt; IsActive</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.IBindable-1.html">IBindable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_GameHost_PerformanceLogging" data-uid="osu.Framework.Platform.GameHost.PerformanceLogging">
+  PerformanceLogging
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Bindable&lt;bool&gt; PerformanceLogging</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Platform_GameHost_AllowBenchmarkUnlimitedFrames_" data-uid="osu.Framework.Platform.GameHost.AllowBenchmarkUnlimitedFrames*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_AllowBenchmarkUnlimitedFrames" data-uid="osu.Framework.Platform.GameHost.AllowBenchmarkUnlimitedFrames">
+  AllowBenchmarkUnlimitedFrames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether &quot;unlimited&quot; frame limiter should be allowed to exceed sane limits.
+Only use this for benchmarking purposes (see <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_maximum_sane_fps">maximum_sane_fps</a> for further reasoning).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowBenchmarkUnlimitedFrames { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_AudioThread_" data-uid="osu.Framework.Platform.GameHost.AudioThread*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_AudioThread" data-uid="osu.Framework.Platform.GameHost.AudioThread">
+  AudioThread
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AudioThread AudioThread { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Threading.AudioThread.html">AudioThread</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_AvailableInputHandlers_" data-uid="osu.Framework.Platform.GameHost.AvailableInputHandlers*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_AvailableInputHandlers" data-uid="osu.Framework.Platform.GameHost.AvailableInputHandlers">
+  AvailableInputHandlers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1392"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ImmutableArray&lt;InputHandler&gt; AvailableInputHandlers { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray</a>&lt;<a class="xref" href="osu.Framework.Input.Handlers.InputHandler.html">InputHandler</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CacheStorage_" data-uid="osu.Framework.Platform.GameHost.CacheStorage*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CacheStorage" data-uid="osu.Framework.Platform.GameHost.CacheStorage">
+  CacheStorage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An auxiliary cache storage which is fixed in the default game directory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Storage CacheStorage { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.Storage.html">Storage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CanExit_" data-uid="osu.Framework.Platform.GameHost.CanExit*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CanExit" data-uid="osu.Framework.Platform.GameHost.CanExit">
+  CanExit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this host can exit (mobile platforms, for instance, do not support exiting the app).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CanExit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_CanExit_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Also see <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CanSuspendToBackground">CanSuspendToBackground</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CanSuspendToBackground_" data-uid="osu.Framework.Platform.GameHost.CanSuspendToBackground*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CanSuspendToBackground" data-uid="osu.Framework.Platform.GameHost.CanSuspendToBackground">
+  CanSuspendToBackground
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this host can suspend and minimize to background.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CanSuspendToBackground { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_CanSuspendToBackground_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This and <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SuspendToBackground">SuspendToBackground()</a> are an alternative way to exit on hosts that have <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CanExit">CanExit</a><code>false</code>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CapsLockEnabled_" data-uid="osu.Framework.Platform.GameHost.CapsLockEnabled*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CapsLockEnabled" data-uid="osu.Framework.Platform.GameHost.CapsLockEnabled">
+  CapsLockEnabled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If caps-lock is enabled on the system, false if not overwritten by a subclass</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool CapsLockEnabled { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Config_" data-uid="osu.Framework.Platform.GameHost.Config*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Config" data-uid="osu.Framework.Platform.GameHost.Config">
+  Config
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected FrameworkConfigManager Config { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Configuration.FrameworkConfigManager.html">FrameworkConfigManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_DebugConfig_" data-uid="osu.Framework.Platform.GameHost.DebugConfig*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_DebugConfig" data-uid="osu.Framework.Platform.GameHost.DebugConfig">
+  DebugConfig
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected FrameworkDebugConfigManager DebugConfig { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Configuration.FrameworkDebugConfigManager.html">FrameworkDebugConfigManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Dependencies_" data-uid="osu.Framework.Platform.GameHost.Dependencies*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Dependencies" data-uid="osu.Framework.Platform.GameHost.Dependencies">
+  Dependencies
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DependencyContainer Dependencies { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Allocation.DependencyContainer.html">DependencyContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_DrawThread_" data-uid="osu.Framework.Platform.GameHost.DrawThread*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_DrawThread" data-uid="osu.Framework.Platform.GameHost.DrawThread">
+  DrawThread
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DrawThread DrawThread { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Threading.DrawThread.html">DrawThread</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_ExecutionState_" data-uid="osu.Framework.Platform.GameHost.ExecutionState*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_ExecutionState" data-uid="osu.Framework.Platform.GameHost.ExecutionState">
+  ExecutionState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L612"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExecutionState ExecutionState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.ExecutionState.html">ExecutionState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_FullPath_" data-uid="osu.Framework.Platform.GameHost.FullPath*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_FullPath" data-uid="osu.Framework.Platform.GameHost.FullPath">
+  FullPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string FullPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_InitialFileSelectorPath_" data-uid="osu.Framework.Platform.GameHost.InitialFileSelectorPath*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_InitialFileSelectorPath" data-uid="osu.Framework.Platform.GameHost.InitialFileSelectorPath">
+  InitialFileSelectorPath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The default initial path when requesting a user to select a file/folder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string InitialFileSelectorPath { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_InitialFileSelectorPath_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Provides a sane starting point for user-accessible storage.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_InputThread_" data-uid="osu.Framework.Platform.GameHost.InputThread*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_InputThread" data-uid="osu.Framework.Platform.GameHost.InputThread">
+  InputThread
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputThread InputThread { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Threading.InputThread.html">InputThread</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_IsPrimaryInstance_" data-uid="osu.Framework.Platform.GameHost.IsPrimaryInstance*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_IsPrimaryInstance" data-uid="osu.Framework.Platform.GameHost.IsPrimaryInstance">
+  IsPrimaryInstance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>For IPC messaging purposes, whether this <a class="xref" href="osu.Framework.Platform.GameHost.html">GameHost</a> is the primary (bound) host.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool IsPrimaryInstance { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_MaximumDrawHz_" data-uid="osu.Framework.Platform.GameHost.MaximumDrawHz*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_MaximumDrawHz" data-uid="osu.Framework.Platform.GameHost.MaximumDrawHz">
+  MaximumDrawHz
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The target number of draw frames per second when the game window is active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MaximumDrawHz { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_MaximumDrawHz_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A value of 0 is treated the same as &quot;unlimited&quot; or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.maxvalue">MaxValue</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_MaximumInactiveHz_" data-uid="osu.Framework.Platform.GameHost.MaximumInactiveHz*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_MaximumInactiveHz" data-uid="osu.Framework.Platform.GameHost.MaximumInactiveHz">
+  MaximumInactiveHz
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The target number of updates per second when the game window is inactive.
+This is applied to all threads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MaximumInactiveHz { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_MaximumInactiveHz_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A value of 0 is treated the same as &quot;unlimited&quot; or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.maxvalue">MaxValue</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_MaximumUpdateHz_" data-uid="osu.Framework.Platform.GameHost.MaximumUpdateHz*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_MaximumUpdateHz" data-uid="osu.Framework.Platform.GameHost.MaximumUpdateHz">
+  MaximumUpdateHz
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The target number of update frames per second when the game window is active.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double MaximumUpdateHz { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_MaximumUpdateHz_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>A value of 0 is treated the same as &quot;unlimited&quot; or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double.maxvalue">MaxValue</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Name_" data-uid="osu.Framework.Platform.GameHost.Name*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Name" data-uid="osu.Framework.Platform.GameHost.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The name of the game to be hosted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_OnScreenKeyboardOverlapsGameWindow_" data-uid="osu.Framework.Platform.GameHost.OnScreenKeyboardOverlapsGameWindow*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_OnScreenKeyboardOverlapsGameWindow" data-uid="osu.Framework.Platform.GameHost.OnScreenKeyboardOverlapsGameWindow">
+  OnScreenKeyboardOverlapsGameWindow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the on screen keyboard covers a portion of the game window when presented to the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool OnScreenKeyboardOverlapsGameWindow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Options_" data-uid="osu.Framework.Platform.GameHost.Options*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Options" data-uid="osu.Framework.Platform.GameHost.Options">
+  Options
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NotNull]
+public HostOptions Options { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.HostOptions.html">HostOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_PlatformKeyBindings_" data-uid="osu.Framework.Platform.GameHost.PlatformKeyBindings*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_PlatformKeyBindings" data-uid="osu.Framework.Platform.GameHost.PlatformKeyBindings">
+  PlatformKeyBindings
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1453"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Defines the platform-specific key bindings that will be used by <a class="xref" href="osu.Framework.Input.PlatformActionContainer.html">PlatformActionContainer</a>.
+Should be overridden per-platform to provide native key bindings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;KeyBinding&gt; PlatformKeyBindings { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="osu.Framework.Input.Bindings.KeyBinding.html">KeyBinding</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Renderer_" data-uid="osu.Framework.Platform.GameHost.Renderer*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Renderer" data-uid="osu.Framework.Platform.GameHost.Renderer">
+  Renderer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IRenderer Renderer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_RendererInfo_" data-uid="osu.Framework.Platform.GameHost.RendererInfo*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_RendererInfo" data-uid="osu.Framework.Platform.GameHost.RendererInfo">
+  RendererInfo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RendererInfo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_RequireWindowExists_" data-uid="osu.Framework.Platform.GameHost.RequireWindowExists*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_RequireWindowExists" data-uid="osu.Framework.Platform.GameHost.RequireWindowExists">
+  RequireWindowExists
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Window">Window</a> needs to be non-null for startup to succeed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool RequireWindowExists { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_ResolvedRenderer_" data-uid="osu.Framework.Platform.GameHost.ResolvedRenderer*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_ResolvedRenderer" data-uid="osu.Framework.Platform.GameHost.ResolvedRenderer">
+  ResolvedRenderer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L831"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The renderer which the game host is currently running with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RendererType ResolvedRenderer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Configuration.RendererType.html">RendererType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_ResolvedRenderer_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is similar to <a class="xref" href="osu.Framework.Platform.IGraphicsSurface.html#osu_Framework_Platform_IGraphicsSurface_Type">Type</a> except that this is expressed as a <a class="xref" href="osu.Framework.Configuration.RendererType.html">RendererType</a> rather than a <a class="xref" href="osu.Framework.Platform.GraphicsSurfaceType.html">GraphicsSurfaceType</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_SceneGraphClock_" data-uid="osu.Framework.Platform.GameHost.SceneGraphClock*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_SceneGraphClock" data-uid="osu.Framework.Platform.GameHost.SceneGraphClock">
+  SceneGraphClock
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The clock which is to be used by the scene graph (will be assigned to <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Root">Root</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IFrameBasedClock SceneGraphClock { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Timing.IFrameBasedClock.html">IFrameBasedClock</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Storage_" data-uid="osu.Framework.Platform.GameHost.Storage*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Storage" data-uid="osu.Framework.Platform.GameHost.Storage">
+  Storage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The main storage as proposed by the host game.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Storage Storage { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.Storage.html">Storage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Threads_" data-uid="osu.Framework.Platform.GameHost.Threads*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Threads" data-uid="osu.Framework.Platform.GameHost.Threads">
+  Threads
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;GameThread&gt; Threads { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="osu.Framework.Threading.GameThread.html">GameThread</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_UpdateThread_" data-uid="osu.Framework.Platform.GameHost.UpdateThread*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_UpdateThread" data-uid="osu.Framework.Platform.GameHost.UpdateThread">
+  UpdateThread
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GameThread UpdateThread { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Threading.GameThread.html">GameThread</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_UserStoragePaths_" data-uid="osu.Framework.Platform.GameHost.UserStoragePaths*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_UserStoragePaths" data-uid="osu.Framework.Platform.GameHost.UserStoragePaths">
+  UserStoragePaths
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>All valid user storage paths in order of usage priority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;string&gt; UserStoragePaths { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Window_" data-uid="osu.Framework.Platform.GameHost.Window*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Window" data-uid="osu.Framework.Platform.GameHost.Window">
+  Window
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IWindow Window { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.IWindow.html">IWindow</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Platform_GameHost_ChooseAndSetupRenderer_" data-uid="osu.Framework.Platform.GameHost.ChooseAndSetupRenderer*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_ChooseAndSetupRenderer" data-uid="osu.Framework.Platform.GameHost.ChooseAndSetupRenderer">
+  ChooseAndSetupRenderer()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L880"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ChooseAndSetupRenderer()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Collect_" data-uid="osu.Framework.Platform.GameHost.Collect*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Collect" data-uid="osu.Framework.Platform.GameHost.Collect">
+  Collect()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs a GC collection and frees all framework caches.
+This is a blocking call and should not be invoked during periods of user activity unless memory is critical.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Collect()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CreateAvailableInputHandlers_" data-uid="osu.Framework.Platform.GameHost.CreateAvailableInputHandlers*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CreateAvailableInputHandlers" data-uid="osu.Framework.Platform.GameHost.CreateAvailableInputHandlers">
+  CreateAvailableInputHandlers()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1390"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct all input handlers for this host. The order here decides the priority given to handlers, with the earliest occurring having higher priority.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IEnumerable&lt;InputHandler&gt; CreateAvailableInputHandlers()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="osu.Framework.Input.Handlers.InputHandler.html">InputHandler</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CreateClipboard_" data-uid="osu.Framework.Platform.GameHost.CreateClipboard*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CreateClipboard" data-uid="osu.Framework.Platform.GameHost.CreateClipboard">
+  CreateClipboard()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Clipboard CreateClipboard()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.Clipboard.html">Clipboard</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CreateGLRenderer_" data-uid="osu.Framework.Platform.GameHost.CreateGLRenderer*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CreateGLRenderer" data-uid="osu.Framework.Platform.GameHost.CreateGLRenderer">
+  CreateGLRenderer()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IRenderer CreateGLRenderer()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CreateReadableKeyCombinationProvider_" data-uid="osu.Framework.Platform.GameHost.CreateReadableKeyCombinationProvider*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CreateReadableKeyCombinationProvider" data-uid="osu.Framework.Platform.GameHost.CreateReadableKeyCombinationProvider">
+  CreateReadableKeyCombinationProvider()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ReadableKeyCombinationProvider CreateReadableKeyCombinationProvider()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.ReadableKeyCombinationProvider.html">ReadableKeyCombinationProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CreateTextInput_" data-uid="osu.Framework.Platform.GameHost.CreateTextInput*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CreateTextInput" data-uid="osu.Framework.Platform.GameHost.CreateTextInput">
+  CreateTextInput()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1394"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual TextInputSource CreateTextInput()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.TextInputSource.html">TextInputSource</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CreateTextureLoaderStore_" data-uid="osu.Framework.Platform.GameHost.CreateTextureLoaderStore*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CreateTextureLoaderStore_osu_Framework_IO_Stores_IResourceStore_System_Byte____" data-uid="osu.Framework.Platform.GameHost.CreateTextureLoaderStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]})">
+  CreateTextureLoaderStore(IResourceStore&lt;byte[]&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1508"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a texture loader store based on an underlying data store.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IResourceStore&lt;TextureUpload&gt; CreateTextureLoaderStore(IResourceStore&lt;byte[]&gt; underlyingStore)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>underlyingStore</code> <a class="xref" href="osu.Framework.IO.Stores.IResourceStore-1.html">IResourceStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;</dt>
+    <dd><p>The underlying provider of texture data (in arbitrary image formats).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.IO.Stores.IResourceStore-1.html">IResourceStore</a>&lt;<a class="xref" href="osu.Framework.Graphics.Textures.TextureUpload.html">TextureUpload</a>&gt;</dt>
+    <dd><p>A texture loader store.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CreateThreadRunner_" data-uid="osu.Framework.Platform.GameHost.CreateThreadRunner*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CreateThreadRunner_osu_Framework_Threading_InputThread_" data-uid="osu.Framework.Platform.GameHost.CreateThreadRunner(osu.Framework.Threading.InputThread)">
+  CreateThreadRunner(InputThread)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1524"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates the <a class="xref" href="osu.Framework.Platform.ThreadRunner.html">ThreadRunner</a> to run the threads of this <a class="xref" href="osu.Framework.Platform.GameHost.html">GameHost</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ThreadRunner CreateThreadRunner(InputThread mainThread)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>mainThread</code> <a class="xref" href="osu.Framework.Threading.InputThread.html">InputThread</a></dt>
+    <dd><p>The main thread.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.ThreadRunner.html">ThreadRunner</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Platform.ThreadRunner.html">ThreadRunner</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CreateVideoDecoder_" data-uid="osu.Framework.Platform.GameHost.CreateVideoDecoder*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CreateVideoDecoder_System_IO_Stream_" data-uid="osu.Framework.Platform.GameHost.CreateVideoDecoder(System.IO.Stream)">
+  CreateVideoDecoder(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1517"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a <a class="xref" href="osu.Framework.Graphics.Video.VideoDecoder.html">VideoDecoder</a> with the given stream. May be overridden by platforms that require a different
+decoder implementation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual VideoDecoder CreateVideoDecoder(Stream stream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a> to decode.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Video.VideoDecoder.html">VideoDecoder</a></dt>
+    <dd><p>An instance of <a class="xref" href="osu.Framework.Graphics.Video.VideoDecoder.html">VideoDecoder</a> initialised with the given stream.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_CreateWindow_" data-uid="osu.Framework.Platform.GameHost.CreateWindow*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_CreateWindow_osu_Framework_Platform_GraphicsSurfaceType_" data-uid="osu.Framework.Platform.GameHost.CreateWindow(osu.Framework.Platform.GraphicsSurfaceType)">
+  CreateWindow(GraphicsSurfaceType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates the game window for the host.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IWindow CreateWindow(GraphicsSurfaceType preferredSurface)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>preferredSurface</code> <a class="xref" href="osu.Framework.Platform.GraphicsSurfaceType.html">GraphicsSurfaceType</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.IWindow.html">IWindow</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Dispose_" data-uid="osu.Framework.Platform.GameHost.Dispose*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Dispose" data-uid="osu.Framework.Platform.GameHost.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1441"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Dispose_" data-uid="osu.Framework.Platform.GameHost.Dispose*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Dispose_System_Boolean_" data-uid="osu.Framework.Platform.GameHost.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1402"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_DrawFrame_" data-uid="osu.Framework.Platform.GameHost.DrawFrame*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_DrawFrame" data-uid="osu.Framework.Platform.GameHost.DrawFrame">
+  DrawFrame()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L490"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DrawFrame()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Exit_" data-uid="osu.Framework.Platform.GameHost.Exit*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Exit" data-uid="osu.Framework.Platform.GameHost.Exit">
+  Exit()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L631"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schedules the game to exit in the next frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Exit()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_Exit_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Consider using <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SuspendToBackground">SuspendToBackground()</a> on mobile platforms that can't exit normally.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_GetClipboard_" data-uid="osu.Framework.Platform.GameHost.GetClipboard*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_GetClipboard" data-uid="osu.Framework.Platform.GameHost.GetClipboard">
+  GetClipboard()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Resolve Clipboard via DI.&quot;)]
+public Clipboard GetClipboard()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.Clipboard.html">Clipboard</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_GetDefaultGameStorage_" data-uid="osu.Framework.Platform.GameHost.GetDefaultGameStorage*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_GetDefaultGameStorage" data-uid="osu.Framework.Platform.GameHost.GetDefaultGameStorage">
+  GetDefaultGameStorage()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1073"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finds the default <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Storage">Storage</a> for the game to be used if <a class="xref" href="osu.Framework.Game.html#osu_Framework_Game_CreateStorage_osu_Framework_Platform_GameHost_osu_Framework_Platform_Storage_">CreateStorage(GameHost, Storage)</a> is not overridden.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Storage GetDefaultGameStorage()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.Storage.html">Storage</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Storage">Storage</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_GetPreferredRenderersForCurrentPlatform_" data-uid="osu.Framework.Platform.GameHost.GetPreferredRenderersForCurrentPlatform*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_GetPreferredRenderersForCurrentPlatform" data-uid="osu.Framework.Platform.GameHost.GetPreferredRenderersForCurrentPlatform">
+  GetPreferredRenderersForCurrentPlatform()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L836"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>All valid <a class="xref" href="osu.Framework.Configuration.RendererType.html">RendererType</a>s for the current platform, in order of how stable and performant they are deemed to be.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;RendererType&gt; GetPreferredRenderersForCurrentPlatform()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="osu.Framework.Configuration.RendererType.html">RendererType</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_GetStorage_" data-uid="osu.Framework.Platform.GameHost.GetStorage*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_GetStorage_System_String_" data-uid="osu.Framework.Platform.GameHost.GetStorage(System.String)">
+  GetStorage(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve a storage for the specified location.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Storage GetStorage(string path)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The absolute path to be used as a root for the storage.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.Storage.html">Storage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_OnActivated_" data-uid="osu.Framework.Platform.GameHost.OnActivated*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_OnActivated" data-uid="osu.Framework.Platform.GameHost.OnActivated">
+  OnActivated()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L445"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnActivated()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_OnDeactivated_" data-uid="osu.Framework.Platform.GameHost.OnDeactivated*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_OnDeactivated" data-uid="osu.Framework.Platform.GameHost.OnDeactivated">
+  OnDeactivated()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L447"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnDeactivated()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_OnExitRequested_" data-uid="osu.Framework.Platform.GameHost.OnExitRequested*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_OnExitRequested" data-uid="osu.Framework.Platform.GameHost.OnExitRequested">
+  OnExitRequested()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L449"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnExitRequested()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_OnExited_" data-uid="osu.Framework.Platform.GameHost.OnExited*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_OnExited" data-uid="osu.Framework.Platform.GameHost.OnExited">
+  OnExited()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L451"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void OnExited()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_OnMessageReceived_" data-uid="osu.Framework.Platform.GameHost.OnMessageReceived*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_OnMessageReceived_osu_Framework_Platform_IpcMessage_" data-uid="osu.Framework.Platform.GameHost.OnMessageReceived(osu.Framework.Platform.IpcMessage)">
+  OnMessageReceived(IpcMessage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IpcMessage OnMessageReceived(IpcMessage message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="osu.Framework.Platform.IpcMessage.html">IpcMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.IpcMessage.html">IpcMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_OpenFileExternally_" data-uid="osu.Framework.Platform.GameHost.OpenFileExternally*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_OpenFileExternally_System_String_" data-uid="osu.Framework.Platform.GameHost.OpenFileExternally(System.String)">
+  OpenFileExternally(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests that a file or folder be opened externally with an associated application, if available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool OpenFileExternally(string filename)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The absolute path to the file which should be opened.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the file was successfully opened.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_OpenFileExternally_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Some platforms do not support interacting with files externally (ie. mobile or sandboxed platforms), check the return value to discern whether it succeeded.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_OpenUrlExternally_" data-uid="osu.Framework.Platform.GameHost.OpenUrlExternally*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_OpenUrlExternally_System_String_" data-uid="osu.Framework.Platform.GameHost.OpenUrlExternally(System.String)">
+  OpenUrlExternally(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests that a URL be opened externally in a web browser, if available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void OpenUrlExternally(string url)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>url</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The URL of the page which should be opened.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_PerformExit_" data-uid="osu.Framework.Platform.GameHost.PerformExit*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_PerformExit_System_Boolean_" data-uid="osu.Framework.Platform.GameHost.PerformExit(System.Boolean)">
+  PerformExit(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L657"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schedules the game to exit in the next frame (or immediately if <code class="paramref">immediately</code> is true).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void PerformExit(bool immediately)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>immediately</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>If true, exits the game immediately.  If false (default), schedules the game to exit in the next frame.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_PerformExit_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Will never be called if <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CanExit">CanExit</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_PresentFileExternally_" data-uid="osu.Framework.Platform.GameHost.PresentFileExternally*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_PresentFileExternally_System_String_" data-uid="osu.Framework.Platform.GameHost.PresentFileExternally(System.String)">
+  PresentFileExternally(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Requests to present a file externally in the platform's native file browser.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool PresentFileExternally(string filename)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The absolute path to the file/folder to be shown in its parent folder.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the file was successfully presented.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_PresentFileExternally_System_String__examples">Examples</h4>
+  <p>"C:\Windows\explorer.exe" -&gt; opens 'C:\Windows' and highlights 'explorer.exe' in the window.</p>
+<p>"C:\Windows\System32" -&gt; opens 'C:\Windows' and highlights 'System32' in the window.</p>
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_PresentFileExternally_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This will open the parent folder and, (if available) highlight the file.
+Some platforms do not support interacting with files externally (ie. mobile or sandboxed platforms), check the return value to discern whether it succeeded.</p>
+<p>If a folder path is provided to this method, it will prefer highlighting the folder in the parent folder, rather than showing the contents.
+To display the contents of a folder, use <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OpenFileExternally_System_String_">OpenFileExternally(string)</a> instead.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_RegisterThread_" data-uid="osu.Framework.Platform.GameHost.RegisterThread*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_RegisterThread_osu_Framework_Threading_GameThread_" data-uid="osu.Framework.Platform.GameHost.RegisterThread(osu.Framework.Threading.GameThread)">
+  RegisterThread(GameThread)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Register a thread to be monitored and tracked by this <a class="xref" href="osu.Framework.Platform.GameHost.html">GameHost</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterThread(GameThread thread)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>thread</code> <a class="xref" href="osu.Framework.Threading.GameThread.html">GameThread</a></dt>
+    <dd><p>The thread.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_ResetInputHandlers_" data-uid="osu.Framework.Platform.GameHost.ResetInputHandlers*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_ResetInputHandlers" data-uid="osu.Framework.Platform.GameHost.ResetInputHandlers">
+  ResetInputHandlers()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset all input handlers' settings to a default state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetInputHandlers()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Resume_" data-uid="osu.Framework.Platform.GameHost.Resume*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Resume" data-uid="osu.Framework.Platform.GameHost.Resume">
+  Resume()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resumes all of the current paused threads after <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Suspend">Suspend()</a> was called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Resume()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Run_" data-uid="osu.Framework.Platform.GameHost.Run*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Run_osu_Framework_Game_" data-uid="osu.Framework.Platform.GameHost.Run(osu.Framework.Game)">
+  Run(Game)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L685"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Run(Game game)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>game</code> <a class="xref" href="osu.Framework.Game.html">Game</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_SendMessageAsync_" data-uid="osu.Framework.Platform.GameHost.SendMessageAsync*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_SendMessageAsync_osu_Framework_Platform_IpcMessage_" data-uid="osu.Framework.Platform.GameHost.SendMessageAsync(osu.Framework.Platform.IpcMessage)">
+  SendMessageAsync(IpcMessage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Send a message to the IPC server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Task SendMessageAsync(IpcMessage message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="osu.Framework.Platform.IpcMessage.html">IpcMessage</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_SetupConfig_" data-uid="osu.Framework.Platform.GameHost.SetupConfig*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_SetupConfig_System_Collections_Generic_IDictionary_osu_Framework_Configuration_FrameworkSetting_System_Object__" data-uid="osu.Framework.Platform.GameHost.SetupConfig(System.Collections.Generic.IDictionary{osu.Framework.Configuration.FrameworkSetting,System.Object})">
+  SetupConfig(IDictionary&lt;FrameworkSetting, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetupConfig(IDictionary&lt;FrameworkSetting, object&gt; defaultOverrides)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>defaultOverrides</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="osu.Framework.Configuration.FrameworkSetting.html">FrameworkSetting</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_SetupForRun_" data-uid="osu.Framework.Platform.GameHost.SetupForRun*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_SetupForRun" data-uid="osu.Framework.Platform.GameHost.SetupForRun">
+  SetupForRun()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Prepare this game host for <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Run_osu_Framework_Game_">Run(Game)</a>.
+<remarks><a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Storage">Storage</a> is available here.
+</remarks></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetupForRun()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_SetupRendererAndWindow_" data-uid="osu.Framework.Platform.GameHost.SetupRendererAndWindow*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_SetupRendererAndWindow_System_String_osu_Framework_Platform_GraphicsSurfaceType_" data-uid="osu.Framework.Platform.GameHost.SetupRendererAndWindow(System.String,osu.Framework.Platform.GraphicsSurfaceType)">
+  SetupRendererAndWindow(string, GraphicsSurfaceType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L984"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetupRendererAndWindow(string renderer, GraphicsSurfaceType surfaceType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderer</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>surfaceType</code> <a class="xref" href="osu.Framework.Platform.GraphicsSurfaceType.html">GraphicsSurfaceType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_SetupRendererAndWindow_" data-uid="osu.Framework.Platform.GameHost.SetupRendererAndWindow*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_SetupRendererAndWindow_osu_Framework_Graphics_Rendering_IRenderer_osu_Framework_Platform_GraphicsSurfaceType_" data-uid="osu.Framework.Platform.GameHost.SetupRendererAndWindow(osu.Framework.Graphics.Rendering.IRenderer,osu.Framework.Platform.GraphicsSurfaceType)">
+  SetupRendererAndWindow(IRenderer, GraphicsSurfaceType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1003"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetupRendererAndWindow(IRenderer renderer, GraphicsSurfaceType surfaceType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd></dd>
+    <dt><code>surfaceType</code> <a class="xref" href="osu.Framework.Platform.GraphicsSurfaceType.html">GraphicsSurfaceType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Suspend_" data-uid="osu.Framework.Platform.GameHost.Suspend*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Suspend" data-uid="osu.Framework.Platform.GameHost.Suspend">
+  Suspend()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L1104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Pauses all active threads. Call <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Resume">Resume()</a> to resume execution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Suspend()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_SuspendToBackground_" data-uid="osu.Framework.Platform.GameHost.SuspendToBackground*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_SuspendToBackground" data-uid="osu.Framework.Platform.GameHost.SuspendToBackground">
+  SuspendToBackground()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L645"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Suspends and minimizes the game to background.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool SuspendToBackground()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><code>true</code> if the game was successfully suspended and minimized.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_SuspendToBackground_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is provided as an alternative to <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Exit">Exit()</a> on hosts that can't exit (see <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CanExit">CanExit</a>).
+Should only be called if <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CanSuspendToBackground">CanSuspendToBackground</a> is <code>true</code>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_Swap_" data-uid="osu.Framework.Platform.GameHost.Swap*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_Swap" data-uid="osu.Framework.Platform.GameHost.Swap">
+  Swap()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L573"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Swap the buffers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Swap()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_TakeScreenshotAsync_" data-uid="osu.Framework.Platform.GameHost.TakeScreenshotAsync*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_TakeScreenshotAsync" data-uid="osu.Framework.Platform.GameHost.TakeScreenshotAsync">
+  TakeScreenshotAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L587"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Takes a screenshot of the game. The returned <span class="xref">SixLabors.ImageSharp.Image&lt;TPixel&gt;</span> must be disposed by the caller when applicable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Image&lt;Rgba32&gt;&gt; TakeScreenshotAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">Image</span>&lt;<span class="xref">Rgba32</span>&gt;&gt;</dt>
+    <dd><p>The screenshot as an <span class="xref">SixLabors.ImageSharp.Image&lt;TPixel&gt;</span>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_UnregisterThread_" data-uid="osu.Framework.Platform.GameHost.UnregisterThread*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_UnregisterThread_osu_Framework_Threading_GameThread_" data-uid="osu.Framework.Platform.GameHost.UnregisterThread(osu.Framework.Threading.GameThread)">
+  UnregisterThread(GameThread)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unregister a previously registered thread.<a class="xref" href="osu.Framework.Platform.GameHost.html">GameHost</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnregisterThread(GameThread thread)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>thread</code> <a class="xref" href="osu.Framework.Threading.GameThread.html">GameThread</a></dt>
+    <dd><p>The thread.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_GameHost_UpdateFrame_" data-uid="osu.Framework.Platform.GameHost.UpdateFrame*"></a>
+
+  <h3 id="osu_Framework_Platform_GameHost_UpdateFrame" data-uid="osu.Framework.Platform.GameHost.UpdateFrame">
+  UpdateFrame()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L462"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateFrame()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="osu_Framework_Platform_GameHost_Activated" data-uid="osu.Framework.Platform.GameHost.Activated">
+  Activated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the game window is activated. Always invoked from the update thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action Activated</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_GameHost_Deactivated" data-uid="osu.Framework.Platform.GameHost.Deactivated">
+  Deactivated
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the game window is deactivated. Always invoked from the update thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action Deactivated</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_GameHost_ExceptionThrown" data-uid="osu.Framework.Platform.GameHost.ExceptionThrown">
+  ExceptionThrown
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An unhandled exception was thrown. Return true to ignore and continue running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Func&lt;Exception, bool&gt; ExceptionThrown</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_GameHost_ExitRequested" data-uid="osu.Framework.Platform.GameHost.ExitRequested">
+  ExitRequested
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when an exit was requested. Always invoked from the update thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action ExitRequested</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_GameHost_ExitRequested_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Usually invoked when the window close (X) button or another platform-native exit action has been pressed.</p>
+</div>
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_GameHost_Exited" data-uid="osu.Framework.Platform.GameHost.Exited">
+  Exited
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action Exited</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_GameHost_MessageReceived" data-uid="osu.Framework.Platform.GameHost.MessageReceived">
+  MessageReceived
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when a message is received by this IPC server.
+Returns either a response in the form of an <a class="xref" href="osu.Framework.Platform.IpcMessage.html">IpcMessage</a>, or <code>null</code> for no response.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[CanBeNull]
+public event Func&lt;IpcMessage, IpcMessage&gt; MessageReceived</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="osu.Framework.Platform.IpcMessage.html">IpcMessage</a>, <a class="xref" href="osu.Framework.Platform.IpcMessage.html">IpcMessage</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/GameHost.cs/#L53" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

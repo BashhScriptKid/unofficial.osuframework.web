@@ -1,0 +1,1879 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+  commentId: T:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+  id: ShaderStorageBufferObjectStack`1
+  parent: osu.Framework.Graphics.Rendering
+  children:
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.Int32,System.Int32)
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Clear
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentBuffer
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentOffset
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Dispose
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Pop
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Push(`0)
+  langs:
+  - csharp
+  - vb
+  name: ShaderStorageBufferObjectStack<TData>
+  nameWithType: ShaderStorageBufferObjectStack<TData>
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ShaderStorageBufferObjectStack
+    path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+    startLine: 12
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Rendering
+  summary: >-
+    A wrapper around <xref href="osu.Framework.Graphics.Rendering.IShaderStorageBufferObject%601" data-throw-if-not-resolved="false"></xref> providing push/pop semantics for writing
+
+    an arbitrary amount of data to an unbounded set of shader storage buffer objects.
+  example: []
+  syntax:
+    content: 'public class ShaderStorageBufferObjectStack<TData> : IDisposable where TData : unmanaged, IEquatable<TData>'
+    typeParameters:
+    - id: TData
+    content.vb: Public Class ShaderStorageBufferObjectStack(Of TData As {Structure, IEquatable(Of TData)}) Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData)
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData)
+  name.vb: ShaderStorageBufferObjectStack(Of TData)
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentOffset
+  commentId: P:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentOffset
+  id: CurrentOffset
+  parent: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+  langs:
+  - csharp
+  - vb
+  name: CurrentOffset
+  nameWithType: ShaderStorageBufferObjectStack<TData>.CurrentOffset
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.CurrentOffset
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CurrentOffset
+    path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+    startLine: 18
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Rendering
+  summary: The index of the current item inside <xref href="osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack%601.CurrentBuffer" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public int CurrentOffset { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property CurrentOffset As Integer
+  overload: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentOffset*
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).CurrentOffset
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).CurrentOffset
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentBuffer
+  commentId: P:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentBuffer
+  id: CurrentBuffer
+  parent: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+  langs:
+  - csharp
+  - vb
+  name: CurrentBuffer
+  nameWithType: ShaderStorageBufferObjectStack<TData>.CurrentBuffer
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.CurrentBuffer
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CurrentBuffer
+    path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+    startLine: 23
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Rendering
+  summary: The buffer that contains the current object.
+  example: []
+  syntax:
+    content: public IShaderStorageBufferObject<TData> CurrentBuffer { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject{{TData}}
+    content.vb: Public ReadOnly Property CurrentBuffer As IShaderStorageBufferObject(Of TData)
+  overload: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentBuffer*
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).CurrentBuffer
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).CurrentBuffer
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.Int32,System.Int32)
+  commentId: M:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.Int32,System.Int32)
+  id: '#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.Int32,System.Int32)'
+  parent: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+  langs:
+  - csharp
+  - vb
+  name: ShaderStorageBufferObjectStack(IRenderer, int, int)
+  nameWithType: ShaderStorageBufferObjectStack<TData>.ShaderStorageBufferObjectStack(IRenderer, int, int)
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.ShaderStorageBufferObjectStack(osu.Framework.Graphics.Rendering.IRenderer, int, int)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+    startLine: 64
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Rendering
+  summary: Creates a new <xref href="osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public ShaderStorageBufferObjectStack(IRenderer renderer, int uboSize, int ssboSize)
+    parameters:
+    - id: renderer
+      type: osu.Framework.Graphics.Rendering.IRenderer
+      description: The <xref href="osu.Framework.Graphics.Rendering.IRenderer" data-throw-if-not-resolved="false"></xref>.
+    - id: uboSize
+      type: System.Int32
+      description: Must be at least 2. See <xref href="osu.Framework.Graphics.Rendering.IRenderer.CreateShaderStorageBufferObject%60%601(System.Int32%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref>
+    - id: ssboSize
+      type: System.Int32
+      description: Must be at least 2. See <xref href="osu.Framework.Graphics.Rendering.IRenderer.CreateShaderStorageBufferObject%60%601(System.Int32%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Sub New(renderer As IRenderer, uboSize As Integer, ssboSize As Integer)
+  overload: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.#ctor*
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).New(IRenderer, Integer, Integer)
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).New(osu.Framework.Graphics.Rendering.IRenderer, Integer, Integer)
+  name.vb: New(IRenderer, Integer, Integer)
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Push(`0)
+  commentId: M:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Push(`0)
+  id: Push(`0)
+  parent: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+  langs:
+  - csharp
+  - vb
+  name: Push(TData)
+  nameWithType: ShaderStorageBufferObjectStack<TData>.Push(TData)
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.Push(TData)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Push
+    path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+    startLine: 83
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Rendering
+  summary: Pushes a new item to this stack.
+  example: []
+  syntax:
+    content: public int Push(TData item)
+    parameters:
+    - id: item
+      type: '{TData}'
+      description: The item.
+    return:
+      type: System.Int32
+      description: The index inside the resulting buffer at which the item is located.
+    content.vb: Public Function Push(item As TData) As Integer
+  overload: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Push*
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).Push(TData)
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).Push(TData)
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Pop
+  commentId: M:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Pop
+  id: Pop
+  parent: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+  langs:
+  - csharp
+  - vb
+  name: Pop()
+  nameWithType: ShaderStorageBufferObjectStack<TData>.Pop()
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.Pop()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Pop
+    path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+    startLine: 153
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Rendering
+  summary: Pops the last item from the stack.
+  remarks: >-
+    This does not remove the item from the stack or the underlying buffer,
+
+    but adjusts <xref href="osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack%601.CurrentOffset" data-throw-if-not-resolved="false"></xref> and <xref href="osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack%601.CurrentBuffer" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Pop()
+    content.vb: Public Sub Pop()
+  overload: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Pop*
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).Pop()
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).Pop()
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Clear
+  commentId: M:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Clear
+  id: Clear
+  parent: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: ShaderStorageBufferObjectStack<TData>.Clear()
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.Clear()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Clear
+    path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+    startLine: 171
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Rendering
+  summary: Clears the stack. This should be called at the start of every frame to prevent runaway VRAM usage.
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Clear*
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).Clear()
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).Clear()
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Dispose
+  commentId: M:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Dispose
+  id: Dispose
+  parent: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: ShaderStorageBufferObjectStack<TData>.Dispose()
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.Dispose()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Dispose
+    path: osu.Framework/Graphics/Rendering/ShaderStorageBufferObjectStack.cs
+    startLine: 184
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Rendering
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).Dispose()
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).Dispose()
+references:
+- uid: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject`1
+  commentId: T:osu.Framework.Graphics.Rendering.IShaderStorageBufferObject`1
+  href: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject-1.html
+  name: IShaderStorageBufferObject<TData>
+  nameWithType: IShaderStorageBufferObject<TData>
+  fullName: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject<TData>
+  nameWithType.vb: IShaderStorageBufferObject(Of TData)
+  fullName.vb: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject(Of TData)
+  name.vb: IShaderStorageBufferObject(Of TData)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject`1
+    name: IShaderStorageBufferObject
+    href: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject`1
+    name: IShaderStorageBufferObject
+    href: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+- uid: osu.Framework.Graphics.Rendering
+  commentId: N:osu.Framework.Graphics.Rendering
+  href: osu.html
+  name: osu.Framework.Graphics.Rendering
+  nameWithType: osu.Framework.Graphics.Rendering
+  fullName: osu.Framework.Graphics.Rendering
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Rendering
+    name: Rendering
+    href: osu.Framework.Graphics.Rendering.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Rendering
+    name: Rendering
+    href: osu.Framework.Graphics.Rendering.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<ShaderStorageBufferObjectStack<TData>>(ShaderStorageBufferObjectStack<TData>)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<ShaderStorageBufferObjectStack<TData>>(ShaderStorageBufferObjectStack<TData>)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>>(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of ShaderStorageBufferObjectStack(Of TData))(ShaderStorageBufferObjectStack(Of TData))
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData))(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData))
+  name.vb: GetLocalisableDescription(Of ShaderStorageBufferObjectStack(Of TData))(ShaderStorageBufferObjectStack(Of TData))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0})
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0})
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<ShaderStorageBufferObjectStack<TData>>(ShaderStorageBufferObjectStack<TData>)
+  nameWithType: EnumerableExtensions.Yield<ShaderStorageBufferObjectStack<TData>>(ShaderStorageBufferObjectStack<TData>)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>>(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>)
+  nameWithType.vb: EnumerableExtensions.Yield(Of ShaderStorageBufferObjectStack(Of TData))(ShaderStorageBufferObjectStack(Of TData))
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData))(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData))
+  name.vb: Yield(Of ShaderStorageBufferObjectStack(Of TData))(ShaderStorageBufferObjectStack(Of TData))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0})
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0})
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<ShaderStorageBufferObjectStack<TData>>(ShaderStorageBufferObjectStack<TData>)
+  nameWithType: ObjectExtensions.AsNonNull<ShaderStorageBufferObjectStack<TData>>(ShaderStorageBufferObjectStack<TData>)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>>(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of ShaderStorageBufferObjectStack(Of TData))(ShaderStorageBufferObjectStack(Of TData))
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData))(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData))
+  name.vb: AsNonNull(Of ShaderStorageBufferObjectStack(Of TData))(ShaderStorageBufferObjectStack(Of TData))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0})
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0})
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<ShaderStorageBufferObjectStack<TData>>(ShaderStorageBufferObjectStack<TData>)
+  nameWithType: ObjectExtensions.IsNotNull<ShaderStorageBufferObjectStack<TData>>(ShaderStorageBufferObjectStack<TData>)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>>(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of ShaderStorageBufferObjectStack(Of TData))(ShaderStorageBufferObjectStack(Of TData))
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData))(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData))
+  name.vb: IsNotNull(Of ShaderStorageBufferObjectStack(Of TData))(ShaderStorageBufferObjectStack(Of TData))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0})
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0})
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<ShaderStorageBufferObjectStack<TData>>(ShaderStorageBufferObjectStack<TData>)
+  nameWithType: ObjectExtensions.IsNull<ShaderStorageBufferObjectStack<TData>>(ShaderStorageBufferObjectStack<TData>)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>>(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>)
+  nameWithType.vb: ObjectExtensions.IsNull(Of ShaderStorageBufferObjectStack(Of TData))(ShaderStorageBufferObjectStack(Of TData))
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData))(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData))
+  name.vb: IsNull(Of ShaderStorageBufferObjectStack(Of TData))(ShaderStorageBufferObjectStack(Of TData))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0})
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0})
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<ShaderStorageBufferObjectStack<TData>, TChild>(ShaderStorageBufferObjectStack<TData>, TChild)
+  nameWithType: ContainerExtensions.WithChild<ShaderStorageBufferObjectStack<TData>, TChild>(ShaderStorageBufferObjectStack<TData>, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>, TChild>(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of ShaderStorageBufferObjectStack(Of TData), TChild)(ShaderStorageBufferObjectStack(Of TData), TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData), TChild)(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData), TChild)
+  name.vb: WithChild(Of ShaderStorageBufferObjectStack(Of TData), TChild)(ShaderStorageBufferObjectStack(Of TData), TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0},``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0},``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<ShaderStorageBufferObjectStack<TData>, TChild>(ShaderStorageBufferObjectStack<TData>, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<ShaderStorageBufferObjectStack<TData>, TChild>(ShaderStorageBufferObjectStack<TData>, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>, TChild>(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of ShaderStorageBufferObjectStack(Of TData), TChild)(ShaderStorageBufferObjectStack(Of TData), IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData), TChild)(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData), System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of ShaderStorageBufferObjectStack(Of TData), TChild)(ShaderStorageBufferObjectStack(Of TData), IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0},System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0},System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<ShaderStorageBufferObjectStack<TData>, TChild>(ShaderStorageBufferObjectStack<TData>, TChild)
+  nameWithType: ContainerExtensions.Wrap<ShaderStorageBufferObjectStack<TData>, TChild>(ShaderStorageBufferObjectStack<TData>, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>, TChild>(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of ShaderStorageBufferObjectStack(Of TData), TChild)(ShaderStorageBufferObjectStack(Of TData), TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData), TChild)(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData), TChild)
+  name.vb: Wrap(Of ShaderStorageBufferObjectStack(Of TData), TChild)(ShaderStorageBufferObjectStack(Of TData), TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0},``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack{`0},``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentBuffer
+  commentId: P:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentBuffer
+  href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html#osu_Framework_Graphics_Rendering_ShaderStorageBufferObjectStack_1_CurrentBuffer
+  name: CurrentBuffer
+  nameWithType: ShaderStorageBufferObjectStack<TData>.CurrentBuffer
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.CurrentBuffer
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).CurrentBuffer
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).CurrentBuffer
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentOffset*
+  commentId: Overload:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentOffset
+  href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html#osu_Framework_Graphics_Rendering_ShaderStorageBufferObjectStack_1_CurrentOffset
+  name: CurrentOffset
+  nameWithType: ShaderStorageBufferObjectStack<TData>.CurrentOffset
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.CurrentOffset
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).CurrentOffset
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).CurrentOffset
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentBuffer*
+  commentId: Overload:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentBuffer
+  href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html#osu_Framework_Graphics_Rendering_ShaderStorageBufferObjectStack_1_CurrentBuffer
+  name: CurrentBuffer
+  nameWithType: ShaderStorageBufferObjectStack<TData>.CurrentBuffer
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.CurrentBuffer
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).CurrentBuffer
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).CurrentBuffer
+- uid: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject{{TData}}
+  commentId: T:osu.Framework.Graphics.Rendering.IShaderStorageBufferObject{``0}
+  parent: osu.Framework.Graphics.Rendering
+  definition: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject`1
+  href: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject-1.html
+  name: IShaderStorageBufferObject<TData>
+  nameWithType: IShaderStorageBufferObject<TData>
+  fullName: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject<TData>
+  nameWithType.vb: IShaderStorageBufferObject(Of TData)
+  fullName.vb: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject(Of TData)
+  name.vb: IShaderStorageBufferObject(Of TData)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject`1
+    name: IShaderStorageBufferObject
+    href: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject`1
+    name: IShaderStorageBufferObject
+    href: osu.Framework.Graphics.Rendering.IShaderStorageBufferObject-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+  commentId: T:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+  href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  name: ShaderStorageBufferObjectStack<TData>
+  nameWithType: ShaderStorageBufferObjectStack<TData>
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData)
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData)
+  name.vb: ShaderStorageBufferObjectStack(Of TData)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: <
+  - name: TData
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1
+    name: ShaderStorageBufferObjectStack
+    href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.IRenderer
+  commentId: T:osu.Framework.Graphics.Rendering.IRenderer
+  parent: osu.Framework.Graphics.Rendering
+  href: osu.Framework.Graphics.Rendering.IRenderer.html
+  name: IRenderer
+  nameWithType: IRenderer
+  fullName: osu.Framework.Graphics.Rendering.IRenderer
+- uid: osu.Framework.Graphics.Rendering.IRenderer.CreateShaderStorageBufferObject``1(System.Int32,System.Int32)
+  commentId: M:osu.Framework.Graphics.Rendering.IRenderer.CreateShaderStorageBufferObject``1(System.Int32,System.Int32)
+  isExternal: true
+  href: osu.Framework.Graphics.Rendering.IRenderer.html#osu_Framework_Graphics_Rendering_IRenderer_CreateShaderStorageBufferObject__1_System_Int32_System_Int32_
+  name: CreateShaderStorageBufferObject<TData>(int, int)
+  nameWithType: IRenderer.CreateShaderStorageBufferObject<TData>(int, int)
+  fullName: osu.Framework.Graphics.Rendering.IRenderer.CreateShaderStorageBufferObject<TData>(int, int)
+  nameWithType.vb: IRenderer.CreateShaderStorageBufferObject(Of TData)(Integer, Integer)
+  fullName.vb: osu.Framework.Graphics.Rendering.IRenderer.CreateShaderStorageBufferObject(Of TData)(Integer, Integer)
+  name.vb: CreateShaderStorageBufferObject(Of TData)(Integer, Integer)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Rendering.IRenderer.CreateShaderStorageBufferObject``1(System.Int32,System.Int32)
+    name: CreateShaderStorageBufferObject
+    href: osu.Framework.Graphics.Rendering.IRenderer.html#osu_Framework_Graphics_Rendering_IRenderer_CreateShaderStorageBufferObject__1_System_Int32_System_Int32_
+  - name: <
+  - name: TData
+  - name: '>'
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Rendering.IRenderer.CreateShaderStorageBufferObject``1(System.Int32,System.Int32)
+    name: CreateShaderStorageBufferObject
+    href: osu.Framework.Graphics.Rendering.IRenderer.html#osu_Framework_Graphics_Rendering_IRenderer_CreateShaderStorageBufferObject__1_System_Int32_System_Int32_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TData
+  - name: )
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.#ctor*
+  commentId: Overload:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.#ctor
+  href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html#osu_Framework_Graphics_Rendering_ShaderStorageBufferObjectStack_1__ctor_osu_Framework_Graphics_Rendering_IRenderer_System_Int32_System_Int32_
+  name: ShaderStorageBufferObjectStack
+  nameWithType: ShaderStorageBufferObjectStack<TData>.ShaderStorageBufferObjectStack
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.ShaderStorageBufferObjectStack
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).New
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).New
+  name.vb: New
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Push*
+  commentId: Overload:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Push
+  href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html#osu_Framework_Graphics_Rendering_ShaderStorageBufferObjectStack_1_Push__0_
+  name: Push
+  nameWithType: ShaderStorageBufferObjectStack<TData>.Push
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.Push
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).Push
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).Push
+- uid: '{TData}'
+  commentId: '!:TData'
+  definition: TData
+  name: TData
+  nameWithType: TData
+  fullName: TData
+- uid: TData
+  name: TData
+  nameWithType: TData
+  fullName: TData
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentOffset
+  commentId: P:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.CurrentOffset
+  href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html#osu_Framework_Graphics_Rendering_ShaderStorageBufferObjectStack_1_CurrentOffset
+  name: CurrentOffset
+  nameWithType: ShaderStorageBufferObjectStack<TData>.CurrentOffset
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.CurrentOffset
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).CurrentOffset
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).CurrentOffset
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Pop*
+  commentId: Overload:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Pop
+  href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html#osu_Framework_Graphics_Rendering_ShaderStorageBufferObjectStack_1_Pop
+  name: Pop
+  nameWithType: ShaderStorageBufferObjectStack<TData>.Pop
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.Pop
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).Pop
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).Pop
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Clear*
+  commentId: Overload:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Clear
+  href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html#osu_Framework_Graphics_Rendering_ShaderStorageBufferObjectStack_1_Clear
+  name: Clear
+  nameWithType: ShaderStorageBufferObjectStack<TData>.Clear
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.Clear
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).Clear
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).Clear
+- uid: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Dispose*
+  commentId: Overload:osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack`1.Dispose
+  href: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack-1.html#osu_Framework_Graphics_Rendering_ShaderStorageBufferObjectStack_1_Dispose
+  name: Dispose
+  nameWithType: ShaderStorageBufferObjectStack<TData>.Dispose
+  fullName: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack<TData>.Dispose
+  nameWithType.vb: ShaderStorageBufferObjectStack(Of TData).Dispose
+  fullName.vb: osu.Framework.Graphics.Rendering.ShaderStorageBufferObjectStack(Of TData).Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

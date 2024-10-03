@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>LocalisableString | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="LocalisableString | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework.wiki/blob/master/Localisation.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="localisablestring"><code>LocalisableString</code></h1>
+
+<p>Localisation in <code>osu-framework</code> revolves around the <code>LocalisableString</code> class, which UI controls and text destinations accept in place of <code>string</code>. This page explains the provided methods of interacting with <code>LocalisableString</code>, but further customisation is also possible by implementing <code>ILocalisableStringData</code> directly.</p>
+<h2 id="localisableformattablestring"><code>LocalisableFormattableString</code></h2>
+<p>Represents a string which can be formatted based on the currently selected locale, exposed in two methods and one extension method:</p>
+<ul>
+<li><p><code>LocalisableString.Format</code>, accepting a format string and a list of arguments designed in a similar fashion to <code>string.Format</code>:</p>
+<pre><code class="lang-csharp">// Text = string.Format(&quot;{0} + {1} = {2}&quot;, localisable1, localisable2, localisable3);
+Text = LocalisableString.Format(&quot;{0} + {1} = {2}&quot;, localisable1, localisable2, localisable3);
+</code></pre>
+</li>
+<li><p><code>LocalisableString.Interpolate</code>, accepting an interpolated string (<code>$&quot;...&quot;</code>):</p>
+<pre><code class="lang-csharp">// Text = $&quot;{localisable1} + {localisable2} = {localisable3}&quot;;
+Text = LocalisableString.Interpolate($&quot;{localisable1} + {localisable2} = {localisable3}&quot;);
+</code></pre>
+</li>
+<li><p><code>LocalisableStringExtensions.ToLocalisableString</code>, accepting an <code>IFormattable</code> object (e.g. number types, <code>DateTime</code>s, <code>TimeSpan</code>s, etc.) and a format string, in a similar fashion to <code>IFomrattable.ToString</code>:</p>
+<pre><code class="lang-csharp">// Text = formattable.ToString(&quot;N0&quot;);
+Text = formattable.ToLocalisableString(&quot;N0&quot;);
+</code></pre>
+</li>
+</ul>
+<h2 id="translatablestring"><code>TranslatableString</code></h2>
+<p>Represents a string which can be translated across different languages via a specific &quot;key&quot; that is used to look up on the <code>ILocalisationStore</code> associated with the locale.</p>
+<pre><code class="lang-csharp">Text = new TranslatableString(&quot;music_string_key&quot;, &quot;music&quot;);
+
+string Get(string lookup) // ILocalisationStore.Get(string)
+{
+    if (lookup == &quot;music_string_key&quot;)
+    {
+        switch (EffectiveCulture.Name)
+        {
+            case &quot;en&quot;: return &quot;music&quot;;
+            case &quot;ja&quot;: return &quot;音楽&quot;;
+            ...
+        }
+    }
+}
+</code></pre>
+<p>In addition, <code>TranslatableString</code>s support formatting, allowing for the translated strings to specify placeholder items which are replaced with the given arguments list, in a similar fashion to <code>string.Format</code>/<code>LocalisableString.Format</code>.</p>
+<pre><code class="lang-csharp">Text = new TranslatableString(&quot;music_string_key&quot;, &quot;{0} music&quot;, number.ToLocalisableString(&quot;0.00%&quot;));
+
+string Get(string lookup) // ILocalisationStore.Get(string)
+{
+    if (lookup == &quot;music_string_key&quot;)
+    {
+        switch (EffectiveCulture.Name)
+        {
+            case &quot;en&quot;: return &quot;{0} music&quot;;
+            case &quot;ja&quot;: return &quot;音楽 {0}&quot;;
+            ...
+        }
+    }
+}
+</code></pre>
+<h2 id="romanisablestring"><code>RomanisableString</code></h2>
+<p>Represents a unicode string that has a romanised variant, in which can be toggled on/off by the <code>FrameworkSetting.ShowUnicode</code> setting available in the config manager.</p>
+<pre><code class="lang-csharp">Text = new RomanisableString(&quot;音楽&quot;, &quot;ongaku&quot;);
+// FrameworkSetting.ShowUnicode == true: &quot;音楽&quot; is shown
+// FrameworkSetting.ShowUnicode == false: &quot;ongaku&quot; is shown
+</code></pre>
+<h2 id="casetransformablestring"><code>CaseTransformableString</code></h2>
+<p>Represents a string which accepts a <code>LocalisableString</code> and transforms it to the specified casing, exposed in a set of extension methods which accept either <code>LocalisableString</code> or <code>ILocalisableStringData</code> (string implementations):</p>
+<ul>
+<li><code>LocalisableStringExtensions.ToUpper</code>, which converts all characters of the input string to uppercase, using <code>TextInfo.ToUpper</code>.</li>
+<li><code>LocalisableStringExtensions.ToLower</code>, which converts all characters of the input string to lowercase, using <code>TextInfo.ToLower</code>.</li>
+<li><code>LocalisableStringExtensions.ToTitle</code>, which converts the first character of every word to uppercase while the rest to lowercase, using <code>TextInfo.ToTitleCase</code>.</li>
+</ul>
+<p>It's implemented in a way that allows it to build itself over a <code>LocalisableString</code> or any string implementation:</p>
+<pre><code class="lang-csharp">Text = LocalisableString.Format($&quot;{localisable1} -&gt; {localisable2}&quot;).ToUpper();
+Text = new RomanisableString(&quot;音楽&quot;, &quot;ongaku&quot;).ToTitle();
+...
+</code></pre>
+<h2 id="custom-string-implementations">Custom string implementations</h2>
+<p><code>LocalisableString</code> accepts any implementation that confronts to the <code>ILocalisableStringData</code> interface, in which it can retrieve the final localised string with.</p>
+<pre><code class="lang-csharp">    public class CustomLocalisableString : IEquatable&lt;CustomLocalisableString&gt;, ILocalisableStringData
+    {
+        public string GetLocalised(LocalisationParameters parameters)
+        {
+            return /* localisation logic */;
+        }
+
+        public bool Equals(CustomLocalisableString other)
+        {
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+
+            return /* equality */;
+        }
+
+        public bool Equals(ILocalisableStringData other) =&gt; other is CustomLocalisableString custom &amp;&amp; Equals(custom);
+        public override bool Equals(object? obj) =&gt; obj is CustomLocalisableString custom &amp;&amp; Equals(custom);
+
+        public override int GetHashCode() =&gt; /* hash code */;
+    }
+</code></pre>
+<h2 id="localisationparameters"><code>LocalisationParameters</code></h2>
+<p>String implementations require context to be able to localise the string. <code>LocalisationParameters</code> provide enough context to fit the need for the framework's own string implementations, but it can be built upon for custom string implementations.</p>
+<p>This can be achieved by creating a <code>LocalisationManager</code> subclass that overrides the <code>LocalisationParameters</code> factory method and calls <code>UpdateLocalisationParameters</code> to update the parameters:</p>
+<pre><code class="lang-csharp">    public class CustomLocalisationManager : LocalisationManager
+    {
+        private readonly IBindable&lt;int&gt; custom = new BindableInt();
+
+        public CustomLocalisationManager(FrameworkConfigManager frameworkConfig, CustomConfigManager config)
+            : base(frameworkConfig)
+        {
+            config.BindWith(CustomSetting.Custom, custom);
+            custom.BindValueChanged(_ =&gt; UpdateLocalisationParameters(), true);
+        }
+
+        protected override LocalisationParameters CreateLocalisationParameters() =&gt; new CustomLocalisationParameters(base.CreateLocalisationParameters(), custom.Value);
+
+        protected class CustomLocalisationParameters : LocalisationParameters
+        {
+            public readonly int Custom;
+
+            protected CustomLocalisationParameters(CustomLocalisationParameters parameters)
+                : base(parameters, parameters.Custom)
+            {
+            }
+
+            public CustomLocalisationParameters(LocalisationParameters parameters, int custom)
+                : base(parameters)
+            {
+                Custom = custom;
+            }
+        }
+    }
+</code></pre>
+<pre><code class="lang-csharp">        public string GetLocalised(LocalisationParameters parameters)
+        {
+            var customParameters = (CustomLocalisationParameters)parameters;
+            return /* localisation logic */;
+        }
+</code></pre>
+<h1 id="localisabledescriptionattribute"><code>LocalisableDescriptionAttribute</code></h1>
+<p>Represents an attribute for assigning localised description strings to classes/enums, similar to <code>DescriptionAttribute</code>.</p>
+<p>Since attributes in general only allow constant input, the <code>LocalisableString</code>s to use for the attribute must be stored statically in a public field or a property:</p>
+<pre><code class="lang-csharp">public static class Strings
+{
+    public static LocalisableString Class =&gt; ...;
+    public static LocalisableString EnumOne =&gt; ...;
+    public static LocalisableString EnumTwo =&gt; ...;
+    public static LocalisableString EnumThree =&gt; ...;
+}
+</code></pre>
+<p>The way <code>LocalisableDescriptionAttribute</code> works is by specifying the <code>Type</code> of the class containing the <code>LocalisableString</code> member, followed by the name of said member for lookup:</p>
+<pre><code class="lang-csharp">// [Description(&quot;Class&quot;)]
+[LocalisableDescription(typeof(Strings), nameof(Strings.Class))]
+public class ClassWithLocalisableDescription
+{
+}
+
+public enum EnumWithLocalisableDescription
+{
+    // [Description(&quot;One&quot;)]
+    [LocalisableDescription(typeof(Strings), nameof(Strings.EnumOne))]
+    One,
+
+    // [Description(&quot;Two&quot;)]
+    [LocalisableDescription(typeof(Strings), nameof(Strings.EnumTwo))]
+    Two,
+
+    // [Description(&quot;Three&quot;)]
+    [LocalisableDescription(typeof(Strings), nameof(Strings.EnumThree))]
+    Three,
+}
+</code></pre>
+<p>And in order to retrieve the description, use the extension method <code>ExtensionMethods.GetLocalisableDescription</code>:</p>
+<pre><code class="lang-csharp">// Text = classInstance.GetDescription();
+Text = classInstance.GetLocalisableDescription();
+// Text = enumValue.GetDescription();
+Text = enumValue.GetLocalisableDescription();
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework.wiki/blob/master/Localisation.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

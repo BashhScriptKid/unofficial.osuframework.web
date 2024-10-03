@@ -1,0 +1,2564 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Threading.GameThread
+  commentId: T:osu.Framework.Threading.GameThread
+  id: GameThread
+  parent: osu.Framework.Threading
+  children:
+  - osu.Framework.Threading.GameThread.ActiveHz
+  - osu.Framework.Threading.GameThread.Clock
+  - osu.Framework.Threading.GameThread.CurrentCulture
+  - osu.Framework.Threading.GameThread.Exit
+  - osu.Framework.Threading.GameThread.Exited
+  - osu.Framework.Threading.GameThread.InactiveHz
+  - osu.Framework.Threading.GameThread.IsActive
+  - osu.Framework.Threading.GameThread.IsCurrent
+  - osu.Framework.Threading.GameThread.Name
+  - osu.Framework.Threading.GameThread.OnExit
+  - osu.Framework.Threading.GameThread.OnInitialize
+  - osu.Framework.Threading.GameThread.OnNewFrame
+  - osu.Framework.Threading.GameThread.OnSuspended
+  - osu.Framework.Threading.GameThread.PrepareForWork
+  - osu.Framework.Threading.GameThread.Running
+  - osu.Framework.Threading.GameThread.Scheduler
+  - osu.Framework.Threading.GameThread.Start
+  - osu.Framework.Threading.GameThread.State
+  - osu.Framework.Threading.GameThread.SuffixedThreadNameFor(System.String)
+  - osu.Framework.Threading.GameThread.SynchronizationContext
+  - osu.Framework.Threading.GameThread.Thread
+  - osu.Framework.Threading.GameThread.UnhandledException
+  - osu.Framework.Threading.GameThread.WaitUntilInitialized
+  langs:
+  - csharp
+  - vb
+  name: GameThread
+  nameWithType: GameThread
+  fullName: osu.Framework.Threading.GameThread
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GameThread
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 20
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: A conceptual thread used for running game work. May or may not be backed by a native thread.
+  example: []
+  syntax:
+    content: public class GameThread
+    content.vb: Public Class GameThread
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - osu.Framework.Threading.AudioThread
+  - osu.Framework.Threading.DrawThread
+  - osu.Framework.Threading.InputThread
+  - osu.Framework.Threading.UpdateThread
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Threading.GameThread.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Threading.GameThread.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Threading.GameThread.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Threading.GameThread.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Threading.GameThread.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Threading.GameThread.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Threading.GameThread.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Threading.GameThread.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Threading.GameThread.Name
+  commentId: F:osu.Framework.Threading.GameThread.Name
+  id: Name
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: GameThread.Name
+  fullName: osu.Framework.Threading.GameThread.Name
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Name
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 28
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: The name of this thread.
+  example: []
+  syntax:
+    content: public readonly string Name
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Name As String
+- uid: osu.Framework.Threading.GameThread.IsActive
+  commentId: F:osu.Framework.Threading.GameThread.IsActive
+  id: IsActive
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: IsActive
+  nameWithType: GameThread.IsActive
+  fullName: osu.Framework.Threading.GameThread.IsActive
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: IsActive
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 33
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Whether the game is active (in the foreground).
+  example: []
+  syntax:
+    content: public readonly IBindable<bool> IsActive
+    return:
+      type: osu.Framework.Bindables.IBindable{System.Boolean}
+    content.vb: Public ReadOnly IsActive As IBindable(Of Boolean)
+- uid: osu.Framework.Threading.GameThread.State
+  commentId: P:osu.Framework.Threading.GameThread.State
+  id: State
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: GameThread.State
+  fullName: osu.Framework.Threading.GameThread.State
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: State
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 38
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: The current state of this thread.
+  example: []
+  syntax:
+    content: public IBindable<GameThreadState> State { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Bindables.IBindable{osu.Framework.Threading.GameThreadState}
+    content.vb: Public ReadOnly Property State As IBindable(Of GameThreadState)
+  overload: osu.Framework.Threading.GameThread.State*
+- uid: osu.Framework.Threading.GameThread.Running
+  commentId: P:osu.Framework.Threading.GameThread.Running
+  id: Running
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: Running
+  nameWithType: GameThread.Running
+  fullName: osu.Framework.Threading.GameThread.Running
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Running
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 45
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Whether this thread is currently running.
+  example: []
+  syntax:
+    content: public bool Running { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Running As Boolean
+  overload: osu.Framework.Threading.GameThread.Running*
+- uid: osu.Framework.Threading.GameThread.Exited
+  commentId: P:osu.Framework.Threading.GameThread.Exited
+  id: Exited
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: Exited
+  nameWithType: GameThread.Exited
+  fullName: osu.Framework.Threading.GameThread.Exited
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Exited
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 50
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Whether this thread is exited.
+  example: []
+  syntax:
+    content: public bool Exited { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Exited As Boolean
+  overload: osu.Framework.Threading.GameThread.Exited*
+- uid: osu.Framework.Threading.GameThread.IsCurrent
+  commentId: P:osu.Framework.Threading.GameThread.IsCurrent
+  id: IsCurrent
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: IsCurrent
+  nameWithType: GameThread.IsCurrent
+  fullName: osu.Framework.Threading.GameThread.IsCurrent
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: IsCurrent
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 55
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Whether currently executing on this thread (from the point of invocation).
+  example: []
+  syntax:
+    content: public virtual bool IsCurrent { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable ReadOnly Property IsCurrent As Boolean
+  overload: osu.Framework.Threading.GameThread.IsCurrent*
+- uid: osu.Framework.Threading.GameThread.Clock
+  commentId: P:osu.Framework.Threading.GameThread.Clock
+  id: Clock
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: Clock
+  nameWithType: GameThread.Clock
+  fullName: osu.Framework.Threading.GameThread.Clock
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Clock
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 60
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: The thread's clock. Responsible for timekeeping and throttling.
+  example: []
+  syntax:
+    content: public ThrottledFrameClock Clock { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Timing.ThrottledFrameClock
+    content.vb: Public ReadOnly Property Clock As ThrottledFrameClock
+  overload: osu.Framework.Threading.GameThread.Clock*
+- uid: osu.Framework.Threading.GameThread.Thread
+  commentId: P:osu.Framework.Threading.GameThread.Thread
+  id: Thread
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: Thread
+  nameWithType: GameThread.Thread
+  fullName: osu.Framework.Threading.GameThread.Thread
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Thread
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 68
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: >-
+    The current dedicated OS thread for this <xref href="osu.Framework.Threading.GameThread" data-throw-if-not-resolved="false"></xref>.
+
+    A value of <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> does not necessarily mean that this thread is not running;
+
+    in <xref href="osu.Framework.Platform.ExecutionMode.SingleThread" data-throw-if-not-resolved="false"></xref> execution mode <xref href="osu.Framework.Platform.ThreadRunner" data-throw-if-not-resolved="false"></xref> drives its <xref href="osu.Framework.Threading.GameThread" data-throw-if-not-resolved="false"></xref>s
+
+    manually and sequentially on the main OS thread of the game process.
+  example: []
+  syntax:
+    content: public Thread? Thread { get; }
+    parameters: []
+    return:
+      type: System.Threading.Thread
+    content.vb: Public Property Thread As Thread
+  overload: osu.Framework.Threading.GameThread.Thread*
+- uid: osu.Framework.Threading.GameThread.Scheduler
+  commentId: P:osu.Framework.Threading.GameThread.Scheduler
+  id: Scheduler
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: Scheduler
+  nameWithType: GameThread.Scheduler
+  fullName: osu.Framework.Threading.GameThread.Scheduler
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Scheduler
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 73
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: The thread's scheduler.
+  example: []
+  syntax:
+    content: public Scheduler Scheduler { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Threading.Scheduler
+    content.vb: Public ReadOnly Property Scheduler As Scheduler
+  overload: osu.Framework.Threading.GameThread.Scheduler*
+- uid: osu.Framework.Threading.GameThread.UnhandledException
+  commentId: F:osu.Framework.Threading.GameThread.UnhandledException
+  id: UnhandledException
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: UnhandledException
+  nameWithType: GameThread.UnhandledException
+  fullName: osu.Framework.Threading.GameThread.UnhandledException
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: UnhandledException
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 79
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: >-
+    Attach a handler to delegate responsibility for per-frame exceptions.
+
+    While attached, all exceptions will be caught and forwarded. Thread execution will continue indefinitely.
+  example: []
+  syntax:
+    content: public EventHandler<UnhandledExceptionEventArgs>? UnhandledException
+    return:
+      type: System.EventHandler{System.UnhandledExceptionEventArgs}
+    content.vb: Public UnhandledException As EventHandler(Of UnhandledExceptionEventArgs)
+- uid: osu.Framework.Threading.GameThread.SynchronizationContext
+  commentId: P:osu.Framework.Threading.GameThread.SynchronizationContext
+  id: SynchronizationContext
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: SynchronizationContext
+  nameWithType: GameThread.SynchronizationContext
+  fullName: osu.Framework.Threading.GameThread.SynchronizationContext
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: SynchronizationContext
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 84
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: A synchronisation context which posts to this thread.
+  example: []
+  syntax:
+    content: public SynchronizationContext SynchronizationContext { get; }
+    parameters: []
+    return:
+      type: System.Threading.SynchronizationContext
+    content.vb: Public ReadOnly Property SynchronizationContext As SynchronizationContext
+  overload: osu.Framework.Threading.GameThread.SynchronizationContext*
+- uid: osu.Framework.Threading.GameThread.CurrentCulture
+  commentId: P:osu.Framework.Threading.GameThread.CurrentCulture
+  id: CurrentCulture
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: CurrentCulture
+  nameWithType: GameThread.CurrentCulture
+  fullName: osu.Framework.Threading.GameThread.CurrentCulture
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CurrentCulture
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 89
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: The culture of this thread.
+  example: []
+  syntax:
+    content: public CultureInfo? CurrentCulture { get; set; }
+    parameters: []
+    return:
+      type: System.Globalization.CultureInfo
+    content.vb: Public Property CurrentCulture As CultureInfo
+  overload: osu.Framework.Threading.GameThread.CurrentCulture*
+- uid: osu.Framework.Threading.GameThread.ActiveHz
+  commentId: P:osu.Framework.Threading.GameThread.ActiveHz
+  id: ActiveHz
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: ActiveHz
+  nameWithType: GameThread.ActiveHz
+  fullName: osu.Framework.Threading.GameThread.ActiveHz
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ActiveHz
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 108
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: The target number of updates per second when the game window is active.
+  remarks: A value of 0 is treated the same as "unlimited" or <xref href="System.Double.MaxValue" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public double ActiveHz { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ActiveHz As Double
+  overload: osu.Framework.Threading.GameThread.ActiveHz*
+- uid: osu.Framework.Threading.GameThread.InactiveHz
+  commentId: P:osu.Framework.Threading.GameThread.InactiveHz
+  id: InactiveHz
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: InactiveHz
+  nameWithType: GameThread.InactiveHz
+  fullName: osu.Framework.Threading.GameThread.InactiveHz
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: InactiveHz
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 126
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: The target number of updates per second when the game window is inactive.
+  remarks: A value of 0 is treated the same as "unlimited" or <xref href="System.Double.MaxValue" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public double InactiveHz { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property InactiveHz As Double
+  overload: osu.Framework.Threading.GameThread.InactiveHz*
+- uid: osu.Framework.Threading.GameThread.OnNewFrame
+  commentId: E:osu.Framework.Threading.GameThread.OnNewFrame
+  id: OnNewFrame
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: OnNewFrame
+  nameWithType: GameThread.OnNewFrame
+  fullName: osu.Framework.Threading.GameThread.OnNewFrame
+  type: Event
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: OnNewFrame
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 152
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: The main work which is fired on each frame.
+  example: []
+  syntax:
+    content: protected event Action? OnNewFrame
+    return:
+      type: System.Action
+    content.vb: Protected Event OnNewFrame As Action
+- uid: osu.Framework.Threading.GameThread.WaitUntilInitialized
+  commentId: M:osu.Framework.Threading.GameThread.WaitUntilInitialized
+  id: WaitUntilInitialized
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: WaitUntilInitialized()
+  nameWithType: GameThread.WaitUntilInitialized()
+  fullName: osu.Framework.Threading.GameThread.WaitUntilInitialized()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: WaitUntilInitialized
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 186
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Block until this thread has entered an initialised state.
+  example: []
+  syntax:
+    content: public void WaitUntilInitialized()
+    content.vb: Public Sub WaitUntilInitialized()
+  overload: osu.Framework.Threading.GameThread.WaitUntilInitialized*
+- uid: osu.Framework.Threading.GameThread.SuffixedThreadNameFor(System.String)
+  commentId: M:osu.Framework.Threading.GameThread.SuffixedThreadNameFor(System.String)
+  id: SuffixedThreadNameFor(System.String)
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: SuffixedThreadNameFor(string)
+  nameWithType: GameThread.SuffixedThreadNameFor(string)
+  fullName: osu.Framework.Threading.GameThread.SuffixedThreadNameFor(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: SuffixedThreadNameFor
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 196
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Returns a string representation that is suffixed with a game thread identifier.
+  example: []
+  syntax:
+    content: public static string SuffixedThreadNameFor(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The content to suffix.
+    return:
+      type: System.String
+      description: A suffixed string.
+    content.vb: Public Shared Function SuffixedThreadNameFor(name As String) As String
+  overload: osu.Framework.Threading.GameThread.SuffixedThreadNameFor*
+  nameWithType.vb: GameThread.SuffixedThreadNameFor(String)
+  fullName.vb: osu.Framework.Threading.GameThread.SuffixedThreadNameFor(String)
+  name.vb: SuffixedThreadNameFor(String)
+- uid: osu.Framework.Threading.GameThread.Start
+  commentId: M:osu.Framework.Threading.GameThread.Start
+  id: Start
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: GameThread.Start()
+  fullName: osu.Framework.Threading.GameThread.Start()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Start
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 204
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Start this thread.
+  remarks: This method blocks until in a running state.
+  example: []
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start()
+  overload: osu.Framework.Threading.GameThread.Start*
+- uid: osu.Framework.Threading.GameThread.Exit
+  commentId: M:osu.Framework.Threading.GameThread.Exit
+  id: Exit
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: Exit()
+  nameWithType: GameThread.Exit()
+  fullName: osu.Framework.Threading.GameThread.Exit()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Exit
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 233
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Request that this thread is exited.
+  remarks: This does not block and will only queue an exit request, which is processed in the main frame loop.
+  example: []
+  syntax:
+    content: public void Exit()
+    content.vb: Public Sub [Exit]()
+  overload: osu.Framework.Threading.GameThread.Exit*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when attempting to exit from an invalid state.
+- uid: osu.Framework.Threading.GameThread.PrepareForWork
+  commentId: M:osu.Framework.Threading.GameThread.PrepareForWork
+  id: PrepareForWork
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: PrepareForWork()
+  nameWithType: GameThread.PrepareForWork()
+  fullName: osu.Framework.Threading.GameThread.PrepareForWork()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: PrepareForWork
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 357
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Prepares this game thread for work. Should block until <xref href="osu.Framework.Threading.GameThread.Initialize(System.Boolean)" data-throw-if-not-resolved="false"></xref> has been run.
+  example: []
+  syntax:
+    content: protected virtual void PrepareForWork()
+    content.vb: Protected Overridable Sub PrepareForWork()
+  overload: osu.Framework.Threading.GameThread.PrepareForWork*
+- uid: osu.Framework.Threading.GameThread.OnInitialize
+  commentId: M:osu.Framework.Threading.GameThread.OnInitialize
+  id: OnInitialize
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: OnInitialize()
+  nameWithType: GameThread.OnInitialize()
+  fullName: osu.Framework.Threading.GameThread.OnInitialize()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: OnInitialize
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 369
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Called whenever the thread is initialised. Should prepare the thread for performing work.
+  example: []
+  syntax:
+    content: protected virtual void OnInitialize()
+    content.vb: Protected Overridable Sub OnInitialize()
+  overload: osu.Framework.Threading.GameThread.OnInitialize*
+- uid: osu.Framework.Threading.GameThread.OnSuspended
+  commentId: M:osu.Framework.Threading.GameThread.OnSuspended
+  id: OnSuspended
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: OnSuspended()
+  nameWithType: GameThread.OnSuspended()
+  fullName: osu.Framework.Threading.GameThread.OnSuspended()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: OnSuspended
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 378
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: >-
+    Called when a <xref href="osu.Framework.Threading.GameThread.Pause" data-throw-if-not-resolved="false"></xref> or <xref href="osu.Framework.Threading.GameThread.Exit" data-throw-if-not-resolved="false"></xref> is requested on this <xref href="osu.Framework.Threading.GameThread" data-throw-if-not-resolved="false"></xref>.
+
+    Use this method to release exclusive resources that the thread could have been holding in its current execution mode,
+
+    like GL contexts or similar.
+  example: []
+  syntax:
+    content: protected virtual void OnSuspended()
+    content.vb: Protected Overridable Sub OnSuspended()
+  overload: osu.Framework.Threading.GameThread.OnSuspended*
+- uid: osu.Framework.Threading.GameThread.OnExit
+  commentId: M:osu.Framework.Threading.GameThread.OnExit
+  id: OnExit
+  parent: osu.Framework.Threading.GameThread
+  langs:
+  - csharp
+  - vb
+  name: OnExit()
+  nameWithType: GameThread.OnExit()
+  fullName: osu.Framework.Threading.GameThread.OnExit()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/GameThread.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: OnExit
+    path: osu.Framework/Threading/GameThread.cs
+    startLine: 385
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Called when the thread is exited. Should clean up any thread-specific resources.
+  example: []
+  syntax:
+    content: protected virtual void OnExit()
+    content.vb: Protected Overridable Sub OnExit()
+  overload: osu.Framework.Threading.GameThread.OnExit*
+references:
+- uid: osu.Framework.Threading
+  commentId: N:osu.Framework.Threading
+  href: osu.html
+  name: osu.Framework.Threading
+  nameWithType: osu.Framework.Threading
+  fullName: osu.Framework.Threading
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Threading
+    name: Threading
+    href: osu.Framework.Threading.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Threading
+    name: Threading
+    href: osu.Framework.Threading.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Threading.GameThread.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<GameThread>(GameThread)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<GameThread>(GameThread)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Threading.GameThread>(osu.Framework.Threading.GameThread)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of GameThread)(GameThread)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Threading.GameThread)(osu.Framework.Threading.GameThread)
+  name.vb: GetLocalisableDescription(Of GameThread)(GameThread)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Threading.GameThread)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Threading.GameThread)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+- uid: osu.Framework.Threading.GameThread.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<GameThread>(GameThread)
+  nameWithType: EnumerableExtensions.Yield<GameThread>(GameThread)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Threading.GameThread>(osu.Framework.Threading.GameThread)
+  nameWithType.vb: EnumerableExtensions.Yield(Of GameThread)(GameThread)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Threading.GameThread)(osu.Framework.Threading.GameThread)
+  name.vb: Yield(Of GameThread)(GameThread)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Threading.GameThread)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Threading.GameThread)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+- uid: osu.Framework.Threading.GameThread.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<GameThread>(GameThread)
+  nameWithType: ObjectExtensions.AsNonNull<GameThread>(GameThread)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Threading.GameThread>(osu.Framework.Threading.GameThread)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of GameThread)(GameThread)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Threading.GameThread)(osu.Framework.Threading.GameThread)
+  name.vb: AsNonNull(Of GameThread)(GameThread)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Threading.GameThread)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Threading.GameThread)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+- uid: osu.Framework.Threading.GameThread.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<GameThread>(GameThread)
+  nameWithType: ObjectExtensions.IsNotNull<GameThread>(GameThread)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Threading.GameThread>(osu.Framework.Threading.GameThread)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of GameThread)(GameThread)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Threading.GameThread)(osu.Framework.Threading.GameThread)
+  name.vb: IsNotNull(Of GameThread)(GameThread)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Threading.GameThread)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Threading.GameThread)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+- uid: osu.Framework.Threading.GameThread.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<GameThread>(GameThread)
+  nameWithType: ObjectExtensions.IsNull<GameThread>(GameThread)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Threading.GameThread>(osu.Framework.Threading.GameThread)
+  nameWithType.vb: ObjectExtensions.IsNull(Of GameThread)(GameThread)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Threading.GameThread)(osu.Framework.Threading.GameThread)
+  name.vb: IsNull(Of GameThread)(GameThread)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Threading.GameThread)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Threading.GameThread)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+- uid: osu.Framework.Threading.GameThread.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<GameThread, TChild>(GameThread, TChild)
+  nameWithType: ContainerExtensions.WithChild<GameThread, TChild>(GameThread, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Threading.GameThread, TChild>(osu.Framework.Threading.GameThread, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of GameThread, TChild)(GameThread, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Threading.GameThread, TChild)(osu.Framework.Threading.GameThread, TChild)
+  name.vb: WithChild(Of GameThread, TChild)(GameThread, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Threading.GameThread,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Threading.GameThread,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Threading.GameThread.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<GameThread, TChild>(GameThread, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<GameThread, TChild>(GameThread, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Threading.GameThread, TChild>(osu.Framework.Threading.GameThread, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of GameThread, TChild)(GameThread, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Threading.GameThread, TChild)(osu.Framework.Threading.GameThread, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of GameThread, TChild)(GameThread, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Threading.GameThread,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Threading.GameThread,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Threading.GameThread.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<GameThread, TChild>(GameThread, TChild)
+  nameWithType: ContainerExtensions.Wrap<GameThread, TChild>(GameThread, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Threading.GameThread, TChild>(osu.Framework.Threading.GameThread, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of GameThread, TChild)(GameThread, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Threading.GameThread, TChild)(osu.Framework.Threading.GameThread, TChild)
+  name.vb: Wrap(Of GameThread, TChild)(GameThread, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Threading.GameThread,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Threading.GameThread,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: osu.Framework.Bindables.IBindable{System.Boolean}
+  commentId: T:osu.Framework.Bindables.IBindable{System.Boolean}
+  parent: osu.Framework.Bindables
+  definition: osu.Framework.Bindables.IBindable`1
+  href: osu.Framework.Bindables.IBindable-1.html
+  name: IBindable<bool>
+  nameWithType: IBindable<bool>
+  fullName: osu.Framework.Bindables.IBindable<bool>
+  nameWithType.vb: IBindable(Of Boolean)
+  fullName.vb: osu.Framework.Bindables.IBindable(Of Boolean)
+  name.vb: IBindable(Of Boolean)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: osu.Framework.Bindables.IBindable`1
+  commentId: T:osu.Framework.Bindables.IBindable`1
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.IBindable-1.html
+  name: IBindable<T>
+  nameWithType: IBindable<T>
+  fullName: osu.Framework.Bindables.IBindable<T>
+  nameWithType.vb: IBindable(Of T)
+  fullName.vb: osu.Framework.Bindables.IBindable(Of T)
+  name.vb: IBindable(Of T)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Bindables
+  commentId: N:osu.Framework.Bindables
+  href: osu.html
+  name: osu.Framework.Bindables
+  nameWithType: osu.Framework.Bindables
+  fullName: osu.Framework.Bindables
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+- uid: osu.Framework.Threading.GameThread.State*
+  commentId: Overload:osu.Framework.Threading.GameThread.State
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_State
+  name: State
+  nameWithType: GameThread.State
+  fullName: osu.Framework.Threading.GameThread.State
+- uid: osu.Framework.Bindables.IBindable{osu.Framework.Threading.GameThreadState}
+  commentId: T:osu.Framework.Bindables.IBindable{osu.Framework.Threading.GameThreadState}
+  parent: osu.Framework.Bindables
+  definition: osu.Framework.Bindables.IBindable`1
+  href: osu.Framework.Bindables.IBindable-1.html
+  name: IBindable<GameThreadState>
+  nameWithType: IBindable<GameThreadState>
+  fullName: osu.Framework.Bindables.IBindable<osu.Framework.Threading.GameThreadState>
+  nameWithType.vb: IBindable(Of GameThreadState)
+  fullName.vb: osu.Framework.Bindables.IBindable(Of osu.Framework.Threading.GameThreadState)
+  name.vb: IBindable(Of GameThreadState)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: <
+  - uid: osu.Framework.Threading.GameThreadState
+    name: GameThreadState
+    href: osu.Framework.Threading.GameThreadState.html
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.GameThreadState
+    name: GameThreadState
+    href: osu.Framework.Threading.GameThreadState.html
+  - name: )
+- uid: osu.Framework.Threading.GameThread.Running*
+  commentId: Overload:osu.Framework.Threading.GameThread.Running
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Running
+  name: Running
+  nameWithType: GameThread.Running
+  fullName: osu.Framework.Threading.GameThread.Running
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Threading.GameThread.Exited*
+  commentId: Overload:osu.Framework.Threading.GameThread.Exited
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Exited
+  name: Exited
+  nameWithType: GameThread.Exited
+  fullName: osu.Framework.Threading.GameThread.Exited
+- uid: osu.Framework.Threading.GameThread.IsCurrent*
+  commentId: Overload:osu.Framework.Threading.GameThread.IsCurrent
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_IsCurrent
+  name: IsCurrent
+  nameWithType: GameThread.IsCurrent
+  fullName: osu.Framework.Threading.GameThread.IsCurrent
+- uid: osu.Framework.Threading.GameThread.Clock*
+  commentId: Overload:osu.Framework.Threading.GameThread.Clock
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Clock
+  name: Clock
+  nameWithType: GameThread.Clock
+  fullName: osu.Framework.Threading.GameThread.Clock
+- uid: osu.Framework.Timing.ThrottledFrameClock
+  commentId: T:osu.Framework.Timing.ThrottledFrameClock
+  parent: osu.Framework.Timing
+  href: osu.Framework.Timing.ThrottledFrameClock.html
+  name: ThrottledFrameClock
+  nameWithType: ThrottledFrameClock
+  fullName: osu.Framework.Timing.ThrottledFrameClock
+- uid: osu.Framework.Timing
+  commentId: N:osu.Framework.Timing
+  href: osu.html
+  name: osu.Framework.Timing
+  nameWithType: osu.Framework.Timing
+  fullName: osu.Framework.Timing
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Timing
+    name: Timing
+    href: osu.Framework.Timing.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Timing
+    name: Timing
+    href: osu.Framework.Timing.html
+- uid: osu.Framework.Threading.GameThread
+  commentId: T:osu.Framework.Threading.GameThread
+  parent: osu.Framework.Threading
+  href: osu.Framework.Threading.GameThread.html
+  name: GameThread
+  nameWithType: GameThread
+  fullName: osu.Framework.Threading.GameThread
+- uid: osu.Framework.Platform.ExecutionMode.SingleThread
+  commentId: F:osu.Framework.Platform.ExecutionMode.SingleThread
+  href: osu.Framework.Platform.ExecutionMode.html#osu_Framework_Platform_ExecutionMode_SingleThread
+  name: SingleThread
+  nameWithType: ExecutionMode.SingleThread
+  fullName: osu.Framework.Platform.ExecutionMode.SingleThread
+- uid: osu.Framework.Platform.ThreadRunner
+  commentId: T:osu.Framework.Platform.ThreadRunner
+  parent: osu.Framework.Platform
+  href: osu.Framework.Platform.ThreadRunner.html
+  name: ThreadRunner
+  nameWithType: ThreadRunner
+  fullName: osu.Framework.Platform.ThreadRunner
+- uid: osu.Framework.Threading.GameThread.Thread*
+  commentId: Overload:osu.Framework.Threading.GameThread.Thread
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Thread
+  name: Thread
+  nameWithType: GameThread.Thread
+  fullName: osu.Framework.Threading.GameThread.Thread
+- uid: System.Threading.Thread
+  commentId: T:System.Threading.Thread
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.thread
+  name: Thread
+  nameWithType: Thread
+  fullName: System.Threading.Thread
+- uid: osu.Framework.Platform
+  commentId: N:osu.Framework.Platform
+  href: osu.html
+  name: osu.Framework.Platform
+  nameWithType: osu.Framework.Platform
+  fullName: osu.Framework.Platform
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: osu.Framework.Threading.GameThread.Scheduler*
+  commentId: Overload:osu.Framework.Threading.GameThread.Scheduler
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Scheduler
+  name: Scheduler
+  nameWithType: GameThread.Scheduler
+  fullName: osu.Framework.Threading.GameThread.Scheduler
+- uid: osu.Framework.Threading.Scheduler
+  commentId: T:osu.Framework.Threading.Scheduler
+  parent: osu.Framework.Threading
+  href: osu.Framework.Threading.Scheduler.html
+  name: Scheduler
+  nameWithType: Scheduler
+  fullName: osu.Framework.Threading.Scheduler
+- uid: System.EventHandler{System.UnhandledExceptionEventArgs}
+  commentId: T:System.EventHandler{System.UnhandledExceptionEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<UnhandledExceptionEventArgs>
+  nameWithType: EventHandler<UnhandledExceptionEventArgs>
+  fullName: System.EventHandler<System.UnhandledExceptionEventArgs>
+  nameWithType.vb: EventHandler(Of UnhandledExceptionEventArgs)
+  fullName.vb: System.EventHandler(Of System.UnhandledExceptionEventArgs)
+  name.vb: EventHandler(Of UnhandledExceptionEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: System.UnhandledExceptionEventArgs
+    name: UnhandledExceptionEventArgs
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.unhandledexceptioneventargs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.UnhandledExceptionEventArgs
+    name: UnhandledExceptionEventArgs
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.unhandledexceptioneventargs
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: osu.Framework.Threading.GameThread.SynchronizationContext*
+  commentId: Overload:osu.Framework.Threading.GameThread.SynchronizationContext
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_SynchronizationContext
+  name: SynchronizationContext
+  nameWithType: GameThread.SynchronizationContext
+  fullName: osu.Framework.Threading.GameThread.SynchronizationContext
+- uid: System.Threading.SynchronizationContext
+  commentId: T:System.Threading.SynchronizationContext
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.synchronizationcontext
+  name: SynchronizationContext
+  nameWithType: SynchronizationContext
+  fullName: System.Threading.SynchronizationContext
+- uid: osu.Framework.Threading.GameThread.CurrentCulture*
+  commentId: Overload:osu.Framework.Threading.GameThread.CurrentCulture
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_CurrentCulture
+  name: CurrentCulture
+  nameWithType: GameThread.CurrentCulture
+  fullName: osu.Framework.Threading.GameThread.CurrentCulture
+- uid: System.Globalization.CultureInfo
+  commentId: T:System.Globalization.CultureInfo
+  parent: System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
+  name: CultureInfo
+  nameWithType: CultureInfo
+  fullName: System.Globalization.CultureInfo
+- uid: System.Globalization
+  commentId: N:System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Globalization
+  nameWithType: System.Globalization
+  fullName: System.Globalization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+- uid: System.Double.MaxValue
+  commentId: F:System.Double.MaxValue
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double.maxvalue
+  name: MaxValue
+  nameWithType: double.MaxValue
+  fullName: double.MaxValue
+  nameWithType.vb: Double.MaxValue
+  fullName.vb: Double.MaxValue
+- uid: osu.Framework.Threading.GameThread.ActiveHz*
+  commentId: Overload:osu.Framework.Threading.GameThread.ActiveHz
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_ActiveHz
+  name: ActiveHz
+  nameWithType: GameThread.ActiveHz
+  fullName: osu.Framework.Threading.GameThread.ActiveHz
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: osu.Framework.Threading.GameThread.InactiveHz*
+  commentId: Overload:osu.Framework.Threading.GameThread.InactiveHz
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_InactiveHz
+  name: InactiveHz
+  nameWithType: GameThread.InactiveHz
+  fullName: osu.Framework.Threading.GameThread.InactiveHz
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: osu.Framework.Threading.GameThread.WaitUntilInitialized*
+  commentId: Overload:osu.Framework.Threading.GameThread.WaitUntilInitialized
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_WaitUntilInitialized
+  name: WaitUntilInitialized
+  nameWithType: GameThread.WaitUntilInitialized
+  fullName: osu.Framework.Threading.GameThread.WaitUntilInitialized
+- uid: osu.Framework.Threading.GameThread.SuffixedThreadNameFor*
+  commentId: Overload:osu.Framework.Threading.GameThread.SuffixedThreadNameFor
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_SuffixedThreadNameFor_System_String_
+  name: SuffixedThreadNameFor
+  nameWithType: GameThread.SuffixedThreadNameFor
+  fullName: osu.Framework.Threading.GameThread.SuffixedThreadNameFor
+- uid: osu.Framework.Threading.GameThread.Start*
+  commentId: Overload:osu.Framework.Threading.GameThread.Start
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Start
+  name: Start
+  nameWithType: GameThread.Start
+  fullName: osu.Framework.Threading.GameThread.Start
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: osu.Framework.Threading.GameThread.Exit*
+  commentId: Overload:osu.Framework.Threading.GameThread.Exit
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Exit
+  name: Exit
+  nameWithType: GameThread.Exit
+  fullName: osu.Framework.Threading.GameThread.Exit
+- uid: osu.Framework.Threading.GameThread.Initialize(System.Boolean)
+  commentId: M:osu.Framework.Threading.GameThread.Initialize(System.Boolean)
+  isExternal: true
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Initialize_System_Boolean_
+  name: Initialize(bool)
+  nameWithType: GameThread.Initialize(bool)
+  fullName: osu.Framework.Threading.GameThread.Initialize(bool)
+  nameWithType.vb: GameThread.Initialize(Boolean)
+  fullName.vb: osu.Framework.Threading.GameThread.Initialize(Boolean)
+  name.vb: Initialize(Boolean)
+  spec.csharp:
+  - uid: osu.Framework.Threading.GameThread.Initialize(System.Boolean)
+    name: Initialize
+    href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Initialize_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Threading.GameThread.Initialize(System.Boolean)
+    name: Initialize
+    href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Initialize_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: osu.Framework.Threading.GameThread.PrepareForWork*
+  commentId: Overload:osu.Framework.Threading.GameThread.PrepareForWork
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_PrepareForWork
+  name: PrepareForWork
+  nameWithType: GameThread.PrepareForWork
+  fullName: osu.Framework.Threading.GameThread.PrepareForWork
+- uid: osu.Framework.Threading.GameThread.OnInitialize*
+  commentId: Overload:osu.Framework.Threading.GameThread.OnInitialize
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_OnInitialize
+  name: OnInitialize
+  nameWithType: GameThread.OnInitialize
+  fullName: osu.Framework.Threading.GameThread.OnInitialize
+- uid: osu.Framework.Threading.GameThread.Pause
+  commentId: M:osu.Framework.Threading.GameThread.Pause
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Pause
+  name: Pause()
+  nameWithType: GameThread.Pause()
+  fullName: osu.Framework.Threading.GameThread.Pause()
+  spec.csharp:
+  - uid: osu.Framework.Threading.GameThread.Pause
+    name: Pause
+    href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Pause
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Threading.GameThread.Pause
+    name: Pause
+    href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Pause
+  - name: (
+  - name: )
+- uid: osu.Framework.Threading.GameThread.Exit
+  commentId: M:osu.Framework.Threading.GameThread.Exit
+  parent: osu.Framework.Threading.GameThread
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Exit
+  name: Exit()
+  nameWithType: GameThread.Exit()
+  fullName: osu.Framework.Threading.GameThread.Exit()
+  spec.csharp:
+  - uid: osu.Framework.Threading.GameThread.Exit
+    name: Exit
+    href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Exit
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Threading.GameThread.Exit
+    name: Exit
+    href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_Exit
+  - name: (
+  - name: )
+- uid: osu.Framework.Threading.GameThread.OnSuspended*
+  commentId: Overload:osu.Framework.Threading.GameThread.OnSuspended
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_OnSuspended
+  name: OnSuspended
+  nameWithType: GameThread.OnSuspended
+  fullName: osu.Framework.Threading.GameThread.OnSuspended
+- uid: osu.Framework.Threading.GameThread.OnExit*
+  commentId: Overload:osu.Framework.Threading.GameThread.OnExit
+  href: osu.Framework.Threading.GameThread.html#osu_Framework_Threading_GameThread_OnExit
+  name: OnExit
+  nameWithType: GameThread.OnExit
+  fullName: osu.Framework.Threading.GameThread.OnExit

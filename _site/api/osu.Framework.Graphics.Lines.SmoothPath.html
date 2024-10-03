@@ -1,0 +1,1071 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SmoothPath | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SmoothPath | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Graphics.Lines.SmoothPath">
+
+
+
+  <h1 id="osu_Framework_Graphics_Lines_SmoothPath" data-uid="osu.Framework.Graphics.Lines.SmoothPath" class="text-break">
+Class SmoothPath  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Graphics.html">Graphics</a>.<a class="xref" href="osu.Framework.Graphics.Lines.html">Lines</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SmoothPath : Path, IDependencyInjectionCandidate, IDisposable, IBufferedDrawable, ITexturedShaderDrawable, IDrawable, ITransformable, ISourceGeneratedDependencyActivator, ISourceGeneratedHandleInputCache, ISourceGeneratedLongRunningLoadCache</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html">Transformable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Lines.Path.html">Path</a></div>
+      <div><span class="xref">SmoothPath</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Allocation.IDependencyInjectionCandidate.html">IDependencyInjectionCandidate</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.IBufferedDrawable.html">IBufferedDrawable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.ITexturedShaderDrawable.html">ITexturedShaderDrawable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.IDrawable.html">IDrawable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html">ITransformable</a></div>
+      <div><a class="xref" href="osu.Framework.Allocation.ISourceGeneratedDependencyActivator.html">ISourceGeneratedDependencyActivator</a></div>
+      <div><a class="xref" href="osu.Framework.Input.ISourceGeneratedHandleInputCache.html">ISourceGeneratedHandleInputCache</a></div>
+      <div><a class="xref" href="osu.Framework.Allocation.ISourceGeneratedLongRunningLoadCache.html">ISourceGeneratedLongRunningLoadCache</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_TextureShader">Path.TextureShader</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_Vertices">Path.Vertices</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_RelativeSizeAxes">Path.RelativeSizeAxes</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_AutoSizeAxes">Path.AutoSizeAxes</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_Width">Path.Width</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_Height">Path.Height</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_Size">Path.Size</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_ReceivePositionalInputAt_osuTK_Vector2_">Path.ReceivePositionalInputAt(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_PositionInBoundingBox_osuTK_Vector2_">Path.PositionInBoundingBox(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_ClearVertices">Path.ClearVertices()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_AddVertex_osuTK_Vector2_">Path.AddVertex(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_ReplaceVertex_System_Int32_osuTK_Vector2_">Path.ReplaceVertex(int, Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_Texture">Path.Texture</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_FrameBufferDrawColour">Path.FrameBufferDrawColour</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_FrameBufferScale">Path.FrameBufferScale</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_DrawColourInfo">Path.DrawColourInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_PathInvalidationID">Path.PathInvalidationID</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_OnInvalidate_osu_Framework_Graphics_Invalidation_osu_Framework_Layout_InvalidationSource_">Path.OnInvalidate(Invalidation, InvalidationSource)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_CreateDrawNode">Path.CreateDrawNode()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Lines.Path.html#osu_Framework_Graphics_Lines_Path_Dispose_System_Boolean_">Path.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Dispose">Drawable.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsDisposed">Drawable.IsDisposed</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DisposeOnDeathRemoval">Drawable.DisposeOnDeathRemoval</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsLoaded">Drawable.IsLoaded</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LoadState">Drawable.LoadState</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_InjectDependencies_osu_Framework_Allocation_IReadOnlyDependencyContainer_">Drawable.InjectDependencies(IReadOnlyDependencyContainer)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LoadAsyncComplete">Drawable.LoadAsyncComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LoadComplete">Drawable.LoadComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsAlive">Drawable.IsAlive</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Depth">Drawable.Depth</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnUpdate">Drawable.OnUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnLoadComplete">Drawable.OnLoadComplete</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Scheduler">Drawable.Scheduler</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_UpdateSubTree">Drawable.UpdateSubTree()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ComputeMaskingBounds">Drawable.ComputeMaskingBounds()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_UpdateSubTreeMasking">Drawable.UpdateSubTreeMasking()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ComputeIsMaskedAway_osu_Framework_Graphics_Primitives_RectangleF_">Drawable.ComputeIsMaskedAway(RectangleF)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Update">Drawable.Update()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Position">Drawable.Position</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_X">Drawable.X</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Y">Drawable.Y</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RelativePositionAxes">Drawable.RelativePositionAxes</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawPosition">Drawable.DrawPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawSize">Drawable.DrawSize</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawWidth">Drawable.DrawWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawHeight">Drawable.DrawHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Margin">Drawable.Margin</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LayoutSize">Drawable.LayoutSize</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawRectangle">Drawable.DrawRectangle</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LayoutRectangle">Drawable.LayoutRectangle</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ApplyRelativeAxes_osu_Framework_Graphics_Axes_osuTK_Vector2_osu_Framework_Graphics_FillMode_">Drawable.ApplyRelativeAxes(Axes, Vector2, FillMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_BypassAutoSizeAxes">Drawable.BypassAutoSizeAxes</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_BoundingBox">Drawable.BoundingBox</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnSizingChanged">Drawable.OnSizingChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Scale">Drawable.Scale</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_FillAspectRatio">Drawable.FillAspectRatio</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_FillMode">Drawable.FillMode</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawScale">Drawable.DrawScale</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Shear">Drawable.Shear</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Rotation">Drawable.Rotation</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Origin">Drawable.Origin</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RelativeOriginPosition">Drawable.RelativeOriginPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OriginPosition">Drawable.OriginPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Anchor">Drawable.Anchor</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RelativeAnchorPosition">Drawable.RelativeAnchorPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_AnchorPosition">Drawable.AnchorPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Colour">Drawable.Colour</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Alpha">Drawable.Alpha</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsPresent">Drawable.IsPresent</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_AlwaysPresent">Drawable.AlwaysPresent</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Blending">Drawable.Blending</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Clock">Drawable.Clock</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ProcessCustomClock">Drawable.ProcessCustomClock</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LifetimeStart">Drawable.LifetimeStart</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LifetimeEnd">Drawable.LifetimeEnd</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ShouldBeAlive">Drawable.ShouldBeAlive</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RemoveWhenNotAlive">Drawable.RemoveWhenNotAlive</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_GetContainingInputManager">Drawable.GetContainingInputManager()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_GetContainingFocusManager">Drawable.GetContainingFocusManager()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Parent">Drawable.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_HasProxy">Drawable.HasProxy</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsProxy">Drawable.IsProxy</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_CreateProxy">Drawable.CreateProxy()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ComputeScreenSpaceDrawQuad">Drawable.ComputeScreenSpaceDrawQuad()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ScreenSpaceDrawQuad">Drawable.ScreenSpaceDrawQuad</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawInfo">Drawable.DrawInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_AddLayout_osu_Framework_Layout_LayoutMember_">Drawable.AddLayout(LayoutMember)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_InvalidationID">Drawable.InvalidationID</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Invalidate_osu_Framework_Graphics_Invalidation_osu_Framework_Layout_InvalidationSource_">Drawable.Invalidate(Invalidation, InvalidationSource)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_InvalidationFromParentSize">Drawable.InvalidationFromParentSize</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToSpaceOfOtherDrawable_osuTK_Vector2_osu_Framework_Graphics_IDrawable_">Drawable.ToSpaceOfOtherDrawable(Vector2, IDrawable)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToSpaceOfOtherDrawable_osu_Framework_Graphics_Primitives_RectangleF_osu_Framework_Graphics_IDrawable_">Drawable.ToSpaceOfOtherDrawable(RectangleF, IDrawable)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToParentSpace_osuTK_Vector2_">Drawable.ToParentSpace(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToParentSpace_osu_Framework_Graphics_Primitives_RectangleF_">Drawable.ToParentSpace(RectangleF)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToScreenSpace_osuTK_Vector2_">Drawable.ToScreenSpace(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToScreenSpace_osu_Framework_Graphics_Primitives_RectangleF_">Drawable.ToScreenSpace(RectangleF)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToLocalSpace_osuTK_Vector2_">Drawable.ToLocalSpace(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToLocalSpace_osu_Framework_Graphics_Primitives_Quad_">Drawable.ToLocalSpace(Quad)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Handle_osu_Framework_Input_Events_UIEvent_">Drawable.Handle(UIEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_TriggerEvent_osu_Framework_Input_Events_UIEvent_">Drawable.TriggerEvent(UIEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_TriggerClick">Drawable.TriggerClick()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnMouseMove_osu_Framework_Input_Events_MouseMoveEvent_">Drawable.OnMouseMove(MouseMoveEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnHover_osu_Framework_Input_Events_HoverEvent_">Drawable.OnHover(HoverEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnHoverLost_osu_Framework_Input_Events_HoverLostEvent_">Drawable.OnHoverLost(HoverLostEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnMouseDown_osu_Framework_Input_Events_MouseDownEvent_">Drawable.OnMouseDown(MouseDownEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnMouseUp_osu_Framework_Input_Events_MouseUpEvent_">Drawable.OnMouseUp(MouseUpEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnClick_osu_Framework_Input_Events_ClickEvent_">Drawable.OnClick(ClickEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnDoubleClick_osu_Framework_Input_Events_DoubleClickEvent_">Drawable.OnDoubleClick(DoubleClickEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnDragStart_osu_Framework_Input_Events_DragStartEvent_">Drawable.OnDragStart(DragStartEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnDrag_osu_Framework_Input_Events_DragEvent_">Drawable.OnDrag(DragEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnDragEnd_osu_Framework_Input_Events_DragEndEvent_">Drawable.OnDragEnd(DragEndEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnScroll_osu_Framework_Input_Events_ScrollEvent_">Drawable.OnScroll(ScrollEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnFocus_osu_Framework_Input_Events_FocusEvent_">Drawable.OnFocus(FocusEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnFocusLost_osu_Framework_Input_Events_FocusLostEvent_">Drawable.OnFocusLost(FocusLostEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnKeyDown_osu_Framework_Input_Events_KeyDownEvent_">Drawable.OnKeyDown(KeyDownEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnKeyUp_osu_Framework_Input_Events_KeyUpEvent_">Drawable.OnKeyUp(KeyUpEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTouchDown_osu_Framework_Input_Events_TouchDownEvent_">Drawable.OnTouchDown(TouchDownEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTouchMove_osu_Framework_Input_Events_TouchMoveEvent_">Drawable.OnTouchMove(TouchMoveEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTouchUp_osu_Framework_Input_Events_TouchUpEvent_">Drawable.OnTouchUp(TouchUpEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnJoystickPress_osu_Framework_Input_Events_JoystickPressEvent_">Drawable.OnJoystickPress(JoystickPressEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnJoystickRelease_osu_Framework_Input_Events_JoystickReleaseEvent_">Drawable.OnJoystickRelease(JoystickReleaseEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnJoystickAxisMove_osu_Framework_Input_Events_JoystickAxisMoveEvent_">Drawable.OnJoystickAxisMove(JoystickAxisMoveEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnMidiDown_osu_Framework_Input_Events_MidiDownEvent_">Drawable.OnMidiDown(MidiDownEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnMidiUp_osu_Framework_Input_Events_MidiUpEvent_">Drawable.OnMidiUp(MidiUpEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTabletPenButtonPress_osu_Framework_Input_Events_TabletPenButtonPressEvent_">Drawable.OnTabletPenButtonPress(TabletPenButtonPressEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTabletPenButtonRelease_osu_Framework_Input_Events_TabletPenButtonReleaseEvent_">Drawable.OnTabletPenButtonRelease(TabletPenButtonReleaseEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTabletAuxiliaryButtonPress_osu_Framework_Input_Events_TabletAuxiliaryButtonPressEvent_">Drawable.OnTabletAuxiliaryButtonPress(TabletAuxiliaryButtonPressEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTabletAuxiliaryButtonRelease_osu_Framework_Input_Events_TabletAuxiliaryButtonReleaseEvent_">Drawable.OnTabletAuxiliaryButtonRelease(TabletAuxiliaryButtonReleaseEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_HandleNonPositionalInput">Drawable.HandleNonPositionalInput</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_HandlePositionalInput">Drawable.HandlePositionalInput</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_HasFocus">Drawable.HasFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RequestsFocus">Drawable.RequestsFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_AcceptsFocus">Drawable.AcceptsFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ChangeFocusOnClick">Drawable.ChangeFocusOnClick</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsHovered">Drawable.IsHovered</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsDragged">Drawable.IsDragged</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Contains_osuTK_Vector2_">Drawable.Contains(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_PropagateNonPositionalInputSubTree">Drawable.PropagateNonPositionalInputSubTree</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_PropagatePositionalInputSubTree">Drawable.PropagatePositionalInputSubTree</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DragBlocksClick">Drawable.DragBlocksClick</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Schedule__1_System_Action___0____0_">Drawable.Schedule&lt;T&gt;(Action&lt;T&gt;, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Schedule_System_Action_">Drawable.Schedule(Action)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Expire_System_Boolean_">Drawable.Expire(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Hide">Drawable.Hide()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Show">Drawable.Show()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_WithEffect__1_osu_Framework_Graphics_Effects_IEffect___0__System_Action___0__">Drawable.WithEffect&lt;T&gt;(IEffect&lt;T&gt;, Action&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Name">Drawable.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToString">Drawable.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Empty">Drawable.Empty()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_Time">Transformable.Time</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_TransformStartTime">Transformable.TransformStartTime</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_TransformDelay">Transformable.TransformDelay</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_Transforms">Transformable.Transforms</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_TransformsForTargetMember_System_String_">Transformable.TransformsForTargetMember(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_LatestTransformEndTime">Transformable.LatestTransformEndTime</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_RemoveCompletedTransforms">Transformable.RemoveCompletedTransforms</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_UpdateTransforms">Transformable.UpdateTransforms()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_RemoveTransform_osu_Framework_Graphics_Transforms_Transform_">Transformable.RemoveTransform(Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_ClearTransforms_System_Boolean_System_String_">Transformable.ClearTransforms(bool, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_ClearTransformsAfter_System_Double_System_Boolean_System_String_">Transformable.ClearTransformsAfter(double, bool, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_ApplyTransformsAt_System_Double_System_Boolean_">Transformable.ApplyTransformsAt(double, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_FinishTransforms_System_Boolean_System_String_">Transformable.FinishTransforms(bool, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_BeginDelayedSequence_System_Double_System_Boolean_">Transformable.BeginDelayedSequence(double, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_BeginAbsoluteSequence_System_Double_System_Boolean_">Transformable.BeginAbsoluteSequence(double, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_AddTransform_osu_Framework_Graphics_Transforms_Transform_System_Nullable_System_UInt64__">Transformable.AddTransform(Transform, ulong?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.PopoverExtensions.html#osu_Framework_Extensions_PopoverExtensions_HidePopover_osu_Framework_Graphics_Drawable_">PopoverExtensions.HidePopover(Drawable)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawableExtensions.html#osu_Framework_Graphics_DrawableExtensions_FindClosestParent__1_osu_Framework_Graphics_Drawable_">DrawableExtensions.FindClosestParent&lt;T&gt;(Drawable?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawableExtensions.html#osu_Framework_Graphics_DrawableExtensions_RemoveAndDisposeImmediately_osu_Framework_Graphics_Drawable_">DrawableExtensions.RemoveAndDisposeImmediately(Drawable)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Testing.TestingExtensions.html#osu_Framework_Testing_TestingExtensions_ChildrenOfType__1_osu_Framework_Graphics_Drawable_">TestingExtensions.ChildrenOfType&lt;T&gt;(Drawable?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawableExtensions.html#osu_Framework_Graphics_DrawableExtensions_With__1___0_System_Action___0__">DrawableExtensions.With&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Animate__1___0_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Animate&lt;T&gt;(T, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_DelayUntilTransformsFinished__1___0_">TransformableExtensions.DelayUntilTransformsFinished&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Delay__1___0_System_Double_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Delay&lt;T&gt;(T, double, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeColour__1___0_osu_Framework_Graphics_Colour_ColourInfo_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeColour&lt;T&gt;(T, ColourInfo, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeColour__2___0_osu_Framework_Graphics_Colour_ColourInfo_System_Double___1__">TransformableExtensions.FadeColour&lt;T, TEasing&gt;(T, ColourInfo, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeInFromZero__1___0_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeInFromZero&lt;T&gt;(T, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeInFromZero__2___0_System_Double___1__">TransformableExtensions.FadeInFromZero&lt;T, TEasing&gt;(T, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeIn__1___0_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeIn&lt;T&gt;(T, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeIn__2___0_System_Double___1__">TransformableExtensions.FadeIn&lt;T, TEasing&gt;(T, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeOutFromOne__1___0_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeOutFromOne&lt;T&gt;(T, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeOutFromOne__2___0_System_Double___1__">TransformableExtensions.FadeOutFromOne&lt;T, TEasing&gt;(T, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeOut__1___0_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeOut&lt;T&gt;(T, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeOut__2___0_System_Double___1__">TransformableExtensions.FadeOut&lt;T, TEasing&gt;(T, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeTo__2___0_System_Single_System_Double___1__">TransformableExtensions.FadeTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FlashColour__1___0_osu_Framework_Graphics_Colour_ColourInfo_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FlashColour&lt;T&gt;(T, ColourInfo, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FlashColour__2___0_osu_Framework_Graphics_Colour_ColourInfo_System_Double___1__">TransformableExtensions.FlashColour&lt;T, TEasing&gt;(T, ColourInfo, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_System_Double_">TransformableExtensions.Loop&lt;T&gt;(T, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_System_Double_System_Int32_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Loop&lt;T&gt;(T, double, int, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_System_Double_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Loop&lt;T&gt;(T, double, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Loop&lt;T&gt;(T, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MakeTransform__2___0_System_String___1_System_Double_osu_Framework_Graphics_Easing_System_String_">TransformableExtensions.MakeTransform&lt;TThis, TValue&gt;(TThis, string, TValue, double, Easing, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MakeTransform__3___0_System_String___2_System_Double___1__System_String_">TransformableExtensions.MakeTransform&lt;TThis, TEasing, TValue&gt;(TThis, string, TValue, double, in TEasing, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveToOffset__1___0_osuTK_Vector2_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.MoveToOffset&lt;T&gt;(T, Vector2, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveToOffset__2___0_osuTK_Vector2_System_Double___1__">TransformableExtensions.MoveToOffset&lt;T, TEasing&gt;(T, Vector2, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveToX__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.MoveToX&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveToX__2___0_System_Single_System_Double___1__">TransformableExtensions.MoveToX&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveToY__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.MoveToY&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveToY__2___0_System_Single_System_Double___1__">TransformableExtensions.MoveToY&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveTo__1___0_osu_Framework_Graphics_Direction_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.MoveTo&lt;T&gt;(T, Direction, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveTo__1___0_osuTK_Vector2_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.MoveTo&lt;T&gt;(T, Vector2, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveTo__2___0_osu_Framework_Graphics_Direction_System_Single_System_Double___1__">TransformableExtensions.MoveTo&lt;T, TEasing&gt;(T, Direction, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveTo__2___0_osuTK_Vector2_System_Double___1__">TransformableExtensions.MoveTo&lt;T, TEasing&gt;(T, Vector2, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_PopulateTransform__2___1_osu_Framework_Graphics_Transforms_Transform___0_osu_Framework_Graphics_Transforms_DefaultEasingFunction___1____0_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.PopulateTransform&lt;TValue, TThis&gt;(TThis, Transform&lt;TValue, DefaultEasingFunction, TThis&gt;, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_PopulateTransform__3___2_osu_Framework_Graphics_Transforms_Transform___0___1___2____0_System_Double___1__">TransformableExtensions.PopulateTransform&lt;TValue, TEasing, TThis&gt;(TThis, Transform&lt;TValue, TEasing, TThis&gt;, TValue, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeHeightTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.ResizeHeightTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeHeightTo__2___0_System_Single_System_Double___1__">TransformableExtensions.ResizeHeightTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.ResizeTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeTo__1___0_osuTK_Vector2_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.ResizeTo&lt;T&gt;(T, Vector2, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeTo__2___0_System_Single_System_Double___1__">TransformableExtensions.ResizeTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeTo__2___0_osuTK_Vector2_System_Double___1__">TransformableExtensions.ResizeTo&lt;T, TEasing&gt;(T, Vector2, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeWidthTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.ResizeWidthTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeWidthTo__2___0_System_Single_System_Double___1__">TransformableExtensions.ResizeWidthTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_RotateTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.RotateTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_RotateTo__2___0_System_Single_System_Double___1__">TransformableExtensions.RotateTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ScaleTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.ScaleTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ScaleTo__1___0_osuTK_Vector2_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.ScaleTo&lt;T&gt;(T, Vector2, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ScaleTo__2___0_System_Single_System_Double___1__">TransformableExtensions.ScaleTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ScaleTo__2___0_osuTK_Vector2_System_Double___1__">TransformableExtensions.ScaleTo&lt;T, TEasing&gt;(T, Vector2, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Spin__1___0_System_Double_osu_Framework_Graphics_RotationDirection_System_Single_">TransformableExtensions.Spin&lt;T&gt;(T, double, RotationDirection, float)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Spin__1___0_System_Double_osu_Framework_Graphics_RotationDirection_System_Single_System_Int32_">TransformableExtensions.Spin&lt;T&gt;(T, double, RotationDirection, float, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformBindableTo__2___0_osu_Framework_Bindables_Bindable___1____1_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.TransformBindableTo&lt;T, TValue&gt;(T, Bindable&lt;TValue&gt;, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformBindableTo__3___0_osu_Framework_Bindables_Bindable___1____1_System_Double___2__">TransformableExtensions.TransformBindableTo&lt;T, TValue, TEasing&gt;(T, Bindable&lt;TValue&gt;, TValue, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformTo__1___0_osu_Framework_Graphics_Transforms_Transform_">TransformableExtensions.TransformTo&lt;TThis&gt;(TThis, Transform)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformTo__2___0_System_String___1_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.TransformTo&lt;TThis, TValue&gt;(TThis, string, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformTo__3___0_System_String___1_System_Double___2__System_String_">TransformableExtensions.TransformTo&lt;TThis, TValue, TEasing&gt;(TThis, string, TValue, double, in TEasing, string)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Lines_SmoothPath_BackgroundColour_" data-uid="osu.Framework.Graphics.Lines.SmoothPath.BackgroundColour*"></a>
+
+  <h3 id="osu_Framework_Graphics_Lines_SmoothPath_BackgroundColour" data-uid="osu.Framework.Graphics.Lines.SmoothPath.BackgroundColour">
+  BackgroundColour
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Lines/SmoothPath.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The background colour to be used for the frame buffer this path is rendered to.
+For <a class="xref" href="osu.Framework.Graphics.Lines.SmoothPath.html">SmoothPath</a>, this automatically defaults to the colour at 0 (the outermost colour of the path) to avoid aliasing issues.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Color4 BackgroundColour { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color4</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Lines_SmoothPath_PathRadius_" data-uid="osu.Framework.Graphics.Lines.SmoothPath.PathRadius*"></a>
+
+  <h3 id="osu_Framework_Graphics_Lines_SmoothPath_PathRadius" data-uid="osu.Framework.Graphics.Lines.SmoothPath.PathRadius">
+  PathRadius
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Lines/SmoothPath.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How wide this path is on each side of the line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float PathRadius { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Lines_SmoothPath_PathRadius_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The actual width of the path is twice the PathRadius.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Lines_SmoothPath_ColourAt_" data-uid="osu.Framework.Graphics.Lines.SmoothPath.ColourAt*"></a>
+
+  <h3 id="osu_Framework_Graphics_Lines_SmoothPath_ColourAt_System_Single_" data-uid="osu.Framework.Graphics.Lines.SmoothPath.ColourAt(System.Single)">
+  ColourAt(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Lines/SmoothPath.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the colour from a position in the texture of the <a class="xref" href="osu.Framework.Graphics.Lines.Path.html">Path</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Color4 ColourAt(float position)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The position within the texture. 0 indicates the outermost-point of the path, 1 indicates the centre of the path.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color4</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Lines_SmoothPath_InvalidateTexture_" data-uid="osu.Framework.Graphics.Lines.SmoothPath.InvalidateTexture*"></a>
+
+  <h3 id="osu_Framework_Graphics_Lines_SmoothPath_InvalidateTexture" data-uid="osu.Framework.Graphics.Lines.SmoothPath.InvalidateTexture">
+  InvalidateTexture()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Lines/SmoothPath.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void InvalidateTexture()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Lines_SmoothPath_RegisterForDependencyActivation_" data-uid="osu.Framework.Graphics.Lines.SmoothPath.RegisterForDependencyActivation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Lines_SmoothPath_RegisterForDependencyActivation_osu_Framework_Allocation_IDependencyActivatorRegistry_" data-uid="osu.Framework.Graphics.Lines.SmoothPath.RegisterForDependencyActivation(osu.Framework.Allocation.IDependencyActivatorRegistry)">
+  RegisterForDependencyActivation(IDependencyActivatorRegistry)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked to register dependency activation functions for this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RegisterForDependencyActivation(IDependencyActivatorRegistry registry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>registry</code> <a class="xref" href="osu.Framework.Allocation.IDependencyActivatorRegistry.html">IDependencyActivatorRegistry</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Allocation.IDependencyActivatorRegistry.html">IDependencyActivatorRegistry</a> to register activation functions with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

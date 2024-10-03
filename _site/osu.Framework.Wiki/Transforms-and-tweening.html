@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Basic operations | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Basic operations | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework.wiki/blob/master/Transforms-and-tweening.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>A relatively extensive toolchain exists for applying transforms to <code>Drawable</code>s. This includes not only the ability to perform common visual adjustments (fade, scale, rotate, colour), but also the ability to arbitrarily perform transforms on any field/property belonging to the <code>Drawable</code>.</p>
+<p>Internally, transforms are a state machine which is build using <code>TransformSequence</code>. Multiple transforms can be chained and nested. This page attempts to provide a starting point for understanding how transforms can be used, but there should be plenty of room for exploration beyond this guide via experimentation.</p>
+<h1 id="basic-operations">Basic operations</h1>
+<p>A simple example which will fade a box into existence:</p>
+<pre><code class="lang-csharp">var box = new Box { Size = new Vector2(50) }
+
+Add(box); // the target of transforms must always be in the draw hierarchy and loaded before operating on it.
+
+box.FadeInFromZero(500);
+</code></pre>
+<h1 id="chaining">Chaining</h1>
+<p>Transforms can be chained in various ways. To run multiple transforms of different types at the same time value, simply chain the calls:</p>
+<pre><code class="lang-csharp">var box = new Box { Size = new Vector2(50) }
+
+Add(box); // the target of transforms must always be in the draw hierarchy and loaded before operating on it.
+
+box.FadeInFromZero(500)
+   .ScaleTo(new Vector2(2))
+   .RotateTo(90); // all three of these will be run in parallel.
+</code></pre>
+<p>To play one transform after another finishes, use <code>.Then()</code>:</p>
+<pre><code class="lang-csharp">var box = new Box { Size = new Vector2(50) }
+
+Add(box); // the target of transforms must always be in the draw hierarchy and loaded before operating on it.
+
+box.FadeInFromZero(500).Then().FadeOut(500); // fade in then out, over 1 second.
+</code></pre>
+<h1 id="offsets-and-delays">Offsets and delays</h1>
+<p>To add a delay to a sequence, you can use <code>.Delay(ms)</code>:</p>
+<pre><code class="lang-csharp">var box = new Box { Size = new Vector2(50) }
+
+Add(box); // the target of transforms must always be in the draw hierarchy and loaded before operating on it.
+
+box.FadeInFromZero(500).Then().Delay(200).FadeOut(500); // fade in then out, over 1.2 seconds, with a pause at full opacity.
+</code></pre>
+<p>For more complex cases, <code>BeginDelayedSequence</code> and <code>BeginAbsoluteSequence</code> can help to organise things:</p>
+<pre><code class="lang-csharp">var box = new Box { Size = new Vector2(50) }
+
+Add(box); // the target of transforms must always be in the draw hierarchy and loaded before operating on it.
+
+using (box.BeginAbsoluteSequence(2000)) // nested calls will run from absolute clock time of 2000ms. by default this applies to all children too.
+{
+    box.FadeIn(1000); 
+
+    using (box.BeginDelayedSequence(1000)) // nested calls will be delayed by 1000ms. by default this applies to all children too.
+        box.FadeOut(1000); 
+}
+</code></pre>
+<h1 id="looping">Looping</h1>
+<p>To loop a certain transform sequence, append either of <code>.Loop(millisecondsPause)</code>, or <code>.Loop(millisecondsPause, times)</code>, depending on how you want the loop to behave:</p>
+<h2 id="loopmillisecondspause"><code>.Loop(millisecondsPause)</code></h2>
+<p>This will loop the transform sequence indefinitely, with a defined pause between each iteration of the loop, until it's <a href="wiki/Transforms-and-tweening#interrupting-transforms">interrupted by one of the interruption methods</a>.</p>
+<pre><code class="lang-csharp">var box = new Box { Size = new Vector2(50) }
+
+Add(box); // the target of transforms must always be in the draw hierarchy and loaded before operating on it.
+
+// indefinitely resizes the box to 75px, then to 50px, with a pause of 250ms at the end of each iteration
+box.ResizeTo(new Vector2(75), 500).Then().ResizeTo(new Vector2(50), 250).Loop(250);
+</code></pre>
+<h2 id="loopmillisecondspause-times"><code>.Loop(millisecondsPause, times)</code></h2>
+<p>Just like the above, except that it will loop for a defined number of times, not indefinitely.</p>
+<pre><code class="lang-csharp">var box = new Box { Size = new Vector2(50) }
+
+Add(box); // the target of transforms must always be in the draw hierarchy and loaded before operating on it.
+
+// for 5 times, resize the box to 75px, then to 50px, with a pause of 250ms at the end of each iteration
+box.ResizeTo(new Vector2(75), 500).Then().ResizeTo(new Vector2(50), 250).Loop(250, 5);
+</code></pre>
+<h1 id="applying-to-arbitrary-members-fieldsproperties">Applying to arbitrary members (fields/properties)</h1>
+<p>All specific transform methods such as <code>.FadeIn(...)</code>/<code>.FadeColour(...)</code> are <a href="https://github.com/ppy/osu-framework/blob/4dbdb0039c1a1e802dfdaab94698f6d9485e6325/osu.Framework/Graphics/TransformableExtensions.cs#L487-L741">methods defined in extension classes</a> that delegate to the core method <code>.TransformTo()</code>, which accepts the name of the member to transform/tween, and the remaining arguments for transforming (duration, easing, etc.).</p>
+<p>And that doesn't apply only to the <code>Drawable</code> base class, you can apply transforms to any member belonging to your class as long as it inherits <code>Drawable</code>, and as long as the member is not <code>static</code>, and not a <code>readonly</code> field or getter-only/setter-only property:</p>
+<pre><code class="lang-csharp">public class SpecialBox : Box
+{
+    public double SpecialProperty { get; set }
+}
+
+var box = new SpecialBox { Size = new Vector2(50), SpecialProperty = 1.0 }
+
+Add(box); // the target of transforms must always be in the draw hierarchy and loaded before operating on it.
+
+box.TransformTo(nameof(SpecialProperty), 10.0, 1000); // transform SpecialProperty from current value to value 10.0, in 1 second.
+</code></pre>
+<p>For wrapping it in an extensions class:</p>
+<pre><code class="lang-csharp">public static class SpecialBoxExtensions
+{
+    public static TransformSequence&lt;T&gt; TweenSpecialPropertyTo&lt;T&gt;(this T specialBox, double newValue, double duration, Easing easing = Easing.None)
+        where T : SpecialBox
+        =&gt; specialBox.TweenSpecialPropertyTo(newValue, duration, new DefaultEasingFunction(easing));
+
+    public static TransformSequence&lt;T&gt; TweenSpecialPropertyTo&lt;T&gt;(this TransformSequence&lt;T&gt; t, double newValue, double duration, Easing easing = Easing.None)
+        where T : SpecialBox
+        =&gt; specialBox.TweenSpecialPropertyTo(newValue, duration, new DefaultEasingFunction(easing));
+
+    public static TransformSequence&lt;T&gt; TweenSpecialPropertyTo&lt;T, TEasing&gt;(this T specialBox, double newValue, double duration, in TEasing easing)
+        where T : SpecialBox
+        where TEasing : IEasingFunction
+        =&gt; specialBox.TransformTo(nameof(SpecialBox.SpecialProperty), newValue, duration, easing);
+
+    public static TransformSequence&lt;T&gt; TweenSpecialPropertyTo&lt;T, TEasing&gt;(this TransformSequence&lt;T&gt; t, double newValue, double duration, in TEasing easing)
+        where T : SpecialBox
+        where TEasing : IEasingFunction
+        =&gt; t.Append(o =&gt; o.TweenSpecialPropertyTo(newValue, duration, easing));
+}
+</code></pre>
+<pre><code class="lang-csharp">box.TweenSpecialPropertyTo(10.0, 1000);
+</code></pre>
+<pre><code class="lang-csharp">box.FadeInFromZero(500)
+   .TweenSpecialPropertyTo(10.0, 1000)
+   .Then().FadeOut(500);
+</code></pre>
+<h1 id="manual-interpolation">Manual interpolation</h1>
+<p>In cases where transforms are to be run every frame, it is highly recommended to use interpolation instead:</p>
+<pre><code class="lang-csharp">public override void Update()
+{
+    // useful if targetWidth is a moving target which need to be tracked, for example.
+    box.Width = Interpolation.ValueAt(Clock.ElapsedFrameTime, box.Width, targetWidth, 0, 200, Easing.OutQuint);
+}
+</code></pre>
+<h1 id="interrupting-transforms">Interrupting transforms</h1>
+<p>Transforms can be interrupted during their application, by finishing them immediately on current time, or removing them and leaving the transformed property at its current state, or rewinding it back to the beginning of the transform.</p>
+<h2 id="finishing-transforms-immediately">Finishing transforms immediately</h2>
+<p>To finish transforms immediately, use <code>FinishTransforms</code> on the drawable whose transforms are still being processed.</p>
+<pre><code class="lang-csharp">var box = new Box { Size = new Vector2(50) }
+
+Add(box); // the target of transforms must always be in the draw hierarchy and loaded before operating on it.
+
+box.FadeInFromZero(1000);
+
+// after 0.5 seconds, finish transforms applied to the box.
+Scheduler.AddDelay(() =&gt; 
+{
+    // by default, this only applies to transforms applied to the box itself,
+    // pass `true` to finish transforms of children as well.
+    box.FinishTransforms();
+}, 500);
+</code></pre>
+<h2 id="removing-transforms">Removing transforms</h2>
+<p>To remove transforms, use <code>ClearTransforms</code> on the drawable whose transforms are still being processed.</p>
+<pre><code class="lang-csharp">var box = new Box { Size = new Vector2(50) }
+
+Add(box); // the target of transforms must always be in the draw hierarchy and loaded before operating on it.
+
+box.FadeInFromZero(1000);
+
+// after 0.5 seconds, remove transforms from the box.
+Scheduler.AddDelay(() =&gt; 
+{
+    // by default, this only applies to transforms applied to the box itself,
+    // pass `true` to clear transforms of children as well.
+    box.ClearTransforms();
+}, 500);
+</code></pre>
+<p>To remove transforms starting at a certain time, use <code>ClearTransformsAfter</code> instead.</p>
+<pre><code class="lang-csharp">box.FadeInFromZero(500).Then().FadeOut(500);
+
+// after 0.5 seconds, remove transforms at current time from the box.
+Scheduler.AddDelay(() =&gt;
+{
+    // by default, this only applies to transforms applied to the box itself,
+    // pass `true` to clear transforms of children as well.
+    box.ClearTransformsAfter(Time.Current);
+}
+</code></pre>
+<ul>
+<li>Note that <code>ClearTransformsAfter(time)</code> actually removes transforms starting at the given time, not after it. This was a mistake in naming and will be resolved soon.</li>
+</ul>
+<h2 id="applying-transforms-to-the-drawable-from-a-different-time-before-removing">Applying transforms to the drawable from a different time before removing</h2>
+<p>Removing transforms will not revert them, the drawable will remain at its current state.</p>
+<p>To revert the transform applied to the <code>Drawable</code>, or apply them from a given absolute clock time before removing, use <code>ApplyTransformsAt</code>.</p>
+<pre><code class="lang-csharp">var box = new Box { Size = new Vector2(50) }
+
+Add(box); // the target of transforms must always be in the draw hierarchy and loaded before operating on it.
+
+box.FadeInFromZero(1000);
+
+// after 0.5 seconds, revert the transform and remove it from the box.
+Scheduler.AddDelay(() =&gt; 
+{
+    // by default, this only applies to transforms applied to the box itself,
+    // pass `true` to clear transforms of children as well.
+    box.ApplyTransformsAt(Time.Current - 500);
+    box.ClearTransforms();
+}, 500);
+</code></pre>
+<h1 id="rewinding-support">Rewinding support</h1>
+<p>// TODO</p>
+<h1 id="using-custom-easing-functions">Using custom easing functions</h1>
+<p>In cases the <a href="https://github.com/ppy/osu-framework/blob/fb3029668d12ef14dd43ed9ac71395765daf9efe/osu.Framework/Graphics/Easing.cs">default <code>Easing</code> functions</a> aren't what you want for some transforms, you can define your own <code>IEasingFunction</code> and pass it to the transforms:</p>
+<pre><code class="lang-csharp">public readonly struct SpecialEasingFunction : IEasingFunction
+{
+    public double ApplyEasing(double time) =&gt; time;
+}
+
+var box = new Box { Size = new Vector2(50) }
+
+Add(box); // the target of transforms must always be in the draw hierarchy and loaded before operating on it.
+
+box.FadeInFromZero(1000, new SpecialEasingFunction());
+</code></pre>
+<ul>
+<li><code>IEasingFunction.ApplyEasing</code> accepts a time value in the range [0-1], and returns an eased value of it. For examples, you can refer to the <a href="https://github.com/ppy/osu-framework/blob/d284856a6a7a341ab12f1f1169cac30f4aec8caa/osu.Framework/Graphics/Transforms/DefaultEasingFunction.cs"><code>DefaultEasingFunction</code></a> implementation.</li>
+</ul>
+<h1 id="best-practices">Best practices</h1>
+<p>Some basic things to note:</p>
+<ul>
+<li>Transforming before a drawable is loaded (ie. <code>LoadComplete</code>) will cause the transforms to play out immediately. This is due to the drawable not yet having a clock to work with. If you must queue transforms before load, make sure to use a <code>Schedule(() =&gt; {})</code> call.</li>
+<li>Transforms are not free and should not be run every frame. Please use interpolation for such cases.</li>
+<li>Generally, we recommend not operating on oneself with transforms (ie. <code>this.FadeIn()</code>). This is due to the potential of conflicts between internal and external calls, which could overwrite or cause unexpected behaviour. Create a private nested container and operate on that instead.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework.wiki/blob/master/Transforms-and-tweening.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

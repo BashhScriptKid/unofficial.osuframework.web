@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IContainerEnumerable&lt;T&gt; | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IContainerEnumerable&lt;T&gt; | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Graphics_Containers_IContainerEnumerable_1.md&amp;value=---%0Auid%3A%20osu.Framework.Graphics.Containers.IContainerEnumerable%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Graphics.Containers.IContainerEnumerable`1">
+
+
+
+  <h1 id="osu_Framework_Graphics_Containers_IContainerEnumerable_1" data-uid="osu.Framework.Graphics.Containers.IContainerEnumerable`1" class="text-break">
+Interface IContainerEnumerable&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/IContainer.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Graphics.html">Graphics</a>.<a class="xref" href="osu.Framework.Graphics.Containers.html">Containers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IContainerEnumerable&lt;out T&gt; : IContainer, IDrawable, ITransformable where T : class, IDrawable</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.IContainer.html#osu_Framework_Graphics_Containers_IContainer_EdgeEffect">IContainer.EdgeEffect</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.IContainer.html#osu_Framework_Graphics_Containers_IContainer_RelativeChildSize">IContainer.RelativeChildSize</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.IContainer.html#osu_Framework_Graphics_Containers_IContainer_RelativeChildOffset">IContainer.RelativeChildOffset</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_DrawSize">IDrawable.DrawSize</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_DrawRectangle">IDrawable.DrawRectangle</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_DrawInfo">IDrawable.DrawInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_DrawColourInfo">IDrawable.DrawColourInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_ScreenSpaceDrawQuad">IDrawable.ScreenSpaceDrawQuad</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_Parent">IDrawable.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_IsPresent">IDrawable.IsPresent</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_Clock">IDrawable.Clock</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_ToSpaceOfOtherDrawable_osuTK_Vector2_osu_Framework_Graphics_IDrawable_">IDrawable.ToSpaceOfOtherDrawable(Vector2, IDrawable)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_ToLocalSpace_osuTK_Vector2_">IDrawable.ToLocalSpace(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_Blending">IDrawable.Blending</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_IsHovered">IDrawable.IsHovered</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_IsDragged">IDrawable.IsDragged</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_Alpha">IDrawable.Alpha</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_Show">IDrawable.Show()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_Hide">IDrawable.Hide()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_InvalidationID">IDrawable.InvalidationID</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_BeginDelayedSequence_System_Double_System_Boolean_">ITransformable.BeginDelayedSequence(double, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_BeginAbsoluteSequence_System_Double_System_Boolean_">ITransformable.BeginAbsoluteSequence(double, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_Time">ITransformable.Time</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_TransformStartTime">ITransformable.TransformStartTime</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_AddTransform_osu_Framework_Graphics_Transforms_Transform_System_Nullable_System_UInt64__">ITransformable.AddTransform(Transform, ulong?)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_RemoveTransform_osu_Framework_Graphics_Transforms_Transform_">ITransformable.RemoveTransform(Transform)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Animate__1___0_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Animate&lt;T&gt;(T, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Delay__1___0_System_Double_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Delay&lt;T&gt;(T, double, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeEdgeEffectTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeEdgeEffectTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeEdgeEffectTo__1___0_osuTK_Graphics_Color4_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeEdgeEffectTo&lt;T&gt;(T, Color4, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeEdgeEffectTo__2___0_System_Single_System_Double___1__">TransformableExtensions.FadeEdgeEffectTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeEdgeEffectTo__2___0_osuTK_Graphics_Color4_System_Double___1__">TransformableExtensions.FadeEdgeEffectTo&lt;T, TEasing&gt;(T, Color4, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_System_Double_">TransformableExtensions.Loop&lt;T&gt;(T, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_System_Double_System_Int32_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Loop&lt;T&gt;(T, double, int, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_System_Double_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Loop&lt;T&gt;(T, double, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Loop&lt;T&gt;(T, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MakeTransform__2___0_System_String___1_System_Double_osu_Framework_Graphics_Easing_System_String_">TransformableExtensions.MakeTransform&lt;TThis, TValue&gt;(TThis, string, TValue, double, Easing, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MakeTransform__3___0_System_String___2_System_Double___1__System_String_">TransformableExtensions.MakeTransform&lt;TThis, TEasing, TValue&gt;(TThis, string, TValue, double, in TEasing, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_PopulateTransform__2___1_osu_Framework_Graphics_Transforms_Transform___0_osu_Framework_Graphics_Transforms_DefaultEasingFunction___1____0_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.PopulateTransform&lt;TValue, TThis&gt;(TThis, Transform&lt;TValue, DefaultEasingFunction, TThis&gt;, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_PopulateTransform__3___2_osu_Framework_Graphics_Transforms_Transform___0___1___2____0_System_Double___1__">TransformableExtensions.PopulateTransform&lt;TValue, TEasing, TThis&gt;(TThis, Transform&lt;TValue, TEasing, TThis&gt;, TValue, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformBindableTo__2___0_osu_Framework_Bindables_Bindable___1____1_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.TransformBindableTo&lt;T, TValue&gt;(T, Bindable&lt;TValue&gt;, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformBindableTo__3___0_osu_Framework_Bindables_Bindable___1____1_System_Double___2__">TransformableExtensions.TransformBindableTo&lt;T, TValue, TEasing&gt;(T, Bindable&lt;TValue&gt;, TValue, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformRelativeChildOffsetTo__1___0_osuTK_Vector2_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.TransformRelativeChildOffsetTo&lt;T&gt;(T, Vector2, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformRelativeChildOffsetTo__2___0_osuTK_Vector2_System_Double___1__">TransformableExtensions.TransformRelativeChildOffsetTo&lt;T, TEasing&gt;(T, Vector2, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformRelativeChildSizeTo__1___0_osuTK_Vector2_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.TransformRelativeChildSizeTo&lt;T&gt;(T, Vector2, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformRelativeChildSizeTo__2___0_osuTK_Vector2_System_Double___1__">TransformableExtensions.TransformRelativeChildSizeTo&lt;T, TEasing&gt;(T, Vector2, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformTo__1___0_osu_Framework_Graphics_Transforms_Transform_">TransformableExtensions.TransformTo&lt;TThis&gt;(TThis, Transform)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformTo__2___0_System_String___1_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.TransformTo&lt;TThis, TValue&gt;(TThis, string, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformTo__3___0_System_String___1_System_Double___2__System_String_">TransformableExtensions.TransformTo&lt;TThis, TValue, TEasing&gt;(TThis, string, TValue, double, in TEasing, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TweenEdgeEffectTo__1___0_osu_Framework_Graphics_Effects_EdgeEffectParameters_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.TweenEdgeEffectTo&lt;T&gt;(T, EdgeEffectParameters, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TweenEdgeEffectTo__2___0_osu_Framework_Graphics_Effects_EdgeEffectParameters_System_Double___1__">TransformableExtensions.TweenEdgeEffectTo&lt;T, TEasing&gt;(T, EdgeEffectParameters, double, in TEasing)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Containers_IContainerEnumerable_1_Children_" data-uid="osu.Framework.Graphics.Containers.IContainerEnumerable`1.Children*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_IContainerEnumerable_1_Children" data-uid="osu.Framework.Graphics.Containers.IContainerEnumerable`1.Children">
+  Children
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/IContainer.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyList&lt;out T&gt; Children { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Containers_IContainerEnumerable_1_RemoveAll_" data-uid="osu.Framework.Graphics.Containers.IContainerEnumerable`1.RemoveAll*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_IContainerEnumerable_1_RemoveAll_System_Predicate__0__System_Boolean_" data-uid="osu.Framework.Graphics.Containers.IContainerEnumerable`1.RemoveAll(System.Predicate{`0},System.Boolean)">
+  RemoveAll(Predicate&lt;T&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/IContainer.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Remove all matching children from this container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">int RemoveAll(Predicate&lt;out T&gt; match, bool disposeImmediately)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>match</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.predicate-1">Predicate</a>&lt;T&gt;</dt>
+    <dd><p>A predicate used to find matching items.</p>
+</dd>
+    <dt><code>disposeImmediately</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether removed items should be immediately disposed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of matching items removed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Containers_IContainerEnumerable_1_RemoveAll_System_Predicate__0__System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p><code class="paramref">disposeImmediately</code> should be <code>true</code> unless the removed items are to be re-used in the future.
+If <code>false</code>, ensure removed items are manually disposed else object leakage may occur.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/IContainer.cs/#L20" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

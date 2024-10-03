@@ -1,0 +1,1431 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+  commentId: T:osu.Framework.Graphics.Rendering.IVertexBatch`1
+  id: IVertexBatch`1
+  parent: osu.Framework.Graphics.Rendering
+  children:
+  - osu.Framework.Graphics.Rendering.IVertexBatch`1.Add(`0)
+  - osu.Framework.Graphics.Rendering.IVertexBatch`1.AddAction
+  langs:
+  - csharp
+  - vb
+  name: IVertexBatch<TVertex>
+  nameWithType: IVertexBatch<TVertex>
+  fullName: osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>
+  type: Interface
+  source:
+    remote:
+      path: osu.Framework/Graphics/Rendering/IVertexBatch.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: IVertexBatch
+    path: osu.Framework/Graphics/Rendering/IVertexBatch.cs
+    startLine: 24
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Rendering
+  syntax:
+    content: 'public interface IVertexBatch<in TVertex> : IVertexBatch, IDisposable where TVertex : unmanaged, IEquatable<in TVertex>, IVertex'
+    typeParameters:
+    - id: TVertex
+    content.vb: Public Interface IVertexBatch(Of In TVertex As {Structure, IEquatable(Of In TVertex), IVertex}) Inherits IVertexBatch, IDisposable
+  inheritedMembers:
+  - osu.Framework.Graphics.Rendering.IVertexBatch.Size
+  - osu.Framework.Graphics.Rendering.IVertexBatch.Draw
+  - System.IDisposable.Dispose
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  nameWithType.vb: IVertexBatch(Of TVertex)
+  fullName.vb: osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex)
+  name.vb: IVertexBatch(Of TVertex)
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.AddAction
+  commentId: P:osu.Framework.Graphics.Rendering.IVertexBatch`1.AddAction
+  id: AddAction
+  parent: osu.Framework.Graphics.Rendering.IVertexBatch`1
+  langs:
+  - csharp
+  - vb
+  name: AddAction
+  nameWithType: IVertexBatch<TVertex>.AddAction
+  fullName: osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>.AddAction
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Graphics/Rendering/IVertexBatch.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AddAction
+    path: osu.Framework/Graphics/Rendering/IVertexBatch.cs
+    startLine: 31
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Rendering
+  summary: >-
+    Adds a vertex to this <xref href="osu.Framework.Graphics.Rendering.IVertexBatch%601" data-throw-if-not-resolved="false"></xref>.
+
+    This is a cached delegate of <xref href="osu.Framework.Graphics.Rendering.IVertexBatch%601.Add(%600)" data-throw-if-not-resolved="false"></xref> that should be used in memory-critical locations such as <xref href="osu.Framework.Graphics.DrawNode" data-throw-if-not-resolved="false"></xref>s.
+  example: []
+  syntax:
+    content: Action<in TVertex> AddAction { get; }
+    parameters: []
+    return:
+      type: System.Action{{TVertex}}
+    content.vb: ReadOnly Property AddAction As Action(Of In TVertex)
+  overload: osu.Framework.Graphics.Rendering.IVertexBatch`1.AddAction*
+  nameWithType.vb: IVertexBatch(Of TVertex).AddAction
+  fullName.vb: osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex).AddAction
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.Add(`0)
+  commentId: M:osu.Framework.Graphics.Rendering.IVertexBatch`1.Add(`0)
+  id: Add(`0)
+  parent: osu.Framework.Graphics.Rendering.IVertexBatch`1
+  langs:
+  - csharp
+  - vb
+  name: Add(TVertex)
+  nameWithType: IVertexBatch<TVertex>.Add(TVertex)
+  fullName: osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>.Add(TVertex)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Graphics/Rendering/IVertexBatch.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Add
+    path: osu.Framework/Graphics/Rendering/IVertexBatch.cs
+    startLine: 33
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Rendering
+  syntax:
+    content: void Add(TVertex vertex)
+    parameters:
+    - id: vertex
+      type: '{TVertex}'
+    content.vb: Sub Add(vertex As TVertex)
+  overload: osu.Framework.Graphics.Rendering.IVertexBatch`1.Add*
+  nameWithType.vb: IVertexBatch(Of TVertex).Add(TVertex)
+  fullName.vb: osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex).Add(TVertex)
+references:
+- uid: osu.Framework.Graphics.Rendering
+  commentId: N:osu.Framework.Graphics.Rendering
+  href: osu.html
+  name: osu.Framework.Graphics.Rendering
+  nameWithType: osu.Framework.Graphics.Rendering
+  fullName: osu.Framework.Graphics.Rendering
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Rendering
+    name: Rendering
+    href: osu.Framework.Graphics.Rendering.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Rendering
+    name: Rendering
+    href: osu.Framework.Graphics.Rendering.html
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch.Size
+  commentId: P:osu.Framework.Graphics.Rendering.IVertexBatch.Size
+  parent: osu.Framework.Graphics.Rendering.IVertexBatch
+  href: osu.Framework.Graphics.Rendering.IVertexBatch.html#osu_Framework_Graphics_Rendering_IVertexBatch_Size
+  name: Size
+  nameWithType: IVertexBatch.Size
+  fullName: osu.Framework.Graphics.Rendering.IVertexBatch.Size
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch.Draw
+  commentId: M:osu.Framework.Graphics.Rendering.IVertexBatch.Draw
+  parent: osu.Framework.Graphics.Rendering.IVertexBatch
+  href: osu.Framework.Graphics.Rendering.IVertexBatch.html#osu_Framework_Graphics_Rendering_IVertexBatch_Draw
+  name: Draw()
+  nameWithType: IVertexBatch.Draw()
+  fullName: osu.Framework.Graphics.Rendering.IVertexBatch.Draw()
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch.Draw
+    name: Draw
+    href: osu.Framework.Graphics.Rendering.IVertexBatch.html#osu_Framework_Graphics_Rendering_IVertexBatch_Draw
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch.Draw
+    name: Draw
+    href: osu.Framework.Graphics.Rendering.IVertexBatch.html#osu_Framework_Graphics_Rendering_IVertexBatch_Draw
+  - name: (
+  - name: )
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<IVertexBatch<TVertex>>(IVertexBatch<TVertex>)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<IVertexBatch<TVertex>>(IVertexBatch<TVertex>)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>>(osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of IVertexBatch(Of TVertex))(IVertexBatch(Of TVertex))
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex))(osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex))
+  name.vb: GetLocalisableDescription(Of IVertexBatch(Of TVertex))(IVertexBatch(Of TVertex))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Graphics.Rendering.IVertexBatch{`0})
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Graphics.Rendering.IVertexBatch{`0})
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<IVertexBatch<TVertex>>(IVertexBatch<TVertex>)
+  nameWithType: EnumerableExtensions.Yield<IVertexBatch<TVertex>>(IVertexBatch<TVertex>)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>>(osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>)
+  nameWithType.vb: EnumerableExtensions.Yield(Of IVertexBatch(Of TVertex))(IVertexBatch(Of TVertex))
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex))(osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex))
+  name.vb: Yield(Of IVertexBatch(Of TVertex))(IVertexBatch(Of TVertex))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Graphics.Rendering.IVertexBatch{`0})
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Graphics.Rendering.IVertexBatch{`0})
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<IVertexBatch<TVertex>>(IVertexBatch<TVertex>)
+  nameWithType: ObjectExtensions.AsNonNull<IVertexBatch<TVertex>>(IVertexBatch<TVertex>)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>>(osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of IVertexBatch(Of TVertex))(IVertexBatch(Of TVertex))
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex))(osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex))
+  name.vb: AsNonNull(Of IVertexBatch(Of TVertex))(IVertexBatch(Of TVertex))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Graphics.Rendering.IVertexBatch{`0})
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Graphics.Rendering.IVertexBatch{`0})
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<IVertexBatch<TVertex>>(IVertexBatch<TVertex>)
+  nameWithType: ObjectExtensions.IsNotNull<IVertexBatch<TVertex>>(IVertexBatch<TVertex>)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>>(osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of IVertexBatch(Of TVertex))(IVertexBatch(Of TVertex))
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex))(osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex))
+  name.vb: IsNotNull(Of IVertexBatch(Of TVertex))(IVertexBatch(Of TVertex))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Graphics.Rendering.IVertexBatch{`0})
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Graphics.Rendering.IVertexBatch{`0})
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<IVertexBatch<TVertex>>(IVertexBatch<TVertex>)
+  nameWithType: ObjectExtensions.IsNull<IVertexBatch<TVertex>>(IVertexBatch<TVertex>)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>>(osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>)
+  nameWithType.vb: ObjectExtensions.IsNull(Of IVertexBatch(Of TVertex))(IVertexBatch(Of TVertex))
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex))(osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex))
+  name.vb: IsNull(Of IVertexBatch(Of TVertex))(IVertexBatch(Of TVertex))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Graphics.Rendering.IVertexBatch{`0})
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Graphics.Rendering.IVertexBatch{`0})
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<IVertexBatch<TVertex>, TChild>(IVertexBatch<TVertex>, TChild)
+  nameWithType: ContainerExtensions.WithChild<IVertexBatch<TVertex>, TChild>(IVertexBatch<TVertex>, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>, TChild>(osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of IVertexBatch(Of TVertex), TChild)(IVertexBatch(Of TVertex), TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex), TChild)(osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex), TChild)
+  name.vb: WithChild(Of IVertexBatch(Of TVertex), TChild)(IVertexBatch(Of TVertex), TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Graphics.Rendering.IVertexBatch{`0},``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Graphics.Rendering.IVertexBatch{`0},``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<IVertexBatch<TVertex>, TChild>(IVertexBatch<TVertex>, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<IVertexBatch<TVertex>, TChild>(IVertexBatch<TVertex>, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>, TChild>(osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of IVertexBatch(Of TVertex), TChild)(IVertexBatch(Of TVertex), IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex), TChild)(osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex), System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of IVertexBatch(Of TVertex), TChild)(IVertexBatch(Of TVertex), IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Graphics.Rendering.IVertexBatch{`0},System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Graphics.Rendering.IVertexBatch{`0},System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<IVertexBatch<TVertex>, TChild>(IVertexBatch<TVertex>, TChild)
+  nameWithType: ContainerExtensions.Wrap<IVertexBatch<TVertex>, TChild>(IVertexBatch<TVertex>, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>, TChild>(osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of IVertexBatch(Of TVertex), TChild)(IVertexBatch(Of TVertex), TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex), TChild)(osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex), TChild)
+  name.vb: Wrap(Of IVertexBatch(Of TVertex), TChild)(IVertexBatch(Of TVertex), TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Graphics.Rendering.IVertexBatch{`0},``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Graphics.Rendering.IVertexBatch{`0},``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch
+  commentId: T:osu.Framework.Graphics.Rendering.IVertexBatch
+  parent: osu.Framework.Graphics.Rendering
+  href: osu.Framework.Graphics.Rendering.IVertexBatch.html
+  name: IVertexBatch
+  nameWithType: IVertexBatch
+  fullName: osu.Framework.Graphics.Rendering.IVertexBatch
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+  commentId: T:osu.Framework.Graphics.Rendering.IVertexBatch`1
+  href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  name: IVertexBatch<TVertex>
+  nameWithType: IVertexBatch<TVertex>
+  fullName: osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>
+  nameWithType.vb: IVertexBatch(Of TVertex)
+  fullName.vb: osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex)
+  name.vb: IVertexBatch(Of TVertex)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: <
+  - name: TVertex
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1
+    name: IVertexBatch
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.Add(`0)
+  commentId: M:osu.Framework.Graphics.Rendering.IVertexBatch`1.Add(`0)
+  href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html#osu_Framework_Graphics_Rendering_IVertexBatch_1_Add__0_
+  name: Add(TVertex)
+  nameWithType: IVertexBatch<TVertex>.Add(TVertex)
+  fullName: osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>.Add(TVertex)
+  nameWithType.vb: IVertexBatch(Of TVertex).Add(TVertex)
+  fullName.vb: osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex).Add(TVertex)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.Add(`0)
+    name: Add
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html#osu_Framework_Graphics_Rendering_IVertexBatch_1_Add__0_
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.Add(`0)
+    name: Add
+    href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html#osu_Framework_Graphics_Rendering_IVertexBatch_1_Add__0_
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: osu.Framework.Graphics.DrawNode
+  commentId: T:osu.Framework.Graphics.DrawNode
+  parent: osu.Framework.Graphics
+  href: osu.Framework.Graphics.DrawNode.html
+  name: DrawNode
+  nameWithType: DrawNode
+  fullName: osu.Framework.Graphics.DrawNode
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.AddAction*
+  commentId: Overload:osu.Framework.Graphics.Rendering.IVertexBatch`1.AddAction
+  href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html#osu_Framework_Graphics_Rendering_IVertexBatch_1_AddAction
+  name: AddAction
+  nameWithType: IVertexBatch<TVertex>.AddAction
+  fullName: osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>.AddAction
+  nameWithType.vb: IVertexBatch(Of TVertex).AddAction
+  fullName.vb: osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex).AddAction
+- uid: System.Action{{TVertex}}
+  commentId: T:System.Action{`0}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TVertex>
+  nameWithType: Action<TVertex>
+  fullName: System.Action<TVertex>
+  nameWithType.vb: Action(Of TVertex)
+  fullName.vb: System.Action(Of TVertex)
+  name.vb: Action(Of TVertex)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TVertex
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+- uid: osu.Framework.Graphics
+  commentId: N:osu.Framework.Graphics
+  href: osu.html
+  name: osu.Framework.Graphics
+  nameWithType: osu.Framework.Graphics
+  fullName: osu.Framework.Graphics
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Rendering.IVertexBatch`1.Add*
+  commentId: Overload:osu.Framework.Graphics.Rendering.IVertexBatch`1.Add
+  href: osu.Framework.Graphics.Rendering.IVertexBatch-1.html#osu_Framework_Graphics_Rendering_IVertexBatch_1_Add__0_
+  name: Add
+  nameWithType: IVertexBatch<TVertex>.Add
+  fullName: osu.Framework.Graphics.Rendering.IVertexBatch<TVertex>.Add
+  nameWithType.vb: IVertexBatch(Of TVertex).Add
+  fullName.vb: osu.Framework.Graphics.Rendering.IVertexBatch(Of TVertex).Add
+- uid: '{TVertex}'
+  commentId: '!:TVertex'
+  definition: TVertex
+  name: TVertex
+  nameWithType: TVertex
+  fullName: TVertex
+- uid: TVertex
+  commentId: '!:TVertex'
+  name: TVertex
+  nameWithType: TVertex
+  fullName: TVertex

@@ -1,0 +1,394 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Utils.General
+  commentId: T:osu.Framework.Utils.General
+  id: General
+  parent: osu.Framework.Utils
+  children:
+  - osu.Framework.Utils.General.AttemptWithRetryOnException``1(System.Action,System.Int32,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: General
+  nameWithType: General
+  fullName: osu.Framework.Utils.General
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Utils/General.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: General
+    path: osu.Framework/Utils/General.cs
+    startLine: 9
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  syntax:
+    content: public static class General
+    content.vb: Public Module General
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: osu.Framework.Utils.General.AttemptWithRetryOnException``1(System.Action,System.Int32,System.Boolean)
+  commentId: M:osu.Framework.Utils.General.AttemptWithRetryOnException``1(System.Action,System.Int32,System.Boolean)
+  id: AttemptWithRetryOnException``1(System.Action,System.Int32,System.Boolean)
+  isExtensionMethod: true
+  parent: osu.Framework.Utils.General
+  langs:
+  - csharp
+  - vb
+  name: AttemptWithRetryOnException<TException>(Action, int, bool)
+  nameWithType: General.AttemptWithRetryOnException<TException>(Action, int, bool)
+  fullName: osu.Framework.Utils.General.AttemptWithRetryOnException<TException>(System.Action, int, bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/General.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AttemptWithRetryOnException
+    path: osu.Framework/Utils/General.cs
+    startLine: 20
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: >-
+    Attempt an operation and perform retries on a matching exception, up to a limit.
+
+    Useful for IO operations which can fail for a short period due to an open file handle.
+  example: []
+  syntax:
+    content: 'public static bool AttemptWithRetryOnException<TException>(this Action action, int attempts = 10, bool throwOnFailure = true) where TException : Exception'
+    parameters:
+    - id: action
+      type: System.Action
+      description: The action to perform.
+    - id: attempts
+      type: System.Int32
+      description: The number of attempts (250ms wait between each).
+    - id: throwOnFailure
+      type: System.Boolean
+      description: Whether to throw an exception on failure. If <code>false</code>, will silently fail.
+    typeParameters:
+    - id: TException
+      description: The type of exception which should trigger retries.
+    return:
+      type: System.Boolean
+      description: Whether the operation succeeded.
+    content.vb: Public Shared Function AttemptWithRetryOnException(Of TException As Exception)(action As Action, attempts As Integer = 10, throwOnFailure As Boolean = True) As Boolean
+  overload: osu.Framework.Utils.General.AttemptWithRetryOnException*
+  nameWithType.vb: General.AttemptWithRetryOnException(Of TException)(Action, Integer, Boolean)
+  fullName.vb: osu.Framework.Utils.General.AttemptWithRetryOnException(Of TException)(System.Action, Integer, Boolean)
+  name.vb: AttemptWithRetryOnException(Of TException)(Action, Integer, Boolean)
+references:
+- uid: osu.Framework.Utils
+  commentId: N:osu.Framework.Utils
+  href: osu.html
+  name: osu.Framework.Utils
+  nameWithType: osu.Framework.Utils
+  fullName: osu.Framework.Utils
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Utils
+    name: Utils
+    href: osu.Framework.Utils.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Utils
+    name: Utils
+    href: osu.Framework.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Utils.General.AttemptWithRetryOnException*
+  commentId: Overload:osu.Framework.Utils.General.AttemptWithRetryOnException
+  href: osu.Framework.Utils.General.html#osu_Framework_Utils_General_AttemptWithRetryOnException__1_System_Action_System_Int32_System_Boolean_
+  name: AttemptWithRetryOnException
+  nameWithType: General.AttemptWithRetryOnException
+  fullName: osu.Framework.Utils.General.AttemptWithRetryOnException
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

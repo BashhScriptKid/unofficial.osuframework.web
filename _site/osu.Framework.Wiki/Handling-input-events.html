@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Positional vs non-positional input | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Positional vs non-positional input | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework.wiki/blob/master/Handling-input-events.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>Input handling follows a topological model whereby the top-most (visually) <code>Drawable</code> handles input prior to anything else in the game. Hierarchically between a single parent-child relationship, the child handles input before the parent.</p>
+<pre><code>Parent              &lt; Handler #4
+    Child_1         &lt; Handler #3
+    Child_2         &lt; Handler #2
+        Child_2_1   &lt; Handler #1
+</code></pre>
+<h1 id="positional-vs-non-positional-input">Positional vs non-positional input</h1>
+<p>&quot;Positional&quot; input refers to any input that depends on a screen-space position (e.g. hover). &quot;Non-positional&quot; input refers to any other input (e.g. a button press).</p>
+<h2 id="individual-event-handlers">Individual event handlers</h2>
+<h3 id="positional">Positional</h3>
+<pre><code class="lang-csharp">protected virtual bool OnMouseMove(MouseMoveEvent e);
+
+protected virtual bool OnHover(HoverEvent e);
+protected virtual void OnHoverLost(HoverLostEvent e);
+
+protected virtual bool OnMouseDown(MouseDownEvent e);
+protected virtual void OnMouseUp(MouseUpEvent e);
+
+protected virtual bool OnClick(ClickEvent e);
+protected virtual bool OnDoubleClick(DoubleClickEvent e);
+
+protected virtual bool OnDragStart(DragStartEvent e);
+protected virtual void OnDrag(DragEvent e);
+protected virtual void OnDragEnd(DragEndEvent e);
+
+protected virtual bool OnScroll(ScrollEvent e);
+
+protected virtual bool OnTouchDown(TouchDownEvent e);
+protected virtual void OnTouchMove(TouchMoveEvent e);
+protected virtual void OnTouchUp(TouchUpEvent e);
+
+protected virtual bool OnTabletPenButtonPress(TabletPenButtonPressEvent e);
+protected virtual void OnTabletPenButtonRelease(TabletPenButtonReleaseEvent e);
+</code></pre>
+<h3 id="non-positional">Non-positional</h3>
+<pre><code class="lang-csharp">protected virtual bool OnKeyDown(KeyDownEvent e);
+protected virtual void OnKeyUp(KeyUpEvent e);
+
+protected virtual bool OnJoystickPress(JoystickPressEvent e);
+protected virtual void OnJoystickRelease(JoystickReleaseEvent e);
+protected virtual bool OnJoystickAxisMove(JoystickAxisMoveEvent e);
+
+protected virtual bool OnMidiDown(MidiDownEvent e);
+protected virtual void OnMidiUp(MidiUpEvent e);
+
+protected virtual bool OnTabletAuxiliaryButtonPress(TabletAuxiliaryButtonPressEvent e);
+protected virtual void OnTabletAuxiliaryButtonRelease(TabletAuxiliaryButtonReleaseEvent e);
+</code></pre>
+<p>These event handlers should be used when singular events are to be handled.</p>
+<p>The boolean return value indicates whether the event should continue being propagated to other <code>Drawable</code>s in the scene graph.</p>
+<blockquote>
+<p><strong>Example:</strong>
+If a child did not want its parent to receive an <code>OnHover()</code> event, it should override <code>OnHover()</code> to return <code>true</code>.</p>
+</blockquote>
+<p><code>OnHoverLost()</code> is an exception which is unconditionally invoked on every un-hovered <code>Drawable</code>.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-csharp">protected override bool OnClick(ClickEvent e)
+{
+    this.ScaleTo(1.25f, 50).Then().ScaleTo(1f, 50);
+    return true;
+}
+</code></pre>
+<p>Input handlers that correspond to continuations/resolutions of previous input, such as <code>OnMouseUp()</code>, <code>OnDragEnd()</code>, <code>OnKeyUp()</code>, etc., will only fire on drawables that registered to handle the original input by returning <code>true</code> - for the examples above, that would be <code>OnMouseDown()</code>, <code>OnDragStart()</code>, <code>OnKeyDown()</code>, etc. Those events cannot be suppressed.</p>
+<h1 id="aggregate-event-handler">Aggregate event handler</h1>
+<pre><code class="lang-csharp">protected virtual bool Handle(UIEvent e);
+</code></pre>
+<p>This event handler should be used when groups of events with identical implementations are to be handled.</p>
+<p>This counts as both a positional and non-positional event handler and works well when combined with the <code>HandleNonPositionalInput</code> and <code>HandlePositionalInput</code> properties described below.</p>
+<blockquote>
+<p><strong>Example</strong></p>
+<pre><code class="lang-csharp">protected override bool Handle(UIEvent e)
+{
+    switch (e)
+    {
+        case MouseEvent _:
+            // Stop all mouse events from being handled by other Drawables
+            return true;
+
+        default:
+            // Let other Drawables handle everything else
+            return false;
+    }
+}
+</code></pre>
+</blockquote>
+<h1 id="controlling-whether-input-is-to-be-handled">Controlling whether input is to be handled</h1>
+<p>By default, any <code>Drawable</code> that implements the handlers described above will receive all events appropriate for the types of input listed.</p>
+<pre><code class="lang-csharp">public virtual bool HandleNonPositionalInput;
+public virtual bool HandlePositionalInput;
+</code></pre>
+<p>The above properties are provided to control whether a <code>Drawable</code> should receive the types of input events.</p>
+<blockquote>
+<p><strong>Example:</strong>
+If a <code>Drawable</code> did not want to handle any click, drag, and hover events at some point, it could achieve this by overriding <code>HandlePositionalInput</code> to return <code>false</code>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Warning:</strong>
+Overriding the above properties will cause the <code>Drawable</code> to be <em>considered</em> for (but not necessarily receive) that type of input, and thus serves as an anti-optimisation if the intention is to make the <code>Drawable</code> not considered for that type of input.</p>
+</blockquote>
+<p>If a parent should control whether itself or its children should be considered for a type of input at all, the following properties are provided to control the behaviour:</p>
+<pre><code class="lang-csharp">public virtual bool PropagateNonPositionalInputSubTree;
+public virtual bool PropagatePositionalInputSubTree;
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-csharp">class MyContainer : FillFlowContainer
+{
+    public MyContainer()
+    {
+        for (int i = 0; i &lt; 1024; i++)
+            Add(new Button { Size = new Vector2(50) });
+    }
+
+    // Whoah! The buttons we added are just for show, they don't actually handle clicks!
+    public override bool PropagatePositionalInputSubTree =&gt; false;
+}
+</code></pre>
+<h1 id="receiving-and-handling-focus">Receiving and handling focus</h1>
+<pre><code class="lang-csharp">public virtual bool RequestsFocus;
+public virtual bool AcceptsFocus;
+
+protected virtual void OnFocus(FocusEvent e);
+protected virtual void OnFocusLost(FocusLostEvent e);
+</code></pre>
+<p>Focus may be received via both positional and non-positional input. A <code>Drawable</code> with <code>AcceptsFocus = false</code> will never receive focus.</p>
+<h2 id="positional-1">Positional</h2>
+<p>A <code>Drawable</code> receives focus when <code>OnClick()</code> returns <code>true</code>.</p>
+<h2 id="non-positional-1">Non-positional</h2>
+<p>The top-most <code>Drawable</code> with <code>RequestsFocus = true</code> and <code>HandleNonPostionalInput = true</code> will receive focus if nothing else has focus.</p>
+<p>The <code>OnFocusLost()</code> method is unconditionally invoked on the un-focused <code>Drawable</code>.</p>
+<blockquote>
+<p><strong>Example:</strong></p>
+<pre><code class="lang-csharp">class MyDrawable : CompositeDrawable
+{
+    public override bool AcceptsFocus =&gt; true;
+    protected override bool OnClick(ClickEvent e) =&gt; true;
+
+    protected override void OnFocus(FocusEvent e) =&gt; this.ScaleTo(1.5f, 50);
+    protected override void OnFocusLost(FocusLostEvent e) =&gt; this.ScaleTo(1f, 50);
+}
+</code></pre>
+</blockquote>
+<h1 id="input-event-hierarchy">Input event hierarchy</h1>
+<p>The following hierarchical relationship of input events can be useful to know when drilling down with the <a href="#Aggregate-event-handler">aggregate event handler</a>.</p>
+<pre><code class="lang-mermaid">classDiagram
+    direction LR
+    UIEvent &lt;|-- FocusEvent
+    UIEvent &lt;|-- FocusLostEvent
+    UIEvent &lt;|-- JoystickEvent
+    JoystickEvent &lt;|-- JoystickAxisMoveEvent
+    JoystickEvent &lt;|-- JoystickButtonEvent
+    JoystickButtonEvent &lt;|-- JoystickPressEvent
+    JoystickButtonEvent &lt;|-- JoystickReleaseEvent
+    UIEvent &lt;|-- KeyBindingEvent
+    KeyBindingEvent &lt;|-- KeyBindingPressEvent
+    KeyBindingEvent &lt;|-- KeyBindingReleaseEvent
+    KeyBindingEvent &lt;|-- KeyBindingScrollEvent
+    UIEvent &lt;|-- KeyboardEvent
+    KeyboardEvent &lt;|-- KeyDownEvent
+    KeyboardEvent &lt;|-- KeyUpEvent
+    UIEvent &lt;|-- MidiEvent
+    MidiEvent &lt;|-- MidiDownEvent
+    MidiEvent &lt;|-- MidiUpEvent
+    UIEvent &lt;|-- MouseEvent
+    MouseEvent &lt;|-- HoverEvent
+    MouseEvent &lt;|-- HoverLostEvent
+    MouseEvent &lt;|-- MouseButtonEvent
+    MouseButtonEvent &lt;|-- ClickEvent
+    MouseButtonEvent &lt;|-- DoubleClickEvent
+    MouseButtonEvent &lt;|-- DragEndEvent
+    MouseButtonEvent &lt;|-- DragEvent
+    MouseButtonEvent &lt;|-- DragStartEvent
+    MouseButtonEvent &lt;|-- MouseDownEvent
+    MouseButtonEvent &lt;|-- MouseUpEvent
+    MouseEvent &lt;|-- MouseMoveEvent
+    MouseEvent &lt;|-- ScrollEvent
+    UIEvent &lt;|-- TabletEvent
+    TabletEvent &lt;|-- TabletAuxiliaryButtonEvent
+    TabletAuxiliaryButtonEvent &lt;|-- TabletAuxiliaryButtonPressEvent
+    TabletAuxiliaryButtonEvent &lt;|-- TabletAuxiliaryButtonReleaseEvent
+    TabletEvent &lt;|-- TabletPenButtonEvent
+    TabletPenButtonEvent &lt;|-- TabletPenButtonPressEvent
+    TabletPenButtonEvent &lt;|-- TabletPenButtonReleaseEvent
+    UIEvent &lt;|-- TouchEvent
+    TouchEvent &lt;|-- TouchDownEvent
+    TouchEvent &lt;|-- TouchMoveEvent
+    TouchEvent &lt;|-- TouchUpEvent
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework.wiki/blob/master/Handling-input-events.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

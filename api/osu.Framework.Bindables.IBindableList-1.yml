@@ -1,0 +1,2513 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Bindables.IBindableList`1
+  commentId: T:osu.Framework.Bindables.IBindableList`1
+  id: IBindableList`1
+  parent: osu.Framework.Bindables
+  children:
+  - osu.Framework.Bindables.IBindableList`1.BindCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventHandler,System.Boolean)
+  - osu.Framework.Bindables.IBindableList`1.BindTarget
+  - osu.Framework.Bindables.IBindableList`1.BindTo(osu.Framework.Bindables.IBindableList{`0})
+  - osu.Framework.Bindables.IBindableList`1.GetBoundCopy
+  langs:
+  - csharp
+  - vb
+  name: IBindableList<T>
+  nameWithType: IBindableList<T>
+  fullName: osu.Framework.Bindables.IBindableList<T>
+  type: Interface
+  source:
+    remote:
+      path: osu.Framework/Bindables/IBindableList.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: IBindableList
+    path: osu.Framework/Bindables/IBindableList.cs
+    startLine: 12
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Bindables
+  summary: A readonly interface which can be bound to other <xref href="osu.Framework.Bindables.IBindableList%601" data-throw-if-not-resolved="false"></xref>s in order to watch for state and content changes.
+  example: []
+  syntax:
+    content: 'public interface IBindableList<T> : IReadOnlyList<T>, IReadOnlyCollection<T>, IEnumerable<T>, IEnumerable, ICanBeDisabled, IHasDefaultValue, IUnbindable, IHasDescription, INotifyCollectionChanged'
+    typeParameters:
+    - id: T
+      description: The type of value encapsulated by this <xref href="osu.Framework.Bindables.IBindableList%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Interface IBindableList(Of T) Inherits IReadOnlyList(Of T), IReadOnlyCollection(Of T), IEnumerable(Of T), IEnumerable, ICanBeDisabled, IHasDefaultValue, IUnbindable, IHasDescription, INotifyCollectionChanged
+  inheritedMembers:
+  - System.Collections.Generic.IReadOnlyList{{T}}.Item(System.Int32)
+  - System.Collections.Generic.IReadOnlyCollection{{T}}.Count
+  - System.Collections.Generic.IEnumerable{{T}}.GetEnumerator
+  - osu.Framework.Bindables.ICanBeDisabled.DisabledChanged
+  - osu.Framework.Bindables.ICanBeDisabled.BindDisabledChanged(System.Action{System.Boolean},System.Boolean)
+  - osu.Framework.Bindables.ICanBeDisabled.Disabled
+  - osu.Framework.Bindables.IHasDefaultValue.IsDefault
+  - osu.Framework.Bindables.IUnbindable.UnbindEvents
+  - osu.Framework.Bindables.IUnbindable.UnbindBindings
+  - osu.Framework.Bindables.IUnbindable.UnbindAll
+  - osu.Framework.Bindables.IUnbindable.UnbindFrom(osu.Framework.Bindables.IUnbindable)
+  - osu.Framework.Bindables.IHasDescription.Description
+  - System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged
+  extensionMethods:
+  - System.Collections.Generic.IEnumerable{`0}.osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder``1
+  - System.Collections.Generic.IEnumerable{`0}.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Action{{T}})
+  - System.Collections.Generic.IEnumerable{`0}.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1({T})
+  - System.Collections.Generic.IEnumerable{`0}.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1({T})
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Bindables.IBindableList`1.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Bindables.IBindableList`1.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Bindables.IBindableList`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Bindables.IBindableList`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Bindables.IBindableList`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Bindables.IBindableList`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Bindables.IBindableList`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Bindables.IBindableList`1.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  nameWithType.vb: IBindableList(Of T)
+  fullName.vb: osu.Framework.Bindables.IBindableList(Of T)
+  name.vb: IBindableList(Of T)
+- uid: osu.Framework.Bindables.IBindableList`1.BindTo(osu.Framework.Bindables.IBindableList{`0})
+  commentId: M:osu.Framework.Bindables.IBindableList`1.BindTo(osu.Framework.Bindables.IBindableList{`0})
+  id: BindTo(osu.Framework.Bindables.IBindableList{`0})
+  parent: osu.Framework.Bindables.IBindableList`1
+  langs:
+  - csharp
+  - vb
+  name: BindTo(IBindableList<T>)
+  nameWithType: IBindableList<T>.BindTo(IBindableList<T>)
+  fullName: osu.Framework.Bindables.IBindableList<T>.BindTo(osu.Framework.Bindables.IBindableList<T>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Bindables/IBindableList.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: BindTo
+    path: osu.Framework/Bindables/IBindableList.cs
+    startLine: 18
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Bindables
+  summary: Binds self to another bindable such that we receive any values and value limitations of the bindable we bind width.
+  example: []
+  syntax:
+    content: void BindTo(IBindableList<T> them)
+    parameters:
+    - id: them
+      type: osu.Framework.Bindables.IBindableList`1
+      description: The foreign bindable. This should always be the most permanent end of the bind (ie. a ConfigManager)
+    content.vb: Sub BindTo(them As IBindableList(Of T))
+  overload: osu.Framework.Bindables.IBindableList`1.BindTo*
+  nameWithType.vb: IBindableList(Of T).BindTo(IBindableList(Of T))
+  fullName.vb: osu.Framework.Bindables.IBindableList(Of T).BindTo(osu.Framework.Bindables.IBindableList(Of T))
+  name.vb: BindTo(IBindableList(Of T))
+- uid: osu.Framework.Bindables.IBindableList`1.BindCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventHandler,System.Boolean)
+  commentId: M:osu.Framework.Bindables.IBindableList`1.BindCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventHandler,System.Boolean)
+  id: BindCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventHandler,System.Boolean)
+  parent: osu.Framework.Bindables.IBindableList`1
+  langs:
+  - csharp
+  - vb
+  name: BindCollectionChanged(NotifyCollectionChangedEventHandler, bool)
+  nameWithType: IBindableList<T>.BindCollectionChanged(NotifyCollectionChangedEventHandler, bool)
+  fullName: osu.Framework.Bindables.IBindableList<T>.BindCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventHandler, bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Bindables/IBindableList.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: BindCollectionChanged
+    path: osu.Framework/Bindables/IBindableList.cs
+    startLine: 26
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Bindables
+  summary: >-
+    Bind an action to <xref href="System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged" data-throw-if-not-resolved="false"></xref> with the option of running the bound action once immediately
+
+    with an <xref href="System.Collections.Specialized.NotifyCollectionChangedAction.Add" data-throw-if-not-resolved="false"></xref> event for the entire contents of this <xref href="osu.Framework.Bindables.BindableList%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: void BindCollectionChanged(NotifyCollectionChangedEventHandler onChange, bool runOnceImmediately = false)
+    parameters:
+    - id: onChange
+      type: System.Collections.Specialized.NotifyCollectionChangedEventHandler
+      description: The action to perform when this <xref href="osu.Framework.Bindables.BindableList%601" data-throw-if-not-resolved="false"></xref> changes.
+    - id: runOnceImmediately
+      type: System.Boolean
+      description: Whether the action provided in <code class="paramref">onChange</code> should be run once immediately.
+    content.vb: Sub BindCollectionChanged(onChange As NotifyCollectionChangedEventHandler, runOnceImmediately As Boolean = False)
+  overload: osu.Framework.Bindables.IBindableList`1.BindCollectionChanged*
+  nameWithType.vb: IBindableList(Of T).BindCollectionChanged(NotifyCollectionChangedEventHandler, Boolean)
+  fullName.vb: osu.Framework.Bindables.IBindableList(Of T).BindCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedEventHandler, Boolean)
+  name.vb: BindCollectionChanged(NotifyCollectionChangedEventHandler, Boolean)
+- uid: osu.Framework.Bindables.IBindableList`1.BindTarget
+  commentId: P:osu.Framework.Bindables.IBindableList`1.BindTarget
+  id: BindTarget
+  parent: osu.Framework.Bindables.IBindableList`1
+  langs:
+  - csharp
+  - vb
+  name: BindTarget
+  nameWithType: IBindableList<T>.BindTarget
+  fullName: osu.Framework.Bindables.IBindableList<T>.BindTarget
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Bindables/IBindableList.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: BindTarget
+    path: osu.Framework/Bindables/IBindableList.cs
+    startLine: 32
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Bindables
+  summary: >-
+    An alias of <xref href="osu.Framework.Bindables.IBindableList%601.BindTo(osu.Framework.Bindables.IBindableList%7b%600%7d)" data-throw-if-not-resolved="false"></xref> provided for use in object initializer scenarios.
+
+    Passes the provided value as the foreign (more permanent) bindable.
+  example: []
+  syntax:
+    content: IBindableList<T> BindTarget { set; }
+    parameters: []
+    return:
+      type: osu.Framework.Bindables.IBindableList`1
+    content.vb: WriteOnly Property BindTarget As IBindableList(Of T)
+  overload: osu.Framework.Bindables.IBindableList`1.BindTarget*
+  nameWithType.vb: IBindableList(Of T).BindTarget
+  fullName.vb: osu.Framework.Bindables.IBindableList(Of T).BindTarget
+- uid: osu.Framework.Bindables.IBindableList`1.GetBoundCopy
+  commentId: M:osu.Framework.Bindables.IBindableList`1.GetBoundCopy
+  id: GetBoundCopy
+  parent: osu.Framework.Bindables.IBindableList`1
+  langs:
+  - csharp
+  - vb
+  name: GetBoundCopy()
+  nameWithType: IBindableList<T>.GetBoundCopy()
+  fullName: osu.Framework.Bindables.IBindableList<T>.GetBoundCopy()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Bindables/IBindableList.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetBoundCopy
+    path: osu.Framework/Bindables/IBindableList.cs
+    startLine: 38
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Bindables
+  summary: >-
+    Retrieve a new bindable instance weakly bound to the configuration backing.
+
+    If you are further binding to events of a bindable retrieved using this method, ensure to hold
+
+    a local reference.
+  example: []
+  syntax:
+    content: IBindableList<T> GetBoundCopy()
+    return:
+      type: osu.Framework.Bindables.IBindableList`1
+      description: A weakly bound copy of the specified bindable.
+    content.vb: Function GetBoundCopy() As IBindableList(Of T)
+  overload: osu.Framework.Bindables.IBindableList`1.GetBoundCopy*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when attempting to instantiate a copy bindable that's not matching the original's type.
+  nameWithType.vb: IBindableList(Of T).GetBoundCopy()
+  fullName.vb: osu.Framework.Bindables.IBindableList(Of T).GetBoundCopy()
+references:
+- uid: osu.Framework.Bindables.IBindableList`1
+  commentId: T:osu.Framework.Bindables.IBindableList`1
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.IBindableList-1.html
+  name: IBindableList<T>
+  nameWithType: IBindableList<T>
+  fullName: osu.Framework.Bindables.IBindableList<T>
+  nameWithType.vb: IBindableList(Of T)
+  fullName.vb: osu.Framework.Bindables.IBindableList(Of T)
+  name.vb: IBindableList(Of T)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Bindables
+  commentId: N:osu.Framework.Bindables
+  href: osu.html
+  name: osu.Framework.Bindables
+  nameWithType: osu.Framework.Bindables
+  fullName: osu.Framework.Bindables
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+- uid: System.Collections.Generic.IReadOnlyList{{T}}.Item(System.Int32)
+  commentId: P:System.Collections.Generic.IReadOnlyList{`0}.Item(System.Int32)
+  parent: System.Collections.Generic.IReadOnlyList{{T}}
+  definition: System.Collections.Generic.IReadOnlyList`1.Item(System.Int32)
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: this[int]
+  nameWithType: IReadOnlyList<T>.this[int]
+  fullName: System.Collections.Generic.IReadOnlyList<T>.this[int]
+  nameWithType.vb: IReadOnlyList(Of T).this[](Integer)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T).this[](Integer)
+  name.vb: this[](Integer)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList{`0}.Item(System.Int32)
+    name: this[]
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1.item
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection{{T}}.Count
+  commentId: P:System.Collections.Generic.IReadOnlyCollection{`0}.Count
+  parent: System.Collections.Generic.IReadOnlyCollection{{T}}
+  definition: System.Collections.Generic.IReadOnlyCollection`1.Count
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1.count
+  name: Count
+  nameWithType: IReadOnlyCollection<T>.Count
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>.Count
+  nameWithType.vb: IReadOnlyCollection(Of T).Count
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T).Count
+- uid: System.Collections.Generic.IEnumerable{{T}}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{`0}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{{T}}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable{`0}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable{`0}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: osu.Framework.Bindables.ICanBeDisabled.DisabledChanged
+  commentId: E:osu.Framework.Bindables.ICanBeDisabled.DisabledChanged
+  parent: osu.Framework.Bindables.ICanBeDisabled
+  href: osu.Framework.Bindables.ICanBeDisabled.html#osu_Framework_Bindables_ICanBeDisabled_DisabledChanged
+  name: DisabledChanged
+  nameWithType: ICanBeDisabled.DisabledChanged
+  fullName: osu.Framework.Bindables.ICanBeDisabled.DisabledChanged
+- uid: osu.Framework.Bindables.ICanBeDisabled.BindDisabledChanged(System.Action{System.Boolean},System.Boolean)
+  commentId: M:osu.Framework.Bindables.ICanBeDisabled.BindDisabledChanged(System.Action{System.Boolean},System.Boolean)
+  parent: osu.Framework.Bindables.ICanBeDisabled
+  isExternal: true
+  href: osu.Framework.Bindables.ICanBeDisabled.html#osu_Framework_Bindables_ICanBeDisabled_BindDisabledChanged_System_Action_System_Boolean__System_Boolean_
+  name: BindDisabledChanged(Action<bool>, bool)
+  nameWithType: ICanBeDisabled.BindDisabledChanged(Action<bool>, bool)
+  fullName: osu.Framework.Bindables.ICanBeDisabled.BindDisabledChanged(System.Action<bool>, bool)
+  nameWithType.vb: ICanBeDisabled.BindDisabledChanged(Action(Of Boolean), Boolean)
+  fullName.vb: osu.Framework.Bindables.ICanBeDisabled.BindDisabledChanged(System.Action(Of Boolean), Boolean)
+  name.vb: BindDisabledChanged(Action(Of Boolean), Boolean)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.ICanBeDisabled.BindDisabledChanged(System.Action{System.Boolean},System.Boolean)
+    name: BindDisabledChanged
+    href: osu.Framework.Bindables.ICanBeDisabled.html#osu_Framework_Bindables_ICanBeDisabled_BindDisabledChanged_System_Action_System_Boolean__System_Boolean_
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Bindables.ICanBeDisabled.BindDisabledChanged(System.Action{System.Boolean},System.Boolean)
+    name: BindDisabledChanged
+    href: osu.Framework.Bindables.ICanBeDisabled.html#osu_Framework_Bindables_ICanBeDisabled_BindDisabledChanged_System_Action_System_Boolean__System_Boolean_
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: osu.Framework.Bindables.ICanBeDisabled.Disabled
+  commentId: P:osu.Framework.Bindables.ICanBeDisabled.Disabled
+  parent: osu.Framework.Bindables.ICanBeDisabled
+  href: osu.Framework.Bindables.ICanBeDisabled.html#osu_Framework_Bindables_ICanBeDisabled_Disabled
+  name: Disabled
+  nameWithType: ICanBeDisabled.Disabled
+  fullName: osu.Framework.Bindables.ICanBeDisabled.Disabled
+- uid: osu.Framework.Bindables.IHasDefaultValue.IsDefault
+  commentId: P:osu.Framework.Bindables.IHasDefaultValue.IsDefault
+  parent: osu.Framework.Bindables.IHasDefaultValue
+  href: osu.Framework.Bindables.IHasDefaultValue.html#osu_Framework_Bindables_IHasDefaultValue_IsDefault
+  name: IsDefault
+  nameWithType: IHasDefaultValue.IsDefault
+  fullName: osu.Framework.Bindables.IHasDefaultValue.IsDefault
+- uid: osu.Framework.Bindables.IUnbindable.UnbindEvents
+  commentId: M:osu.Framework.Bindables.IUnbindable.UnbindEvents
+  parent: osu.Framework.Bindables.IUnbindable
+  href: osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindEvents
+  name: UnbindEvents()
+  nameWithType: IUnbindable.UnbindEvents()
+  fullName: osu.Framework.Bindables.IUnbindable.UnbindEvents()
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IUnbindable.UnbindEvents
+    name: UnbindEvents
+    href: osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindEvents
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Bindables.IUnbindable.UnbindEvents
+    name: UnbindEvents
+    href: osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindEvents
+  - name: (
+  - name: )
+- uid: osu.Framework.Bindables.IUnbindable.UnbindBindings
+  commentId: M:osu.Framework.Bindables.IUnbindable.UnbindBindings
+  parent: osu.Framework.Bindables.IUnbindable
+  href: osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindBindings
+  name: UnbindBindings()
+  nameWithType: IUnbindable.UnbindBindings()
+  fullName: osu.Framework.Bindables.IUnbindable.UnbindBindings()
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IUnbindable.UnbindBindings
+    name: UnbindBindings
+    href: osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindBindings
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Bindables.IUnbindable.UnbindBindings
+    name: UnbindBindings
+    href: osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindBindings
+  - name: (
+  - name: )
+- uid: osu.Framework.Bindables.IUnbindable.UnbindAll
+  commentId: M:osu.Framework.Bindables.IUnbindable.UnbindAll
+  parent: osu.Framework.Bindables.IUnbindable
+  href: osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindAll
+  name: UnbindAll()
+  nameWithType: IUnbindable.UnbindAll()
+  fullName: osu.Framework.Bindables.IUnbindable.UnbindAll()
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IUnbindable.UnbindAll
+    name: UnbindAll
+    href: osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindAll
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Bindables.IUnbindable.UnbindAll
+    name: UnbindAll
+    href: osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindAll
+  - name: (
+  - name: )
+- uid: osu.Framework.Bindables.IUnbindable.UnbindFrom(osu.Framework.Bindables.IUnbindable)
+  commentId: M:osu.Framework.Bindables.IUnbindable.UnbindFrom(osu.Framework.Bindables.IUnbindable)
+  parent: osu.Framework.Bindables.IUnbindable
+  href: osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindFrom_osu_Framework_Bindables_IUnbindable_
+  name: UnbindFrom(IUnbindable)
+  nameWithType: IUnbindable.UnbindFrom(IUnbindable)
+  fullName: osu.Framework.Bindables.IUnbindable.UnbindFrom(osu.Framework.Bindables.IUnbindable)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IUnbindable.UnbindFrom(osu.Framework.Bindables.IUnbindable)
+    name: UnbindFrom
+    href: osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindFrom_osu_Framework_Bindables_IUnbindable_
+  - name: (
+  - uid: osu.Framework.Bindables.IUnbindable
+    name: IUnbindable
+    href: osu.Framework.Bindables.IUnbindable.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Bindables.IUnbindable.UnbindFrom(osu.Framework.Bindables.IUnbindable)
+    name: UnbindFrom
+    href: osu.Framework.Bindables.IUnbindable.html#osu_Framework_Bindables_IUnbindable_UnbindFrom_osu_Framework_Bindables_IUnbindable_
+  - name: (
+  - uid: osu.Framework.Bindables.IUnbindable
+    name: IUnbindable
+    href: osu.Framework.Bindables.IUnbindable.html
+  - name: )
+- uid: osu.Framework.Bindables.IHasDescription.Description
+  commentId: P:osu.Framework.Bindables.IHasDescription.Description
+  parent: osu.Framework.Bindables.IHasDescription
+  href: osu.Framework.Bindables.IHasDescription.html#osu_Framework_Bindables_IHasDescription_Description
+  name: Description
+  nameWithType: IHasDescription.Description
+  fullName: osu.Framework.Bindables.IHasDescription.Description
+- uid: System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged
+  commentId: E:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged
+  parent: System.Collections.Specialized.INotifyCollectionChanged
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged.collectionchanged
+  name: CollectionChanged
+  nameWithType: INotifyCollectionChanged.CollectionChanged
+  fullName: System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged
+- uid: System.Collections.Generic.IEnumerable{`0}.osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder``1
+  commentId: M:osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder``1(System.Collections.Generic.IEnumerable{``0})
+  parent: osu.Framework.Extensions.EnumExtensions.EnumExtensions
+  definition: osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder``1(System.Collections.Generic.IEnumerable{``0})
+  href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_GetValuesInOrder__1_System_Collections_Generic_IEnumerable___0__
+  name: GetValuesInOrder<T>(IEnumerable<T>)
+  nameWithType: EnumExtensions.GetValuesInOrder<T>(IEnumerable<T>)
+  fullName: osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder<T>(System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: EnumExtensions.GetValuesInOrder(Of T)(IEnumerable(Of T))
+  fullName.vb: osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: GetValuesInOrder(Of T)(IEnumerable(Of T))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder``1(System.Collections.Generic.IEnumerable{`0})
+    name: GetValuesInOrder
+    href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_GetValuesInOrder__1_System_Collections_Generic_IEnumerable___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder``1(System.Collections.Generic.IEnumerable{`0})
+    name: GetValuesInOrder
+    href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_GetValuesInOrder__1_System_Collections_Generic_IEnumerable___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{`0}.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Action{{T}})
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__
+  name: ForEach<T>(IEnumerable<T>, Action<T>)
+  nameWithType: EnumerableExtensions.ForEach<T>(IEnumerable<T>, Action<T>)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach<T>(System.Collections.Generic.IEnumerable<T>, System.Action<T>)
+  nameWithType.vb: EnumerableExtensions.ForEach(Of T)(IEnumerable(Of T), Action(Of T))
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Action(Of T))
+  name.vb: ForEach(Of T)(IEnumerable(Of T), Action(Of T))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{`0},System.Action{`0})
+    name: ForEach
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{`0},System.Action{`0})
+    name: ForEach
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{`0}.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1({T})
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1(System.Collections.Generic.IEnumerable{``0},``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1(System.Collections.Generic.IEnumerable{``0},``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetNext__1_System_Collections_Generic_IEnumerable___0____0_
+  name: GetNext<T>(IEnumerable<T>, T)
+  nameWithType: EnumerableExtensions.GetNext<T>(IEnumerable<T>, T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext<T>(System.Collections.Generic.IEnumerable<T>, T)
+  nameWithType.vb: EnumerableExtensions.GetNext(Of T)(IEnumerable(Of T), T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext(Of T)(System.Collections.Generic.IEnumerable(Of T), T)
+  name.vb: GetNext(Of T)(IEnumerable(Of T), T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1(System.Collections.Generic.IEnumerable{`0},`0)
+    name: GetNext
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetNext__1_System_Collections_Generic_IEnumerable___0____0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1(System.Collections.Generic.IEnumerable{`0},`0)
+    name: GetNext
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetNext__1_System_Collections_Generic_IEnumerable___0____0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{`0}.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1({T})
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1(System.Collections.Generic.IEnumerable{``0},``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1(System.Collections.Generic.IEnumerable{``0},``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetPrevious__1_System_Collections_Generic_IEnumerable___0____0_
+  name: GetPrevious<T>(IEnumerable<T>, T)
+  nameWithType: EnumerableExtensions.GetPrevious<T>(IEnumerable<T>, T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious<T>(System.Collections.Generic.IEnumerable<T>, T)
+  nameWithType.vb: EnumerableExtensions.GetPrevious(Of T)(IEnumerable(Of T), T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious(Of T)(System.Collections.Generic.IEnumerable(Of T), T)
+  name.vb: GetPrevious(Of T)(IEnumerable(Of T), T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1(System.Collections.Generic.IEnumerable{`0},`0)
+    name: GetPrevious
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetPrevious__1_System_Collections_Generic_IEnumerable___0____0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1(System.Collections.Generic.IEnumerable{`0},`0)
+    name: GetPrevious
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetPrevious__1_System_Collections_Generic_IEnumerable___0____0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Bindables.IBindableList`1.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<IBindableList<T>>(IBindableList<T>)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<IBindableList<T>>(IBindableList<T>)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Bindables.IBindableList<T>>(osu.Framework.Bindables.IBindableList<T>)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of IBindableList(Of T))(IBindableList(Of T))
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Bindables.IBindableList(Of T))(osu.Framework.Bindables.IBindableList(Of T))
+  name.vb: GetLocalisableDescription(Of IBindableList(Of T))(IBindableList(Of T))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Bindables.IBindableList{`0})
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Bindables.IBindableList{`0})
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: osu.Framework.Bindables.IBindableList`1.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<IBindableList<T>>(IBindableList<T>)
+  nameWithType: EnumerableExtensions.Yield<IBindableList<T>>(IBindableList<T>)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Bindables.IBindableList<T>>(osu.Framework.Bindables.IBindableList<T>)
+  nameWithType.vb: EnumerableExtensions.Yield(Of IBindableList(Of T))(IBindableList(Of T))
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Bindables.IBindableList(Of T))(osu.Framework.Bindables.IBindableList(Of T))
+  name.vb: Yield(Of IBindableList(Of T))(IBindableList(Of T))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Bindables.IBindableList{`0})
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Bindables.IBindableList{`0})
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: osu.Framework.Bindables.IBindableList`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<IBindableList<T>>(IBindableList<T>)
+  nameWithType: ObjectExtensions.AsNonNull<IBindableList<T>>(IBindableList<T>)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Bindables.IBindableList<T>>(osu.Framework.Bindables.IBindableList<T>)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of IBindableList(Of T))(IBindableList(Of T))
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Bindables.IBindableList(Of T))(osu.Framework.Bindables.IBindableList(Of T))
+  name.vb: AsNonNull(Of IBindableList(Of T))(IBindableList(Of T))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Bindables.IBindableList{`0})
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Bindables.IBindableList{`0})
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: osu.Framework.Bindables.IBindableList`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<IBindableList<T>>(IBindableList<T>)
+  nameWithType: ObjectExtensions.IsNotNull<IBindableList<T>>(IBindableList<T>)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Bindables.IBindableList<T>>(osu.Framework.Bindables.IBindableList<T>)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of IBindableList(Of T))(IBindableList(Of T))
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Bindables.IBindableList(Of T))(osu.Framework.Bindables.IBindableList(Of T))
+  name.vb: IsNotNull(Of IBindableList(Of T))(IBindableList(Of T))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Bindables.IBindableList{`0})
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Bindables.IBindableList{`0})
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: osu.Framework.Bindables.IBindableList`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<IBindableList<T>>(IBindableList<T>)
+  nameWithType: ObjectExtensions.IsNull<IBindableList<T>>(IBindableList<T>)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Bindables.IBindableList<T>>(osu.Framework.Bindables.IBindableList<T>)
+  nameWithType.vb: ObjectExtensions.IsNull(Of IBindableList(Of T))(IBindableList(Of T))
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Bindables.IBindableList(Of T))(osu.Framework.Bindables.IBindableList(Of T))
+  name.vb: IsNull(Of IBindableList(Of T))(IBindableList(Of T))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Bindables.IBindableList{`0})
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Bindables.IBindableList{`0})
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: osu.Framework.Bindables.IBindableList`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<IBindableList<T>, TChild>(IBindableList<T>, TChild)
+  nameWithType: ContainerExtensions.WithChild<IBindableList<T>, TChild>(IBindableList<T>, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Bindables.IBindableList<T>, TChild>(osu.Framework.Bindables.IBindableList<T>, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of IBindableList(Of T), TChild)(IBindableList(Of T), TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Bindables.IBindableList(Of T), TChild)(osu.Framework.Bindables.IBindableList(Of T), TChild)
+  name.vb: WithChild(Of IBindableList(Of T), TChild)(IBindableList(Of T), TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Bindables.IBindableList{`0},``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Bindables.IBindableList{`0},``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Bindables.IBindableList`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<IBindableList<T>, TChild>(IBindableList<T>, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<IBindableList<T>, TChild>(IBindableList<T>, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Bindables.IBindableList<T>, TChild>(osu.Framework.Bindables.IBindableList<T>, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of IBindableList(Of T), TChild)(IBindableList(Of T), IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Bindables.IBindableList(Of T), TChild)(osu.Framework.Bindables.IBindableList(Of T), System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of IBindableList(Of T), TChild)(IBindableList(Of T), IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Bindables.IBindableList{`0},System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Bindables.IBindableList{`0},System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Bindables.IBindableList`1.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<IBindableList<T>, TChild>(IBindableList<T>, TChild)
+  nameWithType: ContainerExtensions.Wrap<IBindableList<T>, TChild>(IBindableList<T>, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Bindables.IBindableList<T>, TChild>(osu.Framework.Bindables.IBindableList<T>, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of IBindableList(Of T), TChild)(IBindableList(Of T), TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Bindables.IBindableList(Of T), TChild)(osu.Framework.Bindables.IBindableList(Of T), TChild)
+  name.vb: Wrap(Of IBindableList(Of T), TChild)(IBindableList(Of T), TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Bindables.IBindableList{`0},``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Bindables.IBindableList{`0},``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1.Item(System.Int32)
+  commentId: P:System.Collections.Generic.IReadOnlyList`1.Item(System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: this[int]
+  nameWithType: IReadOnlyList<T>.this[int]
+  fullName: System.Collections.Generic.IReadOnlyList<T>.this[int]
+  nameWithType.vb: IReadOnlyList(Of T).this[](Integer)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T).this[](Integer)
+  name.vb: this[](Integer)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1.Item(System.Int32)
+    name: this[]
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1.item
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList{{T}}
+  commentId: T:System.Collections.Generic.IReadOnlyList{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1.Count
+  commentId: P:System.Collections.Generic.IReadOnlyCollection`1.Count
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1.count
+  name: Count
+  nameWithType: IReadOnlyCollection<T>.Count
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>.Count
+  nameWithType.vb: IReadOnlyCollection(Of T).Count
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T).Count
+- uid: System.Collections.Generic.IReadOnlyCollection{{T}}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Bindables.ICanBeDisabled
+  commentId: T:osu.Framework.Bindables.ICanBeDisabled
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.ICanBeDisabled.html
+  name: ICanBeDisabled
+  nameWithType: ICanBeDisabled
+  fullName: osu.Framework.Bindables.ICanBeDisabled
+- uid: osu.Framework.Bindables.IHasDefaultValue
+  commentId: T:osu.Framework.Bindables.IHasDefaultValue
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.IHasDefaultValue.html
+  name: IHasDefaultValue
+  nameWithType: IHasDefaultValue
+  fullName: osu.Framework.Bindables.IHasDefaultValue
+- uid: osu.Framework.Bindables.IUnbindable
+  commentId: T:osu.Framework.Bindables.IUnbindable
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.IUnbindable.html
+  name: IUnbindable
+  nameWithType: IUnbindable
+  fullName: osu.Framework.Bindables.IUnbindable
+- uid: osu.Framework.Bindables.IHasDescription
+  commentId: T:osu.Framework.Bindables.IHasDescription
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.IHasDescription.html
+  name: IHasDescription
+  nameWithType: IHasDescription
+  fullName: osu.Framework.Bindables.IHasDescription
+- uid: System.Collections.Specialized.INotifyCollectionChanged
+  commentId: T:System.Collections.Specialized.INotifyCollectionChanged
+  parent: System.Collections.Specialized
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged
+  name: INotifyCollectionChanged
+  nameWithType: INotifyCollectionChanged
+  fullName: System.Collections.Specialized.INotifyCollectionChanged
+- uid: osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder``1(System.Collections.Generic.IEnumerable{``0})
+  isExternal: true
+  href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_GetValuesInOrder__1_System_Collections_Generic_IEnumerable___0__
+  name: GetValuesInOrder<T>(IEnumerable<T>)
+  nameWithType: EnumExtensions.GetValuesInOrder<T>(IEnumerable<T>)
+  fullName: osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder<T>(System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: EnumExtensions.GetValuesInOrder(Of T)(IEnumerable(Of T))
+  fullName.vb: osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: GetValuesInOrder(Of T)(IEnumerable(Of T))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder``1(System.Collections.Generic.IEnumerable{``0})
+    name: GetValuesInOrder
+    href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_GetValuesInOrder__1_System_Collections_Generic_IEnumerable___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.EnumExtensions.EnumExtensions.GetValuesInOrder``1(System.Collections.Generic.IEnumerable{``0})
+    name: GetValuesInOrder
+    href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_GetValuesInOrder__1_System_Collections_Generic_IEnumerable___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: osu.Framework.Extensions.EnumExtensions.EnumExtensions
+  commentId: T:osu.Framework.Extensions.EnumExtensions.EnumExtensions
+  parent: osu.Framework.Extensions.EnumExtensions
+  href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html
+  name: EnumExtensions
+  nameWithType: EnumExtensions
+  fullName: osu.Framework.Extensions.EnumExtensions.EnumExtensions
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  isExternal: true
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__
+  name: ForEach<T>(IEnumerable<T>, Action<T>)
+  nameWithType: EnumerableExtensions.ForEach<T>(IEnumerable<T>, Action<T>)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach<T>(System.Collections.Generic.IEnumerable<T>, System.Action<T>)
+  nameWithType.vb: EnumerableExtensions.ForEach(Of T)(IEnumerable(Of T), Action(Of T))
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Action(Of T))
+  name.vb: ForEach(Of T)(IEnumerable(Of T), Action(Of T))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+    name: ForEach
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+    name: ForEach
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1(System.Collections.Generic.IEnumerable{``0},``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1(System.Collections.Generic.IEnumerable{``0},``0)
+  isExternal: true
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetNext__1_System_Collections_Generic_IEnumerable___0____0_
+  name: GetNext<T>(IEnumerable<T>, T)
+  nameWithType: EnumerableExtensions.GetNext<T>(IEnumerable<T>, T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext<T>(System.Collections.Generic.IEnumerable<T>, T)
+  nameWithType.vb: EnumerableExtensions.GetNext(Of T)(IEnumerable(Of T), T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext(Of T)(System.Collections.Generic.IEnumerable(Of T), T)
+  name.vb: GetNext(Of T)(IEnumerable(Of T), T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1(System.Collections.Generic.IEnumerable{``0},``0)
+    name: GetNext
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetNext__1_System_Collections_Generic_IEnumerable___0____0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1(System.Collections.Generic.IEnumerable{``0},``0)
+    name: GetNext
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetNext__1_System_Collections_Generic_IEnumerable___0____0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1(System.Collections.Generic.IEnumerable{``0},``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1(System.Collections.Generic.IEnumerable{``0},``0)
+  isExternal: true
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetPrevious__1_System_Collections_Generic_IEnumerable___0____0_
+  name: GetPrevious<T>(IEnumerable<T>, T)
+  nameWithType: EnumerableExtensions.GetPrevious<T>(IEnumerable<T>, T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious<T>(System.Collections.Generic.IEnumerable<T>, T)
+  nameWithType.vb: EnumerableExtensions.GetPrevious(Of T)(IEnumerable(Of T), T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious(Of T)(System.Collections.Generic.IEnumerable(Of T), T)
+  name.vb: GetPrevious(Of T)(IEnumerable(Of T), T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1(System.Collections.Generic.IEnumerable{``0},``0)
+    name: GetPrevious
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetPrevious__1_System_Collections_Generic_IEnumerable___0____0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1(System.Collections.Generic.IEnumerable{``0},``0)
+    name: GetPrevious
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetPrevious__1_System_Collections_Generic_IEnumerable___0____0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Specialized
+  commentId: N:System.Collections.Specialized
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Specialized
+  nameWithType: System.Collections.Specialized
+  fullName: System.Collections.Specialized
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Specialized
+    name: Specialized
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.specialized
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Specialized
+    name: Specialized
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.specialized
+- uid: osu.Framework.Extensions.EnumExtensions
+  commentId: N:osu.Framework.Extensions.EnumExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.EnumExtensions
+  nameWithType: osu.Framework.Extensions.EnumExtensions
+  fullName: osu.Framework.Extensions.EnumExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.EnumExtensions
+    name: EnumExtensions
+    href: osu.Framework.Extensions.EnumExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.EnumExtensions
+    name: EnumExtensions
+    href: osu.Framework.Extensions.EnumExtensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Bindables.IBindableList`1.BindTo*
+  commentId: Overload:osu.Framework.Bindables.IBindableList`1.BindTo
+  href: osu.Framework.Bindables.IBindableList-1.html#osu_Framework_Bindables_IBindableList_1_BindTo_osu_Framework_Bindables_IBindableList__0__
+  name: BindTo
+  nameWithType: IBindableList<T>.BindTo
+  fullName: osu.Framework.Bindables.IBindableList<T>.BindTo
+  nameWithType.vb: IBindableList(Of T).BindTo
+  fullName.vb: osu.Framework.Bindables.IBindableList(Of T).BindTo
+- uid: System.Collections.Specialized.NotifyCollectionChangedAction.Add
+  commentId: F:System.Collections.Specialized.NotifyCollectionChangedAction.Add
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.specialized.notifycollectionchangedaction#system-collections-specialized-notifycollectionchangedaction-add
+  name: Add
+  nameWithType: NotifyCollectionChangedAction.Add
+  fullName: System.Collections.Specialized.NotifyCollectionChangedAction.Add
+- uid: osu.Framework.Bindables.BindableList`1
+  commentId: T:osu.Framework.Bindables.BindableList`1
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.BindableList-1.html
+  name: BindableList<T>
+  nameWithType: BindableList<T>
+  fullName: osu.Framework.Bindables.BindableList<T>
+  nameWithType.vb: BindableList(Of T)
+  fullName.vb: osu.Framework.Bindables.BindableList(Of T)
+  name.vb: BindableList(Of T)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.BindableList`1
+    name: BindableList
+    href: osu.Framework.Bindables.BindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.BindableList`1
+    name: BindableList
+    href: osu.Framework.Bindables.BindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Bindables.IBindableList`1.BindCollectionChanged*
+  commentId: Overload:osu.Framework.Bindables.IBindableList`1.BindCollectionChanged
+  href: osu.Framework.Bindables.IBindableList-1.html#osu_Framework_Bindables_IBindableList_1_BindCollectionChanged_System_Collections_Specialized_NotifyCollectionChangedEventHandler_System_Boolean_
+  name: BindCollectionChanged
+  nameWithType: IBindableList<T>.BindCollectionChanged
+  fullName: osu.Framework.Bindables.IBindableList<T>.BindCollectionChanged
+  nameWithType.vb: IBindableList(Of T).BindCollectionChanged
+  fullName.vb: osu.Framework.Bindables.IBindableList(Of T).BindCollectionChanged
+- uid: System.Collections.Specialized.NotifyCollectionChangedEventHandler
+  commentId: T:System.Collections.Specialized.NotifyCollectionChangedEventHandler
+  parent: System.Collections.Specialized
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.specialized.notifycollectionchangedeventhandler
+  name: NotifyCollectionChangedEventHandler
+  nameWithType: NotifyCollectionChangedEventHandler
+  fullName: System.Collections.Specialized.NotifyCollectionChangedEventHandler
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Bindables.IBindableList`1.BindTo(osu.Framework.Bindables.IBindableList{`0})
+  commentId: M:osu.Framework.Bindables.IBindableList`1.BindTo(osu.Framework.Bindables.IBindableList{`0})
+  href: osu.Framework.Bindables.IBindableList-1.html#osu_Framework_Bindables_IBindableList_1_BindTo_osu_Framework_Bindables_IBindableList__0__
+  name: BindTo(IBindableList<T>)
+  nameWithType: IBindableList<T>.BindTo(IBindableList<T>)
+  fullName: osu.Framework.Bindables.IBindableList<T>.BindTo(osu.Framework.Bindables.IBindableList<T>)
+  nameWithType.vb: IBindableList(Of T).BindTo(IBindableList(Of T))
+  fullName.vb: osu.Framework.Bindables.IBindableList(Of T).BindTo(osu.Framework.Bindables.IBindableList(Of T))
+  name.vb: BindTo(IBindableList(Of T))
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IBindableList`1.BindTo(osu.Framework.Bindables.IBindableList{`0})
+    name: BindTo
+    href: osu.Framework.Bindables.IBindableList-1.html#osu_Framework_Bindables_IBindableList_1_BindTo_osu_Framework_Bindables_IBindableList__0__
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Bindables.IBindableList`1.BindTo(osu.Framework.Bindables.IBindableList{`0})
+    name: BindTo
+    href: osu.Framework.Bindables.IBindableList-1.html#osu_Framework_Bindables_IBindableList_1_BindTo_osu_Framework_Bindables_IBindableList__0__
+  - name: (
+  - uid: osu.Framework.Bindables.IBindableList`1
+    name: IBindableList
+    href: osu.Framework.Bindables.IBindableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: osu.Framework.Bindables.IBindableList`1.BindTarget*
+  commentId: Overload:osu.Framework.Bindables.IBindableList`1.BindTarget
+  href: osu.Framework.Bindables.IBindableList-1.html#osu_Framework_Bindables_IBindableList_1_BindTarget
+  name: BindTarget
+  nameWithType: IBindableList<T>.BindTarget
+  fullName: osu.Framework.Bindables.IBindableList<T>.BindTarget
+  nameWithType.vb: IBindableList(Of T).BindTarget
+  fullName.vb: osu.Framework.Bindables.IBindableList(Of T).BindTarget
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: osu.Framework.Bindables.IBindableList`1.GetBoundCopy*
+  commentId: Overload:osu.Framework.Bindables.IBindableList`1.GetBoundCopy
+  href: osu.Framework.Bindables.IBindableList-1.html#osu_Framework_Bindables_IBindableList_1_GetBoundCopy
+  name: GetBoundCopy
+  nameWithType: IBindableList<T>.GetBoundCopy
+  fullName: osu.Framework.Bindables.IBindableList<T>.GetBoundCopy
+  nameWithType.vb: IBindableList(Of T).GetBoundCopy
+  fullName.vb: osu.Framework.Bindables.IBindableList(Of T).GetBoundCopy

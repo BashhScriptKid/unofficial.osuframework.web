@@ -1,0 +1,751 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DrawNode | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DrawNode | osu!framework ">
+      
+      <meta name="description" content="Contains all the information required to draw a single . A hierarchy of s is passed to the draw thread for rendering every frame.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Graphics_DrawNode.md&amp;value=---%0Auid%3A%20osu.Framework.Graphics.DrawNode%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Graphics.DrawNode">
+
+
+
+  <h1 id="osu_Framework_Graphics_DrawNode" data-uid="osu.Framework.Graphics.DrawNode" class="text-break">
+Class DrawNode  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Contains all the information required to draw a single <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a>.
+A hierarchy of <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a>s is passed to the draw thread for rendering every frame.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DrawNode : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DrawNode</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.html">CompositeDrawable.CompositeDrawableDrawNode</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.TexturedShaderDrawNode.html">TexturedShaderDrawNode</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Graphics_DrawNode__ctor_" data-uid="osu.Framework.Graphics.DrawNode.#ctor*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode__ctor_osu_Framework_Graphics_IDrawable_" data-uid="osu.Framework.Graphics.DrawNode.#ctor(osu.Framework.Graphics.IDrawable)">
+  DrawNode(IDrawable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DrawNode(IDrawable source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="osu.Framework.Graphics.IDrawable.html">IDrawable</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a> to draw with this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Graphics_DrawNode_CanDrawOpaqueInterior_" data-uid="osu.Framework.Graphics.DrawNode.CanDrawOpaqueInterior*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_CanDrawOpaqueInterior" data-uid="osu.Framework.Graphics.DrawNode.CanDrawOpaqueInterior">
+  CanDrawOpaqueInterior
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> can draw a opaque interior. <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_DrawOpaqueInterior_osu_Framework_Graphics_Rendering_IRenderer_">DrawOpaqueInterior(IRenderer)</a> will only be invoked if this value is <pre><code class="lang-csharp">true</code></pre>.
+Should not return <pre><code class="lang-csharp">true</code></pre> if <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_DrawOpaqueInterior_osu_Framework_Graphics_Rendering_IRenderer_">DrawOpaqueInterior(IRenderer)</a> will result in a no-op.
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool CanDrawOpaqueInterior { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_DrawColourInfo_" data-uid="osu.Framework.Graphics.DrawNode.DrawColourInfo*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_DrawColourInfo" data-uid="osu.Framework.Graphics.DrawNode.DrawColourInfo">
+  DrawColourInfo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains the colour and blending information of this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DrawColourInfo DrawColourInfo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.DrawColourInfo.html">DrawColourInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_DrawInfo_" data-uid="osu.Framework.Graphics.DrawNode.DrawInfo*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_DrawInfo" data-uid="osu.Framework.Graphics.DrawNode.DrawInfo">
+  DrawInfo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains the linear transformation of this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected DrawInfo DrawInfo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.DrawInfo.html">DrawInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_HasOwnOpaqueInterior_" data-uid="osu.Framework.Graphics.DrawNode.HasOwnOpaqueInterior*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_HasOwnOpaqueInterior" data-uid="osu.Framework.Graphics.DrawNode.HasOwnOpaqueInterior">
+  HasOwnOpaqueInterior
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> has its own opaque interior.
+If <code>false</code>, a child of the <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> may be the source of the opaque interior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool HasOwnOpaqueInterior { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_InvalidationID_" data-uid="osu.Framework.Graphics.DrawNode.InvalidationID*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_InvalidationID" data-uid="osu.Framework.Graphics.DrawNode.InvalidationID">
+  InvalidationID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Identifies the state of this draw node with an invalidation state of its corresponding
+<a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a>. An update is required when the invalidation state of this draw node disagrees
+with the invalidation state of its <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected long InvalidationID { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_IsDisposed_" data-uid="osu.Framework.Graphics.DrawNode.IsDisposed*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_IsDisposed" data-uid="osu.Framework.Graphics.DrawNode.IsDisposed">
+  IsDisposed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool IsDisposed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_Source_" data-uid="osu.Framework.Graphics.DrawNode.Source*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_Source" data-uid="osu.Framework.Graphics.DrawNode.Source">
+  Source
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a> which this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> draws.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IDrawable Source { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.IDrawable.html">IDrawable</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Graphics_DrawNode_ApplyState_" data-uid="osu.Framework.Graphics.DrawNode.ApplyState*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_ApplyState" data-uid="osu.Framework.Graphics.DrawNode.ApplyState">
+  ApplyState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies the state of <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_Source">Source</a> to this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> for use in rendering.
+The applied state must remain immutable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ApplyState()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_Dispose_" data-uid="osu.Framework.Graphics.DrawNode.Dispose*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_Dispose" data-uid="osu.Framework.Graphics.DrawNode.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_Dispose_" data-uid="osu.Framework.Graphics.DrawNode.Dispose*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_Dispose_System_Boolean_" data-uid="osu.Framework.Graphics.DrawNode.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool isDisposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isDisposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_Draw_" data-uid="osu.Framework.Graphics.DrawNode.Draw*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_Draw_osu_Framework_Graphics_Rendering_IRenderer_" data-uid="osu.Framework.Graphics.DrawNode.Draw(osu.Framework.Graphics.Rendering.IRenderer)">
+  Draw(IRenderer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> to the screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Draw(IRenderer renderer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd><p>The renderer to draw with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_DrawNode_Draw_osu_Framework_Graphics_Rendering_IRenderer__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Subclasses must invoke <pre><code class="lang-csharp">base.Draw()</code></pre> prior to drawing vertices.
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_DrawOpaqueInterior_" data-uid="osu.Framework.Graphics.DrawNode.DrawOpaqueInterior*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_DrawOpaqueInterior_osu_Framework_Graphics_Rendering_IRenderer_" data-uid="osu.Framework.Graphics.DrawNode.DrawOpaqueInterior(osu.Framework.Graphics.Rendering.IRenderer)">
+  DrawOpaqueInterior(IRenderer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the opaque interior of this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> to the screen, if <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_CanDrawOpaqueInterior">CanDrawOpaqueInterior</a> indicates that an opaque interior can be drawn.
+The opaque interior must be a fully-opaque, non-blended area of this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a>, clipped to the current masking area via <pre><code class="lang-csharp">DrawClipped()</code></pre>.
+See <a class="xref" href="osu.Framework.Graphics.Sprites.SpriteDrawNode.html">SpriteDrawNode</a> for an example implementation.
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DrawOpaqueInterior(IRenderer renderer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd><p>The renderer to draw with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_DrawNode_DrawOpaqueInterior_osu_Framework_Graphics_Rendering_IRenderer__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Subclasses must invoke <pre><code class="lang-csharp">base.DrawOpaqueInterior()</code></pre> prior to drawing vertices.
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_DrawOther_" data-uid="osu.Framework.Graphics.DrawNode.DrawOther*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_DrawOther_osu_Framework_Graphics_DrawNode_osu_Framework_Graphics_Rendering_IRenderer_" data-uid="osu.Framework.Graphics.DrawNode.DrawOther(osu.Framework.Graphics.DrawNode,osu.Framework.Graphics.Rendering.IRenderer)">
+  DrawOther(DrawNode, IRenderer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void DrawOther(DrawNode node, IRenderer renderer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>node</code> <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a></dt>
+    <dd></dd>
+    <dt><code>renderer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_DrawOtherOpaqueInterior_" data-uid="osu.Framework.Graphics.DrawNode.DrawOtherOpaqueInterior*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_DrawOtherOpaqueInterior_osu_Framework_Graphics_DrawNode_osu_Framework_Graphics_Rendering_IRenderer_" data-uid="osu.Framework.Graphics.DrawNode.DrawOtherOpaqueInterior(osu.Framework.Graphics.DrawNode,osu.Framework.Graphics.Rendering.IRenderer)">
+  DrawOtherOpaqueInterior(DrawNode, IRenderer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the opaque interior of a <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static void DrawOtherOpaqueInterior(DrawNode node, IRenderer renderer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>node</code> <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a></dt>
+    <dd></dd>
+    <dt><code>renderer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_DrawNode_ToString_" data-uid="osu.Framework.Graphics.DrawNode.ToString*"></a>
+
+  <h3 id="osu_Framework_Graphics_DrawNode_ToString" data-uid="osu.Framework.Graphics.DrawNode.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a string that represents the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A string that represents the current object.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs/#L16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

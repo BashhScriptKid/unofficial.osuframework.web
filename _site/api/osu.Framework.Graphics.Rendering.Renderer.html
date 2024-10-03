@@ -1,0 +1,3534 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Renderer | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Renderer | osu!framework ">
+      
+      <meta name="description" content="Represents a base  implementation for working renderers.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Graphics_Rendering_Renderer.md&amp;value=---%0Auid%3A%20osu.Framework.Graphics.Rendering.Renderer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Graphics.Rendering.Renderer">
+
+
+
+  <h1 id="osu_Framework_Graphics_Rendering_Renderer" data-uid="osu.Framework.Graphics.Rendering.Renderer" class="text-break">
+Class Renderer  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Graphics.html">Graphics</a>.<a class="xref" href="osu.Framework.Graphics.Rendering.html">Rendering</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a base <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a> implementation for working renderers.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class Renderer : IRenderer</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Renderer</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Graphics.Rendering.Dummy.DummyRenderer.html">DummyRenderer</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Rendering.RendererExtensions.html#osu_Framework_Graphics_Rendering_RendererExtensions_DrawClipped__1_osu_Framework_Graphics_Rendering_IRenderer___0__osu_Framework_Graphics_Textures_Texture_osu_Framework_Graphics_Colour_ColourInfo_System_Nullable_osu_Framework_Graphics_Primitives_RectangleF__System_Action_osu_Framework_Graphics_Rendering_Vertices_TexturedVertex2D__System_Nullable_osuTK_Vector2__System_Nullable_osu_Framework_Graphics_Primitives_RectangleF__">RendererExtensions.DrawClipped&lt;T&gt;(IRenderer, ref T, Texture, ColourInfo, RectangleF?, Action&lt;TexturedVertex2D&gt;?, Vector2?, RectangleF?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Rendering.RendererExtensions.html#osu_Framework_Graphics_Rendering_RendererExtensions_DrawFrameBuffer_osu_Framework_Graphics_Rendering_IRenderer_osu_Framework_Graphics_Rendering_IFrameBuffer_osu_Framework_Graphics_Primitives_Quad_osu_Framework_Graphics_Colour_ColourInfo_System_Action_osu_Framework_Graphics_Rendering_Vertices_TexturedVertex2D__System_Nullable_osuTK_Vector2__System_Nullable_osuTK_Vector2__">RendererExtensions.DrawFrameBuffer(IRenderer, IFrameBuffer, Quad, ColourInfo, Action&lt;TexturedVertex2D&gt;?, Vector2?, Vector2?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Rendering.RendererExtensions.html#osu_Framework_Graphics_Rendering_RendererExtensions_DrawQuad_osu_Framework_Graphics_Rendering_IRenderer_osu_Framework_Graphics_Textures_Texture_osu_Framework_Graphics_Primitives_Quad_osu_Framework_Graphics_Colour_ColourInfo_System_Nullable_osu_Framework_Graphics_Primitives_RectangleF__System_Action_osu_Framework_Graphics_Rendering_Vertices_TexturedVertex2D__System_Nullable_osuTK_Vector2__System_Nullable_osuTK_Vector2__System_Nullable_osu_Framework_Graphics_Primitives_RectangleF__">RendererExtensions.DrawQuad(IRenderer, Texture, Quad, ColourInfo, RectangleF?, Action&lt;TexturedVertex2D&gt;?, Vector2?, Vector2?, RectangleF?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Rendering.RendererExtensions.html#osu_Framework_Graphics_Rendering_RendererExtensions_DrawTriangle_osu_Framework_Graphics_Rendering_IRenderer_osu_Framework_Graphics_Textures_Texture_osu_Framework_Graphics_Primitives_Triangle_osu_Framework_Graphics_Colour_ColourInfo_System_Nullable_osu_Framework_Graphics_Primitives_RectangleF__System_Action_osu_Framework_Graphics_Rendering_Vertices_TexturedVertex2D__System_Nullable_osuTK_Vector2__System_Nullable_osu_Framework_Graphics_Primitives_RectangleF__">RendererExtensions.DrawTriangle(IRenderer, Texture, Triangle, ColourInfo, RectangleF?, Action&lt;TexturedVertex2D&gt;?, Vector2?, RectangleF?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Rendering.RendererExtensions.html#osu_Framework_Graphics_Rendering_RendererExtensions_PopLocalMatrix_osu_Framework_Graphics_Rendering_IRenderer_">RendererExtensions.PopLocalMatrix(IRenderer)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Rendering.RendererExtensions.html#osu_Framework_Graphics_Rendering_RendererExtensions_PopOrtho_osu_Framework_Graphics_Rendering_IRenderer_">RendererExtensions.PopOrtho(IRenderer)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Rendering.RendererExtensions.html#osu_Framework_Graphics_Rendering_RendererExtensions_PushLocalMatrix_osu_Framework_Graphics_Rendering_IRenderer_osuTK_Matrix3_">RendererExtensions.PushLocalMatrix(IRenderer, Matrix3)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Rendering.RendererExtensions.html#osu_Framework_Graphics_Rendering_RendererExtensions_PushLocalMatrix_osu_Framework_Graphics_Rendering_IRenderer_osuTK_Matrix4_">RendererExtensions.PushLocalMatrix(IRenderer, Matrix4)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Rendering.RendererExtensions.html#osu_Framework_Graphics_Rendering_RendererExtensions_PushOrtho_osu_Framework_Graphics_Rendering_IRenderer_osu_Framework_Graphics_Primitives_RectangleF_">RendererExtensions.PushOrtho(IRenderer, RectangleF)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer__ctor_" data-uid="osu.Framework.Graphics.Rendering.Renderer.#ctor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer__ctor" data-uid="osu.Framework.Graphics.Rendering.Renderer.#ctor">
+  Renderer()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Renderer()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_AllowTearing_" data-uid="osu.Framework.Graphics.Rendering.Renderer.AllowTearing*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_AllowTearing" data-uid="osu.Framework.Graphics.Rendering.Renderer.AllowTearing">
+  AllowTearing
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool AllowTearing { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CacheStorage_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CacheStorage*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CacheStorage" data-uid="osu.Framework.Graphics.Rendering.Renderer.CacheStorage">
+  CacheStorage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Storage? CacheStorage { set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.Storage.html">Storage</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CurrentBlendingMask_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentBlendingMask*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CurrentBlendingMask" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentBlendingMask">
+  CurrentBlendingMask
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BlendingMask CurrentBlendingMask { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.BlendingMask.html">BlendingMask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CurrentBlendingParameters_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentBlendingParameters*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CurrentBlendingParameters" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentBlendingParameters">
+  CurrentBlendingParameters
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlendingParameters CurrentBlendingParameters { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.BlendingParameters.html">BlendingParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CurrentClearInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentClearInfo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CurrentClearInfo" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentClearInfo">
+  CurrentClearInfo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ClearInfo CurrentClearInfo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.ClearInfo.html">ClearInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CurrentDepthInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentDepthInfo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CurrentDepthInfo" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentDepthInfo">
+  CurrentDepthInfo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current depth parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DepthInfo CurrentDepthInfo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.DepthInfo.html">DepthInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CurrentMaskingInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentMaskingInfo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CurrentMaskingInfo" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentMaskingInfo">
+  CurrentMaskingInfo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current masking parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ref readonly MaskingInfo CurrentMaskingInfo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.MaskingInfo.html">MaskingInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CurrentStencilInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentStencilInfo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CurrentStencilInfo" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentStencilInfo">
+  CurrentStencilInfo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current stencil parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StencilInfo CurrentStencilInfo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.StencilInfo.html">StencilInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CurrentWrapModeS_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentWrapModeS*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CurrentWrapModeS" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentWrapModeS">
+  CurrentWrapModeS
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current horizontal texture wrap mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WrapMode CurrentWrapModeS { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Textures.WrapMode.html">WrapMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CurrentWrapModeT_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentWrapModeT*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CurrentWrapModeT" data-uid="osu.Framework.Graphics.Rendering.Renderer.CurrentWrapModeT">
+  CurrentWrapModeT
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current vertical texture wrap mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WrapMode CurrentWrapModeT { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Textures.WrapMode.html">WrapMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_FrameBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.FrameBuffer*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_FrameBuffer" data-uid="osu.Framework.Graphics.Rendering.Renderer.FrameBuffer">
+  FrameBuffer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current framebuffer, or null if the backbuffer is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IFrameBuffer? FrameBuffer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.IFrameBuffer.html">IFrameBuffer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_FrameIndex_" data-uid="osu.Framework.Graphics.Rendering.Renderer.FrameIndex*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_FrameIndex" data-uid="osu.Framework.Graphics.Rendering.Renderer.FrameIndex">
+  FrameIndex
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current frame index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ulong FrameIndex { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_IsClipSpaceYInverted_" data-uid="osu.Framework.Graphics.Rendering.Renderer.IsClipSpaceYInverted*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_IsClipSpaceYInverted" data-uid="osu.Framework.Graphics.Rendering.Renderer.IsClipSpaceYInverted">
+  IsClipSpaceYInverted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the y-coordinate ranges from -1 (top) to 1 (bottom). If <code>false</code>, the y-coordinate ranges from -1 (bottom) to 1 (top).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool IsClipSpaceYInverted { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_IsDepthRangeZeroToOne_" data-uid="osu.Framework.Graphics.Rendering.Renderer.IsDepthRangeZeroToOne*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_IsDepthRangeZeroToOne" data-uid="osu.Framework.Graphics.Rendering.Renderer.IsDepthRangeZeroToOne">
+  IsDepthRangeZeroToOne
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the depth is in the range [0, 1] (i.e. Reversed-Z). If <code>false</code>, depth is in the range [-1, 1].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool IsDepthRangeZeroToOne { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_IsInitialised_" data-uid="osu.Framework.Graphics.Rendering.Renderer.IsInitialised*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_IsInitialised" data-uid="osu.Framework.Graphics.Rendering.Renderer.IsInitialised">
+  IsInitialised
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a> has been initialised using <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html#osu_Framework_Graphics_Rendering_IRenderer_Initialise_osu_Framework_Platform_IGraphicsSurface_">Initialise(IGraphicsSurface)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInitialised { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_IsMaskingActive_" data-uid="osu.Framework.Graphics.Rendering.Renderer.IsMaskingActive*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_IsMaskingActive" data-uid="osu.Framework.Graphics.Rendering.Renderer.IsMaskingActive">
+  IsMaskingActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether any masking parameters are currently applied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsMaskingActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_IsUvOriginTopLeft_" data-uid="osu.Framework.Graphics.Rendering.Renderer.IsUvOriginTopLeft*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_IsUvOriginTopLeft" data-uid="osu.Framework.Graphics.Rendering.Renderer.IsUvOriginTopLeft">
+  IsUvOriginTopLeft
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the texture coordinates begin in the top-left of the texture. If <code>false</code>, (0, 0) corresponds to the bottom-left texel of the texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool IsUvOriginTopLeft { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_MaxPixelsUploadedPerFrame_" data-uid="osu.Framework.Graphics.Rendering.Renderer.MaxPixelsUploadedPerFrame*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_MaxPixelsUploadedPerFrame" data-uid="osu.Framework.Graphics.Rendering.Renderer.MaxPixelsUploadedPerFrame">
+  MaxPixelsUploadedPerFrame
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum number of pixels to upload per frame.
+Defaults to 2 megapixels (8mb alloc).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxPixelsUploadedPerFrame { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_MaxTextureSize_" data-uid="osu.Framework.Graphics.Rendering.Renderer.MaxTextureSize*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_MaxTextureSize" data-uid="osu.Framework.Graphics.Rendering.Renderer.MaxTextureSize">
+  MaxTextureSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum allowed texture size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxTextureSize { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_MaxTexturesUploadedPerFrame_" data-uid="osu.Framework.Graphics.Rendering.Renderer.MaxTexturesUploadedPerFrame*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_MaxTexturesUploadedPerFrame" data-uid="osu.Framework.Graphics.Rendering.Renderer.MaxTexturesUploadedPerFrame">
+  MaxTexturesUploadedPerFrame
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum number of texture uploads to dequeue and upload per frame.
+Defaults to 32.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxTexturesUploadedPerFrame { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_ProjectionMatrix_" data-uid="osu.Framework.Graphics.Rendering.Renderer.ProjectionMatrix*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_ProjectionMatrix" data-uid="osu.Framework.Graphics.Rendering.Renderer.ProjectionMatrix">
+  ProjectionMatrix
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current projection matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix4 ProjectionMatrix { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Matrix4</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_Scissor_" data-uid="osu.Framework.Graphics.Rendering.Renderer.Scissor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_Scissor" data-uid="osu.Framework.Graphics.Rendering.Renderer.Scissor">
+  Scissor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current scissor rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectangleI Scissor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Primitives.RectangleI.html">RectangleI</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_ScissorOffset_" data-uid="osu.Framework.Graphics.Rendering.Renderer.ScissorOffset*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_ScissorOffset" data-uid="osu.Framework.Graphics.Rendering.Renderer.ScissorOffset">
+  ScissorOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current scissor offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2I ScissorOffset { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Primitives.Vector2I.html">Vector2I</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_ScissorState_" data-uid="osu.Framework.Graphics.Rendering.Renderer.ScissorState*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_ScissorState" data-uid="osu.Framework.Graphics.Rendering.Renderer.ScissorState">
+  ScissorState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether scissor is currently enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool ScissorState { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_Shader_" data-uid="osu.Framework.Graphics.Rendering.Renderer.Shader*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_Shader" data-uid="osu.Framework.Graphics.Rendering.Renderer.Shader">
+  Shader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current shader, or null if no shader is currently bound.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IShader? Shader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Shaders.IShader.html">IShader</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_UsingBackbuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.UsingBackbuffer*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_UsingBackbuffer" data-uid="osu.Framework.Graphics.Rendering.Renderer.UsingBackbuffer">
+  UsingBackbuffer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the currently bound framebuffer is the backbuffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UsingBackbuffer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_VerticalSync_" data-uid="osu.Framework.Graphics.Rendering.Renderer.VerticalSync*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_VerticalSync" data-uid="osu.Framework.Graphics.Rendering.Renderer.VerticalSync">
+  VerticalSync
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool VerticalSync { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_Viewport_" data-uid="osu.Framework.Graphics.Rendering.Renderer.Viewport*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_Viewport" data-uid="osu.Framework.Graphics.Rendering.Renderer.Viewport">
+  Viewport
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current viewport.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectangleI Viewport { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Primitives.RectangleI.html">RectangleI</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_WhitePixel_" data-uid="osu.Framework.Graphics.Rendering.Renderer.WhitePixel*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_WhitePixel" data-uid="osu.Framework.Graphics.Rendering.Renderer.WhitePixel">
+  WhitePixel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The texture for a white pixel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture WhitePixel { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Textures.Texture.html">Texture</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_BeginFrame_" data-uid="osu.Framework.Graphics.Rendering.Renderer.BeginFrame*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_BeginFrame_osuTK_Vector2_" data-uid="osu.Framework.Graphics.Rendering.Renderer.BeginFrame(osuTK.Vector2)">
+  BeginFrame(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets any states to prepare for drawing a new frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void BeginFrame(Vector2 windowSize)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>windowSize</code> <span class="xref">Vector2</span></dt>
+    <dd><p>The full window size.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_BindFrameBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.BindFrameBuffer*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_BindFrameBuffer_osu_Framework_Graphics_Rendering_IFrameBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.BindFrameBuffer(osu.Framework.Graphics.Rendering.IFrameBuffer)">
+  BindFrameBuffer(IFrameBuffer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L899"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindFrameBuffer(IFrameBuffer frameBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frameBuffer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IFrameBuffer.html">IFrameBuffer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_BindShader_" data-uid="osu.Framework.Graphics.Rendering.Renderer.BindShader*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_BindShader_osu_Framework_Graphics_Shaders_IShader_" data-uid="osu.Framework.Graphics.Rendering.Renderer.BindShader(osu.Framework.Graphics.Shaders.IShader)">
+  BindShader(IShader)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1023"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindShader(IShader shader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shader</code> <a class="xref" href="osu.Framework.Graphics.Shaders.IShader.html">IShader</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_BindTexture_" data-uid="osu.Framework.Graphics.Rendering.Renderer.BindTexture*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_BindTexture_osu_Framework_Graphics_Rendering_INativeTexture_System_Int32_osu_Framework_Graphics_Textures_WrapMode_osu_Framework_Graphics_Textures_WrapMode_" data-uid="osu.Framework.Graphics.Rendering.Renderer.BindTexture(osu.Framework.Graphics.Rendering.INativeTexture,System.Int32,osu.Framework.Graphics.Textures.WrapMode,osu.Framework.Graphics.Textures.WrapMode)">
+  BindTexture(INativeTexture, int, WrapMode, WrapMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L818"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a native texture. Generally used by internal components of renderer implementations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BindTexture(INativeTexture texture, int unit = 0, WrapMode wrapModeS = WrapMode.None, WrapMode wrapModeT = WrapMode.None)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="osu.Framework.Graphics.Rendering.INativeTexture.html">INativeTexture</a></dt>
+    <dd><p>The native texture to bind.</p>
+</dd>
+    <dt><code>unit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The sampling unit in which the texture is to be bound.</p>
+</dd>
+    <dt><code>wrapModeS</code> <a class="xref" href="osu.Framework.Graphics.Textures.WrapMode.html">WrapMode</a></dt>
+    <dd><p>The texture's horizontal wrap mode.</p>
+</dd>
+    <dt><code>wrapModeT</code> <a class="xref" href="osu.Framework.Graphics.Textures.WrapMode.html">WrapMode</a></dt>
+    <dd><p>The texture's vertex wrap mode.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the texture was successfully bound.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_BindTexture_" data-uid="osu.Framework.Graphics.Rendering.Renderer.BindTexture*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_BindTexture_osu_Framework_Graphics_Textures_Texture_System_Int32_System_Nullable_osu_Framework_Graphics_Textures_WrapMode__System_Nullable_osu_Framework_Graphics_Textures_WrapMode__" data-uid="osu.Framework.Graphics.Rendering.Renderer.BindTexture(osu.Framework.Graphics.Textures.Texture,System.Int32,System.Nullable{osu.Framework.Graphics.Textures.WrapMode},System.Nullable{osu.Framework.Graphics.Textures.WrapMode})">
+  BindTexture(Texture, int, WrapMode?, WrapMode?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L790"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BindTexture(Texture texture, int unit, WrapMode? wrapModeS, WrapMode? wrapModeT)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="osu.Framework.Graphics.Textures.Texture.html">Texture</a></dt>
+    <dd><p>The texture to bind.</p>
+</dd>
+    <dt><code>unit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The sampling unit in which the texture is to be bound.</p>
+</dd>
+    <dt><code>wrapModeS</code> <a class="xref" href="osu.Framework.Graphics.Textures.WrapMode.html">WrapMode</a>?</dt>
+    <dd><p>The texture's horizontal wrap mode.</p>
+</dd>
+    <dt><code>wrapModeT</code> <a class="xref" href="osu.Framework.Graphics.Textures.WrapMode.html">WrapMode</a>?</dt>
+    <dd><p>The texture's vertex wrap mode.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the texture was successfully bound.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_BindUniformBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.BindUniformBuffer*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_BindUniformBuffer_System_String_osu_Framework_Graphics_Rendering_IUniformBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.BindUniformBuffer(System.String,osu.Framework.Graphics.Rendering.IUniformBuffer)">
+  BindUniformBuffer(string, IUniformBuffer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1083"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindUniformBuffer(string blockName, IUniformBuffer buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>blockName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>buffer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IUniformBuffer.html">IUniformBuffer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_Clear_" data-uid="osu.Framework.Graphics.Rendering.Renderer.Clear*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_Clear_osu_Framework_Graphics_Rendering_ClearInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.Clear(osu.Framework.Graphics.Rendering.ClearInfo)">
+  Clear(ClearInfo)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L364"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears the currently bound frame buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear(ClearInfo clearInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>clearInfo</code> <a class="xref" href="osu.Framework.Graphics.Rendering.ClearInfo.html">ClearInfo</a></dt>
+    <dd><p>The clearing parameters.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_ClearCurrent_" data-uid="osu.Framework.Graphics.Rendering.Renderer.ClearCurrent*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_ClearCurrent" data-uid="osu.Framework.Graphics.Rendering.Renderer.ClearCurrent">
+  ClearCurrent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the rendering thread is suspended and no more commands will be enqueued.
+This is mainly required for OpenGL renderers to mark context as current before performing GL calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void ClearCurrent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_ClearImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.ClearImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_ClearImplementation_osu_Framework_Graphics_Rendering_ClearInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.ClearImplementation(osu.Framework.Graphics.Rendering.ClearInfo)">
+  ClearImplementation(ClearInfo)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L381"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Informs the graphics device to clear the color and depth targets of the currently bound framebuffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void ClearImplementation(ClearInfo clearInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>clearInfo</code> <a class="xref" href="osu.Framework.Graphics.Rendering.ClearInfo.html">ClearInfo</a></dt>
+    <dd><p>The clear parameters.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CreateFrameBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateFrameBuffer*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CreateFrameBuffer_osu_Framework_Graphics_Rendering_RenderBufferFormat___osu_Framework_Graphics_Textures_TextureFilteringMode_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateFrameBuffer(osu.Framework.Graphics.Rendering.RenderBufferFormat[],osu.Framework.Graphics.Textures.TextureFilteringMode)">
+  CreateFrameBuffer(RenderBufferFormat[]?, TextureFilteringMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="osu.Framework.Graphics.Rendering.IFrameBuffer.html">IFrameBuffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IFrameBuffer CreateFrameBuffer(RenderBufferFormat[]? renderBufferFormats = null, TextureFilteringMode filteringMode = TextureFilteringMode.Linear)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderBufferFormats</code> <a class="xref" href="osu.Framework.Graphics.Rendering.RenderBufferFormat.html">RenderBufferFormat</a>[]</dt>
+    <dd><p>Any render buffer formats.</p>
+</dd>
+    <dt><code>filteringMode</code> <a class="xref" href="osu.Framework.Graphics.Textures.TextureFilteringMode.html">TextureFilteringMode</a></dt>
+    <dd><p>The texture filtering mode.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.IFrameBuffer.html">IFrameBuffer</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Rendering.IFrameBuffer.html">IFrameBuffer</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CreateLinearBatch_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateLinearBatch*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CreateLinearBatch__1_System_Int32_System_Int32_osu_Framework_Graphics_Rendering_PrimitiveTopology_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateLinearBatch``1(System.Int32,System.Int32,osu.Framework.Graphics.Rendering.PrimitiveTopology)">
+  CreateLinearBatch&lt;TVertex&gt;(int, int, PrimitiveTopology)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new linear vertex batch, accepting vertices and drawing as a given primitive type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IVertexBatch&lt;TVertex&gt; CreateLinearBatch&lt;TVertex&gt;(int size, int maxBuffers, PrimitiveTopology topology) where TVertex : unmanaged, IEquatable&lt;TVertex&gt;, IVertex</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of quads.</p>
+</dd>
+    <dt><code>maxBuffers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum number of vertex buffers.</p>
+</dd>
+    <dt><code>topology</code> <a class="xref" href="osu.Framework.Graphics.Rendering.PrimitiveTopology.html">PrimitiveTopology</a></dt>
+    <dd><p>The type of primitive the vertices are drawn as.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.IVertexBatch-1.html">IVertexBatch</a>&lt;TVertex&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TVertex</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CreateNativeTexture_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateNativeTexture*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CreateNativeTexture_System_Int32_System_Int32_System_Boolean_osu_Framework_Graphics_Textures_TextureFilteringMode_System_Nullable_osuTK_Graphics_Color4__" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateNativeTexture(System.Int32,System.Int32,System.Boolean,osu.Framework.Graphics.Textures.TextureFilteringMode,System.Nullable{osuTK.Graphics.Color4})">
+  CreateNativeTexture(int, int, bool, TextureFilteringMode, Color4?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="osu.Framework.Graphics.Rendering.INativeTexture.html">INativeTexture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract INativeTexture CreateNativeTexture(int width, int height, bool manualMipmaps = false, TextureFilteringMode filteringMode = TextureFilteringMode.Linear, Color4? initialisationColour = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The width of the texture.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The height of the texture.</p>
+</dd>
+    <dt><code>manualMipmaps</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether manual mipmaps will be uploaded to the texture. If false, the texture will compute mipmaps automatically.</p>
+</dd>
+    <dt><code>filteringMode</code> <a class="xref" href="osu.Framework.Graphics.Textures.TextureFilteringMode.html">TextureFilteringMode</a></dt>
+    <dd><p>The filtering mode.</p>
+</dd>
+    <dt><code>initialisationColour</code> <span class="xref">Color4</span>?</dt>
+    <dd><p>The colour to initialise texture levels with (in the case of sub region initial uploads). If null, no initialisation is provided out-of-the-box.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.INativeTexture.html">INativeTexture</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Rendering.INativeTexture.html">INativeTexture</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CreateNativeVideoTexture_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateNativeVideoTexture*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CreateNativeVideoTexture_System_Int32_System_Int32_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateNativeVideoTexture(System.Int32,System.Int32)">
+  CreateNativeVideoTexture(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="osu.Framework.Graphics.Rendering.INativeTexture.html">INativeTexture</a> for video sprites.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract INativeTexture CreateNativeVideoTexture(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The width of the texture.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The height of the texture.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.INativeTexture.html">INativeTexture</a></dt>
+    <dd><p>The video <a class="xref" href="osu.Framework.Graphics.Rendering.INativeTexture.html">INativeTexture</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CreateQuadBatch_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateQuadBatch*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CreateQuadBatch__1_System_Int32_System_Int32_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateQuadBatch``1(System.Int32,System.Int32)">
+  CreateQuadBatch&lt;TVertex&gt;(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new quad vertex batch, accepting vertices and drawing as quads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IVertexBatch&lt;TVertex&gt; CreateQuadBatch&lt;TVertex&gt;(int size, int maxBuffers) where TVertex : unmanaged, IEquatable&lt;TVertex&gt;, IVertex</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>size</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of quads.</p>
+</dd>
+    <dt><code>maxBuffers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum number of vertex buffers.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.IVertexBatch-1.html">IVertexBatch</a>&lt;TVertex&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TVertex</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CreateShader_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateShader*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CreateShader_System_String_osu_Framework_Graphics_Rendering_IShaderPart___osu_Framework_Graphics_Shaders_ShaderCompilationStore_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateShader(System.String,osu.Framework.Graphics.Rendering.IShaderPart[],osu.Framework.Graphics.Shaders.ShaderCompilationStore)">
+  CreateShader(string, IShaderPart[], ShaderCompilationStore)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="osu.Framework.Graphics.Shaders.IShader.html">IShader</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IShader CreateShader(string name, IShaderPart[] parts, ShaderCompilationStore compilationStore)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the shader.</p>
+</dd>
+    <dt><code>parts</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IShaderPart.html">IShaderPart</a>[]</dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Rendering.IShaderPart.html">IShaderPart</a>s associated with this shader.</p>
+</dd>
+    <dt><code>compilationStore</code> <a class="xref" href="osu.Framework.Graphics.Shaders.ShaderCompilationStore.html">ShaderCompilationStore</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Shaders.IShader.html">IShader</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Shaders.IShader.html">IShader</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CreateShaderPart_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateShaderPart*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CreateShaderPart_osu_Framework_Graphics_Shaders_IShaderStore_System_String_System_Byte___osu_Framework_Graphics_Shaders_ShaderPartType_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateShaderPart(osu.Framework.Graphics.Shaders.IShaderStore,System.String,System.Byte[],osu.Framework.Graphics.Shaders.ShaderPartType)">
+  CreateShaderPart(IShaderStore, string, byte[]?, ShaderPartType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="osu.Framework.Graphics.Rendering.IShaderPart.html">IShaderPart</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IShaderPart CreateShaderPart(IShaderStore store, string name, byte[]? rawData, ShaderPartType partType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>store</code> <a class="xref" href="osu.Framework.Graphics.Shaders.IShaderStore.html">IShaderStore</a></dt>
+    <dd><p>The shader store to load headers with.</p>
+</dd>
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the shader part.</p>
+</dd>
+    <dt><code>rawData</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The content of the shader part.</p>
+</dd>
+    <dt><code>partType</code> <a class="xref" href="osu.Framework.Graphics.Shaders.ShaderPartType.html">ShaderPartType</a></dt>
+    <dd><p>The type of the shader part.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.IShaderPart.html">IShaderPart</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Rendering.IShaderPart.html">IShaderPart</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CreateShaderStorageBufferObject_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateShaderStorageBufferObject*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CreateShaderStorageBufferObject__1_System_Int32_System_Int32_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateShaderStorageBufferObject``1(System.Int32,System.Int32)">
+  CreateShaderStorageBufferObject&lt;TData&gt;(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a buffer that can be used to store an array of data for use in a <a class="xref" href="osu.Framework.Graphics.Shaders.IShader.html">IShader</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IShaderStorageBufferObject&lt;TData&gt; CreateShaderStorageBufferObject&lt;TData&gt;(int uboSize, int ssboSize) where TData : unmanaged, IEquatable&lt;TData&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uboSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of elements this buffer should contain if Shader Storage Buffer Objects <b>are not</b> supported by the platform.
+A safe value is <code>16384/{data_size}</code>. The value must match the definition of the UBO implementation in the shader.</p>
+</dd>
+    <dt><code>ssboSize</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of elements this buffer should contain if Shader Storage Buffer Objects <b>are</b> supported by the platform.
+May be any value up to <code>{vram_size}/{data_size}</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.IShaderStorageBufferObject-1.html">IShaderStorageBufferObject</a>&lt;TData&gt;</dt>
+    <dd><p>An <a class="xref" href="osu.Framework.Graphics.Rendering.IShaderStorageBufferObject-1.html">IShaderStorageBufferObject&lt;TData&gt;</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TData</code></dt>
+    <dd><p>The type of data to be stored in the buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Rendering_Renderer_CreateShaderStorageBufferObject__1_System_Int32_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><ul><li>Internally, this buffer may be implemented as either a "Uniform Buffer Object" (UBO) or
+a "Shader Storage Buffer Object" (SSBO) depending on the capabilities of the platform.</li><li>UBOs are more broadly supported but cannot hold as much data as SSBOs.</li><li>Shaders must provide implementations for both types of buffers to properly support this storage.</li></ul>
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CreateTexture_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateTexture*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CreateTexture_System_Int32_System_Int32_System_Boolean_osu_Framework_Graphics_Textures_TextureFilteringMode_osu_Framework_Graphics_Textures_WrapMode_osu_Framework_Graphics_Textures_WrapMode_System_Nullable_osuTK_Graphics_Color4__" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateTexture(System.Int32,System.Int32,System.Boolean,osu.Framework.Graphics.Textures.TextureFilteringMode,osu.Framework.Graphics.Textures.WrapMode,osu.Framework.Graphics.Textures.WrapMode,System.Nullable{osuTK.Graphics.Color4})">
+  CreateTexture(int, int, bool, TextureFilteringMode, WrapMode, WrapMode, Color4?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="osu.Framework.Graphics.Textures.Texture.html">Texture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture CreateTexture(int width, int height, bool manualMipmaps, TextureFilteringMode filteringMode, WrapMode wrapModeS, WrapMode wrapModeT, Color4? initialisationColour)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The width of the texture.</p>
+</dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The height of the texture.</p>
+</dd>
+    <dt><code>manualMipmaps</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether manual mipmaps will be uploaded to the texture. If false, the texture will compute mipmaps automatically.</p>
+</dd>
+    <dt><code>filteringMode</code> <a class="xref" href="osu.Framework.Graphics.Textures.TextureFilteringMode.html">TextureFilteringMode</a></dt>
+    <dd><p>The filtering mode.</p>
+</dd>
+    <dt><code>wrapModeS</code> <a class="xref" href="osu.Framework.Graphics.Textures.WrapMode.html">WrapMode</a></dt>
+    <dd><p>The texture's horizontal wrap mode.</p>
+</dd>
+    <dt><code>wrapModeT</code> <a class="xref" href="osu.Framework.Graphics.Textures.WrapMode.html">WrapMode</a></dt>
+    <dd><p>The texture's vertex wrap mode.</p>
+</dd>
+    <dt><code>initialisationColour</code> <span class="xref">Color4</span>?</dt>
+    <dd><p>The colour to initialise texture levels with (in the case of sub region initial uploads). If null, no initialisation is provided out-of-the-box.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Textures.Texture.html">Texture</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Textures.Texture.html">Texture</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CreateUniformBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateUniformBuffer*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CreateUniformBuffer__1" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateUniformBuffer``1">
+  CreateUniformBuffer&lt;TData&gt;()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a buffer that stores data for a uniform block of a <a class="xref" href="osu.Framework.Graphics.Shaders.IShader.html">IShader</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IUniformBuffer&lt;TData&gt; CreateUniformBuffer&lt;TData&gt;() where TData : unmanaged, IEquatable&lt;TData&gt;</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Rendering.IUniformBuffer-1.html">IUniformBuffer</a>&lt;TData&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TData</code></dt>
+    <dd><p>The type of data in the buffer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_CreateVideoTexture_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateVideoTexture*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_CreateVideoTexture_System_Int32_System_Int32_" data-uid="osu.Framework.Graphics.Rendering.Renderer.CreateVideoTexture(System.Int32,System.Int32)">
+  CreateVideoTexture(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new video texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture CreateVideoTexture(int width, int height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Textures.Texture.html">Texture</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_DeleteFrameBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.DeleteFrameBuffer*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_DeleteFrameBuffer_osu_Framework_Graphics_Rendering_IFrameBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.DeleteFrameBuffer(osu.Framework.Graphics.Rendering.IFrameBuffer)">
+  DeleteFrameBuffer(IFrameBuffer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L938"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes a frame buffer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DeleteFrameBuffer(IFrameBuffer frameBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frameBuffer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IFrameBuffer.html">IFrameBuffer</a></dt>
+    <dd><p>The frame buffer to delete.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_DeleteFrameBufferImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.DeleteFrameBufferImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_DeleteFrameBufferImplementation_osu_Framework_Graphics_Rendering_IFrameBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.DeleteFrameBufferImplementation(osu.Framework.Graphics.Rendering.IFrameBuffer)">
+  DeleteFrameBufferImplementation(IFrameBuffer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L946"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void DeleteFrameBufferImplementation(IFrameBuffer frameBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frameBuffer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IFrameBuffer.html">IFrameBuffer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_DrawVertices_" data-uid="osu.Framework.Graphics.Rendering.Renderer.DrawVertices*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_DrawVertices_osu_Framework_Graphics_Rendering_PrimitiveTopology_System_Int32_System_Int32_" data-uid="osu.Framework.Graphics.Rendering.Renderer.DrawVertices(osu.Framework.Graphics.Rendering.PrimitiveTopology,System.Int32,System.Int32)">
+  DrawVertices(PrimitiveTopology, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L950"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawVertices(PrimitiveTopology topology, int vertexStart, int verticesCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topology</code> <a class="xref" href="osu.Framework.Graphics.Rendering.PrimitiveTopology.html">PrimitiveTopology</a></dt>
+    <dd></dd>
+    <dt><code>vertexStart</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>verticesCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_DrawVerticesImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.DrawVerticesImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_DrawVerticesImplementation_osu_Framework_Graphics_Rendering_PrimitiveTopology_System_Int32_System_Int32_" data-uid="osu.Framework.Graphics.Rendering.Renderer.DrawVerticesImplementation(osu.Framework.Graphics.Rendering.PrimitiveTopology,System.Int32,System.Int32)">
+  DrawVerticesImplementation(PrimitiveTopology, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1019"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void DrawVerticesImplementation(PrimitiveTopology topology, int vertexStart, int verticesCount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topology</code> <a class="xref" href="osu.Framework.Graphics.Rendering.PrimitiveTopology.html">PrimitiveTopology</a></dt>
+    <dd></dd>
+    <dt><code>vertexStart</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>verticesCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_FinishFrame_" data-uid="osu.Framework.Graphics.Rendering.Renderer.FinishFrame*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_FinishFrame" data-uid="osu.Framework.Graphics.Rendering.Renderer.FinishFrame">
+  FinishFrame()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs any last actions before a frame ends.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void FinishFrame()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_FlushCurrentBatch_" data-uid="osu.Framework.Graphics.Rendering.Renderer.FlushCurrentBatch*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_FlushCurrentBatch_System_Nullable_osu_Framework_Graphics_Rendering_FlushBatchSource__" data-uid="osu.Framework.Graphics.Rendering.Renderer.FlushCurrentBatch(System.Nullable{osu.Framework.Graphics.Rendering.FlushBatchSource})">
+  FlushCurrentBatch(FlushBatchSource?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L766"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flushes the currently active vertex batch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void FlushCurrentBatch(FlushBatchSource? source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="osu.Framework.Graphics.Rendering.FlushBatchSource.html">FlushBatchSource</a>?</dt>
+    <dd><p>The source performing the flush, for profiling purposes.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_Initialise_" data-uid="osu.Framework.Graphics.Rendering.Renderer.Initialise*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_Initialise_osu_Framework_Platform_IGraphicsSurface_" data-uid="osu.Framework.Graphics.Rendering.Renderer.Initialise(osu.Framework.Platform.IGraphicsSurface)">
+  Initialise(IGraphicsSurface)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs a once-off initialisation of this <a class="xref" href="osu.Framework.Graphics.Rendering.Renderer.html">Renderer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void Initialise(IGraphicsSurface graphicsSurface)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>graphicsSurface</code> <a class="xref" href="osu.Framework.Platform.IGraphicsSurface.html">IGraphicsSurface</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_MakeCurrent_" data-uid="osu.Framework.Graphics.Rendering.Renderer.MakeCurrent*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_MakeCurrent" data-uid="osu.Framework.Graphics.Rendering.Renderer.MakeCurrent">
+  MakeCurrent()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the rendering thread is active and commands will be enqueued.
+This is mainly required for OpenGL renderers to mark context as current before performing GL calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void MakeCurrent()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PopDepthInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopDepthInfo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PopDepthInfo" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopDepthInfo">
+  PopDepthInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L676"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restores the last depth parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopDepthInfo()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PopMaskingInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopMaskingInfo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PopMaskingInfo" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopMaskingInfo">
+  PopMaskingInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L618"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restores the last masking parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopMaskingInfo()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PopProjectionMatrix_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopProjectionMatrix*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PopProjectionMatrix" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopProjectionMatrix">
+  PopProjectionMatrix()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L589"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restores the last projection matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopProjectionMatrix()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PopScissor_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopScissor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PopScissor" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopScissor">
+  PopScissor()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L494"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restores the last scissor rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopScissor()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PopScissorOffset_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopScissorOffset*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PopScissorOffset" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopScissorOffset">
+  PopScissorOffset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L510"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restores the last scissor offset.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopScissorOffset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PopScissorState_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopScissorState*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PopScissorState" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopScissorState">
+  PopScissorState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L502"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restores the last scissor test enablement state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopScissorState()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PopStencilInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopStencilInfo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PopStencilInfo" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopStencilInfo">
+  PopStencilInfo()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L684"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restores the last stencil parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopStencilInfo()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PopViewport_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopViewport*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PopViewport" data-uid="osu.Framework.Graphics.Rendering.Renderer.PopViewport">
+  PopViewport()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L447"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Restores the last viewport rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopViewport()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PushDepthInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushDepthInfo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PushDepthInfo_osu_Framework_Graphics_Rendering_DepthInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushDepthInfo(osu.Framework.Graphics.Rendering.DepthInfo)">
+  PushDepthInfo(DepthInfo)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L664"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies new depth parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushDepthInfo(DepthInfo depthInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>depthInfo</code> <a class="xref" href="osu.Framework.Graphics.Rendering.DepthInfo.html">DepthInfo</a></dt>
+    <dd><p>The depth parameters.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PushMaskingInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushMaskingInfo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PushMaskingInfo_osu_Framework_Graphics_Rendering_MaskingInfo__System_Boolean_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushMaskingInfo(osu.Framework.Graphics.Rendering.MaskingInfo@,System.Boolean)">
+  PushMaskingInfo(in MaskingInfo, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L612"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies new masking parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushMaskingInfo(in MaskingInfo maskingInfo, bool overwritePreviousScissor = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maskingInfo</code> <a class="xref" href="osu.Framework.Graphics.Rendering.MaskingInfo.html">MaskingInfo</a></dt>
+    <dd><p>The masking parameters.</p>
+</dd>
+    <dt><code>overwritePreviousScissor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to use the last scissor rectangle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PushProjectionMatrix_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushProjectionMatrix*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PushProjectionMatrix_osuTK_Matrix4_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushProjectionMatrix(osuTK.Matrix4)">
+  PushProjectionMatrix(Matrix4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L583"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies a new projection matrix.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushProjectionMatrix(Matrix4 matrix)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matrix</code> <span class="xref">Matrix4</span></dt>
+    <dd><p>The matrix.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PushScissor_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushScissor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PushScissor_osu_Framework_Graphics_Primitives_RectangleI_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushScissor(osu.Framework.Graphics.Primitives.RectangleI)">
+  PushScissor(RectangleI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L476"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies a new scissor rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushScissor(RectangleI scissor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scissor</code> <a class="xref" href="osu.Framework.Graphics.Primitives.RectangleI.html">RectangleI</a></dt>
+    <dd><p>The scissor rectangle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PushScissorOffset_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushScissorOffset*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PushScissorOffset_osu_Framework_Graphics_Primitives_Vector2I_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushScissorOffset(osu.Framework.Graphics.Primitives.Vector2I)">
+  PushScissorOffset(Vector2I)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L488"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies a new scissor offset to the scissor rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushScissorOffset(Vector2I offset)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>offset</code> <a class="xref" href="osu.Framework.Graphics.Primitives.Vector2I.html">Vector2I</a></dt>
+    <dd><p>The scissor offset.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PushScissorState_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushScissorState*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PushScissorState_System_Boolean_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushScissorState(System.Boolean)">
+  PushScissorState(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L482"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies a new scissor test enablement state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushScissorState(bool enabled)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the scissor test is enabled.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PushStencilInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushStencilInfo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PushStencilInfo_osu_Framework_Graphics_Rendering_StencilInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushStencilInfo(osu.Framework.Graphics.Rendering.StencilInfo)">
+  PushStencilInfo(StencilInfo)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L670"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies new stencil parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushStencilInfo(StencilInfo stencilInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stencilInfo</code> <a class="xref" href="osu.Framework.Graphics.Rendering.StencilInfo.html">StencilInfo</a></dt>
+    <dd><p>The stencil parameters.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_PushViewport_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushViewport*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_PushViewport_osu_Framework_Graphics_Primitives_RectangleI_" data-uid="osu.Framework.Graphics.Rendering.Renderer.PushViewport(osu.Framework.Graphics.Primitives.RectangleI)">
+  PushViewport(RectangleI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L425"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies a new viewport rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushViewport(RectangleI viewport)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>viewport</code> <a class="xref" href="osu.Framework.Graphics.Primitives.RectangleI.html">RectangleI</a></dt>
+    <dd><p>The viewport rectangle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_ScheduleDisposal_" data-uid="osu.Framework.Graphics.Rendering.Renderer.ScheduleDisposal*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_ScheduleDisposal__1_System_Action___0____0_" data-uid="osu.Framework.Graphics.Rendering.Renderer.ScheduleDisposal``1(System.Action{``0},``0)">
+  ScheduleDisposal&lt;T&gt;(Action&lt;T&gt;, T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schedules a disposal action to be run on the next frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScheduleDisposal&lt;T&gt;(Action&lt;T&gt; disposalAction, T target)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposalAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>The disposal action.</p>
+</dd>
+    <dt><code>target</code> <span class="xref">T</span></dt>
+    <dd><p>The target to be disposed.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_ScheduleExpensiveOperation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.ScheduleExpensiveOperation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_ScheduleExpensiveOperation_osu_Framework_Threading_ScheduledDelegate_" data-uid="osu.Framework.Graphics.Rendering.Renderer.ScheduleExpensiveOperation(osu.Framework.Threading.ScheduledDelegate)">
+  ScheduleExpensiveOperation(ScheduledDelegate)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Schedules an expensive operation to a queue from which a maximum of one operation is performed per frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ScheduleExpensiveOperation(ScheduledDelegate operation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>operation</code> <a class="xref" href="osu.Framework.Threading.ScheduledDelegate.html">ScheduledDelegate</a></dt>
+    <dd><p>The operation to schedule.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetBlend_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetBlend*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetBlend_osu_Framework_Graphics_BlendingParameters_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetBlend(osu.Framework.Graphics.BlendingParameters)">
+  SetBlend(BlendingParameters)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the current blending state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBlend(BlendingParameters blendingParameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>blendingParameters</code> <a class="xref" href="osu.Framework.Graphics.BlendingParameters.html">BlendingParameters</a></dt>
+    <dd><p>The blending parameters.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetBlendImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetBlendImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetBlendImplementation_osu_Framework_Graphics_BlendingParameters_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetBlendImplementation(osu.Framework.Graphics.BlendingParameters)">
+  SetBlendImplementation(BlendingParameters)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L413"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the graphics device with the new blending parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetBlendImplementation(BlendingParameters blendingParameters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>blendingParameters</code> <a class="xref" href="osu.Framework.Graphics.BlendingParameters.html">BlendingParameters</a></dt>
+    <dd><p>The blending parameters.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetBlendMask_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetBlendMask*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetBlendMask_osu_Framework_Graphics_BlendingMask_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetBlendMask(osu.Framework.Graphics.BlendingMask)">
+  SetBlendMask(BlendingMask)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L398"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a mask deciding which colour components are affected during blending.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetBlendMask(BlendingMask blendingMask)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>blendingMask</code> <a class="xref" href="osu.Framework.Graphics.BlendingMask.html">BlendingMask</a></dt>
+    <dd><p>The blending mask.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetBlendMaskImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetBlendMaskImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetBlendMaskImplementation_osu_Framework_Graphics_BlendingMask_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetBlendMaskImplementation(osu.Framework.Graphics.BlendingMask)">
+  SetBlendMaskImplementation(BlendingMask)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the graphics device with the new blending mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetBlendMaskImplementation(BlendingMask blendingMask)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>blendingMask</code> <a class="xref" href="osu.Framework.Graphics.BlendingMask.html">BlendingMask</a></dt>
+    <dd><p>The blending mask.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetDepthInfoImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetDepthInfoImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetDepthInfoImplementation_osu_Framework_Graphics_Rendering_DepthInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetDepthInfoImplementation(osu.Framework.Graphics.Rendering.DepthInfo)">
+  SetDepthInfoImplementation(DepthInfo)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L718"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the graphics device with new depth parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetDepthInfoImplementation(DepthInfo depthInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>depthInfo</code> <a class="xref" href="osu.Framework.Graphics.Rendering.DepthInfo.html">DepthInfo</a></dt>
+    <dd><p>The depth parameters to use.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetFrameBufferImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetFrameBufferImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetFrameBufferImplementation_osu_Framework_Graphics_Rendering_IFrameBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetFrameBufferImplementation(osu.Framework.Graphics.Rendering.IFrameBuffer)">
+  SetFrameBufferImplementation(IFrameBuffer?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L932"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Informs the graphics device to use the given framebuffer for drawing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetFrameBufferImplementation(IFrameBuffer? frameBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frameBuffer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IFrameBuffer.html">IFrameBuffer</a></dt>
+    <dd><p>The framebuffer to use, or null to use the backbuffer (i.e. main framebuffer).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetScissorImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetScissorImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetScissorImplementation_osu_Framework_Graphics_Primitives_RectangleI_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetScissorImplementation(osu.Framework.Graphics.Primitives.RectangleI)">
+  SetScissorImplementation(RectangleI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L571"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the graphics device with a new scissor rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetScissorImplementation(RectangleI scissor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scissor</code> <a class="xref" href="osu.Framework.Graphics.Primitives.RectangleI.html">RectangleI</a></dt>
+    <dd><p>The scissor rectangle to use.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetScissorStateImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetScissorStateImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetScissorStateImplementation_System_Boolean_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetScissorStateImplementation(System.Boolean)">
+  SetScissorStateImplementation(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L577"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the graphics device with the new scissor state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetScissorStateImplementation(bool enabled)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>enabled</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether scissor should be enabled.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetShaderImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetShaderImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetShaderImplementation_osu_Framework_Graphics_Shaders_IShader_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetShaderImplementation(osu.Framework.Graphics.Shaders.IShader)">
+  SetShaderImplementation(IShader)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1075"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Informs the graphics device to use the given shader for drawing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetShaderImplementation(IShader shader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shader</code> <a class="xref" href="osu.Framework.Graphics.Shaders.IShader.html">IShader</a></dt>
+    <dd><p>The shader to use.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetStencilInfoImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetStencilInfoImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetStencilInfoImplementation_osu_Framework_Graphics_Rendering_StencilInfo_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetStencilInfoImplementation(osu.Framework.Graphics.Rendering.StencilInfo)">
+  SetStencilInfoImplementation(StencilInfo)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L724"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the graphics device with new stencil parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetStencilInfoImplementation(StencilInfo stencilInfo)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stencilInfo</code> <a class="xref" href="osu.Framework.Graphics.Rendering.StencilInfo.html">StencilInfo</a></dt>
+    <dd><p>The stencil parameters to use.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetTextureImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetTextureImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetTextureImplementation_osu_Framework_Graphics_Rendering_INativeTexture_System_Int32_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetTextureImplementation(osu.Framework.Graphics.Rendering.INativeTexture,System.Int32)">
+  SetTextureImplementation(INativeTexture?, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L893"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Informs the graphics device to use the given texture for drawing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool SetTextureImplementation(INativeTexture? texture, int unit)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>texture</code> <a class="xref" href="osu.Framework.Graphics.Rendering.INativeTexture.html">INativeTexture</a></dt>
+    <dd><p>The texture, or null to use default texture.</p>
+</dd>
+    <dt><code>unit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The sampling unit in which the texture is to be bound.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the texture was set successfully.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetUniformBufferImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetUniformBufferImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetUniformBufferImplementation_System_String_osu_Framework_Graphics_Rendering_IUniformBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetUniformBufferImplementation(System.String,osu.Framework.Graphics.Rendering.IUniformBuffer)">
+  SetUniformBufferImplementation(string, IUniformBuffer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1094"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetUniformBufferImplementation(string blockName, IUniformBuffer buffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>blockName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>buffer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IUniformBuffer.html">IUniformBuffer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetUniformImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetUniformImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetUniformImplementation__1_osu_Framework_Graphics_Shaders_IUniformWithValue___0__" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetUniformImplementation``1(osu.Framework.Graphics.Shaders.IUniformWithValue{``0})">
+  SetUniformImplementation&lt;T&gt;(IUniformWithValue&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1081"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Informs the graphics device to update the value of the given uniform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetUniformImplementation&lt;T&gt;(IUniformWithValue&lt;T&gt; uniform) where T : unmanaged, IEquatable&lt;T&gt;</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>uniform</code> <a class="xref" href="osu.Framework.Graphics.Shaders.IUniformWithValue-1.html">IUniformWithValue</a>&lt;T&gt;</dt>
+    <dd><p>The uniform to update.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SetViewportImplementation_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetViewportImplementation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SetViewportImplementation_osu_Framework_Graphics_Primitives_RectangleI_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SetViewportImplementation(osu.Framework.Graphics.Primitives.RectangleI)">
+  SetViewportImplementation(RectangleI)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L470"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the graphics device with a new viewport rectangle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetViewportImplementation(RectangleI viewport)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>viewport</code> <a class="xref" href="osu.Framework.Graphics.Primitives.RectangleI.html">RectangleI</a></dt>
+    <dd><p>The viewport to use.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_SwapBuffers_" data-uid="osu.Framework.Graphics.Rendering.Renderer.SwapBuffers*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_SwapBuffers" data-uid="osu.Framework.Graphics.Rendering.Renderer.SwapBuffers">
+  SwapBuffers()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Swaps the back buffer with the front buffer to display the new frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SwapBuffers()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_TakeScreenshot_" data-uid="osu.Framework.Graphics.Rendering.Renderer.TakeScreenshot*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_TakeScreenshot" data-uid="osu.Framework.Graphics.Rendering.Renderer.TakeScreenshot">
+  TakeScreenshot()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns an image containing the current content of the backbuffer, i.e. takes a screenshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Image&lt;Rgba32&gt; TakeScreenshot()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Image</span>&lt;<span class="xref">Rgba32</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_UnbindFrameBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.UnbindFrameBuffer*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_UnbindFrameBuffer_osu_Framework_Graphics_Rendering_IFrameBuffer_" data-uid="osu.Framework.Graphics.Rendering.Renderer.UnbindFrameBuffer(osu.Framework.Graphics.Rendering.IFrameBuffer)">
+  UnbindFrameBuffer(IFrameBuffer?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L905"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnbindFrameBuffer(IFrameBuffer? frameBuffer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frameBuffer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IFrameBuffer.html">IFrameBuffer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_UnbindShader_" data-uid="osu.Framework.Graphics.Rendering.Renderer.UnbindShader*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_UnbindShader_osu_Framework_Graphics_Shaders_IShader_" data-uid="osu.Framework.Graphics.Rendering.Renderer.UnbindShader(osu.Framework.Graphics.Shaders.IShader)">
+  UnbindShader(IShader)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L1033"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnbindShader(IShader shader)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shader</code> <a class="xref" href="osu.Framework.Graphics.Shaders.IShader.html">IShader</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_UnbindTexture_" data-uid="osu.Framework.Graphics.Rendering.Renderer.UnbindTexture*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_UnbindTexture_System_Int32_" data-uid="osu.Framework.Graphics.Rendering.Renderer.UnbindTexture(System.Int32)">
+  UnbindTexture(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L863"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unbinds any bound texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnbindTexture(int unit = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>unit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The sampling unit in which the texture is to be unbound.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_WaitUntilIdle_" data-uid="osu.Framework.Graphics.Rendering.Renderer.WaitUntilIdle*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_WaitUntilIdle" data-uid="osu.Framework.Graphics.Rendering.Renderer.WaitUntilIdle">
+  WaitUntilIdle()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Waits until all renderer commands have been fully executed GPU-side, as signaled by the graphics backend.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void WaitUntilIdle()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Rendering_Renderer_WaitUntilIdle_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This is equivalent to a <code>glFinish</code> call.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_Rendering_Renderer_WaitUntilNextFrameReady_" data-uid="osu.Framework.Graphics.Rendering.Renderer.WaitUntilNextFrameReady*"></a>
+
+  <h3 id="osu_Framework_Graphics_Rendering_Renderer_WaitUntilNextFrameReady" data-uid="osu.Framework.Graphics.Rendering.Renderer.WaitUntilNextFrameReady">
+  WaitUntilNextFrameReady()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L348"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void WaitUntilNextFrameReady()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Rendering/Renderer.cs/#L36" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,2060 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput
+  commentId: T:osu.Framework.Input.StateChanges.MidiKeyInput
+  id: MidiKeyInput
+  parent: osu.Framework.Input.StateChanges
+  children:
+  - osu.Framework.Input.StateChanges.MidiKeyInput.#ctor(osu.Framework.Input.MidiKey,System.Byte,System.Boolean)
+  - osu.Framework.Input.StateChanges.MidiKeyInput.#ctor(osu.Framework.Input.States.MidiState,osu.Framework.Input.States.MidiState)
+  - osu.Framework.Input.StateChanges.MidiKeyInput.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  - osu.Framework.Input.StateChanges.MidiKeyInput.GetButtonStates(osu.Framework.Input.States.InputState)
+  - osu.Framework.Input.StateChanges.MidiKeyInput.Velocities
+  langs:
+  - csharp
+  - vb
+  name: MidiKeyInput
+  nameWithType: MidiKeyInput
+  fullName: osu.Framework.Input.StateChanges.MidiKeyInput
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Input/StateChanges/MidiKeyInput.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: MidiKeyInput
+    path: osu.Framework/Input/StateChanges/MidiKeyInput.cs
+    startLine: 12
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input.StateChanges
+  summary: Represents an input from a MIDI device.
+  example: []
+  syntax:
+    content: 'public class MidiKeyInput : ButtonInput<MidiKey>, IInput'
+    content.vb: Public Class MidiKeyInput Inherits ButtonInput(Of MidiKey) Implements IInput
+  inheritance:
+  - System.Object
+  - osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}
+  implements:
+  - osu.Framework.Input.StateChanges.IInput
+  inheritedMembers:
+  - osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.Entries
+  - osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.CreateEvent(osu.Framework.Input.States.InputState,osu.Framework.Input.MidiKey,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.Velocities
+  commentId: F:osu.Framework.Input.StateChanges.MidiKeyInput.Velocities
+  id: Velocities
+  parent: osu.Framework.Input.StateChanges.MidiKeyInput
+  langs:
+  - csharp
+  - vb
+  name: Velocities
+  nameWithType: MidiKeyInput.Velocities
+  fullName: osu.Framework.Input.StateChanges.MidiKeyInput.Velocities
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Input/StateChanges/MidiKeyInput.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Velocities
+    path: osu.Framework/Input/StateChanges/MidiKeyInput.cs
+    startLine: 17
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input.StateChanges
+  summary: A mapping of <xref href="osu.Framework.Input.MidiKey" data-throw-if-not-resolved="false"></xref>s to the velocities they were pressed or released with.
+  example: []
+  syntax:
+    content: public readonly IReadOnlyList<(MidiKey, byte)> Velocities
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.ValueTuple{osu.Framework.Input.MidiKey,System.Byte}}
+    content.vb: Public ReadOnly Velocities As IReadOnlyList(Of (MidiKey, Byte))
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.#ctor(osu.Framework.Input.MidiKey,System.Byte,System.Boolean)
+  commentId: M:osu.Framework.Input.StateChanges.MidiKeyInput.#ctor(osu.Framework.Input.MidiKey,System.Byte,System.Boolean)
+  id: '#ctor(osu.Framework.Input.MidiKey,System.Byte,System.Boolean)'
+  parent: osu.Framework.Input.StateChanges.MidiKeyInput
+  langs:
+  - csharp
+  - vb
+  name: MidiKeyInput(MidiKey, byte, bool)
+  nameWithType: MidiKeyInput.MidiKeyInput(MidiKey, byte, bool)
+  fullName: osu.Framework.Input.StateChanges.MidiKeyInput.MidiKeyInput(osu.Framework.Input.MidiKey, byte, bool)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Input/StateChanges/MidiKeyInput.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Input/StateChanges/MidiKeyInput.cs
+    startLine: 25
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input.StateChanges
+  summary: Creates a <xref href="osu.Framework.Input.StateChanges.MidiKeyInput" data-throw-if-not-resolved="false"></xref> for a single key state.
+  example: []
+  syntax:
+    content: public MidiKeyInput(MidiKey button, byte velocity, bool isPressed)
+    parameters:
+    - id: button
+      type: osu.Framework.Input.MidiKey
+      description: The <xref href="osu.Framework.Input.MidiKey" data-throw-if-not-resolved="false"></xref> whose state changed.
+    - id: velocity
+      type: System.Byte
+      description: The velocity with which with the input was performed.
+    - id: isPressed
+      type: System.Boolean
+      description: Whether <code class="paramref">button</code> was pressed or released.
+    content.vb: Public Sub New(button As MidiKey, velocity As Byte, isPressed As Boolean)
+  overload: osu.Framework.Input.StateChanges.MidiKeyInput.#ctor*
+  nameWithType.vb: MidiKeyInput.New(MidiKey, Byte, Boolean)
+  fullName.vb: osu.Framework.Input.StateChanges.MidiKeyInput.New(osu.Framework.Input.MidiKey, Byte, Boolean)
+  name.vb: New(MidiKey, Byte, Boolean)
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.#ctor(osu.Framework.Input.States.MidiState,osu.Framework.Input.States.MidiState)
+  commentId: M:osu.Framework.Input.StateChanges.MidiKeyInput.#ctor(osu.Framework.Input.States.MidiState,osu.Framework.Input.States.MidiState)
+  id: '#ctor(osu.Framework.Input.States.MidiState,osu.Framework.Input.States.MidiState)'
+  parent: osu.Framework.Input.StateChanges.MidiKeyInput
+  langs:
+  - csharp
+  - vb
+  name: MidiKeyInput(MidiState, MidiState)
+  nameWithType: MidiKeyInput.MidiKeyInput(MidiState, MidiState)
+  fullName: osu.Framework.Input.StateChanges.MidiKeyInput.MidiKeyInput(osu.Framework.Input.States.MidiState, osu.Framework.Input.States.MidiState)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Input/StateChanges/MidiKeyInput.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Input/StateChanges/MidiKeyInput.cs
+    startLine: 41
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input.StateChanges
+  summary: Creates a <xref href="osu.Framework.Input.StateChanges.MidiKeyInput" data-throw-if-not-resolved="false"></xref> from the difference of two <xref href="osu.Framework.Input.States.MidiState" data-throw-if-not-resolved="false"></xref>s.
+  remarks: >-
+    Buttons that are pressed in <code class="paramref">previousState</code> and not pressed in <code class="paramref">currentState</code> will be listed as <xref href="osu.Framework.Input.StateChanges.ButtonStateChangeKind.Released" data-throw-if-not-resolved="false"></xref>.
+
+    Buttons that are not pressed in <code class="paramref">previousState</code> and pressed in <code class="paramref">currentState</code> will be listed as <xref href="osu.Framework.Input.StateChanges.ButtonStateChangeKind.Pressed" data-throw-if-not-resolved="false"></xref>.
+
+    Key velocities from <code class="paramref">currentState</code> always take precedence over velocities from <code class="paramref">previousState</code>.
+  example: []
+  syntax:
+    content: public MidiKeyInput(MidiState currentState, MidiState previousState)
+    parameters:
+    - id: currentState
+      type: osu.Framework.Input.States.MidiState
+      description: The newer <xref href="osu.Framework.Input.States.MidiState" data-throw-if-not-resolved="false"></xref>.
+    - id: previousState
+      type: osu.Framework.Input.States.MidiState
+      description: The older <xref href="osu.Framework.Input.States.MidiState" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(currentState As MidiState, previousState As MidiState)
+  overload: osu.Framework.Input.StateChanges.MidiKeyInput.#ctor*
+  nameWithType.vb: MidiKeyInput.New(MidiState, MidiState)
+  fullName.vb: osu.Framework.Input.StateChanges.MidiKeyInput.New(osu.Framework.Input.States.MidiState, osu.Framework.Input.States.MidiState)
+  name.vb: New(MidiState, MidiState)
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.GetButtonStates(osu.Framework.Input.States.InputState)
+  commentId: M:osu.Framework.Input.StateChanges.MidiKeyInput.GetButtonStates(osu.Framework.Input.States.InputState)
+  id: GetButtonStates(osu.Framework.Input.States.InputState)
+  parent: osu.Framework.Input.StateChanges.MidiKeyInput
+  langs:
+  - csharp
+  - vb
+  name: GetButtonStates(InputState)
+  nameWithType: MidiKeyInput.GetButtonStates(InputState)
+  fullName: osu.Framework.Input.StateChanges.MidiKeyInput.GetButtonStates(osu.Framework.Input.States.InputState)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/StateChanges/MidiKeyInput.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetButtonStates
+    path: osu.Framework/Input/StateChanges/MidiKeyInput.cs
+    startLine: 52
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input.StateChanges
+  summary: Retrieves the <xref href="osu.Framework.Input.States.ButtonStates%601" data-throw-if-not-resolved="false"></xref> from a <xref href="osu.Framework.Input.StateChanges.MidiKeyInput" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: protected override ButtonStates<MidiKey> GetButtonStates(InputState state)
+    parameters:
+    - id: state
+      type: osu.Framework.Input.States.InputState
+    return:
+      type: osu.Framework.Input.States.ButtonStates{osu.Framework.Input.MidiKey}
+    content.vb: Protected Overrides Function GetButtonStates(state As InputState) As ButtonStates(Of MidiKey)
+  overridden: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.GetButtonStates(osu.Framework.Input.States.InputState)
+  overload: osu.Framework.Input.StateChanges.MidiKeyInput.GetButtonStates*
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  commentId: M:osu.Framework.Input.StateChanges.MidiKeyInput.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  id: Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  parent: osu.Framework.Input.StateChanges.MidiKeyInput
+  langs:
+  - csharp
+  - vb
+  name: Apply(InputState, IInputStateChangeHandler)
+  nameWithType: MidiKeyInput.Apply(InputState, IInputStateChangeHandler)
+  fullName: osu.Framework.Input.StateChanges.MidiKeyInput.Apply(osu.Framework.Input.States.InputState, osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/StateChanges/MidiKeyInput.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Apply
+    path: osu.Framework/Input/StateChanges/MidiKeyInput.cs
+    startLine: 54
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input.StateChanges
+  summary: >-
+    Applies input to an <xref href="osu.Framework.Input.States.InputState" data-throw-if-not-resolved="false"></xref>.
+
+    This alters the <xref href="osu.Framework.Input.States.InputState" data-throw-if-not-resolved="false"></xref> and propagates the change to an <xref href="osu.Framework.Input.StateChanges.IInputStateChangeHandler" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public override void Apply(InputState state, IInputStateChangeHandler handler)
+    parameters:
+    - id: state
+      type: osu.Framework.Input.States.InputState
+      description: The <xref href="osu.Framework.Input.States.InputState" data-throw-if-not-resolved="false"></xref> to apply changes to.
+    - id: handler
+      type: osu.Framework.Input.StateChanges.IInputStateChangeHandler
+      description: The <xref href="osu.Framework.Input.StateChanges.IInputStateChangeHandler" data-throw-if-not-resolved="false"></xref> to handle changes to <code class="paramref">state</code>.
+    content.vb: Public Overrides Sub Apply(state As InputState, handler As IInputStateChangeHandler)
+  overridden: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  overload: osu.Framework.Input.StateChanges.MidiKeyInput.Apply*
+references:
+- uid: osu.Framework.Input.StateChanges
+  commentId: N:osu.Framework.Input.StateChanges
+  href: osu.html
+  name: osu.Framework.Input.StateChanges
+  nameWithType: osu.Framework.Input.StateChanges
+  fullName: osu.Framework.Input.StateChanges
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  - name: .
+  - uid: osu.Framework.Input.StateChanges
+    name: StateChanges
+    href: osu.Framework.Input.StateChanges.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  - name: .
+  - uid: osu.Framework.Input.StateChanges
+    name: StateChanges
+    href: osu.Framework.Input.StateChanges.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}
+  commentId: T:osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}
+  parent: osu.Framework.Input.StateChanges
+  definition: osu.Framework.Input.StateChanges.ButtonInput`1
+  href: osu.Framework.Input.StateChanges.ButtonInput-1.html
+  name: ButtonInput<MidiKey>
+  nameWithType: ButtonInput<MidiKey>
+  fullName: osu.Framework.Input.StateChanges.ButtonInput<osu.Framework.Input.MidiKey>
+  nameWithType.vb: ButtonInput(Of MidiKey)
+  fullName.vb: osu.Framework.Input.StateChanges.ButtonInput(Of osu.Framework.Input.MidiKey)
+  name.vb: ButtonInput(Of MidiKey)
+  spec.csharp:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput`1
+    name: ButtonInput
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html
+  - name: <
+  - uid: osu.Framework.Input.MidiKey
+    name: MidiKey
+    href: osu.Framework.Input.MidiKey.html
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput`1
+    name: ButtonInput
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.MidiKey
+    name: MidiKey
+    href: osu.Framework.Input.MidiKey.html
+  - name: )
+- uid: osu.Framework.Input.StateChanges.IInput
+  commentId: T:osu.Framework.Input.StateChanges.IInput
+  parent: osu.Framework.Input.StateChanges
+  href: osu.Framework.Input.StateChanges.IInput.html
+  name: IInput
+  nameWithType: IInput
+  fullName: osu.Framework.Input.StateChanges.IInput
+- uid: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.Entries
+  commentId: F:osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.Entries
+  parent: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}
+  definition: osu.Framework.Input.StateChanges.ButtonInput`1.Entries
+  href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_Entries
+  name: Entries
+  nameWithType: ButtonInput<MidiKey>.Entries
+  fullName: osu.Framework.Input.StateChanges.ButtonInput<osu.Framework.Input.MidiKey>.Entries
+  nameWithType.vb: ButtonInput(Of MidiKey).Entries
+  fullName.vb: osu.Framework.Input.StateChanges.ButtonInput(Of osu.Framework.Input.MidiKey).Entries
+- uid: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.CreateEvent(osu.Framework.Input.States.InputState,osu.Framework.Input.MidiKey,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  commentId: M:osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.CreateEvent(osu.Framework.Input.States.InputState,osu.Framework.Input.MidiKey,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  parent: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}
+  definition: osu.Framework.Input.StateChanges.ButtonInput`1.CreateEvent(osu.Framework.Input.States.InputState,`0,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_CreateEvent_osu_Framework_Input_States_InputState__0_osu_Framework_Input_StateChanges_ButtonStateChangeKind_
+  name: CreateEvent(InputState, MidiKey, ButtonStateChangeKind)
+  nameWithType: ButtonInput<MidiKey>.CreateEvent(InputState, MidiKey, ButtonStateChangeKind)
+  fullName: osu.Framework.Input.StateChanges.ButtonInput<osu.Framework.Input.MidiKey>.CreateEvent(osu.Framework.Input.States.InputState, osu.Framework.Input.MidiKey, osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  nameWithType.vb: ButtonInput(Of MidiKey).CreateEvent(InputState, MidiKey, ButtonStateChangeKind)
+  fullName.vb: osu.Framework.Input.StateChanges.ButtonInput(Of osu.Framework.Input.MidiKey).CreateEvent(osu.Framework.Input.States.InputState, osu.Framework.Input.MidiKey, osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  spec.csharp:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.CreateEvent(osu.Framework.Input.States.InputState,osu.Framework.Input.MidiKey,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+    name: CreateEvent
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_CreateEvent_osu_Framework_Input_States_InputState__0_osu_Framework_Input_StateChanges_ButtonStateChangeKind_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.MidiKey
+    name: MidiKey
+    href: osu.Framework.Input.MidiKey.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.ButtonStateChangeKind
+    name: ButtonStateChangeKind
+    href: osu.Framework.Input.StateChanges.ButtonStateChangeKind.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.CreateEvent(osu.Framework.Input.States.InputState,osu.Framework.Input.MidiKey,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+    name: CreateEvent
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_CreateEvent_osu_Framework_Input_States_InputState__0_osu_Framework_Input_StateChanges_ButtonStateChangeKind_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.MidiKey
+    name: MidiKey
+    href: osu.Framework.Input.MidiKey.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.ButtonStateChangeKind
+    name: ButtonStateChangeKind
+    href: osu.Framework.Input.StateChanges.ButtonStateChangeKind.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<MidiKeyInput>(MidiKeyInput)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<MidiKeyInput>(MidiKeyInput)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Input.StateChanges.MidiKeyInput>(osu.Framework.Input.StateChanges.MidiKeyInput)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of MidiKeyInput)(MidiKeyInput)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Input.StateChanges.MidiKeyInput)(osu.Framework.Input.StateChanges.MidiKeyInput)
+  name.vb: GetLocalisableDescription(Of MidiKeyInput)(MidiKeyInput)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Input.StateChanges.MidiKeyInput)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Input.StateChanges.MidiKeyInput)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<MidiKeyInput>(MidiKeyInput)
+  nameWithType: EnumerableExtensions.Yield<MidiKeyInput>(MidiKeyInput)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Input.StateChanges.MidiKeyInput>(osu.Framework.Input.StateChanges.MidiKeyInput)
+  nameWithType.vb: EnumerableExtensions.Yield(Of MidiKeyInput)(MidiKeyInput)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Input.StateChanges.MidiKeyInput)(osu.Framework.Input.StateChanges.MidiKeyInput)
+  name.vb: Yield(Of MidiKeyInput)(MidiKeyInput)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Input.StateChanges.MidiKeyInput)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Input.StateChanges.MidiKeyInput)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<MidiKeyInput>(MidiKeyInput)
+  nameWithType: ObjectExtensions.AsNonNull<MidiKeyInput>(MidiKeyInput)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Input.StateChanges.MidiKeyInput>(osu.Framework.Input.StateChanges.MidiKeyInput)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of MidiKeyInput)(MidiKeyInput)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Input.StateChanges.MidiKeyInput)(osu.Framework.Input.StateChanges.MidiKeyInput)
+  name.vb: AsNonNull(Of MidiKeyInput)(MidiKeyInput)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Input.StateChanges.MidiKeyInput)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Input.StateChanges.MidiKeyInput)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<MidiKeyInput>(MidiKeyInput)
+  nameWithType: ObjectExtensions.IsNotNull<MidiKeyInput>(MidiKeyInput)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Input.StateChanges.MidiKeyInput>(osu.Framework.Input.StateChanges.MidiKeyInput)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of MidiKeyInput)(MidiKeyInput)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Input.StateChanges.MidiKeyInput)(osu.Framework.Input.StateChanges.MidiKeyInput)
+  name.vb: IsNotNull(Of MidiKeyInput)(MidiKeyInput)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Input.StateChanges.MidiKeyInput)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Input.StateChanges.MidiKeyInput)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<MidiKeyInput>(MidiKeyInput)
+  nameWithType: ObjectExtensions.IsNull<MidiKeyInput>(MidiKeyInput)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Input.StateChanges.MidiKeyInput>(osu.Framework.Input.StateChanges.MidiKeyInput)
+  nameWithType.vb: ObjectExtensions.IsNull(Of MidiKeyInput)(MidiKeyInput)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Input.StateChanges.MidiKeyInput)(osu.Framework.Input.StateChanges.MidiKeyInput)
+  name.vb: IsNull(Of MidiKeyInput)(MidiKeyInput)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Input.StateChanges.MidiKeyInput)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Input.StateChanges.MidiKeyInput)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: )
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<MidiKeyInput, TChild>(MidiKeyInput, TChild)
+  nameWithType: ContainerExtensions.WithChild<MidiKeyInput, TChild>(MidiKeyInput, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Input.StateChanges.MidiKeyInput, TChild>(osu.Framework.Input.StateChanges.MidiKeyInput, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of MidiKeyInput, TChild)(MidiKeyInput, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Input.StateChanges.MidiKeyInput, TChild)(osu.Framework.Input.StateChanges.MidiKeyInput, TChild)
+  name.vb: WithChild(Of MidiKeyInput, TChild)(MidiKeyInput, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Input.StateChanges.MidiKeyInput,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Input.StateChanges.MidiKeyInput,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<MidiKeyInput, TChild>(MidiKeyInput, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<MidiKeyInput, TChild>(MidiKeyInput, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Input.StateChanges.MidiKeyInput, TChild>(osu.Framework.Input.StateChanges.MidiKeyInput, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of MidiKeyInput, TChild)(MidiKeyInput, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Input.StateChanges.MidiKeyInput, TChild)(osu.Framework.Input.StateChanges.MidiKeyInput, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of MidiKeyInput, TChild)(MidiKeyInput, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Input.StateChanges.MidiKeyInput,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Input.StateChanges.MidiKeyInput,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<MidiKeyInput, TChild>(MidiKeyInput, TChild)
+  nameWithType: ContainerExtensions.Wrap<MidiKeyInput, TChild>(MidiKeyInput, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Input.StateChanges.MidiKeyInput, TChild>(osu.Framework.Input.StateChanges.MidiKeyInput, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of MidiKeyInput, TChild)(MidiKeyInput, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Input.StateChanges.MidiKeyInput, TChild)(osu.Framework.Input.StateChanges.MidiKeyInput, TChild)
+  name.vb: Wrap(Of MidiKeyInput, TChild)(MidiKeyInput, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Input.StateChanges.MidiKeyInput,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Input.StateChanges.MidiKeyInput,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.StateChanges.MidiKeyInput
+    name: MidiKeyInput
+    href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Input.StateChanges.ButtonInput`1
+  commentId: T:osu.Framework.Input.StateChanges.ButtonInput`1
+  href: osu.Framework.Input.StateChanges.ButtonInput-1.html
+  name: ButtonInput<TButton>
+  nameWithType: ButtonInput<TButton>
+  fullName: osu.Framework.Input.StateChanges.ButtonInput<TButton>
+  nameWithType.vb: ButtonInput(Of TButton)
+  fullName.vb: osu.Framework.Input.StateChanges.ButtonInput(Of TButton)
+  name.vb: ButtonInput(Of TButton)
+  spec.csharp:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput`1
+    name: ButtonInput
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html
+  - name: <
+  - name: TButton
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput`1
+    name: ButtonInput
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TButton
+  - name: )
+- uid: osu.Framework.Input.StateChanges.ButtonInput`1.Entries
+  commentId: F:osu.Framework.Input.StateChanges.ButtonInput`1.Entries
+  href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_Entries
+  name: Entries
+  nameWithType: ButtonInput<TButton>.Entries
+  fullName: osu.Framework.Input.StateChanges.ButtonInput<TButton>.Entries
+  nameWithType.vb: ButtonInput(Of TButton).Entries
+  fullName.vb: osu.Framework.Input.StateChanges.ButtonInput(Of TButton).Entries
+- uid: osu.Framework.Input.StateChanges.ButtonInput`1.CreateEvent(osu.Framework.Input.States.InputState,`0,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  commentId: M:osu.Framework.Input.StateChanges.ButtonInput`1.CreateEvent(osu.Framework.Input.States.InputState,`0,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_CreateEvent_osu_Framework_Input_States_InputState__0_osu_Framework_Input_StateChanges_ButtonStateChangeKind_
+  name: CreateEvent(InputState, TButton, ButtonStateChangeKind)
+  nameWithType: ButtonInput<TButton>.CreateEvent(InputState, TButton, ButtonStateChangeKind)
+  fullName: osu.Framework.Input.StateChanges.ButtonInput<TButton>.CreateEvent(osu.Framework.Input.States.InputState, TButton, osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  nameWithType.vb: ButtonInput(Of TButton).CreateEvent(InputState, TButton, ButtonStateChangeKind)
+  fullName.vb: osu.Framework.Input.StateChanges.ButtonInput(Of TButton).CreateEvent(osu.Framework.Input.States.InputState, TButton, osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  spec.csharp:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput`1.CreateEvent(osu.Framework.Input.States.InputState,`0,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+    name: CreateEvent
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_CreateEvent_osu_Framework_Input_States_InputState__0_osu_Framework_Input_StateChanges_ButtonStateChangeKind_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - name: TButton
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.ButtonStateChangeKind
+    name: ButtonStateChangeKind
+    href: osu.Framework.Input.StateChanges.ButtonStateChangeKind.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput`1.CreateEvent(osu.Framework.Input.States.InputState,`0,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+    name: CreateEvent
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_CreateEvent_osu_Framework_Input_States_InputState__0_osu_Framework_Input_StateChanges_ButtonStateChangeKind_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - name: TButton
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.ButtonStateChangeKind
+    name: ButtonStateChangeKind
+    href: osu.Framework.Input.StateChanges.ButtonStateChangeKind.html
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Input.MidiKey
+  commentId: T:osu.Framework.Input.MidiKey
+  parent: osu.Framework.Input
+  href: osu.Framework.Input.MidiKey.html
+  name: MidiKey
+  nameWithType: MidiKey
+  fullName: osu.Framework.Input.MidiKey
+- uid: System.Collections.Generic.IReadOnlyList{System.ValueTuple{osu.Framework.Input.MidiKey,System.Byte}}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.ValueTuple{osu.Framework.Input.MidiKey,System.Byte}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<(MidiKey, byte)>
+  nameWithType: IReadOnlyList<(MidiKey, byte)>
+  fullName: System.Collections.Generic.IReadOnlyList<(osu.Framework.Input.MidiKey, byte)>
+  nameWithType.vb: IReadOnlyList(Of (MidiKey, Byte))
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of (osu.Framework.Input.MidiKey, Byte))
+  name.vb: IReadOnlyList(Of (MidiKey, Byte))
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: (
+  - uid: osu.Framework.Input.MidiKey
+    name: MidiKey
+    href: osu.Framework.Input.MidiKey.html
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: osu.Framework.Input.MidiKey
+    name: MidiKey
+    href: osu.Framework.Input.MidiKey.html
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: )
+- uid: osu.Framework.Input
+  commentId: N:osu.Framework.Input
+  href: osu.html
+  name: osu.Framework.Input
+  nameWithType: osu.Framework.Input
+  fullName: osu.Framework.Input
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput
+  commentId: T:osu.Framework.Input.StateChanges.MidiKeyInput
+  href: osu.Framework.Input.StateChanges.MidiKeyInput.html
+  name: MidiKeyInput
+  nameWithType: MidiKeyInput
+  fullName: osu.Framework.Input.StateChanges.MidiKeyInput
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.#ctor*
+  commentId: Overload:osu.Framework.Input.StateChanges.MidiKeyInput.#ctor
+  href: osu.Framework.Input.StateChanges.MidiKeyInput.html#osu_Framework_Input_StateChanges_MidiKeyInput__ctor_osu_Framework_Input_MidiKey_System_Byte_System_Boolean_
+  name: MidiKeyInput
+  nameWithType: MidiKeyInput.MidiKeyInput
+  fullName: osu.Framework.Input.StateChanges.MidiKeyInput.MidiKeyInput
+  nameWithType.vb: MidiKeyInput.New
+  fullName.vb: osu.Framework.Input.StateChanges.MidiKeyInput.New
+  name.vb: New
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Input.States.MidiState
+  commentId: T:osu.Framework.Input.States.MidiState
+  parent: osu.Framework.Input.States
+  href: osu.Framework.Input.States.MidiState.html
+  name: MidiState
+  nameWithType: MidiState
+  fullName: osu.Framework.Input.States.MidiState
+- uid: osu.Framework.Input.StateChanges.ButtonStateChangeKind.Released
+  commentId: F:osu.Framework.Input.StateChanges.ButtonStateChangeKind.Released
+  href: osu.Framework.Input.StateChanges.ButtonStateChangeKind.html#osu_Framework_Input_StateChanges_ButtonStateChangeKind_Released
+  name: Released
+  nameWithType: ButtonStateChangeKind.Released
+  fullName: osu.Framework.Input.StateChanges.ButtonStateChangeKind.Released
+- uid: osu.Framework.Input.StateChanges.ButtonStateChangeKind.Pressed
+  commentId: F:osu.Framework.Input.StateChanges.ButtonStateChangeKind.Pressed
+  href: osu.Framework.Input.StateChanges.ButtonStateChangeKind.html#osu_Framework_Input_StateChanges_ButtonStateChangeKind_Pressed
+  name: Pressed
+  nameWithType: ButtonStateChangeKind.Pressed
+  fullName: osu.Framework.Input.StateChanges.ButtonStateChangeKind.Pressed
+- uid: osu.Framework.Input.States
+  commentId: N:osu.Framework.Input.States
+  href: osu.html
+  name: osu.Framework.Input.States
+  nameWithType: osu.Framework.Input.States
+  fullName: osu.Framework.Input.States
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  - name: .
+  - uid: osu.Framework.Input.States
+    name: States
+    href: osu.Framework.Input.States.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  - name: .
+  - uid: osu.Framework.Input.States
+    name: States
+    href: osu.Framework.Input.States.html
+- uid: osu.Framework.Input.States.ButtonStates`1
+  commentId: T:osu.Framework.Input.States.ButtonStates`1
+  parent: osu.Framework.Input.States
+  href: osu.Framework.Input.States.ButtonStates-1.html
+  name: ButtonStates<TButton>
+  nameWithType: ButtonStates<TButton>
+  fullName: osu.Framework.Input.States.ButtonStates<TButton>
+  nameWithType.vb: ButtonStates(Of TButton)
+  fullName.vb: osu.Framework.Input.States.ButtonStates(Of TButton)
+  name.vb: ButtonStates(Of TButton)
+  spec.csharp:
+  - uid: osu.Framework.Input.States.ButtonStates`1
+    name: ButtonStates
+    href: osu.Framework.Input.States.ButtonStates-1.html
+  - name: <
+  - name: TButton
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Input.States.ButtonStates`1
+    name: ButtonStates
+    href: osu.Framework.Input.States.ButtonStates-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TButton
+  - name: )
+- uid: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.GetButtonStates(osu.Framework.Input.States.InputState)
+  commentId: M:osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.GetButtonStates(osu.Framework.Input.States.InputState)
+  parent: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}
+  definition: osu.Framework.Input.StateChanges.ButtonInput`1.GetButtonStates(osu.Framework.Input.States.InputState)
+  href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_GetButtonStates_osu_Framework_Input_States_InputState_
+  name: GetButtonStates(InputState)
+  nameWithType: ButtonInput<MidiKey>.GetButtonStates(InputState)
+  fullName: osu.Framework.Input.StateChanges.ButtonInput<osu.Framework.Input.MidiKey>.GetButtonStates(osu.Framework.Input.States.InputState)
+  nameWithType.vb: ButtonInput(Of MidiKey).GetButtonStates(InputState)
+  fullName.vb: osu.Framework.Input.StateChanges.ButtonInput(Of osu.Framework.Input.MidiKey).GetButtonStates(osu.Framework.Input.States.InputState)
+  spec.csharp:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.GetButtonStates(osu.Framework.Input.States.InputState)
+    name: GetButtonStates
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_GetButtonStates_osu_Framework_Input_States_InputState_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.GetButtonStates(osu.Framework.Input.States.InputState)
+    name: GetButtonStates
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_GetButtonStates_osu_Framework_Input_States_InputState_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: )
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.GetButtonStates*
+  commentId: Overload:osu.Framework.Input.StateChanges.MidiKeyInput.GetButtonStates
+  href: osu.Framework.Input.StateChanges.MidiKeyInput.html#osu_Framework_Input_StateChanges_MidiKeyInput_GetButtonStates_osu_Framework_Input_States_InputState_
+  name: GetButtonStates
+  nameWithType: MidiKeyInput.GetButtonStates
+  fullName: osu.Framework.Input.StateChanges.MidiKeyInput.GetButtonStates
+- uid: osu.Framework.Input.States.InputState
+  commentId: T:osu.Framework.Input.States.InputState
+  parent: osu.Framework.Input.States
+  href: osu.Framework.Input.States.InputState.html
+  name: InputState
+  nameWithType: InputState
+  fullName: osu.Framework.Input.States.InputState
+- uid: osu.Framework.Input.States.ButtonStates{osu.Framework.Input.MidiKey}
+  commentId: T:osu.Framework.Input.States.ButtonStates{osu.Framework.Input.MidiKey}
+  parent: osu.Framework.Input.States
+  definition: osu.Framework.Input.States.ButtonStates`1
+  href: osu.Framework.Input.States.ButtonStates-1.html
+  name: ButtonStates<MidiKey>
+  nameWithType: ButtonStates<MidiKey>
+  fullName: osu.Framework.Input.States.ButtonStates<osu.Framework.Input.MidiKey>
+  nameWithType.vb: ButtonStates(Of MidiKey)
+  fullName.vb: osu.Framework.Input.States.ButtonStates(Of osu.Framework.Input.MidiKey)
+  name.vb: ButtonStates(Of MidiKey)
+  spec.csharp:
+  - uid: osu.Framework.Input.States.ButtonStates`1
+    name: ButtonStates
+    href: osu.Framework.Input.States.ButtonStates-1.html
+  - name: <
+  - uid: osu.Framework.Input.MidiKey
+    name: MidiKey
+    href: osu.Framework.Input.MidiKey.html
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Input.States.ButtonStates`1
+    name: ButtonStates
+    href: osu.Framework.Input.States.ButtonStates-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.MidiKey
+    name: MidiKey
+    href: osu.Framework.Input.MidiKey.html
+  - name: )
+- uid: osu.Framework.Input.StateChanges.ButtonInput`1.GetButtonStates(osu.Framework.Input.States.InputState)
+  commentId: M:osu.Framework.Input.StateChanges.ButtonInput`1.GetButtonStates(osu.Framework.Input.States.InputState)
+  href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_GetButtonStates_osu_Framework_Input_States_InputState_
+  name: GetButtonStates(InputState)
+  nameWithType: ButtonInput<TButton>.GetButtonStates(InputState)
+  fullName: osu.Framework.Input.StateChanges.ButtonInput<TButton>.GetButtonStates(osu.Framework.Input.States.InputState)
+  nameWithType.vb: ButtonInput(Of TButton).GetButtonStates(InputState)
+  fullName.vb: osu.Framework.Input.StateChanges.ButtonInput(Of TButton).GetButtonStates(osu.Framework.Input.States.InputState)
+  spec.csharp:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput`1.GetButtonStates(osu.Framework.Input.States.InputState)
+    name: GetButtonStates
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_GetButtonStates_osu_Framework_Input_States_InputState_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput`1.GetButtonStates(osu.Framework.Input.States.InputState)
+    name: GetButtonStates
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_GetButtonStates_osu_Framework_Input_States_InputState_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: )
+- uid: osu.Framework.Input.StateChanges.IInputStateChangeHandler
+  commentId: T:osu.Framework.Input.StateChanges.IInputStateChangeHandler
+  parent: osu.Framework.Input.StateChanges
+  href: osu.Framework.Input.StateChanges.IInputStateChangeHandler.html
+  name: IInputStateChangeHandler
+  nameWithType: IInputStateChangeHandler
+  fullName: osu.Framework.Input.StateChanges.IInputStateChangeHandler
+- uid: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  commentId: M:osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  parent: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}
+  definition: osu.Framework.Input.StateChanges.ButtonInput`1.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_Apply_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_IInputStateChangeHandler_
+  name: Apply(InputState, IInputStateChangeHandler)
+  nameWithType: ButtonInput<MidiKey>.Apply(InputState, IInputStateChangeHandler)
+  fullName: osu.Framework.Input.StateChanges.ButtonInput<osu.Framework.Input.MidiKey>.Apply(osu.Framework.Input.States.InputState, osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  nameWithType.vb: ButtonInput(Of MidiKey).Apply(InputState, IInputStateChangeHandler)
+  fullName.vb: osu.Framework.Input.StateChanges.ButtonInput(Of osu.Framework.Input.MidiKey).Apply(osu.Framework.Input.States.InputState, osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  spec.csharp:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+    name: Apply
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_Apply_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_IInputStateChangeHandler_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.IInputStateChangeHandler
+    name: IInputStateChangeHandler
+    href: osu.Framework.Input.StateChanges.IInputStateChangeHandler.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput{osu.Framework.Input.MidiKey}.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+    name: Apply
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_Apply_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_IInputStateChangeHandler_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.IInputStateChangeHandler
+    name: IInputStateChangeHandler
+    href: osu.Framework.Input.StateChanges.IInputStateChangeHandler.html
+  - name: )
+- uid: osu.Framework.Input.StateChanges.MidiKeyInput.Apply*
+  commentId: Overload:osu.Framework.Input.StateChanges.MidiKeyInput.Apply
+  href: osu.Framework.Input.StateChanges.MidiKeyInput.html#osu_Framework_Input_StateChanges_MidiKeyInput_Apply_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_IInputStateChangeHandler_
+  name: Apply
+  nameWithType: MidiKeyInput.Apply
+  fullName: osu.Framework.Input.StateChanges.MidiKeyInput.Apply
+- uid: osu.Framework.Input.StateChanges.ButtonInput`1.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  commentId: M:osu.Framework.Input.StateChanges.ButtonInput`1.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_Apply_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_IInputStateChangeHandler_
+  name: Apply(InputState, IInputStateChangeHandler)
+  nameWithType: ButtonInput<TButton>.Apply(InputState, IInputStateChangeHandler)
+  fullName: osu.Framework.Input.StateChanges.ButtonInput<TButton>.Apply(osu.Framework.Input.States.InputState, osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  nameWithType.vb: ButtonInput(Of TButton).Apply(InputState, IInputStateChangeHandler)
+  fullName.vb: osu.Framework.Input.StateChanges.ButtonInput(Of TButton).Apply(osu.Framework.Input.States.InputState, osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+  spec.csharp:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput`1.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+    name: Apply
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_Apply_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_IInputStateChangeHandler_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.IInputStateChangeHandler
+    name: IInputStateChangeHandler
+    href: osu.Framework.Input.StateChanges.IInputStateChangeHandler.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.StateChanges.ButtonInput`1.Apply(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.IInputStateChangeHandler)
+    name: Apply
+    href: osu.Framework.Input.StateChanges.ButtonInput-1.html#osu_Framework_Input_StateChanges_ButtonInput_1_Apply_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_IInputStateChangeHandler_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.IInputStateChangeHandler
+    name: IInputStateChangeHandler
+    href: osu.Framework.Input.StateChanges.IInputStateChangeHandler.html
+  - name: )

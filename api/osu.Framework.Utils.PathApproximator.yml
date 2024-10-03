@@ -1,0 +1,1121 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Utils.PathApproximator
+  commentId: T:osu.Framework.Utils.PathApproximator
+  id: PathApproximator
+  parent: osu.Framework.Utils
+  children:
+  - osu.Framework.Utils.PathApproximator.BSplineToBezier(System.ReadOnlySpan{osuTK.Vector2},System.Int32)
+  - osu.Framework.Utils.PathApproximator.BSplineToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2},System.Int32)
+  - osu.Framework.Utils.PathApproximator.BezierToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  - osu.Framework.Utils.PathApproximator.CatmullToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  - osu.Framework.Utils.PathApproximator.CircularArcBoundingBox(System.ReadOnlySpan{osuTK.Vector2})
+  - osu.Framework.Utils.PathApproximator.CircularArcToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  - osu.Framework.Utils.PathApproximator.LagrangePolynomialToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  - osu.Framework.Utils.PathApproximator.LinearToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  - osu.Framework.Utils.PathApproximator.PiecewiseLinearToBSpline(System.ReadOnlySpan{osuTK.Vector2},System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Collections.Generic.List{osuTK.Vector2},System.Single[0:,0:])
+  - osu.Framework.Utils.PathApproximator.PiecewiseLinearToBezier(System.ReadOnlySpan{osuTK.Vector2},System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Collections.Generic.List{osuTK.Vector2},System.Single[0:,0:])
+  langs:
+  - csharp
+  - vb
+  name: PathApproximator
+  nameWithType: PathApproximator
+  fullName: osu.Framework.Utils.PathApproximator
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Utils/PathApproximator.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: PathApproximator
+    path: osu.Framework/Utils/PathApproximator.cs
+    startLine: 15
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Helper methods to approximate a path by interpolating a sequence of control points.
+  example: []
+  syntax:
+    content: public static class PathApproximator
+    content.vb: Public Module PathApproximator
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: osu.Framework.Utils.PathApproximator.BezierToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  commentId: M:osu.Framework.Utils.PathApproximator.BezierToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  id: BezierToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  parent: osu.Framework.Utils.PathApproximator
+  langs:
+  - csharp
+  - vb
+  name: BezierToPiecewiseLinear(ReadOnlySpan<Vector2>)
+  nameWithType: PathApproximator.BezierToPiecewiseLinear(ReadOnlySpan<Vector2>)
+  fullName: osu.Framework.Utils.PathApproximator.BezierToPiecewiseLinear(System.ReadOnlySpan<osuTK.Vector2>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/PathApproximator.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: BezierToPiecewiseLinear
+    path: osu.Framework/Utils/PathApproximator.cs
+    startLine: 32
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: >-
+    Creates a piecewise-linear approximation of a bezier curve, by adaptively repeatedly subdividing
+
+    the control points until their approximation error vanishes below a given threshold.
+  example: []
+  syntax:
+    content: public static List<Vector2> BezierToPiecewiseLinear(ReadOnlySpan<Vector2> controlPoints)
+    parameters:
+    - id: controlPoints
+      type: System.ReadOnlySpan{osuTK.Vector2}
+      description: The control points.
+    return:
+      type: System.Collections.Generic.List{osuTK.Vector2}
+      description: A list of vectors representing the piecewise-linear approximation.
+    content.vb: Public Shared Function BezierToPiecewiseLinear(controlPoints As ReadOnlySpan(Of Vector2)) As List(Of Vector2)
+  overload: osu.Framework.Utils.PathApproximator.BezierToPiecewiseLinear*
+  nameWithType.vb: PathApproximator.BezierToPiecewiseLinear(ReadOnlySpan(Of Vector2))
+  fullName.vb: osu.Framework.Utils.PathApproximator.BezierToPiecewiseLinear(System.ReadOnlySpan(Of osuTK.Vector2))
+  name.vb: BezierToPiecewiseLinear(ReadOnlySpan(Of Vector2))
+- uid: osu.Framework.Utils.PathApproximator.BSplineToBezier(System.ReadOnlySpan{osuTK.Vector2},System.Int32)
+  commentId: M:osu.Framework.Utils.PathApproximator.BSplineToBezier(System.ReadOnlySpan{osuTK.Vector2},System.Int32)
+  id: BSplineToBezier(System.ReadOnlySpan{osuTK.Vector2},System.Int32)
+  parent: osu.Framework.Utils.PathApproximator
+  langs:
+  - csharp
+  - vb
+  name: BSplineToBezier(ReadOnlySpan<Vector2>, int)
+  nameWithType: PathApproximator.BSplineToBezier(ReadOnlySpan<Vector2>, int)
+  fullName: osu.Framework.Utils.PathApproximator.BSplineToBezier(System.ReadOnlySpan<osuTK.Vector2>, int)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/PathApproximator.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: BSplineToBezier
+    path: osu.Framework/Utils/PathApproximator.cs
+    startLine: 49
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: >-
+    Converts a B-spline with polynomial order <code class="paramref">degree</code> to a series of Bezier control points
+
+    via Boehm's algorithm.
+  remarks: >-
+    Does nothing if <code class="paramref">controlPoints</code> has zero points or one point.
+
+    Algorithm unsuitable for large values of <code class="paramref">degree</code> with many knots.
+  example: []
+  syntax:
+    content: public static Vector2[] BSplineToBezier(ReadOnlySpan<Vector2> controlPoints, int degree)
+    parameters:
+    - id: controlPoints
+      type: System.ReadOnlySpan{osuTK.Vector2}
+      description: The control points.
+    - id: degree
+      type: System.Int32
+      description: The polynomial order.
+    return:
+      type: osuTK.Vector2[]
+      description: An array of vectors containing control point positions for the resulting Bezier curve.
+    content.vb: Public Shared Function BSplineToBezier(controlPoints As ReadOnlySpan(Of Vector2), degree As Integer) As Vector2()
+  overload: osu.Framework.Utils.PathApproximator.BSplineToBezier*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: <code class="paramref">degree</code> was less than 1.
+  nameWithType.vb: PathApproximator.BSplineToBezier(ReadOnlySpan(Of Vector2), Integer)
+  fullName.vb: osu.Framework.Utils.PathApproximator.BSplineToBezier(System.ReadOnlySpan(Of osuTK.Vector2), Integer)
+  name.vb: BSplineToBezier(ReadOnlySpan(Of Vector2), Integer)
+- uid: osu.Framework.Utils.PathApproximator.BSplineToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2},System.Int32)
+  commentId: M:osu.Framework.Utils.PathApproximator.BSplineToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2},System.Int32)
+  id: BSplineToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2},System.Int32)
+  parent: osu.Framework.Utils.PathApproximator
+  langs:
+  - csharp
+  - vb
+  name: BSplineToPiecewiseLinear(ReadOnlySpan<Vector2>, int)
+  nameWithType: PathApproximator.BSplineToPiecewiseLinear(ReadOnlySpan<Vector2>, int)
+  fullName: osu.Framework.Utils.PathApproximator.BSplineToPiecewiseLinear(System.ReadOnlySpan<osuTK.Vector2>, int)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/PathApproximator.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: BSplineToPiecewiseLinear
+    path: osu.Framework/Utils/PathApproximator.cs
+    startLine: 78
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: >-
+    Creates a piecewise-linear approximation of a clamped uniform B-spline with polynomial order <code class="paramref">degree</code>,
+
+    by dividing it into a series of bezier control points at its knots, then adaptively repeatedly
+
+    subdividing those until their approximation error vanishes below a given threshold.
+  remarks: >-
+    Does nothing if <code class="paramref">controlPoints</code> has zero points or one point.
+
+    Generalises to bezier approximation functionality when <code class="paramref">degree</code> is too large to create knots.
+
+    Algorithm unsuitable for large values of <code class="paramref">degree</code> with many knots.
+  example: []
+  syntax:
+    content: public static List<Vector2> BSplineToPiecewiseLinear(ReadOnlySpan<Vector2> controlPoints, int degree)
+    parameters:
+    - id: controlPoints
+      type: System.ReadOnlySpan{osuTK.Vector2}
+      description: The control points.
+    - id: degree
+      type: System.Int32
+      description: The polynomial order.
+    return:
+      type: System.Collections.Generic.List{osuTK.Vector2}
+      description: A list of vectors representing the piecewise-linear approximation.
+    content.vb: Public Shared Function BSplineToPiecewiseLinear(controlPoints As ReadOnlySpan(Of Vector2), degree As Integer) As List(Of Vector2)
+  overload: osu.Framework.Utils.PathApproximator.BSplineToPiecewiseLinear*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: <code class="paramref">degree</code> was less than 1.
+  nameWithType.vb: PathApproximator.BSplineToPiecewiseLinear(ReadOnlySpan(Of Vector2), Integer)
+  fullName.vb: osu.Framework.Utils.PathApproximator.BSplineToPiecewiseLinear(System.ReadOnlySpan(Of osuTK.Vector2), Integer)
+  name.vb: BSplineToPiecewiseLinear(ReadOnlySpan(Of Vector2), Integer)
+- uid: osu.Framework.Utils.PathApproximator.CatmullToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  commentId: M:osu.Framework.Utils.PathApproximator.CatmullToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  id: CatmullToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  parent: osu.Framework.Utils.PathApproximator
+  langs:
+  - csharp
+  - vb
+  name: CatmullToPiecewiseLinear(ReadOnlySpan<Vector2>)
+  nameWithType: PathApproximator.CatmullToPiecewiseLinear(ReadOnlySpan<Vector2>)
+  fullName: osu.Framework.Utils.PathApproximator.CatmullToPiecewiseLinear(System.ReadOnlySpan<osuTK.Vector2>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/PathApproximator.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CatmullToPiecewiseLinear
+    path: osu.Framework/Utils/PathApproximator.cs
+    startLine: 149
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Creates a piecewise-linear approximation of a Catmull-Rom spline.
+  example: []
+  syntax:
+    content: public static List<Vector2> CatmullToPiecewiseLinear(ReadOnlySpan<Vector2> controlPoints)
+    parameters:
+    - id: controlPoints
+      type: System.ReadOnlySpan{osuTK.Vector2}
+    return:
+      type: System.Collections.Generic.List{osuTK.Vector2}
+      description: A list of vectors representing the piecewise-linear approximation.
+    content.vb: Public Shared Function CatmullToPiecewiseLinear(controlPoints As ReadOnlySpan(Of Vector2)) As List(Of Vector2)
+  overload: osu.Framework.Utils.PathApproximator.CatmullToPiecewiseLinear*
+  nameWithType.vb: PathApproximator.CatmullToPiecewiseLinear(ReadOnlySpan(Of Vector2))
+  fullName.vb: osu.Framework.Utils.PathApproximator.CatmullToPiecewiseLinear(System.ReadOnlySpan(Of osuTK.Vector2))
+  name.vb: CatmullToPiecewiseLinear(ReadOnlySpan(Of Vector2))
+- uid: osu.Framework.Utils.PathApproximator.CircularArcToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  commentId: M:osu.Framework.Utils.PathApproximator.CircularArcToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  id: CircularArcToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  parent: osu.Framework.Utils.PathApproximator
+  langs:
+  - csharp
+  - vb
+  name: CircularArcToPiecewiseLinear(ReadOnlySpan<Vector2>)
+  nameWithType: PathApproximator.CircularArcToPiecewiseLinear(ReadOnlySpan<Vector2>)
+  fullName: osu.Framework.Utils.PathApproximator.CircularArcToPiecewiseLinear(System.ReadOnlySpan<osuTK.Vector2>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/PathApproximator.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CircularArcToPiecewiseLinear
+    path: osu.Framework/Utils/PathApproximator.cs
+    startLine: 174
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Creates a piecewise-linear approximation of a circular arc curve.
+  example: []
+  syntax:
+    content: public static List<Vector2> CircularArcToPiecewiseLinear(ReadOnlySpan<Vector2> controlPoints)
+    parameters:
+    - id: controlPoints
+      type: System.ReadOnlySpan{osuTK.Vector2}
+    return:
+      type: System.Collections.Generic.List{osuTK.Vector2}
+      description: A list of vectors representing the piecewise-linear approximation.
+    content.vb: Public Shared Function CircularArcToPiecewiseLinear(controlPoints As ReadOnlySpan(Of Vector2)) As List(Of Vector2)
+  overload: osu.Framework.Utils.PathApproximator.CircularArcToPiecewiseLinear*
+  nameWithType.vb: PathApproximator.CircularArcToPiecewiseLinear(ReadOnlySpan(Of Vector2))
+  fullName.vb: osu.Framework.Utils.PathApproximator.CircularArcToPiecewiseLinear(System.ReadOnlySpan(Of osuTK.Vector2))
+  name.vb: CircularArcToPiecewiseLinear(ReadOnlySpan(Of Vector2))
+- uid: osu.Framework.Utils.PathApproximator.CircularArcBoundingBox(System.ReadOnlySpan{osuTK.Vector2})
+  commentId: M:osu.Framework.Utils.PathApproximator.CircularArcBoundingBox(System.ReadOnlySpan{osuTK.Vector2})
+  id: CircularArcBoundingBox(System.ReadOnlySpan{osuTK.Vector2})
+  parent: osu.Framework.Utils.PathApproximator
+  langs:
+  - csharp
+  - vb
+  name: CircularArcBoundingBox(ReadOnlySpan<Vector2>)
+  nameWithType: PathApproximator.CircularArcBoundingBox(ReadOnlySpan<Vector2>)
+  fullName: osu.Framework.Utils.PathApproximator.CircularArcBoundingBox(System.ReadOnlySpan<osuTK.Vector2>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/PathApproximator.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CircularArcBoundingBox
+    path: osu.Framework/Utils/PathApproximator.cs
+    startLine: 205
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Computes the bounding box of a circular arc.
+  example: []
+  syntax:
+    content: public static RectangleF CircularArcBoundingBox(ReadOnlySpan<Vector2> controlPoints)
+    parameters:
+    - id: controlPoints
+      type: System.ReadOnlySpan{osuTK.Vector2}
+      description: Three distinct points on the arc.
+    return:
+      type: osu.Framework.Graphics.Primitives.RectangleF
+      description: The rectangle inscribing the circular arc.
+    content.vb: Public Shared Function CircularArcBoundingBox(controlPoints As ReadOnlySpan(Of Vector2)) As RectangleF
+  overload: osu.Framework.Utils.PathApproximator.CircularArcBoundingBox*
+  nameWithType.vb: PathApproximator.CircularArcBoundingBox(ReadOnlySpan(Of Vector2))
+  fullName.vb: osu.Framework.Utils.PathApproximator.CircularArcBoundingBox(System.ReadOnlySpan(Of osuTK.Vector2))
+  name.vb: CircularArcBoundingBox(ReadOnlySpan(Of Vector2))
+- uid: osu.Framework.Utils.PathApproximator.LinearToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  commentId: M:osu.Framework.Utils.PathApproximator.LinearToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  id: LinearToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  parent: osu.Framework.Utils.PathApproximator
+  langs:
+  - csharp
+  - vb
+  name: LinearToPiecewiseLinear(ReadOnlySpan<Vector2>)
+  nameWithType: PathApproximator.LinearToPiecewiseLinear(ReadOnlySpan<Vector2>)
+  fullName: osu.Framework.Utils.PathApproximator.LinearToPiecewiseLinear(System.ReadOnlySpan<osuTK.Vector2>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/PathApproximator.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: LinearToPiecewiseLinear
+    path: osu.Framework/Utils/PathApproximator.cs
+    startLine: 254
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: >-
+    Creates a piecewise-linear approximation of a linear curve.
+
+    Basically, returns the input.
+  example: []
+  syntax:
+    content: public static List<Vector2> LinearToPiecewiseLinear(ReadOnlySpan<Vector2> controlPoints)
+    parameters:
+    - id: controlPoints
+      type: System.ReadOnlySpan{osuTK.Vector2}
+    return:
+      type: System.Collections.Generic.List{osuTK.Vector2}
+      description: A list of vectors representing the piecewise-linear approximation.
+    content.vb: Public Shared Function LinearToPiecewiseLinear(controlPoints As ReadOnlySpan(Of Vector2)) As List(Of Vector2)
+  overload: osu.Framework.Utils.PathApproximator.LinearToPiecewiseLinear*
+  nameWithType.vb: PathApproximator.LinearToPiecewiseLinear(ReadOnlySpan(Of Vector2))
+  fullName.vb: osu.Framework.Utils.PathApproximator.LinearToPiecewiseLinear(System.ReadOnlySpan(Of osuTK.Vector2))
+  name.vb: LinearToPiecewiseLinear(ReadOnlySpan(Of Vector2))
+- uid: osu.Framework.Utils.PathApproximator.LagrangePolynomialToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  commentId: M:osu.Framework.Utils.PathApproximator.LagrangePolynomialToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  id: LagrangePolynomialToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})
+  parent: osu.Framework.Utils.PathApproximator
+  langs:
+  - csharp
+  - vb
+  name: LagrangePolynomialToPiecewiseLinear(ReadOnlySpan<Vector2>)
+  nameWithType: PathApproximator.LagrangePolynomialToPiecewiseLinear(ReadOnlySpan<Vector2>)
+  fullName: osu.Framework.Utils.PathApproximator.LagrangePolynomialToPiecewiseLinear(System.ReadOnlySpan<osuTK.Vector2>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/PathApproximator.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: LagrangePolynomialToPiecewiseLinear
+    path: osu.Framework/Utils/PathApproximator.cs
+    startLine: 268
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Creates a piecewise-linear approximation of a lagrange polynomial.
+  example: []
+  syntax:
+    content: public static List<Vector2> LagrangePolynomialToPiecewiseLinear(ReadOnlySpan<Vector2> controlPoints)
+    parameters:
+    - id: controlPoints
+      type: System.ReadOnlySpan{osuTK.Vector2}
+    return:
+      type: System.Collections.Generic.List{osuTK.Vector2}
+      description: A list of vectors representing the piecewise-linear approximation.
+    content.vb: Public Shared Function LagrangePolynomialToPiecewiseLinear(controlPoints As ReadOnlySpan(Of Vector2)) As List(Of Vector2)
+  overload: osu.Framework.Utils.PathApproximator.LagrangePolynomialToPiecewiseLinear*
+  nameWithType.vb: PathApproximator.LagrangePolynomialToPiecewiseLinear(ReadOnlySpan(Of Vector2))
+  fullName.vb: osu.Framework.Utils.PathApproximator.LagrangePolynomialToPiecewiseLinear(System.ReadOnlySpan(Of osuTK.Vector2))
+  name.vb: LagrangePolynomialToPiecewiseLinear(ReadOnlySpan(Of Vector2))
+- uid: osu.Framework.Utils.PathApproximator.PiecewiseLinearToBezier(System.ReadOnlySpan{osuTK.Vector2},System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Collections.Generic.List{osuTK.Vector2},System.Single[0:,0:])
+  commentId: M:osu.Framework.Utils.PathApproximator.PiecewiseLinearToBezier(System.ReadOnlySpan{osuTK.Vector2},System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Collections.Generic.List{osuTK.Vector2},System.Single[0:,0:])
+  id: PiecewiseLinearToBezier(System.ReadOnlySpan{osuTK.Vector2},System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Collections.Generic.List{osuTK.Vector2},System.Single[0:,0:])
+  parent: osu.Framework.Utils.PathApproximator
+  langs:
+  - csharp
+  - vb
+  name: PiecewiseLinearToBezier(ReadOnlySpan<Vector2>, int, int, int, float, float, float, List<Vector2>?, float[,]?)
+  nameWithType: PathApproximator.PiecewiseLinearToBezier(ReadOnlySpan<Vector2>, int, int, int, float, float, float, List<Vector2>?, float[,]?)
+  fullName: osu.Framework.Utils.PathApproximator.PiecewiseLinearToBezier(System.ReadOnlySpan<osuTK.Vector2>, int, int, int, float, float, float, System.Collections.Generic.List<osuTK.Vector2>?, float[,]?)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/PathApproximator.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: PiecewiseLinearToBezier
+    path: osu.Framework/Utils/PathApproximator.cs
+    startLine: 311
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Creates a bezier curve approximation from a piecewise-linear path.
+  example: []
+  syntax:
+    content: public static List<Vector2> PiecewiseLinearToBezier(ReadOnlySpan<Vector2> inputPath, int numControlPoints, int numTestPoints = 100, int maxIterations = 100, float learningRate = 8, float b1 = 0.8, float b2 = 0.99, List<Vector2>? initialControlPoints = null, float[,]? learnableMask = null)
+    parameters:
+    - id: inputPath
+      type: System.ReadOnlySpan{osuTK.Vector2}
+      description: The piecewise-linear path to approximate.
+    - id: numControlPoints
+      type: System.Int32
+      description: The number of control points to use in the bezier approximation.
+    - id: numTestPoints
+      type: System.Int32
+      description: The number of points to evaluate the bezier path at for optimization, basically a resolution.
+    - id: maxIterations
+      type: System.Int32
+      description: The number of optimization steps.
+    - id: learningRate
+      type: System.Single
+      description: The rate of optimization. Larger values converge faster but can be unstable.
+    - id: b1
+      type: System.Single
+      description: The B1 parameter for the Adam optimizer. Between 0 and 1.
+    - id: b2
+      type: System.Single
+      description: The B2 parameter for the Adam optimizer. Between 0 and 1.
+    - id: initialControlPoints
+      type: System.Collections.Generic.List{osuTK.Vector2}
+      description: The initial bezier control points to use before optimization. The length of this list should be equal to <code class="paramref">numControlPoints</code>.
+    - id: learnableMask
+      type: System.Single[,]
+      description: Mask determining which control point positions are fixed and cannot be changed by the optimiser.
+    return:
+      type: System.Collections.Generic.List{osuTK.Vector2}
+      description: A List of vectors representing the bezier control points.
+    content.vb: Public Shared Function PiecewiseLinearToBezier(inputPath As ReadOnlySpan(Of Vector2), numControlPoints As Integer, numTestPoints As Integer = 100, maxIterations As Integer = 100, learningRate As Single = 8, b1 As Single = 0.8, b2 As Single = 0.99, initialControlPoints As List(Of Vector2) = Nothing, learnableMask As Single(,) = Nothing) As List(Of Vector2)
+  overload: osu.Framework.Utils.PathApproximator.PiecewiseLinearToBezier*
+  nameWithType.vb: PathApproximator.PiecewiseLinearToBezier(ReadOnlySpan(Of Vector2), Integer, Integer, Integer, Single, Single, Single, List(Of Vector2), Single(,))
+  fullName.vb: osu.Framework.Utils.PathApproximator.PiecewiseLinearToBezier(System.ReadOnlySpan(Of osuTK.Vector2), Integer, Integer, Integer, Single, Single, Single, System.Collections.Generic.List(Of osuTK.Vector2), Single(,))
+  name.vb: PiecewiseLinearToBezier(ReadOnlySpan(Of Vector2), Integer, Integer, Integer, Single, Single, Single, List(Of Vector2), Single(,))
+- uid: osu.Framework.Utils.PathApproximator.PiecewiseLinearToBSpline(System.ReadOnlySpan{osuTK.Vector2},System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Collections.Generic.List{osuTK.Vector2},System.Single[0:,0:])
+  commentId: M:osu.Framework.Utils.PathApproximator.PiecewiseLinearToBSpline(System.ReadOnlySpan{osuTK.Vector2},System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Collections.Generic.List{osuTK.Vector2},System.Single[0:,0:])
+  id: PiecewiseLinearToBSpline(System.ReadOnlySpan{osuTK.Vector2},System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Collections.Generic.List{osuTK.Vector2},System.Single[0:,0:])
+  parent: osu.Framework.Utils.PathApproximator
+  langs:
+  - csharp
+  - vb
+  name: PiecewiseLinearToBSpline(ReadOnlySpan<Vector2>, int, int, int, int, float, float, float, List<Vector2>?, float[,]?)
+  nameWithType: PathApproximator.PiecewiseLinearToBSpline(ReadOnlySpan<Vector2>, int, int, int, int, float, float, float, List<Vector2>?, float[,]?)
+  fullName: osu.Framework.Utils.PathApproximator.PiecewiseLinearToBSpline(System.ReadOnlySpan<osuTK.Vector2>, int, int, int, int, float, float, float, System.Collections.Generic.List<osuTK.Vector2>?, float[,]?)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/PathApproximator.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: PiecewiseLinearToBSpline
+    path: osu.Framework/Utils/PathApproximator.cs
+    startLine: 340
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Creates a B-spline approximation from a piecewise-linear path.
+  example: []
+  syntax:
+    content: public static List<Vector2> PiecewiseLinearToBSpline(ReadOnlySpan<Vector2> inputPath, int numControlPoints, int degree, int numTestPoints = 100, int maxIterations = 100, float learningRate = 8, float b1 = 0.8, float b2 = 0.99, List<Vector2>? initialControlPoints = null, float[,]? learnableMask = null)
+    parameters:
+    - id: inputPath
+      type: System.ReadOnlySpan{osuTK.Vector2}
+      description: The piecewise-linear path to approximate.
+    - id: numControlPoints
+      type: System.Int32
+      description: The number of control points to use in the B-spline approximation.
+    - id: degree
+      type: System.Int32
+      description: The polynomial order.
+    - id: numTestPoints
+      type: System.Int32
+      description: The number of points to evaluate the B-spline path at for optimization, basically a resolution.
+    - id: maxIterations
+      type: System.Int32
+      description: The number of optimization steps.
+    - id: learningRate
+      type: System.Single
+      description: The rate of optimization. Larger values converge faster but can be unstable.
+    - id: b1
+      type: System.Single
+      description: The B1 parameter for the Adam optimizer. Between 0 and 1.
+    - id: b2
+      type: System.Single
+      description: The B2 parameter for the Adam optimizer. Between 0 and 1.
+    - id: initialControlPoints
+      type: System.Collections.Generic.List{osuTK.Vector2}
+      description: The initial B-spline control points to use before optimization. The length of this list should be equal to <code class="paramref">numControlPoints</code>.
+    - id: learnableMask
+      type: System.Single[,]
+      description: Mask determining which control point positions are fixed and cannot be changed by the optimiser.
+    return:
+      type: System.Collections.Generic.List{osuTK.Vector2}
+      description: A List of vectors representing the B-spline control points.
+    content.vb: Public Shared Function PiecewiseLinearToBSpline(inputPath As ReadOnlySpan(Of Vector2), numControlPoints As Integer, degree As Integer, numTestPoints As Integer = 100, maxIterations As Integer = 100, learningRate As Single = 8, b1 As Single = 0.8, b2 As Single = 0.99, initialControlPoints As List(Of Vector2) = Nothing, learnableMask As Single(,) = Nothing) As List(Of Vector2)
+  overload: osu.Framework.Utils.PathApproximator.PiecewiseLinearToBSpline*
+  nameWithType.vb: PathApproximator.PiecewiseLinearToBSpline(ReadOnlySpan(Of Vector2), Integer, Integer, Integer, Integer, Single, Single, Single, List(Of Vector2), Single(,))
+  fullName.vb: osu.Framework.Utils.PathApproximator.PiecewiseLinearToBSpline(System.ReadOnlySpan(Of osuTK.Vector2), Integer, Integer, Integer, Integer, Single, Single, Single, System.Collections.Generic.List(Of osuTK.Vector2), Single(,))
+  name.vb: PiecewiseLinearToBSpline(ReadOnlySpan(Of Vector2), Integer, Integer, Integer, Integer, Single, Single, Single, List(Of Vector2), Single(,))
+references:
+- uid: osu.Framework.Utils
+  commentId: N:osu.Framework.Utils
+  href: osu.html
+  name: osu.Framework.Utils
+  nameWithType: osu.Framework.Utils
+  fullName: osu.Framework.Utils
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Utils
+    name: Utils
+    href: osu.Framework.Utils.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Utils
+    name: Utils
+    href: osu.Framework.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Utils.PathApproximator.BezierToPiecewiseLinear*
+  commentId: Overload:osu.Framework.Utils.PathApproximator.BezierToPiecewiseLinear
+  href: osu.Framework.Utils.PathApproximator.html#osu_Framework_Utils_PathApproximator_BezierToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__
+  name: BezierToPiecewiseLinear
+  nameWithType: PathApproximator.BezierToPiecewiseLinear
+  fullName: osu.Framework.Utils.PathApproximator.BezierToPiecewiseLinear
+- uid: System.ReadOnlySpan{osuTK.Vector2}
+  commentId: T:System.ReadOnlySpan{osuTK.Vector2}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<Vector2>
+  nameWithType: ReadOnlySpan<Vector2>
+  fullName: System.ReadOnlySpan<osuTK.Vector2>
+  nameWithType.vb: ReadOnlySpan(Of Vector2)
+  fullName.vb: System.ReadOnlySpan(Of osuTK.Vector2)
+  name.vb: ReadOnlySpan(Of Vector2)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List{osuTK.Vector2}
+  commentId: T:System.Collections.Generic.List{osuTK.Vector2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Vector2>
+  nameWithType: List<Vector2>
+  fullName: System.Collections.Generic.List<osuTK.Vector2>
+  nameWithType.vb: List(Of Vector2)
+  fullName.vb: System.Collections.Generic.List(Of osuTK.Vector2)
+  name.vb: List(Of Vector2)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: osu.Framework.Utils.PathApproximator.BSplineToBezier*
+  commentId: Overload:osu.Framework.Utils.PathApproximator.BSplineToBezier
+  href: osu.Framework.Utils.PathApproximator.html#osu_Framework_Utils_PathApproximator_BSplineToBezier_System_ReadOnlySpan_osuTK_Vector2__System_Int32_
+  name: BSplineToBezier
+  nameWithType: PathApproximator.BSplineToBezier
+  fullName: osu.Framework.Utils.PathApproximator.BSplineToBezier
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: osuTK.Vector2[]
+  isExternal: true
+  name: Vector2[]
+  nameWithType: Vector2[]
+  fullName: osuTK.Vector2[]
+  nameWithType.vb: Vector2()
+  fullName.vb: osuTK.Vector2()
+  name.vb: Vector2()
+  spec.csharp:
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: (
+  - name: )
+- uid: osu.Framework.Utils.PathApproximator.BSplineToPiecewiseLinear*
+  commentId: Overload:osu.Framework.Utils.PathApproximator.BSplineToPiecewiseLinear
+  href: osu.Framework.Utils.PathApproximator.html#osu_Framework_Utils_PathApproximator_BSplineToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__System_Int32_
+  name: BSplineToPiecewiseLinear
+  nameWithType: PathApproximator.BSplineToPiecewiseLinear
+  fullName: osu.Framework.Utils.PathApproximator.BSplineToPiecewiseLinear
+- uid: osu.Framework.Utils.PathApproximator.CatmullToPiecewiseLinear*
+  commentId: Overload:osu.Framework.Utils.PathApproximator.CatmullToPiecewiseLinear
+  href: osu.Framework.Utils.PathApproximator.html#osu_Framework_Utils_PathApproximator_CatmullToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__
+  name: CatmullToPiecewiseLinear
+  nameWithType: PathApproximator.CatmullToPiecewiseLinear
+  fullName: osu.Framework.Utils.PathApproximator.CatmullToPiecewiseLinear
+- uid: osu.Framework.Utils.PathApproximator.CircularArcToPiecewiseLinear*
+  commentId: Overload:osu.Framework.Utils.PathApproximator.CircularArcToPiecewiseLinear
+  href: osu.Framework.Utils.PathApproximator.html#osu_Framework_Utils_PathApproximator_CircularArcToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__
+  name: CircularArcToPiecewiseLinear
+  nameWithType: PathApproximator.CircularArcToPiecewiseLinear
+  fullName: osu.Framework.Utils.PathApproximator.CircularArcToPiecewiseLinear
+- uid: osu.Framework.Utils.PathApproximator.CircularArcBoundingBox*
+  commentId: Overload:osu.Framework.Utils.PathApproximator.CircularArcBoundingBox
+  href: osu.Framework.Utils.PathApproximator.html#osu_Framework_Utils_PathApproximator_CircularArcBoundingBox_System_ReadOnlySpan_osuTK_Vector2__
+  name: CircularArcBoundingBox
+  nameWithType: PathApproximator.CircularArcBoundingBox
+  fullName: osu.Framework.Utils.PathApproximator.CircularArcBoundingBox
+- uid: osu.Framework.Graphics.Primitives.RectangleF
+  commentId: T:osu.Framework.Graphics.Primitives.RectangleF
+  parent: osu.Framework.Graphics.Primitives
+  href: osu.Framework.Graphics.Primitives.RectangleF.html
+  name: RectangleF
+  nameWithType: RectangleF
+  fullName: osu.Framework.Graphics.Primitives.RectangleF
+- uid: osu.Framework.Graphics.Primitives
+  commentId: N:osu.Framework.Graphics.Primitives
+  href: osu.html
+  name: osu.Framework.Graphics.Primitives
+  nameWithType: osu.Framework.Graphics.Primitives
+  fullName: osu.Framework.Graphics.Primitives
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Primitives
+    name: Primitives
+    href: osu.Framework.Graphics.Primitives.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Primitives
+    name: Primitives
+    href: osu.Framework.Graphics.Primitives.html
+- uid: osu.Framework.Utils.PathApproximator.LinearToPiecewiseLinear*
+  commentId: Overload:osu.Framework.Utils.PathApproximator.LinearToPiecewiseLinear
+  href: osu.Framework.Utils.PathApproximator.html#osu_Framework_Utils_PathApproximator_LinearToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__
+  name: LinearToPiecewiseLinear
+  nameWithType: PathApproximator.LinearToPiecewiseLinear
+  fullName: osu.Framework.Utils.PathApproximator.LinearToPiecewiseLinear
+- uid: osu.Framework.Utils.PathApproximator.LagrangePolynomialToPiecewiseLinear*
+  commentId: Overload:osu.Framework.Utils.PathApproximator.LagrangePolynomialToPiecewiseLinear
+  href: osu.Framework.Utils.PathApproximator.html#osu_Framework_Utils_PathApproximator_LagrangePolynomialToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__
+  name: LagrangePolynomialToPiecewiseLinear
+  nameWithType: PathApproximator.LagrangePolynomialToPiecewiseLinear
+  fullName: osu.Framework.Utils.PathApproximator.LagrangePolynomialToPiecewiseLinear
+- uid: osu.Framework.Utils.PathApproximator.PiecewiseLinearToBezier*
+  commentId: Overload:osu.Framework.Utils.PathApproximator.PiecewiseLinearToBezier
+  href: osu.Framework.Utils.PathApproximator.html#osu_Framework_Utils_PathApproximator_PiecewiseLinearToBezier_System_ReadOnlySpan_osuTK_Vector2__System_Int32_System_Int32_System_Int32_System_Single_System_Single_System_Single_System_Collections_Generic_List_osuTK_Vector2__System_Single_0
+  name: PiecewiseLinearToBezier
+  nameWithType: PathApproximator.PiecewiseLinearToBezier
+  fullName: osu.Framework.Utils.PathApproximator.PiecewiseLinearToBezier
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Single[,]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float[,]
+  nameWithType: float[,]
+  fullName: float[,]
+  nameWithType.vb: Single(,)
+  fullName.vb: Single(,)
+  name.vb: Single(,)
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '['
+  - name: ','
+  - name: ']'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: (
+  - name: ','
+  - name: )
+- uid: osu.Framework.Utils.PathApproximator.PiecewiseLinearToBSpline*
+  commentId: Overload:osu.Framework.Utils.PathApproximator.PiecewiseLinearToBSpline
+  href: osu.Framework.Utils.PathApproximator.html#osu_Framework_Utils_PathApproximator_PiecewiseLinearToBSpline_System_ReadOnlySpan_osuTK_Vector2__System_Int32_System_Int32_System_Int32_System_Int32_System_Single_System_Single_System_Single_System_Collections_Generic_List_osuTK_Vector2__System_Single_0
+  name: PiecewiseLinearToBSpline
+  nameWithType: PathApproximator.PiecewiseLinearToBSpline
+  fullName: osu.Framework.Utils.PathApproximator.PiecewiseLinearToBSpline

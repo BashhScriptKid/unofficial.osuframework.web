@@ -1,0 +1,912 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class VideoDecoder | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class VideoDecoder | osu!framework ">
+      
+      <meta name="description" content="Represents a video decoder that can be used convert video streams and files into textures.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Graphics_Video_VideoDecoder.md&amp;value=---%0Auid%3A%20osu.Framework.Graphics.Video.VideoDecoder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Graphics.Video.VideoDecoder">
+
+
+
+  <h1 id="osu_Framework_Graphics_Video_VideoDecoder" data-uid="osu.Framework.Graphics.Video.VideoDecoder" class="text-break">
+Class VideoDecoder  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Graphics.html">Graphics</a>.<a class="xref" href="osu.Framework.Graphics.Video.html">Video</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a video decoder that can be used convert video streams and files into textures.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VideoDecoder : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">VideoDecoder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html">AndroidVideoDecoder</a></div>
+      <div><a class="xref" href="osu.Framework.iOS.Graphics.Video.IOSVideoDecoder.html">IOSVideoDecoder</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder__ctor_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.#ctor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder__ctor_osu_Framework_Graphics_Rendering_IRenderer_System_IO_Stream_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.IO.Stream)">
+  VideoDecoder(IRenderer, Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new video decoder that decodes the given video stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VideoDecoder(IRenderer renderer, Stream videoStream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd><p>The renderer to display the video.</p>
+</dd>
+    <dt><code>videoStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>The stream that should be decoded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder__ctor_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.#ctor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder__ctor_osu_Framework_Graphics_Rendering_IRenderer_System_String_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.String)">
+  VideoDecoder(IRenderer, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new video decoder that decodes the given video file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VideoDecoder(IRenderer renderer, string filename)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd><p>The renderer to display the video.</p>
+</dd>
+    <dt><code>filename</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The path to the file that should be decoded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_TargetHardwareVideoDecoders" data-uid="osu.Framework.Graphics.Video.VideoDecoder.TargetHardwareVideoDecoders">
+  TargetHardwareVideoDecoders
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines which hardware acceleration device(s) should be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Bindable&lt;HardwareVideoDecoder&gt; TargetHardwareVideoDecoders</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable</a>&lt;<a class="xref" href="osu.Framework.Graphics.Video.HardwareVideoDecoder.html">HardwareVideoDecoder</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_CanSeek_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.CanSeek*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_CanSeek" data-uid="osu.Framework.Graphics.Video.VideoDecoder.CanSeek">
+  CanSeek
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True if the decoder can seek, false otherwise. Determined by the stream this decoder was created with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CanSeek { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_Duration_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.Duration*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_Duration" data-uid="osu.Framework.Graphics.Video.VideoDecoder.Duration">
+  Duration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The duration of the video that is being decoded. Can only be queried after the decoder has started decoding has loaded. This value may be an estimate by FFmpeg, depending on the video loaded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Duration { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_FrameRate_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.FrameRate*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_FrameRate" data-uid="osu.Framework.Graphics.Video.VideoDecoder.FrameRate">
+  FrameRate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The frame rate of the video stream this decoder is decoding.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double FrameRate { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_IsFaulted_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.IsFaulted*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_IsFaulted" data-uid="osu.Framework.Graphics.Video.VideoDecoder.IsFaulted">
+  IsFaulted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True if the decoder has faulted after starting to decode. You can try to restart a failed decoder by invoking <a class="xref" href="osu.Framework.Graphics.Video.VideoDecoder.html#osu_Framework_Graphics_Video_VideoDecoder_StartDecoding">StartDecoding()</a> again.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFaulted { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_IsRunning_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.IsRunning*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_IsRunning" data-uid="osu.Framework.Graphics.Video.VideoDecoder.IsRunning">
+  IsRunning
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>True if the decoder currently does not decode any more frames, false otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsRunning { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_LastDecodedFrameTime_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.LastDecodedFrameTime*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_LastDecodedFrameTime" data-uid="osu.Framework.Graphics.Video.VideoDecoder.LastDecodedFrameTime">
+  LastDecodedFrameTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The timestamp of the last frame that was decoded by this video decoder, or 0 if no frames have been decoded.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LastDecodedFrameTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_State_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.State*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_State" data-uid="osu.Framework.Graphics.Video.VideoDecoder.State">
+  State
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current state of the decoding process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VideoDecoder.DecoderState State { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Video.VideoDecoder.html">VideoDecoder</a>.<a class="xref" href="osu.Framework.Graphics.Video.VideoDecoder.DecoderState.html">DecoderState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_CreateFuncs_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.CreateFuncs*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_CreateFuncs" data-uid="osu.Framework.Graphics.Video.VideoDecoder.CreateFuncs">
+  CreateFuncs()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L814"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual FFmpegFuncs CreateFuncs()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Video.FFmpegFuncs.html">FFmpegFuncs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_Dispose_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.Dispose*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_Dispose" data-uid="osu.Framework.Graphics.Video.VideoDecoder.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L898"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_Dispose_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.Dispose*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_Dispose_System_Boolean_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L904"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_Finalize_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.Finalize*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_Finalize" data-uid="osu.Framework.Graphics.Video.VideoDecoder.Finalize">
+  ~VideoDecoder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L893"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ~VideoDecoder()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_GetAvailableDecoders_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.GetAvailableDecoders*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_GetAvailableDecoders_FFmpeg_AutoGen_AVInputFormat__FFmpeg_AutoGen_AVCodecID_osu_Framework_Graphics_Video_HardwareVideoDecoder_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.GetAvailableDecoders(FFmpeg.AutoGen.AVInputFormat*,FFmpeg.AutoGen.AVCodecID,osu.Framework.Graphics.Video.HardwareVideoDecoder)">
+  GetAvailableDecoders(AVInputFormat*, AVCodecID, HardwareVideoDecoder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L769"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IEnumerable&lt;(FFmpegCodec codec, AVHWDeviceType hwDeviceType)&gt; GetAvailableDecoders(AVInputFormat* inputFormat, AVCodecID codecId, HardwareVideoDecoder targetHwDecoders)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inputFormat</code> <span class="xref">AVInputFormat</span>*</dt>
+    <dd></dd>
+    <dt><code>codecId</code> <span class="xref">AVCodecID</span></dt>
+    <dd></dd>
+    <dt><code>targetHwDecoders</code> <a class="xref" href="osu.Framework.Graphics.Video.HardwareVideoDecoder.html">HardwareVideoDecoder</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;(<a class="xref" href="osu.Framework.Graphics.Video.FFmpegCodec.html">FFmpegCodec</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-osu.framework.graphics.video.ffmpegcodec,ffmpeg.autogen.avhwdevicetype-.codec">codec</a>, <span class="xref">AVHWDeviceType</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-osu.framework.graphics.video.ffmpegcodec,ffmpeg.autogen.avhwdevicetype-.hwdevicetype">hwDeviceType</a>)&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Video_VideoDecoder_GetAvailableDecoders_FFmpeg_AutoGen_AVInputFormat__FFmpeg_AutoGen_AVCodecID_osu_Framework_Graphics_Video_HardwareVideoDecoder__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Returned HW devices are not guaranteed to be available on the current machine, they only represent what the loaded FFmpeg libraries support.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_GetConversionMatrix_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.GetConversionMatrix*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_GetConversionMatrix" data-uid="osu.Framework.Graphics.Video.VideoDecoder.GetConversionMatrix">
+  GetConversionMatrix()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Matrix3 GetConversionMatrix()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Matrix3</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_GetDecodedFrames_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.GetDecodedFrames*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_GetDecodedFrames" data-uid="osu.Framework.Graphics.Video.VideoDecoder.GetDecodedFrames">
+  GetDecodedFrames()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets all frames that have been decoded by the decoder up until the point in time when this method was called.
+Retrieving decoded frames using this method consumes them, ie calling this method again will never retrieve the same frame twice.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;DecodedFrame&gt; GetDecodedFrames()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="osu.Framework.Graphics.Video.DecodedFrame.html">DecodedFrame</a>&gt;</dt>
+    <dd><p>The frames that have been decoded up until the point in time this method was called.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_ReturnFrames_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.ReturnFrames*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_ReturnFrames_System_Collections_Generic_IEnumerable_osu_Framework_Graphics_Video_DecodedFrame__" data-uid="osu.Framework.Graphics.Video.VideoDecoder.ReturnFrames(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Video.DecodedFrame})">
+  ReturnFrames(IEnumerable&lt;DecodedFrame&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the given frames back to the decoder, allowing the decoder to reuse the textures contained in the frames to draw new frames.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReturnFrames(IEnumerable&lt;DecodedFrame&gt; frames)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>frames</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="osu.Framework.Graphics.Video.DecodedFrame.html">DecodedFrame</a>&gt;</dt>
+    <dd><p>The frames that should be returned to the decoder.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_Seek_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.Seek*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_Seek_System_Double_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.Seek(System.Double)">
+  Seek(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Seek the decoder to the given timestamp. This will fail if <a class="xref" href="osu.Framework.Graphics.Video.VideoDecoder.html#osu_Framework_Graphics_Video_VideoDecoder_CanSeek">CanSeek</a> is false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Seek(double targetTimestamp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>targetTimestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The timestamp to seek to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_StartDecoding_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.StartDecoding*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_StartDecoding" data-uid="osu.Framework.Graphics.Video.VideoDecoder.StartDecoding">
+  StartDecoding()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts the decoding process. The decoding will happen asynchronously in a separate thread. The decoded frames can be retrieved by using <a class="xref" href="osu.Framework.Graphics.Video.VideoDecoder.html#osu_Framework_Graphics_Video_VideoDecoder_GetDecodedFrames">GetDecodedFrames()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StartDecoding()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Video_VideoDecoder_StopDecodingAsync_" data-uid="osu.Framework.Graphics.Video.VideoDecoder.StopDecodingAsync*"></a>
+
+  <h3 id="osu_Framework_Graphics_Video_VideoDecoder_StopDecodingAsync" data-uid="osu.Framework.Graphics.Video.VideoDecoder.StopDecodingAsync">
+  StopDecodingAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the decoding process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task StopDecodingAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Video/VideoDecoder.cs/#L32" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

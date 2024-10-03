@@ -1,0 +1,862 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  id: EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  children:
+  - osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.CartesianProduct``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  - osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  - osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetCommonPrefix(System.Collections.Generic.IEnumerable{System.String})
+  - osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1(System.Collections.Generic.IEnumerable{``0},``0)
+  - osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1(System.Collections.Generic.IEnumerable{``0},``0)
+  - osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  langs:
+  - csharp
+  - vb
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: EnumerableExtensions
+    path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+    startLine: 11
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions.IEnumerableExtensions
+  syntax:
+    content: public static class EnumerableExtensions
+    content.vb: Public Module EnumerableExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  id: ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: ForEach<T>(IEnumerable<T>, Action<T>)
+  nameWithType: EnumerableExtensions.ForEach<T>(IEnumerable<T>, Action<T>)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach<T>(System.Collections.Generic.IEnumerable<T>, System.Action<T>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ForEach
+    path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+    startLine: 19
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions.IEnumerableExtensions
+  summary: Performs an action on all the items in an IEnumerable collection.
+  example: []
+  syntax:
+    content: public static void ForEach<T>(this IEnumerable<T> collection, Action<T> action)
+    parameters:
+    - id: collection
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The collection to iterate on.
+    - id: action
+      type: System.Action{{T}}
+      description: The action to be performed.
+    typeParameters:
+    - id: T
+      description: The type of the items stored in the collection.
+    content.vb: Public Shared Sub ForEach(Of T)(collection As IEnumerable(Of T), action As Action(Of T))
+  overload: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach*
+  nameWithType.vb: EnumerableExtensions.ForEach(Of T)(IEnumerable(Of T), Action(Of T))
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Action(Of T))
+  name.vb: ForEach(Of T)(IEnumerable(Of T), Action(Of T))
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  id: Yield``1(``0)
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Yield
+    path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+    startLine: 34
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions.IEnumerableExtensions
+  summary: >-
+    Wraps this object instance into an <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>
+
+    consisting of a single item.
+  example: []
+  syntax:
+    content: public static IEnumerable<T> Yield<T>(this T item)
+    parameters:
+    - id: item
+      type: '{T}'
+      description: The instance that will be wrapped.
+    typeParameters:
+    - id: T
+      description: The type of the object.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: An <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> consisting of a single item.
+    content.vb: Public Shared Function Yield(Of T)(item As T) As IEnumerable(Of T)
+  overload: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield*
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1(System.Collections.Generic.IEnumerable{``0},``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext``1(System.Collections.Generic.IEnumerable{``0},``0)
+  id: GetNext``1(System.Collections.Generic.IEnumerable{``0},``0)
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetNext<T>(IEnumerable<T>, T)
+  nameWithType: EnumerableExtensions.GetNext<T>(IEnumerable<T>, T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext<T>(System.Collections.Generic.IEnumerable<T>, T)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetNext
+    path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+    startLine: 43
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions.IEnumerableExtensions
+  summary: Retrieves the item after a pivot from an <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static T GetNext<T>(this IEnumerable<T> collection, T pivot)
+    parameters:
+    - id: collection
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The collection to iterate on.
+    - id: pivot
+      type: '{T}'
+      description: The pivot value.
+    typeParameters:
+    - id: T
+      description: The type of the items stored in the collection.
+    return:
+      type: '{T}'
+      description: The item in <code class="paramref">collection</code> appearing after <code class="paramref">pivot</code>, or null if no such item exists.
+    content.vb: Public Shared Function GetNext(Of T)(collection As IEnumerable(Of T), pivot As T) As T
+  overload: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext*
+  nameWithType.vb: EnumerableExtensions.GetNext(Of T)(IEnumerable(Of T), T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext(Of T)(System.Collections.Generic.IEnumerable(Of T), T)
+  name.vb: GetNext(Of T)(IEnumerable(Of T), T)
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1(System.Collections.Generic.IEnumerable{``0},``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious``1(System.Collections.Generic.IEnumerable{``0},``0)
+  id: GetPrevious``1(System.Collections.Generic.IEnumerable{``0},``0)
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetPrevious<T>(IEnumerable<T>, T)
+  nameWithType: EnumerableExtensions.GetPrevious<T>(IEnumerable<T>, T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious<T>(System.Collections.Generic.IEnumerable<T>, T)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetPrevious
+    path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+    startLine: 55
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions.IEnumerableExtensions
+  summary: Retrieves the item before a pivot from an <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static T GetPrevious<T>(this IEnumerable<T> collection, T pivot)
+    parameters:
+    - id: collection
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The collection to iterate on.
+    - id: pivot
+      type: '{T}'
+      description: The pivot value.
+    typeParameters:
+    - id: T
+      description: The type of the items stored in the collection.
+    return:
+      type: '{T}'
+      description: The item in <code class="paramref">collection</code> appearing before <code class="paramref">pivot</code>, or null if no such item exists.
+    content.vb: Public Shared Function GetPrevious(Of T)(collection As IEnumerable(Of T), pivot As T) As T
+  overload: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious*
+  nameWithType.vb: EnumerableExtensions.GetPrevious(Of T)(IEnumerable(Of T), T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious(Of T)(System.Collections.Generic.IEnumerable(Of T), T)
+  name.vb: GetPrevious(Of T)(IEnumerable(Of T), T)
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetCommonPrefix(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetCommonPrefix(System.Collections.Generic.IEnumerable{System.String})
+  id: GetCommonPrefix(System.Collections.Generic.IEnumerable{System.String})
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetCommonPrefix(IEnumerable<string>)
+  nameWithType: EnumerableExtensions.GetCommonPrefix(IEnumerable<string>)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetCommonPrefix(System.Collections.Generic.IEnumerable<string>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetCommonPrefix
+    path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+    startLine: 66
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions.IEnumerableExtensions
+  summary: Returns the most common prefix of every string in this <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>
+  example:
+  - "\"ab\" == { \"abc\", \"abd\" }.GetCommonPrefix()"
+  syntax:
+    content: public static string GetCommonPrefix(this IEnumerable<string> collection)
+    parameters:
+    - id: collection
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The string <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: System.String
+      description: The most common prefix, or an empty string if no common prefix could be found.
+    content.vb: Public Shared Function GetCommonPrefix(collection As IEnumerable(Of String)) As String
+  overload: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetCommonPrefix*
+  nameWithType.vb: EnumerableExtensions.GetCommonPrefix(IEnumerable(Of String))
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetCommonPrefix(System.Collections.Generic.IEnumerable(Of String))
+  name.vb: GetCommonPrefix(IEnumerable(Of String))
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.CartesianProduct``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.CartesianProduct``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  id: CartesianProduct``1(System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}})
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: CartesianProduct<T>(IEnumerable<IEnumerable<T>>)
+  nameWithType: EnumerableExtensions.CartesianProduct<T>(IEnumerable<IEnumerable<T>>)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.CartesianProduct<T>(System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<T>>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CartesianProduct
+    path: osu.Framework/Extensions/IEnumerableExtensions/EnumerableExtensions.cs
+    startLine: 96
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions.IEnumerableExtensions
+  summary: Get all combinations of provided sequences.
+  example: []
+  syntax:
+    content: public static IEnumerable<IEnumerable<T>> CartesianProduct<T>(this IEnumerable<IEnumerable<T>> sequences)
+    parameters:
+    - id: sequences
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{{T}}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{{T}}}
+    content.vb: Public Shared Function CartesianProduct(Of T)(sequences As IEnumerable(Of IEnumerable(Of T))) As IEnumerable(Of IEnumerable(Of T))
+  overload: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.CartesianProduct*
+  nameWithType.vb: EnumerableExtensions.CartesianProduct(Of T)(IEnumerable(Of IEnumerable(Of T)))
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.CartesianProduct(Of T)(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of T)))
+  name.vb: CartesianProduct(Of T)(IEnumerable(Of IEnumerable(Of T)))
+references:
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach*
+  commentId: Overload:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__
+  name: ForEach
+  nameWithType: EnumerableExtensions.ForEach
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.ForEach
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Action{{T}}
+  commentId: T:System.Action{`0}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield*
+  commentId: Overload:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield
+  nameWithType: EnumerableExtensions.Yield
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext*
+  commentId: Overload:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetNext__1_System_Collections_Generic_IEnumerable___0____0_
+  name: GetNext
+  nameWithType: EnumerableExtensions.GetNext
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetNext
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious*
+  commentId: Overload:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetPrevious__1_System_Collections_Generic_IEnumerable___0____0_
+  name: GetPrevious
+  nameWithType: EnumerableExtensions.GetPrevious
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetPrevious
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetCommonPrefix*
+  commentId: Overload:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetCommonPrefix
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_GetCommonPrefix_System_Collections_Generic_IEnumerable_System_String__
+  name: GetCommonPrefix
+  nameWithType: EnumerableExtensions.GetCommonPrefix
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.GetCommonPrefix
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.CartesianProduct*
+  commentId: Overload:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.CartesianProduct
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_CartesianProduct__1_System_Collections_Generic_IEnumerable_System_Collections_Generic_IEnumerable___0___
+  name: CartesianProduct
+  nameWithType: EnumerableExtensions.CartesianProduct
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.CartesianProduct
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{{T}}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{``0}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IEnumerable<T>>
+  nameWithType: IEnumerable<IEnumerable<T>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<T>>
+  nameWithType.vb: IEnumerable(Of IEnumerable(Of T))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of T))
+  name.vb: IEnumerable(Of IEnumerable(Of T))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )

@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Creating a new KeyBindingContainer | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Creating a new KeyBindingContainer | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework.wiki/blob/master/Setting-up-key-binding-containers.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>Once you have completed <a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project">setting up your first project</a>, we are ready to start building our game! In addition to having the ability to <a href="https://github.com/ppy/osu-framework/wiki/Handling-input-events">handle input events</a> of various types, you can also set up a <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyBindingContainer.cs"><code>KeyBindingContainer</code></a> which allows you to specify default bindings for actions, as well as choose which key handling mode should be used in the container.</p>
+<ul>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-key-binding-containers#creating-a-new-keybindingcontainer">Creating a new <code>KeyBindingContainer</code></a>
+<ul>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-key-binding-containers#create-an-enum-for-our-custom-actions">Create an enum for our custom actions</a></li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-key-binding-containers#create-a-keybindingcontainer-class">Create a <code>KeyBindingContainer</code> class</a></li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-key-binding-containers#create-default-keybindings-for-our-keybindingcontainer">Create default keybindings for our <code>KeyBindingContainer</code></a></li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-key-binding-containers#key-binding-modes">Key Binding Modes</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-key-binding-containers#handling-key-bound-actions">Handling key bound actions</a>
+<ul>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-key-binding-containers#example">Example</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="creating-a-new-keybindingcontainer">Creating a new <code>KeyBindingContainer</code></h1>
+<h2 id="create-an-enum-for-our-custom-actions">Create an enum for our custom actions</h2>
+<p>First, we should name every input we want to be a part of this <code>KeyBindingContainer</code>. This lets us use the type field when inheriting the <code>KeyBindingContainer&lt;T&gt;</code> class so that it knows what action data it should map input actions to.</p>
+<p>For this example, we will map our <kbd>W</kbd>, <kbd>A</kbd>, and <kbd>D</kbd> keys to our Jump, Left, and Right actions respectively. We will create our enum type like so:</p>
+<pre><code class="lang-csharp">public enum InputAction
+{    
+    Left,
+    Right,
+    Jump
+}
+</code></pre>
+<p>It is recommended you create this new type inside the same file where you're creating the new <code>KeyBindingContainer</code> itself in step 2. That way, it will be easier to keep track of where it is if someone were to try to find them, as well as guarantee that both exist in the same namespace.</p>
+<h2 id="create-a-keybindingcontainer-class">Create a <code>KeyBindingContainer</code> class</h2>
+<p>We will then take the enum type we just created and use it to create our KeyBindingContainer.</p>
+<pre><code class="lang-csharp">public partial class AwesomeKeyBindingContainer : KeyBindingContainer&lt;InputAction&gt;
+{
+}
+</code></pre>
+<h2 id="create-default-keybindings-for-our-keybindingcontainer">Create default keybindings for our KeyBindingContainer</h2>
+<p>We can now map key presses to the action we wish to perform! To do so, we should first create a default set of keybinds. In our newly created KeyBindingContainer, override the existing <code>DefaultKeyBindings</code> property with your own:</p>
+<pre><code class="lang-csharp">public partial class AwesomeKeyBindingContainer : KeyBindingContainer&lt;InputAction&gt;
+{
+  public override IEnumerable&lt;KeyBinding&gt; DefaultKeyBindings =&gt; new[]
+  {
+     new KeyBinding(new[] { InputKey.A }, InputAction.Left),
+     new KeyBinding(new[] { InputKey.W }, InputAction.Jump),
+     new KeyBinding(new[] { InputKey.D }, InputAction.Right)
+  }
+}
+</code></pre>
+<p>If you wish to have multiple alternative key combinations, you will need to specify multiple <code>KeyBinding</code> instances associated with a common <code>InputAction</code>.</p>
+<h2 id="key-binding-modes">Key Binding Modes</h2>
+<p>There are two modes that can be specified on the creation of a new keybinding container via the parameters. One is the <a href="https://github.com/ppy/osu-framework/blob/e5f1aabc22f2f149f48c4fd9ca7c6f8381b00ec0/osu.Framework/Input/Bindings/KeyBindingContainer.cs#L438"><code>SimultaneousBindingMode</code></a>, and the other is the <a href="https://github.com/ppy/osu-framework/blob/e5f1aabc22f2f149f48c4fd9ca7c6f8381b00ec0/osu.Framework/Input/Bindings/KeyCombination.cs#L651"><code>KeyCombinationMatchingMode</code></a>. The <code>SimultaneousBindingMode</code> specifies whether or not an input should be valid based on whether or not other buttons are pressed simultaneously, whereas the <code>KeyCombinationMatchingMode</code> specifies how strict the keybinding should be in regards to whether or not the exact buttons are pressed.</p>
+<p>For a better visual representation of these modes and how they restrict multiple key press events, please see <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework.Tests/Visual/Input/TestSceneKeyBindingsGrid.cs"><code>TestCaseKeyBindingsGrid</code></a>.</p>
+<h1 id="handling-key-bound-actions">Handling key bound actions</h1>
+<p>Now that we have created our <code>KeyBindingContainer</code>, we can add behavior that triggers when the key-bound action has been fired. The <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/IKeyBindingHandler.cs"><code>IKeyBindingHandler&lt;T&gt;</code></a> interface provides a way for bound input events to be handled by any drawable, as long as it is a child of our <code>KeyBindingContainer</code>.</p>
+<p>For example, to create a player class that inherits <code>RigidBodyContainer</code> and implements <code>IKeybindingHandler</code>, we would do this:</p>
+<pre><code class="lang-csharp">public partial class Player : RigidBodyContainer&lt;Drawable&gt;, IKeyBindingHandler&lt;InputAction&gt;
+{
+}
+</code></pre>
+<p>The <code>IKeyBindingHandler</code> interface provides access to the following:</p>
+<ul>
+<li><code>OnPressed(KeyBindingPressEvent&lt;T&gt;)</code> is triggered when any action is pressed. The action type depends on the type specified in the type specifier when you inherit <code>IKeyBindingHandler&lt;T&gt;</code>. Return <code>true</code> if this action should block the action from traversing the scene graph up to its parent.</li>
+<li><code>OnReleased(KeyBindingReleaseEvent&lt;T&gt;)</code> is triggered when any action is released. This handler cannot be blocked, and will always be fired on the drawable that handled the previous press.</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>Our completed player <code>RigidBodyContainer</code> with keybinding handling would then look something like this:</p>
+<pre><code class="lang-csharp">public partial class Player : RigidBodyContainer&lt;Drawable&gt;, IKeyBindingHandler&lt;InputAction&gt;
+{
+    private float constantXForce;
+        
+    [BackgroundDependencyLoader]
+    private void load(TextureStore textureStore)
+    {
+        Child = new Box
+        {
+            Anchor = Anchor.Centre,
+            Origin = Anchor.Centre,
+            Size = new Vector2(150, 150),
+        };
+        Position = new Vector2(500, 500);
+        Size = new Vector2(200, 200);
+        Rotation = 45;
+        Masking = true;
+    }
+
+    private const float PLAYER_VELOCITY = 500f;
+
+    public bool OnPressed(KeyBindingPressEvent&lt;InputAction&gt; e)
+    {
+        switch (e.Action)
+        {
+            case InputAction.Jump:
+                Velocity = new Vector2(constantXForce, Velocity.Y - 500);
+                break;
+
+            case InputAction.Right:
+                constantXForce += PLAYER_VELOCITY;
+                break;
+
+            case InputAction.Left:
+                constantXForce -= PLAYER_VELOCITY;
+                break;
+        }
+
+        return true;
+    }
+        
+    public void OnReleased(KeyBindingReleaseEvent&lt;InputAction&gt; e)
+    {
+        switch (e.Action)
+        {
+            case InputAction.Left:
+                constantXForce += PLAYER_VELOCITY;
+                break;
+
+            case InputAction.Right:
+                constantXForce -= PLAYER_VELOCITY;
+                break;
+        }
+    }
+        
+    protected override void Update()
+    {
+        base.Update();
+
+        Velocity = new Vector2(constantXForce, Velocity.Y);
+    }
+}
+</code></pre>
+<p>For this example to work as intended, we will need to change the simultaneous binding mode in our keybinding container to allow multiple bindings to be pressed at the same time. We can specify a constructor for this:</p>
+<pre><code class="lang-csharp">public AwesomeKeyBindingContainer(KeyCombinationMatchingMode keyCombinationMatchingMode = KeyCombinationMatchingMode.Any, SimultaneousBindingMode simultaneousBindingMode = SimultaneousBindingMode.All) 
+    : base(simultaneousBindingMode, keyCombinationMatchingMode)
+{
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework.wiki/blob/master/Setting-up-key-binding-containers.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

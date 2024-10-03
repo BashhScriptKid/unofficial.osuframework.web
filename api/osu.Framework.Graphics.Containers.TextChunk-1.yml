@@ -1,0 +1,1944 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Graphics.Containers.TextChunk`1
+  commentId: T:osu.Framework.Graphics.Containers.TextChunk`1
+  id: TextChunk`1
+  parent: osu.Framework.Graphics.Containers
+  children:
+  - osu.Framework.Graphics.Containers.TextChunk`1.#ctor(osu.Framework.Localisation.LocalisableString,System.Boolean,System.Func{`0},System.Action{`0})
+  - osu.Framework.Graphics.Containers.TextChunk`1.CreateDrawablesFor(System.String,osu.Framework.Graphics.Containers.TextFlowContainer)
+  - osu.Framework.Graphics.Containers.TextChunk`1.CreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  - osu.Framework.Graphics.Containers.TextChunk`1.CreateSpriteText(osu.Framework.Graphics.Containers.TextFlowContainer)
+  - osu.Framework.Graphics.Containers.TextChunk`1.SplitWords(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TextChunk<TSpriteText>
+  nameWithType: TextChunk<TSpriteText>
+  fullName: osu.Framework.Graphics.Containers.TextChunk<TSpriteText>
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Graphics/Containers/TextChunk.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TextChunk
+    path: osu.Framework/Graphics/Containers/TextChunk.cs
+    startLine: 16
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Containers
+  summary: Represents a plain chunk of text to be displayed in a text flow.
+  example: []
+  syntax:
+    content: 'public class TextChunk<TSpriteText> : TextPart, ITextPart where TSpriteText : SpriteText, new()'
+    typeParameters:
+    - id: TSpriteText
+    content.vb: Public Class TextChunk(Of TSpriteText As {SpriteText, New}) Inherits TextPart Implements ITextPart
+  inheritance:
+  - System.Object
+  - osu.Framework.Graphics.Containers.TextPart
+  implements:
+  - osu.Framework.Graphics.Containers.ITextPart
+  inheritedMembers:
+  - osu.Framework.Graphics.Containers.TextPart.Drawables
+  - osu.Framework.Graphics.Containers.TextPart.DrawablePartsRecreated
+  - osu.Framework.Graphics.Containers.TextPart.RecreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  nameWithType.vb: TextChunk(Of TSpriteText)
+  fullName.vb: osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText)
+  name.vb: TextChunk(Of TSpriteText)
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.#ctor(osu.Framework.Localisation.LocalisableString,System.Boolean,System.Func{`0},System.Action{`0})
+  commentId: M:osu.Framework.Graphics.Containers.TextChunk`1.#ctor(osu.Framework.Localisation.LocalisableString,System.Boolean,System.Func{`0},System.Action{`0})
+  id: '#ctor(osu.Framework.Localisation.LocalisableString,System.Boolean,System.Func{`0},System.Action{`0})'
+  parent: osu.Framework.Graphics.Containers.TextChunk`1
+  langs:
+  - csharp
+  - vb
+  name: TextChunk(LocalisableString, bool, Func<TSpriteText>, Action<TSpriteText>?)
+  nameWithType: TextChunk<TSpriteText>.TextChunk(LocalisableString, bool, Func<TSpriteText>, Action<TSpriteText>?)
+  fullName: osu.Framework.Graphics.Containers.TextChunk<TSpriteText>.TextChunk(osu.Framework.Localisation.LocalisableString, bool, System.Func<TSpriteText>, System.Action<TSpriteText>?)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Graphics/Containers/TextChunk.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Graphics/Containers/TextChunk.cs
+    startLine: 24
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Containers
+  syntax:
+    content: public TextChunk(LocalisableString text, bool newLineIsParagraph, Func<TSpriteText> creationFunc, Action<TSpriteText>? creationParameters = null)
+    parameters:
+    - id: text
+      type: osu.Framework.Localisation.LocalisableString
+    - id: newLineIsParagraph
+      type: System.Boolean
+    - id: creationFunc
+      type: System.Func{{TSpriteText}}
+    - id: creationParameters
+      type: System.Action{{TSpriteText}}
+    content.vb: Public Sub New(text As LocalisableString, newLineIsParagraph As Boolean, creationFunc As Func(Of TSpriteText), creationParameters As Action(Of TSpriteText) = Nothing)
+  overload: osu.Framework.Graphics.Containers.TextChunk`1.#ctor*
+  nameWithType.vb: TextChunk(Of TSpriteText).New(LocalisableString, Boolean, Func(Of TSpriteText), Action(Of TSpriteText))
+  fullName.vb: osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText).New(osu.Framework.Localisation.LocalisableString, Boolean, System.Func(Of TSpriteText), System.Action(Of TSpriteText))
+  name.vb: New(LocalisableString, Boolean, Func(Of TSpriteText), Action(Of TSpriteText))
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.CreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  commentId: M:osu.Framework.Graphics.Containers.TextChunk`1.CreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  id: CreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  parent: osu.Framework.Graphics.Containers.TextChunk`1
+  langs:
+  - csharp
+  - vb
+  name: CreateDrawablesFor(TextFlowContainer)
+  nameWithType: TextChunk<TSpriteText>.CreateDrawablesFor(TextFlowContainer)
+  fullName: osu.Framework.Graphics.Containers.TextChunk<TSpriteText>.CreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Graphics/Containers/TextChunk.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CreateDrawablesFor
+    path: osu.Framework/Graphics/Containers/TextChunk.cs
+    startLine: 32
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Containers
+  summary: >-
+    Creates drawables representing the contents of this <xref href="osu.Framework.Graphics.Containers.TextPart" data-throw-if-not-resolved="false"></xref>,
+
+    to be appended to the <code class="paramref">textFlowContainer</code>.
+  example: []
+  syntax:
+    content: protected override IEnumerable<Drawable> CreateDrawablesFor(TextFlowContainer textFlowContainer)
+    parameters:
+    - id: textFlowContainer
+      type: osu.Framework.Graphics.Containers.TextFlowContainer
+    return:
+      type: System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable}
+    content.vb: Protected Overrides Function CreateDrawablesFor(textFlowContainer As TextFlowContainer) As IEnumerable(Of Drawable)
+  overridden: osu.Framework.Graphics.Containers.TextPart.CreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  overload: osu.Framework.Graphics.Containers.TextChunk`1.CreateDrawablesFor*
+  nameWithType.vb: TextChunk(Of TSpriteText).CreateDrawablesFor(TextFlowContainer)
+  fullName.vb: osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText).CreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.CreateDrawablesFor(System.String,osu.Framework.Graphics.Containers.TextFlowContainer)
+  commentId: M:osu.Framework.Graphics.Containers.TextChunk`1.CreateDrawablesFor(System.String,osu.Framework.Graphics.Containers.TextFlowContainer)
+  id: CreateDrawablesFor(System.String,osu.Framework.Graphics.Containers.TextFlowContainer)
+  parent: osu.Framework.Graphics.Containers.TextChunk`1
+  langs:
+  - csharp
+  - vb
+  name: CreateDrawablesFor(string, TextFlowContainer)
+  nameWithType: TextChunk<TSpriteText>.CreateDrawablesFor(string, TextFlowContainer)
+  fullName: osu.Framework.Graphics.Containers.TextChunk<TSpriteText>.CreateDrawablesFor(string, osu.Framework.Graphics.Containers.TextFlowContainer)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Graphics/Containers/TextChunk.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CreateDrawablesFor
+    path: osu.Framework/Graphics/Containers/TextChunk.cs
+    startLine: 51
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Containers
+  syntax:
+    content: protected virtual IEnumerable<Drawable> CreateDrawablesFor(string text, TextFlowContainer textFlowContainer)
+    parameters:
+    - id: text
+      type: System.String
+    - id: textFlowContainer
+      type: osu.Framework.Graphics.Containers.TextFlowContainer
+    return:
+      type: System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable}
+    content.vb: Protected Overridable Function CreateDrawablesFor(text As String, textFlowContainer As TextFlowContainer) As IEnumerable(Of Drawable)
+  overload: osu.Framework.Graphics.Containers.TextChunk`1.CreateDrawablesFor*
+  nameWithType.vb: TextChunk(Of TSpriteText).CreateDrawablesFor(String, TextFlowContainer)
+  fullName.vb: osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText).CreateDrawablesFor(String, osu.Framework.Graphics.Containers.TextFlowContainer)
+  name.vb: CreateDrawablesFor(String, TextFlowContainer)
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.SplitWords(System.String)
+  commentId: M:osu.Framework.Graphics.Containers.TextChunk`1.SplitWords(System.String)
+  id: SplitWords(System.String)
+  parent: osu.Framework.Graphics.Containers.TextChunk`1
+  langs:
+  - csharp
+  - vb
+  name: SplitWords(string)
+  nameWithType: TextChunk<TSpriteText>.SplitWords(string)
+  fullName: osu.Framework.Graphics.Containers.TextChunk<TSpriteText>.SplitWords(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Graphics/Containers/TextChunk.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: SplitWords
+    path: osu.Framework/Graphics/Containers/TextChunk.cs
+    startLine: 84
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Containers
+  syntax:
+    content: protected string[] SplitWords(string text)
+    parameters:
+    - id: text
+      type: System.String
+    return:
+      type: System.String[]
+    content.vb: Protected Function SplitWords(text As String) As String()
+  overload: osu.Framework.Graphics.Containers.TextChunk`1.SplitWords*
+  nameWithType.vb: TextChunk(Of TSpriteText).SplitWords(String)
+  fullName.vb: osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText).SplitWords(String)
+  name.vb: SplitWords(String)
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.CreateSpriteText(osu.Framework.Graphics.Containers.TextFlowContainer)
+  commentId: M:osu.Framework.Graphics.Containers.TextChunk`1.CreateSpriteText(osu.Framework.Graphics.Containers.TextFlowContainer)
+  id: CreateSpriteText(osu.Framework.Graphics.Containers.TextFlowContainer)
+  parent: osu.Framework.Graphics.Containers.TextChunk`1
+  langs:
+  - csharp
+  - vb
+  name: CreateSpriteText(TextFlowContainer)
+  nameWithType: TextChunk<TSpriteText>.CreateSpriteText(TextFlowContainer)
+  fullName: osu.Framework.Graphics.Containers.TextChunk<TSpriteText>.CreateSpriteText(osu.Framework.Graphics.Containers.TextFlowContainer)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Graphics/Containers/TextChunk.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CreateSpriteText
+    path: osu.Framework/Graphics/Containers/TextChunk.cs
+    startLine: 114
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics.Containers
+  syntax:
+    content: protected virtual TSpriteText CreateSpriteText(TextFlowContainer textFlowContainer)
+    parameters:
+    - id: textFlowContainer
+      type: osu.Framework.Graphics.Containers.TextFlowContainer
+    return:
+      type: '{TSpriteText}'
+    content.vb: Protected Overridable Function CreateSpriteText(textFlowContainer As TextFlowContainer) As TSpriteText
+  overload: osu.Framework.Graphics.Containers.TextChunk`1.CreateSpriteText*
+  nameWithType.vb: TextChunk(Of TSpriteText).CreateSpriteText(TextFlowContainer)
+  fullName.vb: osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText).CreateSpriteText(osu.Framework.Graphics.Containers.TextFlowContainer)
+references:
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: osu.Framework.Graphics.Containers.TextPart
+  commentId: T:osu.Framework.Graphics.Containers.TextPart
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.TextPart.html
+  name: TextPart
+  nameWithType: TextPart
+  fullName: osu.Framework.Graphics.Containers.TextPart
+- uid: osu.Framework.Graphics.Containers.ITextPart
+  commentId: T:osu.Framework.Graphics.Containers.ITextPart
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ITextPart.html
+  name: ITextPart
+  nameWithType: ITextPart
+  fullName: osu.Framework.Graphics.Containers.ITextPart
+- uid: osu.Framework.Graphics.Containers.TextPart.Drawables
+  commentId: P:osu.Framework.Graphics.Containers.TextPart.Drawables
+  parent: osu.Framework.Graphics.Containers.TextPart
+  href: osu.Framework.Graphics.Containers.TextPart.html#osu_Framework_Graphics_Containers_TextPart_Drawables
+  name: Drawables
+  nameWithType: TextPart.Drawables
+  fullName: osu.Framework.Graphics.Containers.TextPart.Drawables
+- uid: osu.Framework.Graphics.Containers.TextPart.DrawablePartsRecreated
+  commentId: E:osu.Framework.Graphics.Containers.TextPart.DrawablePartsRecreated
+  parent: osu.Framework.Graphics.Containers.TextPart
+  href: osu.Framework.Graphics.Containers.TextPart.html#osu_Framework_Graphics_Containers_TextPart_DrawablePartsRecreated
+  name: DrawablePartsRecreated
+  nameWithType: TextPart.DrawablePartsRecreated
+  fullName: osu.Framework.Graphics.Containers.TextPart.DrawablePartsRecreated
+- uid: osu.Framework.Graphics.Containers.TextPart.RecreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  commentId: M:osu.Framework.Graphics.Containers.TextPart.RecreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  parent: osu.Framework.Graphics.Containers.TextPart
+  href: osu.Framework.Graphics.Containers.TextPart.html#osu_Framework_Graphics_Containers_TextPart_RecreateDrawablesFor_osu_Framework_Graphics_Containers_TextFlowContainer_
+  name: RecreateDrawablesFor(TextFlowContainer)
+  nameWithType: TextPart.RecreateDrawablesFor(TextFlowContainer)
+  fullName: osu.Framework.Graphics.Containers.TextPart.RecreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.TextPart.RecreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+    name: RecreateDrawablesFor
+    href: osu.Framework.Graphics.Containers.TextPart.html#osu_Framework_Graphics_Containers_TextPart_RecreateDrawablesFor_osu_Framework_Graphics_Containers_TextFlowContainer_
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextFlowContainer
+    name: TextFlowContainer
+    href: osu.Framework.Graphics.Containers.TextFlowContainer.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.TextPart.RecreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+    name: RecreateDrawablesFor
+    href: osu.Framework.Graphics.Containers.TextPart.html#osu_Framework_Graphics_Containers_TextPart_RecreateDrawablesFor_osu_Framework_Graphics_Containers_TextFlowContainer_
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextFlowContainer
+    name: TextFlowContainer
+    href: osu.Framework.Graphics.Containers.TextFlowContainer.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<TextChunk<TSpriteText>>(TextChunk<TSpriteText>)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<TextChunk<TSpriteText>>(TextChunk<TSpriteText>)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Graphics.Containers.TextChunk<TSpriteText>>(osu.Framework.Graphics.Containers.TextChunk<TSpriteText>)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of TextChunk(Of TSpriteText))(TextChunk(Of TSpriteText))
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText))(osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText))
+  name.vb: GetLocalisableDescription(Of TextChunk(Of TSpriteText))(TextChunk(Of TSpriteText))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Graphics.Containers.TextChunk{`0})
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Graphics.Containers.TextChunk{`0})
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<TextChunk<TSpriteText>>(TextChunk<TSpriteText>)
+  nameWithType: EnumerableExtensions.Yield<TextChunk<TSpriteText>>(TextChunk<TSpriteText>)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Graphics.Containers.TextChunk<TSpriteText>>(osu.Framework.Graphics.Containers.TextChunk<TSpriteText>)
+  nameWithType.vb: EnumerableExtensions.Yield(Of TextChunk(Of TSpriteText))(TextChunk(Of TSpriteText))
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText))(osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText))
+  name.vb: Yield(Of TextChunk(Of TSpriteText))(TextChunk(Of TSpriteText))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Graphics.Containers.TextChunk{`0})
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Graphics.Containers.TextChunk{`0})
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<TextChunk<TSpriteText>>(TextChunk<TSpriteText>)
+  nameWithType: ObjectExtensions.AsNonNull<TextChunk<TSpriteText>>(TextChunk<TSpriteText>)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Graphics.Containers.TextChunk<TSpriteText>>(osu.Framework.Graphics.Containers.TextChunk<TSpriteText>)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of TextChunk(Of TSpriteText))(TextChunk(Of TSpriteText))
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText))(osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText))
+  name.vb: AsNonNull(Of TextChunk(Of TSpriteText))(TextChunk(Of TSpriteText))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Graphics.Containers.TextChunk{`0})
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Graphics.Containers.TextChunk{`0})
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<TextChunk<TSpriteText>>(TextChunk<TSpriteText>)
+  nameWithType: ObjectExtensions.IsNotNull<TextChunk<TSpriteText>>(TextChunk<TSpriteText>)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Graphics.Containers.TextChunk<TSpriteText>>(osu.Framework.Graphics.Containers.TextChunk<TSpriteText>)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of TextChunk(Of TSpriteText))(TextChunk(Of TSpriteText))
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText))(osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText))
+  name.vb: IsNotNull(Of TextChunk(Of TSpriteText))(TextChunk(Of TSpriteText))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Graphics.Containers.TextChunk{`0})
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Graphics.Containers.TextChunk{`0})
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<TextChunk<TSpriteText>>(TextChunk<TSpriteText>)
+  nameWithType: ObjectExtensions.IsNull<TextChunk<TSpriteText>>(TextChunk<TSpriteText>)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Graphics.Containers.TextChunk<TSpriteText>>(osu.Framework.Graphics.Containers.TextChunk<TSpriteText>)
+  nameWithType.vb: ObjectExtensions.IsNull(Of TextChunk(Of TSpriteText))(TextChunk(Of TSpriteText))
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText))(osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText))
+  name.vb: IsNull(Of TextChunk(Of TSpriteText))(TextChunk(Of TSpriteText))
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Graphics.Containers.TextChunk{`0})
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Graphics.Containers.TextChunk{`0})
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TextChunk<TSpriteText>, TChild>(TextChunk<TSpriteText>, TChild)
+  nameWithType: ContainerExtensions.WithChild<TextChunk<TSpriteText>, TChild>(TextChunk<TSpriteText>, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Graphics.Containers.TextChunk<TSpriteText>, TChild>(osu.Framework.Graphics.Containers.TextChunk<TSpriteText>, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TextChunk(Of TSpriteText), TChild)(TextChunk(Of TSpriteText), TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText), TChild)(osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText), TChild)
+  name.vb: WithChild(Of TextChunk(Of TSpriteText), TChild)(TextChunk(Of TSpriteText), TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Graphics.Containers.TextChunk{`0},``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Graphics.Containers.TextChunk{`0},``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TextChunk<TSpriteText>, TChild>(TextChunk<TSpriteText>, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TextChunk<TSpriteText>, TChild>(TextChunk<TSpriteText>, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Graphics.Containers.TextChunk<TSpriteText>, TChild>(osu.Framework.Graphics.Containers.TextChunk<TSpriteText>, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TextChunk(Of TSpriteText), TChild)(TextChunk(Of TSpriteText), IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText), TChild)(osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText), System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TextChunk(Of TSpriteText), TChild)(TextChunk(Of TSpriteText), IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Graphics.Containers.TextChunk{`0},System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Graphics.Containers.TextChunk{`0},System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TextChunk<TSpriteText>, TChild>(TextChunk<TSpriteText>, TChild)
+  nameWithType: ContainerExtensions.Wrap<TextChunk<TSpriteText>, TChild>(TextChunk<TSpriteText>, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Graphics.Containers.TextChunk<TSpriteText>, TChild>(osu.Framework.Graphics.Containers.TextChunk<TSpriteText>, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TextChunk(Of TSpriteText), TChild)(TextChunk(Of TSpriteText), TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText), TChild)(osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText), TChild)
+  name.vb: Wrap(Of TextChunk(Of TSpriteText), TChild)(TextChunk(Of TSpriteText), TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Graphics.Containers.TextChunk{`0},``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Graphics.Containers.TextChunk{`0},``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextChunk`1
+    name: TextChunk
+    href: osu.Framework.Graphics.Containers.TextChunk-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.#ctor*
+  commentId: Overload:osu.Framework.Graphics.Containers.TextChunk`1.#ctor
+  href: osu.Framework.Graphics.Containers.TextChunk-1.html#osu_Framework_Graphics_Containers_TextChunk_1__ctor_osu_Framework_Localisation_LocalisableString_System_Boolean_System_Func__0__System_Action__0__
+  name: TextChunk
+  nameWithType: TextChunk<TSpriteText>.TextChunk
+  fullName: osu.Framework.Graphics.Containers.TextChunk<TSpriteText>.TextChunk
+  nameWithType.vb: TextChunk(Of TSpriteText).New
+  fullName.vb: osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText).New
+  name.vb: New
+- uid: osu.Framework.Localisation.LocalisableString
+  commentId: T:osu.Framework.Localisation.LocalisableString
+  parent: osu.Framework.Localisation
+  href: osu.Framework.Localisation.LocalisableString.html
+  name: LocalisableString
+  nameWithType: LocalisableString
+  fullName: osu.Framework.Localisation.LocalisableString
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Func{{TSpriteText}}
+  commentId: T:System.Func{``0}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TSpriteText>
+  nameWithType: Func<TSpriteText>
+  fullName: System.Func<TSpriteText>
+  nameWithType.vb: Func(Of TSpriteText)
+  fullName.vb: System.Func(Of TSpriteText)
+  name.vb: Func(Of TSpriteText)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+- uid: System.Action{{TSpriteText}}
+  commentId: T:System.Action{``0}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<TSpriteText>
+  nameWithType: Action<TSpriteText>
+  fullName: System.Action<TSpriteText>
+  nameWithType.vb: Action(Of TSpriteText)
+  fullName.vb: System.Action(Of TSpriteText)
+  name.vb: Action(Of TSpriteText)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TSpriteText
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSpriteText
+  - name: )
+- uid: osu.Framework.Localisation
+  commentId: N:osu.Framework.Localisation
+  href: osu.html
+  name: osu.Framework.Localisation
+  nameWithType: osu.Framework.Localisation
+  fullName: osu.Framework.Localisation
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Localisation
+    name: Localisation
+    href: osu.Framework.Localisation.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Localisation
+    name: Localisation
+    href: osu.Framework.Localisation.html
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.TextPart.CreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  commentId: M:osu.Framework.Graphics.Containers.TextPart.CreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  parent: osu.Framework.Graphics.Containers.TextPart
+  href: osu.Framework.Graphics.Containers.TextPart.html#osu_Framework_Graphics_Containers_TextPart_CreateDrawablesFor_osu_Framework_Graphics_Containers_TextFlowContainer_
+  name: CreateDrawablesFor(TextFlowContainer)
+  nameWithType: TextPart.CreateDrawablesFor(TextFlowContainer)
+  fullName: osu.Framework.Graphics.Containers.TextPart.CreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.TextPart.CreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+    name: CreateDrawablesFor
+    href: osu.Framework.Graphics.Containers.TextPart.html#osu_Framework_Graphics_Containers_TextPart_CreateDrawablesFor_osu_Framework_Graphics_Containers_TextFlowContainer_
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextFlowContainer
+    name: TextFlowContainer
+    href: osu.Framework.Graphics.Containers.TextFlowContainer.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.TextPart.CreateDrawablesFor(osu.Framework.Graphics.Containers.TextFlowContainer)
+    name: CreateDrawablesFor
+    href: osu.Framework.Graphics.Containers.TextPart.html#osu_Framework_Graphics_Containers_TextPart_CreateDrawablesFor_osu_Framework_Graphics_Containers_TextFlowContainer_
+  - name: (
+  - uid: osu.Framework.Graphics.Containers.TextFlowContainer
+    name: TextFlowContainer
+    href: osu.Framework.Graphics.Containers.TextFlowContainer.html
+  - name: )
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.CreateDrawablesFor*
+  commentId: Overload:osu.Framework.Graphics.Containers.TextChunk`1.CreateDrawablesFor
+  href: osu.Framework.Graphics.Containers.TextChunk-1.html#osu_Framework_Graphics_Containers_TextChunk_1_CreateDrawablesFor_osu_Framework_Graphics_Containers_TextFlowContainer_
+  name: CreateDrawablesFor
+  nameWithType: TextChunk<TSpriteText>.CreateDrawablesFor
+  fullName: osu.Framework.Graphics.Containers.TextChunk<TSpriteText>.CreateDrawablesFor
+  nameWithType.vb: TextChunk(Of TSpriteText).CreateDrawablesFor
+  fullName.vb: osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText).CreateDrawablesFor
+- uid: osu.Framework.Graphics.Containers.TextFlowContainer
+  commentId: T:osu.Framework.Graphics.Containers.TextFlowContainer
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.TextFlowContainer.html
+  name: TextFlowContainer
+  nameWithType: TextFlowContainer
+  fullName: osu.Framework.Graphics.Containers.TextFlowContainer
+- uid: System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable}
+  commentId: T:System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<Drawable>
+  nameWithType: IEnumerable<Drawable>
+  fullName: System.Collections.Generic.IEnumerable<osu.Framework.Graphics.Drawable>
+  nameWithType.vb: IEnumerable(Of Drawable)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of osu.Framework.Graphics.Drawable)
+  name.vb: IEnumerable(Of Drawable)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.SplitWords*
+  commentId: Overload:osu.Framework.Graphics.Containers.TextChunk`1.SplitWords
+  href: osu.Framework.Graphics.Containers.TextChunk-1.html#osu_Framework_Graphics_Containers_TextChunk_1_SplitWords_System_String_
+  name: SplitWords
+  nameWithType: TextChunk<TSpriteText>.SplitWords
+  fullName: osu.Framework.Graphics.Containers.TextChunk<TSpriteText>.SplitWords
+  nameWithType.vb: TextChunk(Of TSpriteText).SplitWords
+  fullName.vb: osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText).SplitWords
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: osu.Framework.Graphics.Containers.TextChunk`1.CreateSpriteText*
+  commentId: Overload:osu.Framework.Graphics.Containers.TextChunk`1.CreateSpriteText
+  href: osu.Framework.Graphics.Containers.TextChunk-1.html#osu_Framework_Graphics_Containers_TextChunk_1_CreateSpriteText_osu_Framework_Graphics_Containers_TextFlowContainer_
+  name: CreateSpriteText
+  nameWithType: TextChunk<TSpriteText>.CreateSpriteText
+  fullName: osu.Framework.Graphics.Containers.TextChunk<TSpriteText>.CreateSpriteText
+  nameWithType.vb: TextChunk(Of TSpriteText).CreateSpriteText
+  fullName.vb: osu.Framework.Graphics.Containers.TextChunk(Of TSpriteText).CreateSpriteText
+- uid: '{TSpriteText}'
+  commentId: '!:TSpriteText'
+  definition: TSpriteText
+  name: TSpriteText
+  nameWithType: TSpriteText
+  fullName: TSpriteText
+- uid: TSpriteText
+  name: TSpriteText
+  nameWithType: TSpriteText
+  fullName: TSpriteText

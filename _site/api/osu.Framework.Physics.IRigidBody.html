@@ -1,0 +1,892 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IRigidBody | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IRigidBody | osu!framework ">
+      
+      <meta name="description" content="Contains physical state and methods necessary for rigid body simulation.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Physics_IRigidBody.md&amp;value=---%0Auid%3A%20osu.Framework.Physics.IRigidBody%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Physics.IRigidBody">
+
+
+
+  <h1 id="osu_Framework_Physics_IRigidBody" data-uid="osu.Framework.Physics.IRigidBody" class="text-break">
+Interface IRigidBody  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Physics.html">Physics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Contains physical state and methods necessary for rigid body simulation.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IRigidBody : IDrawable, ITransformable</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_DrawSize">IDrawable.DrawSize</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_DrawRectangle">IDrawable.DrawRectangle</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_DrawInfo">IDrawable.DrawInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_DrawColourInfo">IDrawable.DrawColourInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_ScreenSpaceDrawQuad">IDrawable.ScreenSpaceDrawQuad</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_Parent">IDrawable.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_IsPresent">IDrawable.IsPresent</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_Clock">IDrawable.Clock</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_ToSpaceOfOtherDrawable_osuTK_Vector2_osu_Framework_Graphics_IDrawable_">IDrawable.ToSpaceOfOtherDrawable(Vector2, IDrawable)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_ToLocalSpace_osuTK_Vector2_">IDrawable.ToLocalSpace(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_Blending">IDrawable.Blending</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_IsHovered">IDrawable.IsHovered</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_IsDragged">IDrawable.IsDragged</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_Alpha">IDrawable.Alpha</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_Show">IDrawable.Show()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_Hide">IDrawable.Hide()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.IDrawable.html#osu_Framework_Graphics_IDrawable_InvalidationID">IDrawable.InvalidationID</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_BeginDelayedSequence_System_Double_System_Boolean_">ITransformable.BeginDelayedSequence(double, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_BeginAbsoluteSequence_System_Double_System_Boolean_">ITransformable.BeginAbsoluteSequence(double, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_Time">ITransformable.Time</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_TransformStartTime">ITransformable.TransformStartTime</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_AddTransform_osu_Framework_Graphics_Transforms_Transform_System_Nullable_System_UInt64__">ITransformable.AddTransform(Transform, ulong?)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_RemoveTransform_osu_Framework_Graphics_Transforms_Transform_">ITransformable.RemoveTransform(Transform)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Animate__1___0_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Animate&lt;T&gt;(T, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Delay__1___0_System_Double_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Delay&lt;T&gt;(T, double, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_System_Double_">TransformableExtensions.Loop&lt;T&gt;(T, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_System_Double_System_Int32_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Loop&lt;T&gt;(T, double, int, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_System_Double_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Loop&lt;T&gt;(T, double, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Loop&lt;T&gt;(T, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MakeTransform__2___0_System_String___1_System_Double_osu_Framework_Graphics_Easing_System_String_">TransformableExtensions.MakeTransform&lt;TThis, TValue&gt;(TThis, string, TValue, double, Easing, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MakeTransform__3___0_System_String___2_System_Double___1__System_String_">TransformableExtensions.MakeTransform&lt;TThis, TEasing, TValue&gt;(TThis, string, TValue, double, in TEasing, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_PopulateTransform__2___1_osu_Framework_Graphics_Transforms_Transform___0_osu_Framework_Graphics_Transforms_DefaultEasingFunction___1____0_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.PopulateTransform&lt;TValue, TThis&gt;(TThis, Transform&lt;TValue, DefaultEasingFunction, TThis&gt;, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_PopulateTransform__3___2_osu_Framework_Graphics_Transforms_Transform___0___1___2____0_System_Double___1__">TransformableExtensions.PopulateTransform&lt;TValue, TEasing, TThis&gt;(TThis, Transform&lt;TValue, TEasing, TThis&gt;, TValue, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformBindableTo__2___0_osu_Framework_Bindables_Bindable___1____1_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.TransformBindableTo&lt;T, TValue&gt;(T, Bindable&lt;TValue&gt;, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformBindableTo__3___0_osu_Framework_Bindables_Bindable___1____1_System_Double___2__">TransformableExtensions.TransformBindableTo&lt;T, TValue, TEasing&gt;(T, Bindable&lt;TValue&gt;, TValue, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformTo__1___0_osu_Framework_Graphics_Transforms_Transform_">TransformableExtensions.TransformTo&lt;TThis&gt;(TThis, Transform)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformTo__2___0_System_String___1_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.TransformTo&lt;TThis, TValue&gt;(TThis, string, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformTo__3___0_System_String___1_System_Double___2__System_String_">TransformableExtensions.TransformTo&lt;TThis, TValue, TEasing&gt;(TThis, string, TValue, double, in TEasing, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Physics.RigidBodyExtensions.html#osu_Framework_Physics_RigidBodyExtensions_ComputeImpulse_osu_Framework_Physics_IRigidBody_osu_Framework_Physics_IRigidBody_osuTK_Vector2_osuTK_Vector2_">RigidBodyExtensions.ComputeImpulse(IRigidBody, IRigidBody, Vector2, Vector2)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Physics.RigidBodyExtensions.html#osu_Framework_Physics_RigidBodyExtensions_ImpulseDenominator_osu_Framework_Physics_IRigidBody_osuTK_Vector2_osuTK_Vector2_">RigidBodyExtensions.ImpulseDenominator(IRigidBody, Vector2, Vector2)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Physics_IRigidBody_AngularMomentum_" data-uid="osu.Framework.Physics.IRigidBody.AngularMomentum*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_AngularMomentum" data-uid="osu.Framework.Physics.IRigidBody.AngularMomentum">
+  AngularMomentum
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float AngularMomentum { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_AngularVelocity_" data-uid="osu.Framework.Physics.IRigidBody.AngularVelocity*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_AngularVelocity" data-uid="osu.Framework.Physics.IRigidBody.AngularVelocity">
+  AngularVelocity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float AngularVelocity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_Centre_" data-uid="osu.Framework.Physics.IRigidBody.Centre*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_Centre" data-uid="osu.Framework.Physics.IRigidBody.Centre">
+  Centre
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector2 Centre { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_FrictionCoefficient_" data-uid="osu.Framework.Physics.IRigidBody.FrictionCoefficient*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_FrictionCoefficient" data-uid="osu.Framework.Physics.IRigidBody.FrictionCoefficient">
+  FrictionCoefficient
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>How much friction happens between objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float FrictionCoefficient { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_Mass_" data-uid="osu.Framework.Physics.IRigidBody.Mass*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_Mass" data-uid="osu.Framework.Physics.IRigidBody.Mass">
+  Mass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float Mass { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_MomentOfInertia_" data-uid="osu.Framework.Physics.IRigidBody.MomentOfInertia*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_MomentOfInertia" data-uid="osu.Framework.Physics.IRigidBody.MomentOfInertia">
+  MomentOfInertia
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float MomentOfInertia { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_Momentum_" data-uid="osu.Framework.Physics.IRigidBody.Momentum*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_Momentum" data-uid="osu.Framework.Physics.IRigidBody.Momentum">
+  Momentum
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector2 Momentum { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_Restitution_" data-uid="osu.Framework.Physics.IRigidBody.Restitution*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_Restitution" data-uid="osu.Framework.Physics.IRigidBody.Restitution">
+  Restitution
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Controls how elastic the material is. A value of 1 means perfect elasticity
+(kinetic energy is fully preserved). A value of 0 means all energy is absorbed
+on collision, i.e. no rebound occurs at all.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float Restitution { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_RotationRadians_" data-uid="osu.Framework.Physics.IRigidBody.RotationRadians*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_RotationRadians" data-uid="osu.Framework.Physics.IRigidBody.RotationRadians">
+  RotationRadians
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">float RotationRadians { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_Simulation_" data-uid="osu.Framework.Physics.IRigidBody.Simulation*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_Simulation" data-uid="osu.Framework.Physics.IRigidBody.Simulation">
+  Simulation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a> which is currently performing a simulation on this <a class="xref" href="osu.Framework.Physics.IRigidBody.html">IRigidBody</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Drawable Simulation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_Velocity_" data-uid="osu.Framework.Physics.IRigidBody.Velocity*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_Velocity" data-uid="osu.Framework.Physics.IRigidBody.Velocity">
+  Velocity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector2 Velocity { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Physics_IRigidBody_ApplyImpulse_" data-uid="osu.Framework.Physics.IRigidBody.ApplyImpulse*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_ApplyImpulse_osuTK_Vector2_osuTK_Vector2_" data-uid="osu.Framework.Physics.IRigidBody.ApplyImpulse(osuTK.Vector2,osuTK.Vector2)">
+  ApplyImpulse(Vector2, Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies a given impulse attacking at a given position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ApplyImpulse(Vector2 impulse, Vector2 pos)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>impulse</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>pos</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_ApplyState_" data-uid="osu.Framework.Physics.IRigidBody.ApplyState*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_ApplyState" data-uid="osu.Framework.Physics.IRigidBody.ApplyState">
+  ApplyState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies the positional and rotational state of this rigid body to its source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ApplyState()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_BodyContains_" data-uid="osu.Framework.Physics.IRigidBody.BodyContains*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_BodyContains_osuTK_Vector2_" data-uid="osu.Framework.Physics.IRigidBody.BodyContains(osuTK.Vector2)">
+  BodyContains(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the given screen-space position is contained within the rigid body.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool BodyContains(Vector2 screenSpacePos)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>screenSpacePos</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_CheckAndHandleCollisionWith_" data-uid="osu.Framework.Physics.IRigidBody.CheckAndHandleCollisionWith*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_CheckAndHandleCollisionWith_osu_Framework_Physics_IRigidBody_" data-uid="osu.Framework.Physics.IRigidBody.CheckAndHandleCollisionWith(osu.Framework.Physics.IRigidBody)">
+  CheckAndHandleCollisionWith(IRigidBody)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks for and records all collisions with another body. If collisions were found,
+their aggregate is handled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CheckAndHandleCollisionWith(IRigidBody other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="osu.Framework.Physics.IRigidBody.html">IRigidBody</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_Integrate_" data-uid="osu.Framework.Physics.IRigidBody.Integrate*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_Integrate_osuTK_Vector2_System_Single_System_Single_" data-uid="osu.Framework.Physics.IRigidBody.Integrate(osuTK.Vector2,System.Single,System.Single)">
+  Integrate(Vector2, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs an integration step over time. More precisely, updates the
+physical state as dependent on time according to the forces and torques
+acting on this body.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Integrate(Vector2 force, float torque, float dt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>force</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>torque</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>dt</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_ReadState_" data-uid="osu.Framework.Physics.IRigidBody.ReadState*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_ReadState" data-uid="osu.Framework.Physics.IRigidBody.ReadState">
+  ReadState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reads the positional and rotational state of this rigid body from its source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void ReadState()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Physics_IRigidBody_VelocityAt_" data-uid="osu.Framework.Physics.IRigidBody.VelocityAt*"></a>
+
+  <h3 id="osu_Framework_Physics_IRigidBody_VelocityAt_osuTK_Vector2_" data-uid="osu.Framework.Physics.IRigidBody.VelocityAt(osuTK.Vector2)">
+  VelocityAt(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Total velocity at a given location. Includes angular velocity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Vector2 VelocityAt(Vector2 pos)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pos</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Physics/IRigidBody.cs/#L13" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1735 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+  commentId: T:osu.Framework.Input.Handlers.Tablet.TabletDriver
+  id: TabletDriver
+  parent: osu.Framework.Input.Handlers.Tablet
+  children:
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.#ctor(OpenTabletDriver.Plugin.Components.ICompositeDeviceHub,OpenTabletDriver.Plugin.Components.IReportParserProvider,OpenTabletDriver.Plugin.Components.IDeviceConfigurationProvider)
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.Create
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.DeviceReported
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.Dispose
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.PostLog
+  langs:
+  - csharp
+  - vb
+  name: TabletDriver
+  nameWithType: TabletDriver
+  fullName: osu.Framework.Input.Handlers.Tablet.TabletDriver
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Input/Handlers/Tablet/TabletDriver.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TabletDriver
+    path: osu.Framework/Input/Handlers/Tablet/TabletDriver.cs
+    startLine: 17
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input.Handlers.Tablet
+  syntax:
+    content: 'public sealed class TabletDriver : Driver, IDriver, IDisposable'
+    content.vb: Public NotInheritable Class TabletDriver Inherits Driver Implements IDriver, IDisposable
+  inheritance:
+  - System.Object
+  - OpenTabletDriver.Driver
+  implements:
+  - OpenTabletDriver.Plugin.IDriver
+  - System.IDisposable
+  inheritedMembers:
+  - OpenTabletDriver.Driver.GetReportParser(OpenTabletDriver.Plugin.Tablet.DeviceIdentifier)
+  - OpenTabletDriver.Driver.Detect
+  - OpenTabletDriver.Driver.CompositeDeviceHub
+  - OpenTabletDriver.Driver.InputDevices
+  - OpenTabletDriver.Driver.Tablets
+  - OpenTabletDriver.Driver.TabletsChanged
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.DeviceReported
+  commentId: E:osu.Framework.Input.Handlers.Tablet.TabletDriver.DeviceReported
+  id: DeviceReported
+  parent: osu.Framework.Input.Handlers.Tablet.TabletDriver
+  langs:
+  - csharp
+  - vb
+  name: DeviceReported
+  nameWithType: TabletDriver.DeviceReported
+  fullName: osu.Framework.Input.Handlers.Tablet.TabletDriver.DeviceReported
+  type: Event
+  source:
+    remote:
+      path: osu.Framework/Input/Handlers/Tablet/TabletDriver.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: DeviceReported
+    path: osu.Framework/Input/Handlers/Tablet/TabletDriver.cs
+    startLine: 23
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input.Handlers.Tablet
+  syntax:
+    content: public event EventHandler<IDeviceReport>? DeviceReported
+    return:
+      type: System.EventHandler{OpenTabletDriver.Plugin.Tablet.IDeviceReport}
+    content.vb: Public Event DeviceReported As EventHandler(Of IDeviceReport)
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.PostLog
+  commentId: F:osu.Framework.Input.Handlers.Tablet.TabletDriver.PostLog
+  id: PostLog
+  parent: osu.Framework.Input.Handlers.Tablet.TabletDriver
+  langs:
+  - csharp
+  - vb
+  name: PostLog
+  nameWithType: TabletDriver.PostLog
+  fullName: osu.Framework.Input.Handlers.Tablet.TabletDriver.PostLog
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Input/Handlers/Tablet/TabletDriver.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: PostLog
+    path: osu.Framework/Input/Handlers/Tablet/TabletDriver.cs
+    startLine: 25
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input.Handlers.Tablet
+  syntax:
+    content: public Action<string, LogLevel, Exception?>? PostLog
+    return:
+      type: System.Action{System.String,osu.Framework.Logging.LogLevel,System.Exception}
+    content.vb: Public PostLog As Action(Of String, LogLevel, Exception)
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.#ctor(OpenTabletDriver.Plugin.Components.ICompositeDeviceHub,OpenTabletDriver.Plugin.Components.IReportParserProvider,OpenTabletDriver.Plugin.Components.IDeviceConfigurationProvider)
+  commentId: M:osu.Framework.Input.Handlers.Tablet.TabletDriver.#ctor(OpenTabletDriver.Plugin.Components.ICompositeDeviceHub,OpenTabletDriver.Plugin.Components.IReportParserProvider,OpenTabletDriver.Plugin.Components.IDeviceConfigurationProvider)
+  id: '#ctor(OpenTabletDriver.Plugin.Components.ICompositeDeviceHub,OpenTabletDriver.Plugin.Components.IReportParserProvider,OpenTabletDriver.Plugin.Components.IDeviceConfigurationProvider)'
+  parent: osu.Framework.Input.Handlers.Tablet.TabletDriver
+  langs:
+  - csharp
+  - vb
+  name: TabletDriver(ICompositeDeviceHub, IReportParserProvider, IDeviceConfigurationProvider)
+  nameWithType: TabletDriver.TabletDriver(ICompositeDeviceHub, IReportParserProvider, IDeviceConfigurationProvider)
+  fullName: osu.Framework.Input.Handlers.Tablet.TabletDriver.TabletDriver(OpenTabletDriver.Plugin.Components.ICompositeDeviceHub, OpenTabletDriver.Plugin.Components.IReportParserProvider, OpenTabletDriver.Plugin.Components.IDeviceConfigurationProvider)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Input/Handlers/Tablet/TabletDriver.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Input/Handlers/Tablet/TabletDriver.cs
+    startLine: 27
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input.Handlers.Tablet
+  syntax:
+    content: public TabletDriver(ICompositeDeviceHub deviceHub, IReportParserProvider reportParserProvider, IDeviceConfigurationProvider configurationProvider)
+    parameters:
+    - id: deviceHub
+      type: OpenTabletDriver.Plugin.Components.ICompositeDeviceHub
+    - id: reportParserProvider
+      type: OpenTabletDriver.Plugin.Components.IReportParserProvider
+    - id: configurationProvider
+      type: OpenTabletDriver.Plugin.Components.IDeviceConfigurationProvider
+    content.vb: Public Sub New(deviceHub As ICompositeDeviceHub, reportParserProvider As IReportParserProvider, configurationProvider As IDeviceConfigurationProvider)
+  overload: osu.Framework.Input.Handlers.Tablet.TabletDriver.#ctor*
+  nameWithType.vb: TabletDriver.New(ICompositeDeviceHub, IReportParserProvider, IDeviceConfigurationProvider)
+  fullName.vb: osu.Framework.Input.Handlers.Tablet.TabletDriver.New(OpenTabletDriver.Plugin.Components.ICompositeDeviceHub, OpenTabletDriver.Plugin.Components.IReportParserProvider, OpenTabletDriver.Plugin.Components.IDeviceConfigurationProvider)
+  name.vb: New(ICompositeDeviceHub, IReportParserProvider, IDeviceConfigurationProvider)
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.Create
+  commentId: M:osu.Framework.Input.Handlers.Tablet.TabletDriver.Create
+  id: Create
+  parent: osu.Framework.Input.Handlers.Tablet.TabletDriver
+  langs:
+  - csharp
+  - vb
+  name: Create()
+  nameWithType: TabletDriver.Create()
+  fullName: osu.Framework.Input.Handlers.Tablet.TabletDriver.Create()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/Handlers/Tablet/TabletDriver.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Create
+    path: osu.Framework/Input/Handlers/Tablet/TabletDriver.cs
+    startLine: 90
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input.Handlers.Tablet
+  syntax:
+    content: public static TabletDriver Create()
+    return:
+      type: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    content.vb: Public Shared Function Create() As TabletDriver
+  overload: osu.Framework.Input.Handlers.Tablet.TabletDriver.Create*
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.Dispose
+  commentId: M:osu.Framework.Input.Handlers.Tablet.TabletDriver.Dispose
+  id: Dispose
+  parent: osu.Framework.Input.Handlers.Tablet.TabletDriver
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: TabletDriver.Dispose()
+  fullName: osu.Framework.Input.Handlers.Tablet.TabletDriver.Dispose()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/Handlers/Tablet/TabletDriver.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Dispose
+    path: osu.Framework/Input/Handlers/Tablet/TabletDriver.cs
+    startLine: 100
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input.Handlers.Tablet
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: osu.Framework.Input.Handlers.Tablet.TabletDriver.Dispose*
+references:
+- uid: osu.Framework.Input.Handlers.Tablet
+  commentId: N:osu.Framework.Input.Handlers.Tablet
+  href: osu.html
+  name: osu.Framework.Input.Handlers.Tablet
+  nameWithType: osu.Framework.Input.Handlers.Tablet
+  fullName: osu.Framework.Input.Handlers.Tablet
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  - name: .
+  - uid: osu.Framework.Input.Handlers
+    name: Handlers
+    href: osu.Framework.Input.Handlers.html
+  - name: .
+  - uid: osu.Framework.Input.Handlers.Tablet
+    name: Tablet
+    href: osu.Framework.Input.Handlers.Tablet.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  - name: .
+  - uid: osu.Framework.Input.Handlers
+    name: Handlers
+    href: osu.Framework.Input.Handlers.html
+  - name: .
+  - uid: osu.Framework.Input.Handlers.Tablet
+    name: Tablet
+    href: osu.Framework.Input.Handlers.Tablet.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenTabletDriver.Driver
+  commentId: T:OpenTabletDriver.Driver
+  parent: OpenTabletDriver
+  isExternal: true
+  name: Driver
+  nameWithType: Driver
+  fullName: OpenTabletDriver.Driver
+- uid: OpenTabletDriver.Plugin.IDriver
+  commentId: T:OpenTabletDriver.Plugin.IDriver
+  parent: OpenTabletDriver.Plugin
+  isExternal: true
+  name: IDriver
+  nameWithType: IDriver
+  fullName: OpenTabletDriver.Plugin.IDriver
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: OpenTabletDriver.Driver.GetReportParser(OpenTabletDriver.Plugin.Tablet.DeviceIdentifier)
+  commentId: M:OpenTabletDriver.Driver.GetReportParser(OpenTabletDriver.Plugin.Tablet.DeviceIdentifier)
+  parent: OpenTabletDriver.Driver
+  isExternal: true
+  name: GetReportParser(DeviceIdentifier)
+  nameWithType: Driver.GetReportParser(DeviceIdentifier)
+  fullName: OpenTabletDriver.Driver.GetReportParser(OpenTabletDriver.Plugin.Tablet.DeviceIdentifier)
+  spec.csharp:
+  - uid: OpenTabletDriver.Driver.GetReportParser(OpenTabletDriver.Plugin.Tablet.DeviceIdentifier)
+    name: GetReportParser
+    isExternal: true
+  - name: (
+  - uid: OpenTabletDriver.Plugin.Tablet.DeviceIdentifier
+    name: DeviceIdentifier
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: OpenTabletDriver.Driver.GetReportParser(OpenTabletDriver.Plugin.Tablet.DeviceIdentifier)
+    name: GetReportParser
+    isExternal: true
+  - name: (
+  - uid: OpenTabletDriver.Plugin.Tablet.DeviceIdentifier
+    name: DeviceIdentifier
+    isExternal: true
+  - name: )
+- uid: OpenTabletDriver.Driver.Detect
+  commentId: M:OpenTabletDriver.Driver.Detect
+  parent: OpenTabletDriver.Driver
+  isExternal: true
+  name: Detect()
+  nameWithType: Driver.Detect()
+  fullName: OpenTabletDriver.Driver.Detect()
+  spec.csharp:
+  - uid: OpenTabletDriver.Driver.Detect
+    name: Detect
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenTabletDriver.Driver.Detect
+    name: Detect
+    isExternal: true
+  - name: (
+  - name: )
+- uid: OpenTabletDriver.Driver.CompositeDeviceHub
+  commentId: P:OpenTabletDriver.Driver.CompositeDeviceHub
+  parent: OpenTabletDriver.Driver
+  isExternal: true
+  name: CompositeDeviceHub
+  nameWithType: Driver.CompositeDeviceHub
+  fullName: OpenTabletDriver.Driver.CompositeDeviceHub
+- uid: OpenTabletDriver.Driver.InputDevices
+  commentId: P:OpenTabletDriver.Driver.InputDevices
+  parent: OpenTabletDriver.Driver
+  isExternal: true
+  name: InputDevices
+  nameWithType: Driver.InputDevices
+  fullName: OpenTabletDriver.Driver.InputDevices
+- uid: OpenTabletDriver.Driver.Tablets
+  commentId: P:OpenTabletDriver.Driver.Tablets
+  parent: OpenTabletDriver.Driver
+  isExternal: true
+  name: Tablets
+  nameWithType: Driver.Tablets
+  fullName: OpenTabletDriver.Driver.Tablets
+- uid: OpenTabletDriver.Driver.TabletsChanged
+  commentId: E:OpenTabletDriver.Driver.TabletsChanged
+  parent: OpenTabletDriver.Driver
+  isExternal: true
+  name: TabletsChanged
+  nameWithType: Driver.TabletsChanged
+  fullName: OpenTabletDriver.Driver.TabletsChanged
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<TabletDriver>(TabletDriver)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<TabletDriver>(TabletDriver)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Input.Handlers.Tablet.TabletDriver>(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of TabletDriver)(TabletDriver)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Input.Handlers.Tablet.TabletDriver)(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+  name.vb: GetLocalisableDescription(Of TabletDriver)(TabletDriver)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<TabletDriver>(TabletDriver)
+  nameWithType: EnumerableExtensions.Yield<TabletDriver>(TabletDriver)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Input.Handlers.Tablet.TabletDriver>(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+  nameWithType.vb: EnumerableExtensions.Yield(Of TabletDriver)(TabletDriver)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Input.Handlers.Tablet.TabletDriver)(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+  name.vb: Yield(Of TabletDriver)(TabletDriver)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<TabletDriver>(TabletDriver)
+  nameWithType: ObjectExtensions.AsNonNull<TabletDriver>(TabletDriver)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Input.Handlers.Tablet.TabletDriver>(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of TabletDriver)(TabletDriver)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Input.Handlers.Tablet.TabletDriver)(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+  name.vb: AsNonNull(Of TabletDriver)(TabletDriver)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<TabletDriver>(TabletDriver)
+  nameWithType: ObjectExtensions.IsNotNull<TabletDriver>(TabletDriver)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Input.Handlers.Tablet.TabletDriver>(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of TabletDriver)(TabletDriver)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Input.Handlers.Tablet.TabletDriver)(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+  name.vb: IsNotNull(Of TabletDriver)(TabletDriver)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<TabletDriver>(TabletDriver)
+  nameWithType: ObjectExtensions.IsNull<TabletDriver>(TabletDriver)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Input.Handlers.Tablet.TabletDriver>(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+  nameWithType.vb: ObjectExtensions.IsNull(Of TabletDriver)(TabletDriver)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Input.Handlers.Tablet.TabletDriver)(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+  name.vb: IsNull(Of TabletDriver)(TabletDriver)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Input.Handlers.Tablet.TabletDriver)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: )
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TabletDriver, TChild>(TabletDriver, TChild)
+  nameWithType: ContainerExtensions.WithChild<TabletDriver, TChild>(TabletDriver, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Input.Handlers.Tablet.TabletDriver, TChild>(osu.Framework.Input.Handlers.Tablet.TabletDriver, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TabletDriver, TChild)(TabletDriver, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Input.Handlers.Tablet.TabletDriver, TChild)(osu.Framework.Input.Handlers.Tablet.TabletDriver, TChild)
+  name.vb: WithChild(Of TabletDriver, TChild)(TabletDriver, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Input.Handlers.Tablet.TabletDriver,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Input.Handlers.Tablet.TabletDriver,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TabletDriver, TChild>(TabletDriver, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TabletDriver, TChild>(TabletDriver, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Input.Handlers.Tablet.TabletDriver, TChild>(osu.Framework.Input.Handlers.Tablet.TabletDriver, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TabletDriver, TChild)(TabletDriver, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Input.Handlers.Tablet.TabletDriver, TChild)(osu.Framework.Input.Handlers.Tablet.TabletDriver, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TabletDriver, TChild)(TabletDriver, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Input.Handlers.Tablet.TabletDriver,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Input.Handlers.Tablet.TabletDriver,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TabletDriver, TChild>(TabletDriver, TChild)
+  nameWithType: ContainerExtensions.Wrap<TabletDriver, TChild>(TabletDriver, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Input.Handlers.Tablet.TabletDriver, TChild>(osu.Framework.Input.Handlers.Tablet.TabletDriver, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TabletDriver, TChild)(TabletDriver, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Input.Handlers.Tablet.TabletDriver, TChild)(osu.Framework.Input.Handlers.Tablet.TabletDriver, TChild)
+  name.vb: Wrap(Of TabletDriver, TChild)(TabletDriver, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Input.Handlers.Tablet.TabletDriver,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Input.Handlers.Tablet.TabletDriver,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+    name: TabletDriver
+    href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenTabletDriver
+  commentId: N:OpenTabletDriver
+  isExternal: true
+  name: OpenTabletDriver
+  nameWithType: OpenTabletDriver
+  fullName: OpenTabletDriver
+- uid: OpenTabletDriver.Plugin
+  commentId: N:OpenTabletDriver.Plugin
+  isExternal: true
+  name: OpenTabletDriver.Plugin
+  nameWithType: OpenTabletDriver.Plugin
+  fullName: OpenTabletDriver.Plugin
+  spec.csharp:
+  - uid: OpenTabletDriver
+    name: OpenTabletDriver
+    isExternal: true
+  - name: .
+  - uid: OpenTabletDriver.Plugin
+    name: Plugin
+    isExternal: true
+  spec.vb:
+  - uid: OpenTabletDriver
+    name: OpenTabletDriver
+    isExternal: true
+  - name: .
+  - uid: OpenTabletDriver.Plugin
+    name: Plugin
+    isExternal: true
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: System.EventHandler{OpenTabletDriver.Plugin.Tablet.IDeviceReport}
+  commentId: T:System.EventHandler{OpenTabletDriver.Plugin.Tablet.IDeviceReport}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<IDeviceReport>
+  nameWithType: EventHandler<IDeviceReport>
+  fullName: System.EventHandler<OpenTabletDriver.Plugin.Tablet.IDeviceReport>
+  nameWithType.vb: EventHandler(Of IDeviceReport)
+  fullName.vb: System.EventHandler(Of OpenTabletDriver.Plugin.Tablet.IDeviceReport)
+  name.vb: EventHandler(Of IDeviceReport)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenTabletDriver.Plugin.Tablet.IDeviceReport
+    name: IDeviceReport
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenTabletDriver.Plugin.Tablet.IDeviceReport
+    name: IDeviceReport
+    isExternal: true
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.Action{System.String,osu.Framework.Logging.LogLevel,System.Exception}
+  commentId: T:System.Action{System.String,osu.Framework.Logging.LogLevel,System.Exception}
+  parent: System
+  definition: System.Action`3
+  href: https://learn.microsoft.com/dotnet/api/system.action-3
+  name: Action<string, LogLevel, Exception>
+  nameWithType: Action<string, LogLevel, Exception>
+  fullName: System.Action<string, osu.Framework.Logging.LogLevel, System.Exception>
+  nameWithType.vb: Action(Of String, LogLevel, Exception)
+  fullName.vb: System.Action(Of String, osu.Framework.Logging.LogLevel, System.Exception)
+  name.vb: Action(Of String, LogLevel, Exception)
+  spec.csharp:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Logging.LogLevel
+    name: LogLevel
+    href: osu.Framework.Logging.LogLevel.html
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Logging.LogLevel
+    name: LogLevel
+    href: osu.Framework.Logging.LogLevel.html
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+- uid: System.Action`3
+  commentId: T:System.Action`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-3
+  name: Action<T1, T2, T3>
+  nameWithType: Action<T1, T2, T3>
+  fullName: System.Action<T1, T2, T3>
+  nameWithType.vb: Action(Of T1, T2, T3)
+  fullName.vb: System.Action(Of T1, T2, T3)
+  name.vb: Action(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.#ctor*
+  commentId: Overload:osu.Framework.Input.Handlers.Tablet.TabletDriver.#ctor
+  href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html#osu_Framework_Input_Handlers_Tablet_TabletDriver__ctor_OpenTabletDriver_Plugin_Components_ICompositeDeviceHub_OpenTabletDriver_Plugin_Components_IReportParserProvider_OpenTabletDriver_Plugin_Components_IDeviceConfigurationProvider_
+  name: TabletDriver
+  nameWithType: TabletDriver.TabletDriver
+  fullName: osu.Framework.Input.Handlers.Tablet.TabletDriver.TabletDriver
+  nameWithType.vb: TabletDriver.New
+  fullName.vb: osu.Framework.Input.Handlers.Tablet.TabletDriver.New
+  name.vb: New
+- uid: OpenTabletDriver.Plugin.Components.ICompositeDeviceHub
+  commentId: T:OpenTabletDriver.Plugin.Components.ICompositeDeviceHub
+  parent: OpenTabletDriver.Plugin.Components
+  isExternal: true
+  name: ICompositeDeviceHub
+  nameWithType: ICompositeDeviceHub
+  fullName: OpenTabletDriver.Plugin.Components.ICompositeDeviceHub
+- uid: OpenTabletDriver.Plugin.Components.IReportParserProvider
+  commentId: T:OpenTabletDriver.Plugin.Components.IReportParserProvider
+  parent: OpenTabletDriver.Plugin.Components
+  isExternal: true
+  name: IReportParserProvider
+  nameWithType: IReportParserProvider
+  fullName: OpenTabletDriver.Plugin.Components.IReportParserProvider
+- uid: OpenTabletDriver.Plugin.Components.IDeviceConfigurationProvider
+  commentId: T:OpenTabletDriver.Plugin.Components.IDeviceConfigurationProvider
+  parent: OpenTabletDriver.Plugin.Components
+  isExternal: true
+  name: IDeviceConfigurationProvider
+  nameWithType: IDeviceConfigurationProvider
+  fullName: OpenTabletDriver.Plugin.Components.IDeviceConfigurationProvider
+- uid: OpenTabletDriver.Plugin.Components
+  commentId: N:OpenTabletDriver.Plugin.Components
+  isExternal: true
+  name: OpenTabletDriver.Plugin.Components
+  nameWithType: OpenTabletDriver.Plugin.Components
+  fullName: OpenTabletDriver.Plugin.Components
+  spec.csharp:
+  - uid: OpenTabletDriver
+    name: OpenTabletDriver
+    isExternal: true
+  - name: .
+  - uid: OpenTabletDriver.Plugin
+    name: Plugin
+    isExternal: true
+  - name: .
+  - uid: OpenTabletDriver.Plugin.Components
+    name: Components
+    isExternal: true
+  spec.vb:
+  - uid: OpenTabletDriver
+    name: OpenTabletDriver
+    isExternal: true
+  - name: .
+  - uid: OpenTabletDriver.Plugin
+    name: Plugin
+    isExternal: true
+  - name: .
+  - uid: OpenTabletDriver.Plugin.Components
+    name: Components
+    isExternal: true
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.Create*
+  commentId: Overload:osu.Framework.Input.Handlers.Tablet.TabletDriver.Create
+  href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html#osu_Framework_Input_Handlers_Tablet_TabletDriver_Create
+  name: Create
+  nameWithType: TabletDriver.Create
+  fullName: osu.Framework.Input.Handlers.Tablet.TabletDriver.Create
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver
+  commentId: T:osu.Framework.Input.Handlers.Tablet.TabletDriver
+  parent: osu.Framework.Input.Handlers.Tablet
+  href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html
+  name: TabletDriver
+  nameWithType: TabletDriver
+  fullName: osu.Framework.Input.Handlers.Tablet.TabletDriver
+- uid: osu.Framework.Input.Handlers.Tablet.TabletDriver.Dispose*
+  commentId: Overload:osu.Framework.Input.Handlers.Tablet.TabletDriver.Dispose
+  href: osu.Framework.Input.Handlers.Tablet.TabletDriver.html#osu_Framework_Input_Handlers_Tablet_TabletDriver_Dispose
+  name: Dispose
+  nameWithType: TabletDriver.Dispose
+  fullName: osu.Framework.Input.Handlers.Tablet.TabletDriver.Dispose

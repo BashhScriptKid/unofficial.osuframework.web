@@ -1,0 +1,940 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TransformSequence&lt;T&gt; | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TransformSequence&lt;T&gt; | osu!framework ">
+      
+      <meta name="description" content="A sequence of s all operating upon the same  of type T. Exposes various operations to extend the sequence by additional  such as delays, loops, continuations, and events.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Graphics_Transforms_TransformSequence_1.md&amp;value=---%0Auid%3A%20osu.Framework.Graphics.Transforms.TransformSequence%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1">
+
+
+
+  <h1 id="osu_Framework_Graphics_Transforms_TransformSequence_1" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1" class="text-break">
+Class TransformSequence&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Graphics.html">Graphics</a>.<a class="xref" href="osu.Framework.Graphics.Transforms.html">Transforms</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A sequence of <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s all operating upon the same <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html">ITransformable</a>
+of type <code class="typeparamref">T</code>.
+Exposes various operations to extend the sequence by additional <a class="xref" href="osu.Framework.Graphics.Transforms.html">osu.Framework.Graphics.Transforms</a> such as
+delays, loops, continuations, and events.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TransformSequence&lt;T&gt; : ITransformSequence where T : class, ITransformable</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type of the <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html">ITransformable</a> the <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s in this sequence operate upon.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TransformSequence&lt;T&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Graphics.Transforms.ITransformSequence.html">ITransformSequence</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformSequenceExtensions.html#osu_Framework_Graphics_TransformSequenceExtensions_TransformBindableTo__2_osu_Framework_Graphics_Transforms_TransformSequence___0__osu_Framework_Bindables_Bindable___1____1_System_Double_osu_Framework_Graphics_Easing_">TransformSequenceExtensions.TransformBindableTo&lt;T, TValue&gt;(TransformSequence&lt;T&gt;, Bindable&lt;TValue&gt;, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformSequenceExtensions.html#osu_Framework_Graphics_TransformSequenceExtensions_TransformBindableTo__3_osu_Framework_Graphics_Transforms_TransformSequence___0__osu_Framework_Bindables_Bindable___1____1_System_Double___2_">TransformSequenceExtensions.TransformBindableTo&lt;T, TValue, TEasing&gt;(TransformSequence&lt;T&gt;, Bindable&lt;TValue&gt;, TValue, double, TEasing)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1__ctor_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.#ctor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1__ctor__0_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.#ctor(`0)">
+  TransformSequence(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new empty <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> attached to a given <code class="paramref">origin</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence(T origin)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>origin</code> <span class="xref">T</span></dt>
+    <dd><p>The <code class="typeparamref">T</code> to attach the new <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> to.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Append_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Append*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Append_System_Action__0__" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Append(System.Action{`0})">
+  Append(Action&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invokes <code class="paramref">originAction</code> inside a <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_BeginAbsoluteSequence_System_Double_System_Boolean_">BeginAbsoluteSequence(double, bool)</a>
+such that <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_TransformStartTime">TransformStartTime</a> is the current time of this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.
+It is the responsibility of <code class="paramref">originAction</code> to make appropriate use of <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_TransformStartTime">TransformStartTime</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; Append(Action&lt;T&gt; originAction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>originAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>The function to be invoked.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd><p>This <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Append_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Append*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Append_System_Collections_Generic_IEnumerable_osu_Framework_Graphics_Transforms_TransformSequence__0__Generator__" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Append(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Transforms.TransformSequence{`0}.Generator})">
+  Append(IEnumerable&lt;Generator&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends multiple <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">TransformSequence&lt;T&gt;.Generator</a>s to this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; Append(IEnumerable&lt;TransformSequence&lt;T&gt;.Generator&gt; childGenerators)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>childGenerators</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;.<a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">Generator</a>&gt;</dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">TransformSequence&lt;T&gt;.Generator</a>s to be appended.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd><p>This <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Append_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Append*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Append_osu_Framework_Graphics_Transforms_TransformSequence__0__Generator_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Append(osu.Framework.Graphics.Transforms.TransformSequence{`0}.Generator)">
+  Append(Generator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Appends a <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">TransformSequence&lt;T&gt;.Generator</a>s to this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.
+The <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">TransformSequence&lt;T&gt;.Generator</a> is invoked within a <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_BeginAbsoluteSequence_System_Double_System_Boolean_">BeginAbsoluteSequence(double, bool)</a>
+such that the generated <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> starts at the correct point in time.
+Its <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s are then merged into this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; Append(TransformSequence&lt;T&gt;.Generator childGenerator)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>childGenerator</code> <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;.<a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">Generator</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">TransformSequence&lt;T&gt;.Generator</a> to be appended.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd><p>This <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Append_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Append*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Append__1_System_Func__0___0____0__" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Append``1(System.Func{`0,``0},``0@)">
+  Append&lt;TResult&gt;(Func&lt;T, TResult&gt;, out TResult)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invokes <code class="paramref">originFunc</code> inside a <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_BeginAbsoluteSequence_System_Double_System_Boolean_">BeginAbsoluteSequence(double, bool)</a>
+such that <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_TransformStartTime">TransformStartTime</a> is the current time of this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.
+It is the responsibility of <code class="paramref">originFunc</code> to make appropriate use of <a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html#osu_Framework_Graphics_Transforms_ITransformable_TransformStartTime">TransformStartTime</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; Append&lt;TResult&gt;(Func&lt;T, TResult&gt; originFunc, out TResult result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>originFunc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;T, TResult&gt;</dt>
+    <dd><p>The function to be invoked.</p>
+</dd>
+    <dt><code>result</code> <span class="xref">TResult</span></dt>
+    <dd><p>The resulting value of the invocation of <code class="paramref">originFunc</code>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd><p>This <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TResult</code></dt>
+    <dd><p>The return type of <code class="paramref">originFunc</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Delay_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Delay*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Delay_System_Double_osu_Framework_Graphics_Transforms_TransformSequence__0__Generator___" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Delay(System.Double,osu.Framework.Graphics.Transforms.TransformSequence{`0}.Generator[])">
+  Delay(double, params Generator[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L383"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Advances the start time of future appended <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>s by <code class="paramref">delay</code> milliseconds.
+Then, <code class="paramref">childGenerators</code> are appended via <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html#osu_Framework_Graphics_Transforms_TransformSequence_1_Append_System_Collections_Generic_IEnumerable_osu_Framework_Graphics_Transforms_TransformSequence__0__Generator__">Append(IEnumerable&lt;Generator&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; Delay(double delay, params TransformSequence&lt;T&gt;.Generator[] childGenerators)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>delay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The delay to advance the start time by.</p>
+</dd>
+    <dt><code>childGenerators</code> <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">Generator</a>[]</dt>
+    <dd><p>The optional <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">TransformSequence&lt;T&gt;.Generator</a>s for <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>s to be appended.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd><p>This <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Finally_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Finally*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Finally_System_Action__0__" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Finally(System.Action{`0})">
+  Finally(Action&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L421"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a callback <code class="paramref">function</code> which is triggered once any <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a> in this
+<a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> is aborted or when all <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s complete successfully.
+This is equivalent with calling both <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html#osu_Framework_Graphics_Transforms_TransformSequence_1_OnComplete_System_Action__0__">OnComplete(Action&lt;T&gt;)</a> and <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html#osu_Framework_Graphics_Transforms_TransformSequence_1_OnAbort_System_Action__0__">OnAbort(Action&lt;T&gt;)</a>.
+Only a single callback function may be registered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Finally(Action&lt;T&gt; function)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>function</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>The callback function.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Loop_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Loop*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Loop_System_Double_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Loop(System.Double)">
+  Loop(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Repeats all <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s within this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> indefinitely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; Loop(double pause = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pause</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The pause between iterations in milliseconds.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd><p>This <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Loop_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Loop*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Loop_System_Double_System_Int32_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Loop(System.Double,System.Int32)">
+  Loop(double, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Repeats all <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s within this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a><code class="paramref">numIters</code> times with <code class="paramref">pause</code> milliseconds between iterations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; Loop(double pause, int numIters)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pause</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The pause between iterations in milliseconds.</p>
+</dd>
+    <dt><code>numIters</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd><p>This <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Loop_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Loop*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Loop_System_Double_System_Int32_osu_Framework_Graphics_Transforms_TransformSequence__0__Generator___" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Loop(System.Double,System.Int32,osu.Framework.Graphics.Transforms.TransformSequence{`0}.Generator[])">
+  Loop(double, int, params Generator[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Append a looping <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> to this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.
+All <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s generated by <code class="paramref">childGenerators</code> are appended to
+this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> and then repeated <code class="paramref">numIters</code> times
+with <code class="paramref">pause</code> milliseconds between iterations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; Loop(double pause, int numIters, params TransformSequence&lt;T&gt;.Generator[] childGenerators)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pause</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The pause between iterations in milliseconds.</p>
+</dd>
+    <dt><code>numIters</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of iterations.</p>
+</dd>
+    <dt><code>childGenerators</code> <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">Generator</a>[]</dt>
+    <dd><p>The functions to generate the <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>s to be looped.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd><p>This <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Loop_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Loop*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Loop_System_Double_osu_Framework_Graphics_Transforms_TransformSequence__0__Generator___" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Loop(System.Double,osu.Framework.Graphics.Transforms.TransformSequence{`0}.Generator[])">
+  Loop(double, params Generator[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Append a looping <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> to this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.
+All <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s generated by <code class="paramref">childGenerators</code> are appended to
+this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> and then repeated indefinitely with <code class="paramref">pause</code>
+milliseconds between iterations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; Loop(double pause, params TransformSequence&lt;T&gt;.Generator[] childGenerators)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pause</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The pause between iterations in milliseconds.</p>
+</dd>
+    <dt><code>childGenerators</code> <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">Generator</a>[]</dt>
+    <dd><p>The functions to generate the <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>s to be looped.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd><p>This <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Loop_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Loop*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Loop_osu_Framework_Graphics_Transforms_TransformSequence__0__Generator___" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Loop(osu.Framework.Graphics.Transforms.TransformSequence{`0}.Generator[])">
+  Loop(params Generator[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Append a looping <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> to this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.
+All <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s generated by <code class="paramref">childGenerators</code> are appended to
+this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> and then repeated indefinitely.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; Loop(params TransformSequence&lt;T&gt;.Generator[] childGenerators)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>childGenerators</code> <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">Generator</a>[]</dt>
+    <dd><p>The functions to generate the <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>s to be looped.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd><p>This <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_OnAbort_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.OnAbort*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_OnAbort_System_Action__0__" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.OnAbort(System.Action{`0})">
+  OnAbort(Action&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L412"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a callback <code class="paramref">function</code> which is triggered once any <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a> in this
+<a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> is aborted (e.g. by another <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a> overriding it).
+Only a single callback function may be registered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnAbort(Action&lt;T&gt; function)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>function</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>The callback function.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_OnComplete_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.OnComplete*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_OnComplete_System_Action__0__" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.OnComplete(System.Action{`0})">
+  OnComplete(Action&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L398"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Registers a callback <code class="paramref">function</code> which is triggered once all <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s in this
+<a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> complete successfully.
+If all <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s already completed successfully at the point of this call, then
+<code class="paramref">function</code> is triggered immediately.
+Only a single callback function may be registered.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnComplete(Action&lt;T&gt; function)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>function</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd><p>The callback function.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Then_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Then*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Then_System_Double_osu_Framework_Graphics_Transforms_TransformSequence__0__Generator___" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Then(System.Double,osu.Framework.Graphics.Transforms.TransformSequence{`0}.Generator[])">
+  Then(double, params Generator[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Advances the start time of future appended <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>s to the latest end time of all
+<a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s in this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a> plus <code class="paramref">delay</code> milliseconds.
+Then, <code class="paramref">childGenerators</code> are appended via <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html#osu_Framework_Graphics_Transforms_TransformSequence_1_Append_System_Collections_Generic_IEnumerable_osu_Framework_Graphics_Transforms_TransformSequence__0__Generator__">Append(IEnumerable&lt;Generator&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; Then(double delay, params TransformSequence&lt;T&gt;.Generator[] childGenerators)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>delay</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The delay after the latest end time of all <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s.</p>
+</dd>
+    <dt><code>childGenerators</code> <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">Generator</a>[]</dt>
+    <dd><p>The optional <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">TransformSequence&lt;T&gt;.Generator</a>s for <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>s to be appended.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd><p>This <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_Then_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Then*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_Then_osu_Framework_Graphics_Transforms_TransformSequence__0__Generator___" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.Then(osu.Framework.Graphics.Transforms.TransformSequence{`0}.Generator[])">
+  Then(params Generator[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Advances the start time of future appended <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>s to the latest end time of all
+<a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s in this <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.
+Then, <code class="paramref">childGenerators</code> are appended via <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html#osu_Framework_Graphics_Transforms_TransformSequence_1_Append_System_Collections_Generic_IEnumerable_osu_Framework_Graphics_Transforms_TransformSequence__0__Generator__">Append(IEnumerable&lt;Generator&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; Then(params TransformSequence&lt;T&gt;.Generator[] childGenerators)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>childGenerators</code> <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">Generator</a>[]</dt>
+    <dd><p>The optional <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.Generator.html">TransformSequence&lt;T&gt;.Generator</a>s for <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>s to be appended.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd><p>This <a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence&lt;T&gt;</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Transforms_TransformSequence_1_TransformTo_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.TransformTo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Transforms_TransformSequence_1_TransformTo__1_System_String___0_System_Double_osu_Framework_Graphics_Easing_" data-uid="osu.Framework.Graphics.Transforms.TransformSequence`1.TransformTo``1(System.String,``0,System.Double,osu.Framework.Graphics.Easing)">
+  TransformTo&lt;TValue&gt;(string, TValue, double, Easing)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransformSequence&lt;T&gt; TransformTo&lt;TValue&gt;(string propertyOrFieldName, TValue newValue, double duration = 0, Easing easing = Easing.None)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>propertyOrFieldName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>newValue</code> <span class="xref">TValue</span></dt>
+    <dd></dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>easing</code> <a class="xref" href="osu.Framework.Graphics.Easing.html">Easing</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;T&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Transforms/TransformSequence.cs/#L20" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

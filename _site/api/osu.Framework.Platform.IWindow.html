@@ -1,0 +1,1580 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IWindow | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IWindow | osu!framework ">
+      
+      <meta name="description" content="Interface representation of the game window, intended to hide any implementation-specific code.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Platform_IWindow.md&amp;value=---%0Auid%3A%20osu.Framework.Platform.IWindow%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Platform.IWindow">
+
+
+
+  <h1 id="osu_Framework_Platform_IWindow" data-uid="osu.Framework.Platform.IWindow" class="text-break">
+Interface IWindow  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Platform.html">Platform</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Interface representation of the game window, intended to hide any implementation-specific code.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IWindow : IDisposable</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Platform_IWindow_ClientSize_" data-uid="osu.Framework.Platform.IWindow.ClientSize*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_ClientSize" data-uid="osu.Framework.Platform.IWindow.ClientSize">
+  ClientSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The client size of the window (excluding any window decoration/border).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Size ClientSize { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_CurrentDisplayBindable_" data-uid="osu.Framework.Platform.IWindow.CurrentDisplayBindable*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_CurrentDisplayBindable" data-uid="osu.Framework.Platform.IWindow.CurrentDisplayBindable">
+  CurrentDisplayBindable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exposes the <a class="xref" href="osu.Framework.Platform.Display.html">Display</a> that this window is currently on as a <a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable&lt;T&gt;</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Bindable&lt;Display&gt; CurrentDisplayBindable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable</a>&lt;<a class="xref" href="osu.Framework.Platform.Display.html">Display</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_CurrentDisplayMode_" data-uid="osu.Framework.Platform.IWindow.CurrentDisplayMode*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_CurrentDisplayMode" data-uid="osu.Framework.Platform.IWindow.CurrentDisplayMode">
+  CurrentDisplayMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="osu.Framework.Platform.DisplayMode.html">DisplayMode</a> for the display that this window is currently on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindable&lt;DisplayMode&gt; CurrentDisplayMode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.IBindable-1.html">IBindable</a>&lt;<a class="xref" href="osu.Framework.Platform.DisplayMode.html">DisplayMode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_CursorConfineRect_" data-uid="osu.Framework.Platform.IWindow.CursorConfineRect*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_CursorConfineRect" data-uid="osu.Framework.Platform.IWindow.CursorConfineRect">
+  CursorConfineRect
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Area to which the mouse cursor is confined to when <a class="xref" href="osu.Framework.Platform.IWindow.html#osu_Framework_Platform_IWindow_CursorState">CursorState</a> is <a class="xref" href="osu.Framework.Platform.CursorState.html#osu_Framework_Platform_CursorState_Confined">Confined</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">RectangleF? CursorConfineRect { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_IWindow_CursorConfineRect_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Will confine to the whole window by default (or when set to <code>null</code>).
+Supported fully on desktop platforms, and on Android when relative mode is enabled.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_CursorInWindow_" data-uid="osu.Framework.Platform.IWindow.CursorInWindow*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_CursorInWindow" data-uid="osu.Framework.Platform.IWindow.CursorInWindow">
+  CursorInWindow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the OS cursor is currently contained within the game window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindable&lt;bool&gt; CursorInWindow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.IBindable-1.html">IBindable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_CursorState_" data-uid="osu.Framework.Platform.IWindow.CursorState*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_CursorState" data-uid="osu.Framework.Platform.IWindow.CursorState">
+  CursorState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Controls the state of the OS cursor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">CursorState CursorState { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.CursorState.html">CursorState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_IWindow_CursorState_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If the cursor is <a class="xref" href="osu.Framework.Platform.CursorState.html#osu_Framework_Platform_CursorState_Confined">Confined</a>, <a class="xref" href="osu.Framework.Platform.IWindow.html#osu_Framework_Platform_IWindow_CursorConfineRect">CursorConfineRect</a> will be used.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_DefaultWindowMode_" data-uid="osu.Framework.Platform.IWindow.DefaultWindowMode*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_DefaultWindowMode" data-uid="osu.Framework.Platform.IWindow.DefaultWindowMode">
+  DefaultWindowMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the default <a class="xref" href="osu.Framework.Platform.IWindow.html#osu_Framework_Platform_IWindow_WindowMode">WindowMode</a> for the implementation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">WindowMode DefaultWindowMode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Configuration.WindowMode.html">WindowMode</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_Displays_" data-uid="osu.Framework.Platform.IWindow.Displays*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_Displays" data-uid="osu.Framework.Platform.IWindow.Displays">
+  Displays
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains information about the current physical displays.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ImmutableArray&lt;Display&gt; Displays { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray</a>&lt;<a class="xref" href="osu.Framework.Platform.Display.html">Display</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_Focused_" data-uid="osu.Framework.Platform.IWindow.Focused*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_Focused" data-uid="osu.Framework.Platform.IWindow.Focused">
+  Focused
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the window currently has focus.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool Focused { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_IsActive_" data-uid="osu.Framework.Platform.IWindow.IsActive*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_IsActive" data-uid="osu.Framework.Platform.IWindow.IsActive">
+  IsActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this <a class="xref" href="osu.Framework.Platform.IWindow.html">IWindow</a> is active (in the foreground).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IBindable&lt;bool&gt; IsActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.IBindable-1.html">IBindable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_MaxSize_" data-uid="osu.Framework.Platform.IWindow.MaxSize*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_MaxSize" data-uid="osu.Framework.Platform.IWindow.MaxSize">
+  MaxSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The maximum size of the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Size MaxSize { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when setting a negative or zero size, or a size less than <a class="xref" href="osu.Framework.Platform.IWindow.html#osu_Framework_Platform_IWindow_MinSize">MinSize</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Platform_IWindow_MinSize_" data-uid="osu.Framework.Platform.IWindow.MinSize*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_MinSize" data-uid="osu.Framework.Platform.IWindow.MinSize">
+  MinSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The minimum size of the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Size MinSize { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when setting a negative size, or a size greater than <a class="xref" href="osu.Framework.Platform.IWindow.html#osu_Framework_Platform_IWindow_MaxSize">MaxSize</a>.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Platform_IWindow_PrimaryDisplay_" data-uid="osu.Framework.Platform.IWindow.PrimaryDisplay*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_PrimaryDisplay" data-uid="osu.Framework.Platform.IWindow.PrimaryDisplay">
+  PrimaryDisplay
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="osu.Framework.Platform.Display.html">Display</a> that has been set as &quot;primary&quot; or &quot;default&quot; in the operating system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Display PrimaryDisplay { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.Display.html">Display</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_SafeAreaPadding_" data-uid="osu.Framework.Platform.IWindow.SafeAreaPadding*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_SafeAreaPadding" data-uid="osu.Framework.Platform.IWindow.SafeAreaPadding">
+  SafeAreaPadding
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides a <a class="xref" href="osu.Framework.Bindables.BindableSafeArea.html">BindableSafeArea</a> that can be used to keep track of the &quot;safe area&quot; insets on mobile
+devices. This usually corresponds to areas of the screen hidden under notches and rounded corners.
+The safe area insets are provided by the operating system and dynamically change as the user rotates the device.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">BindableSafeArea SafeAreaPadding { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.BindableSafeArea.html">BindableSafeArea</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_SupportedWindowModes_" data-uid="osu.Framework.Platform.IWindow.SupportedWindowModes*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_SupportedWindowModes" data-uid="osu.Framework.Platform.IWindow.SupportedWindowModes">
+  SupportedWindowModes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="osu.Framework.Platform.IWindow.html#osu_Framework_Platform_IWindow_WindowMode">WindowMode</a>s supported by this <a class="xref" href="osu.Framework.Platform.IWindow.html">IWindow</a> implementation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;WindowMode&gt; SupportedWindowModes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="osu.Framework.Configuration.WindowMode.html">WindowMode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_Title_" data-uid="osu.Framework.Platform.IWindow.Title*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_Title" data-uid="osu.Framework.Platform.IWindow.Title">
+  Title
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The window title.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Title { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_WindowMode_" data-uid="osu.Framework.Platform.IWindow.WindowMode*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_WindowMode" data-uid="osu.Framework.Platform.IWindow.WindowMode">
+  WindowMode
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Provides a <a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable&lt;T&gt;</a> that manages the current window mode.
+Supported window modes for the current platform can be retrieved via <a class="xref" href="osu.Framework.Platform.IWindow.html#osu_Framework_Platform_IWindow_SupportedWindowModes">SupportedWindowModes</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Bindable&lt;WindowMode&gt; WindowMode { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable</a>&lt;<a class="xref" href="osu.Framework.Configuration.WindowMode.html">WindowMode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_WindowState_" data-uid="osu.Framework.Platform.IWindow.WindowState*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_WindowState" data-uid="osu.Framework.Platform.IWindow.WindowState">
+  WindowState
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Controls the state of the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">WindowState WindowState { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Platform.WindowState.html">WindowState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Platform_IWindow_CancelFlash_" data-uid="osu.Framework.Platform.IWindow.CancelFlash*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_CancelFlash" data-uid="osu.Framework.Platform.IWindow.CancelFlash">
+  CancelFlash()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to cancel any window flash requested with <a class="xref" href="osu.Framework.Platform.IWindow.html#osu_Framework_Platform_IWindow_Flash_System_Boolean_">Flash(bool)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CancelFlash()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_IWindow_CancelFlash_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>On platforms which don't support any kind of flashing (ie. mobile), this will be a no-op.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_Close_" data-uid="osu.Framework.Platform.IWindow.Close*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_Close" data-uid="osu.Framework.Platform.IWindow.Close">
+  Close()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forcefully closes the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Close()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_Create_" data-uid="osu.Framework.Platform.IWindow.Create*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_Create" data-uid="osu.Framework.Platform.IWindow.Create">
+  Create()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates the concrete window implementation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Create()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_CycleMode_" data-uid="osu.Framework.Platform.IWindow.CycleMode*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_CycleMode" data-uid="osu.Framework.Platform.IWindow.CycleMode">
+  CycleMode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cycles through the available <a class="xref" href="osu.Framework.Platform.IWindow.html#osu_Framework_Platform_IWindow_WindowMode">WindowMode</a>s as determined by <a class="xref" href="osu.Framework.Platform.IWindow.html#osu_Framework_Platform_IWindow_SupportedWindowModes">SupportedWindowModes</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void CycleMode()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_DisableScreenSuspension_" data-uid="osu.Framework.Platform.IWindow.DisableScreenSuspension*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_DisableScreenSuspension" data-uid="osu.Framework.Platform.IWindow.DisableScreenSuspension">
+  DisableScreenSuspension()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disable any system level timers that might dim or turn off the screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void DisableScreenSuspension()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_EnableScreenSuspension_" data-uid="osu.Framework.Platform.IWindow.EnableScreenSuspension*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_EnableScreenSuspension" data-uid="osu.Framework.Platform.IWindow.EnableScreenSuspension">
+  EnableScreenSuspension()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enable any system level timers that might dim or turn off the screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void EnableScreenSuspension()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_Flash_" data-uid="osu.Framework.Platform.IWindow.Flash*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_Flash_System_Boolean_" data-uid="osu.Framework.Platform.IWindow.Flash(System.Boolean)">
+  Flash(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to flash the window in order to request the user's attention.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Flash(bool flashUntilFocused = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>flashUntilFocused</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>When <code>true</code>, the window will flash until it is focused again.
+When <code>false</code> it will only flash momentarily.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Platform_IWindow_Flash_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>On platforms which don't support any kind of flashing (ie. mobile), this will be a no-op.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_Hide_" data-uid="osu.Framework.Platform.IWindow.Hide*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_Hide" data-uid="osu.Framework.Platform.IWindow.Hide">
+  Hide()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to hide the window, making it invisible and hidden from the taskbar.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Hide()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_OnDraw_" data-uid="osu.Framework.Platform.IWindow.OnDraw*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_OnDraw" data-uid="osu.Framework.Platform.IWindow.OnDraw">
+  OnDraw()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked once a draw session has finished.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OnDraw()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_PointToClient_" data-uid="osu.Framework.Platform.IWindow.PointToClient*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_PointToClient_System_Drawing_Point_" data-uid="osu.Framework.Platform.IWindow.PointToClient(System.Drawing.Point)">
+  PointToClient(Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert a screen based coordinate to local window space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Point PointToClient(Point point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.point">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.point">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_PointToScreen_" data-uid="osu.Framework.Platform.IWindow.PointToScreen*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_PointToScreen_System_Drawing_Point_" data-uid="osu.Framework.Platform.IWindow.PointToScreen(System.Drawing.Point)">
+  PointToScreen(Point)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert a window based coordinate to global screen space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Point PointToScreen(Point point)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>point</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.point">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.point">Point</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_Raise_" data-uid="osu.Framework.Platform.IWindow.Raise*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_Raise" data-uid="osu.Framework.Platform.IWindow.Raise">
+  Raise()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to raise the window, bringing it above other windows and requesting input focus.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Raise()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_Run_" data-uid="osu.Framework.Platform.IWindow.Run*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_Run" data-uid="osu.Framework.Platform.IWindow.Run">
+  Run()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L218"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start the window's run loop.
+Is a blocking call on desktop platforms, and a non-blocking call on mobile platforms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Run()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_SetIconFromStream_" data-uid="osu.Framework.Platform.IWindow.SetIconFromStream*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_SetIconFromStream_System_IO_Stream_" data-uid="osu.Framework.Platform.IWindow.SetIconFromStream(System.IO.Stream)">
+  SetIconFromStream(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the window icon to the provided <code class="paramref">imageStream</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetIconFromStream(Stream imageStream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>imageStream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_SetupWindow_" data-uid="osu.Framework.Platform.IWindow.SetupWindow*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_SetupWindow_osu_Framework_Configuration_FrameworkConfigManager_" data-uid="osu.Framework.Platform.IWindow.SetupWindow(osu.Framework.Configuration.FrameworkConfigManager)">
+  SetupWindow(FrameworkConfigManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Configures the <a class="xref" href="osu.Framework.Platform.IWindow.html">IWindow</a> based on the provided <a class="xref" href="osu.Framework.Configuration.FrameworkConfigManager.html">FrameworkConfigManager</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetupWindow(FrameworkConfigManager config)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>config</code> <a class="xref" href="osu.Framework.Configuration.FrameworkConfigManager.html">FrameworkConfigManager</a></dt>
+    <dd><p>The configuration manager to use.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Platform_IWindow_Show_" data-uid="osu.Framework.Platform.IWindow.Show*"></a>
+
+  <h3 id="osu_Framework_Platform_IWindow_Show" data-uid="osu.Framework.Platform.IWindow.Show">
+  Show()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to show the window, making it visible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Show()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="osu_Framework_Platform_IWindow_DisplaysChanged" data-uid="osu.Framework.Platform.IWindow.DisplaysChanged">
+  DisplaysChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when <a class="xref" href="osu.Framework.Platform.IWindow.html#osu_Framework_Platform_IWindow_Displays">Displays</a> has changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;IEnumerable&lt;Display&gt;&gt;? DisplaysChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="osu.Framework.Platform.Display.html">Display</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_IWindow_DragDrop" data-uid="osu.Framework.Platform.IWindow.DragDrop">
+  DragDrop
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the user drops a file into the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action&lt;string&gt;? DragDrop</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_IWindow_ExitRequested" data-uid="osu.Framework.Platform.IWindow.ExitRequested">
+  ExitRequested
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the window close (X) button or another platform-native exit action has been pressed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action? ExitRequested</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_IWindow_Exited" data-uid="osu.Framework.Platform.IWindow.Exited">
+  Exited
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the <a class="xref" href="osu.Framework.Platform.IWindow.html">IWindow</a> has closed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action? Exited</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_IWindow_KeymapChanged" data-uid="osu.Framework.Platform.IWindow.KeymapChanged">
+  KeymapChanged
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the system keyboard layout has changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action? KeymapChanged</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_IWindow_LowOnMemory" data-uid="osu.Framework.Platform.IWindow.LowOnMemory">
+  LowOnMemory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the operating system is low on memory, in order for the application to free some.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action? LowOnMemory</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_IWindow_Resized" data-uid="osu.Framework.Platform.IWindow.Resized">
+  Resized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the <a class="xref" href="osu.Framework.Platform.IWindow.html">IWindow</a> client size has changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action? Resized</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_IWindow_Resumed" data-uid="osu.Framework.Platform.IWindow.Resumed">
+  Resumed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the application associated with this <a class="xref" href="osu.Framework.Platform.IWindow.html">IWindow</a> has been resumed from suspension.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action? Resumed</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_IWindow_Suspended" data-uid="osu.Framework.Platform.IWindow.Suspended">
+  Suspended
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the application associated with this <a class="xref" href="osu.Framework.Platform.IWindow.html">IWindow</a> has been suspended.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action? Suspended</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Platform_IWindow_Update" data-uid="osu.Framework.Platform.IWindow.Update">
+  Update
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked once every window event loop.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event Action? Update</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Platform/IWindow.cs/#L18" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

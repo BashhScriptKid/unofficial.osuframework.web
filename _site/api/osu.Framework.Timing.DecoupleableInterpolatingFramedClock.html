@@ -1,0 +1,708 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DecoupleableInterpolatingFramedClock | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DecoupleableInterpolatingFramedClock | osu!framework ">
+      
+      <meta name="description" content="Adds the ability to keep the clock running even when the underlying source has stopped or cannot handle the current time range. This is handled by performing seeks on the underlying source and checking whether they were successful or not. On failure to seek, we take over with an internal clock until control can be returned to the actual source. This clock type removes the requirement of having a source set. If a  is set, it is presumed that we have exclusive control over operations on it. This is used to our advantage to allow correct  state tracking in the event of cross-thread communication delays (with an audio thread, for instance).">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Timing_DecoupleableInterpolatingFramedClock.md&amp;value=---%0Auid%3A%20osu.Framework.Timing.DecoupleableInterpolatingFramedClock%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock">
+
+
+
+  <h1 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock" class="text-break">
+Class DecoupleableInterpolatingFramedClock  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Timing.html">Timing</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Adds the ability to keep the clock running even when the underlying source has stopped or cannot handle the current time range.
+This is handled by performing seeks on the underlying source and checking whether they were successful or not.
+On failure to seek, we take over with an internal clock until control can be returned to the actual source.</p>
+<p>This clock type removes the requirement of having a source set.</p>
+<p>If a <a class="xref" href="osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_Source">Source</a> is set, it is presumed that we have exclusive control over operations on it.
+This is used to our advantage to allow correct <a class="xref" href="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_IsRunning">IsRunning</a> state tracking in the event of cross-thread communication delays (with an audio thread, for instance).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This clock implementation is too complex and no longer. Use DecouplingClock instead.&quot;)]
+public class DecoupleableInterpolatingFramedClock : InterpolatingFramedClock, IFrameBasedClock, ISourceChangeableClock, IAdjustableClock, IClock</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="osu.Framework.Timing.InterpolatingFramedClock.html">InterpolatingFramedClock</a></div>
+      <div><span class="xref">DecoupleableInterpolatingFramedClock</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Timing.IFrameBasedClock.html">IFrameBasedClock</a></div>
+      <div><a class="xref" href="osu.Framework.Timing.ISourceChangeableClock.html">ISourceChangeableClock</a></div>
+      <div><a class="xref" href="osu.Framework.Timing.IAdjustableClock.html">IAdjustableClock</a></div>
+      <div><a class="xref" href="osu.Framework.Timing.IClock.html">IClock</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_AllowableErrorMilliseconds">InterpolatingFramedClock.AllowableErrorMilliseconds</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_IsInterpolating">InterpolatingFramedClock.IsInterpolating</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_Drift">InterpolatingFramedClock.Drift</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_Source">InterpolatingFramedClock.Source</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_FramedSourceClock">InterpolatingFramedClock.FramedSourceClock</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock__ctor_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.#ctor*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock__ctor" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.#ctor">
+  DecoupleableInterpolatingFramedClock()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DecoupleableInterpolatingFramedClock()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_IsCoupled" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsCoupled">
+  IsCoupled
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Specify whether we are coupled 1:1 to SourceClock. If not, we can independently continue operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCoupled</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_CurrentTime_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.CurrentTime*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_CurrentTime" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.CurrentTime">
+  CurrentTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The current time of this clock, in milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override double CurrentTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ElapsedFrameTime_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ElapsedFrameTime*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ElapsedFrameTime" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ElapsedFrameTime">
+  ElapsedFrameTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Elapsed time since last frame in milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override double ElapsedFrameTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_IsRunning_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_IsRunning" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning">
+  IsRunning
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this clock is currently running or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsRunning { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ProposedCurrentTime_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedCurrentTime*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ProposedCurrentTime" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedCurrentTime">
+  ProposedCurrentTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ProposedCurrentTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ProposedElapsedTime_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedElapsedTime*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ProposedElapsedTime" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedElapsedTime">
+  ProposedElapsedTime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double ProposedElapsedTime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Rate_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Rate*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Rate" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Rate">
+  Rate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The rate this clock is running at, relative to real-time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Rate { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ChangeSource_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ChangeSource*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ChangeSource_osu_Framework_Timing_IClock_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ChangeSource(osu.Framework.Timing.IClock)">
+  ChangeSource(IClock?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Change the source clock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ChangeSource(IClock? source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="osu.Framework.Timing.IClock.html">IClock</a></dt>
+    <dd><p>The new source clock.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ProcessFrame_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProcessFrame*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ProcessFrame" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProcessFrame">
+  ProcessFrame()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Processes one frame. Generally should be run once per update loop.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ProcessFrame()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Reset_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Reset*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Reset" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Reset">
+  Reset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stop and reset position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ResetSpeedAdjustments_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ResetSpeedAdjustments*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ResetSpeedAdjustments" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ResetSpeedAdjustments">
+  ResetSpeedAdjustments()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset the rate to a stable value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResetSpeedAdjustments()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Seek_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Seek*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Seek_System_Double_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Seek(System.Double)">
+  Seek(double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Seek to a specific time position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Seek(double position)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether a seek was possible.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Start_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Start*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Start" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Start">
+  Start()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start (resume) running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Stop_" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Stop*"></a>
+
+  <h3 id="osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Stop" data-uid="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Stop">
+  Stop()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stop (pause) running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs/#L19" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

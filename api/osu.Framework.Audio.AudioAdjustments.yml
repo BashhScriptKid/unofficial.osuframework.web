@@ -1,0 +1,2294 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Audio.AudioAdjustments
+  commentId: T:osu.Framework.Audio.AudioAdjustments
+  id: AudioAdjustments
+  parent: osu.Framework.Audio
+  children:
+  - osu.Framework.Audio.AudioAdjustments.#ctor
+  - osu.Framework.Audio.AudioAdjustments.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  - osu.Framework.Audio.AudioAdjustments.AggregateBalance
+  - osu.Framework.Audio.AudioAdjustments.AggregateFrequency
+  - osu.Framework.Audio.AudioAdjustments.AggregateTempo
+  - osu.Framework.Audio.AudioAdjustments.AggregateVolume
+  - osu.Framework.Audio.AudioAdjustments.Balance
+  - osu.Framework.Audio.AudioAdjustments.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  - osu.Framework.Audio.AudioAdjustments.Frequency
+  - osu.Framework.Audio.AudioAdjustments.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  - osu.Framework.Audio.AudioAdjustments.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+  - osu.Framework.Audio.AudioAdjustments.Tempo
+  - osu.Framework.Audio.AudioAdjustments.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  - osu.Framework.Audio.AudioAdjustments.Volume
+  langs:
+  - csharp
+  - vb
+  name: AudioAdjustments
+  nameWithType: AudioAdjustments
+  fullName: osu.Framework.Audio.AudioAdjustments
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AudioAdjustments
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 14
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: >-
+    Provides adjustable and bindable attributes for an audio component.
+
+    Aggregates results as a <xref href="osu.Framework.Audio.IAggregateAudioAdjustment" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public class AudioAdjustments : IAdjustableAudioComponent, IAggregateAudioAdjustment'
+    content.vb: Public Class AudioAdjustments Implements IAdjustableAudioComponent, IAggregateAudioAdjustment
+  inheritance:
+  - System.Object
+  implements:
+  - osu.Framework.Audio.IAdjustableAudioComponent
+  - osu.Framework.Audio.IAggregateAudioAdjustment
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Audio.AudioAdjustments.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Audio.AudioAdjustments.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Audio.AudioAdjustments.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Audio.AudioAdjustments.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Audio.AudioAdjustments.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Audio.AudioAdjustments.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Audio.AudioAdjustments.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Audio.AudioAdjustments.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  - osu.Framework.Audio.IAggregateAudioAdjustment.osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.AdjustableProperty)
+- uid: osu.Framework.Audio.AudioAdjustments.Volume
+  commentId: P:osu.Framework.Audio.AudioAdjustments.Volume
+  id: Volume
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: Volume
+  nameWithType: AudioAdjustments.Volume
+  fullName: osu.Framework.Audio.AudioAdjustments.Volume
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Volume
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 21
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: The volume of this component.
+  example: []
+  syntax:
+    content: public BindableNumber<double> Volume { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Bindables.BindableNumber{System.Double}
+    content.vb: Public ReadOnly Property Volume As BindableNumber(Of Double)
+  overload: osu.Framework.Audio.AudioAdjustments.Volume*
+  implements:
+  - osu.Framework.Audio.IAdjustableAudioComponent.Volume
+- uid: osu.Framework.Audio.AudioAdjustments.Balance
+  commentId: P:osu.Framework.Audio.AudioAdjustments.Balance
+  id: Balance
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: Balance
+  nameWithType: AudioAdjustments.Balance
+  fullName: osu.Framework.Audio.AudioAdjustments.Balance
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Balance
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 31
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: The playback balance of this sample (-1 .. 1 where 0 is centered)
+  example: []
+  syntax:
+    content: public BindableNumber<double> Balance { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Bindables.BindableNumber{System.Double}
+    content.vb: Public ReadOnly Property Balance As BindableNumber(Of Double)
+  overload: osu.Framework.Audio.AudioAdjustments.Balance*
+  implements:
+  - osu.Framework.Audio.IAdjustableAudioComponent.Balance
+- uid: osu.Framework.Audio.AudioAdjustments.Frequency
+  commentId: P:osu.Framework.Audio.AudioAdjustments.Frequency
+  id: Frequency
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: Frequency
+  nameWithType: AudioAdjustments.Frequency
+  fullName: osu.Framework.Audio.AudioAdjustments.Frequency
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Frequency
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 40
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Rate at which the component is played back (affects pitch). 1 is 100% playback speed, or default frequency.
+  example: []
+  syntax:
+    content: public BindableNumber<double> Frequency { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Bindables.BindableNumber{System.Double}
+    content.vb: Public ReadOnly Property Frequency As BindableNumber(Of Double)
+  overload: osu.Framework.Audio.AudioAdjustments.Frequency*
+  implements:
+  - osu.Framework.Audio.IAdjustableAudioComponent.Frequency
+- uid: osu.Framework.Audio.AudioAdjustments.Tempo
+  commentId: P:osu.Framework.Audio.AudioAdjustments.Tempo
+  id: Tempo
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: Tempo
+  nameWithType: AudioAdjustments.Tempo
+  fullName: osu.Framework.Audio.AudioAdjustments.Tempo
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Tempo
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 48
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Rate at which the component is played back (does not affect pitch). 1 is 100% playback speed.
+  example: []
+  syntax:
+    content: public BindableNumber<double> Tempo { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Bindables.BindableNumber{System.Double}
+    content.vb: Public ReadOnly Property Tempo As BindableNumber(Of Double)
+  overload: osu.Framework.Audio.AudioAdjustments.Tempo*
+  implements:
+  - osu.Framework.Audio.IAdjustableAudioComponent.Tempo
+- uid: osu.Framework.Audio.AudioAdjustments.AggregateVolume
+  commentId: P:osu.Framework.Audio.AudioAdjustments.AggregateVolume
+  id: AggregateVolume
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: AggregateVolume
+  nameWithType: AudioAdjustments.AggregateVolume
+  fullName: osu.Framework.Audio.AudioAdjustments.AggregateVolume
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AggregateVolume
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 53
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: The aggregate volume of this component (0..1).
+  example: []
+  syntax:
+    content: public IBindable<double> AggregateVolume { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Bindables.IBindable{System.Double}
+    content.vb: Public ReadOnly Property AggregateVolume As IBindable(Of Double)
+  overload: osu.Framework.Audio.AudioAdjustments.AggregateVolume*
+  implements:
+  - osu.Framework.Audio.IAggregateAudioAdjustment.AggregateVolume
+- uid: osu.Framework.Audio.AudioAdjustments.AggregateBalance
+  commentId: P:osu.Framework.Audio.AudioAdjustments.AggregateBalance
+  id: AggregateBalance
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: AggregateBalance
+  nameWithType: AudioAdjustments.AggregateBalance
+  fullName: osu.Framework.Audio.AudioAdjustments.AggregateBalance
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AggregateBalance
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 54
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: The aggregate playback balance of this sample (-1 .. 1 where 0 is centered)
+  example: []
+  syntax:
+    content: public IBindable<double> AggregateBalance { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Bindables.IBindable{System.Double}
+    content.vb: Public ReadOnly Property AggregateBalance As IBindable(Of Double)
+  overload: osu.Framework.Audio.AudioAdjustments.AggregateBalance*
+  implements:
+  - osu.Framework.Audio.IAggregateAudioAdjustment.AggregateBalance
+- uid: osu.Framework.Audio.AudioAdjustments.AggregateFrequency
+  commentId: P:osu.Framework.Audio.AudioAdjustments.AggregateFrequency
+  id: AggregateFrequency
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: AggregateFrequency
+  nameWithType: AudioAdjustments.AggregateFrequency
+  fullName: osu.Framework.Audio.AudioAdjustments.AggregateFrequency
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AggregateFrequency
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 55
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: The aggregate rate at which the component is played back (affects pitch). 1 is 100% playback speed, or default frequency.
+  example: []
+  syntax:
+    content: public IBindable<double> AggregateFrequency { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Bindables.IBindable{System.Double}
+    content.vb: Public ReadOnly Property AggregateFrequency As IBindable(Of Double)
+  overload: osu.Framework.Audio.AudioAdjustments.AggregateFrequency*
+  implements:
+  - osu.Framework.Audio.IAggregateAudioAdjustment.AggregateFrequency
+- uid: osu.Framework.Audio.AudioAdjustments.AggregateTempo
+  commentId: P:osu.Framework.Audio.AudioAdjustments.AggregateTempo
+  id: AggregateTempo
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: AggregateTempo
+  nameWithType: AudioAdjustments.AggregateTempo
+  fullName: osu.Framework.Audio.AudioAdjustments.AggregateTempo
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AggregateTempo
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 56
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: The aggregate rate at which the component is played back (does not affect pitch). 1 is 100% playback speed.
+  example: []
+  syntax:
+    content: public IBindable<double> AggregateTempo { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Bindables.IBindable{System.Double}
+    content.vb: Public ReadOnly Property AggregateTempo As IBindable(Of Double)
+  overload: osu.Framework.Audio.AudioAdjustments.AggregateTempo*
+  implements:
+  - osu.Framework.Audio.IAggregateAudioAdjustment.AggregateTempo
+- uid: osu.Framework.Audio.AudioAdjustments.#ctor
+  commentId: M:osu.Framework.Audio.AudioAdjustments.#ctor
+  id: '#ctor'
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: AudioAdjustments()
+  nameWithType: AudioAdjustments.AudioAdjustments()
+  fullName: osu.Framework.Audio.AudioAdjustments.AudioAdjustments()
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 63
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  syntax:
+    content: public AudioAdjustments()
+    content.vb: Public Sub New()
+  overload: osu.Framework.Audio.AudioAdjustments.#ctor*
+  nameWithType.vb: AudioAdjustments.New()
+  fullName.vb: osu.Framework.Audio.AudioAdjustments.New()
+  name.vb: New()
+- uid: osu.Framework.Audio.AudioAdjustments.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  commentId: M:osu.Framework.Audio.AudioAdjustments.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  id: AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: AddAdjustment(AdjustableProperty, IBindable<double>)
+  nameWithType: AudioAdjustments.AddAdjustment(AdjustableProperty, IBindable<double>)
+  fullName: osu.Framework.Audio.AudioAdjustments.AddAdjustment(osu.Framework.Audio.AdjustableProperty, osu.Framework.Bindables.IBindable<double>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AddAdjustment
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 72
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Add a bindable adjustment source.
+  example: []
+  syntax:
+    content: public void AddAdjustment(AdjustableProperty type, IBindable<double> adjustBindable)
+    parameters:
+    - id: type
+      type: osu.Framework.Audio.AdjustableProperty
+      description: The target type for this adjustment.
+    - id: adjustBindable
+      type: osu.Framework.Bindables.IBindable{System.Double}
+      description: The bindable adjustment.
+    content.vb: Public Sub AddAdjustment(type As AdjustableProperty, adjustBindable As IBindable(Of Double))
+  overload: osu.Framework.Audio.AudioAdjustments.AddAdjustment*
+  implements:
+  - osu.Framework.Audio.IAdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  nameWithType.vb: AudioAdjustments.AddAdjustment(AdjustableProperty, IBindable(Of Double))
+  fullName.vb: osu.Framework.Audio.AudioAdjustments.AddAdjustment(osu.Framework.Audio.AdjustableProperty, osu.Framework.Bindables.IBindable(Of Double))
+  name.vb: AddAdjustment(AdjustableProperty, IBindable(Of Double))
+- uid: osu.Framework.Audio.AudioAdjustments.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  commentId: M:osu.Framework.Audio.AudioAdjustments.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  id: RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: RemoveAdjustment(AdjustableProperty, IBindable<double>)
+  nameWithType: AudioAdjustments.RemoveAdjustment(AdjustableProperty, IBindable<double>)
+  fullName: osu.Framework.Audio.AudioAdjustments.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty, osu.Framework.Bindables.IBindable<double>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: RemoveAdjustment
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 75
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Remove a bindable adjustment source.
+  example: []
+  syntax:
+    content: public void RemoveAdjustment(AdjustableProperty type, IBindable<double> adjustBindable)
+    parameters:
+    - id: type
+      type: osu.Framework.Audio.AdjustableProperty
+      description: The target type for this adjustment.
+    - id: adjustBindable
+      type: osu.Framework.Bindables.IBindable{System.Double}
+      description: The bindable adjustment.
+    content.vb: Public Sub RemoveAdjustment(type As AdjustableProperty, adjustBindable As IBindable(Of Double))
+  overload: osu.Framework.Audio.AudioAdjustments.RemoveAdjustment*
+  implements:
+  - osu.Framework.Audio.IAdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  nameWithType.vb: AudioAdjustments.RemoveAdjustment(AdjustableProperty, IBindable(Of Double))
+  fullName.vb: osu.Framework.Audio.AudioAdjustments.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty, osu.Framework.Bindables.IBindable(Of Double))
+  name.vb: RemoveAdjustment(AdjustableProperty, IBindable(Of Double))
+- uid: osu.Framework.Audio.AudioAdjustments.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  commentId: M:osu.Framework.Audio.AudioAdjustments.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  id: BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: BindAdjustments(IAggregateAudioAdjustment)
+  nameWithType: AudioAdjustments.BindAdjustments(IAggregateAudioAdjustment)
+  fullName: osu.Framework.Audio.AudioAdjustments.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: BindAdjustments
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 78
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Bind all adjustments from an <xref href="osu.Framework.Audio.IAggregateAudioAdjustment" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void BindAdjustments(IAggregateAudioAdjustment component)
+    parameters:
+    - id: component
+      type: osu.Framework.Audio.IAggregateAudioAdjustment
+      description: The adjustment source.
+    content.vb: Public Sub BindAdjustments(component As IAggregateAudioAdjustment)
+  overload: osu.Framework.Audio.AudioAdjustments.BindAdjustments*
+  implements:
+  - osu.Framework.Audio.IAdjustableAudioComponent.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+- uid: osu.Framework.Audio.AudioAdjustments.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  commentId: M:osu.Framework.Audio.AudioAdjustments.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  id: UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: UnbindAdjustments(IAggregateAudioAdjustment)
+  nameWithType: AudioAdjustments.UnbindAdjustments(IAggregateAudioAdjustment)
+  fullName: osu.Framework.Audio.AudioAdjustments.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: UnbindAdjustments
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 84
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Unbind all adjustments from an <xref href="osu.Framework.Audio.IAggregateAudioAdjustment" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void UnbindAdjustments(IAggregateAudioAdjustment component)
+    parameters:
+    - id: component
+      type: osu.Framework.Audio.IAggregateAudioAdjustment
+      description: The adjustment source.
+    content.vb: Public Sub UnbindAdjustments(component As IAggregateAudioAdjustment)
+  overload: osu.Framework.Audio.AudioAdjustments.UnbindAdjustments*
+  implements:
+  - osu.Framework.Audio.IAdjustableAudioComponent.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+- uid: osu.Framework.Audio.AudioAdjustments.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+  commentId: M:osu.Framework.Audio.AudioAdjustments.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+  id: RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+  parent: osu.Framework.Audio.AudioAdjustments
+  langs:
+  - csharp
+  - vb
+  name: RemoveAllAdjustments(AdjustableProperty)
+  nameWithType: AudioAdjustments.RemoveAllAdjustments(AdjustableProperty)
+  fullName: osu.Framework.Audio.AudioAdjustments.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioAdjustments.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: RemoveAllAdjustments
+    path: osu.Framework/Audio/AudioAdjustments.cs
+    startLine: 90
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Removes all adjustments of a type.
+  example: []
+  syntax:
+    content: public void RemoveAllAdjustments(AdjustableProperty type)
+    parameters:
+    - id: type
+      type: osu.Framework.Audio.AdjustableProperty
+      description: The target type to remove all adjustments of.
+    content.vb: Public Sub RemoveAllAdjustments(type As AdjustableProperty)
+  overload: osu.Framework.Audio.AudioAdjustments.RemoveAllAdjustments*
+  implements:
+  - osu.Framework.Audio.IAdjustableAudioComponent.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+references:
+- uid: osu.Framework.Audio.IAggregateAudioAdjustment
+  commentId: T:osu.Framework.Audio.IAggregateAudioAdjustment
+  parent: osu.Framework.Audio
+  href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  name: IAggregateAudioAdjustment
+  nameWithType: IAggregateAudioAdjustment
+  fullName: osu.Framework.Audio.IAggregateAudioAdjustment
+- uid: osu.Framework.Audio
+  commentId: N:osu.Framework.Audio
+  href: osu.html
+  name: osu.Framework.Audio
+  nameWithType: osu.Framework.Audio
+  fullName: osu.Framework.Audio
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Audio
+    name: Audio
+    href: osu.Framework.Audio.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Audio
+    name: Audio
+    href: osu.Framework.Audio.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: osu.Framework.Audio.IAdjustableAudioComponent
+  commentId: T:osu.Framework.Audio.IAdjustableAudioComponent
+  parent: osu.Framework.Audio
+  href: osu.Framework.Audio.IAdjustableAudioComponent.html
+  name: IAdjustableAudioComponent
+  nameWithType: IAdjustableAudioComponent
+  fullName: osu.Framework.Audio.IAdjustableAudioComponent
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Audio.AudioAdjustments.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<AudioAdjustments>(AudioAdjustments)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<AudioAdjustments>(AudioAdjustments)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Audio.AudioAdjustments>(osu.Framework.Audio.AudioAdjustments)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of AudioAdjustments)(AudioAdjustments)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Audio.AudioAdjustments)(osu.Framework.Audio.AudioAdjustments)
+  name.vb: GetLocalisableDescription(Of AudioAdjustments)(AudioAdjustments)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Audio.AudioAdjustments)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Audio.AudioAdjustments)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+- uid: osu.Framework.Audio.AudioAdjustments.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<AudioAdjustments>(AudioAdjustments)
+  nameWithType: EnumerableExtensions.Yield<AudioAdjustments>(AudioAdjustments)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Audio.AudioAdjustments>(osu.Framework.Audio.AudioAdjustments)
+  nameWithType.vb: EnumerableExtensions.Yield(Of AudioAdjustments)(AudioAdjustments)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Audio.AudioAdjustments)(osu.Framework.Audio.AudioAdjustments)
+  name.vb: Yield(Of AudioAdjustments)(AudioAdjustments)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Audio.AudioAdjustments)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Audio.AudioAdjustments)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+- uid: osu.Framework.Audio.AudioAdjustments.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<AudioAdjustments>(AudioAdjustments)
+  nameWithType: ObjectExtensions.AsNonNull<AudioAdjustments>(AudioAdjustments)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Audio.AudioAdjustments>(osu.Framework.Audio.AudioAdjustments)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of AudioAdjustments)(AudioAdjustments)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Audio.AudioAdjustments)(osu.Framework.Audio.AudioAdjustments)
+  name.vb: AsNonNull(Of AudioAdjustments)(AudioAdjustments)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Audio.AudioAdjustments)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Audio.AudioAdjustments)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+- uid: osu.Framework.Audio.AudioAdjustments.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<AudioAdjustments>(AudioAdjustments)
+  nameWithType: ObjectExtensions.IsNotNull<AudioAdjustments>(AudioAdjustments)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Audio.AudioAdjustments>(osu.Framework.Audio.AudioAdjustments)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of AudioAdjustments)(AudioAdjustments)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Audio.AudioAdjustments)(osu.Framework.Audio.AudioAdjustments)
+  name.vb: IsNotNull(Of AudioAdjustments)(AudioAdjustments)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Audio.AudioAdjustments)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Audio.AudioAdjustments)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+- uid: osu.Framework.Audio.AudioAdjustments.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<AudioAdjustments>(AudioAdjustments)
+  nameWithType: ObjectExtensions.IsNull<AudioAdjustments>(AudioAdjustments)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Audio.AudioAdjustments>(osu.Framework.Audio.AudioAdjustments)
+  nameWithType.vb: ObjectExtensions.IsNull(Of AudioAdjustments)(AudioAdjustments)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Audio.AudioAdjustments)(osu.Framework.Audio.AudioAdjustments)
+  name.vb: IsNull(Of AudioAdjustments)(AudioAdjustments)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Audio.AudioAdjustments)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Audio.AudioAdjustments)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: )
+- uid: osu.Framework.Audio.AudioAdjustments.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<AudioAdjustments, TChild>(AudioAdjustments, TChild)
+  nameWithType: ContainerExtensions.WithChild<AudioAdjustments, TChild>(AudioAdjustments, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Audio.AudioAdjustments, TChild>(osu.Framework.Audio.AudioAdjustments, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of AudioAdjustments, TChild)(AudioAdjustments, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Audio.AudioAdjustments, TChild)(osu.Framework.Audio.AudioAdjustments, TChild)
+  name.vb: WithChild(Of AudioAdjustments, TChild)(AudioAdjustments, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Audio.AudioAdjustments,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Audio.AudioAdjustments,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Audio.AudioAdjustments.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<AudioAdjustments, TChild>(AudioAdjustments, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<AudioAdjustments, TChild>(AudioAdjustments, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Audio.AudioAdjustments, TChild>(osu.Framework.Audio.AudioAdjustments, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of AudioAdjustments, TChild)(AudioAdjustments, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Audio.AudioAdjustments, TChild)(osu.Framework.Audio.AudioAdjustments, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of AudioAdjustments, TChild)(AudioAdjustments, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Audio.AudioAdjustments,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Audio.AudioAdjustments,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Audio.AudioAdjustments.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<AudioAdjustments, TChild>(AudioAdjustments, TChild)
+  nameWithType: ContainerExtensions.Wrap<AudioAdjustments, TChild>(AudioAdjustments, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Audio.AudioAdjustments, TChild>(osu.Framework.Audio.AudioAdjustments, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of AudioAdjustments, TChild)(AudioAdjustments, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Audio.AudioAdjustments, TChild)(osu.Framework.Audio.AudioAdjustments, TChild)
+  name.vb: Wrap(Of AudioAdjustments, TChild)(AudioAdjustments, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Audio.AudioAdjustments,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Audio.AudioAdjustments,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioAdjustments
+    name: AudioAdjustments
+    href: osu.Framework.Audio.AudioAdjustments.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Audio.IAggregateAudioAdjustment.osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.AdjustableProperty)
+  commentId: M:osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+  parent: osu.Framework.Audio.AggregateAdjustmentExtensions
+  definition: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+  href: osu.Framework.Audio.AggregateAdjustmentExtensions.html#osu_Framework_Audio_AggregateAdjustmentExtensions_GetAggregate_osu_Framework_Audio_IAggregateAudioAdjustment_osu_Framework_Audio_AdjustableProperty_
+  name: GetAggregate(IAggregateAudioAdjustment, AdjustableProperty)
+  nameWithType: AggregateAdjustmentExtensions.GetAggregate(IAggregateAudioAdjustment, AdjustableProperty)
+  fullName: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment, osu.Framework.Audio.AdjustableProperty)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+    name: GetAggregate
+    href: osu.Framework.Audio.AggregateAdjustmentExtensions.html#osu_Framework_Audio_AggregateAdjustmentExtensions_GetAggregate_osu_Framework_Audio_IAggregateAudioAdjustment_osu_Framework_Audio_AdjustableProperty_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+    name: GetAggregate
+    href: osu.Framework.Audio.AggregateAdjustmentExtensions.html#osu_Framework_Audio_AggregateAdjustmentExtensions_GetAggregate_osu_Framework_Audio_IAggregateAudioAdjustment_osu_Framework_Audio_AdjustableProperty_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+  commentId: M:osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+  href: osu.Framework.Audio.AggregateAdjustmentExtensions.html#osu_Framework_Audio_AggregateAdjustmentExtensions_GetAggregate_osu_Framework_Audio_IAggregateAudioAdjustment_osu_Framework_Audio_AdjustableProperty_
+  name: GetAggregate(IAggregateAudioAdjustment, AdjustableProperty)
+  nameWithType: AggregateAdjustmentExtensions.GetAggregate(IAggregateAudioAdjustment, AdjustableProperty)
+  fullName: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment, osu.Framework.Audio.AdjustableProperty)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+    name: GetAggregate
+    href: osu.Framework.Audio.AggregateAdjustmentExtensions.html#osu_Framework_Audio_AggregateAdjustmentExtensions_GetAggregate_osu_Framework_Audio_IAggregateAudioAdjustment_osu_Framework_Audio_AdjustableProperty_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+    name: GetAggregate
+    href: osu.Framework.Audio.AggregateAdjustmentExtensions.html#osu_Framework_Audio_AggregateAdjustmentExtensions_GetAggregate_osu_Framework_Audio_IAggregateAudioAdjustment_osu_Framework_Audio_AdjustableProperty_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: )
+- uid: osu.Framework.Audio.AggregateAdjustmentExtensions
+  commentId: T:osu.Framework.Audio.AggregateAdjustmentExtensions
+  parent: osu.Framework.Audio
+  href: osu.Framework.Audio.AggregateAdjustmentExtensions.html
+  name: AggregateAdjustmentExtensions
+  nameWithType: AggregateAdjustmentExtensions
+  fullName: osu.Framework.Audio.AggregateAdjustmentExtensions
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Audio.AudioAdjustments.Volume*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.Volume
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_Volume
+  name: Volume
+  nameWithType: AudioAdjustments.Volume
+  fullName: osu.Framework.Audio.AudioAdjustments.Volume
+- uid: osu.Framework.Audio.IAdjustableAudioComponent.Volume
+  commentId: P:osu.Framework.Audio.IAdjustableAudioComponent.Volume
+  parent: osu.Framework.Audio.IAdjustableAudioComponent
+  href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_Volume
+  name: Volume
+  nameWithType: IAdjustableAudioComponent.Volume
+  fullName: osu.Framework.Audio.IAdjustableAudioComponent.Volume
+- uid: osu.Framework.Bindables.BindableNumber{System.Double}
+  commentId: T:osu.Framework.Bindables.BindableNumber{System.Double}
+  parent: osu.Framework.Bindables
+  definition: osu.Framework.Bindables.BindableNumber`1
+  href: osu.Framework.Bindables.BindableNumber-1.html
+  name: BindableNumber<double>
+  nameWithType: BindableNumber<double>
+  fullName: osu.Framework.Bindables.BindableNumber<double>
+  nameWithType.vb: BindableNumber(Of Double)
+  fullName.vb: osu.Framework.Bindables.BindableNumber(Of Double)
+  name.vb: BindableNumber(Of Double)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.BindableNumber`1
+    name: BindableNumber
+    href: osu.Framework.Bindables.BindableNumber-1.html
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.BindableNumber`1
+    name: BindableNumber
+    href: osu.Framework.Bindables.BindableNumber-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: osu.Framework.Bindables.BindableNumber`1
+  commentId: T:osu.Framework.Bindables.BindableNumber`1
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.BindableNumber-1.html
+  name: BindableNumber<T>
+  nameWithType: BindableNumber<T>
+  fullName: osu.Framework.Bindables.BindableNumber<T>
+  nameWithType.vb: BindableNumber(Of T)
+  fullName.vb: osu.Framework.Bindables.BindableNumber(Of T)
+  name.vb: BindableNumber(Of T)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.BindableNumber`1
+    name: BindableNumber
+    href: osu.Framework.Bindables.BindableNumber-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.BindableNumber`1
+    name: BindableNumber
+    href: osu.Framework.Bindables.BindableNumber-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Bindables
+  commentId: N:osu.Framework.Bindables
+  href: osu.html
+  name: osu.Framework.Bindables
+  nameWithType: osu.Framework.Bindables
+  fullName: osu.Framework.Bindables
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+- uid: osu.Framework.Audio.AudioAdjustments.Balance*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.Balance
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_Balance
+  name: Balance
+  nameWithType: AudioAdjustments.Balance
+  fullName: osu.Framework.Audio.AudioAdjustments.Balance
+- uid: osu.Framework.Audio.IAdjustableAudioComponent.Balance
+  commentId: P:osu.Framework.Audio.IAdjustableAudioComponent.Balance
+  parent: osu.Framework.Audio.IAdjustableAudioComponent
+  href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_Balance
+  name: Balance
+  nameWithType: IAdjustableAudioComponent.Balance
+  fullName: osu.Framework.Audio.IAdjustableAudioComponent.Balance
+- uid: osu.Framework.Audio.AudioAdjustments.Frequency*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.Frequency
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_Frequency
+  name: Frequency
+  nameWithType: AudioAdjustments.Frequency
+  fullName: osu.Framework.Audio.AudioAdjustments.Frequency
+- uid: osu.Framework.Audio.IAdjustableAudioComponent.Frequency
+  commentId: P:osu.Framework.Audio.IAdjustableAudioComponent.Frequency
+  parent: osu.Framework.Audio.IAdjustableAudioComponent
+  href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_Frequency
+  name: Frequency
+  nameWithType: IAdjustableAudioComponent.Frequency
+  fullName: osu.Framework.Audio.IAdjustableAudioComponent.Frequency
+- uid: osu.Framework.Audio.AudioAdjustments.Tempo*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.Tempo
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_Tempo
+  name: Tempo
+  nameWithType: AudioAdjustments.Tempo
+  fullName: osu.Framework.Audio.AudioAdjustments.Tempo
+- uid: osu.Framework.Audio.IAdjustableAudioComponent.Tempo
+  commentId: P:osu.Framework.Audio.IAdjustableAudioComponent.Tempo
+  parent: osu.Framework.Audio.IAdjustableAudioComponent
+  href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_Tempo
+  name: Tempo
+  nameWithType: IAdjustableAudioComponent.Tempo
+  fullName: osu.Framework.Audio.IAdjustableAudioComponent.Tempo
+- uid: osu.Framework.Audio.AudioAdjustments.AggregateVolume*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.AggregateVolume
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_AggregateVolume
+  name: AggregateVolume
+  nameWithType: AudioAdjustments.AggregateVolume
+  fullName: osu.Framework.Audio.AudioAdjustments.AggregateVolume
+- uid: osu.Framework.Audio.IAggregateAudioAdjustment.AggregateVolume
+  commentId: P:osu.Framework.Audio.IAggregateAudioAdjustment.AggregateVolume
+  parent: osu.Framework.Audio.IAggregateAudioAdjustment
+  href: osu.Framework.Audio.IAggregateAudioAdjustment.html#osu_Framework_Audio_IAggregateAudioAdjustment_AggregateVolume
+  name: AggregateVolume
+  nameWithType: IAggregateAudioAdjustment.AggregateVolume
+  fullName: osu.Framework.Audio.IAggregateAudioAdjustment.AggregateVolume
+- uid: osu.Framework.Bindables.IBindable{System.Double}
+  commentId: T:osu.Framework.Bindables.IBindable{System.Double}
+  parent: osu.Framework.Bindables
+  definition: osu.Framework.Bindables.IBindable`1
+  href: osu.Framework.Bindables.IBindable-1.html
+  name: IBindable<double>
+  nameWithType: IBindable<double>
+  fullName: osu.Framework.Bindables.IBindable<double>
+  nameWithType.vb: IBindable(Of Double)
+  fullName.vb: osu.Framework.Bindables.IBindable(Of Double)
+  name.vb: IBindable(Of Double)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: osu.Framework.Bindables.IBindable`1
+  commentId: T:osu.Framework.Bindables.IBindable`1
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.IBindable-1.html
+  name: IBindable<T>
+  nameWithType: IBindable<T>
+  fullName: osu.Framework.Bindables.IBindable<T>
+  nameWithType.vb: IBindable(Of T)
+  fullName.vb: osu.Framework.Bindables.IBindable(Of T)
+  name.vb: IBindable(Of T)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Audio.AudioAdjustments.AggregateBalance*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.AggregateBalance
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_AggregateBalance
+  name: AggregateBalance
+  nameWithType: AudioAdjustments.AggregateBalance
+  fullName: osu.Framework.Audio.AudioAdjustments.AggregateBalance
+- uid: osu.Framework.Audio.IAggregateAudioAdjustment.AggregateBalance
+  commentId: P:osu.Framework.Audio.IAggregateAudioAdjustment.AggregateBalance
+  parent: osu.Framework.Audio.IAggregateAudioAdjustment
+  href: osu.Framework.Audio.IAggregateAudioAdjustment.html#osu_Framework_Audio_IAggregateAudioAdjustment_AggregateBalance
+  name: AggregateBalance
+  nameWithType: IAggregateAudioAdjustment.AggregateBalance
+  fullName: osu.Framework.Audio.IAggregateAudioAdjustment.AggregateBalance
+- uid: osu.Framework.Audio.AudioAdjustments.AggregateFrequency*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.AggregateFrequency
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_AggregateFrequency
+  name: AggregateFrequency
+  nameWithType: AudioAdjustments.AggregateFrequency
+  fullName: osu.Framework.Audio.AudioAdjustments.AggregateFrequency
+- uid: osu.Framework.Audio.IAggregateAudioAdjustment.AggregateFrequency
+  commentId: P:osu.Framework.Audio.IAggregateAudioAdjustment.AggregateFrequency
+  parent: osu.Framework.Audio.IAggregateAudioAdjustment
+  href: osu.Framework.Audio.IAggregateAudioAdjustment.html#osu_Framework_Audio_IAggregateAudioAdjustment_AggregateFrequency
+  name: AggregateFrequency
+  nameWithType: IAggregateAudioAdjustment.AggregateFrequency
+  fullName: osu.Framework.Audio.IAggregateAudioAdjustment.AggregateFrequency
+- uid: osu.Framework.Audio.AudioAdjustments.AggregateTempo*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.AggregateTempo
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_AggregateTempo
+  name: AggregateTempo
+  nameWithType: AudioAdjustments.AggregateTempo
+  fullName: osu.Framework.Audio.AudioAdjustments.AggregateTempo
+- uid: osu.Framework.Audio.IAggregateAudioAdjustment.AggregateTempo
+  commentId: P:osu.Framework.Audio.IAggregateAudioAdjustment.AggregateTempo
+  parent: osu.Framework.Audio.IAggregateAudioAdjustment
+  href: osu.Framework.Audio.IAggregateAudioAdjustment.html#osu_Framework_Audio_IAggregateAudioAdjustment_AggregateTempo
+  name: AggregateTempo
+  nameWithType: IAggregateAudioAdjustment.AggregateTempo
+  fullName: osu.Framework.Audio.IAggregateAudioAdjustment.AggregateTempo
+- uid: osu.Framework.Audio.AudioAdjustments.#ctor*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.#ctor
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments__ctor
+  name: AudioAdjustments
+  nameWithType: AudioAdjustments.AudioAdjustments
+  fullName: osu.Framework.Audio.AudioAdjustments.AudioAdjustments
+  nameWithType.vb: AudioAdjustments.New
+  fullName.vb: osu.Framework.Audio.AudioAdjustments.New
+  name.vb: New
+- uid: osu.Framework.Audio.AudioAdjustments.AddAdjustment*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.AddAdjustment
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_AddAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  name: AddAdjustment
+  nameWithType: AudioAdjustments.AddAdjustment
+  fullName: osu.Framework.Audio.AudioAdjustments.AddAdjustment
+- uid: osu.Framework.Audio.IAdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  commentId: M:osu.Framework.Audio.IAdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  parent: osu.Framework.Audio.IAdjustableAudioComponent
+  isExternal: true
+  href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_AddAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  name: AddAdjustment(AdjustableProperty, IBindable<double>)
+  nameWithType: IAdjustableAudioComponent.AddAdjustment(AdjustableProperty, IBindable<double>)
+  fullName: osu.Framework.Audio.IAdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty, osu.Framework.Bindables.IBindable<double>)
+  nameWithType.vb: IAdjustableAudioComponent.AddAdjustment(AdjustableProperty, IBindable(Of Double))
+  fullName.vb: osu.Framework.Audio.IAdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty, osu.Framework.Bindables.IBindable(Of Double))
+  name.vb: AddAdjustment(AdjustableProperty, IBindable(Of Double))
+  spec.csharp:
+  - uid: osu.Framework.Audio.IAdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+    name: AddAdjustment
+    href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_AddAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  - name: (
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.IAdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+    name: AddAdjustment
+    href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_AddAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  - name: (
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: osu.Framework.Audio.AdjustableProperty
+  commentId: T:osu.Framework.Audio.AdjustableProperty
+  parent: osu.Framework.Audio
+  href: osu.Framework.Audio.AdjustableProperty.html
+  name: AdjustableProperty
+  nameWithType: AdjustableProperty
+  fullName: osu.Framework.Audio.AdjustableProperty
+- uid: osu.Framework.Audio.AudioAdjustments.RemoveAdjustment*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.RemoveAdjustment
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_RemoveAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  name: RemoveAdjustment
+  nameWithType: AudioAdjustments.RemoveAdjustment
+  fullName: osu.Framework.Audio.AudioAdjustments.RemoveAdjustment
+- uid: osu.Framework.Audio.IAdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  commentId: M:osu.Framework.Audio.IAdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  parent: osu.Framework.Audio.IAdjustableAudioComponent
+  isExternal: true
+  href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_RemoveAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  name: RemoveAdjustment(AdjustableProperty, IBindable<double>)
+  nameWithType: IAdjustableAudioComponent.RemoveAdjustment(AdjustableProperty, IBindable<double>)
+  fullName: osu.Framework.Audio.IAdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty, osu.Framework.Bindables.IBindable<double>)
+  nameWithType.vb: IAdjustableAudioComponent.RemoveAdjustment(AdjustableProperty, IBindable(Of Double))
+  fullName.vb: osu.Framework.Audio.IAdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty, osu.Framework.Bindables.IBindable(Of Double))
+  name.vb: RemoveAdjustment(AdjustableProperty, IBindable(Of Double))
+  spec.csharp:
+  - uid: osu.Framework.Audio.IAdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+    name: RemoveAdjustment
+    href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_RemoveAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  - name: (
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.IAdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+    name: RemoveAdjustment
+    href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_RemoveAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  - name: (
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: osu.Framework.Audio.AudioAdjustments.BindAdjustments*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.BindAdjustments
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_BindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  name: BindAdjustments
+  nameWithType: AudioAdjustments.BindAdjustments
+  fullName: osu.Framework.Audio.AudioAdjustments.BindAdjustments
+- uid: osu.Framework.Audio.IAdjustableAudioComponent.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  commentId: M:osu.Framework.Audio.IAdjustableAudioComponent.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  parent: osu.Framework.Audio.IAdjustableAudioComponent
+  href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_BindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  name: BindAdjustments(IAggregateAudioAdjustment)
+  nameWithType: IAdjustableAudioComponent.BindAdjustments(IAggregateAudioAdjustment)
+  fullName: osu.Framework.Audio.IAdjustableAudioComponent.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  spec.csharp:
+  - uid: osu.Framework.Audio.IAdjustableAudioComponent.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+    name: BindAdjustments
+    href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_BindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.IAdjustableAudioComponent.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+    name: BindAdjustments
+    href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_BindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: )
+- uid: osu.Framework.Audio.AudioAdjustments.UnbindAdjustments*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.UnbindAdjustments
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_UnbindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  name: UnbindAdjustments
+  nameWithType: AudioAdjustments.UnbindAdjustments
+  fullName: osu.Framework.Audio.AudioAdjustments.UnbindAdjustments
+- uid: osu.Framework.Audio.IAdjustableAudioComponent.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  commentId: M:osu.Framework.Audio.IAdjustableAudioComponent.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  parent: osu.Framework.Audio.IAdjustableAudioComponent
+  href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_UnbindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  name: UnbindAdjustments(IAggregateAudioAdjustment)
+  nameWithType: IAdjustableAudioComponent.UnbindAdjustments(IAggregateAudioAdjustment)
+  fullName: osu.Framework.Audio.IAdjustableAudioComponent.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  spec.csharp:
+  - uid: osu.Framework.Audio.IAdjustableAudioComponent.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+    name: UnbindAdjustments
+    href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_UnbindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.IAdjustableAudioComponent.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+    name: UnbindAdjustments
+    href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_UnbindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: )
+- uid: osu.Framework.Audio.AudioAdjustments.RemoveAllAdjustments*
+  commentId: Overload:osu.Framework.Audio.AudioAdjustments.RemoveAllAdjustments
+  href: osu.Framework.Audio.AudioAdjustments.html#osu_Framework_Audio_AudioAdjustments_RemoveAllAdjustments_osu_Framework_Audio_AdjustableProperty_
+  name: RemoveAllAdjustments
+  nameWithType: AudioAdjustments.RemoveAllAdjustments
+  fullName: osu.Framework.Audio.AudioAdjustments.RemoveAllAdjustments
+- uid: osu.Framework.Audio.IAdjustableAudioComponent.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+  commentId: M:osu.Framework.Audio.IAdjustableAudioComponent.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+  parent: osu.Framework.Audio.IAdjustableAudioComponent
+  href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_RemoveAllAdjustments_osu_Framework_Audio_AdjustableProperty_
+  name: RemoveAllAdjustments(AdjustableProperty)
+  nameWithType: IAdjustableAudioComponent.RemoveAllAdjustments(AdjustableProperty)
+  fullName: osu.Framework.Audio.IAdjustableAudioComponent.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+  spec.csharp:
+  - uid: osu.Framework.Audio.IAdjustableAudioComponent.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+    name: RemoveAllAdjustments
+    href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_RemoveAllAdjustments_osu_Framework_Audio_AdjustableProperty_
+  - name: (
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.IAdjustableAudioComponent.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+    name: RemoveAllAdjustments
+    href: osu.Framework.Audio.IAdjustableAudioComponent.html#osu_Framework_Audio_IAdjustableAudioComponent_RemoveAllAdjustments_osu_Framework_Audio_AdjustableProperty_
+  - name: (
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: )

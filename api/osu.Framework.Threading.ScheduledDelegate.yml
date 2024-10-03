@@ -1,0 +1,1934 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Threading.ScheduledDelegate
+  commentId: T:osu.Framework.Threading.ScheduledDelegate
+  id: ScheduledDelegate
+  parent: osu.Framework.Threading
+  children:
+  - osu.Framework.Threading.ScheduledDelegate.#ctor(System.Action,System.Double,System.Double)
+  - osu.Framework.Threading.ScheduledDelegate.#ctor(System.Double,System.Double)
+  - osu.Framework.Threading.ScheduledDelegate.Cancel
+  - osu.Framework.Threading.ScheduledDelegate.Cancelled
+  - osu.Framework.Threading.ScheduledDelegate.CompareTo(osu.Framework.Threading.ScheduledDelegate)
+  - osu.Framework.Threading.ScheduledDelegate.Completed
+  - osu.Framework.Threading.ScheduledDelegate.ExecutionTime
+  - osu.Framework.Threading.ScheduledDelegate.InvokeTask
+  - osu.Framework.Threading.ScheduledDelegate.PerformRepeatCatchUpExecutions
+  - osu.Framework.Threading.ScheduledDelegate.RepeatInterval
+  - osu.Framework.Threading.ScheduledDelegate.RunTask
+  - osu.Framework.Threading.ScheduledDelegate.State
+  - osu.Framework.Threading.ScheduledDelegate.ToString
+  langs:
+  - csharp
+  - vb
+  name: ScheduledDelegate
+  nameWithType: ScheduledDelegate
+  fullName: osu.Framework.Threading.ScheduledDelegate
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ScheduledDelegate
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 8
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  syntax:
+    content: 'public class ScheduledDelegate : IComparable<ScheduledDelegate>'
+    content.vb: Public Class ScheduledDelegate Implements IComparable(Of ScheduledDelegate)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IComparable{osu.Framework.Threading.ScheduledDelegate}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Threading.ScheduledDelegate.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Threading.ScheduledDelegate.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Threading.ScheduledDelegate.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Threading.ScheduledDelegate.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Threading.ScheduledDelegate.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Threading.ScheduledDelegate.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Threading.ScheduledDelegate.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Threading.ScheduledDelegate.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Threading.ScheduledDelegate.ExecutionTime
+  commentId: P:osu.Framework.Threading.ScheduledDelegate.ExecutionTime
+  id: ExecutionTime
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: ExecutionTime
+  nameWithType: ScheduledDelegate.ExecutionTime
+  fullName: osu.Framework.Threading.ScheduledDelegate.ExecutionTime
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ExecutionTime
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 13
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: The earliest ElapsedTime value at which this task will be executed via a <xref href="osu.Framework.Threading.Scheduler" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public double ExecutionTime { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ExecutionTime As Double
+  overload: osu.Framework.Threading.ScheduledDelegate.ExecutionTime*
+- uid: osu.Framework.Threading.ScheduledDelegate.RepeatInterval
+  commentId: F:osu.Framework.Threading.ScheduledDelegate.RepeatInterval
+  id: RepeatInterval
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: RepeatInterval
+  nameWithType: ScheduledDelegate.RepeatInterval
+  fullName: osu.Framework.Threading.ScheduledDelegate.RepeatInterval
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: RepeatInterval
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 18
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Time in milliseconds between repeats of this task. -1 means no repeats.
+  example: []
+  syntax:
+    content: public readonly double RepeatInterval
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly RepeatInterval As Double
+- uid: osu.Framework.Threading.ScheduledDelegate.PerformRepeatCatchUpExecutions
+  commentId: F:osu.Framework.Threading.ScheduledDelegate.PerformRepeatCatchUpExecutions
+  id: PerformRepeatCatchUpExecutions
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: PerformRepeatCatchUpExecutions
+  nameWithType: ScheduledDelegate.PerformRepeatCatchUpExecutions
+  fullName: osu.Framework.Threading.ScheduledDelegate.PerformRepeatCatchUpExecutions
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: PerformRepeatCatchUpExecutions
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 25
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: >-
+    In the case of a repeating execution, setting this to true will allow the delegate to run more than once at already elapsed points in time in order to catch up to current.
+
+    This will ensure a consistent number of runs over real-time, even if the <xref href="osu.Framework.Threading.Scheduler" data-throw-if-not-resolved="false"></xref> running the delegate is suspended.
+
+    Setting to false will skip catch-up executions, ensuring a future time is used after each execution.
+  example: []
+  syntax:
+    content: public bool PerformRepeatCatchUpExecutions
+    return:
+      type: System.Boolean
+    content.vb: Public PerformRepeatCatchUpExecutions As Boolean
+- uid: osu.Framework.Threading.ScheduledDelegate.Completed
+  commentId: P:osu.Framework.Threading.ScheduledDelegate.Completed
+  id: Completed
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: Completed
+  nameWithType: ScheduledDelegate.Completed
+  fullName: osu.Framework.Threading.ScheduledDelegate.Completed
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Completed
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 30
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Whether this task has finished running.
+  example: []
+  syntax:
+    content: public bool Completed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Completed As Boolean
+  overload: osu.Framework.Threading.ScheduledDelegate.Completed*
+- uid: osu.Framework.Threading.ScheduledDelegate.Cancelled
+  commentId: P:osu.Framework.Threading.ScheduledDelegate.Cancelled
+  id: Cancelled
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: Cancelled
+  nameWithType: ScheduledDelegate.Cancelled
+  fullName: osu.Framework.Threading.ScheduledDelegate.Cancelled
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Cancelled
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 35
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Whether this task has been cancelled.
+  example: []
+  syntax:
+    content: public bool Cancelled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Cancelled As Boolean
+  overload: osu.Framework.Threading.ScheduledDelegate.Cancelled*
+- uid: osu.Framework.Threading.ScheduledDelegate.State
+  commentId: P:osu.Framework.Threading.ScheduledDelegate.State
+  id: State
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: ScheduledDelegate.State
+  fullName: osu.Framework.Threading.ScheduledDelegate.State
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: State
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 37
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  syntax:
+    content: public ScheduledDelegate.RunState State { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Threading.ScheduledDelegate.RunState
+    content.vb: Public Property State As ScheduledDelegate.RunState
+  overload: osu.Framework.Threading.ScheduledDelegate.State*
+- uid: osu.Framework.Threading.ScheduledDelegate.#ctor(System.Action,System.Double,System.Double)
+  commentId: M:osu.Framework.Threading.ScheduledDelegate.#ctor(System.Action,System.Double,System.Double)
+  id: '#ctor(System.Action,System.Double,System.Double)'
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: ScheduledDelegate(Action, double, double)
+  nameWithType: ScheduledDelegate.ScheduledDelegate(Action, double, double)
+  fullName: osu.Framework.Threading.ScheduledDelegate.ScheduledDelegate(System.Action, double, double)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 44
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  syntax:
+    content: public ScheduledDelegate(Action task, double executionTime = 0, double repeatInterval = -1)
+    parameters:
+    - id: task
+      type: System.Action
+    - id: executionTime
+      type: System.Double
+    - id: repeatInterval
+      type: System.Double
+    content.vb: Public Sub New(task As Action, executionTime As Double = 0, repeatInterval As Double = -1)
+  overload: osu.Framework.Threading.ScheduledDelegate.#ctor*
+  nameWithType.vb: ScheduledDelegate.New(Action, Double, Double)
+  fullName.vb: osu.Framework.Threading.ScheduledDelegate.New(System.Action, Double, Double)
+  name.vb: New(Action, Double, Double)
+- uid: osu.Framework.Threading.ScheduledDelegate.#ctor(System.Double,System.Double)
+  commentId: M:osu.Framework.Threading.ScheduledDelegate.#ctor(System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double)'
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: ScheduledDelegate(double, double)
+  nameWithType: ScheduledDelegate.ScheduledDelegate(double, double)
+  fullName: osu.Framework.Threading.ScheduledDelegate.ScheduledDelegate(double, double)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 50
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  syntax:
+    content: protected ScheduledDelegate(double executionTime = 0, double repeatInterval = -1)
+    parameters:
+    - id: executionTime
+      type: System.Double
+    - id: repeatInterval
+      type: System.Double
+    content.vb: Protected Sub New(executionTime As Double = 0, repeatInterval As Double = -1)
+  overload: osu.Framework.Threading.ScheduledDelegate.#ctor*
+  nameWithType.vb: ScheduledDelegate.New(Double, Double)
+  fullName.vb: osu.Framework.Threading.ScheduledDelegate.New(Double, Double)
+  name.vb: New(Double, Double)
+- uid: osu.Framework.Threading.ScheduledDelegate.RunTask
+  commentId: M:osu.Framework.Threading.ScheduledDelegate.RunTask
+  id: RunTask
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: RunTask()
+  nameWithType: ScheduledDelegate.RunTask()
+  fullName: osu.Framework.Threading.ScheduledDelegate.RunTask()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: RunTask
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 65
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Invokes the scheduled task.
+  remarks: This call may block if the task is currently being run on another thread.
+  example: []
+  syntax:
+    content: public void RunTask()
+    content.vb: Public Sub RunTask()
+  overload: osu.Framework.Threading.ScheduledDelegate.RunTask*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when attempting to run a task that has been cancelled or already completed.
+- uid: osu.Framework.Threading.ScheduledDelegate.InvokeTask
+  commentId: M:osu.Framework.Threading.ScheduledDelegate.InvokeTask
+  id: InvokeTask
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: InvokeTask()
+  nameWithType: ScheduledDelegate.InvokeTask()
+  fullName: osu.Framework.Threading.ScheduledDelegate.InvokeTask()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: InvokeTask
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 102
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  syntax:
+    content: protected virtual void InvokeTask()
+    content.vb: Protected Overridable Sub InvokeTask()
+  overload: osu.Framework.Threading.ScheduledDelegate.InvokeTask*
+- uid: osu.Framework.Threading.ScheduledDelegate.Cancel
+  commentId: M:osu.Framework.Threading.ScheduledDelegate.Cancel
+  id: Cancel
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: Cancel()
+  nameWithType: ScheduledDelegate.Cancel()
+  fullName: osu.Framework.Threading.ScheduledDelegate.Cancel()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Cancel
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 114
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Cancel a task.
+  remarks: This call may block if the task is currently being run on another thread.
+  example: []
+  syntax:
+    content: public void Cancel()
+    content.vb: Public Sub Cancel()
+  overload: osu.Framework.Threading.ScheduledDelegate.Cancel*
+- uid: osu.Framework.Threading.ScheduledDelegate.CompareTo(osu.Framework.Threading.ScheduledDelegate)
+  commentId: M:osu.Framework.Threading.ScheduledDelegate.CompareTo(osu.Framework.Threading.ScheduledDelegate)
+  id: CompareTo(osu.Framework.Threading.ScheduledDelegate)
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: CompareTo(ScheduledDelegate?)
+  nameWithType: ScheduledDelegate.CompareTo(ScheduledDelegate?)
+  fullName: osu.Framework.Threading.ScheduledDelegate.CompareTo(osu.Framework.Threading.ScheduledDelegate?)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CompareTo
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 122
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.
+  example: []
+  syntax:
+    content: public int CompareTo(ScheduledDelegate? other)
+    parameters:
+    - id: other
+      type: osu.Framework.Threading.ScheduledDelegate
+      description: An object to compare with this instance.
+    return:
+      type: System.Int32
+      description: >-
+        A value that indicates the relative order of the objects being compared. The return value has these meanings:  
+
+         <table><thead><tr><th class="term"> Value</th><th class="description"> Meaning</th></tr></thead><tbody><tr><td class="term"> Less than zero</td><td class="description"> This instance precedes <code class="paramref">other</code> in the sort order.</td></tr><tr><td class="term"> Zero</td><td class="description"> This instance occurs in the same position in the sort order as <code class="paramref">other</code>.</td></tr><tr><td class="term"> Greater than zero</td><td class="description"> This instance follows <code class="paramref">other</code> in the sort order.</td></tr></tbody></table>
+    content.vb: Public Function CompareTo(other As ScheduledDelegate) As Integer
+  overload: osu.Framework.Threading.ScheduledDelegate.CompareTo*
+  implements:
+  - System.IComparable{osu.Framework.Threading.ScheduledDelegate}.CompareTo(osu.Framework.Threading.ScheduledDelegate)
+  nameWithType.vb: ScheduledDelegate.CompareTo(ScheduledDelegate)
+  fullName.vb: osu.Framework.Threading.ScheduledDelegate.CompareTo(osu.Framework.Threading.ScheduledDelegate)
+  name.vb: CompareTo(ScheduledDelegate)
+- uid: osu.Framework.Threading.ScheduledDelegate.ToString
+  commentId: M:osu.Framework.Threading.ScheduledDelegate.ToString
+  id: ToString
+  parent: osu.Framework.Threading.ScheduledDelegate
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ScheduledDelegate.ToString()
+  fullName: osu.Framework.Threading.ScheduledDelegate.ToString()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Threading/ScheduledDelegate.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToString
+    path: osu.Framework/Threading/ScheduledDelegate.cs
+    startLine: 143
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Threading
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: osu.Framework.Threading.ScheduledDelegate.ToString*
+references:
+- uid: osu.Framework.Threading
+  commentId: N:osu.Framework.Threading
+  href: osu.html
+  name: osu.Framework.Threading
+  nameWithType: osu.Framework.Threading
+  fullName: osu.Framework.Threading
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Threading
+    name: Threading
+    href: osu.Framework.Threading.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Threading
+    name: Threading
+    href: osu.Framework.Threading.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IComparable{osu.Framework.Threading.ScheduledDelegate}
+  commentId: T:System.IComparable{osu.Framework.Threading.ScheduledDelegate}
+  parent: System
+  definition: System.IComparable`1
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  name: IComparable<ScheduledDelegate>
+  nameWithType: IComparable<ScheduledDelegate>
+  fullName: System.IComparable<osu.Framework.Threading.ScheduledDelegate>
+  nameWithType.vb: IComparable(Of ScheduledDelegate)
+  fullName.vb: System.IComparable(Of osu.Framework.Threading.ScheduledDelegate)
+  name.vb: IComparable(Of ScheduledDelegate)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: <
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Threading.ScheduledDelegate.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<ScheduledDelegate>(ScheduledDelegate)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<ScheduledDelegate>(ScheduledDelegate)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Threading.ScheduledDelegate>(osu.Framework.Threading.ScheduledDelegate)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of ScheduledDelegate)(ScheduledDelegate)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Threading.ScheduledDelegate)(osu.Framework.Threading.ScheduledDelegate)
+  name.vb: GetLocalisableDescription(Of ScheduledDelegate)(ScheduledDelegate)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Threading.ScheduledDelegate)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Threading.ScheduledDelegate)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+- uid: osu.Framework.Threading.ScheduledDelegate.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<ScheduledDelegate>(ScheduledDelegate)
+  nameWithType: EnumerableExtensions.Yield<ScheduledDelegate>(ScheduledDelegate)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Threading.ScheduledDelegate>(osu.Framework.Threading.ScheduledDelegate)
+  nameWithType.vb: EnumerableExtensions.Yield(Of ScheduledDelegate)(ScheduledDelegate)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Threading.ScheduledDelegate)(osu.Framework.Threading.ScheduledDelegate)
+  name.vb: Yield(Of ScheduledDelegate)(ScheduledDelegate)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Threading.ScheduledDelegate)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Threading.ScheduledDelegate)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+- uid: osu.Framework.Threading.ScheduledDelegate.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<ScheduledDelegate>(ScheduledDelegate)
+  nameWithType: ObjectExtensions.AsNonNull<ScheduledDelegate>(ScheduledDelegate)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Threading.ScheduledDelegate>(osu.Framework.Threading.ScheduledDelegate)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of ScheduledDelegate)(ScheduledDelegate)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Threading.ScheduledDelegate)(osu.Framework.Threading.ScheduledDelegate)
+  name.vb: AsNonNull(Of ScheduledDelegate)(ScheduledDelegate)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Threading.ScheduledDelegate)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Threading.ScheduledDelegate)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+- uid: osu.Framework.Threading.ScheduledDelegate.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<ScheduledDelegate>(ScheduledDelegate)
+  nameWithType: ObjectExtensions.IsNotNull<ScheduledDelegate>(ScheduledDelegate)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Threading.ScheduledDelegate>(osu.Framework.Threading.ScheduledDelegate)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of ScheduledDelegate)(ScheduledDelegate)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Threading.ScheduledDelegate)(osu.Framework.Threading.ScheduledDelegate)
+  name.vb: IsNotNull(Of ScheduledDelegate)(ScheduledDelegate)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Threading.ScheduledDelegate)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Threading.ScheduledDelegate)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+- uid: osu.Framework.Threading.ScheduledDelegate.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<ScheduledDelegate>(ScheduledDelegate)
+  nameWithType: ObjectExtensions.IsNull<ScheduledDelegate>(ScheduledDelegate)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Threading.ScheduledDelegate>(osu.Framework.Threading.ScheduledDelegate)
+  nameWithType.vb: ObjectExtensions.IsNull(Of ScheduledDelegate)(ScheduledDelegate)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Threading.ScheduledDelegate)(osu.Framework.Threading.ScheduledDelegate)
+  name.vb: IsNull(Of ScheduledDelegate)(ScheduledDelegate)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Threading.ScheduledDelegate)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Threading.ScheduledDelegate)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+- uid: osu.Framework.Threading.ScheduledDelegate.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<ScheduledDelegate, TChild>(ScheduledDelegate, TChild)
+  nameWithType: ContainerExtensions.WithChild<ScheduledDelegate, TChild>(ScheduledDelegate, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Threading.ScheduledDelegate, TChild>(osu.Framework.Threading.ScheduledDelegate, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of ScheduledDelegate, TChild)(ScheduledDelegate, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Threading.ScheduledDelegate, TChild)(osu.Framework.Threading.ScheduledDelegate, TChild)
+  name.vb: WithChild(Of ScheduledDelegate, TChild)(ScheduledDelegate, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Threading.ScheduledDelegate,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Threading.ScheduledDelegate,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Threading.ScheduledDelegate.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<ScheduledDelegate, TChild>(ScheduledDelegate, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<ScheduledDelegate, TChild>(ScheduledDelegate, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Threading.ScheduledDelegate, TChild>(osu.Framework.Threading.ScheduledDelegate, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of ScheduledDelegate, TChild)(ScheduledDelegate, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Threading.ScheduledDelegate, TChild)(osu.Framework.Threading.ScheduledDelegate, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of ScheduledDelegate, TChild)(ScheduledDelegate, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Threading.ScheduledDelegate,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Threading.ScheduledDelegate,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Threading.ScheduledDelegate.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<ScheduledDelegate, TChild>(ScheduledDelegate, TChild)
+  nameWithType: ContainerExtensions.Wrap<ScheduledDelegate, TChild>(ScheduledDelegate, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Threading.ScheduledDelegate, TChild>(osu.Framework.Threading.ScheduledDelegate, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of ScheduledDelegate, TChild)(ScheduledDelegate, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Threading.ScheduledDelegate, TChild)(osu.Framework.Threading.ScheduledDelegate, TChild)
+  name.vb: Wrap(Of ScheduledDelegate, TChild)(ScheduledDelegate, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Threading.ScheduledDelegate,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Threading.ScheduledDelegate,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IComparable`1
+  commentId: T:System.IComparable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  name: IComparable<T>
+  nameWithType: IComparable<T>
+  fullName: System.IComparable<T>
+  nameWithType.vb: IComparable(Of T)
+  fullName.vb: System.IComparable(Of T)
+  name.vb: IComparable(Of T)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Threading.Scheduler
+  commentId: T:osu.Framework.Threading.Scheduler
+  parent: osu.Framework.Threading
+  href: osu.Framework.Threading.Scheduler.html
+  name: Scheduler
+  nameWithType: Scheduler
+  fullName: osu.Framework.Threading.Scheduler
+- uid: osu.Framework.Threading.ScheduledDelegate.ExecutionTime*
+  commentId: Overload:osu.Framework.Threading.ScheduledDelegate.ExecutionTime
+  href: osu.Framework.Threading.ScheduledDelegate.html#osu_Framework_Threading_ScheduledDelegate_ExecutionTime
+  name: ExecutionTime
+  nameWithType: ScheduledDelegate.ExecutionTime
+  fullName: osu.Framework.Threading.ScheduledDelegate.ExecutionTime
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Threading.ScheduledDelegate.Completed*
+  commentId: Overload:osu.Framework.Threading.ScheduledDelegate.Completed
+  href: osu.Framework.Threading.ScheduledDelegate.html#osu_Framework_Threading_ScheduledDelegate_Completed
+  name: Completed
+  nameWithType: ScheduledDelegate.Completed
+  fullName: osu.Framework.Threading.ScheduledDelegate.Completed
+- uid: osu.Framework.Threading.ScheduledDelegate.Cancelled*
+  commentId: Overload:osu.Framework.Threading.ScheduledDelegate.Cancelled
+  href: osu.Framework.Threading.ScheduledDelegate.html#osu_Framework_Threading_ScheduledDelegate_Cancelled
+  name: Cancelled
+  nameWithType: ScheduledDelegate.Cancelled
+  fullName: osu.Framework.Threading.ScheduledDelegate.Cancelled
+- uid: osu.Framework.Threading.ScheduledDelegate.State*
+  commentId: Overload:osu.Framework.Threading.ScheduledDelegate.State
+  href: osu.Framework.Threading.ScheduledDelegate.html#osu_Framework_Threading_ScheduledDelegate_State
+  name: State
+  nameWithType: ScheduledDelegate.State
+  fullName: osu.Framework.Threading.ScheduledDelegate.State
+- uid: osu.Framework.Threading.ScheduledDelegate.RunState
+  commentId: T:osu.Framework.Threading.ScheduledDelegate.RunState
+  parent: osu.Framework.Threading
+  href: osu.Framework.Threading.ScheduledDelegate.html
+  name: ScheduledDelegate.RunState
+  nameWithType: ScheduledDelegate.RunState
+  fullName: osu.Framework.Threading.ScheduledDelegate.RunState
+  spec.csharp:
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: .
+  - uid: osu.Framework.Threading.ScheduledDelegate.RunState
+    name: RunState
+    href: osu.Framework.Threading.ScheduledDelegate.RunState.html
+  spec.vb:
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: .
+  - uid: osu.Framework.Threading.ScheduledDelegate.RunState
+    name: RunState
+    href: osu.Framework.Threading.ScheduledDelegate.RunState.html
+- uid: osu.Framework.Threading.ScheduledDelegate.#ctor*
+  commentId: Overload:osu.Framework.Threading.ScheduledDelegate.#ctor
+  href: osu.Framework.Threading.ScheduledDelegate.html#osu_Framework_Threading_ScheduledDelegate__ctor_System_Action_System_Double_System_Double_
+  name: ScheduledDelegate
+  nameWithType: ScheduledDelegate.ScheduledDelegate
+  fullName: osu.Framework.Threading.ScheduledDelegate.ScheduledDelegate
+  nameWithType.vb: ScheduledDelegate.New
+  fullName.vb: osu.Framework.Threading.ScheduledDelegate.New
+  name.vb: New
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: osu.Framework.Threading.ScheduledDelegate.RunTask*
+  commentId: Overload:osu.Framework.Threading.ScheduledDelegate.RunTask
+  href: osu.Framework.Threading.ScheduledDelegate.html#osu_Framework_Threading_ScheduledDelegate_RunTask
+  name: RunTask
+  nameWithType: ScheduledDelegate.RunTask
+  fullName: osu.Framework.Threading.ScheduledDelegate.RunTask
+- uid: osu.Framework.Threading.ScheduledDelegate.InvokeTask*
+  commentId: Overload:osu.Framework.Threading.ScheduledDelegate.InvokeTask
+  href: osu.Framework.Threading.ScheduledDelegate.html#osu_Framework_Threading_ScheduledDelegate_InvokeTask
+  name: InvokeTask
+  nameWithType: ScheduledDelegate.InvokeTask
+  fullName: osu.Framework.Threading.ScheduledDelegate.InvokeTask
+- uid: osu.Framework.Threading.ScheduledDelegate.Cancel*
+  commentId: Overload:osu.Framework.Threading.ScheduledDelegate.Cancel
+  href: osu.Framework.Threading.ScheduledDelegate.html#osu_Framework_Threading_ScheduledDelegate_Cancel
+  name: Cancel
+  nameWithType: ScheduledDelegate.Cancel
+  fullName: osu.Framework.Threading.ScheduledDelegate.Cancel
+- uid: osu.Framework.Threading.ScheduledDelegate.CompareTo*
+  commentId: Overload:osu.Framework.Threading.ScheduledDelegate.CompareTo
+  href: osu.Framework.Threading.ScheduledDelegate.html#osu_Framework_Threading_ScheduledDelegate_CompareTo_osu_Framework_Threading_ScheduledDelegate_
+  name: CompareTo
+  nameWithType: ScheduledDelegate.CompareTo
+  fullName: osu.Framework.Threading.ScheduledDelegate.CompareTo
+- uid: System.IComparable{osu.Framework.Threading.ScheduledDelegate}.CompareTo(osu.Framework.Threading.ScheduledDelegate)
+  commentId: M:System.IComparable{osu.Framework.Threading.ScheduledDelegate}.CompareTo(osu.Framework.Threading.ScheduledDelegate)
+  parent: System.IComparable{osu.Framework.Threading.ScheduledDelegate}
+  definition: System.IComparable`1.CompareTo(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  name: CompareTo(ScheduledDelegate)
+  nameWithType: IComparable<ScheduledDelegate>.CompareTo(ScheduledDelegate)
+  fullName: System.IComparable<osu.Framework.Threading.ScheduledDelegate>.CompareTo(osu.Framework.Threading.ScheduledDelegate)
+  nameWithType.vb: IComparable(Of ScheduledDelegate).CompareTo(ScheduledDelegate)
+  fullName.vb: System.IComparable(Of osu.Framework.Threading.ScheduledDelegate).CompareTo(osu.Framework.Threading.ScheduledDelegate)
+  spec.csharp:
+  - uid: System.IComparable{osu.Framework.Threading.ScheduledDelegate}.CompareTo(osu.Framework.Threading.ScheduledDelegate)
+    name: CompareTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+  spec.vb:
+  - uid: System.IComparable{osu.Framework.Threading.ScheduledDelegate}.CompareTo(osu.Framework.Threading.ScheduledDelegate)
+    name: CompareTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  - name: (
+  - uid: osu.Framework.Threading.ScheduledDelegate
+    name: ScheduledDelegate
+    href: osu.Framework.Threading.ScheduledDelegate.html
+  - name: )
+- uid: osu.Framework.Threading.ScheduledDelegate
+  commentId: T:osu.Framework.Threading.ScheduledDelegate
+  parent: osu.Framework.Threading
+  href: osu.Framework.Threading.ScheduledDelegate.html
+  name: ScheduledDelegate
+  nameWithType: ScheduledDelegate
+  fullName: osu.Framework.Threading.ScheduledDelegate
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.IComparable`1.CompareTo(`0)
+  commentId: M:System.IComparable`1.CompareTo(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  name: CompareTo(T)
+  nameWithType: IComparable<T>.CompareTo(T)
+  fullName: System.IComparable<T>.CompareTo(T)
+  nameWithType.vb: IComparable(Of T).CompareTo(T)
+  fullName.vb: System.IComparable(Of T).CompareTo(T)
+  spec.csharp:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IComparable`1.CompareTo(`0)
+    name: CompareTo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1.compareto
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: osu.Framework.Threading.ScheduledDelegate.ToString*
+  commentId: Overload:osu.Framework.Threading.ScheduledDelegate.ToString
+  href: osu.Framework.Threading.ScheduledDelegate.html#osu_Framework_Threading_ScheduledDelegate_ToString
+  name: ToString
+  nameWithType: ScheduledDelegate.ToString
+  fullName: osu.Framework.Threading.ScheduledDelegate.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

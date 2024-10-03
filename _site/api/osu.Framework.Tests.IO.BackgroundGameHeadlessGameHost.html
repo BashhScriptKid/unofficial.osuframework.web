@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BackgroundGameHeadlessGameHost | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BackgroundGameHeadlessGameHost | osu!framework ">
+      
+      <meta name="description" content="A headless host for testing purposes. Contains an arbitrary game that is running after construction.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Tests.IO.BackgroundGameHeadlessGameHost">
+
+
+
+  <h1 id="osu_Framework_Tests_IO_BackgroundGameHeadlessGameHost" data-uid="osu.Framework.Tests.IO.BackgroundGameHeadlessGameHost" class="text-break">
+Class BackgroundGameHeadlessGameHost  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Tests.html">Tests</a>.<a class="xref" href="osu.Framework.Tests.IO.html">IO</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.Tests.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A headless host for testing purposes. Contains an arbitrary game that is running after construction.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BackgroundGameHeadlessGameHost : TestRunHeadlessGameHost, IIpcHost, IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="osu.Framework.Platform.GameHost.html">GameHost</a></div>
+      <div><a class="xref" href="osu.Framework.Platform.SDLGameHost.html">SDLGameHost</a></div>
+      <div><a class="xref" href="osu.Framework.Platform.DesktopGameHost.html">DesktopGameHost</a></div>
+      <div><a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html">HeadlessGameHost</a></div>
+      <div><a class="xref" href="osu.Framework.Testing.TestRunHeadlessGameHost.html">TestRunHeadlessGameHost</a></div>
+      <div><span class="xref">BackgroundGameHeadlessGameHost</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Platform.IIpcHost.html">IIpcHost</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="osu.Framework.Testing.TestRunHeadlessGameHost.html#osu_Framework_Testing_TestRunHeadlessGameHost_UserStoragePaths">TestRunHeadlessGameHost.UserStoragePaths</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Testing.TestRunHeadlessGameHost.html#osu_Framework_Testing_TestRunHeadlessGameHost_TemporaryTestDirectory">TestRunHeadlessGameHost.TemporaryTestDirectory</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_CLOCK_RATE">HeadlessGameHost.CLOCK_RATE</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_SceneGraphClock">HeadlessGameHost.SceneGraphClock</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_OpenFileExternally_System_String_">HeadlessGameHost.OpenFileExternally(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_PresentFileExternally_System_String_">HeadlessGameHost.PresentFileExternally(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_OpenUrlExternally_System_String_">HeadlessGameHost.OpenUrlExternally(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_RequireWindowExists">HeadlessGameHost.RequireWindowExists</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_CreateWindow_osu_Framework_Platform_GraphicsSurfaceType_">HeadlessGameHost.CreateWindow(GraphicsSurfaceType)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_CreateClipboard">HeadlessGameHost.CreateClipboard()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_ChooseAndSetupRenderer">HeadlessGameHost.ChooseAndSetupRenderer()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_SetupConfig_System_Collections_Generic_IDictionary_osu_Framework_Configuration_FrameworkSetting_System_Object__">HeadlessGameHost.SetupConfig(IDictionary&lt;FrameworkSetting, object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_SetupForRun">HeadlessGameHost.SetupForRun()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_DrawFrame">HeadlessGameHost.DrawFrame()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_UpdateFrame">HeadlessGameHost.UpdateFrame()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.HeadlessGameHost.html#osu_Framework_Platform_HeadlessGameHost_CreateAvailableInputHandlers">HeadlessGameHost.CreateAvailableInputHandlers()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.DesktopGameHost.html#osu_Framework_Platform_DesktopGameHost_GetDefaultGameStorage">DesktopGameHost.GetDefaultGameStorage()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.DesktopGameHost.html#osu_Framework_Platform_DesktopGameHost_GetStorage_System_String_">DesktopGameHost.GetStorage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.DesktopGameHost.html#osu_Framework_Platform_DesktopGameHost_IsPrimaryInstance">DesktopGameHost.IsPrimaryInstance</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.DesktopGameHost.html#osu_Framework_Platform_DesktopGameHost_IsPortableInstallation">DesktopGameHost.IsPortableInstallation</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.DesktopGameHost.html#osu_Framework_Platform_DesktopGameHost_SendMessageAsync_osu_Framework_Platform_IpcMessage_">DesktopGameHost.SendMessageAsync(IpcMessage)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.SDLGameHost.html#osu_Framework_Platform_SDLGameHost_CapsLockEnabled">SDLGameHost.CapsLockEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.SDLGameHost.html#osu_Framework_Platform_SDLGameHost_CreateTextInput">SDLGameHost.CreateTextInput()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Window">GameHost.Window</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Renderer">GameHost.Renderer</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_RendererInfo">GameHost.RendererInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_AllowBenchmarkUnlimitedFrames">GameHost.AllowBenchmarkUnlimitedFrames</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_DebugConfig">GameHost.DebugConfig</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Config">GameHost.Config</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_IsActive">GameHost.IsActive</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_AllowScreenSuspension">GameHost.AllowScreenSuspension</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Activated">GameHost.Activated</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Deactivated">GameHost.Deactivated</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ExitRequested">GameHost.ExitRequested</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Exited">GameHost.Exited</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ExceptionThrown">GameHost.ExceptionThrown</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_MessageReceived">GameHost.MessageReceived</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnScreenKeyboardOverlapsGameWindow">GameHost.OnScreenKeyboardOverlapsGameWindow</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CanExit">GameHost.CanExit</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CanSuspendToBackground">GameHost.CanSuspendToBackground</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnMessageReceived_osu_Framework_Platform_IpcMessage_">GameHost.OnMessageReceived(IpcMessage)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetClipboard">GameHost.GetClipboard()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateReadableKeyCombinationProvider">GameHost.CreateReadableKeyCombinationProvider()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_InitialFileSelectorPath">GameHost.InitialFileSelectorPath</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Storage">GameHost.Storage</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CacheStorage">GameHost.CacheStorage</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Threads">GameHost.Threads</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_RegisterThread_osu_Framework_Threading_GameThread_">GameHost.RegisterThread(GameThread)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_UnregisterThread_osu_Framework_Threading_GameThread_">GameHost.UnregisterThread(GameThread)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_DrawThread">GameHost.DrawThread</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_UpdateThread">GameHost.UpdateThread</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_InputThread">GameHost.InputThread</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_AudioThread">GameHost.AudioThread</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_MaximumUpdateHz">GameHost.MaximumUpdateHz</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_MaximumDrawHz">GameHost.MaximumDrawHz</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_MaximumInactiveHz">GameHost.MaximumInactiveHz</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_FullPath">GameHost.FullPath</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Name">GameHost.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Options">GameHost.Options</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Dependencies">GameHost.Dependencies</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateGLRenderer">GameHost.CreateGLRenderer()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Collect">GameHost.Collect()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnActivated">GameHost.OnActivated()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnDeactivated">GameHost.OnDeactivated()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnExitRequested">GameHost.OnExitRequested()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnExited">GameHost.OnExited()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Swap">GameHost.Swap()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_TakeScreenshotAsync">GameHost.TakeScreenshotAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ExecutionState">GameHost.ExecutionState</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Exit">GameHost.Exit()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SuspendToBackground">GameHost.SuspendToBackground()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_PerformExit_System_Boolean_">GameHost.PerformExit(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Run_osu_Framework_Game_">GameHost.Run(Game)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ResolvedRenderer">GameHost.ResolvedRenderer</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetPreferredRenderersForCurrentPlatform">GameHost.GetPreferredRenderersForCurrentPlatform()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupRendererAndWindow_System_String_osu_Framework_Platform_GraphicsSurfaceType_">GameHost.SetupRendererAndWindow(string, GraphicsSurfaceType)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupRendererAndWindow_osu_Framework_Graphics_Rendering_IRenderer_osu_Framework_Platform_GraphicsSurfaceType_">GameHost.SetupRendererAndWindow(IRenderer, GraphicsSurfaceType)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Suspend">GameHost.Suspend()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Resume">GameHost.Resume()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ResetInputHandlers">GameHost.ResetInputHandlers()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_PerformanceLogging">GameHost.PerformanceLogging</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_AvailableInputHandlers">GameHost.AvailableInputHandlers</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Dispose">GameHost.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_PlatformKeyBindings">GameHost.PlatformKeyBindings</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateTextureLoaderStore_osu_Framework_IO_Stores_IResourceStore_System_Byte____">GameHost.CreateTextureLoaderStore(IResourceStore&lt;byte[]&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateVideoDecoder_System_IO_Stream_">GameHost.CreateVideoDecoder(Stream)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateThreadRunner_osu_Framework_Threading_InputThread_">GameHost.CreateThreadRunner(InputThread)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Tests_IO_BackgroundGameHeadlessGameHost__ctor_" data-uid="osu.Framework.Tests.IO.BackgroundGameHeadlessGameHost.#ctor*"></a>
+
+  <h3 id="osu_Framework_Tests_IO_BackgroundGameHeadlessGameHost__ctor_System_String_osu_Framework_HostOptions_System_Boolean_" data-uid="osu.Framework.Tests.IO.BackgroundGameHeadlessGameHost.#ctor(System.String,osu.Framework.HostOptions,System.Boolean)">
+  BackgroundGameHeadlessGameHost(string, HostOptions, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework.Tests/IO/BackgroundGameHeadlessGameHost.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BackgroundGameHeadlessGameHost(string gameName = null, HostOptions options = null, bool realtime = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="osu.Framework.HostOptions.html">HostOptions</a></dt>
+    <dd></dd>
+    <dt><code>realtime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Tests_IO_BackgroundGameHeadlessGameHost_Dispose_" data-uid="osu.Framework.Tests.IO.BackgroundGameHeadlessGameHost.Dispose*"></a>
+
+  <h3 id="osu_Framework_Tests_IO_BackgroundGameHeadlessGameHost_Dispose_System_Boolean_" data-uid="osu.Framework.Tests.IO.BackgroundGameHeadlessGameHost.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework.Tests/IO/BackgroundGameHeadlessGameHost.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool isDisposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isDisposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

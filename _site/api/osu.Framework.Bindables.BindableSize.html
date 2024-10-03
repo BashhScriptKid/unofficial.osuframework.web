@@ -1,0 +1,637 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class BindableSize | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class BindableSize | osu!framework ">
+      
+      <meta name="description" content="Represents a  bindable with defined component-wise constraints applied to it.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Bindables_BindableSize.md&amp;value=---%0Auid%3A%20osu.Framework.Bindables.BindableSize%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Bindables.BindableSize">
+
+
+
+  <h1 id="osu_Framework_Bindables_BindableSize" data-uid="osu.Framework.Bindables.BindableSize" class="text-break">
+Class BindableSize  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableSize.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Bindables.html">Bindables</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a> bindable with defined component-wise constraints applied to it.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class BindableSize : RangeConstrainedBindable&lt;Size&gt;, IBindable&lt;Size&gt;, IBindable, ICanBeDisabled, IHasDefaultValue, IUnbindable, IHasDescription, IFormattable, IParseable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a>&gt;</div>
+      <div><a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html">RangeConstrainedBindable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a>&gt;</div>
+      <div><span class="xref">BindableSize</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Bindables.IBindable-1.html">IBindable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a>&gt;</div>
+      <div><a class="xref" href="osu.Framework.Bindables.IBindable.html">IBindable</a></div>
+      <div><a class="xref" href="osu.Framework.Bindables.ICanBeDisabled.html">ICanBeDisabled</a></div>
+      <div><a class="xref" href="osu.Framework.Bindables.IHasDefaultValue.html">IHasDefaultValue</a></div>
+      <div><a class="xref" href="osu.Framework.Bindables.IUnbindable.html">IUnbindable</a></div>
+      <div><a class="xref" href="osu.Framework.Bindables.IHasDescription.html">IHasDescription</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a></div>
+      <div><a class="xref" href="osu.Framework.Bindables.IParseable.html">IParseable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_MinValueChanged">RangeConstrainedBindable&lt;Size&gt;.MinValueChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_MaxValueChanged">RangeConstrainedBindable&lt;Size&gt;.MaxValueChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_MinValue">RangeConstrainedBindable&lt;Size&gt;.MinValue</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_MaxValue">RangeConstrainedBindable&lt;Size&gt;.MaxValue</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_Value">RangeConstrainedBindable&lt;Size&gt;.Value</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_HasDefinedRange">RangeConstrainedBindable&lt;Size&gt;.HasDefinedRange</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_NormalizedValue">RangeConstrainedBindable&lt;Size&gt;.NormalizedValue</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_TriggerChange">RangeConstrainedBindable&lt;Size&gt;.TriggerChange()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_TriggerMinValueChange_osu_Framework_Bindables_RangeConstrainedBindable__0__System_Boolean_">RangeConstrainedBindable&lt;Size&gt;.TriggerMinValueChange(RangeConstrainedBindable&lt;Size&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_TriggerMaxValueChange_osu_Framework_Bindables_RangeConstrainedBindable__0__System_Boolean_">RangeConstrainedBindable&lt;Size&gt;.TriggerMaxValueChange(RangeConstrainedBindable&lt;Size&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_CopyTo_osu_Framework_Bindables_Bindable__0__">RangeConstrainedBindable&lt;Size&gt;.CopyTo(Bindable&lt;Size&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_BindTo_osu_Framework_Bindables_Bindable__0__">RangeConstrainedBindable&lt;Size&gt;.BindTo(Bindable&lt;Size&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_UnbindEvents">RangeConstrainedBindable&lt;Size&gt;.UnbindEvents()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_GetBoundCopy">RangeConstrainedBindable&lt;Size&gt;.GetBoundCopy()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_GetUnboundCopy">RangeConstrainedBindable&lt;Size&gt;.GetUnboundCopy()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_ValueChanged">Bindable&lt;Size&gt;.ValueChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_DisabledChanged">Bindable&lt;Size&gt;.DisabledChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_DefaultChanged">Bindable&lt;Size&gt;.DefaultChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_Disabled">Bindable&lt;Size&gt;.Disabled</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_IsDefault">Bindable&lt;Size&gt;.IsDefault</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_SetDefault">Bindable&lt;Size&gt;.SetDefault()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_Default">Bindable&lt;Size&gt;.Default</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_Bindings">Bindable&lt;Size&gt;.Bindings</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_BindTarget">Bindable&lt;Size&gt;.BindTarget</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_BindValueChanged_System_Action_osu_Framework_Bindables_ValueChangedEvent__0___System_Boolean_">Bindable&lt;Size&gt;.BindValueChanged(Action&lt;ValueChangedEvent&lt;Size&gt;&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_BindDisabledChanged_System_Action_System_Boolean__System_Boolean_">Bindable&lt;Size&gt;.BindDisabledChanged(Action&lt;bool&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_TriggerValueChange__0_osu_Framework_Bindables_Bindable__0__System_Boolean_System_Boolean_">Bindable&lt;Size&gt;.TriggerValueChange(Size, Bindable&lt;Size&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_TriggerDefaultChange__0_osu_Framework_Bindables_Bindable__0__System_Boolean_System_Boolean_">Bindable&lt;Size&gt;.TriggerDefaultChange(Size, Bindable&lt;Size&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_TriggerDisabledChange_osu_Framework_Bindables_Bindable__0__System_Boolean_System_Boolean_">Bindable&lt;Size&gt;.TriggerDisabledChange(Bindable&lt;Size&gt;, bool, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_UnbindBindings">Bindable&lt;Size&gt;.UnbindBindings()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_UnbindAll">Bindable&lt;Size&gt;.UnbindAll()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_UnbindFrom_osu_Framework_Bindables_IUnbindable_">Bindable&lt;Size&gt;.UnbindFrom(IUnbindable)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_Description">Bindable&lt;Size&gt;.Description</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_ToString">Bindable&lt;Size&gt;.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Bindables.Bindable-1.html#osu_Framework_Bindables_Bindable_1_BeginLease_System_Boolean_">Bindable&lt;Size&gt;.BeginLease(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.FormattableExtensions.html#osu_Framework_Extensions_FormattableExtensions_ToString_System_IFormattable_System_IFormatProvider_">FormattableExtensions.ToString(IFormattable, IFormatProvider)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.html#osu_Framework_Extensions_LocalisationExtensions_LocalisableStringExtensions_ToLocalisableString_System_IFormattable_System_String_">LocalisableStringExtensions.ToLocalisableString(IFormattable, string?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Bindables_BindableSize__ctor_" data-uid="osu.Framework.Bindables.BindableSize.#ctor*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableSize__ctor_System_Drawing_Size_" data-uid="osu.Framework.Bindables.BindableSize.#ctor(System.Drawing.Size)">
+  BindableSize(Size)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableSize.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BindableSize(Size defaultValue = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>defaultValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Bindables_BindableSize_DefaultMaxValue_" data-uid="osu.Framework.Bindables.BindableSize.DefaultMaxValue*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableSize_DefaultMaxValue" data-uid="osu.Framework.Bindables.BindableSize.DefaultMaxValue">
+  DefaultMaxValue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableSize.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The default <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_MaxValue">MaxValue</a>. This should be equal to the maximum value of type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Size DefaultMaxValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableSize_DefaultMinValue_" data-uid="osu.Framework.Bindables.BindableSize.DefaultMinValue*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableSize_DefaultMinValue" data-uid="osu.Framework.Bindables.BindableSize.DefaultMinValue">
+  DefaultMinValue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableSize.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The default <a class="xref" href="osu.Framework.Bindables.RangeConstrainedBindable-1.html#osu_Framework_Bindables_RangeConstrainedBindable_1_MinValue">MinValue</a>. This should be equal to the minimum value of type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Size DefaultMinValue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Bindables_BindableSize_ClampValue_" data-uid="osu.Framework.Bindables.BindableSize.ClampValue*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableSize_ClampValue_System_Drawing_Size_System_Drawing_Size_System_Drawing_Size_" data-uid="osu.Framework.Bindables.BindableSize.ClampValue(System.Drawing.Size,System.Drawing.Size,System.Drawing.Size)">
+  ClampValue(Size, Size, Size)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableSize.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clamps <code class="paramref">value</code> to the range defined by <code class="paramref">minValue</code> and <code class="paramref">maxValue</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override sealed Size ClampValue(Size value, Size minValue, Size maxValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+    <dt><code>minValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+    <dt><code>maxValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableSize_CreateInstance_" data-uid="osu.Framework.Bindables.BindableSize.CreateInstance*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableSize_CreateInstance" data-uid="osu.Framework.Bindables.BindableSize.CreateInstance">
+  CreateInstance()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableSize.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new instance of this <a class="xref" href="osu.Framework.Bindables.IBindable.html">IBindable</a> for use in <a class="xref" href="osu.Framework.Bindables.IBindable.html#osu_Framework_Bindables_IBindable_GetBoundCopy">GetBoundCopy()</a>.
+The returned instance must have match the most derived type of the bindable class this method is implemented on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Bindable&lt;Size&gt; CreateInstance()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableSize_IsValidRange_" data-uid="osu.Framework.Bindables.BindableSize.IsValidRange*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableSize_IsValidRange_System_Drawing_Size_System_Drawing_Size_" data-uid="osu.Framework.Bindables.BindableSize.IsValidRange(System.Drawing.Size,System.Drawing.Size)">
+  IsValidRange(Size, Size)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableSize.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <code class="paramref">min</code> and <code class="paramref">max</code> constitute a valid range
+(usually used to check that <code class="paramref">min</code> is indeed lesser than or equal to <code class="paramref">max</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override sealed bool IsValidRange(Size min, Size max)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>min</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd><p>The range's minimum value.</p>
+</dd>
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd><p>The range's maximum value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableSize_Parse_" data-uid="osu.Framework.Bindables.BindableSize.Parse*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableSize_Parse_System_Object_System_IFormatProvider_" data-uid="osu.Framework.Bindables.BindableSize.Parse(System.Object,System.IFormatProvider)">
+  Parse(object?, IFormatProvider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableSize.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Parse an object into this instance.
+An object deriving T can be parsed, or a string can be parsed if T is an enum type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Parse(object? input, IFormatProvider provider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>input</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The input which is to be parsed.</p>
+</dd>
+    <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd><p>An object that provides culture-specific formatting information about <code class="paramref">input</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Bindables_BindableSize_ToString_" data-uid="osu.Framework.Bindables.BindableSize.ToString*"></a>
+
+  <h3 id="osu_Framework_Bindables_BindableSize_ToString_System_String_System_IFormatProvider_" data-uid="osu.Framework.Bindables.BindableSize.ToString(System.String,System.IFormatProvider)">
+  ToString(string?, IFormatProvider?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableSize.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Formats the value of the current instance using the specified format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString(string? format, IFormatProvider? formatProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>format</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The format to use.</p>
+<p>-or-</p>
+<p>A null reference (<code>Nothing</code> in Visual Basic) to use the default format defined for the type of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a> implementation.</p>
+</dd>
+    <dt><code>formatProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+    <dd><p>The provider to use to format the value.</p>
+<p>-or-</p>
+<p>A null reference (<code>Nothing</code> in Visual Basic) to obtain the numeric format information from the current locale setting of the operating system.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value of the current instance in the specified format.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Bindables/BindableSize.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1318 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+  commentId: T:osu.Framework.Configuration.Tracking.ITrackedSetting
+  id: ITrackedSetting
+  parent: osu.Framework.Configuration.Tracking
+  children:
+  - osu.Framework.Configuration.Tracking.ITrackedSetting.LoadFrom``1(osu.Framework.Configuration.ConfigManager{``0})
+  - osu.Framework.Configuration.Tracking.ITrackedSetting.SettingChanged
+  - osu.Framework.Configuration.Tracking.ITrackedSetting.Unload
+  langs:
+  - csharp
+  - vb
+  name: ITrackedSetting
+  nameWithType: ITrackedSetting
+  fullName: osu.Framework.Configuration.Tracking.ITrackedSetting
+  type: Interface
+  source:
+    remote:
+      path: osu.Framework/Configuration/Tracking/ITrackedSetting.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ITrackedSetting
+    path: osu.Framework/Configuration/Tracking/ITrackedSetting.cs
+    startLine: 11
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Configuration.Tracking
+  summary: A singular tracked setting.
+  example: []
+  syntax:
+    content: public interface ITrackedSetting
+    content.vb: Public Interface ITrackedSetting
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.SettingChanged
+  commentId: E:osu.Framework.Configuration.Tracking.ITrackedSetting.SettingChanged
+  id: SettingChanged
+  parent: osu.Framework.Configuration.Tracking.ITrackedSetting
+  langs:
+  - csharp
+  - vb
+  name: SettingChanged
+  nameWithType: ITrackedSetting.SettingChanged
+  fullName: osu.Framework.Configuration.Tracking.ITrackedSetting.SettingChanged
+  type: Event
+  source:
+    remote:
+      path: osu.Framework/Configuration/Tracking/ITrackedSetting.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: SettingChanged
+    path: osu.Framework/Configuration/Tracking/ITrackedSetting.cs
+    startLine: 16
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Configuration.Tracking
+  summary: Invoked when this setting has changed.
+  example: []
+  syntax:
+    content: event Action<SettingDescription> SettingChanged
+    return:
+      type: System.Action{osu.Framework.Configuration.Tracking.SettingDescription}
+    content.vb: Event SettingChanged As Action(Of SettingDescription)
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.LoadFrom``1(osu.Framework.Configuration.ConfigManager{``0})
+  commentId: M:osu.Framework.Configuration.Tracking.ITrackedSetting.LoadFrom``1(osu.Framework.Configuration.ConfigManager{``0})
+  id: LoadFrom``1(osu.Framework.Configuration.ConfigManager{``0})
+  parent: osu.Framework.Configuration.Tracking.ITrackedSetting
+  langs:
+  - csharp
+  - vb
+  name: LoadFrom<TLookup>(ConfigManager<TLookup>)
+  nameWithType: ITrackedSetting.LoadFrom<TLookup>(ConfigManager<TLookup>)
+  fullName: osu.Framework.Configuration.Tracking.ITrackedSetting.LoadFrom<TLookup>(osu.Framework.Configuration.ConfigManager<TLookup>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Configuration/Tracking/ITrackedSetting.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: LoadFrom
+    path: osu.Framework/Configuration/Tracking/ITrackedSetting.cs
+    startLine: 22
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Configuration.Tracking
+  summary: Loads a <xref href="osu.Framework.Bindables.Bindable%601" data-throw-if-not-resolved="false"></xref> into this tracked setting, binding to <xref href="osu.Framework.Configuration.Tracking.ITrackedSetting.SettingChanged" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'void LoadFrom<TLookup>(ConfigManager<TLookup> configManager) where TLookup : struct, Enum'
+    parameters:
+    - id: configManager
+      type: osu.Framework.Configuration.ConfigManager{{TLookup}}
+      description: The <xref href="osu.Framework.Configuration.ConfigManager%601" data-throw-if-not-resolved="false"></xref> to load from.
+    typeParameters:
+    - id: TLookup
+    content.vb: Sub LoadFrom(Of TLookup As {Structure, [Enum]})(configManager As ConfigManager(Of TLookup))
+  overload: osu.Framework.Configuration.Tracking.ITrackedSetting.LoadFrom*
+  nameWithType.vb: ITrackedSetting.LoadFrom(Of TLookup)(ConfigManager(Of TLookup))
+  fullName.vb: osu.Framework.Configuration.Tracking.ITrackedSetting.LoadFrom(Of TLookup)(osu.Framework.Configuration.ConfigManager(Of TLookup))
+  name.vb: LoadFrom(Of TLookup)(ConfigManager(Of TLookup))
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.Unload
+  commentId: M:osu.Framework.Configuration.Tracking.ITrackedSetting.Unload
+  id: Unload
+  parent: osu.Framework.Configuration.Tracking.ITrackedSetting
+  langs:
+  - csharp
+  - vb
+  name: Unload()
+  nameWithType: ITrackedSetting.Unload()
+  fullName: osu.Framework.Configuration.Tracking.ITrackedSetting.Unload()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Configuration/Tracking/ITrackedSetting.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Unload
+    path: osu.Framework/Configuration/Tracking/ITrackedSetting.cs
+    startLine: 28
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Configuration.Tracking
+  summary: Unloads the <xref href="osu.Framework.Bindables.Bindable%601" data-throw-if-not-resolved="false"></xref> from this tracked setting, unbinding from <xref href="osu.Framework.Configuration.Tracking.ITrackedSetting.SettingChanged" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: void Unload()
+    content.vb: Sub Unload()
+  overload: osu.Framework.Configuration.Tracking.ITrackedSetting.Unload*
+references:
+- uid: osu.Framework.Configuration.Tracking
+  commentId: N:osu.Framework.Configuration.Tracking
+  href: osu.html
+  name: osu.Framework.Configuration.Tracking
+  nameWithType: osu.Framework.Configuration.Tracking
+  fullName: osu.Framework.Configuration.Tracking
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Configuration
+    name: Configuration
+    href: osu.Framework.Configuration.html
+  - name: .
+  - uid: osu.Framework.Configuration.Tracking
+    name: Tracking
+    href: osu.Framework.Configuration.Tracking.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Configuration
+    name: Configuration
+    href: osu.Framework.Configuration.html
+  - name: .
+  - uid: osu.Framework.Configuration.Tracking
+    name: Tracking
+    href: osu.Framework.Configuration.Tracking.html
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<ITrackedSetting>(ITrackedSetting)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<ITrackedSetting>(ITrackedSetting)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Configuration.Tracking.ITrackedSetting>(osu.Framework.Configuration.Tracking.ITrackedSetting)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of ITrackedSetting)(ITrackedSetting)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Configuration.Tracking.ITrackedSetting)(osu.Framework.Configuration.Tracking.ITrackedSetting)
+  name.vb: GetLocalisableDescription(Of ITrackedSetting)(ITrackedSetting)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Configuration.Tracking.ITrackedSetting)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Configuration.Tracking.ITrackedSetting)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<ITrackedSetting>(ITrackedSetting)
+  nameWithType: EnumerableExtensions.Yield<ITrackedSetting>(ITrackedSetting)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Configuration.Tracking.ITrackedSetting>(osu.Framework.Configuration.Tracking.ITrackedSetting)
+  nameWithType.vb: EnumerableExtensions.Yield(Of ITrackedSetting)(ITrackedSetting)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Configuration.Tracking.ITrackedSetting)(osu.Framework.Configuration.Tracking.ITrackedSetting)
+  name.vb: Yield(Of ITrackedSetting)(ITrackedSetting)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Configuration.Tracking.ITrackedSetting)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Configuration.Tracking.ITrackedSetting)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<ITrackedSetting>(ITrackedSetting)
+  nameWithType: ObjectExtensions.AsNonNull<ITrackedSetting>(ITrackedSetting)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Configuration.Tracking.ITrackedSetting>(osu.Framework.Configuration.Tracking.ITrackedSetting)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of ITrackedSetting)(ITrackedSetting)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Configuration.Tracking.ITrackedSetting)(osu.Framework.Configuration.Tracking.ITrackedSetting)
+  name.vb: AsNonNull(Of ITrackedSetting)(ITrackedSetting)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Configuration.Tracking.ITrackedSetting)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Configuration.Tracking.ITrackedSetting)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<ITrackedSetting>(ITrackedSetting)
+  nameWithType: ObjectExtensions.IsNotNull<ITrackedSetting>(ITrackedSetting)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Configuration.Tracking.ITrackedSetting>(osu.Framework.Configuration.Tracking.ITrackedSetting)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of ITrackedSetting)(ITrackedSetting)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Configuration.Tracking.ITrackedSetting)(osu.Framework.Configuration.Tracking.ITrackedSetting)
+  name.vb: IsNotNull(Of ITrackedSetting)(ITrackedSetting)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Configuration.Tracking.ITrackedSetting)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Configuration.Tracking.ITrackedSetting)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<ITrackedSetting>(ITrackedSetting)
+  nameWithType: ObjectExtensions.IsNull<ITrackedSetting>(ITrackedSetting)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Configuration.Tracking.ITrackedSetting>(osu.Framework.Configuration.Tracking.ITrackedSetting)
+  nameWithType.vb: ObjectExtensions.IsNull(Of ITrackedSetting)(ITrackedSetting)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Configuration.Tracking.ITrackedSetting)(osu.Framework.Configuration.Tracking.ITrackedSetting)
+  name.vb: IsNull(Of ITrackedSetting)(ITrackedSetting)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Configuration.Tracking.ITrackedSetting)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Configuration.Tracking.ITrackedSetting)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: )
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<ITrackedSetting, TChild>(ITrackedSetting, TChild)
+  nameWithType: ContainerExtensions.WithChild<ITrackedSetting, TChild>(ITrackedSetting, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Configuration.Tracking.ITrackedSetting, TChild>(osu.Framework.Configuration.Tracking.ITrackedSetting, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of ITrackedSetting, TChild)(ITrackedSetting, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Configuration.Tracking.ITrackedSetting, TChild)(osu.Framework.Configuration.Tracking.ITrackedSetting, TChild)
+  name.vb: WithChild(Of ITrackedSetting, TChild)(ITrackedSetting, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Configuration.Tracking.ITrackedSetting,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Configuration.Tracking.ITrackedSetting,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<ITrackedSetting, TChild>(ITrackedSetting, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<ITrackedSetting, TChild>(ITrackedSetting, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Configuration.Tracking.ITrackedSetting, TChild>(osu.Framework.Configuration.Tracking.ITrackedSetting, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of ITrackedSetting, TChild)(ITrackedSetting, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Configuration.Tracking.ITrackedSetting, TChild)(osu.Framework.Configuration.Tracking.ITrackedSetting, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of ITrackedSetting, TChild)(ITrackedSetting, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Configuration.Tracking.ITrackedSetting,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Configuration.Tracking.ITrackedSetting,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<ITrackedSetting, TChild>(ITrackedSetting, TChild)
+  nameWithType: ContainerExtensions.Wrap<ITrackedSetting, TChild>(ITrackedSetting, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Configuration.Tracking.ITrackedSetting, TChild>(osu.Framework.Configuration.Tracking.ITrackedSetting, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of ITrackedSetting, TChild)(ITrackedSetting, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Configuration.Tracking.ITrackedSetting, TChild)(osu.Framework.Configuration.Tracking.ITrackedSetting, TChild)
+  name.vb: Wrap(Of ITrackedSetting, TChild)(ITrackedSetting, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Configuration.Tracking.ITrackedSetting,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Configuration.Tracking.ITrackedSetting,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+    name: ITrackedSetting
+    href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: System.Action{osu.Framework.Configuration.Tracking.SettingDescription}
+  commentId: T:System.Action{osu.Framework.Configuration.Tracking.SettingDescription}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<SettingDescription>
+  nameWithType: Action<SettingDescription>
+  fullName: System.Action<osu.Framework.Configuration.Tracking.SettingDescription>
+  nameWithType.vb: Action(Of SettingDescription)
+  fullName.vb: System.Action(Of osu.Framework.Configuration.Tracking.SettingDescription)
+  name.vb: Action(Of SettingDescription)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: osu.Framework.Configuration.Tracking.SettingDescription
+    name: SettingDescription
+    href: osu.Framework.Configuration.Tracking.SettingDescription.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Configuration.Tracking.SettingDescription
+    name: SettingDescription
+    href: osu.Framework.Configuration.Tracking.SettingDescription.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Bindables.Bindable`1
+  commentId: T:osu.Framework.Bindables.Bindable`1
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.Bindable-1.html
+  name: Bindable<T>
+  nameWithType: Bindable<T>
+  fullName: osu.Framework.Bindables.Bindable<T>
+  nameWithType.vb: Bindable(Of T)
+  fullName.vb: osu.Framework.Bindables.Bindable(Of T)
+  name.vb: Bindable(Of T)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.Bindable`1
+    name: Bindable
+    href: osu.Framework.Bindables.Bindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.Bindable`1
+    name: Bindable
+    href: osu.Framework.Bindables.Bindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.SettingChanged
+  commentId: E:osu.Framework.Configuration.Tracking.ITrackedSetting.SettingChanged
+  parent: osu.Framework.Configuration.Tracking.ITrackedSetting
+  href: osu.Framework.Configuration.Tracking.ITrackedSetting.html#osu_Framework_Configuration_Tracking_ITrackedSetting_SettingChanged
+  name: SettingChanged
+  nameWithType: ITrackedSetting.SettingChanged
+  fullName: osu.Framework.Configuration.Tracking.ITrackedSetting.SettingChanged
+- uid: osu.Framework.Configuration.ConfigManager`1
+  commentId: T:osu.Framework.Configuration.ConfigManager`1
+  href: osu.Framework.Configuration.ConfigManager-1.html
+  name: ConfigManager<TLookup>
+  nameWithType: ConfigManager<TLookup>
+  fullName: osu.Framework.Configuration.ConfigManager<TLookup>
+  nameWithType.vb: ConfigManager(Of TLookup)
+  fullName.vb: osu.Framework.Configuration.ConfigManager(Of TLookup)
+  name.vb: ConfigManager(Of TLookup)
+  spec.csharp:
+  - uid: osu.Framework.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: osu.Framework.Configuration.ConfigManager-1.html
+  - name: <
+  - name: TLookup
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: osu.Framework.Configuration.ConfigManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TLookup
+  - name: )
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.LoadFrom*
+  commentId: Overload:osu.Framework.Configuration.Tracking.ITrackedSetting.LoadFrom
+  href: osu.Framework.Configuration.Tracking.ITrackedSetting.html#osu_Framework_Configuration_Tracking_ITrackedSetting_LoadFrom__1_osu_Framework_Configuration_ConfigManager___0__
+  name: LoadFrom
+  nameWithType: ITrackedSetting.LoadFrom
+  fullName: osu.Framework.Configuration.Tracking.ITrackedSetting.LoadFrom
+- uid: osu.Framework.Configuration.ConfigManager{{TLookup}}
+  commentId: T:osu.Framework.Configuration.ConfigManager{`0}
+  parent: osu.Framework.Configuration
+  definition: osu.Framework.Configuration.ConfigManager`1
+  href: osu.Framework.Configuration.ConfigManager-1.html
+  name: ConfigManager<TLookup>
+  nameWithType: ConfigManager<TLookup>
+  fullName: osu.Framework.Configuration.ConfigManager<TLookup>
+  nameWithType.vb: ConfigManager(Of TLookup)
+  fullName.vb: osu.Framework.Configuration.ConfigManager(Of TLookup)
+  name.vb: ConfigManager(Of TLookup)
+  spec.csharp:
+  - uid: osu.Framework.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: osu.Framework.Configuration.ConfigManager-1.html
+  - name: <
+  - name: TLookup
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Configuration.ConfigManager`1
+    name: ConfigManager
+    href: osu.Framework.Configuration.ConfigManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TLookup
+  - name: )
+- uid: osu.Framework.Bindables
+  commentId: N:osu.Framework.Bindables
+  href: osu.html
+  name: osu.Framework.Bindables
+  nameWithType: osu.Framework.Bindables
+  fullName: osu.Framework.Bindables
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting
+  commentId: T:osu.Framework.Configuration.Tracking.ITrackedSetting
+  parent: osu.Framework.Configuration.Tracking
+  href: osu.Framework.Configuration.Tracking.ITrackedSetting.html
+  name: ITrackedSetting
+  nameWithType: ITrackedSetting
+  fullName: osu.Framework.Configuration.Tracking.ITrackedSetting
+- uid: osu.Framework.Configuration
+  commentId: N:osu.Framework.Configuration
+  href: osu.html
+  name: osu.Framework.Configuration
+  nameWithType: osu.Framework.Configuration
+  fullName: osu.Framework.Configuration
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Configuration
+    name: Configuration
+    href: osu.Framework.Configuration.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Configuration
+    name: Configuration
+    href: osu.Framework.Configuration.html
+- uid: osu.Framework.Configuration.Tracking.ITrackedSetting.Unload*
+  commentId: Overload:osu.Framework.Configuration.Tracking.ITrackedSetting.Unload
+  href: osu.Framework.Configuration.Tracking.ITrackedSetting.html#osu_Framework_Configuration_Tracking_ITrackedSetting_Unload
+  name: Unload
+  nameWithType: ITrackedSetting.Unload
+  fullName: osu.Framework.Configuration.Tracking.ITrackedSetting.Unload

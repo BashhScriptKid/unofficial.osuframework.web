@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class FontStore | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class FontStore | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_IO_Stores_FontStore.md&amp;value=---%0Auid%3A%20osu.Framework.IO.Stores.FontStore%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.IO.Stores.FontStore">
+
+
+
+  <h1 id="osu_Framework_IO_Stores_FontStore" data-uid="osu.Framework.IO.Stores.FontStore" class="text-break">
+Class FontStore  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Stores/FontStore.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.IO.html">IO</a>.<a class="xref" href="osu.Framework.IO.Stores.html">Stores</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FontStore : TextureStore, ITextureStore, IResourceStore&lt;Texture&gt;, IDisposable, ITexturedGlyphLookupStore</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html">TextureStore</a></div>
+      <div><span class="xref">FontStore</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Graphics.Textures.ITextureStore.html">ITextureStore</a></div>
+      <div><a class="xref" href="osu.Framework.IO.Stores.IResourceStore-1.html">IResourceStore</a>&lt;<a class="xref" href="osu.Framework.Graphics.Textures.Texture.html">Texture</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="osu.Framework.Text.ITexturedGlyphLookupStore.html">ITexturedGlyphLookupStore</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_Atlas">TextureStore.Atlas</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_ScaleAdjust">TextureStore.ScaleAdjust</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_GetAsync_System_String_System_Threading_CancellationToken_">TextureStore.GetAsync(string, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_GetAsync_System_String_osu_Framework_Graphics_Textures_WrapMode_osu_Framework_Graphics_Textures_WrapMode_System_Threading_CancellationToken_">TextureStore.GetAsync(string, WrapMode, WrapMode, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_Get_System_String_">TextureStore.Get(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_Get_System_String_osu_Framework_Graphics_Textures_WrapMode_osu_Framework_Graphics_Textures_WrapMode_">TextureStore.Get(string, WrapMode, WrapMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_GetStream_System_String_">TextureStore.GetStream(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_GetAvailableResources">TextureStore.GetAvailableResources()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_TryGetCached_System_String_osu_Framework_Graphics_Textures_Texture__">TextureStore.TryGetCached(string, out Texture)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_CacheAndReturnTexture_System_String_osu_Framework_Graphics_Textures_Texture_">TextureStore.CacheAndReturnTexture(string, Texture)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_Purge_osu_Framework_Graphics_Textures_Texture_">TextureStore.Purge(Texture)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_Dispose">TextureStore.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_Dispose_System_Boolean_">TextureStore.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_IO_Stores_FontStore__ctor_" data-uid="osu.Framework.IO.Stores.FontStore.#ctor*"></a>
+
+  <h3 id="osu_Framework_IO_Stores_FontStore__ctor_osu_Framework_Graphics_Rendering_IRenderer_osu_Framework_IO_Stores_IResourceStore_osu_Framework_Graphics_Textures_TextureUpload__System_Single_" data-uid="osu.Framework.IO.Stores.FontStore.#ctor(osu.Framework.Graphics.Rendering.IRenderer,osu.Framework.IO.Stores.IResourceStore{osu.Framework.Graphics.Textures.TextureUpload},System.Single)">
+  FontStore(IRenderer, IResourceStore&lt;TextureUpload&gt;, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Stores/FontStore.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a font store to be added to a parent font store via <a class="xref" href="osu.Framework.IO.Stores.FontStore.html#osu_Framework_IO_Stores_FontStore_AddStore_osu_Framework_Graphics_Textures_ITextureStore_">AddStore(ITextureStore)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontStore(IRenderer renderer, IResourceStore&lt;TextureUpload&gt; store = null, float scaleAdjust = 100)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd><p>The renderer to create textures with.</p>
+</dd>
+    <dt><code>store</code> <a class="xref" href="osu.Framework.IO.Stores.IResourceStore-1.html">IResourceStore</a>&lt;<a class="xref" href="osu.Framework.Graphics.Textures.TextureUpload.html">TextureUpload</a>&gt;</dt>
+    <dd><p>The texture source.</p>
+</dd>
+    <dt><code>scaleAdjust</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The raw pixel height of the font. Can be used to apply a global scale or metric to font usages.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Stores_FontStore__ctor_" data-uid="osu.Framework.IO.Stores.FontStore.#ctor*"></a>
+
+  <h3 id="osu_Framework_IO_Stores_FontStore__ctor_osu_Framework_Graphics_Rendering_IRenderer_osu_Framework_IO_Stores_IResourceStore_osu_Framework_Graphics_Textures_TextureUpload__System_Single_osu_Framework_Graphics_Textures_TextureFilteringMode_" data-uid="osu.Framework.IO.Stores.FontStore.#ctor(osu.Framework.Graphics.Rendering.IRenderer,osu.Framework.IO.Stores.IResourceStore{osu.Framework.Graphics.Textures.TextureUpload},System.Single,osu.Framework.Graphics.Textures.TextureFilteringMode)">
+  FontStore(IRenderer, IResourceStore&lt;TextureUpload&gt;, float, TextureFilteringMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Stores/FontStore.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a font store with a custom filtering mode to be added to a parent font store via <a class="xref" href="osu.Framework.IO.Stores.FontStore.html#osu_Framework_IO_Stores_FontStore_AddStore_osu_Framework_Graphics_Textures_ITextureStore_">AddStore(ITextureStore)</a>.
+All fonts that use the specified filter mode should be nested inside this store to make optimal use of texture atlases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FontStore(IRenderer renderer, IResourceStore&lt;TextureUpload&gt; store = null, float scaleAdjust = 100, TextureFilteringMode minFilterMode = TextureFilteringMode.Linear)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd><p>The renderer to create textures with.</p>
+</dd>
+    <dt><code>store</code> <a class="xref" href="osu.Framework.IO.Stores.IResourceStore-1.html">IResourceStore</a>&lt;<a class="xref" href="osu.Framework.Graphics.Textures.TextureUpload.html">TextureUpload</a>&gt;</dt>
+    <dd><p>The texture source.</p>
+</dd>
+    <dt><code>scaleAdjust</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The raw pixel height of the font. Can be used to apply a global scale or metric to font usages.</p>
+</dd>
+    <dt><code>minFilterMode</code> <a class="xref" href="osu.Framework.Graphics.Textures.TextureFilteringMode.html">TextureFilteringMode</a></dt>
+    <dd><p>The texture minification filtering mode to use.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_IO_Stores_FontStore_AddStore_" data-uid="osu.Framework.IO.Stores.FontStore.AddStore*"></a>
+
+  <h3 id="osu_Framework_IO_Stores_FontStore_AddStore_osu_Framework_Graphics_Textures_ITextureStore_" data-uid="osu.Framework.IO.Stores.FontStore.AddStore(osu.Framework.Graphics.Textures.ITextureStore)">
+  AddStore(ITextureStore)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Stores/FontStore.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a nested texture store to use during <a class="xref" href="osu.Framework.Graphics.Textures.Texture.html">Texture</a> lookup if not found in this store.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void AddStore(ITextureStore store)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>store</code> <a class="xref" href="osu.Framework.Graphics.Textures.ITextureStore.html">ITextureStore</a></dt>
+    <dd><p>The store to add.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_IO_Stores_FontStore_AddStore_osu_Framework_Graphics_Textures_ITextureStore__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Of note, nested stores will use their own sources and not include any sources added via <a class="xref" href="osu.Framework.Graphics.Textures.TextureStore.html#osu_Framework_Graphics_Textures_TextureStore_AddTextureSource_osu_Framework_IO_Stores_IResourceStore_osu_Framework_Graphics_Textures_TextureUpload__">AddTextureSource(IResourceStore&lt;TextureUpload&gt;)</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_IO_Stores_FontStore_AddTextureSource_" data-uid="osu.Framework.IO.Stores.FontStore.AddTextureSource*"></a>
+
+  <h3 id="osu_Framework_IO_Stores_FontStore_AddTextureSource_osu_Framework_IO_Stores_IResourceStore_osu_Framework_Graphics_Textures_TextureUpload__" data-uid="osu.Framework.IO.Stores.FontStore.AddTextureSource(osu.Framework.IO.Stores.IResourceStore{osu.Framework.Graphics.Textures.TextureUpload})">
+  AddTextureSource(IResourceStore&lt;TextureUpload&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Stores/FontStore.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a texture data lookup source to load <a class="xref" href="osu.Framework.Graphics.Textures.Texture.html">Texture</a>s with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void AddTextureSource(IResourceStore&lt;TextureUpload&gt; store)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>store</code> <a class="xref" href="osu.Framework.IO.Stores.IResourceStore-1.html">IResourceStore</a>&lt;<a class="xref" href="osu.Framework.Graphics.Textures.TextureUpload.html">TextureUpload</a>&gt;</dt>
+    <dd><p>The store to add.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_IO_Stores_FontStore_AddTextureSource_osu_Framework_IO_Stores_IResourceStore_osu_Framework_Graphics_Textures_TextureUpload___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Lookup sources can be implemented easily using a <a class="xref" href="osu.Framework.Graphics.Textures.TextureLoaderStore.html">TextureLoaderStore</a> to provide the final <a class="xref" href="osu.Framework.Graphics.Textures.TextureUpload.html">TextureUpload</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_IO_Stores_FontStore_Get_" data-uid="osu.Framework.IO.Stores.FontStore.Get*"></a>
+
+  <h3 id="osu_Framework_IO_Stores_FontStore_Get_System_String_System_Char_" data-uid="osu.Framework.IO.Stores.FontStore.Get(System.String,System.Char)">
+  Get(string, char)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Stores/FontStore.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a glyph from the store.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ITexturedCharacterGlyph Get(string fontName, char character)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fontName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the font.</p>
+</dd>
+    <dt><code>character</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Text.ITexturedCharacterGlyph.html">ITexturedCharacterGlyph</a></dt>
+    <dd><p>The character glyph.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Stores_FontStore_GetAsync_" data-uid="osu.Framework.IO.Stores.FontStore.GetAsync*"></a>
+
+  <h3 id="osu_Framework_IO_Stores_FontStore_GetAsync_System_String_System_Char_" data-uid="osu.Framework.IO.Stores.FontStore.GetAsync(System.String,System.Char)">
+  GetAsync(string, char)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Stores/FontStore.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a glyph from the store asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ITexturedCharacterGlyph&gt; GetAsync(string fontName, char character)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fontName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the font.</p>
+</dd>
+    <dt><code>character</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a></dt>
+    <dd><p>The character to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="osu.Framework.Text.ITexturedCharacterGlyph.html">ITexturedCharacterGlyph</a>&gt;</dt>
+    <dd><p>The character glyph.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Stores_FontStore_RemoveStore_" data-uid="osu.Framework.IO.Stores.FontStore.RemoveStore*"></a>
+
+  <h3 id="osu_Framework_IO_Stores_FontStore_RemoveStore_osu_Framework_Graphics_Textures_ITextureStore_" data-uid="osu.Framework.IO.Stores.FontStore.RemoveStore(osu.Framework.Graphics.Textures.ITextureStore)">
+  RemoveStore(ITextureStore)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Stores/FontStore.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a nested texture store.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RemoveStore(ITextureStore store)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>store</code> <a class="xref" href="osu.Framework.Graphics.Textures.ITextureStore.html">ITextureStore</a></dt>
+    <dd><p>The store to remove.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Stores_FontStore_RemoveTextureStore_" data-uid="osu.Framework.IO.Stores.FontStore.RemoveTextureStore*"></a>
+
+  <h3 id="osu_Framework_IO_Stores_FontStore_RemoveTextureStore_osu_Framework_IO_Stores_IResourceStore_osu_Framework_Graphics_Textures_TextureUpload__" data-uid="osu.Framework.IO.Stores.FontStore.RemoveTextureStore(osu.Framework.IO.Stores.IResourceStore{osu.Framework.Graphics.Textures.TextureUpload})">
+  RemoveTextureStore(IResourceStore&lt;TextureUpload&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Stores/FontStore.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a texture data lookup source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RemoveTextureStore(IResourceStore&lt;TextureUpload&gt; store)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>store</code> <a class="xref" href="osu.Framework.IO.Stores.IResourceStore-1.html">IResourceStore</a>&lt;<a class="xref" href="osu.Framework.Graphics.Textures.TextureUpload.html">TextureUpload</a>&gt;</dt>
+    <dd><p>The store to remove.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Stores/FontStore.cs/#L18" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

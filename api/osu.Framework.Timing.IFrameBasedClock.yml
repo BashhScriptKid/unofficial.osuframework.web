@@ -1,0 +1,1205 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Timing.IFrameBasedClock
+  commentId: T:osu.Framework.Timing.IFrameBasedClock
+  id: IFrameBasedClock
+  parent: osu.Framework.Timing
+  children:
+  - osu.Framework.Timing.IFrameBasedClock.ElapsedFrameTime
+  - osu.Framework.Timing.IFrameBasedClock.FramesPerSecond
+  - osu.Framework.Timing.IFrameBasedClock.ProcessFrame
+  - osu.Framework.Timing.IFrameBasedClock.TimeInfo
+  langs:
+  - csharp
+  - vb
+  name: IFrameBasedClock
+  nameWithType: IFrameBasedClock
+  fullName: osu.Framework.Timing.IFrameBasedClock
+  type: Interface
+  source:
+    remote:
+      path: osu.Framework/Timing/IFrameBasedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: IFrameBasedClock
+    path: osu.Framework/Timing/IFrameBasedClock.cs
+    startLine: 9
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: >-
+    A clock which will only update its current time when a frame process is triggered.
+
+    Useful for keeping a consistent time state across an individual update.
+  example: []
+  syntax:
+    content: 'public interface IFrameBasedClock : IClock'
+    content.vb: Public Interface IFrameBasedClock Inherits IClock
+  inheritedMembers:
+  - osu.Framework.Timing.IClock.CurrentTime
+  - osu.Framework.Timing.IClock.Rate
+  - osu.Framework.Timing.IClock.IsRunning
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Timing.IFrameBasedClock.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Timing.IFrameBasedClock.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Timing.IFrameBasedClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Timing.IFrameBasedClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Timing.IFrameBasedClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Timing.IFrameBasedClock.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Timing.IFrameBasedClock.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Timing.IFrameBasedClock.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Timing.IFrameBasedClock.ElapsedFrameTime
+  commentId: P:osu.Framework.Timing.IFrameBasedClock.ElapsedFrameTime
+  id: ElapsedFrameTime
+  parent: osu.Framework.Timing.IFrameBasedClock
+  langs:
+  - csharp
+  - vb
+  name: ElapsedFrameTime
+  nameWithType: IFrameBasedClock.ElapsedFrameTime
+  fullName: osu.Framework.Timing.IFrameBasedClock.ElapsedFrameTime
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Timing/IFrameBasedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ElapsedFrameTime
+    path: osu.Framework/Timing/IFrameBasedClock.cs
+    startLine: 14
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Elapsed time since last frame in milliseconds.
+  example: []
+  syntax:
+    content: double ElapsedFrameTime { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: ReadOnly Property ElapsedFrameTime As Double
+  overload: osu.Framework.Timing.IFrameBasedClock.ElapsedFrameTime*
+- uid: osu.Framework.Timing.IFrameBasedClock.FramesPerSecond
+  commentId: P:osu.Framework.Timing.IFrameBasedClock.FramesPerSecond
+  id: FramesPerSecond
+  parent: osu.Framework.Timing.IFrameBasedClock
+  langs:
+  - csharp
+  - vb
+  name: FramesPerSecond
+  nameWithType: IFrameBasedClock.FramesPerSecond
+  fullName: osu.Framework.Timing.IFrameBasedClock.FramesPerSecond
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Timing/IFrameBasedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: FramesPerSecond
+    path: osu.Framework/Timing/IFrameBasedClock.cs
+    startLine: 20
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: >-
+    A moving average representation of the frames per second of this clock.
+
+    Do not use this for any timing purposes (use <xref href="osu.Framework.Timing.IFrameBasedClock.ElapsedFrameTime" data-throw-if-not-resolved="false"></xref> instead).
+  example: []
+  syntax:
+    content: double FramesPerSecond { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: ReadOnly Property FramesPerSecond As Double
+  overload: osu.Framework.Timing.IFrameBasedClock.FramesPerSecond*
+- uid: osu.Framework.Timing.IFrameBasedClock.TimeInfo
+  commentId: P:osu.Framework.Timing.IFrameBasedClock.TimeInfo
+  id: TimeInfo
+  parent: osu.Framework.Timing.IFrameBasedClock
+  langs:
+  - csharp
+  - vb
+  name: TimeInfo
+  nameWithType: IFrameBasedClock.TimeInfo
+  fullName: osu.Framework.Timing.IFrameBasedClock.TimeInfo
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Timing/IFrameBasedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TimeInfo
+    path: osu.Framework/Timing/IFrameBasedClock.cs
+    startLine: 22
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  syntax:
+    content: FrameTimeInfo TimeInfo { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Timing.FrameTimeInfo
+    content.vb: ReadOnly Property TimeInfo As FrameTimeInfo
+  overload: osu.Framework.Timing.IFrameBasedClock.TimeInfo*
+- uid: osu.Framework.Timing.IFrameBasedClock.ProcessFrame
+  commentId: M:osu.Framework.Timing.IFrameBasedClock.ProcessFrame
+  id: ProcessFrame
+  parent: osu.Framework.Timing.IFrameBasedClock
+  langs:
+  - csharp
+  - vb
+  name: ProcessFrame()
+  nameWithType: IFrameBasedClock.ProcessFrame()
+  fullName: osu.Framework.Timing.IFrameBasedClock.ProcessFrame()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/IFrameBasedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ProcessFrame
+    path: osu.Framework/Timing/IFrameBasedClock.cs
+    startLine: 31
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Processes one frame. Generally should be run once per update loop.
+  example: []
+  syntax:
+    content: void ProcessFrame()
+    content.vb: Sub ProcessFrame()
+  overload: osu.Framework.Timing.IFrameBasedClock.ProcessFrame*
+references:
+- uid: osu.Framework.Timing
+  commentId: N:osu.Framework.Timing
+  href: osu.html
+  name: osu.Framework.Timing
+  nameWithType: osu.Framework.Timing
+  fullName: osu.Framework.Timing
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Timing
+    name: Timing
+    href: osu.Framework.Timing.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Timing
+    name: Timing
+    href: osu.Framework.Timing.html
+- uid: osu.Framework.Timing.IClock.CurrentTime
+  commentId: P:osu.Framework.Timing.IClock.CurrentTime
+  parent: osu.Framework.Timing.IClock
+  href: osu.Framework.Timing.IClock.html#osu_Framework_Timing_IClock_CurrentTime
+  name: CurrentTime
+  nameWithType: IClock.CurrentTime
+  fullName: osu.Framework.Timing.IClock.CurrentTime
+- uid: osu.Framework.Timing.IClock.Rate
+  commentId: P:osu.Framework.Timing.IClock.Rate
+  parent: osu.Framework.Timing.IClock
+  href: osu.Framework.Timing.IClock.html#osu_Framework_Timing_IClock_Rate
+  name: Rate
+  nameWithType: IClock.Rate
+  fullName: osu.Framework.Timing.IClock.Rate
+- uid: osu.Framework.Timing.IClock.IsRunning
+  commentId: P:osu.Framework.Timing.IClock.IsRunning
+  parent: osu.Framework.Timing.IClock
+  href: osu.Framework.Timing.IClock.html#osu_Framework_Timing_IClock_IsRunning
+  name: IsRunning
+  nameWithType: IClock.IsRunning
+  fullName: osu.Framework.Timing.IClock.IsRunning
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Timing.IFrameBasedClock.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<IFrameBasedClock>(IFrameBasedClock)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<IFrameBasedClock>(IFrameBasedClock)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Timing.IFrameBasedClock>(osu.Framework.Timing.IFrameBasedClock)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of IFrameBasedClock)(IFrameBasedClock)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Timing.IFrameBasedClock)(osu.Framework.Timing.IFrameBasedClock)
+  name.vb: GetLocalisableDescription(Of IFrameBasedClock)(IFrameBasedClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Timing.IFrameBasedClock)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Timing.IFrameBasedClock)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+- uid: osu.Framework.Timing.IFrameBasedClock.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<IFrameBasedClock>(IFrameBasedClock)
+  nameWithType: EnumerableExtensions.Yield<IFrameBasedClock>(IFrameBasedClock)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Timing.IFrameBasedClock>(osu.Framework.Timing.IFrameBasedClock)
+  nameWithType.vb: EnumerableExtensions.Yield(Of IFrameBasedClock)(IFrameBasedClock)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Timing.IFrameBasedClock)(osu.Framework.Timing.IFrameBasedClock)
+  name.vb: Yield(Of IFrameBasedClock)(IFrameBasedClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Timing.IFrameBasedClock)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Timing.IFrameBasedClock)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+- uid: osu.Framework.Timing.IFrameBasedClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<IFrameBasedClock>(IFrameBasedClock)
+  nameWithType: ObjectExtensions.AsNonNull<IFrameBasedClock>(IFrameBasedClock)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Timing.IFrameBasedClock>(osu.Framework.Timing.IFrameBasedClock)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of IFrameBasedClock)(IFrameBasedClock)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Timing.IFrameBasedClock)(osu.Framework.Timing.IFrameBasedClock)
+  name.vb: AsNonNull(Of IFrameBasedClock)(IFrameBasedClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Timing.IFrameBasedClock)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Timing.IFrameBasedClock)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+- uid: osu.Framework.Timing.IFrameBasedClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<IFrameBasedClock>(IFrameBasedClock)
+  nameWithType: ObjectExtensions.IsNotNull<IFrameBasedClock>(IFrameBasedClock)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Timing.IFrameBasedClock>(osu.Framework.Timing.IFrameBasedClock)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of IFrameBasedClock)(IFrameBasedClock)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Timing.IFrameBasedClock)(osu.Framework.Timing.IFrameBasedClock)
+  name.vb: IsNotNull(Of IFrameBasedClock)(IFrameBasedClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Timing.IFrameBasedClock)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Timing.IFrameBasedClock)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+- uid: osu.Framework.Timing.IFrameBasedClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<IFrameBasedClock>(IFrameBasedClock)
+  nameWithType: ObjectExtensions.IsNull<IFrameBasedClock>(IFrameBasedClock)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Timing.IFrameBasedClock>(osu.Framework.Timing.IFrameBasedClock)
+  nameWithType.vb: ObjectExtensions.IsNull(Of IFrameBasedClock)(IFrameBasedClock)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Timing.IFrameBasedClock)(osu.Framework.Timing.IFrameBasedClock)
+  name.vb: IsNull(Of IFrameBasedClock)(IFrameBasedClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Timing.IFrameBasedClock)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Timing.IFrameBasedClock)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: )
+- uid: osu.Framework.Timing.IFrameBasedClock.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<IFrameBasedClock, TChild>(IFrameBasedClock, TChild)
+  nameWithType: ContainerExtensions.WithChild<IFrameBasedClock, TChild>(IFrameBasedClock, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Timing.IFrameBasedClock, TChild>(osu.Framework.Timing.IFrameBasedClock, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of IFrameBasedClock, TChild)(IFrameBasedClock, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Timing.IFrameBasedClock, TChild)(osu.Framework.Timing.IFrameBasedClock, TChild)
+  name.vb: WithChild(Of IFrameBasedClock, TChild)(IFrameBasedClock, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Timing.IFrameBasedClock,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Timing.IFrameBasedClock,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Timing.IFrameBasedClock.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<IFrameBasedClock, TChild>(IFrameBasedClock, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<IFrameBasedClock, TChild>(IFrameBasedClock, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Timing.IFrameBasedClock, TChild>(osu.Framework.Timing.IFrameBasedClock, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of IFrameBasedClock, TChild)(IFrameBasedClock, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Timing.IFrameBasedClock, TChild)(osu.Framework.Timing.IFrameBasedClock, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of IFrameBasedClock, TChild)(IFrameBasedClock, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Timing.IFrameBasedClock,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Timing.IFrameBasedClock,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Timing.IFrameBasedClock.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<IFrameBasedClock, TChild>(IFrameBasedClock, TChild)
+  nameWithType: ContainerExtensions.Wrap<IFrameBasedClock, TChild>(IFrameBasedClock, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Timing.IFrameBasedClock, TChild>(osu.Framework.Timing.IFrameBasedClock, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of IFrameBasedClock, TChild)(IFrameBasedClock, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Timing.IFrameBasedClock, TChild)(osu.Framework.Timing.IFrameBasedClock, TChild)
+  name.vb: Wrap(Of IFrameBasedClock, TChild)(IFrameBasedClock, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Timing.IFrameBasedClock,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Timing.IFrameBasedClock,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.IFrameBasedClock
+    name: IFrameBasedClock
+    href: osu.Framework.Timing.IFrameBasedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Timing.IClock
+  commentId: T:osu.Framework.Timing.IClock
+  parent: osu.Framework.Timing
+  href: osu.Framework.Timing.IClock.html
+  name: IClock
+  nameWithType: IClock
+  fullName: osu.Framework.Timing.IClock
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Timing.IFrameBasedClock.ElapsedFrameTime*
+  commentId: Overload:osu.Framework.Timing.IFrameBasedClock.ElapsedFrameTime
+  href: osu.Framework.Timing.IFrameBasedClock.html#osu_Framework_Timing_IFrameBasedClock_ElapsedFrameTime
+  name: ElapsedFrameTime
+  nameWithType: IFrameBasedClock.ElapsedFrameTime
+  fullName: osu.Framework.Timing.IFrameBasedClock.ElapsedFrameTime
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Timing.IFrameBasedClock.ElapsedFrameTime
+  commentId: P:osu.Framework.Timing.IFrameBasedClock.ElapsedFrameTime
+  parent: osu.Framework.Timing.IFrameBasedClock
+  href: osu.Framework.Timing.IFrameBasedClock.html#osu_Framework_Timing_IFrameBasedClock_ElapsedFrameTime
+  name: ElapsedFrameTime
+  nameWithType: IFrameBasedClock.ElapsedFrameTime
+  fullName: osu.Framework.Timing.IFrameBasedClock.ElapsedFrameTime
+- uid: osu.Framework.Timing.IFrameBasedClock.FramesPerSecond*
+  commentId: Overload:osu.Framework.Timing.IFrameBasedClock.FramesPerSecond
+  href: osu.Framework.Timing.IFrameBasedClock.html#osu_Framework_Timing_IFrameBasedClock_FramesPerSecond
+  name: FramesPerSecond
+  nameWithType: IFrameBasedClock.FramesPerSecond
+  fullName: osu.Framework.Timing.IFrameBasedClock.FramesPerSecond
+- uid: osu.Framework.Timing.IFrameBasedClock
+  commentId: T:osu.Framework.Timing.IFrameBasedClock
+  parent: osu.Framework.Timing
+  href: osu.Framework.Timing.IFrameBasedClock.html
+  name: IFrameBasedClock
+  nameWithType: IFrameBasedClock
+  fullName: osu.Framework.Timing.IFrameBasedClock
+- uid: osu.Framework.Timing.IFrameBasedClock.TimeInfo*
+  commentId: Overload:osu.Framework.Timing.IFrameBasedClock.TimeInfo
+  href: osu.Framework.Timing.IFrameBasedClock.html#osu_Framework_Timing_IFrameBasedClock_TimeInfo
+  name: TimeInfo
+  nameWithType: IFrameBasedClock.TimeInfo
+  fullName: osu.Framework.Timing.IFrameBasedClock.TimeInfo
+- uid: osu.Framework.Timing.FrameTimeInfo
+  commentId: T:osu.Framework.Timing.FrameTimeInfo
+  parent: osu.Framework.Timing
+  href: osu.Framework.Timing.FrameTimeInfo.html
+  name: FrameTimeInfo
+  nameWithType: FrameTimeInfo
+  fullName: osu.Framework.Timing.FrameTimeInfo
+- uid: osu.Framework.Timing.IFrameBasedClock.ProcessFrame*
+  commentId: Overload:osu.Framework.Timing.IFrameBasedClock.ProcessFrame
+  href: osu.Framework.Timing.IFrameBasedClock.html#osu_Framework_Timing_IFrameBasedClock_ProcessFrame
+  name: ProcessFrame
+  nameWithType: IFrameBasedClock.ProcessFrame
+  fullName: osu.Framework.Timing.IFrameBasedClock.ProcessFrame

@@ -1,0 +1,3764 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CompositeDrawable | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CompositeDrawable | osu!framework ">
+      
+      <meta name="description" content="A drawable consisting of a composite of child drawables which are managed by the composite object itself. Transformations applied to a  are also applied to its children. Additionally, s support various effects, such as masking, edge effect, padding, and automatic sizing depending on their children.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Graphics.Containers.CompositeDrawable">
+
+
+
+  <h1 id="osu_Framework_Graphics_Containers_CompositeDrawable" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable" class="text-break">
+Class CompositeDrawable  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Graphics.html">Graphics</a>.<a class="xref" href="osu.Framework.Graphics.Containers.html">Containers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A drawable consisting of a composite of child drawables which are
+managed by the composite object itself. Transformations applied to
+a <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> are also applied to its children.
+Additionally, <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>s support various effects, such as masking, edge effect,
+padding, and automatic sizing depending on their children.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class CompositeDrawable : Drawable, IDependencyInjectionCandidate, IDisposable, IDrawable, ITransformable, ISourceGeneratedHandleInputCache, ISourceGeneratedLongRunningLoadCache, ISourceGeneratedDependencyActivator</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html">Transformable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></div>
+      <div><span class="xref">CompositeDrawable</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Allocation.IDependencyInjectionCandidate.html">IDependencyInjectionCandidate</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.IDrawable.html">IDrawable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Transforms.ITransformable.html">ITransformable</a></div>
+      <div><a class="xref" href="osu.Framework.Input.ISourceGeneratedHandleInputCache.html">ISourceGeneratedHandleInputCache</a></div>
+      <div><a class="xref" href="osu.Framework.Allocation.ISourceGeneratedLongRunningLoadCache.html">ISourceGeneratedLongRunningLoadCache</a></div>
+      <div><a class="xref" href="osu.Framework.Allocation.ISourceGeneratedDependencyActivator.html">ISourceGeneratedDependencyActivator</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Benchmarks.BenchmarkDrawableTypeAllocations.SimpleComposite.html">BenchmarkDrawableTypeAllocations.SimpleComposite</a></div>
+      <div><a class="xref" href="osu.Framework.Benchmarks.BenchmarkUnbindAllBindables.SimpleComposite.html">BenchmarkUnbindAllBindables.SimpleComposite</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Animations.CustomisableSizeCompositeDrawable.html">CustomisableSizeCompositeDrawable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Audio.DrawableAudioWrapper.html">DrawableAudioWrapper</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.CompositeComponent.html">CompositeComponent</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Container-1.html">Container&lt;T&gt;</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.DelayedLoadWrapper.html">DelayedLoadWrapper</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.GridContainer.html">GridContainer</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.LifetimeManagementContainer.html">LifetimeManagementContainer</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.Footnotes.MarkdownFootnote.html">MarkdownFootnote</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.Footnotes.MarkdownFootnoteBacklink.html">MarkdownFootnoteBacklink</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.Footnotes.MarkdownFootnoteLink.html">MarkdownFootnoteLink</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.MarkdownCodeBlock.html">MarkdownCodeBlock</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.MarkdownContainer.html">MarkdownContainer</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.MarkdownHeading.html">MarkdownHeading</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.MarkdownImage.html">MarkdownImage</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.MarkdownImage.ImageContainer.html">MarkdownImage.ImageContainer</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.MarkdownLinkText.html">MarkdownLinkText</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.MarkdownParagraph.html">MarkdownParagraph</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.MarkdownQuoteBlock.html">MarkdownQuoteBlock</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.MarkdownSeparator.html">MarkdownSeparator</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.MarkdownTable.html">MarkdownTable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.MarkdownTableCell.html">MarkdownTableCell</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.Markdown.NotImplementedMarkdown.html">NotImplementedMarkdown</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.ModelBackedDrawable-1.html">ModelBackedDrawable&lt;T&gt;</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.RearrangeableListContainer-1.html">RearrangeableListContainer&lt;TModel&gt;</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.RearrangeableListItem-1.html">RearrangeableListItem&lt;TModel&gt;</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.TableContainer.html">TableContainer</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.VirtualisedListContainer-2.html">VirtualisedListContainer&lt;TData, TDrawable&gt;</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Containers.VirtualisedListContainer-2.ItemRow.html">VirtualisedListContainer&lt;TData, TDrawable&gt;.ItemRow</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Cursor.TouchLongPressFeedback.html">TouchLongPressFeedback</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Pooling.DrawablePool-1.html">DrawablePool&lt;T&gt;</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Pooling.PoolableDrawable.html">PoolableDrawable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.BasicHSVColourPicker.BasicHueSelectorNub.html">BasicHSVColourPicker.BasicHueSelectorNub</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.Caret.html">Caret</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.ColourPicker.html">ColourPicker</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.Counter.html">Counter</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.DirectorySelector.html">DirectorySelector</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.DirectorySelectorBreadcrumbDisplay.html">DirectorySelectorBreadcrumbDisplay</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.DirectorySelectorItem.html">DirectorySelectorItem</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.Dropdown-1.html">Dropdown&lt;T&gt;</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.HSVColourPicker.html">HSVColourPicker</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.HSVColourPicker.HueSelector.html">HSVColourPicker.HueSelector</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.HSVColourPicker.SaturationValueSelector.html">HSVColourPicker.SaturationValueSelector</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.HSVColourPicker.SaturationValueSelector.Marker.html">HSVColourPicker.SaturationValueSelector.Marker</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.HexColourPicker.html">HexColourPicker</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.HexColourPicker.ColourPreview.html">HexColourPicker.ColourPreview</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.Menu.html">Menu</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.Menu.DrawableMenuItem.html">Menu.DrawableMenuItem</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.UserInterface.TabControl-1.html">TabControl&lt;T&gt;</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Visualisation.Audio.AudioChannelDisplay.html">AudioChannelDisplay</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.Visualisation.Audio.MixerDisplay.html">MixerDisplay</a></div>
+      <div><a class="xref" href="osu.Framework.Screens.Screen.html">Screen</a></div>
+      <div><a class="xref" href="osu.Framework.Screens.ScreenStack.html">ScreenStack</a></div>
+      <div><a class="xref" href="osu.Framework.Testing.Drawables.Steps.StepButton.html">StepButton</a></div>
+      <div><a class="xref" href="osu.Framework.Testing.Drawables.ToolbarSection.html">ToolbarSection</a></div>
+      <div><a class="xref" href="osu.Framework.Testing.TestBrowserTestRunner.html">TestBrowserTestRunner</a></div>
+      <div><a class="xref" href="osu.Framework.Testing.TestSceneTestRunner.TestRunner.html">TestSceneTestRunner.TestRunner</a></div>
+      <div><a class="xref" href="osu.Framework.Tests.Visual.Audio.TestSceneSamples.Grid.html">TestSceneSamples.Grid</a></div>
+      <div><a class="xref" href="osu.Framework.Tests.Visual.Bindables.TestSceneBindableAutoUnbinding.TestExposedBindableDrawable.html">TestSceneBindableAutoUnbinding.TestExposedBindableDrawable</a></div>
+      <div><a class="xref" href="osu.Framework.Tests.Visual.Clocks.TestSceneClock.VisualClock.html">TestSceneClock.VisualClock</a></div>
+      <div><a class="xref" href="osu.Framework.Tests.Visual.Drawables.TestSceneDelayedLoadUnloadWrapper.DelayedLoadTestDrawable.html">TestSceneDelayedLoadUnloadWrapper.DelayedLoadTestDrawable</a></div>
+      <div><a class="xref" href="osu.Framework.Tests.Visual.Drawables.TestSceneDrawableLoadCancellation.PausableLoadDrawable.html">TestSceneDrawableLoadCancellation.PausableLoadDrawable</a></div>
+      <div><a class="xref" href="osu.Framework.Tests.Visual.Drawables.TestSceneDrawableLoadCancellation.SlowLoader.html">TestSceneDrawableLoadCancellation.SlowLoader</a></div>
+      <div><a class="xref" href="osu.Framework.Tests.Visual.Drawables.TestSceneFocus.FocusBox.html">TestSceneFocus.FocusBox</a></div>
+      <div><a class="xref" href="osu.Framework.Tests.Visual.Input.TestSceneMouseStates.StateTracker.EventCounter.html">TestSceneMouseStates.StateTracker.EventCounter</a></div>
+      <div><a class="xref" href="osu.Framework.Tests.Visual.Input.TestSceneReadableKeyCombinationProvider.Key.html">TestSceneReadableKeyCombinationProvider.Key</a></div>
+      <div><a class="xref" href="osu.Framework.Tests.Visual.Input.TestSceneReadableKeyCombinationProvider.PressedKeyCombinationDisplay.html">TestSceneReadableKeyCombinationProvider.PressedKeyCombinationDisplay</a></div>
+      <div><a class="xref" href="osu.Framework.Tests.Visual.Input.TestSceneTouchVisualiser.TouchVisualiser.html">TestSceneTouchVisualiser.TouchVisualiser</a></div>
+      <div><a class="xref" href="osu.Framework.Tests.Visual.Platform.TestSceneActiveState.DisplayBox.html">TestSceneActiveState.DisplayBox</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Dispose">Drawable.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsDisposed">Drawable.IsDisposed</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DisposeOnDeathRemoval">Drawable.DisposeOnDeathRemoval</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsLoaded">Drawable.IsLoaded</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LoadState">Drawable.LoadState</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LoadComplete">Drawable.LoadComplete()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsAlive">Drawable.IsAlive</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Depth">Drawable.Depth</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnUpdate">Drawable.OnUpdate</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnLoadComplete">Drawable.OnLoadComplete</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Scheduler">Drawable.Scheduler</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ComputeMaskingBounds">Drawable.ComputeMaskingBounds()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Update">Drawable.Update()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Position">Drawable.Position</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_X">Drawable.X</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Y">Drawable.Y</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RelativePositionAxes">Drawable.RelativePositionAxes</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawPosition">Drawable.DrawPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawSize">Drawable.DrawSize</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawWidth">Drawable.DrawWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawHeight">Drawable.DrawHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Margin">Drawable.Margin</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LayoutSize">Drawable.LayoutSize</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawRectangle">Drawable.DrawRectangle</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LayoutRectangle">Drawable.LayoutRectangle</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ApplyRelativeAxes_osu_Framework_Graphics_Axes_osuTK_Vector2_osu_Framework_Graphics_FillMode_">Drawable.ApplyRelativeAxes(Axes, Vector2, FillMode)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_BypassAutoSizeAxes">Drawable.BypassAutoSizeAxes</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnSizingChanged">Drawable.OnSizingChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Scale">Drawable.Scale</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_FillAspectRatio">Drawable.FillAspectRatio</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_FillMode">Drawable.FillMode</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawScale">Drawable.DrawScale</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Shear">Drawable.Shear</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Rotation">Drawable.Rotation</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Origin">Drawable.Origin</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RelativeOriginPosition">Drawable.RelativeOriginPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OriginPosition">Drawable.OriginPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Anchor">Drawable.Anchor</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RelativeAnchorPosition">Drawable.RelativeAnchorPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_AnchorPosition">Drawable.AnchorPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Colour">Drawable.Colour</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Alpha">Drawable.Alpha</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsPresent">Drawable.IsPresent</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_AlwaysPresent">Drawable.AlwaysPresent</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Blending">Drawable.Blending</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Clock">Drawable.Clock</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ProcessCustomClock">Drawable.ProcessCustomClock</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LifetimeStart">Drawable.LifetimeStart</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LifetimeEnd">Drawable.LifetimeEnd</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ShouldBeAlive">Drawable.ShouldBeAlive</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RemoveWhenNotAlive">Drawable.RemoveWhenNotAlive</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_GetContainingInputManager">Drawable.GetContainingInputManager()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_GetContainingFocusManager">Drawable.GetContainingFocusManager()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Parent">Drawable.Parent</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_HasProxy">Drawable.HasProxy</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsProxy">Drawable.IsProxy</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_CreateProxy">Drawable.CreateProxy()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ComputeScreenSpaceDrawQuad">Drawable.ComputeScreenSpaceDrawQuad()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ScreenSpaceDrawQuad">Drawable.ScreenSpaceDrawQuad</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawInfo">Drawable.DrawInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawColourInfo">Drawable.DrawColourInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_AddLayout_osu_Framework_Layout_LayoutMember_">Drawable.AddLayout(LayoutMember)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_InvalidationID">Drawable.InvalidationID</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Invalidate_osu_Framework_Graphics_Invalidation_osu_Framework_Layout_InvalidationSource_">Drawable.Invalidate(Invalidation, InvalidationSource)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_InvalidationFromParentSize">Drawable.InvalidationFromParentSize</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToSpaceOfOtherDrawable_osuTK_Vector2_osu_Framework_Graphics_IDrawable_">Drawable.ToSpaceOfOtherDrawable(Vector2, IDrawable)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToSpaceOfOtherDrawable_osu_Framework_Graphics_Primitives_RectangleF_osu_Framework_Graphics_IDrawable_">Drawable.ToSpaceOfOtherDrawable(RectangleF, IDrawable)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToParentSpace_osuTK_Vector2_">Drawable.ToParentSpace(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToParentSpace_osu_Framework_Graphics_Primitives_RectangleF_">Drawable.ToParentSpace(RectangleF)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToScreenSpace_osuTK_Vector2_">Drawable.ToScreenSpace(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToScreenSpace_osu_Framework_Graphics_Primitives_RectangleF_">Drawable.ToScreenSpace(RectangleF)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToLocalSpace_osuTK_Vector2_">Drawable.ToLocalSpace(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToLocalSpace_osu_Framework_Graphics_Primitives_Quad_">Drawable.ToLocalSpace(Quad)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Handle_osu_Framework_Input_Events_UIEvent_">Drawable.Handle(UIEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_TriggerEvent_osu_Framework_Input_Events_UIEvent_">Drawable.TriggerEvent(UIEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_TriggerClick">Drawable.TriggerClick()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnMouseMove_osu_Framework_Input_Events_MouseMoveEvent_">Drawable.OnMouseMove(MouseMoveEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnHover_osu_Framework_Input_Events_HoverEvent_">Drawable.OnHover(HoverEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnHoverLost_osu_Framework_Input_Events_HoverLostEvent_">Drawable.OnHoverLost(HoverLostEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnMouseDown_osu_Framework_Input_Events_MouseDownEvent_">Drawable.OnMouseDown(MouseDownEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnMouseUp_osu_Framework_Input_Events_MouseUpEvent_">Drawable.OnMouseUp(MouseUpEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnClick_osu_Framework_Input_Events_ClickEvent_">Drawable.OnClick(ClickEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnDoubleClick_osu_Framework_Input_Events_DoubleClickEvent_">Drawable.OnDoubleClick(DoubleClickEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnDragStart_osu_Framework_Input_Events_DragStartEvent_">Drawable.OnDragStart(DragStartEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnDrag_osu_Framework_Input_Events_DragEvent_">Drawable.OnDrag(DragEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnDragEnd_osu_Framework_Input_Events_DragEndEvent_">Drawable.OnDragEnd(DragEndEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnScroll_osu_Framework_Input_Events_ScrollEvent_">Drawable.OnScroll(ScrollEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnFocus_osu_Framework_Input_Events_FocusEvent_">Drawable.OnFocus(FocusEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnFocusLost_osu_Framework_Input_Events_FocusLostEvent_">Drawable.OnFocusLost(FocusLostEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnKeyDown_osu_Framework_Input_Events_KeyDownEvent_">Drawable.OnKeyDown(KeyDownEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnKeyUp_osu_Framework_Input_Events_KeyUpEvent_">Drawable.OnKeyUp(KeyUpEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTouchDown_osu_Framework_Input_Events_TouchDownEvent_">Drawable.OnTouchDown(TouchDownEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTouchMove_osu_Framework_Input_Events_TouchMoveEvent_">Drawable.OnTouchMove(TouchMoveEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTouchUp_osu_Framework_Input_Events_TouchUpEvent_">Drawable.OnTouchUp(TouchUpEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnJoystickPress_osu_Framework_Input_Events_JoystickPressEvent_">Drawable.OnJoystickPress(JoystickPressEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnJoystickRelease_osu_Framework_Input_Events_JoystickReleaseEvent_">Drawable.OnJoystickRelease(JoystickReleaseEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnJoystickAxisMove_osu_Framework_Input_Events_JoystickAxisMoveEvent_">Drawable.OnJoystickAxisMove(JoystickAxisMoveEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnMidiDown_osu_Framework_Input_Events_MidiDownEvent_">Drawable.OnMidiDown(MidiDownEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnMidiUp_osu_Framework_Input_Events_MidiUpEvent_">Drawable.OnMidiUp(MidiUpEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTabletPenButtonPress_osu_Framework_Input_Events_TabletPenButtonPressEvent_">Drawable.OnTabletPenButtonPress(TabletPenButtonPressEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTabletPenButtonRelease_osu_Framework_Input_Events_TabletPenButtonReleaseEvent_">Drawable.OnTabletPenButtonRelease(TabletPenButtonReleaseEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTabletAuxiliaryButtonPress_osu_Framework_Input_Events_TabletAuxiliaryButtonPressEvent_">Drawable.OnTabletAuxiliaryButtonPress(TabletAuxiliaryButtonPressEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_OnTabletAuxiliaryButtonRelease_osu_Framework_Input_Events_TabletAuxiliaryButtonReleaseEvent_">Drawable.OnTabletAuxiliaryButtonRelease(TabletAuxiliaryButtonReleaseEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_HandleNonPositionalInput">Drawable.HandleNonPositionalInput</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_HandlePositionalInput">Drawable.HandlePositionalInput</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_HasFocus">Drawable.HasFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RequestsFocus">Drawable.RequestsFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_AcceptsFocus">Drawable.AcceptsFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ChangeFocusOnClick">Drawable.ChangeFocusOnClick</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsHovered">Drawable.IsHovered</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsDragged">Drawable.IsDragged</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ReceivePositionalInputAt_osuTK_Vector2_">Drawable.ReceivePositionalInputAt(Vector2)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_PropagateNonPositionalInputSubTree">Drawable.PropagateNonPositionalInputSubTree</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_PropagatePositionalInputSubTree">Drawable.PropagatePositionalInputSubTree</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DragBlocksClick">Drawable.DragBlocksClick</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Schedule__1_System_Action___0____0_">Drawable.Schedule&lt;T&gt;(Action&lt;T&gt;, T)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Schedule_System_Action_">Drawable.Schedule(Action)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Expire_System_Boolean_">Drawable.Expire(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Hide">Drawable.Hide()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Show">Drawable.Show()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_WithEffect__1_osu_Framework_Graphics_Effects_IEffect___0__System_Action___0__">Drawable.WithEffect&lt;T&gt;(IEffect&lt;T&gt;, Action&lt;T&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Name">Drawable.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ToString">Drawable.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Empty">Drawable.Empty()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_Time">Transformable.Time</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_TransformStartTime">Transformable.TransformStartTime</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_TransformDelay">Transformable.TransformDelay</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_Transforms">Transformable.Transforms</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_TransformsForTargetMember_System_String_">Transformable.TransformsForTargetMember(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_LatestTransformEndTime">Transformable.LatestTransformEndTime</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_UpdateTransforms">Transformable.UpdateTransforms()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_RemoveTransform_osu_Framework_Graphics_Transforms_Transform_">Transformable.RemoveTransform(Transform)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_ClearTransforms_System_Boolean_System_String_">Transformable.ClearTransforms(bool, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_BeginDelayedSequence_System_Double_System_Boolean_">Transformable.BeginDelayedSequence(double, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_AddTransform_osu_Framework_Graphics_Transforms_Transform_System_Nullable_System_UInt64__">Transformable.AddTransform(Transform, ulong?)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawableExtensions.html#osu_Framework_Graphics_DrawableExtensions_With__1___0_System_Action___0__">DrawableExtensions.With&lt;T&gt;(T, Action&lt;T&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Animate__1___0_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Animate&lt;T&gt;(T, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_DelayUntilTransformsFinished__1___0_">TransformableExtensions.DelayUntilTransformsFinished&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Delay__1___0_System_Double_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Delay&lt;T&gt;(T, double, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeColour__1___0_osu_Framework_Graphics_Colour_ColourInfo_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeColour&lt;T&gt;(T, ColourInfo, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeColour__2___0_osu_Framework_Graphics_Colour_ColourInfo_System_Double___1__">TransformableExtensions.FadeColour&lt;T, TEasing&gt;(T, ColourInfo, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeInFromZero__1___0_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeInFromZero&lt;T&gt;(T, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeInFromZero__2___0_System_Double___1__">TransformableExtensions.FadeInFromZero&lt;T, TEasing&gt;(T, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeIn__1___0_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeIn&lt;T&gt;(T, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeIn__2___0_System_Double___1__">TransformableExtensions.FadeIn&lt;T, TEasing&gt;(T, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeOutFromOne__1___0_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeOutFromOne&lt;T&gt;(T, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeOutFromOne__2___0_System_Double___1__">TransformableExtensions.FadeOutFromOne&lt;T, TEasing&gt;(T, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeOut__1___0_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeOut&lt;T&gt;(T, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeOut__2___0_System_Double___1__">TransformableExtensions.FadeOut&lt;T, TEasing&gt;(T, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FadeTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FadeTo__2___0_System_Single_System_Double___1__">TransformableExtensions.FadeTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FlashColour__1___0_osu_Framework_Graphics_Colour_ColourInfo_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.FlashColour&lt;T&gt;(T, ColourInfo, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_FlashColour__2___0_osu_Framework_Graphics_Colour_ColourInfo_System_Double___1__">TransformableExtensions.FlashColour&lt;T, TEasing&gt;(T, ColourInfo, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_System_Double_">TransformableExtensions.Loop&lt;T&gt;(T, double)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_System_Double_System_Int32_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Loop&lt;T&gt;(T, double, int, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_System_Double_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Loop&lt;T&gt;(T, double, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Loop__1___0_osu_Framework_Graphics_Transforms_TransformSequence___0__Generator___">TransformableExtensions.Loop&lt;T&gt;(T, params TransformSequence&lt;T&gt;.Generator[])</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MakeTransform__2___0_System_String___1_System_Double_osu_Framework_Graphics_Easing_System_String_">TransformableExtensions.MakeTransform&lt;TThis, TValue&gt;(TThis, string, TValue, double, Easing, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MakeTransform__3___0_System_String___2_System_Double___1__System_String_">TransformableExtensions.MakeTransform&lt;TThis, TEasing, TValue&gt;(TThis, string, TValue, double, in TEasing, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveToOffset__1___0_osuTK_Vector2_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.MoveToOffset&lt;T&gt;(T, Vector2, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveToOffset__2___0_osuTK_Vector2_System_Double___1__">TransformableExtensions.MoveToOffset&lt;T, TEasing&gt;(T, Vector2, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveToX__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.MoveToX&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveToX__2___0_System_Single_System_Double___1__">TransformableExtensions.MoveToX&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveToY__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.MoveToY&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveToY__2___0_System_Single_System_Double___1__">TransformableExtensions.MoveToY&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveTo__1___0_osu_Framework_Graphics_Direction_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.MoveTo&lt;T&gt;(T, Direction, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveTo__1___0_osuTK_Vector2_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.MoveTo&lt;T&gt;(T, Vector2, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveTo__2___0_osu_Framework_Graphics_Direction_System_Single_System_Double___1__">TransformableExtensions.MoveTo&lt;T, TEasing&gt;(T, Direction, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_MoveTo__2___0_osuTK_Vector2_System_Double___1__">TransformableExtensions.MoveTo&lt;T, TEasing&gt;(T, Vector2, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_PopulateTransform__2___1_osu_Framework_Graphics_Transforms_Transform___0_osu_Framework_Graphics_Transforms_DefaultEasingFunction___1____0_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.PopulateTransform&lt;TValue, TThis&gt;(TThis, Transform&lt;TValue, DefaultEasingFunction, TThis&gt;, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_PopulateTransform__3___2_osu_Framework_Graphics_Transforms_Transform___0___1___2____0_System_Double___1__">TransformableExtensions.PopulateTransform&lt;TValue, TEasing, TThis&gt;(TThis, Transform&lt;TValue, TEasing, TThis&gt;, TValue, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeHeightTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.ResizeHeightTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeHeightTo__2___0_System_Single_System_Double___1__">TransformableExtensions.ResizeHeightTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.ResizeTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeTo__1___0_osuTK_Vector2_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.ResizeTo&lt;T&gt;(T, Vector2, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeTo__2___0_System_Single_System_Double___1__">TransformableExtensions.ResizeTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeTo__2___0_osuTK_Vector2_System_Double___1__">TransformableExtensions.ResizeTo&lt;T, TEasing&gt;(T, Vector2, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeWidthTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.ResizeWidthTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ResizeWidthTo__2___0_System_Single_System_Double___1__">TransformableExtensions.ResizeWidthTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_RotateTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.RotateTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_RotateTo__2___0_System_Single_System_Double___1__">TransformableExtensions.RotateTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ScaleTo__1___0_System_Single_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.ScaleTo&lt;T&gt;(T, float, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ScaleTo__1___0_osuTK_Vector2_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.ScaleTo&lt;T&gt;(T, Vector2, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ScaleTo__2___0_System_Single_System_Double___1__">TransformableExtensions.ScaleTo&lt;T, TEasing&gt;(T, float, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_ScaleTo__2___0_osuTK_Vector2_System_Double___1__">TransformableExtensions.ScaleTo&lt;T, TEasing&gt;(T, Vector2, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Spin__1___0_System_Double_osu_Framework_Graphics_RotationDirection_System_Single_">TransformableExtensions.Spin&lt;T&gt;(T, double, RotationDirection, float)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_Spin__1___0_System_Double_osu_Framework_Graphics_RotationDirection_System_Single_System_Int32_">TransformableExtensions.Spin&lt;T&gt;(T, double, RotationDirection, float, int)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformBindableTo__2___0_osu_Framework_Bindables_Bindable___1____1_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.TransformBindableTo&lt;T, TValue&gt;(T, Bindable&lt;TValue&gt;, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformBindableTo__3___0_osu_Framework_Bindables_Bindable___1____1_System_Double___2__">TransformableExtensions.TransformBindableTo&lt;T, TValue, TEasing&gt;(T, Bindable&lt;TValue&gt;, TValue, double, in TEasing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformTo__1___0_osu_Framework_Graphics_Transforms_Transform_">TransformableExtensions.TransformTo&lt;TThis&gt;(TThis, Transform)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformTo__2___0_System_String___1_System_Double_osu_Framework_Graphics_Easing_">TransformableExtensions.TransformTo&lt;TThis, TValue&gt;(TThis, string, TValue, double, Easing)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.TransformableExtensions.html#osu_Framework_Graphics_TransformableExtensions_TransformTo__3___0_System_String___1_System_Double___2__System_String_">TransformableExtensions.TransformTo&lt;TThis, TValue, TEasing&gt;(TThis, string, TValue, double, in TEasing, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.PopoverExtensions.html#osu_Framework_Extensions_PopoverExtensions_HidePopover_osu_Framework_Graphics_Drawable_">PopoverExtensions.HidePopover(Drawable)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawableExtensions.html#osu_Framework_Graphics_DrawableExtensions_FindClosestParent__1_osu_Framework_Graphics_Drawable_">DrawableExtensions.FindClosestParent&lt;T&gt;(Drawable?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawableExtensions.html#osu_Framework_Graphics_DrawableExtensions_RemoveAndDisposeImmediately_osu_Framework_Graphics_Drawable_">DrawableExtensions.RemoveAndDisposeImmediately(Drawable)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Testing.TestingExtensions.html#osu_Framework_Testing_TestingExtensions_ChildrenOfType__1_osu_Framework_Graphics_Drawable_">TestingExtensions.ChildrenOfType&lt;T&gt;(Drawable?)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable__ctor_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.#ctor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable__ctor" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.#ctor">
+  CompositeDrawable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> that stores children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CompositeDrawable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_AliveInternalChildren_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.AliveInternalChildren*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_AliveInternalChildren" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.AliveInternalChildren">
+  AliveInternalChildren
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L450"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IReadOnlyList&lt;Drawable&gt; AliveInternalChildren { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_AutoSizeAxes_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.AutoSizeAxes*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_AutoSizeAxes" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.AutoSizeAxes">
+  AutoSizeAxes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1793"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Controls which <a class="xref" href="osu.Framework.Graphics.Axes.html">Axes</a> are automatically sized w.r.t. <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.
+Children's <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_BypassAutoSizeAxes">BypassAutoSizeAxes</a> are ignored for automatic sizing.
+Most notably, <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RelativePositionAxes">RelativePositionAxes</a> and <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_RelativeSizeAxes">RelativeSizeAxes</a> of children
+do not affect automatic sizing to avoid circular size dependencies.
+It is not allowed to manually set <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Size">Size</a> (or <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Width">Width</a> / <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Height">Height</a>)
+on any <a class="xref" href="osu.Framework.Graphics.Axes.html">Axes</a> which are automatically sized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual Axes AutoSizeAxes { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Axes.html">Axes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_AutoSizeDuration_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.AutoSizeDuration*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_AutoSizeDuration" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.AutoSizeDuration">
+  AutoSizeDuration
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1819"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The duration which automatic sizing should take. If zero, then it is instantaneous.
+Otherwise, this is equivalent to applying an automatic size via a resize transform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float AutoSizeDuration { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_AutoSizeEasing_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.AutoSizeEasing*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_AutoSizeEasing" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.AutoSizeEasing">
+  AutoSizeEasing
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1825"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The type of easing which should be used for smooth automatic sizing when <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_AutoSizeDuration">AutoSizeDuration</a>
+is non-zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Easing AutoSizeEasing { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Easing.html">Easing</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_BorderColour_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.BorderColour*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_BorderColour" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.BorderColour">
+  BorderColour
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1594"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines the color of the border controlled by <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_BorderThickness">BorderThickness</a>.
+Only has an effect when <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Masking">Masking</a> is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ColourInfo BorderColour { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour.ColourInfo.html">ColourInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_BorderThickness_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.BorderThickness*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_BorderThickness" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.BorderThickness">
+  BorderThickness
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1575"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines how thick of a border to draw around the inside of the masked region.
+Only has an effect when <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Masking">Masking</a> is true.
+The border only is drawn on top of children using a sprite shader.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float BorderThickness { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Containers_CompositeDrawable_BorderThickness_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Drawing borders is optimized heavily into our sprite shaders. As a consequence
+borders are only drawn correctly on top of quad-shaped children using our sprite
+shaders.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_BoundingBox_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.BoundingBox*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_BoundingBox" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.BoundingBox">
+  BoundingBox
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1631"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes the bounding box of this drawable in its parent's space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override RectangleF BoundingBox { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CanBeFlattened_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CanBeFlattened*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CanBeFlattened" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CanBeFlattened">
+  CanBeFlattened
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A flattened <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> has its <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> merged into its parents'.
+In some cases, the <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> must always be generated and flattening should not occur.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool CanBeFlattened { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ChildMaskingBounds_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ChildMaskingBounds*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ChildMaskingBounds" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ChildMaskingBounds">
+  ChildMaskingBounds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1004"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a> to be used as the masking bounds for all <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_AliveInternalChildren">AliveInternalChildren</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RectangleF ChildMaskingBounds { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ChildOffset_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ChildOffset*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ChildOffset" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ChildOffset">
+  ChildOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1694"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Positional offset applied to <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.
+Captures the effect of e.g. <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Padding">Padding</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 ChildOffset { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ChildSize_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ChildSize*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ChildSize" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ChildSize">
+  ChildSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1688"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The size of the coordinate space revealed to <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.
+Captures the effect of e.g. <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Padding">Padding</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 ChildSize { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CornerExponent_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CornerExponent*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CornerExponent" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CornerExponent">
+  CornerExponent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1543"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines how gentle the curve of the corner straightens. A value of 2 (default) results in
+circular arcs, a value of 2.5 results in something closer to apple's &quot;continuous corner&quot;.
+Values between 2 and 10 result in varying degrees of &quot;continuousness&quot;, where larger values are smoother.
+Values between 1 and 2 result in a &quot;flatter&quot; appearance than round corners.
+Values between 0 and 1 result in a concave, round corner as opposed to a convex round corner,
+where a value of 0.5 is a circular concave arc.
+Only has an effect when <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Masking">Masking</a> is true and <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_CornerRadius">CornerRadius</a> is non-zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float CornerExponent { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CornerRadius_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CornerRadius*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CornerRadius" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CornerRadius">
+  CornerRadius
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1519"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines how large of a radius is masked away around the corners.
+Only has an effect when <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Masking">Masking</a> is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float CornerRadius { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_Dependencies_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Dependencies*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_Dependencies" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Dependencies">
+  Dependencies
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Contains all dependencies that can be injected into this CompositeDrawable's children using <a class="xref" href="osu.Framework.Allocation.BackgroundDependencyLoaderAttribute.html">BackgroundDependencyLoaderAttribute</a>.
+Add or override dependencies by calling <a class="xref" href="osu.Framework.Allocation.DependencyContainer.html#osu_Framework_Allocation_DependencyContainer_Cache_System_Object_">Cache(object)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyDependencyContainer Dependencies { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Allocation.IReadOnlyDependencyContainer.html">IReadOnlyDependencyContainer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_EdgeEffect_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.EdgeEffect*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_EdgeEffect" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.EdgeEffect">
+  EdgeEffect
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1614"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines an edge effect of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.
+Edge effects are e.g. glow or a shadow.
+Only has an effect when <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Masking">Masking</a> is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EdgeEffectParameters EdgeEffect { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Effects.EdgeEffectParameters.html">EdgeEffectParameters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ForceLocalVertexBatch_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ForceLocalVertexBatch*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ForceLocalVertexBatch" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ForceLocalVertexBatch">
+  ForceLocalVertexBatch
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether to use a local vertex batch for rendering. If false, a parenting vertex batch will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ForceLocalVertexBatch { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_Height_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Height*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_Height" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Height">
+  Height
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1857"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Y component of <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Size">Size</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float Height { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_InternalChild_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.InternalChild*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_InternalChild" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.InternalChild">
+  InternalChild
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L354"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the only child in <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Drawable InternalChild { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.InternalChildren*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.InternalChildren">
+  InternalChildren
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L428"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> list of children. Assigning to this property will dispose all existing children of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IReadOnlyList&lt;Drawable&gt; InternalChildren { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildrenEnumerable_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.InternalChildrenEnumerable*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildrenEnumerable" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.InternalChildrenEnumerable">
+  InternalChildrenEnumerable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L437"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Replaces all internal children of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> with the elements contained in the enumerable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IEnumerable&lt;Drawable&gt; InternalChildrenEnumerable { set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_Masking_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Masking*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_Masking" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Masking">
+  Masking
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1475"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>If enabled, only the portion of children that falls within this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>'s
+shape is drawn to the screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Masking { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_MaskingSmoothness_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.MaskingSmoothness*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_MaskingSmoothness" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.MaskingSmoothness">
+  MaskingSmoothness
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1497"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines over how many pixels the alpha component smoothly fades out.
+Only has an effect when <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Masking">Masking</a> is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float MaskingSmoothness { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_Padding_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Padding*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_Padding" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Padding">
+  Padding
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1668"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Shrinks the space children may occupy within this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>
+by the specified amount on each side.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MarginPadding Padding { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.MarginPadding.html">MarginPadding</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_RelativeChildOffset_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RelativeChildOffset*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_RelativeChildOffset" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RelativeChildOffset">
+  RelativeChildOffset
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1726"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The offset of the relative position/size coordinate space of children of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.
+Children positioned at this offset will appear as if they were positioned at <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Position">Position</a> = <span class="xref">osuTK.Vector2.Zero</span> in this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 RelativeChildOffset { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_RelativeChildSize_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RelativeChildSize*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_RelativeChildSize" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RelativeChildSize">
+  RelativeChildSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1702"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The size of the relative position/size coordinate space of children of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.
+Children positioned at this size will appear as if they were positioned at <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Position">Position</a> = <span class="xref">osuTK.Vector2.One</span> in this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 RelativeChildSize { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_RelativeSizeAxes_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RelativeSizeAxes*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_RelativeSizeAxes" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RelativeSizeAxes">
+  RelativeSizeAxes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1771"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Controls which <a class="xref" href="osu.Framework.Graphics.Axes.html">Axes</a> are relative sizes w.r.t. <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Parent">Parent</a>'s size
+(from 0 to 1) in the <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Parent">Parent</a>'s coordinate system, rather than absolute sizes.
+The <a class="xref" href="osu.Framework.Graphics.Axes.html">Axes</a> set in this property are ignored by automatically sizing
+parents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Axes RelativeSizeAxes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Axes.html">Axes</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Containers_CompositeDrawable_RelativeSizeAxes_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If an axis becomes relatively sized and its component of <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Size">Size</a> was previously 0,
+then it automatically becomes 1. In all other cases <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Size">Size</a> is converted such that
+<a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_DrawSize">DrawSize</a> remains invariant across changes of this property.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_RelativeToAbsoluteFactor_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RelativeToAbsoluteFactor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_RelativeToAbsoluteFactor" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RelativeToAbsoluteFactor">
+  RelativeToAbsoluteFactor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1746"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Conversion factor from relative to absolute coordinates in our space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 RelativeToAbsoluteFactor { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_RemoveCompletedTransforms_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RemoveCompletedTransforms*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_RemoveCompletedTransforms" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RemoveCompletedTransforms">
+  RemoveCompletedTransforms
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1240"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether to remove completed transforms from the list of applicable transforms. Setting this to false allows for rewinding transforms.</p>
+<p>
+This value is passed down to children.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool RemoveCompletedTransforms { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_RequiresChildrenUpdate_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RequiresChildrenUpdate*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_RequiresChildrenUpdate" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RequiresChildrenUpdate">
+  RequiresChildrenUpdate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L905"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Specifies whether this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> requires an update of its children.
+If the return value is false, then children are not updated and
+<a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_UpdateAfterChildren">UpdateAfterChildren()</a> is not called.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool RequiresChildrenUpdate { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_SchedulerAfterChildren_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.SchedulerAfterChildren*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_SchedulerAfterChildren" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.SchedulerAfterChildren">
+  SchedulerAfterChildren
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L683"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>A lazily-initialized scheduler used to schedule tasks to be invoked in future <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_UpdateAfterChildren">UpdateAfterChildren()</a>s calls.
+The tasks are invoked at the beginning of the <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_UpdateAfterChildren">UpdateAfterChildren()</a> method before anything else.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Scheduler SchedulerAfterChildren { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Threading.Scheduler.html">Scheduler</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_Size_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Size*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_Size" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Size">
+  Size
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1877"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Size of this Drawable in the <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Parent">Parent</a>'s coordinate system.
+May be in absolute or relative units (controlled by <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RelativeSizeAxes">RelativeSizeAxes</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override Vector2 Size { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_Width_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Width*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_Width" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Width">
+  Width
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1839"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>X component of <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Size">Size</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override float Width { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_AddInternal_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.AddInternal*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_AddInternal_osu_Framework_Graphics_Drawable_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.AddInternal(osu.Framework.Graphics.Drawable)">
+  AddInternal(Drawable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L575"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a child to <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddInternal(Drawable drawable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>drawable</code> <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_AddRangeInternal_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.AddRangeInternal*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_AddRangeInternal_System_Collections_Generic_IEnumerable_osu_Framework_Graphics_Drawable__" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.AddRangeInternal(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable})">
+  AddRangeInternal(IEnumerable&lt;Drawable&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L615"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a range of children to <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>. This is equivalent to calling
+<a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_AddInternal_osu_Framework_Graphics_Drawable_">AddInternal(Drawable)</a> on each element of the range in order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void AddRangeInternal(IEnumerable&lt;Drawable&gt; range)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>range</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ApplyTransformsAt_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ApplyTransformsAt*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ApplyTransformsAt_System_Double_System_Boolean_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ApplyTransformsAt(System.Double,System.Boolean)">
+  ApplyTransformsAt(double, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s at a point in time. This may only be called if <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_RemoveCompletedTransforms">RemoveCompletedTransforms</a> is set to false.</p>
+<p>
+This does not change the clock time.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ApplyTransformsAt(double time, bool propagateChildren = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The time to apply <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s at.</p>
+</dd>
+    <dt><code>propagateChildren</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to also apply children's <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s at <code class="paramref">time</code>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_BeginAbsoluteSequence_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.BeginAbsoluteSequence*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_BeginAbsoluteSequence_System_Double_System_Boolean_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.BeginAbsoluteSequence(System.Double,System.Boolean)">
+  BeginAbsoluteSequence(double, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1317"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Start a sequence of <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s from an absolute time value (adjusts <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_TransformStartTime">TransformStartTime</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IDisposable BeginAbsoluteSequence(double newTransformStartTime, bool recursive = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newTransformStartTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The new value for <a class="xref" href="osu.Framework.Graphics.Transforms.Transformable.html#osu_Framework_Graphics_Transforms_Transformable_TransformStartTime">TransformStartTime</a>.</p>
+</dd>
+    <dt><code>recursive</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether this should be applied to all children. True by default.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></dt>
+    <dd><p>An <a class="xref" href="osu.Framework.Allocation.InvokeOnDisposal.html">InvokeOnDisposal</a> to be used in a using() statement.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Absolute sequences should never be nested inside another existing sequence.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ChangeInternalChildDepth_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ChangeInternalChildDepth*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ChangeInternalChildDepth_osu_Framework_Graphics_Drawable_System_Single_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ChangeInternalChildDepth(osu.Framework.Graphics.Drawable,System.Single)">
+  ChangeInternalChildDepth(Drawable, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L632"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Changes the depth of an internal child. This affects ordering of <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ChangeInternalChildDepth(Drawable child, float newDepth)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>child</code> <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd><p>The child whose depth is to be changed.</p>
+</dd>
+    <dt><code>newDepth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The new depth value to be set.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CheckChildrenLife_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CheckChildrenLife*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CheckChildrenLife" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CheckChildrenLife">
+  CheckChildrenLife()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L718"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether the alive state of any child has changed and processes it. This will add or remove
+children from <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_aliveInternalChildren">aliveInternalChildren</a> depending on their alive states.</p>
+<p>Note that this does NOT check the load state of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> to check if it can hold any alive children.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool CheckChildrenLife()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether any child's alive state has changed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ClearInternal_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ClearInternal*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ClearInternal_System_Boolean_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ClearInternal(System.Boolean)">
+  ClearInternal(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L534"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clear all of <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ClearInternal(bool disposeChildren = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposeChildren</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether removed children should also get disposed.
+Disposal will be recursive.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ClearTransformsAfter_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ClearTransformsAfter*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ClearTransformsAfter_System_Double_System_Boolean_System_String_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ClearTransformsAfter(System.Double,System.Boolean,System.String)">
+  ClearTransformsAfter(double, bool, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1268"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s that start after <code class="paramref">time</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ClearTransformsAfter(double time, bool propagateChildren = false, string targetMember = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>time</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The time to clear <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s after.</p>
+</dd>
+    <dt><code>propagateChildren</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether to also clear such <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s of children.</p>
+</dd>
+    <dt><code>targetMember</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>An optional <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html#osu_Framework_Graphics_Transforms_Transform_TargetMember">TargetMember</a> name of <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s to clear.
+Null for clearing all <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_Compare_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Compare*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_Compare_osu_Framework_Graphics_Drawable_osu_Framework_Graphics_Drawable_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Compare(osu.Framework.Graphics.Drawable,osu.Framework.Graphics.Drawable)">
+  Compare(Drawable, Drawable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Compares two <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a> to determine their sorting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual int Compare(Drawable x, Drawable y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd><p>The first child to compare.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd><p>The second child to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>-1 if <code class="paramref">x</code> comes before <code class="paramref">y</code>, and 1 otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CompareReverseChildID_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompareReverseChildID*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompareReverseChildID_osu_Framework_Graphics_Drawable_osu_Framework_Graphics_Drawable_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompareReverseChildID(osu.Framework.Graphics.Drawable,osu.Framework.Graphics.Drawable)">
+  CompareReverseChildID(Drawable, Drawable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L412"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Helper method comparing children by their depth first, and then by their reversed child ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int CompareReverseChildID(Drawable x, Drawable y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd><p>The first child to compare.</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd><p>The second child to compare.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>-1 if <code class="paramref">x</code> comes before <code class="paramref">y</code>, and 1 otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ComputeChildMaskingBounds_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ComputeChildMaskingBounds*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ComputeChildMaskingBounds" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ComputeChildMaskingBounds">
+  ComputeChildMaskingBounds()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L997"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes the <a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a> to be used as the masking bounds for all <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_AliveInternalChildren">AliveInternalChildren</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual RectangleF ComputeChildMaskingBounds()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a> to be used as the masking bounds for <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_AliveInternalChildren">AliveInternalChildren</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ComputeIsMaskedAway_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ComputeIsMaskedAway*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ComputeIsMaskedAway_osu_Framework_Graphics_Primitives_RectangleF_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ComputeIsMaskedAway(osu.Framework.Graphics.Primitives.RectangleF)">
+  ComputeIsMaskedAway(RectangleF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L983"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes whether this <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a> is masked away.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool ComputeIsMaskedAway(RectangleF maskingBounds)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>maskingBounds</code> <a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a> that defines the masking bounds.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether this <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a> is currently masked away.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_Contains_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Contains*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_Contains_osuTK_Vector2_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Contains(osuTK.Vector2)">
+  Contains(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1404"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes whether a given screen-space position is contained within this drawable.
+Mouse input events are only received when this function is true, or when the drawable
+is in focus.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Contains(Vector2 screenSpacePos)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>screenSpacePos</code> <span class="xref">Vector2</span></dt>
+    <dd><p>The screen space position to be checked against this drawable.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ContainsInternal_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ContainsInternal*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ContainsInternal_osu_Framework_Graphics_Drawable_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ContainsInternal(osu.Framework.Graphics.Drawable)">
+  ContainsInternal(Drawable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L481"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Checks whether a given child is contained within <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool ContainsInternal(Drawable drawable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>drawable</code> <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CreateChildDependencies_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CreateChildDependencies*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CreateChildDependencies_osu_Framework_Allocation_IReadOnlyDependencyContainer_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CreateChildDependencies(osu.Framework.Allocation.IReadOnlyDependencyContainer)">
+  CreateChildDependencies(IReadOnlyDependencyContainer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Create a local dependency container which will be used by our nested children.
+If not overridden, the load-time parent's dependency tree will be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual IReadOnlyDependencyContainer CreateChildDependencies(IReadOnlyDependencyContainer parent)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parent</code> <a class="xref" href="osu.Framework.Allocation.IReadOnlyDependencyContainer.html">IReadOnlyDependencyContainer</a></dt>
+    <dd><p>The parent <a class="xref" href="osu.Framework.Allocation.IReadOnlyDependencyContainer.html">IReadOnlyDependencyContainer</a> which should be passed through if we want fallback lookups to work.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Allocation.IReadOnlyDependencyContainer.html">IReadOnlyDependencyContainer</a></dt>
+    <dd><p>A new dependency container to be stored for this Drawable.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CreateDrawNode_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CreateDrawNode*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CreateDrawNode" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CreateDrawNode">
+  CreateDrawNode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a draw node capable of containing all information required to draw this drawable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override DrawNode CreateDrawNode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a></dt>
+    <dd><p>The created draw node.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_Dispose_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Dispose*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_Dispose_System_Boolean_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Disposes this drawable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool isDisposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isDisposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_FadeEdgeEffectTo_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.FadeEdgeEffectTo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_FadeEdgeEffectTo_System_Single_System_Double_osu_Framework_Graphics_Easing_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.FadeEdgeEffectTo(System.Single,System.Double,osu.Framework.Graphics.Easing)">
+  FadeEdgeEffectTo(float, double, Easing)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1375"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Helper function for creating and adding a <a class="xref" href="osu.Framework.Graphics.Transforms.Transform-2.html">Transform&lt;TValue, T&gt;</a> that fades the current <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_EdgeEffect">EdgeEffect</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TransformSequence&lt;CompositeDrawable&gt; FadeEdgeEffectTo(float newAlpha, double duration = 0, Easing easing = Easing.None)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newAlpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>easing</code> <a class="xref" href="osu.Framework.Graphics.Easing.html">Easing</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;<a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_FadeEdgeEffectTo_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.FadeEdgeEffectTo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_FadeEdgeEffectTo_osuTK_Graphics_Color4_System_Double_osu_Framework_Graphics_Easing_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.FadeEdgeEffectTo(osuTK.Graphics.Color4,System.Double,osu.Framework.Graphics.Easing)">
+  FadeEdgeEffectTo(Color4, double, Easing)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1385"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Helper function for creating and adding a <a class="xref" href="osu.Framework.Graphics.Transforms.Transform-2.html">Transform&lt;TValue, T&gt;</a> that fades the current <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_EdgeEffect">EdgeEffect</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TransformSequence&lt;CompositeDrawable&gt; FadeEdgeEffectTo(Color4 newColour, double duration = 0, Easing easing = Easing.None)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newColour</code> <span class="xref">Color4</span></dt>
+    <dd></dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>easing</code> <a class="xref" href="osu.Framework.Graphics.Easing.html">Easing</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;<a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_FinishTransforms_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.FinishTransforms*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_FinishTransforms_System_Boolean_System_String_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.FinishTransforms(System.Boolean,System.String)">
+  FinishTransforms(bool, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1356"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Finishes specified <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s, using their <a class="xref" href="osu.Framework.Graphics.Transforms.Transform-1.html#osu_Framework_Graphics_Transforms_Transform_1_EndValue">EndValue</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void FinishTransforms(bool propagateChildren = false, string targetMember = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>propagateChildren</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether we also finish the <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s of children.</p>
+</dd>
+    <dt><code>targetMember</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>An optional <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html#osu_Framework_Graphics_Transforms_Transform_TargetMember">TargetMember</a> name of <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s to finish.
+Null for finishing all <a class="xref" href="osu.Framework.Graphics.Transforms.Transform.html">Transform</a>s.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_IndexOfInternal_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.IndexOfInternal*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_IndexOfInternal_osu_Framework_Graphics_Drawable_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.IndexOfInternal(osu.Framework.Graphics.Drawable)">
+  IndexOfInternal(Drawable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L465"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The index of a given child within <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int IndexOfInternal(Drawable drawable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>drawable</code> <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>If the child is found, its index. Otherwise, the negated index it would obtain
+if it were added to <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><ul><li>If the supplied <code class="paramref">drawable</code> is already attached to another <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Parent">Parent</a>.</li><li>If a child drawable was matched using <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Compare_osu_Framework_Graphics_Drawable_osu_Framework_Graphics_Drawable_">Compare(Drawable, Drawable)</a>, but that child drawable was not the supplied <code class="paramref">drawable</code>.</li></ul>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_InjectDependencies_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.InjectDependencies*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_InjectDependencies_osu_Framework_Allocation_IReadOnlyDependencyContainer_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.InjectDependencies(osu.Framework.Allocation.IReadOnlyDependencyContainer)">
+  InjectDependencies(IReadOnlyDependencyContainer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Injects dependencies from an <a class="xref" href="osu.Framework.Allocation.IReadOnlyDependencyContainer.html">IReadOnlyDependencyContainer</a> into this <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override sealed void InjectDependencies(IReadOnlyDependencyContainer dependencies)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dependencies</code> <a class="xref" href="osu.Framework.Allocation.IReadOnlyDependencyContainer.html">IReadOnlyDependencyContainer</a></dt>
+    <dd><p>The dependencies to inject.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_LoadAsyncComplete_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.LoadAsyncComplete*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_LoadAsyncComplete" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.LoadAsyncComplete">
+  LoadAsyncComplete()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked after dependency injection has completed for this <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a> and all
+children if this is a <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void LoadAsyncComplete()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Containers_CompositeDrawable_LoadAsyncComplete_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method is invoked in the potentially asynchronous context of <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Load_osu_Framework_Timing_IFrameBasedClock_osu_Framework_Allocation_IReadOnlyDependencyContainer_System_Boolean_">Load(IFrameBasedClock, IReadOnlyDependencyContainer, bool)</a> prior to
+this <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a> becoming <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsLoaded">IsLoaded</a> = true.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_LoadComponentAsync_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponentAsync*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_LoadComponentAsync__1___0_System_Action___0__System_Threading_CancellationToken_osu_Framework_Threading_Scheduler_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponentAsync``1(``0,System.Action{``0},System.Threading.CancellationToken,osu.Framework.Threading.Scheduler)">
+  LoadComponentAsync&lt;TLoadable&gt;(TLoadable, Action&lt;TLoadable&gt;, CancellationToken, Scheduler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a future child or grand-child of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> asynchronously. <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Dependencies">Dependencies</a>
+and <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Clock">Clock</a> are inherited from this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.</p>
+<p>Note that this will always use the dependencies and clock from this instance. If you must load to a nested container level,
+consider using <a class="xref" href="osu.Framework.Graphics.Containers.DelayedLoadWrapper.html">DelayedLoadWrapper</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task LoadComponentAsync&lt;TLoadable&gt;(TLoadable component, Action&lt;TLoadable&gt; onLoaded = null, CancellationToken cancellation = default, Scheduler scheduler = null) where TLoadable : Drawable</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>component</code> <span class="xref">TLoadable</span></dt>
+    <dd><p>The child or grand-child to be loaded.</p>
+</dd>
+    <dt><code>onLoaded</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;TLoadable&gt;</dt>
+    <dd><p>Callback to be invoked on the update thread after loading is complete.</p>
+</dd>
+    <dt><code>cancellation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>An optional cancellation token.</p>
+</dd>
+    <dt><code>scheduler</code> <a class="xref" href="osu.Framework.Threading.Scheduler.html">Scheduler</a></dt>
+    <dd><p>The scheduler for <code class="paramref">onLoaded</code> to be invoked on. If null, the local scheduler will be used.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>The task which is used for loading and callbacks.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TLoadable</code></dt>
+    <dd><p>The type of the future future child or grand-child to be loaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_LoadComponent_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponent*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_LoadComponent__1___0_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponent``1(``0)">
+  LoadComponent&lt;TLoadable&gt;(TLoadable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads a future child or grand-child of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> synchronously and immediately. <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Dependencies">Dependencies</a>
+and <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Clock">Clock</a> are inherited from this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.
+<remarks>
+This is generally useful if already in an asynchronous context and requiring forcefully (pre)loading content without adding it to the hierarchy.
+</remarks></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void LoadComponent&lt;TLoadable&gt;(TLoadable component) where TLoadable : Drawable</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>component</code> <span class="xref">TLoadable</span></dt>
+    <dd><p>The child or grand-child to be loaded.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TLoadable</code></dt>
+    <dd><p>The type of the future future child or grand-child to be loaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_LoadComponentsAsync_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponentsAsync*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_LoadComponentsAsync__1_System_Collections_Generic_IEnumerable___0__System_Action_System_Collections_Generic_IEnumerable___0___System_Threading_CancellationToken_osu_Framework_Threading_Scheduler_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponentsAsync``1(System.Collections.Generic.IEnumerable{``0},System.Action{System.Collections.Generic.IEnumerable{``0}},System.Threading.CancellationToken,osu.Framework.Threading.Scheduler)">
+  LoadComponentsAsync&lt;TLoadable&gt;(IEnumerable&lt;TLoadable&gt;, Action&lt;IEnumerable&lt;TLoadable&gt;&gt;, CancellationToken, Scheduler)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads several future child or grand-child of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> asynchronously. <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Dependencies">Dependencies</a>
+and <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Clock">Clock</a> are inherited from this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.</p>
+<p>Note that this will always use the dependencies and clock from this instance. If you must load to a nested container level,
+consider using <a class="xref" href="osu.Framework.Graphics.Containers.DelayedLoadWrapper.html">DelayedLoadWrapper</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task LoadComponentsAsync&lt;TLoadable&gt;(IEnumerable&lt;TLoadable&gt; components, Action&lt;IEnumerable&lt;TLoadable&gt;&gt; onLoaded = null, CancellationToken cancellation = default, Scheduler scheduler = null) where TLoadable : Drawable</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>components</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TLoadable&gt;</dt>
+    <dd><p>The children or grand-children to be loaded.</p>
+</dd>
+    <dt><code>onLoaded</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TLoadable&gt;&gt;</dt>
+    <dd><p>Callback to be invoked on the update thread after loading is complete.</p>
+</dd>
+    <dt><code>cancellation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>An optional cancellation token.</p>
+</dd>
+    <dt><code>scheduler</code> <a class="xref" href="osu.Framework.Threading.Scheduler.html">Scheduler</a></dt>
+    <dd><p>The scheduler for <code class="paramref">onLoaded</code> to be invoked on. If null, the local scheduler will be used.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd><p>The task which is used for loading and callbacks.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TLoadable</code></dt>
+    <dd><p>The type of the future future child or grand-child to be loaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_LoadComponents_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponents*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_LoadComponents__1_System_Collections_Generic_IEnumerable___0__" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponents``1(System.Collections.Generic.IEnumerable{``0})">
+  LoadComponents&lt;TLoadable&gt;(IEnumerable&lt;TLoadable&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads several future child or grand-child of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> synchronously and immediately. <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Dependencies">Dependencies</a>
+and <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Clock">Clock</a> are inherited from this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.
+<remarks>
+This is generally useful if already in an asynchronous context and requiring forcefully (pre)loading content without adding it to the hierarchy.
+</remarks></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void LoadComponents&lt;TLoadable&gt;(IEnumerable&lt;TLoadable&gt; components) where TLoadable : Drawable</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>components</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TLoadable&gt;</dt>
+    <dd><p>The children or grand-children to be loaded.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TLoadable</code></dt>
+    <dd><p>The type of the future future child or grand-child to be loaded.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_MakeChildAlive_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.MakeChildAlive*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_MakeChildAlive_osu_Framework_Graphics_Drawable_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.MakeChildAlive(osu.Framework.Graphics.Drawable)">
+  MakeChildAlive(Drawable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L797"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Makes a child alive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void MakeChildAlive(Drawable child)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>child</code> <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd><p>The child of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>&gt; to make alive.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Containers_CompositeDrawable_MakeChildAlive_osu_Framework_Graphics_Drawable__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Callers have to ensure that <code class="paramref">child</code> is of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>'s non-alive <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a> and <a class="xref" href="osu.Framework.Graphics.LoadState.html">LoadState</a> of the <code class="paramref">child</code> is at least <a class="xref" href="osu.Framework.Graphics.LoadState.html#osu_Framework_Graphics_LoadState_Ready">Ready</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_MakeChildDead_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.MakeChildDead*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_MakeChildDead_osu_Framework_Graphics_Drawable_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.MakeChildDead(osu.Framework.Graphics.Drawable)">
+  MakeChildDead(Drawable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L835"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Makes a child dead (not alive) and removes it if <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_RemoveWhenNotAlive">RemoveWhenNotAlive</a> of the <code class="paramref">child</code> is set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool MakeChildDead(Drawable child)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>child</code> <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd><p>The child of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>&gt; to make dead.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether <code class="paramref">child</code> has been removed by death.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Containers_CompositeDrawable_MakeChildDead_osu_Framework_Graphics_Drawable__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Callers have to ensure that <code class="paramref">child</code> is of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>'s <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_AliveInternalChildren">AliveInternalChildren</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_OnInvalidate_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.OnInvalidate*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_OnInvalidate_osu_Framework_Graphics_Invalidation_osu_Framework_Layout_InvalidationSource_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.OnInvalidate(osu.Framework.Graphics.Invalidation,osu.Framework.Layout.InvalidationSource)">
+  OnInvalidate(Invalidation, InvalidationSource)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1035"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the layout of this <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a> was invalidated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool OnInvalidate(Invalidation invalidation, InvalidationSource source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>invalidation</code> <a class="xref" href="osu.Framework.Graphics.Invalidation.html">Invalidation</a></dt>
+    <dd><p>The flags that the this <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a> was invalidated with.</p>
+</dd>
+    <dt><code>source</code> <a class="xref" href="osu.Framework.Layout.InvalidationSource.html">InvalidationSource</a></dt>
+    <dd><p>The source that triggered the invalidation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether any custom invalidation was performed. Must be true if the <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> for this <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a> is to be invalidated.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Containers_CompositeDrawable_OnInvalidate_osu_Framework_Graphics_Invalidation_osu_Framework_Layout_InvalidationSource__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This should be used to perform any custom invalidation logic that cannot be described as a layout.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ReceivePositionalInputAtSubTree_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ReceivePositionalInputAtSubTree*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ReceivePositionalInputAtSubTree_osuTK_Vector2_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ReceivePositionalInputAtSubTree(osuTK.Vector2)">
+  ReceivePositionalInputAtSubTree(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1446"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the subtree of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> should receive positional input when the mouse is at the given screen-space position.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool ReceivePositionalInputAtSubTree(Vector2 screenSpacePos)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>screenSpacePos</code> <span class="xref">Vector2</span></dt>
+    <dd><p>The screen-space position where input could be received.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if the subtree should receive input at the given screen-space position.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Containers_CompositeDrawable_ReceivePositionalInputAtSubTree_osuTK_Vector2__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>By default, the subtree of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> always receives input when masking is turned off, and only receives input if this
+<a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> also receives input when masking is turned on.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_RegisterForDependencyActivation_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RegisterForDependencyActivation*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_RegisterForDependencyActivation_osu_Framework_Allocation_IDependencyActivatorRegistry_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RegisterForDependencyActivation(osu.Framework.Allocation.IDependencyActivatorRegistry)">
+  RegisterForDependencyActivation(IDependencyActivatorRegistry)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked to register dependency activation functions for this object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RegisterForDependencyActivation(IDependencyActivatorRegistry registry)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>registry</code> <a class="xref" href="osu.Framework.Allocation.IDependencyActivatorRegistry.html">IDependencyActivatorRegistry</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Allocation.IDependencyActivatorRegistry.html">IDependencyActivatorRegistry</a> to register activation functions with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_RemoveInternal_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RemoveInternal*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_RemoveInternal_osu_Framework_Graphics_Drawable_System_Boolean_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.RemoveInternal(osu.Framework.Graphics.Drawable,System.Boolean)">
+  RemoveInternal(Drawable, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L489"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Removes a given child from this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool RemoveInternal(Drawable drawable, bool disposeImmediately)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>drawable</code> <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a> to be removed.</p>
+</dd>
+    <dt><code>disposeImmediately</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether removed item should be immediately disposed.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>False if <code class="paramref">drawable</code> was not a child of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> and true otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ScheduleAfterChildren_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ScheduleAfterChildren*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ScheduleAfterChildren_System_Action_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ScheduleAfterChildren(System.Action)">
+  ScheduleAfterChildren(Action)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1306"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ScheduledDelegate ScheduleAfterChildren(Action action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Threading.ScheduledDelegate.html">ScheduledDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ScheduleAfterChildren_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ScheduleAfterChildren*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ScheduleAfterChildren__1_System_Action___0____0_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ScheduleAfterChildren``1(System.Action{``0},``0)">
+  ScheduleAfterChildren&lt;T&gt;(Action&lt;T&gt;, T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1298"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ScheduledDelegate ScheduleAfterChildren&lt;T&gt;(Action&lt;T&gt; action, T data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;T&gt;</dt>
+    <dd></dd>
+    <dt><code>data</code> <span class="xref">T</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Threading.ScheduledDelegate.html">ScheduledDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_ShouldBeConsideredForInput_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ShouldBeConsideredForInput*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_ShouldBeConsideredForInput_osu_Framework_Graphics_Drawable_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.ShouldBeConsideredForInput(osu.Framework.Graphics.Drawable)">
+  ShouldBeConsideredForInput(Drawable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1421"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check whether a child should be considered for inclusion in <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_BuildNonPositionalInputQueue_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__System_Boolean_">BuildNonPositionalInputQueue(List&lt;Drawable&gt;, bool)</a> and <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_BuildPositionalInputQueue_osuTK_Vector2_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__">BuildPositionalInputQueue(Vector2, List&lt;Drawable&gt;)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool ShouldBeConsideredForInput(Drawable child)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>child</code> <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a></dt>
+    <dd><p>The drawable to be evaluated.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether or not the specified drawable should be considered when building input queues.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_SortInternal_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.SortInternal*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_SortInternal" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.SortInternal">
+  SortInternal()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L665"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sorts all children of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SortInternal()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Containers_CompositeDrawable_SortInternal_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This can be used to re-sort the children if the result of <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_Compare_osu_Framework_Graphics_Drawable_osu_Framework_Graphics_Drawable_">Compare(Drawable, Drawable)</a> has changed.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_TransformRelativeChildOffsetTo_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.TransformRelativeChildOffsetTo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_TransformRelativeChildOffsetTo_osuTK_Vector2_System_Double_osu_Framework_Graphics_Easing_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.TransformRelativeChildOffsetTo(osuTK.Vector2,System.Double,osu.Framework.Graphics.Easing)">
+  TransformRelativeChildOffsetTo(Vector2, double, Easing)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1768"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tweens the <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_RelativeChildOffset">RelativeChildOffset</a> of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TransformSequence&lt;CompositeDrawable&gt; TransformRelativeChildOffsetTo(Vector2 newOffset, double duration = 0, Easing easing = Easing.None)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newOffset</code> <span class="xref">Vector2</span></dt>
+    <dd><p>The coordinate space to tween to.</p>
+</dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The tween duration.</p>
+</dd>
+    <dt><code>easing</code> <a class="xref" href="osu.Framework.Graphics.Easing.html">Easing</a></dt>
+    <dd><p>The tween easing.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;<a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_TransformRelativeChildSizeTo_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.TransformRelativeChildSizeTo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_TransformRelativeChildSizeTo_osuTK_Vector2_System_Double_osu_Framework_Graphics_Easing_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.TransformRelativeChildSizeTo(osuTK.Vector2,System.Double,osu.Framework.Graphics.Easing)">
+  TransformRelativeChildSizeTo(Vector2, double, Easing)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1754"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tweens the <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_RelativeChildSize">RelativeChildSize</a> of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TransformSequence&lt;CompositeDrawable&gt; TransformRelativeChildSizeTo(Vector2 newSize, double duration = 0, Easing easing = Easing.None)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newSize</code> <span class="xref">Vector2</span></dt>
+    <dd><p>The coordinate space to tween to.</p>
+</dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The tween duration.</p>
+</dd>
+    <dt><code>easing</code> <a class="xref" href="osu.Framework.Graphics.Easing.html">Easing</a></dt>
+    <dd><p>The tween easing.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;<a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_TweenEdgeEffectTo_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.TweenEdgeEffectTo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_TweenEdgeEffectTo_osu_Framework_Graphics_Effects_EdgeEffectParameters_System_Double_osu_Framework_Graphics_Easing_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.TweenEdgeEffectTo(osu.Framework.Graphics.Effects.EdgeEffectParameters,System.Double,osu.Framework.Graphics.Easing)">
+  TweenEdgeEffectTo(EdgeEffectParameters, double, Easing)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1395"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Helper function for creating and adding a <a class="xref" href="osu.Framework.Graphics.Transforms.Transform-2.html">Transform&lt;TValue, T&gt;</a> that tweens the current <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_EdgeEffect">EdgeEffect</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TransformSequence&lt;CompositeDrawable&gt; TweenEdgeEffectTo(EdgeEffectParameters newParams, double duration = 0, Easing easing = Easing.None)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>newParams</code> <a class="xref" href="osu.Framework.Graphics.Effects.EdgeEffectParameters.html">EdgeEffectParameters</a></dt>
+    <dd></dd>
+    <dt><code>duration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+    <dt><code>easing</code> <a class="xref" href="osu.Framework.Graphics.Easing.html">Easing</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Transforms.TransformSequence-1.html">TransformSequence</a>&lt;<a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_UpdateAfterAutoSize_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.UpdateAfterAutoSize*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_UpdateAfterAutoSize" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.UpdateAfterAutoSize">
+  UpdateAfterAutoSize()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1027"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked after all autosize calculations have taken place.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateAfterAutoSize()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_UpdateAfterChildren_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.UpdateAfterChildren*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_UpdateAfterChildren" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.UpdateAfterChildren">
+  UpdateAfterChildren()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1020"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An opportunity to update state once-per-frame after <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Update">Update()</a> has been called
+for all <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.
+This is invoked prior to any autosize calculations of this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateAfterChildren()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_UpdateAfterChildrenLife_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.UpdateAfterChildrenLife*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_UpdateAfterChildrenLife" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.UpdateAfterChildrenLife">
+  UpdateAfterChildrenLife()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L1011"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked after <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_UpdateChildrenLife">UpdateChildrenLife()</a> and <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsPresent">IsPresent</a> state checks have taken place,
+but before <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_UpdateSubTree">UpdateSubTree()</a> is invoked for all <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a>.
+This occurs after <a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_Update">Update()</a> has been invoked on this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void UpdateAfterChildrenLife()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_UpdateChildrenLife_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.UpdateChildrenLife*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_UpdateChildrenLife" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.UpdateChildrenLife">
+  UpdateChildrenLife()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L700"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the life status of <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_InternalChildren">InternalChildren</a> according to their
+<a class="xref" href="osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_ShouldBeAlive">ShouldBeAlive</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool UpdateChildrenLife()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True iff the life status of at least one child changed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_UpdateSubTree_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.UpdateSubTree*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_UpdateSubTree" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.UpdateSubTree">
+  UpdateSubTree()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L907"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates this Drawable and all Drawables further down the scene graph.
+Called once every frame.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool UpdateSubTree()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>False if the drawable should not be updated.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_UpdateSubTreeMasking_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.UpdateSubTreeMasking*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_UpdateSubTreeMasking" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.UpdateSubTreeMasking">
+  UpdateSubTreeMasking()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs/#L963"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates all masking calculations for this <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> and its <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_AliveInternalChildren">AliveInternalChildren</a>.
+This occurs post-<a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_UpdateSubTree">UpdateSubTree()</a> to ensure that all <a class="xref" href="osu.Framework.Graphics.Drawable.html">Drawable</a> updates have taken place.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool UpdateSubTreeMasking()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether masking calculations have taken place.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

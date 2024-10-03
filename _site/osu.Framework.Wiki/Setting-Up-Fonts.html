@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Converting to binary font and texture files | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Converting to binary font and texture files | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework.wiki/blob/master/Setting-Up-Fonts.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>This tutorial assumes you have completed <a href="/ppy/osu-framework/wiki/Setting-up-your-first-project">setting up your first project</a> and <a href="Setting-Up-Compiled-Resource-Stores">setting up compiled resource stores</a>.</p>
+<p>In this tutorial, you will learn how to add custom fonts into your game and use it:</p>
+<ul>
+<li><a href="#converting-to-bianry-font-and-texture-files">Converting to binary font and texture files</a></li>
+<li><a href="#adding-the-custom-font-to-the-font-store">Adding the custom font to the font store</a></li>
+<li><a href="#using-specific-font-for-sprite-text">Using specific font for sprite text</a></li>
+</ul>
+<h1 id="converting-to-binary-font-and-texture-files">Converting to binary font and texture files</h1>
+<p>For the custom font to be recognized inside osu!framework, you will have to convert it into a binary font with texture files alongside it.</p>
+<p>To start off, you'll need to download and install <a href="https://www.angelcode.com/products/bmfont">BMFont by AngelCode</a> for converting the font, then run it and load <a href="/ppy/osu-framework/blob/master/osu.Framework/Resources/Fonts/bmfont.bmfc">this configuration</a> for selecting required character range:</p>
+<table>
+<thead>
+<tr>
+<th><img src="https://i.imgur.com/bnl9Eqk.png" alt="Load the required configurations #1"></th>
+<th><img src="https://i.imgur.com/dhUJnK7.png" alt="Load the required configurations #2"></th>
+</tr>
+</thead>
+</table>
+<hr>
+<p>Next, you have to set up the tool into using and converting your custom font properly by going into the font settings and selecting your custom font and check/uncheck <code>Bold</code> and <code>Italic</code>, and going into the export settings and selecting <code>Binary</code> as the font descriptor. <strong>Without it, your game might hard crash when loading the font.</strong>
+| <img src="https://i.imgur.com/IcJNRGd.png" alt="Set up tool settings #1"> | <img src="https://i.imgur.com/XfD7Duq.png" alt="Set up tool settings #2"> |
+|---|---|
+| <img src="https://i.imgur.com/psnr8Nq.png" alt="Set up tool settings #3"> | <img src="https://i.imgur.com/Oz33p4Y.png" alt="Set up tool settings #4"> |</p>
+<hr>
+<p>And lastly, converting the font can be accomplished by clicking on <code>Save bitmap font as</code> and saving it wherever you want inside your <code>Resources</code> folder, which then will be pointed out to later on:
+| <img src="https://i.imgur.com/hznyByh.png" alt="Save binary font #1"> | <img src="https://i.imgur.com/FtsomGj.png" alt="Save binary font #2"> |
+|---|---|</p>
+<p>The font file name should be saved in the following pattern:
+| <code>FontUsage.Family</code> | <code>FontUsage.Weight</code> | <code>FontUsage.Italics</code> | Font file name |
+|--------------------|:------------------:|:-------------------:|:--------------:|
+| MyAwesomeFont | <code>&quot;Light&quot;</code> | <code>false</code> | <code>MyAwesomeFont-Light</code> |
+| MyAwesomeFont | <code>&quot;Bold&quot;</code> | <code>true</code> | <code>MyAwesomeFont-BoldItalic</code> |
+| MyAwesomeFont | <code>null</code> | <code>false</code> | <code>MyAwesomeFont</code> |
+| MyAwesomeFont | <code>null</code> | <code>true</code> | <code>MyAwesomeFont-Italic</code> |</p>
+<h1 id="adding-the-custom-font-to-the-font-store">Adding the custom font to the font store</h1>
+<p>To use the custom font inside your game, you'll need to add it to the <code>FontStore</code> by specifying:</p>
+<ul>
+<li>The resource store of your resources folder that contains the binary fonts.</li>
+<li>The asset name of the binary font, The font path should be specified here relative from the resource store you've specified. (<code>Fonts/MyAwesomeFont</code> for this tutorial)</li>
+</ul>
+<p>Here's an example of adding a custom font included within a <code>Resources</code> folder inside the game project: (<code>MyAwesomeProject.Game/Resources/Fonts/MyAwesomeFont</code>)</p>
+<pre><code class="lang-csharp">namespace MyAwesomeProject.Game
+{
+    public class MyAwesomeGame : osu.Framework.Game
+    {
+        [BackgroundDependencyLoader]
+        private void load()
+        {
+            // Add the DLL resource store of this game project into the global resources store.
+            Resources.AddStore(new DllResourceStore(@&quot;MyAwesomeProject.dll&quot;));
+
+            // Add the custom font to the global font store (Fonts).
+            AddFont(Resources, @&quot;Resources/Fonts/MyAwesomeFont&quot;);
+        }
+    }
+}
+</code></pre>
+<p>If you have specified a custom size for the font you've exported, you'll need to apply scale adjustments for its font store to match text sizing with different added fonts, can be done by:</p>
+<pre><code class="lang-csharp">namespace MyAwesomeProject.Game
+{
+    public class MyAwesomeGame : osu.Framework.Game
+    {
+        [BackgroundDependencyLoader]
+        private void load()
+        {
+            // Add the DLL resource store of this game project into the global resources store.
+            Resources.AddStore(new DllResourceStore(@&quot;MyAwesomeProject.dll&quot;));
+
+            // Create a font store with providing a specific font size (200px for this example) 
+            // to adjust scaling for matching up with different fonts.
+            var scaleAdjustedFontStore = new FontStore(scaleAdjust: 200);
+
+            // Nest the scale-adjusted font store inside the global font store 
+            // for components such as sprite texts be able to retrieve the custom font.
+            Fonts.AddStore(scaleAdjustedFontStore);
+
+            // Add fonts of a same custom size (200px for this example) to the scale-adjusted font store.
+            AddFont(Resources, @&quot;Fonts/MyAwesomeFont&quot;, scaleAdjustedFontStore);
+        }
+    }
+}
+</code></pre>
+<blockquote>
+<p><strong>Warning:</strong>
+Certain font names may end up getting mangled by the .NET embedded resource machinery. For instance, numbers may be prefixed with underscores. See <a href="https://stackoverflow.com/questions/14705211/how-is-net-renaming-my-embedded-resources">https://stackoverflow.com/questions/14705211/how-is-net-renaming-my-embedded-resources</a> for more detail. A safe bet is to stick with letters.</p>
+</blockquote>
+<hr>
+<p>Now you're almost done, by default, the first font to be added to your game will automatically be used for all <code>SpriteText</code>s in your game, but you may want to use a specific font.</p>
+<h1 id="using-specific-font-for-a-sprite-text">Using specific font for a sprite text</h1>
+<p>To use a specific font for a sprite text, all you have to do is construct a new <code>FontUsage</code> with:
+| Parameter | Description | Value in this tutorial |
+| --------- | ----------- | ---------------------- |
+| <code>family</code> | The font name | <code>MyAwesomeFont</code> |
+| <code>weight</code> | The weight of the font in string | <code>null</code> |
+| <code>italics</code> | Whether the font is of italic type | <code>false</code> |</p>
+<p>Check the font file name table example above for learning more.</p>
+<p>There are also other <code>FontUsage</code> properties you can modify for rendering the font differently (e.g. <code>size</code> and <code>fixedWidth</code>)</p>
+<p>This opens up for a lot of ways to implement the usage of your custom font, either by adding static properties for constructing the <code>FontUsage</code> or adding a static function with enumeration parameters that you can pick your font and its properties from, all based on your preference.</p>
+<p>Here's an example of creating a sprite text using the custom font with <code>size: 40f</code>:
+| <img src="https://i.imgur.com/1MV0AZC.png" alt="Code"> | <img src="https://i.imgur.com/LnohnKj.png" alt="Preview">
+|---|---|</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework.wiki/blob/master/Setting-Up-Fonts.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

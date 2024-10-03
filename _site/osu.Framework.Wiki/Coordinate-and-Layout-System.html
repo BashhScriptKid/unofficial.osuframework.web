@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Relative Layout and Sizing | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Relative Layout and Sizing | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework.wiki/blob/master/Coordinate-and-Layout-System.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>Once added to a parent <code>Container</code> hierarchy, <code>Drawable</code> objects will adopt the pixel coordinate space of that container. By default, all positioning and sizing is static via absolute pixel values regardless of the container size. That being said, a variety of mechanisms exist to allow relative sizing in order to properly scale to different window sizes and device screens.</p>
+<p>In order to help automate laying elements out in common positions, <code>Drawable</code> implements 2 properties that will help  determine its initial position.</p>
+<h3 id="anchor"><code>Anchor</code></h3>
+<p><code>Anchor</code> will determine its origin’s position relative to the parent container. <code>Centre</code> will place the element in the middle of the container, whereas other options, such as <code>TopLeft</code> will position it along the outer edges of the container.</p>
+<h3 id="origin"><code>Origin</code></h3>
+<p><code>Origin</code> will determine the offset of the element’s content from its own origin. For example <code>Centre</code> will mean the origin of the element will be located in the middle of its content. <code>TopLeft</code> will make the origin the top left corner of the content.</p>
+<p align="center">
+<a href="https://puu.sh/F6BMJ/23b52dcfcf.jpg"><img src="https://puu.sh/F6BMJ/23b52dcfcf.jpg" height="250" alt="Drawable"><a></a><a href="https://puu.sh/nnjI6/6a7db36ade.png"><img src="https://puu.sh/nnjI6/6a7db36ade.png" height="250" alt="osu! Drawable"></a>
+</p>
+Once these two properties have been set, they can be further customized with additional properties.
+<ul>
+<li>Setting <code>Position</code> on a <code>Drawable</code> will offset it from its initial position. This supports both positive and negative values to offset the element in any direction.</li>
+<li>Setting <code>Size</code> will change the size, in pixels of the width and height of the element. The positioning of the element will be updated around its <code>Anchor</code> and <code>Origin</code> values factoring in its new size.</li>
+</ul>
+<pre><code class="lang-csharp">box.Position = new Vector2(100.0f, 50.0f);
+box.Size = new Vector2(400.0f, 400.0f);
+</code></pre>
+<h1 id="relative-layout-and-sizing">Relative Layout and Sizing</h1>
+<p>For cases where the size of the container is flexible, it is possible to override the behavior of <code>Drawable</code> to instead rely on relative values, instead of absolute.</p>
+<p>To enable this behaviour, access the <code>RelativePositionAxes</code> and <code>RelativeSizeAxes</code> enum properties, and set which axes you would to be relative.</p>
+<p>Once enabled, instead of absolute pixel values, you can set values between <code>0.0f</code> and <code>1.0f</code> to denote the relative value. In this case <code>0.0f</code> represents 0% of the parent container, and <code>1.0f</code> represents 100%.</p>
+<pre><code class="lang-csharp">box.RelativePositionAxes = Axes.Both;
+box.Position = new Vector2(0.2f, 0.5f);
+</code></pre>
+<h1 id="scaling-absolute-values-to-screen-size">Scaling Absolute Values to Screen Size</h1>
+<p>In most cases, working with relative values is much more vague and difficult to work in as opposed to absolute values.</p>
+<p>In order to allow absolute positioning whilst still allowing flexible screen sizes, osu-framework provides a type of <code>Container</code> called <code>DrawSizePreservingFillContainer</code>.</p>
+<pre><code class="lang-csharp">new DrawSizePreservingFillContainer
+{
+    Child = box = new Box
+    {
+        Anchor = Anchor.TopLeft,
+        Origin = Anchor.TopLeft,
+        Colour = Color4.Orange,
+        Size = new Vector2(200),
+    }
+};
+</code></pre>
+<p>This type of container implements a <code>TargetDrawSize</code> property (Default value is <code>Vector2(1024, 768)</code>) which represents the size of its canvas. All children can then be sized in relation to this container size.</p>
+<p>When the parent container is resized, <code>DrawSizePreservingFillContainer</code> will resize to fill that parent, but will also properly upscale or downscale all of the child <code>Drawable</code> elements to fill the same space.</p>
+<p>By default, <code>DrawSizePreservingFillContainer</code> will scale all of its child content while preserving the content’s aspect ratio using a ‘scale to fit’ strategy. Depending on your content, and the size of the screens you plan to support, the <code>Strategy</code> enum allows for other types of scaling as well:</p>
+<ul>
+<li><code>Minimum</code> - The aspect ratio scale is determined by the smaller dimension value of the container’s current size. This results in all of the content being scaled down to fit into the container with no overflow. This is the default value</li>
+<li><code>Maximum</code> - The aspect ratio scale is based off the larger dimension value of the container’s current size. This results in content being scaled up to fill the available boundaries and <em>may</em> result in some content getting clipped.</li>
+<li><code>Average</code> - The average value between the minimum and the maximum scales is calculated and applied. This is a good compromise between the both previous values.</li>
+<li><code>Separate</code> - No aspect ratio is applied at all. All elements will stretch and distort relative to the container’s dimensions.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework.wiki/blob/master/Coordinate-and-Layout-System.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

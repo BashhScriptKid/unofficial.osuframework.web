@@ -1,0 +1,2117 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+  commentId: T:osu.Framework.IO.Stores.TimedExpiryGlyphStore
+  id: TimedExpiryGlyphStore
+  parent: osu.Framework.IO.Stores
+  children:
+  - osu.Framework.IO.Stores.TimedExpiryGlyphStore.#ctor(osu.Framework.IO.Stores.ResourceStore{System.Byte[]},System.String)
+  - osu.Framework.IO.Stores.TimedExpiryGlyphStore.Dispose(System.Boolean)
+  - osu.Framework.IO.Stores.TimedExpiryGlyphStore.GetPageImage(System.Int32)
+  - osu.Framework.IO.Stores.TimedExpiryGlyphStore.ToString
+  langs:
+  - csharp
+  - vb
+  name: TimedExpiryGlyphStore
+  nameWithType: TimedExpiryGlyphStore
+  fullName: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/IO/Stores/TimedExpiryGlyphStore.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TimedExpiryGlyphStore
+    path: osu.Framework/IO/Stores/TimedExpiryGlyphStore.cs
+    startLine: 19
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.IO.Stores
+  summary: A glyph store which caches font sprite sheets in memory temporary, to allow for more efficient retrieval.
+  remarks: This store has a higher memory overhead than <xref href="osu.Framework.IO.Stores.RawCachingGlyphStore" data-throw-if-not-resolved="false"></xref>, but better performance and zero disk footprint.
+  example: []
+  syntax:
+    content: 'public class TimedExpiryGlyphStore : GlyphStore, IResourceStore<TextureUpload>, IGlyphStore, IResourceStore<CharacterGlyph>, IDisposable'
+    content.vb: Public Class TimedExpiryGlyphStore Inherits GlyphStore Implements IResourceStore(Of TextureUpload), IGlyphStore, IResourceStore(Of CharacterGlyph), IDisposable
+  inheritance:
+  - System.Object
+  - osu.Framework.IO.Stores.GlyphStore
+  implements:
+  - osu.Framework.IO.Stores.IResourceStore{osu.Framework.Graphics.Textures.TextureUpload}
+  - osu.Framework.IO.Stores.IGlyphStore
+  - osu.Framework.IO.Stores.IResourceStore{osu.Framework.Text.CharacterGlyph}
+  - System.IDisposable
+  inheritedMembers:
+  - osu.Framework.IO.Stores.GlyphStore.AssetName
+  - osu.Framework.IO.Stores.GlyphStore.TextureLoader
+  - osu.Framework.IO.Stores.GlyphStore.FontName
+  - osu.Framework.IO.Stores.GlyphStore.Baseline
+  - osu.Framework.IO.Stores.GlyphStore.Store
+  - osu.Framework.IO.Stores.GlyphStore.Font
+  - osu.Framework.IO.Stores.GlyphStore.LoadFontAsync
+  - osu.Framework.IO.Stores.GlyphStore.HasGlyph(System.Char)
+  - osu.Framework.IO.Stores.GlyphStore.GetFilenameForPage(System.Int32)
+  - osu.Framework.IO.Stores.GlyphStore.Get(System.Char)
+  - osu.Framework.IO.Stores.GlyphStore.GetKerning(System.Char,System.Char)
+  - osu.Framework.IO.Stores.GlyphStore.Get(System.String)
+  - osu.Framework.IO.Stores.GlyphStore.GetAsync(System.String,System.Threading.CancellationToken)
+  - osu.Framework.IO.Stores.GlyphStore.LoadedGlyphCount
+  - osu.Framework.IO.Stores.GlyphStore.LoadCharacter(SharpFNT.Character)
+  - osu.Framework.IO.Stores.GlyphStore.GetStream(System.String)
+  - osu.Framework.IO.Stores.GlyphStore.GetAvailableResources
+  - osu.Framework.IO.Stores.GlyphStore.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.#ctor(osu.Framework.IO.Stores.ResourceStore{System.Byte[]},System.String)
+  commentId: M:osu.Framework.IO.Stores.TimedExpiryGlyphStore.#ctor(osu.Framework.IO.Stores.ResourceStore{System.Byte[]},System.String)
+  id: '#ctor(osu.Framework.IO.Stores.ResourceStore{System.Byte[]},System.String)'
+  parent: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+  langs:
+  - csharp
+  - vb
+  name: TimedExpiryGlyphStore(ResourceStore<byte[]>, string)
+  nameWithType: TimedExpiryGlyphStore.TimedExpiryGlyphStore(ResourceStore<byte[]>, string)
+  fullName: osu.Framework.IO.Stores.TimedExpiryGlyphStore.TimedExpiryGlyphStore(osu.Framework.IO.Stores.ResourceStore<byte[]>, string)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/IO/Stores/TimedExpiryGlyphStore.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/IO/Stores/TimedExpiryGlyphStore.cs
+    startLine: 23
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.IO.Stores
+  syntax:
+    content: public TimedExpiryGlyphStore(ResourceStore<byte[]> store, string assetName = null)
+    parameters:
+    - id: store
+      type: osu.Framework.IO.Stores.ResourceStore{System.Byte[]}
+    - id: assetName
+      type: System.String
+    content.vb: Public Sub New(store As ResourceStore(Of Byte()), assetName As String = Nothing)
+  overload: osu.Framework.IO.Stores.TimedExpiryGlyphStore.#ctor*
+  nameWithType.vb: TimedExpiryGlyphStore.New(ResourceStore(Of Byte()), String)
+  fullName.vb: osu.Framework.IO.Stores.TimedExpiryGlyphStore.New(osu.Framework.IO.Stores.ResourceStore(Of Byte()), String)
+  name.vb: New(ResourceStore(Of Byte()), String)
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.GetPageImage(System.Int32)
+  commentId: M:osu.Framework.IO.Stores.TimedExpiryGlyphStore.GetPageImage(System.Int32)
+  id: GetPageImage(System.Int32)
+  parent: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+  langs:
+  - csharp
+  - vb
+  name: GetPageImage(int)
+  nameWithType: TimedExpiryGlyphStore.GetPageImage(int)
+  fullName: osu.Framework.IO.Stores.TimedExpiryGlyphStore.GetPageImage(int)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/IO/Stores/TimedExpiryGlyphStore.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetPageImage
+    path: osu.Framework/IO/Stores/TimedExpiryGlyphStore.cs
+    startLine: 28
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.IO.Stores
+  example: []
+  syntax:
+    content: protected override TextureUpload GetPageImage(int page)
+    parameters:
+    - id: page
+      type: System.Int32
+    return:
+      type: osu.Framework.Graphics.Textures.TextureUpload
+    content.vb: Protected Overrides Function GetPageImage(page As Integer) As TextureUpload
+  overridden: osu.Framework.IO.Stores.GlyphStore.GetPageImage(System.Int32)
+  overload: osu.Framework.IO.Stores.TimedExpiryGlyphStore.GetPageImage*
+  nameWithType.vb: TimedExpiryGlyphStore.GetPageImage(Integer)
+  fullName.vb: osu.Framework.IO.Stores.TimedExpiryGlyphStore.GetPageImage(Integer)
+  name.vb: GetPageImage(Integer)
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.ToString
+  commentId: M:osu.Framework.IO.Stores.TimedExpiryGlyphStore.ToString
+  id: ToString
+  parent: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: TimedExpiryGlyphStore.ToString()
+  fullName: osu.Framework.IO.Stores.TimedExpiryGlyphStore.ToString()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/IO/Stores/TimedExpiryGlyphStore.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToString
+    path: osu.Framework/IO/Stores/TimedExpiryGlyphStore.cs
+    startLine: 41
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.IO.Stores
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: osu.Framework.IO.Stores.TimedExpiryGlyphStore.ToString*
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.Dispose(System.Boolean)
+  commentId: M:osu.Framework.IO.Stores.TimedExpiryGlyphStore.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: TimedExpiryGlyphStore.Dispose(bool)
+  fullName: osu.Framework.IO.Stores.TimedExpiryGlyphStore.Dispose(bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/IO/Stores/TimedExpiryGlyphStore.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Dispose
+    path: osu.Framework/IO/Stores/TimedExpiryGlyphStore.cs
+    startLine: 43
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.IO.Stores
+  example: []
+  syntax:
+    content: protected override void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overrides Sub Dispose(disposing As Boolean)
+  overridden: osu.Framework.IO.Stores.GlyphStore.Dispose(System.Boolean)
+  overload: osu.Framework.IO.Stores.TimedExpiryGlyphStore.Dispose*
+  nameWithType.vb: TimedExpiryGlyphStore.Dispose(Boolean)
+  fullName.vb: osu.Framework.IO.Stores.TimedExpiryGlyphStore.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+references:
+- uid: osu.Framework.IO.Stores.RawCachingGlyphStore
+  commentId: T:osu.Framework.IO.Stores.RawCachingGlyphStore
+  href: osu.Framework.IO.Stores.RawCachingGlyphStore.html
+  name: RawCachingGlyphStore
+  nameWithType: RawCachingGlyphStore
+  fullName: osu.Framework.IO.Stores.RawCachingGlyphStore
+- uid: osu.Framework.IO.Stores
+  commentId: N:osu.Framework.IO.Stores
+  href: osu.html
+  name: osu.Framework.IO.Stores
+  nameWithType: osu.Framework.IO.Stores
+  fullName: osu.Framework.IO.Stores
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.IO
+    name: IO
+    href: osu.Framework.IO.html
+  - name: .
+  - uid: osu.Framework.IO.Stores
+    name: Stores
+    href: osu.Framework.IO.Stores.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.IO
+    name: IO
+    href: osu.Framework.IO.html
+  - name: .
+  - uid: osu.Framework.IO.Stores
+    name: Stores
+    href: osu.Framework.IO.Stores.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: osu.Framework.IO.Stores.GlyphStore
+  commentId: T:osu.Framework.IO.Stores.GlyphStore
+  parent: osu.Framework.IO.Stores
+  href: osu.Framework.IO.Stores.GlyphStore.html
+  name: GlyphStore
+  nameWithType: GlyphStore
+  fullName: osu.Framework.IO.Stores.GlyphStore
+- uid: osu.Framework.IO.Stores.IResourceStore{osu.Framework.Graphics.Textures.TextureUpload}
+  commentId: T:osu.Framework.IO.Stores.IResourceStore{osu.Framework.Graphics.Textures.TextureUpload}
+  parent: osu.Framework.IO.Stores
+  definition: osu.Framework.IO.Stores.IResourceStore`1
+  href: osu.Framework.IO.Stores.IResourceStore-1.html
+  name: IResourceStore<TextureUpload>
+  nameWithType: IResourceStore<TextureUpload>
+  fullName: osu.Framework.IO.Stores.IResourceStore<osu.Framework.Graphics.Textures.TextureUpload>
+  nameWithType.vb: IResourceStore(Of TextureUpload)
+  fullName.vb: osu.Framework.IO.Stores.IResourceStore(Of osu.Framework.Graphics.Textures.TextureUpload)
+  name.vb: IResourceStore(Of TextureUpload)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.IResourceStore`1
+    name: IResourceStore
+    href: osu.Framework.IO.Stores.IResourceStore-1.html
+  - name: <
+  - uid: osu.Framework.Graphics.Textures.TextureUpload
+    name: TextureUpload
+    href: osu.Framework.Graphics.Textures.TextureUpload.html
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.IResourceStore`1
+    name: IResourceStore
+    href: osu.Framework.IO.Stores.IResourceStore-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Textures.TextureUpload
+    name: TextureUpload
+    href: osu.Framework.Graphics.Textures.TextureUpload.html
+  - name: )
+- uid: osu.Framework.IO.Stores.IGlyphStore
+  commentId: T:osu.Framework.IO.Stores.IGlyphStore
+  parent: osu.Framework.IO.Stores
+  href: osu.Framework.IO.Stores.IGlyphStore.html
+  name: IGlyphStore
+  nameWithType: IGlyphStore
+  fullName: osu.Framework.IO.Stores.IGlyphStore
+- uid: osu.Framework.IO.Stores.IResourceStore{osu.Framework.Text.CharacterGlyph}
+  commentId: T:osu.Framework.IO.Stores.IResourceStore{osu.Framework.Text.CharacterGlyph}
+  parent: osu.Framework.IO.Stores
+  definition: osu.Framework.IO.Stores.IResourceStore`1
+  href: osu.Framework.IO.Stores.IResourceStore-1.html
+  name: IResourceStore<CharacterGlyph>
+  nameWithType: IResourceStore<CharacterGlyph>
+  fullName: osu.Framework.IO.Stores.IResourceStore<osu.Framework.Text.CharacterGlyph>
+  nameWithType.vb: IResourceStore(Of CharacterGlyph)
+  fullName.vb: osu.Framework.IO.Stores.IResourceStore(Of osu.Framework.Text.CharacterGlyph)
+  name.vb: IResourceStore(Of CharacterGlyph)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.IResourceStore`1
+    name: IResourceStore
+    href: osu.Framework.IO.Stores.IResourceStore-1.html
+  - name: <
+  - uid: osu.Framework.Text.CharacterGlyph
+    name: CharacterGlyph
+    href: osu.Framework.Text.CharacterGlyph.html
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.IResourceStore`1
+    name: IResourceStore
+    href: osu.Framework.IO.Stores.IResourceStore-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Text.CharacterGlyph
+    name: CharacterGlyph
+    href: osu.Framework.Text.CharacterGlyph.html
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: osu.Framework.IO.Stores.GlyphStore.AssetName
+  commentId: F:osu.Framework.IO.Stores.GlyphStore.AssetName
+  parent: osu.Framework.IO.Stores.GlyphStore
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_AssetName
+  name: AssetName
+  nameWithType: GlyphStore.AssetName
+  fullName: osu.Framework.IO.Stores.GlyphStore.AssetName
+- uid: osu.Framework.IO.Stores.GlyphStore.TextureLoader
+  commentId: F:osu.Framework.IO.Stores.GlyphStore.TextureLoader
+  parent: osu.Framework.IO.Stores.GlyphStore
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_TextureLoader
+  name: TextureLoader
+  nameWithType: GlyphStore.TextureLoader
+  fullName: osu.Framework.IO.Stores.GlyphStore.TextureLoader
+- uid: osu.Framework.IO.Stores.GlyphStore.FontName
+  commentId: P:osu.Framework.IO.Stores.GlyphStore.FontName
+  parent: osu.Framework.IO.Stores.GlyphStore
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_FontName
+  name: FontName
+  nameWithType: GlyphStore.FontName
+  fullName: osu.Framework.IO.Stores.GlyphStore.FontName
+- uid: osu.Framework.IO.Stores.GlyphStore.Baseline
+  commentId: P:osu.Framework.IO.Stores.GlyphStore.Baseline
+  parent: osu.Framework.IO.Stores.GlyphStore
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Baseline
+  name: Baseline
+  nameWithType: GlyphStore.Baseline
+  fullName: osu.Framework.IO.Stores.GlyphStore.Baseline
+- uid: osu.Framework.IO.Stores.GlyphStore.Store
+  commentId: F:osu.Framework.IO.Stores.GlyphStore.Store
+  parent: osu.Framework.IO.Stores.GlyphStore
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Store
+  name: Store
+  nameWithType: GlyphStore.Store
+  fullName: osu.Framework.IO.Stores.GlyphStore.Store
+- uid: osu.Framework.IO.Stores.GlyphStore.Font
+  commentId: P:osu.Framework.IO.Stores.GlyphStore.Font
+  parent: osu.Framework.IO.Stores.GlyphStore
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Font
+  name: Font
+  nameWithType: GlyphStore.Font
+  fullName: osu.Framework.IO.Stores.GlyphStore.Font
+- uid: osu.Framework.IO.Stores.GlyphStore.LoadFontAsync
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.LoadFontAsync
+  parent: osu.Framework.IO.Stores.GlyphStore
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_LoadFontAsync
+  name: LoadFontAsync()
+  nameWithType: GlyphStore.LoadFontAsync()
+  fullName: osu.Framework.IO.Stores.GlyphStore.LoadFontAsync()
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.LoadFontAsync
+    name: LoadFontAsync
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_LoadFontAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.LoadFontAsync
+    name: LoadFontAsync
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_LoadFontAsync
+  - name: (
+  - name: )
+- uid: osu.Framework.IO.Stores.GlyphStore.HasGlyph(System.Char)
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.HasGlyph(System.Char)
+  parent: osu.Framework.IO.Stores.GlyphStore
+  isExternal: true
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_HasGlyph_System_Char_
+  name: HasGlyph(char)
+  nameWithType: GlyphStore.HasGlyph(char)
+  fullName: osu.Framework.IO.Stores.GlyphStore.HasGlyph(char)
+  nameWithType.vb: GlyphStore.HasGlyph(Char)
+  fullName.vb: osu.Framework.IO.Stores.GlyphStore.HasGlyph(Char)
+  name.vb: HasGlyph(Char)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.HasGlyph(System.Char)
+    name: HasGlyph
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_HasGlyph_System_Char_
+  - name: (
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.HasGlyph(System.Char)
+    name: HasGlyph
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_HasGlyph_System_Char_
+  - name: (
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: osu.Framework.IO.Stores.GlyphStore.GetFilenameForPage(System.Int32)
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.GetFilenameForPage(System.Int32)
+  parent: osu.Framework.IO.Stores.GlyphStore
+  isExternal: true
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetFilenameForPage_System_Int32_
+  name: GetFilenameForPage(int)
+  nameWithType: GlyphStore.GetFilenameForPage(int)
+  fullName: osu.Framework.IO.Stores.GlyphStore.GetFilenameForPage(int)
+  nameWithType.vb: GlyphStore.GetFilenameForPage(Integer)
+  fullName.vb: osu.Framework.IO.Stores.GlyphStore.GetFilenameForPage(Integer)
+  name.vb: GetFilenameForPage(Integer)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.GetFilenameForPage(System.Int32)
+    name: GetFilenameForPage
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetFilenameForPage_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.GetFilenameForPage(System.Int32)
+    name: GetFilenameForPage
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetFilenameForPage_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: osu.Framework.IO.Stores.GlyphStore.Get(System.Char)
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.Get(System.Char)
+  parent: osu.Framework.IO.Stores.GlyphStore
+  isExternal: true
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Get_System_Char_
+  name: Get(char)
+  nameWithType: GlyphStore.Get(char)
+  fullName: osu.Framework.IO.Stores.GlyphStore.Get(char)
+  nameWithType.vb: GlyphStore.Get(Char)
+  fullName.vb: osu.Framework.IO.Stores.GlyphStore.Get(Char)
+  name.vb: Get(Char)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.Get(System.Char)
+    name: Get
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Get_System_Char_
+  - name: (
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.Get(System.Char)
+    name: Get
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Get_System_Char_
+  - name: (
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: osu.Framework.IO.Stores.GlyphStore.GetKerning(System.Char,System.Char)
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.GetKerning(System.Char,System.Char)
+  parent: osu.Framework.IO.Stores.GlyphStore
+  isExternal: true
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetKerning_System_Char_System_Char_
+  name: GetKerning(char, char)
+  nameWithType: GlyphStore.GetKerning(char, char)
+  fullName: osu.Framework.IO.Stores.GlyphStore.GetKerning(char, char)
+  nameWithType.vb: GlyphStore.GetKerning(Char, Char)
+  fullName.vb: osu.Framework.IO.Stores.GlyphStore.GetKerning(Char, Char)
+  name.vb: GetKerning(Char, Char)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.GetKerning(System.Char,System.Char)
+    name: GetKerning
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetKerning_System_Char_System_Char_
+  - name: (
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: ','
+  - name: " "
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.GetKerning(System.Char,System.Char)
+    name: GetKerning
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetKerning_System_Char_System_Char_
+  - name: (
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: ','
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: osu.Framework.IO.Stores.GlyphStore.Get(System.String)
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.Get(System.String)
+  parent: osu.Framework.IO.Stores.GlyphStore
+  isExternal: true
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Get_System_String_
+  name: Get(string)
+  nameWithType: GlyphStore.Get(string)
+  fullName: osu.Framework.IO.Stores.GlyphStore.Get(string)
+  nameWithType.vb: GlyphStore.Get(String)
+  fullName.vb: osu.Framework.IO.Stores.GlyphStore.Get(String)
+  name.vb: Get(String)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.Get(System.String)
+    name: Get
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Get_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.Get(System.String)
+    name: Get
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Get_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.IO.Stores.GlyphStore.GetAsync(System.String,System.Threading.CancellationToken)
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.GetAsync(System.String,System.Threading.CancellationToken)
+  parent: osu.Framework.IO.Stores.GlyphStore
+  isExternal: true
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetAsync_System_String_System_Threading_CancellationToken_
+  name: GetAsync(string, CancellationToken)
+  nameWithType: GlyphStore.GetAsync(string, CancellationToken)
+  fullName: osu.Framework.IO.Stores.GlyphStore.GetAsync(string, System.Threading.CancellationToken)
+  nameWithType.vb: GlyphStore.GetAsync(String, CancellationToken)
+  fullName.vb: osu.Framework.IO.Stores.GlyphStore.GetAsync(String, System.Threading.CancellationToken)
+  name.vb: GetAsync(String, CancellationToken)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.GetAsync(System.String,System.Threading.CancellationToken)
+    name: GetAsync
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetAsync_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.GetAsync(System.String,System.Threading.CancellationToken)
+    name: GetAsync
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetAsync_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: osu.Framework.IO.Stores.GlyphStore.LoadedGlyphCount
+  commentId: F:osu.Framework.IO.Stores.GlyphStore.LoadedGlyphCount
+  parent: osu.Framework.IO.Stores.GlyphStore
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_LoadedGlyphCount
+  name: LoadedGlyphCount
+  nameWithType: GlyphStore.LoadedGlyphCount
+  fullName: osu.Framework.IO.Stores.GlyphStore.LoadedGlyphCount
+- uid: osu.Framework.IO.Stores.GlyphStore.LoadCharacter(SharpFNT.Character)
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.LoadCharacter(SharpFNT.Character)
+  parent: osu.Framework.IO.Stores.GlyphStore
+  isExternal: true
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_LoadCharacter_SharpFNT_Character_
+  name: LoadCharacter(Character)
+  nameWithType: GlyphStore.LoadCharacter(Character)
+  fullName: osu.Framework.IO.Stores.GlyphStore.LoadCharacter(SharpFNT.Character)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.LoadCharacter(SharpFNT.Character)
+    name: LoadCharacter
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_LoadCharacter_SharpFNT_Character_
+  - name: (
+  - uid: SharpFNT.Character
+    name: Character
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.LoadCharacter(SharpFNT.Character)
+    name: LoadCharacter
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_LoadCharacter_SharpFNT_Character_
+  - name: (
+  - uid: SharpFNT.Character
+    name: Character
+    isExternal: true
+  - name: )
+- uid: osu.Framework.IO.Stores.GlyphStore.GetStream(System.String)
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.GetStream(System.String)
+  parent: osu.Framework.IO.Stores.GlyphStore
+  isExternal: true
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetStream_System_String_
+  name: GetStream(string)
+  nameWithType: GlyphStore.GetStream(string)
+  fullName: osu.Framework.IO.Stores.GlyphStore.GetStream(string)
+  nameWithType.vb: GlyphStore.GetStream(String)
+  fullName.vb: osu.Framework.IO.Stores.GlyphStore.GetStream(String)
+  name.vb: GetStream(String)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.GetStream(System.String)
+    name: GetStream
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetStream_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.GetStream(System.String)
+    name: GetStream
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetStream_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.IO.Stores.GlyphStore.GetAvailableResources
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.GetAvailableResources
+  parent: osu.Framework.IO.Stores.GlyphStore
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetAvailableResources
+  name: GetAvailableResources()
+  nameWithType: GlyphStore.GetAvailableResources()
+  fullName: osu.Framework.IO.Stores.GlyphStore.GetAvailableResources()
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.GetAvailableResources
+    name: GetAvailableResources
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetAvailableResources
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.GetAvailableResources
+    name: GetAvailableResources
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetAvailableResources
+  - name: (
+  - name: )
+- uid: osu.Framework.IO.Stores.GlyphStore.Dispose
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.Dispose
+  parent: osu.Framework.IO.Stores.GlyphStore
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Dispose
+  name: Dispose()
+  nameWithType: GlyphStore.Dispose()
+  fullName: osu.Framework.IO.Stores.GlyphStore.Dispose()
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.Dispose
+    name: Dispose
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.Dispose
+    name: Dispose
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Dispose
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<TimedExpiryGlyphStore>(TimedExpiryGlyphStore)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<TimedExpiryGlyphStore>(TimedExpiryGlyphStore)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.IO.Stores.TimedExpiryGlyphStore>(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of TimedExpiryGlyphStore)(TimedExpiryGlyphStore)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.IO.Stores.TimedExpiryGlyphStore)(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+  name.vb: GetLocalisableDescription(Of TimedExpiryGlyphStore)(TimedExpiryGlyphStore)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<TimedExpiryGlyphStore>(TimedExpiryGlyphStore)
+  nameWithType: EnumerableExtensions.Yield<TimedExpiryGlyphStore>(TimedExpiryGlyphStore)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.IO.Stores.TimedExpiryGlyphStore>(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+  nameWithType.vb: EnumerableExtensions.Yield(Of TimedExpiryGlyphStore)(TimedExpiryGlyphStore)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.IO.Stores.TimedExpiryGlyphStore)(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+  name.vb: Yield(Of TimedExpiryGlyphStore)(TimedExpiryGlyphStore)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<TimedExpiryGlyphStore>(TimedExpiryGlyphStore)
+  nameWithType: ObjectExtensions.AsNonNull<TimedExpiryGlyphStore>(TimedExpiryGlyphStore)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.IO.Stores.TimedExpiryGlyphStore>(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of TimedExpiryGlyphStore)(TimedExpiryGlyphStore)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.IO.Stores.TimedExpiryGlyphStore)(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+  name.vb: AsNonNull(Of TimedExpiryGlyphStore)(TimedExpiryGlyphStore)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<TimedExpiryGlyphStore>(TimedExpiryGlyphStore)
+  nameWithType: ObjectExtensions.IsNotNull<TimedExpiryGlyphStore>(TimedExpiryGlyphStore)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.IO.Stores.TimedExpiryGlyphStore>(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of TimedExpiryGlyphStore)(TimedExpiryGlyphStore)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.IO.Stores.TimedExpiryGlyphStore)(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+  name.vb: IsNotNull(Of TimedExpiryGlyphStore)(TimedExpiryGlyphStore)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<TimedExpiryGlyphStore>(TimedExpiryGlyphStore)
+  nameWithType: ObjectExtensions.IsNull<TimedExpiryGlyphStore>(TimedExpiryGlyphStore)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.IO.Stores.TimedExpiryGlyphStore>(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+  nameWithType.vb: ObjectExtensions.IsNull(Of TimedExpiryGlyphStore)(TimedExpiryGlyphStore)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.IO.Stores.TimedExpiryGlyphStore)(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+  name.vb: IsNull(Of TimedExpiryGlyphStore)(TimedExpiryGlyphStore)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.IO.Stores.TimedExpiryGlyphStore)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: )
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TimedExpiryGlyphStore, TChild>(TimedExpiryGlyphStore, TChild)
+  nameWithType: ContainerExtensions.WithChild<TimedExpiryGlyphStore, TChild>(TimedExpiryGlyphStore, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.IO.Stores.TimedExpiryGlyphStore, TChild>(osu.Framework.IO.Stores.TimedExpiryGlyphStore, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TimedExpiryGlyphStore, TChild)(TimedExpiryGlyphStore, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.IO.Stores.TimedExpiryGlyphStore, TChild)(osu.Framework.IO.Stores.TimedExpiryGlyphStore, TChild)
+  name.vb: WithChild(Of TimedExpiryGlyphStore, TChild)(TimedExpiryGlyphStore, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.IO.Stores.TimedExpiryGlyphStore,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.IO.Stores.TimedExpiryGlyphStore,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TimedExpiryGlyphStore, TChild>(TimedExpiryGlyphStore, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TimedExpiryGlyphStore, TChild>(TimedExpiryGlyphStore, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.IO.Stores.TimedExpiryGlyphStore, TChild>(osu.Framework.IO.Stores.TimedExpiryGlyphStore, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TimedExpiryGlyphStore, TChild)(TimedExpiryGlyphStore, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.IO.Stores.TimedExpiryGlyphStore, TChild)(osu.Framework.IO.Stores.TimedExpiryGlyphStore, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TimedExpiryGlyphStore, TChild)(TimedExpiryGlyphStore, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.IO.Stores.TimedExpiryGlyphStore,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.IO.Stores.TimedExpiryGlyphStore,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TimedExpiryGlyphStore, TChild>(TimedExpiryGlyphStore, TChild)
+  nameWithType: ContainerExtensions.Wrap<TimedExpiryGlyphStore, TChild>(TimedExpiryGlyphStore, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.IO.Stores.TimedExpiryGlyphStore, TChild>(osu.Framework.IO.Stores.TimedExpiryGlyphStore, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TimedExpiryGlyphStore, TChild)(TimedExpiryGlyphStore, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.IO.Stores.TimedExpiryGlyphStore, TChild)(osu.Framework.IO.Stores.TimedExpiryGlyphStore, TChild)
+  name.vb: Wrap(Of TimedExpiryGlyphStore, TChild)(TimedExpiryGlyphStore, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.IO.Stores.TimedExpiryGlyphStore,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.IO.Stores.TimedExpiryGlyphStore,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore
+    name: TimedExpiryGlyphStore
+    href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.IO.Stores.IResourceStore`1
+  commentId: T:osu.Framework.IO.Stores.IResourceStore`1
+  href: osu.Framework.IO.Stores.IResourceStore-1.html
+  name: IResourceStore<T>
+  nameWithType: IResourceStore<T>
+  fullName: osu.Framework.IO.Stores.IResourceStore<T>
+  nameWithType.vb: IResourceStore(Of T)
+  fullName.vb: osu.Framework.IO.Stores.IResourceStore(Of T)
+  name.vb: IResourceStore(Of T)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.IResourceStore`1
+    name: IResourceStore
+    href: osu.Framework.IO.Stores.IResourceStore-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.IResourceStore`1
+    name: IResourceStore
+    href: osu.Framework.IO.Stores.IResourceStore-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.#ctor*
+  commentId: Overload:osu.Framework.IO.Stores.TimedExpiryGlyphStore.#ctor
+  href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html#osu_Framework_IO_Stores_TimedExpiryGlyphStore__ctor_osu_Framework_IO_Stores_ResourceStore_System_Byte____System_String_
+  name: TimedExpiryGlyphStore
+  nameWithType: TimedExpiryGlyphStore.TimedExpiryGlyphStore
+  fullName: osu.Framework.IO.Stores.TimedExpiryGlyphStore.TimedExpiryGlyphStore
+  nameWithType.vb: TimedExpiryGlyphStore.New
+  fullName.vb: osu.Framework.IO.Stores.TimedExpiryGlyphStore.New
+  name.vb: New
+- uid: osu.Framework.IO.Stores.ResourceStore{System.Byte[]}
+  commentId: T:osu.Framework.IO.Stores.ResourceStore{System.Byte[]}
+  parent: osu.Framework.IO.Stores
+  definition: osu.Framework.IO.Stores.ResourceStore`1
+  href: osu.Framework.IO.Stores.ResourceStore-1.html
+  name: ResourceStore<byte[]>
+  nameWithType: ResourceStore<byte[]>
+  fullName: osu.Framework.IO.Stores.ResourceStore<byte[]>
+  nameWithType.vb: ResourceStore(Of Byte())
+  fullName.vb: osu.Framework.IO.Stores.ResourceStore(Of Byte())
+  name.vb: ResourceStore(Of Byte())
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.ResourceStore`1
+    name: ResourceStore
+    href: osu.Framework.IO.Stores.ResourceStore-1.html
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.ResourceStore`1
+    name: ResourceStore
+    href: osu.Framework.IO.Stores.ResourceStore-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: osu.Framework.IO.Stores.ResourceStore`1
+  commentId: T:osu.Framework.IO.Stores.ResourceStore`1
+  href: osu.Framework.IO.Stores.ResourceStore-1.html
+  name: ResourceStore<T>
+  nameWithType: ResourceStore<T>
+  fullName: osu.Framework.IO.Stores.ResourceStore<T>
+  nameWithType.vb: ResourceStore(Of T)
+  fullName.vb: osu.Framework.IO.Stores.ResourceStore(Of T)
+  name.vb: ResourceStore(Of T)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.ResourceStore`1
+    name: ResourceStore
+    href: osu.Framework.IO.Stores.ResourceStore-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.ResourceStore`1
+    name: ResourceStore
+    href: osu.Framework.IO.Stores.ResourceStore-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.IO.Stores.GlyphStore.GetPageImage(System.Int32)
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.GetPageImage(System.Int32)
+  parent: osu.Framework.IO.Stores.GlyphStore
+  isExternal: true
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetPageImage_System_Int32_
+  name: GetPageImage(int)
+  nameWithType: GlyphStore.GetPageImage(int)
+  fullName: osu.Framework.IO.Stores.GlyphStore.GetPageImage(int)
+  nameWithType.vb: GlyphStore.GetPageImage(Integer)
+  fullName.vb: osu.Framework.IO.Stores.GlyphStore.GetPageImage(Integer)
+  name.vb: GetPageImage(Integer)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.GetPageImage(System.Int32)
+    name: GetPageImage
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetPageImage_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.GetPageImage(System.Int32)
+    name: GetPageImage
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_GetPageImage_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.GetPageImage*
+  commentId: Overload:osu.Framework.IO.Stores.TimedExpiryGlyphStore.GetPageImage
+  href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html#osu_Framework_IO_Stores_TimedExpiryGlyphStore_GetPageImage_System_Int32_
+  name: GetPageImage
+  nameWithType: TimedExpiryGlyphStore.GetPageImage
+  fullName: osu.Framework.IO.Stores.TimedExpiryGlyphStore.GetPageImage
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: osu.Framework.Graphics.Textures.TextureUpload
+  commentId: T:osu.Framework.Graphics.Textures.TextureUpload
+  parent: osu.Framework.Graphics.Textures
+  href: osu.Framework.Graphics.Textures.TextureUpload.html
+  name: TextureUpload
+  nameWithType: TextureUpload
+  fullName: osu.Framework.Graphics.Textures.TextureUpload
+- uid: osu.Framework.Graphics.Textures
+  commentId: N:osu.Framework.Graphics.Textures
+  href: osu.html
+  name: osu.Framework.Graphics.Textures
+  nameWithType: osu.Framework.Graphics.Textures
+  fullName: osu.Framework.Graphics.Textures
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Textures
+    name: Textures
+    href: osu.Framework.Graphics.Textures.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Textures
+    name: Textures
+    href: osu.Framework.Graphics.Textures.html
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.ToString*
+  commentId: Overload:osu.Framework.IO.Stores.TimedExpiryGlyphStore.ToString
+  href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html#osu_Framework_IO_Stores_TimedExpiryGlyphStore_ToString
+  name: ToString
+  nameWithType: TimedExpiryGlyphStore.ToString
+  fullName: osu.Framework.IO.Stores.TimedExpiryGlyphStore.ToString
+- uid: osu.Framework.IO.Stores.GlyphStore.Dispose(System.Boolean)
+  commentId: M:osu.Framework.IO.Stores.GlyphStore.Dispose(System.Boolean)
+  parent: osu.Framework.IO.Stores.GlyphStore
+  isExternal: true
+  href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Dispose_System_Boolean_
+  name: Dispose(bool)
+  nameWithType: GlyphStore.Dispose(bool)
+  fullName: osu.Framework.IO.Stores.GlyphStore.Dispose(bool)
+  nameWithType.vb: GlyphStore.Dispose(Boolean)
+  fullName.vb: osu.Framework.IO.Stores.GlyphStore.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.GlyphStore.Dispose(System.Boolean)
+    name: Dispose
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Dispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.GlyphStore.Dispose(System.Boolean)
+    name: Dispose
+    href: osu.Framework.IO.Stores.GlyphStore.html#osu_Framework_IO_Stores_GlyphStore_Dispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: osu.Framework.IO.Stores.TimedExpiryGlyphStore.Dispose*
+  commentId: Overload:osu.Framework.IO.Stores.TimedExpiryGlyphStore.Dispose
+  href: osu.Framework.IO.Stores.TimedExpiryGlyphStore.html#osu_Framework_IO_Stores_TimedExpiryGlyphStore_Dispose_System_Boolean_
+  name: Dispose
+  nameWithType: TimedExpiryGlyphStore.Dispose
+  fullName: osu.Framework.IO.Stores.TimedExpiryGlyphStore.Dispose
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

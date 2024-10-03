@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>osu!framework | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="osu!framework | osu!framework ">
+      
+      
+      <link rel="icon" href="assets/nuget icon.png">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/blob/master/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p align="center">
+  <img width="500px" src="assets/o%21f%20Logo%20Large%20FC.svg">
+</p>
+<h1 id="osuframework">osu!framework</h1>
+<p><a href="https://github.com/ppy/osu-framework/actions/workflows/ci.yml"><img src="https://github.com/ppy/osu-framework/actions/workflows/ci.yml/badge.svg?branch=master&amp;event=push" alt="Build status"></a>
+<a href="https://github.com/ppy/osu-framework/releases/latest"><img src="https://img.shields.io/github/release/ppy/osu-framework.svg" alt="GitHub release"></a>
+<a href="https://www.codefactor.io/repository/github/ppy/osu-framework"><img src="https://www.codefactor.io/repository/github/ppy/osu-framework/badge" alt="CodeFactor"></a>
+<a href="https://discord.gg/ppy"><img src="https://discordapp.com/api/guilds/188630481301012481/widget.png?style=shield" alt="dev chat"></a></p>
+<p>A game framework written with <a href="https://github.com/ppy/osu">osu!</a> in mind.</p>
+<h2 id="developing-a-game-using-osuframework">Developing a game using osu!framework</h2>
+<p>If you are interested in <strong>creating a project</strong> using the framework, please start from the <a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project">getting started</a> wiki resources (or jump straight over to the <a href="https://github.com/ppy/osu-framework/tree/master/osu.Framework.Templates">project templates</a>). You can either start off from an empty project, or take a peek at a working sample game. Either way, full project structure, cross-platform support, and  a testing setup are included!</p>
+<p>The rest of the information on this page is related to working <em>on</em> the framework, not <em>using</em> it!</p>
+<h2 id="objectives">Objectives</h2>
+<p>This framework is intended to take steps beyond what you would normally expect from a game framework. This means things like basic UI elements, text rendering, advanced input handling (textboxes) and performance overlays are provided out-of-the-box. Any of the osu! code that is deemed useful to other game projects will live in this framework project.</p>
+<ul>
+<li>Anywhere we implement graphical components, they will be displayed with a generic design and will be derivable for further customisation.</li>
+<li>Common elements used by games (texture caching, font loading) will be automatically initialised at runtime.</li>
+<li>Allow for isolated development of components via a solid testing environment (<code>VisualTests</code> and <code>TestCases</code>). Check the <a href="https://github.com/ppy/osu-framework/wiki/Development-and-Testing">wiki</a> for more information on how these can be used to streamline development.</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>A desktop platform with the <a href="https://dotnet.microsoft.com/download">.NET 8.0 SDK</a>.</li>
+<li>When running on linux, please have a system-wide ffmpeg installation available to support video decoding.</li>
+<li>When running on Windows 7 or 8.1, <em><a href="https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60&amp;pivots=os-windows#dependencies">additional prerequisites</a></em>* may be required to correctly run .NET 8 applications if your operating system is not up-to-date with the latest service packs.</li>
+<li>When working with the codebase, we recommend using an IDE with intellisense and syntax highlighting, such as <a href="https://visualstudio.microsoft.com/vs/">Visual Studio 2019+</a>, <a href="https://www.jetbrains.com/rider/">Jetbrains Rider</a>, or <a href="https://code.visualstudio.com/">Visual Studio Code</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig">EditorConfig</a> and <a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp">C#</a> plugin installed.</li>
+</ul>
+<h3 id="building">Building</h3>
+<p>Build configurations for the recommended IDEs (listed above) are included. You should use the provided Build/Run functionality of your IDE to get things going. When testing or building new components, it's highly encouraged you use the <code>VisualTests</code> project/configuration. More information on this provided <a href="#contributing">below</a>.</p>
+<ul>
+<li>Visual Studio / Rider users should load the project via one of the platform-specific .slnf files, rather than the main .sln. This will allow access to template run configurations.</li>
+</ul>
+<h3 id="code-analysis">Code analysis</h3>
+<p>Code analysis can be run with <code>powershell ./InspectCode.ps1</code> or <code>InspectCode.sh</code>.</p>
+<h2 id="contributing">Contributing</h2>
+<p>Contributions can be made via pull requests to this repository.</p>
+<p>If you're unsure of what you can help with, check out the <a href="https://github.com/ppy/osu-framework/issues">list of open issues</a> (especially those with the <a href="https://github.com/ppy/osu-framework/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22">&quot;good first issue&quot;</a> label).</p>
+<p>Before starting, please make sure you are familiar with the <a href="https://github.com/ppy/osu-framework/wiki/Development-and-Testing">development and testing</a> procedure we have set up. New component development, and where possible, bug fixing and debugging existing components <strong>should always be done under VisualTests</strong>.</p>
+<p>Note that while we already have certain standards in place, nothing is set in stone. If you have an issue with the way code is structured; with any libraries we are using; with any processes involved with contributing, <em>please</em> bring it up. We welcome all feedback so we can make contributing to this project as pain-free as possible.</p>
+<p>We love to reward quality contributions. If you have made a large contribution, or are a regular contributor, you are welcome to <a href="https://opencollective.com/ppy/expenses/new">submit an expense via opencollective</a>. If you have any questions, feel free to <a href="mailto:pe@ppy.sh">reach out to peppy</a> before doing so.</p>
+<h2 id="licence">Licence</h2>
+<p>This framework is licensed under the <a href="https://opensource.org/licenses/MIT">MIT licence</a>. Please see <a href="LICENCE">the licence file</a> for more information. <a href="https://tldrlegal.com/license/mit-license">tl;dr</a> you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.</p>
+<p>The BASS audio library (a dependency of this framework) is a commercial product. While it is free for non-commercial use, please ensure to <a href="http://www.un4seen.com/bass.html#license">obtain a valid licence</a> if you plan on distributing any application using it commercially.</p>
+<h2 id="projects-that-use-osuframework">Projects that use osu!framework</h2>
+<p><a href="https://github.com/ppy/osu">osu!</a> – rhythm is just a <em>click</em> away!</p>
+<p><a href="https://github.com/gd-edit/GDE">GDEdit</a> - A third-party Geometry Dash editor.</p>
+<p><a href="https://github.com/vignette-project/vignette">Vignette</a> - An OpenCV-based facial recognition software for Live2D</p>
+<p><a href="https://github.com/EVAST9919/iwbtm">IWBTM</a> - A platform game with level editor based off of &quot;I Wanna...&quot; games</p>
+<p><a href="https://deltada.sh/">DeltaDash</a> - A multi-direction, lane-based scroller rhythm game</p>
+<p><a href="https://github.com/TeamFluXis/fluXis">fluXis</a> - A community-driven rhythm game with a focus on creativity and expression</p>
+<!--
+We love to see people using our framework! Add your project here via a PR!
+
+Conditions:
+ - Must be a GitHub link (i.e. your project is open source)
+ - Must be actively developed (and have executable releases)
+-->
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

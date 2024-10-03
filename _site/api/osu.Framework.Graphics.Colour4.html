@@ -1,0 +1,6250 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct Colour4 | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct Colour4 | osu!framework ">
+      
+      <meta name="description" content="Represents an RGBA colour in the linear colour space, having colour components in the range 0-1. Stored internally as a  for performance.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Graphics_Colour4.md&amp;value=---%0Auid%3A%20osu.Framework.Graphics.Colour4%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Graphics.Colour4">
+
+
+
+  <h1 id="osu_Framework_Graphics_Colour4" data-uid="osu.Framework.Graphics.Colour4" class="text-break">
+Struct Colour4  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Graphics.html">Graphics</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents an RGBA colour in the linear colour space, having colour components in the range 0-1.
+Stored internally as a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a> for performance.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly struct Colour4 : IEquatable&lt;Colour4&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Colour4__ctor_" data-uid="osu.Framework.Graphics.Colour4.#ctor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4__ctor_System_Byte_System_Byte_System_Byte_System_Byte_" data-uid="osu.Framework.Graphics.Colour4.#ctor(System.Byte,System.Byte,System.Byte,System.Byte)">
+  Colour4(byte, byte, byte, byte)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> with the specified RGBA components in the 0-255 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Colour4(byte r, byte g, byte b, byte a)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The red component, in the 0-255 range.</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The green component, in the 0-255 range.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The blue component, in the 0-255 range.</p>
+</dd>
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The alpha component, in the 0-255 range.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4__ctor_" data-uid="osu.Framework.Graphics.Colour4.#ctor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4__ctor_System_Numerics_Vector4_" data-uid="osu.Framework.Graphics.Colour4.#ctor(System.Numerics.Vector4)">
+  Colour4(Vector4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> with the specified <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a>,
+where XYZW maps to RGBA.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Colour4(Vector4 vector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></dt>
+    <dd><p>The source vector, whose components should be in the 0-1 range.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4__ctor_" data-uid="osu.Framework.Graphics.Colour4.#ctor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4__ctor_System_Single_System_Single_System_Single_System_Single_" data-uid="osu.Framework.Graphics.Colour4.#ctor(System.Single,System.Single,System.Single,System.Single)">
+  Colour4(float, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> with the specified RGBA components in the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Colour4(float r, float g, float b, float a)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>r</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The red component, in the 0-1 range.</p>
+</dd>
+    <dt><code>g</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The green component, in the 0-1 range.</p>
+</dd>
+    <dt><code>b</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The blue component, in the 0-1 range.</p>
+</dd>
+    <dt><code>a</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The alpha component, in the 0-1 range.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="osu_Framework_Graphics_Colour4_Vector" data-uid="osu.Framework.Graphics.Colour4.Vector">
+  Vector
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a> representation of the colour, where XYZW maps to RGBA,
+and each component is in the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly Vector4 Vector</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Colour4_A_" data-uid="osu.Framework.Graphics.Colour4.A*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_A" data-uid="osu.Framework.Graphics.Colour4.A">
+  A
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the alpha component of the RGBA colour in the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float A { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_AliceBlue_" data-uid="osu.Framework.Graphics.Colour4.AliceBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_AliceBlue" data-uid="osu.Framework.Graphics.Colour4.AliceBlue">
+  AliceBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L592"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (240, 248, 255, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 AliceBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_AntiqueWhite_" data-uid="osu.Framework.Graphics.Colour4.AntiqueWhite*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_AntiqueWhite" data-uid="osu.Framework.Graphics.Colour4.AntiqueWhite">
+  AntiqueWhite
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L597"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (250, 235, 215, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 AntiqueWhite { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Aqua_" data-uid="osu.Framework.Graphics.Colour4.Aqua*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Aqua" data-uid="osu.Framework.Graphics.Colour4.Aqua">
+  Aqua
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L602"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 255, 255, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Aqua { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Aquamarine_" data-uid="osu.Framework.Graphics.Colour4.Aquamarine*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Aquamarine" data-uid="osu.Framework.Graphics.Colour4.Aquamarine">
+  Aquamarine
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L607"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (127, 255, 212, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Aquamarine { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Azure_" data-uid="osu.Framework.Graphics.Colour4.Azure*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Azure" data-uid="osu.Framework.Graphics.Colour4.Azure">
+  Azure
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L612"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (240, 255, 255, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Azure { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_B_" data-uid="osu.Framework.Graphics.Colour4.B*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_B" data-uid="osu.Framework.Graphics.Colour4.B">
+  B
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the blue component of the linear RGBA colour in the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float B { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Beige_" data-uid="osu.Framework.Graphics.Colour4.Beige*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Beige" data-uid="osu.Framework.Graphics.Colour4.Beige">
+  Beige
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L617"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (245, 245, 220, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Beige { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Bisque_" data-uid="osu.Framework.Graphics.Colour4.Bisque*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Bisque" data-uid="osu.Framework.Graphics.Colour4.Bisque">
+  Bisque
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L622"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 228, 196, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Bisque { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Black_" data-uid="osu.Framework.Graphics.Colour4.Black*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Black" data-uid="osu.Framework.Graphics.Colour4.Black">
+  Black
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L627"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 0, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Black { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_BlanchedAlmond_" data-uid="osu.Framework.Graphics.Colour4.BlanchedAlmond*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_BlanchedAlmond" data-uid="osu.Framework.Graphics.Colour4.BlanchedAlmond">
+  BlanchedAlmond
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L632"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 235, 205, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 BlanchedAlmond { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Blue_" data-uid="osu.Framework.Graphics.Colour4.Blue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Blue" data-uid="osu.Framework.Graphics.Colour4.Blue">
+  Blue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L637"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 0, 255, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Blue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_BlueViolet_" data-uid="osu.Framework.Graphics.Colour4.BlueViolet*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_BlueViolet" data-uid="osu.Framework.Graphics.Colour4.BlueViolet">
+  BlueViolet
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L642"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (138, 43, 226, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 BlueViolet { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Brown_" data-uid="osu.Framework.Graphics.Colour4.Brown*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Brown" data-uid="osu.Framework.Graphics.Colour4.Brown">
+  Brown
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L647"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (165, 42, 42, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Brown { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_BurlyWood_" data-uid="osu.Framework.Graphics.Colour4.BurlyWood*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_BurlyWood" data-uid="osu.Framework.Graphics.Colour4.BurlyWood">
+  BurlyWood
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L652"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (222, 184, 135, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 BurlyWood { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_CadetBlue_" data-uid="osu.Framework.Graphics.Colour4.CadetBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_CadetBlue" data-uid="osu.Framework.Graphics.Colour4.CadetBlue">
+  CadetBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L657"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (95, 158, 160, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 CadetBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Chartreuse_" data-uid="osu.Framework.Graphics.Colour4.Chartreuse*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Chartreuse" data-uid="osu.Framework.Graphics.Colour4.Chartreuse">
+  Chartreuse
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L662"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (127, 255, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Chartreuse { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Chocolate_" data-uid="osu.Framework.Graphics.Colour4.Chocolate*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Chocolate" data-uid="osu.Framework.Graphics.Colour4.Chocolate">
+  Chocolate
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L667"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (210, 105, 30, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Chocolate { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Coral_" data-uid="osu.Framework.Graphics.Colour4.Coral*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Coral" data-uid="osu.Framework.Graphics.Colour4.Coral">
+  Coral
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L672"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 127, 80, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Coral { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_CornflowerBlue_" data-uid="osu.Framework.Graphics.Colour4.CornflowerBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_CornflowerBlue" data-uid="osu.Framework.Graphics.Colour4.CornflowerBlue">
+  CornflowerBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L677"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (100, 149, 237, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 CornflowerBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Cornsilk_" data-uid="osu.Framework.Graphics.Colour4.Cornsilk*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Cornsilk" data-uid="osu.Framework.Graphics.Colour4.Cornsilk">
+  Cornsilk
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L682"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 248, 220, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Cornsilk { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Crimson_" data-uid="osu.Framework.Graphics.Colour4.Crimson*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Crimson" data-uid="osu.Framework.Graphics.Colour4.Crimson">
+  Crimson
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L687"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (220, 20, 60, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Crimson { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Cyan_" data-uid="osu.Framework.Graphics.Colour4.Cyan*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Cyan" data-uid="osu.Framework.Graphics.Colour4.Cyan">
+  Cyan
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L692"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 255, 255, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Cyan { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkBlue_" data-uid="osu.Framework.Graphics.Colour4.DarkBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkBlue" data-uid="osu.Framework.Graphics.Colour4.DarkBlue">
+  DarkBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L697"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 0, 139, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkCyan_" data-uid="osu.Framework.Graphics.Colour4.DarkCyan*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkCyan" data-uid="osu.Framework.Graphics.Colour4.DarkCyan">
+  DarkCyan
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L702"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 139, 139, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkCyan { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkGoldenrod_" data-uid="osu.Framework.Graphics.Colour4.DarkGoldenrod*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkGoldenrod" data-uid="osu.Framework.Graphics.Colour4.DarkGoldenrod">
+  DarkGoldenrod
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L707"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (184, 134, 11, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkGoldenrod { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkGray_" data-uid="osu.Framework.Graphics.Colour4.DarkGray*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkGray" data-uid="osu.Framework.Graphics.Colour4.DarkGray">
+  DarkGray
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L712"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (169, 169, 169, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkGray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkGreen_" data-uid="osu.Framework.Graphics.Colour4.DarkGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkGreen" data-uid="osu.Framework.Graphics.Colour4.DarkGreen">
+  DarkGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L717"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 100, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkKhaki_" data-uid="osu.Framework.Graphics.Colour4.DarkKhaki*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkKhaki" data-uid="osu.Framework.Graphics.Colour4.DarkKhaki">
+  DarkKhaki
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L722"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (189, 183, 107, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkKhaki { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkMagenta_" data-uid="osu.Framework.Graphics.Colour4.DarkMagenta*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkMagenta" data-uid="osu.Framework.Graphics.Colour4.DarkMagenta">
+  DarkMagenta
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L727"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (139, 0, 139, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkMagenta { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkOliveGreen_" data-uid="osu.Framework.Graphics.Colour4.DarkOliveGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkOliveGreen" data-uid="osu.Framework.Graphics.Colour4.DarkOliveGreen">
+  DarkOliveGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L732"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (85, 107, 47, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkOliveGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkOrange_" data-uid="osu.Framework.Graphics.Colour4.DarkOrange*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkOrange" data-uid="osu.Framework.Graphics.Colour4.DarkOrange">
+  DarkOrange
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L737"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 140, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkOrange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkOrchid_" data-uid="osu.Framework.Graphics.Colour4.DarkOrchid*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkOrchid" data-uid="osu.Framework.Graphics.Colour4.DarkOrchid">
+  DarkOrchid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L742"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (153, 50, 204, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkOrchid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkRed_" data-uid="osu.Framework.Graphics.Colour4.DarkRed*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkRed" data-uid="osu.Framework.Graphics.Colour4.DarkRed">
+  DarkRed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L747"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (139, 0, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkRed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkSalmon_" data-uid="osu.Framework.Graphics.Colour4.DarkSalmon*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkSalmon" data-uid="osu.Framework.Graphics.Colour4.DarkSalmon">
+  DarkSalmon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L752"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (233, 150, 122, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkSalmon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkSeaGreen_" data-uid="osu.Framework.Graphics.Colour4.DarkSeaGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkSeaGreen" data-uid="osu.Framework.Graphics.Colour4.DarkSeaGreen">
+  DarkSeaGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L757"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (143, 188, 139, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkSeaGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkSlateBlue_" data-uid="osu.Framework.Graphics.Colour4.DarkSlateBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkSlateBlue" data-uid="osu.Framework.Graphics.Colour4.DarkSlateBlue">
+  DarkSlateBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L762"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (72, 61, 139, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkSlateBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkSlateGray_" data-uid="osu.Framework.Graphics.Colour4.DarkSlateGray*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkSlateGray" data-uid="osu.Framework.Graphics.Colour4.DarkSlateGray">
+  DarkSlateGray
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L767"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (47, 79, 79, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkSlateGray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkTurquoise_" data-uid="osu.Framework.Graphics.Colour4.DarkTurquoise*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkTurquoise" data-uid="osu.Framework.Graphics.Colour4.DarkTurquoise">
+  DarkTurquoise
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L772"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 206, 209, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkTurquoise { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DarkViolet_" data-uid="osu.Framework.Graphics.Colour4.DarkViolet*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DarkViolet" data-uid="osu.Framework.Graphics.Colour4.DarkViolet">
+  DarkViolet
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L777"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (148, 0, 211, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DarkViolet { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DeepPink_" data-uid="osu.Framework.Graphics.Colour4.DeepPink*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DeepPink" data-uid="osu.Framework.Graphics.Colour4.DeepPink">
+  DeepPink
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L782"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 20, 147, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DeepPink { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DeepSkyBlue_" data-uid="osu.Framework.Graphics.Colour4.DeepSkyBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DeepSkyBlue" data-uid="osu.Framework.Graphics.Colour4.DeepSkyBlue">
+  DeepSkyBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L787"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 191, 255, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DeepSkyBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DimGray_" data-uid="osu.Framework.Graphics.Colour4.DimGray*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DimGray" data-uid="osu.Framework.Graphics.Colour4.DimGray">
+  DimGray
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L792"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (105, 105, 105, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DimGray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_DodgerBlue_" data-uid="osu.Framework.Graphics.Colour4.DodgerBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_DodgerBlue" data-uid="osu.Framework.Graphics.Colour4.DodgerBlue">
+  DodgerBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L797"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (30, 144, 255, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 DodgerBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Firebrick_" data-uid="osu.Framework.Graphics.Colour4.Firebrick*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Firebrick" data-uid="osu.Framework.Graphics.Colour4.Firebrick">
+  Firebrick
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L802"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (178, 34, 34, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Firebrick { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_FloralWhite_" data-uid="osu.Framework.Graphics.Colour4.FloralWhite*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_FloralWhite" data-uid="osu.Framework.Graphics.Colour4.FloralWhite">
+  FloralWhite
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L807"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 250, 240, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 FloralWhite { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_ForestGreen_" data-uid="osu.Framework.Graphics.Colour4.ForestGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_ForestGreen" data-uid="osu.Framework.Graphics.Colour4.ForestGreen">
+  ForestGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L812"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (34, 139, 34, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 ForestGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Fuchsia_" data-uid="osu.Framework.Graphics.Colour4.Fuchsia*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Fuchsia" data-uid="osu.Framework.Graphics.Colour4.Fuchsia">
+  Fuchsia
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L817"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 0, 255, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Fuchsia { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_G_" data-uid="osu.Framework.Graphics.Colour4.G*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_G" data-uid="osu.Framework.Graphics.Colour4.G">
+  G
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the green component of the linear RGBA colour in the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float G { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Gainsboro_" data-uid="osu.Framework.Graphics.Colour4.Gainsboro*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Gainsboro" data-uid="osu.Framework.Graphics.Colour4.Gainsboro">
+  Gainsboro
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L822"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (220, 220, 220, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Gainsboro { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_GhostWhite_" data-uid="osu.Framework.Graphics.Colour4.GhostWhite*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_GhostWhite" data-uid="osu.Framework.Graphics.Colour4.GhostWhite">
+  GhostWhite
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L827"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (248, 248, 255, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 GhostWhite { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Gold_" data-uid="osu.Framework.Graphics.Colour4.Gold*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Gold" data-uid="osu.Framework.Graphics.Colour4.Gold">
+  Gold
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L832"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 215, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Gold { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Goldenrod_" data-uid="osu.Framework.Graphics.Colour4.Goldenrod*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Goldenrod" data-uid="osu.Framework.Graphics.Colour4.Goldenrod">
+  Goldenrod
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L837"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (218, 165, 32, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Goldenrod { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Gray_" data-uid="osu.Framework.Graphics.Colour4.Gray*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Gray" data-uid="osu.Framework.Graphics.Colour4.Gray">
+  Gray
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L842"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (128, 128, 128, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Gray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Green_" data-uid="osu.Framework.Graphics.Colour4.Green*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Green" data-uid="osu.Framework.Graphics.Colour4.Green">
+  Green
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L847"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 128, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Green { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_GreenYellow_" data-uid="osu.Framework.Graphics.Colour4.GreenYellow*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_GreenYellow" data-uid="osu.Framework.Graphics.Colour4.GreenYellow">
+  GreenYellow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L852"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (173, 255, 47, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 GreenYellow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Honeydew_" data-uid="osu.Framework.Graphics.Colour4.Honeydew*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Honeydew" data-uid="osu.Framework.Graphics.Colour4.Honeydew">
+  Honeydew
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L857"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (240, 255, 240, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Honeydew { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_HotPink_" data-uid="osu.Framework.Graphics.Colour4.HotPink*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_HotPink" data-uid="osu.Framework.Graphics.Colour4.HotPink">
+  HotPink
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L862"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 105, 180, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 HotPink { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_IndianRed_" data-uid="osu.Framework.Graphics.Colour4.IndianRed*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_IndianRed" data-uid="osu.Framework.Graphics.Colour4.IndianRed">
+  IndianRed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L867"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (205, 92, 92, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 IndianRed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Indigo_" data-uid="osu.Framework.Graphics.Colour4.Indigo*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Indigo" data-uid="osu.Framework.Graphics.Colour4.Indigo">
+  Indigo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L872"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (75, 0, 130, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Indigo { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Ivory_" data-uid="osu.Framework.Graphics.Colour4.Ivory*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Ivory" data-uid="osu.Framework.Graphics.Colour4.Ivory">
+  Ivory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L877"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 255, 240, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Ivory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Khaki_" data-uid="osu.Framework.Graphics.Colour4.Khaki*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Khaki" data-uid="osu.Framework.Graphics.Colour4.Khaki">
+  Khaki
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L882"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (240, 230, 140, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Khaki { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Lavender_" data-uid="osu.Framework.Graphics.Colour4.Lavender*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Lavender" data-uid="osu.Framework.Graphics.Colour4.Lavender">
+  Lavender
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L887"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (230, 230, 250, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Lavender { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LavenderBlush_" data-uid="osu.Framework.Graphics.Colour4.LavenderBlush*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LavenderBlush" data-uid="osu.Framework.Graphics.Colour4.LavenderBlush">
+  LavenderBlush
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L892"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 240, 245, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LavenderBlush { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LawnGreen_" data-uid="osu.Framework.Graphics.Colour4.LawnGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LawnGreen" data-uid="osu.Framework.Graphics.Colour4.LawnGreen">
+  LawnGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L897"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (124, 252, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LawnGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LemonChiffon_" data-uid="osu.Framework.Graphics.Colour4.LemonChiffon*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LemonChiffon" data-uid="osu.Framework.Graphics.Colour4.LemonChiffon">
+  LemonChiffon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L902"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 250, 205, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LemonChiffon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightBlue_" data-uid="osu.Framework.Graphics.Colour4.LightBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightBlue" data-uid="osu.Framework.Graphics.Colour4.LightBlue">
+  LightBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L907"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (173, 216, 230, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightCoral_" data-uid="osu.Framework.Graphics.Colour4.LightCoral*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightCoral" data-uid="osu.Framework.Graphics.Colour4.LightCoral">
+  LightCoral
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L912"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (240, 128, 128, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightCoral { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightCyan_" data-uid="osu.Framework.Graphics.Colour4.LightCyan*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightCyan" data-uid="osu.Framework.Graphics.Colour4.LightCyan">
+  LightCyan
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L917"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (224, 255, 255, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightCyan { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightGoldenrodYellow_" data-uid="osu.Framework.Graphics.Colour4.LightGoldenrodYellow*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightGoldenrodYellow" data-uid="osu.Framework.Graphics.Colour4.LightGoldenrodYellow">
+  LightGoldenrodYellow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L922"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (250, 250, 210, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightGoldenrodYellow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightGray_" data-uid="osu.Framework.Graphics.Colour4.LightGray*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightGray" data-uid="osu.Framework.Graphics.Colour4.LightGray">
+  LightGray
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L932"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (211, 211, 211, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightGray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightGreen_" data-uid="osu.Framework.Graphics.Colour4.LightGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightGreen" data-uid="osu.Framework.Graphics.Colour4.LightGreen">
+  LightGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L927"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (144, 238, 144, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightPink_" data-uid="osu.Framework.Graphics.Colour4.LightPink*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightPink" data-uid="osu.Framework.Graphics.Colour4.LightPink">
+  LightPink
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L937"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 182, 193, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightPink { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightSalmon_" data-uid="osu.Framework.Graphics.Colour4.LightSalmon*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightSalmon" data-uid="osu.Framework.Graphics.Colour4.LightSalmon">
+  LightSalmon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L942"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 160, 122, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightSalmon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightSeaGreen_" data-uid="osu.Framework.Graphics.Colour4.LightSeaGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightSeaGreen" data-uid="osu.Framework.Graphics.Colour4.LightSeaGreen">
+  LightSeaGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L947"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (32, 178, 170, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightSeaGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightSkyBlue_" data-uid="osu.Framework.Graphics.Colour4.LightSkyBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightSkyBlue" data-uid="osu.Framework.Graphics.Colour4.LightSkyBlue">
+  LightSkyBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L952"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (135, 206, 250, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightSkyBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightSlateGray_" data-uid="osu.Framework.Graphics.Colour4.LightSlateGray*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightSlateGray" data-uid="osu.Framework.Graphics.Colour4.LightSlateGray">
+  LightSlateGray
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L957"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (119, 136, 153, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightSlateGray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightSteelBlue_" data-uid="osu.Framework.Graphics.Colour4.LightSteelBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightSteelBlue" data-uid="osu.Framework.Graphics.Colour4.LightSteelBlue">
+  LightSteelBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L962"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (176, 196, 222, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightSteelBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LightYellow_" data-uid="osu.Framework.Graphics.Colour4.LightYellow*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LightYellow" data-uid="osu.Framework.Graphics.Colour4.LightYellow">
+  LightYellow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L967"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 255, 224, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LightYellow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Lime_" data-uid="osu.Framework.Graphics.Colour4.Lime*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Lime" data-uid="osu.Framework.Graphics.Colour4.Lime">
+  Lime
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L972"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 255, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Lime { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_LimeGreen_" data-uid="osu.Framework.Graphics.Colour4.LimeGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_LimeGreen" data-uid="osu.Framework.Graphics.Colour4.LimeGreen">
+  LimeGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L977"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (50, 205, 50, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 LimeGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Linen_" data-uid="osu.Framework.Graphics.Colour4.Linen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Linen" data-uid="osu.Framework.Graphics.Colour4.Linen">
+  Linen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L982"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (250, 240, 230, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Linen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Magenta_" data-uid="osu.Framework.Graphics.Colour4.Magenta*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Magenta" data-uid="osu.Framework.Graphics.Colour4.Magenta">
+  Magenta
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L987"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 0, 255, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Magenta { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Maroon_" data-uid="osu.Framework.Graphics.Colour4.Maroon*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Maroon" data-uid="osu.Framework.Graphics.Colour4.Maroon">
+  Maroon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L992"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (128, 0, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Maroon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MediumAquamarine_" data-uid="osu.Framework.Graphics.Colour4.MediumAquamarine*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MediumAquamarine" data-uid="osu.Framework.Graphics.Colour4.MediumAquamarine">
+  MediumAquamarine
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L997"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (102, 205, 170, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 MediumAquamarine { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MediumBlue_" data-uid="osu.Framework.Graphics.Colour4.MediumBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MediumBlue" data-uid="osu.Framework.Graphics.Colour4.MediumBlue">
+  MediumBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1002"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 0, 205, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 MediumBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MediumOrchid_" data-uid="osu.Framework.Graphics.Colour4.MediumOrchid*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MediumOrchid" data-uid="osu.Framework.Graphics.Colour4.MediumOrchid">
+  MediumOrchid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1007"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (186, 85, 211, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 MediumOrchid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MediumPurple_" data-uid="osu.Framework.Graphics.Colour4.MediumPurple*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MediumPurple" data-uid="osu.Framework.Graphics.Colour4.MediumPurple">
+  MediumPurple
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1012"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (147, 112, 219, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 MediumPurple { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MediumSeaGreen_" data-uid="osu.Framework.Graphics.Colour4.MediumSeaGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MediumSeaGreen" data-uid="osu.Framework.Graphics.Colour4.MediumSeaGreen">
+  MediumSeaGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1017"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (60, 179, 113, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 MediumSeaGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MediumSlateBlue_" data-uid="osu.Framework.Graphics.Colour4.MediumSlateBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MediumSlateBlue" data-uid="osu.Framework.Graphics.Colour4.MediumSlateBlue">
+  MediumSlateBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1022"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (123, 104, 238, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 MediumSlateBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MediumSpringGreen_" data-uid="osu.Framework.Graphics.Colour4.MediumSpringGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MediumSpringGreen" data-uid="osu.Framework.Graphics.Colour4.MediumSpringGreen">
+  MediumSpringGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1027"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 250, 154, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 MediumSpringGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MediumTurquoise_" data-uid="osu.Framework.Graphics.Colour4.MediumTurquoise*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MediumTurquoise" data-uid="osu.Framework.Graphics.Colour4.MediumTurquoise">
+  MediumTurquoise
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1032"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (72, 209, 204, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 MediumTurquoise { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MediumVioletRed_" data-uid="osu.Framework.Graphics.Colour4.MediumVioletRed*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MediumVioletRed" data-uid="osu.Framework.Graphics.Colour4.MediumVioletRed">
+  MediumVioletRed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1037"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (199, 21, 133, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 MediumVioletRed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MidnightBlue_" data-uid="osu.Framework.Graphics.Colour4.MidnightBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MidnightBlue" data-uid="osu.Framework.Graphics.Colour4.MidnightBlue">
+  MidnightBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1042"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (25, 25, 112, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 MidnightBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MintCream_" data-uid="osu.Framework.Graphics.Colour4.MintCream*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MintCream" data-uid="osu.Framework.Graphics.Colour4.MintCream">
+  MintCream
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1047"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (245, 255, 250, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 MintCream { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MistyRose_" data-uid="osu.Framework.Graphics.Colour4.MistyRose*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MistyRose" data-uid="osu.Framework.Graphics.Colour4.MistyRose">
+  MistyRose
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1052"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 228, 225, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 MistyRose { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Moccasin_" data-uid="osu.Framework.Graphics.Colour4.Moccasin*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Moccasin" data-uid="osu.Framework.Graphics.Colour4.Moccasin">
+  Moccasin
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1057"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 228, 181, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Moccasin { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_NavajoWhite_" data-uid="osu.Framework.Graphics.Colour4.NavajoWhite*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_NavajoWhite" data-uid="osu.Framework.Graphics.Colour4.NavajoWhite">
+  NavajoWhite
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1062"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 222, 173, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 NavajoWhite { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Navy_" data-uid="osu.Framework.Graphics.Colour4.Navy*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Navy" data-uid="osu.Framework.Graphics.Colour4.Navy">
+  Navy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1067"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 0, 128, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Navy { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_OldLace_" data-uid="osu.Framework.Graphics.Colour4.OldLace*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_OldLace" data-uid="osu.Framework.Graphics.Colour4.OldLace">
+  OldLace
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1072"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (253, 245, 230, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 OldLace { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Olive_" data-uid="osu.Framework.Graphics.Colour4.Olive*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Olive" data-uid="osu.Framework.Graphics.Colour4.Olive">
+  Olive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1077"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (128, 128, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Olive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_OliveDrab_" data-uid="osu.Framework.Graphics.Colour4.OliveDrab*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_OliveDrab" data-uid="osu.Framework.Graphics.Colour4.OliveDrab">
+  OliveDrab
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1082"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (107, 142, 35, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 OliveDrab { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Orange_" data-uid="osu.Framework.Graphics.Colour4.Orange*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Orange" data-uid="osu.Framework.Graphics.Colour4.Orange">
+  Orange
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1087"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 165, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Orange { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_OrangeRed_" data-uid="osu.Framework.Graphics.Colour4.OrangeRed*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_OrangeRed" data-uid="osu.Framework.Graphics.Colour4.OrangeRed">
+  OrangeRed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1092"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 69, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 OrangeRed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Orchid_" data-uid="osu.Framework.Graphics.Colour4.Orchid*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Orchid" data-uid="osu.Framework.Graphics.Colour4.Orchid">
+  Orchid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1097"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (218, 112, 214, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Orchid { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_PaleGoldenrod_" data-uid="osu.Framework.Graphics.Colour4.PaleGoldenrod*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_PaleGoldenrod" data-uid="osu.Framework.Graphics.Colour4.PaleGoldenrod">
+  PaleGoldenrod
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (238, 232, 170, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 PaleGoldenrod { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_PaleGreen_" data-uid="osu.Framework.Graphics.Colour4.PaleGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_PaleGreen" data-uid="osu.Framework.Graphics.Colour4.PaleGreen">
+  PaleGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (152, 251, 152, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 PaleGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_PaleTurquoise_" data-uid="osu.Framework.Graphics.Colour4.PaleTurquoise*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_PaleTurquoise" data-uid="osu.Framework.Graphics.Colour4.PaleTurquoise">
+  PaleTurquoise
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (175, 238, 238, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 PaleTurquoise { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_PaleVioletRed_" data-uid="osu.Framework.Graphics.Colour4.PaleVioletRed*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_PaleVioletRed" data-uid="osu.Framework.Graphics.Colour4.PaleVioletRed">
+  PaleVioletRed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (219, 112, 147, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 PaleVioletRed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_PapayaWhip_" data-uid="osu.Framework.Graphics.Colour4.PapayaWhip*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_PapayaWhip" data-uid="osu.Framework.Graphics.Colour4.PapayaWhip">
+  PapayaWhip
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 239, 213, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 PapayaWhip { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_PeachPuff_" data-uid="osu.Framework.Graphics.Colour4.PeachPuff*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_PeachPuff" data-uid="osu.Framework.Graphics.Colour4.PeachPuff">
+  PeachPuff
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 218, 185, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 PeachPuff { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Peru_" data-uid="osu.Framework.Graphics.Colour4.Peru*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Peru" data-uid="osu.Framework.Graphics.Colour4.Peru">
+  Peru
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (205, 133, 63, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Peru { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Pink_" data-uid="osu.Framework.Graphics.Colour4.Pink*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Pink" data-uid="osu.Framework.Graphics.Colour4.Pink">
+  Pink
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 192, 203, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Pink { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Plum_" data-uid="osu.Framework.Graphics.Colour4.Plum*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Plum" data-uid="osu.Framework.Graphics.Colour4.Plum">
+  Plum
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (221, 160, 221, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Plum { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_PowderBlue_" data-uid="osu.Framework.Graphics.Colour4.PowderBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_PowderBlue" data-uid="osu.Framework.Graphics.Colour4.PowderBlue">
+  PowderBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (176, 224, 230, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 PowderBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Purple_" data-uid="osu.Framework.Graphics.Colour4.Purple*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Purple" data-uid="osu.Framework.Graphics.Colour4.Purple">
+  Purple
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (128, 0, 128, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Purple { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_R_" data-uid="osu.Framework.Graphics.Colour4.R*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_R" data-uid="osu.Framework.Graphics.Colour4.R">
+  R
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Represents the red component of the linear RGBA colour in the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float R { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Red_" data-uid="osu.Framework.Graphics.Colour4.Red*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Red" data-uid="osu.Framework.Graphics.Colour4.Red">
+  Red
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 0, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Red { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_RosyBrown_" data-uid="osu.Framework.Graphics.Colour4.RosyBrown*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_RosyBrown" data-uid="osu.Framework.Graphics.Colour4.RosyBrown">
+  RosyBrown
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (188, 143, 143, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 RosyBrown { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_RoyalBlue_" data-uid="osu.Framework.Graphics.Colour4.RoyalBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_RoyalBlue" data-uid="osu.Framework.Graphics.Colour4.RoyalBlue">
+  RoyalBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (65, 105, 225, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 RoyalBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_SaddleBrown_" data-uid="osu.Framework.Graphics.Colour4.SaddleBrown*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_SaddleBrown" data-uid="osu.Framework.Graphics.Colour4.SaddleBrown">
+  SaddleBrown
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1172"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (139, 69, 19, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 SaddleBrown { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Salmon_" data-uid="osu.Framework.Graphics.Colour4.Salmon*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Salmon" data-uid="osu.Framework.Graphics.Colour4.Salmon">
+  Salmon
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (250, 128, 114, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Salmon { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_SandyBrown_" data-uid="osu.Framework.Graphics.Colour4.SandyBrown*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_SandyBrown" data-uid="osu.Framework.Graphics.Colour4.SandyBrown">
+  SandyBrown
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (244, 164, 96, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 SandyBrown { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_SeaGreen_" data-uid="osu.Framework.Graphics.Colour4.SeaGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_SeaGreen" data-uid="osu.Framework.Graphics.Colour4.SeaGreen">
+  SeaGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (46, 139, 87, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 SeaGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_SeaShell_" data-uid="osu.Framework.Graphics.Colour4.SeaShell*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_SeaShell" data-uid="osu.Framework.Graphics.Colour4.SeaShell">
+  SeaShell
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 245, 238, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 SeaShell { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Sienna_" data-uid="osu.Framework.Graphics.Colour4.Sienna*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Sienna" data-uid="osu.Framework.Graphics.Colour4.Sienna">
+  Sienna
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (160, 82, 45, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Sienna { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Silver_" data-uid="osu.Framework.Graphics.Colour4.Silver*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Silver" data-uid="osu.Framework.Graphics.Colour4.Silver">
+  Silver
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (192, 192, 192, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Silver { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_SkyBlue_" data-uid="osu.Framework.Graphics.Colour4.SkyBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_SkyBlue" data-uid="osu.Framework.Graphics.Colour4.SkyBlue">
+  SkyBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (135, 206, 235, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 SkyBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_SlateBlue_" data-uid="osu.Framework.Graphics.Colour4.SlateBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_SlateBlue" data-uid="osu.Framework.Graphics.Colour4.SlateBlue">
+  SlateBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (106, 90, 205, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 SlateBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_SlateGray_" data-uid="osu.Framework.Graphics.Colour4.SlateGray*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_SlateGray" data-uid="osu.Framework.Graphics.Colour4.SlateGray">
+  SlateGray
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1217"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (112, 128, 144, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 SlateGray { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Snow_" data-uid="osu.Framework.Graphics.Colour4.Snow*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Snow" data-uid="osu.Framework.Graphics.Colour4.Snow">
+  Snow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 250, 250, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Snow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_SpringGreen_" data-uid="osu.Framework.Graphics.Colour4.SpringGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_SpringGreen" data-uid="osu.Framework.Graphics.Colour4.SpringGreen">
+  SpringGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 255, 127, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 SpringGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_SteelBlue_" data-uid="osu.Framework.Graphics.Colour4.SteelBlue*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_SteelBlue" data-uid="osu.Framework.Graphics.Colour4.SteelBlue">
+  SteelBlue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (70, 130, 180, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 SteelBlue { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Tan_" data-uid="osu.Framework.Graphics.Colour4.Tan*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Tan" data-uid="osu.Framework.Graphics.Colour4.Tan">
+  Tan
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (210, 180, 140, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Tan { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Teal_" data-uid="osu.Framework.Graphics.Colour4.Teal*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Teal" data-uid="osu.Framework.Graphics.Colour4.Teal">
+  Teal
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (0, 128, 128, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Teal { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Thistle_" data-uid="osu.Framework.Graphics.Colour4.Thistle*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Thistle" data-uid="osu.Framework.Graphics.Colour4.Thistle">
+  Thistle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (216, 191, 216, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Thistle { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Tomato_" data-uid="osu.Framework.Graphics.Colour4.Tomato*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Tomato" data-uid="osu.Framework.Graphics.Colour4.Tomato">
+  Tomato
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1252"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 99, 71, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Tomato { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Transparent_" data-uid="osu.Framework.Graphics.Colour4.Transparent*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Transparent" data-uid="osu.Framework.Graphics.Colour4.Transparent">
+  Transparent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L587"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 255, 255, 0).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Transparent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Turquoise_" data-uid="osu.Framework.Graphics.Colour4.Turquoise*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Turquoise" data-uid="osu.Framework.Graphics.Colour4.Turquoise">
+  Turquoise
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1257"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (64, 224, 208, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Turquoise { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Violet_" data-uid="osu.Framework.Graphics.Colour4.Violet*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Violet" data-uid="osu.Framework.Graphics.Colour4.Violet">
+  Violet
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1262"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (238, 130, 238, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Violet { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Wheat_" data-uid="osu.Framework.Graphics.Colour4.Wheat*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Wheat" data-uid="osu.Framework.Graphics.Colour4.Wheat">
+  Wheat
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (245, 222, 179, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Wheat { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_White_" data-uid="osu.Framework.Graphics.Colour4.White*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_White" data-uid="osu.Framework.Graphics.Colour4.White">
+  White
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 255, 255, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 White { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_WhiteSmoke_" data-uid="osu.Framework.Graphics.Colour4.WhiteSmoke*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_WhiteSmoke" data-uid="osu.Framework.Graphics.Colour4.WhiteSmoke">
+  WhiteSmoke
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1277"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (245, 245, 245, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 WhiteSmoke { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Yellow_" data-uid="osu.Framework.Graphics.Colour4.Yellow*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Yellow" data-uid="osu.Framework.Graphics.Colour4.Yellow">
+  Yellow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (255, 255, 0, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 Yellow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_YellowGreen_" data-uid="osu.Framework.Graphics.Colour4.YellowGreen*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_YellowGreen" data-uid="osu.Framework.Graphics.Colour4.YellowGreen">
+  YellowGreen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L1287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the system color with (R, G, B, A) = (154, 205, 50, 255).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 YellowGreen { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Colour4_Clamped_" data-uid="osu.Framework.Graphics.Colour4.Clamped*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Clamped" data-uid="osu.Framework.Graphics.Colour4.Clamped">
+  Clamped()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> with its individual components clamped to the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Colour4 Clamped()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Darken_" data-uid="osu.Framework.Graphics.Colour4.Darken*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Darken_System_Single_" data-uid="osu.Framework.Graphics.Colour4.Darken(System.Single)">
+  Darken(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a darkened version of the colour.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Colour4 Darken(float amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Percentage light reduction</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Equals_" data-uid="osu.Framework.Graphics.Colour4.Equals*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Equals_System_Object_" data-uid="osu.Framework.Graphics.Colour4.Equals(System.Object)">
+  Equals(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L574"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Equals_" data-uid="osu.Framework.Graphics.Colour4.Equals*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Equals_osu_Framework_Graphics_Colour4_" data-uid="osu.Framework.Graphics.Colour4.Equals(osu.Framework.Graphics.Colour4)">
+  Equals(Colour4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L572"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(Colour4 other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>An object to compare with this object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_FromARGB_" data-uid="osu.Framework.Graphics.Colour4.FromARGB*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_FromARGB_System_UInt32_" data-uid="osu.Framework.Graphics.Colour4.FromARGB(System.UInt32)">
+  FromARGB(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> from the passed 32-bit unsigned integer in the format ARGB.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 FromARGB(uint argb)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>argb</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The source colour in Argb32 format.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_FromHSL_" data-uid="osu.Framework.Graphics.Colour4.FromHSL*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_FromHSL_System_Single_System_Single_System_Single_System_Single_" data-uid="osu.Framework.Graphics.Colour4.FromHSL(System.Single,System.Single,System.Single,System.Single)">
+  FromHSL(float, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L457"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an HSL colour to a <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a>. All components should be in the range 0-1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 FromHSL(float hue, float saturation, float lightness, float alpha = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The hue, between 0 and 1.</p>
+</dd>
+    <dt><code>saturation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The saturation, between 0 and 1.</p>
+</dd>
+    <dt><code>lightness</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The value, between 0 and 1.</p>
+</dd>
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The alpha, between 0 and 1.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_FromHSV_" data-uid="osu.Framework.Graphics.Colour4.FromHSV*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_FromHSV_System_Single_System_Single_System_Single_System_Single_" data-uid="osu.Framework.Graphics.Colour4.FromHSV(System.Single,System.Single,System.Single,System.Single)">
+  FromHSV(float, float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an HSV colour to a <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a>. All components should be in the range 0-1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 FromHSV(float hue, float saturation, float value, float alpha = 1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The hue, between 0 and 1.</p>
+</dd>
+    <dt><code>saturation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The saturation, between 0 and 1.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The value, between 0 and 1.</p>
+</dd>
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The alpha, between 0 and 1.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_FromHex_" data-uid="osu.Framework.Graphics.Colour4.FromHex*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_FromHex_System_String_" data-uid="osu.Framework.Graphics.Colour4.FromHex(System.String)">
+  FromHex(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L283"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an RGB or RGBA-formatted hex colour code into a <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a>.
+Supported colour code formats:</p>
+<ul><li>RGB</li><li>#RGB</li><li>RGBA</li><li>#RGBA</li><li>RRGGBB</li><li>#RRGGBB</li><li>RRGGBBAA</li><li>#RRGGBBAA</li></ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 FromHex(string hex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The hex code.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> representing the colour.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>If <code class="paramref">hex</code> is not a supported colour code.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_FromRGBA_" data-uid="osu.Framework.Graphics.Colour4.FromRGBA*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_FromRGBA_System_UInt32_" data-uid="osu.Framework.Graphics.Colour4.FromRGBA(System.UInt32)">
+  FromRGBA(uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> from the passed 32-bit unsigned integer in the format RGBA.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 FromRGBA(uint rgba)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rgba</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd><p>The source colour in Rgba32 format.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_GetHashCode_" data-uid="osu.Framework.Graphics.Colour4.GetHashCode*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_GetHashCode" data-uid="osu.Framework.Graphics.Colour4.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L576"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A 32-bit signed integer that is the hash code for this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Lighten_" data-uid="osu.Framework.Graphics.Colour4.Lighten*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Lighten_System_Single_" data-uid="osu.Framework.Graphics.Colour4.Lighten(System.Single)">
+  Lighten(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a lightened version of the colour.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Colour4 Lighten(float amount)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>amount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Percentage light addition</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_MultiplyAlpha_" data-uid="osu.Framework.Graphics.Colour4.MultiplyAlpha*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_MultiplyAlpha_System_Single_" data-uid="osu.Framework.Graphics.Colour4.MultiplyAlpha(System.Single)">
+  MultiplyAlpha(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> with the same RGB components, but multiplying the current alpha component by a scalar value.
+The final alpha is clamped to the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Colour4 MultiplyAlpha(float scalar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scalar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The value that the existing alpha will be multiplied by.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Opacity_" data-uid="osu.Framework.Graphics.Colour4.Opacity*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Opacity_System_Byte_" data-uid="osu.Framework.Graphics.Colour4.Opacity(System.Byte)">
+  Opacity(byte)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> with the same RGB components and a specified alpha value.
+The final alpha is clamped to the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Colour4 Opacity(byte alpha)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+    <dd><p>The new alpha value for the returned colour, in the 0-255 range.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_Opacity_" data-uid="osu.Framework.Graphics.Colour4.Opacity*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_Opacity_System_Single_" data-uid="osu.Framework.Graphics.Colour4.Opacity(System.Single)">
+  Opacity(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> with the same RGB components and a specified alpha value.
+The final alpha is clamped to the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Colour4 Opacity(float alpha)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>alpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The new alpha value for the returned colour, in the 0-1 range.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_ToARGB_" data-uid="osu.Framework.Graphics.Colour4.ToARGB*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_ToARGB" data-uid="osu.Framework.Graphics.Colour4.ToARGB">
+  ToARGB()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> as a 32-bit unsigned integer in the format ARGB.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ToARGB()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_ToHSL_" data-uid="osu.Framework.Graphics.Colour4.ToHSL*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_ToHSL" data-uid="osu.Framework.Graphics.Colour4.ToHSL">
+  ToHSL()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L514"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> to the HSL colour space, represented in the XYZ components of a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a>.
+The returned vector's W component represents the alpha channel of the colour.
+The angular hue is compressed to the 0-1 range in line with the other components.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector4 ToHSL()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a> representing the colour, where all four components are in the 0-1 range.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_ToHSV_" data-uid="osu.Framework.Graphics.Colour4.ToHSV*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_ToHSV" data-uid="osu.Framework.Graphics.Colour4.ToHSV">
+  ToHSV()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> to the HSV colour space, represented in the XYZ components of a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a>.
+The returned vector's W component represents the alpha channel of the colour.
+The angular hue is compressed to the 0-1 range in line with the other components.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector4 ToHSV()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a></dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector4">Vector4</a> representing the colour, where all four components are in the 0-1 range.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_ToHex_" data-uid="osu.Framework.Graphics.Colour4.ToHex*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_ToHex_System_Boolean_" data-uid="osu.Framework.Graphics.Colour4.ToHex(System.Boolean)">
+  ToHex(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> into a hex colour code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToHex(bool alwaysOutputAlpha = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>alwaysOutputAlpha</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the alpha channel should always be output. If <code>false</code>, the alpha channel is only output if this colour is translucent.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The hex code representing the colour.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_ToLinear_" data-uid="osu.Framework.Graphics.Colour4.ToLinear*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_ToLinear" data-uid="osu.Framework.Graphics.Colour4.ToLinear">
+  ToLinear()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> with an SRGB-&gt;Linear conversion applied
+to each of its chromatic components. Alpha is unchanged.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Colour4 ToLinear()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_ToRGBA_" data-uid="osu.Framework.Graphics.Colour4.ToRGBA*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_ToRGBA" data-uid="osu.Framework.Graphics.Colour4.ToRGBA">
+  ToRGBA()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> as a 32-bit unsigned integer in the format RGBA.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ToRGBA()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_ToSRGB_" data-uid="osu.Framework.Graphics.Colour4.ToSRGB*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_ToSRGB" data-uid="osu.Framework.Graphics.Colour4.ToSRGB">
+  ToSRGB()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a new <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> with a Linear-&gt;SRGB conversion applied
+to each of its chromatic components. Alpha is unchanged.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Colour4 ToSRGB()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_ToString_" data-uid="osu.Framework.Graphics.Colour4.ToString*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_ToString" data-uid="osu.Framework.Graphics.Colour4.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L580"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the fully qualified type name of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The fully qualified type name.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_TryParseHex_" data-uid="osu.Framework.Graphics.Colour4.TryParseHex*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_TryParseHex_System_String_osu_Framework_Graphics_Colour4__" data-uid="osu.Framework.Graphics.Colour4.TryParseHex(System.String,osu.Framework.Graphics.Colour4@)">
+  TryParseHex(string, out Colour4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Attempts to convert an RGB or RGBA-formatted hex colour code into a <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a>.
+Supported colour code formats:</p>
+<ul><li>RGB</li><li>#RGB</li><li>RGBA</li><li>#RGBA</li><li>RRGGBB</li><li>#RRGGBB</li><li>RRGGBBAA</li><li>#RRGGBBAA</li></ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryParseHex(string hex, out Colour4 colour)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>hex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The hex code.</p>
+</dd>
+    <dt><code>colour</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> representing the colour, if parsing succeeded.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the input could be parsed as a hex code.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Colour4_op_Addition_" data-uid="osu.Framework.Graphics.Colour4.op_Addition*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_op_Addition_osu_Framework_Graphics_Colour4_osu_Framework_Graphics_Colour4_" data-uid="osu.Framework.Graphics.Colour4.op_Addition(osu.Framework.Graphics.Colour4,osu.Framework.Graphics.Colour4)">
+  operator +(Colour4, Colour4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds two colours in the linear colour space. The final value is clamped to the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 operator +(Colour4 first, Colour4 second)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>first</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The left hand side of the addition.</p>
+</dd>
+    <dt><code>second</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The right hand side of the addition.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_op_Division_" data-uid="osu.Framework.Graphics.Colour4.op_Division*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_op_Division_osu_Framework_Graphics_Colour4_System_Single_" data-uid="osu.Framework.Graphics.Colour4.op_Division(osu.Framework.Graphics.Colour4,System.Single)">
+  operator /(Colour4, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Linearly divides a colour by a scalar value. The final value is clamped to the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 operator /(Colour4 colour, float scalar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>colour</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The original colour.</p>
+</dd>
+    <dt><code>scalar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The scalar value to divide by. Must be positive.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">scalar</code> is zero or negative.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_op_Equality_" data-uid="osu.Framework.Graphics.Colour4.op_Equality*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_op_Equality_osu_Framework_Graphics_Colour4_osu_Framework_Graphics_Colour4_" data-uid="osu.Framework.Graphics.Colour4.op_Equality(osu.Framework.Graphics.Colour4,osu.Framework.Graphics.Colour4)">
+  operator ==(Colour4, Colour4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs a <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> equality check using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a> implementation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Colour4 first, Colour4 second)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>first</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The left hand side of the equation.</p>
+</dd>
+    <dt><code>second</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The right hand side of the equation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_op_Implicit_" data-uid="osu.Framework.Graphics.Colour4.op_Implicit*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_op_Implicit_osu_Framework_Graphics_Colour4__osuTK_Graphics_Color4" data-uid="osu.Framework.Graphics.Colour4.op_Implicit(osu.Framework.Graphics.Colour4)~osuTK.Graphics.Color4">
+  implicit operator Color4(Colour4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L219"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an osu!framework <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> to an osuTK <span class="xref">osuTK.Graphics.Color4</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Color4(Colour4 colour)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>colour</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The osu!framework <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Color4</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_op_Implicit_" data-uid="osu.Framework.Graphics.Colour4.op_Implicit*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_op_Implicit_osuTK_Graphics_Color4__osu_Framework_Graphics_Colour4" data-uid="osu.Framework.Graphics.Colour4.op_Implicit(osuTK.Graphics.Color4)~osu.Framework.Graphics.Colour4">
+  implicit operator Colour4(Color4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts an osuTK <span class="xref">osuTK.Graphics.Color4</span> to an osu!framework <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Colour4(Color4 colour)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>colour</code> <span class="xref">Color4</span></dt>
+    <dd><p>The osuTK <span class="xref">osuTK.Graphics.Color4</span> to convert.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_op_Inequality_" data-uid="osu.Framework.Graphics.Colour4.op_Inequality*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_op_Inequality_osu_Framework_Graphics_Colour4_osu_Framework_Graphics_Colour4_" data-uid="osu.Framework.Graphics.Colour4.op_Inequality(osu.Framework.Graphics.Colour4,osu.Framework.Graphics.Colour4)">
+  operator !=(Colour4, Colour4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs a <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a> inequality check using the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable&lt;T&gt;</a> implementation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Colour4 first, Colour4 second)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>first</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The left hand side of the equation.</p>
+</dd>
+    <dt><code>second</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The right hand side of the equation.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_op_Multiply_" data-uid="osu.Framework.Graphics.Colour4.op_Multiply*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_op_Multiply_osu_Framework_Graphics_Colour4_System_Single_" data-uid="osu.Framework.Graphics.Colour4.op_Multiply(osu.Framework.Graphics.Colour4,System.Single)">
+  operator *(Colour4, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Linearly multiplies a colour by a scalar value. The final value is clamped to the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 operator *(Colour4 colour, float scalar)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>colour</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The original colour.</p>
+</dd>
+    <dt><code>scalar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The scalar value to multiply by. Must not be negative.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">scalar</code> is negative.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_op_Multiply_" data-uid="osu.Framework.Graphics.Colour4.op_Multiply*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_op_Multiply_osu_Framework_Graphics_Colour4_osu_Framework_Graphics_Colour4_" data-uid="osu.Framework.Graphics.Colour4.op_Multiply(osu.Framework.Graphics.Colour4,osu.Framework.Graphics.Colour4)">
+  operator *(Colour4, Colour4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Multiplies two colours in the linear colour space.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 operator *(Colour4 first, Colour4 second)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>first</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The left hand side of the multiplication.</p>
+</dd>
+    <dt><code>second</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The right hand side of the multiplication.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Colour4_op_Subtraction_" data-uid="osu.Framework.Graphics.Colour4.op_Subtraction*"></a>
+
+  <h3 id="osu_Framework_Graphics_Colour4_op_Subtraction_osu_Framework_Graphics_Colour4_osu_Framework_Graphics_Colour4_" data-uid="osu.Framework.Graphics.Colour4.op_Subtraction(osu.Framework.Graphics.Colour4,osu.Framework.Graphics.Colour4)">
+  operator -(Colour4, Colour4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Subtracts two colours in the linear colour space. The final value is clamped to the 0-1 range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Colour4 operator -(Colour4 first, Colour4 second)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>first</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The left hand side of the subtraction.</p>
+</dd>
+    <dt><code>second</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The right hand side of the subtraction.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Colour4.cs/#L17" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

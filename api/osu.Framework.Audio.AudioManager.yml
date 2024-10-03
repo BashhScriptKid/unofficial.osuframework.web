@@ -1,0 +1,4021 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Audio.AudioManager
+  commentId: T:osu.Framework.Audio.AudioManager
+  id: AudioManager
+  parent: osu.Framework.Audio
+  children:
+  - osu.Framework.Audio.AudioManager.#ctor(osu.Framework.Threading.AudioThread,osu.Framework.IO.Stores.ResourceStore{System.Byte[]},osu.Framework.IO.Stores.ResourceStore{System.Byte[]})
+  - osu.Framework.Audio.AudioManager.AudioDevice
+  - osu.Framework.Audio.AudioManager.AudioDeviceNames
+  - osu.Framework.Audio.AudioManager.BASS_INTERNAL_DEVICE_COUNT
+  - osu.Framework.Audio.AudioManager.CheckForDeviceChanges(System.Collections.Immutable.ImmutableArray{ManagedBass.DeviceInfo})
+  - osu.Framework.Audio.AudioManager.CreateAudioMixer(System.String)
+  - osu.Framework.Audio.AudioManager.Dispose(System.Boolean)
+  - osu.Framework.Audio.AudioManager.EventScheduler
+  - osu.Framework.Audio.AudioManager.GetAllDevices
+  - osu.Framework.Audio.AudioManager.GetSampleStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]},osu.Framework.Audio.Mixing.AudioMixer)
+  - osu.Framework.Audio.AudioManager.GetTrackStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]},osu.Framework.Audio.Mixing.AudioMixer)
+  - osu.Framework.Audio.AudioManager.InitBass(System.Int32)
+  - osu.Framework.Audio.AudioManager.IsCurrentDeviceValid
+  - osu.Framework.Audio.AudioManager.IsLoaded
+  - osu.Framework.Audio.AudioManager.ItemAdded(osu.Framework.Audio.AudioComponent)
+  - osu.Framework.Audio.AudioManager.ItemRemoved(osu.Framework.Audio.AudioComponent)
+  - osu.Framework.Audio.AudioManager.OnLostDevice
+  - osu.Framework.Audio.AudioManager.OnNewDevice
+  - osu.Framework.Audio.AudioManager.SampleMixer
+  - osu.Framework.Audio.AudioManager.Samples
+  - osu.Framework.Audio.AudioManager.ToString
+  - osu.Framework.Audio.AudioManager.TrackMixer
+  - osu.Framework.Audio.AudioManager.Tracks
+  - osu.Framework.Audio.AudioManager.UsingGlobalMixer
+  - osu.Framework.Audio.AudioManager.VolumeSample
+  - osu.Framework.Audio.AudioManager.VolumeTrack
+  langs:
+  - csharp
+  - vb
+  name: AudioManager
+  nameWithType: AudioManager
+  fullName: osu.Framework.Audio.AudioManager
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AudioManager
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 27
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  syntax:
+    content: 'public class AudioManager : AudioCollectionManager<AudioComponent>, IDisposable, IUpdateable, IAdjustableAudioComponent, IAggregateAudioAdjustment'
+    content.vb: Public Class AudioManager Inherits AudioCollectionManager(Of AudioComponent) Implements IDisposable, IUpdateable, IAdjustableAudioComponent, IAggregateAudioAdjustment
+  inheritance:
+  - System.Object
+  - osu.Framework.Audio.AudioComponent
+  - osu.Framework.Audio.AdjustableAudioComponent
+  - osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}
+  implements:
+  - System.IDisposable
+  - osu.Framework.IUpdateable
+  - osu.Framework.Audio.IAdjustableAudioComponent
+  - osu.Framework.Audio.IAggregateAudioAdjustment
+  inheritedMembers:
+  - osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.AddItem(osu.Framework.Audio.AudioComponent)
+  - osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.UpdateChildren
+  - osu.Framework.Audio.AdjustableAudioComponent.Adjustments
+  - osu.Framework.Audio.AdjustableAudioComponent.Volume
+  - osu.Framework.Audio.AdjustableAudioComponent.Balance
+  - osu.Framework.Audio.AdjustableAudioComponent.Frequency
+  - osu.Framework.Audio.AdjustableAudioComponent.Tempo
+  - osu.Framework.Audio.AdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  - osu.Framework.Audio.AdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  - osu.Framework.Audio.AdjustableAudioComponent.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+  - osu.Framework.Audio.AdjustableAudioComponent.UpdateState
+  - osu.Framework.Audio.AdjustableAudioComponent.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  - osu.Framework.Audio.AdjustableAudioComponent.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  - osu.Framework.Audio.AdjustableAudioComponent.AggregateVolume
+  - osu.Framework.Audio.AdjustableAudioComponent.AggregateBalance
+  - osu.Framework.Audio.AdjustableAudioComponent.AggregateFrequency
+  - osu.Framework.Audio.AdjustableAudioComponent.AggregateTempo
+  - osu.Framework.Audio.AudioComponent.PendingActions
+  - osu.Framework.Audio.AudioComponent.CanPerformInline
+  - osu.Framework.Audio.AudioComponent.EnqueueAction(System.Action)
+  - osu.Framework.Audio.AudioComponent.Update
+  - osu.Framework.Audio.AudioComponent.HasCompleted
+  - osu.Framework.Audio.AudioComponent.IsAlive
+  - osu.Framework.Audio.AudioComponent.IsDisposed
+  - osu.Framework.Audio.AudioComponent.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Audio.AudioManager.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Audio.AudioManager.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Audio.AudioManager.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Audio.AudioManager.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Audio.AudioManager.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Audio.AudioManager.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Audio.AudioManager.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Audio.AudioManager.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  - osu.Framework.Audio.IAggregateAudioAdjustment.osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.AdjustableProperty)
+- uid: osu.Framework.Audio.AudioManager.BASS_INTERNAL_DEVICE_COUNT
+  commentId: F:osu.Framework.Audio.AudioManager.BASS_INTERNAL_DEVICE_COUNT
+  id: BASS_INTERNAL_DEVICE_COUNT
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: BASS_INTERNAL_DEVICE_COUNT
+  nameWithType: AudioManager.BASS_INTERNAL_DEVICE_COUNT
+  fullName: osu.Framework.Audio.AudioManager.BASS_INTERNAL_DEVICE_COUNT
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: BASS_INTERNAL_DEVICE_COUNT
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 33
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: >-
+    The number of BASS audio devices preceding the first real audio device.
+
+    Consisting of <xref href="ManagedBass.Bass.NoSoundDevice" data-throw-if-not-resolved="false"></xref> and <xref href="osu.Framework.Audio.AudioManager.bass_default_device" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: protected const int BASS_INTERNAL_DEVICE_COUNT = 2
+    return:
+      type: System.Int32
+    content.vb: Protected Const BASS_INTERNAL_DEVICE_COUNT As Integer = 2
+- uid: osu.Framework.Audio.AudioManager.Tracks
+  commentId: P:osu.Framework.Audio.AudioManager.Tracks
+  id: Tracks
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: Tracks
+  nameWithType: AudioManager.Tracks
+  fullName: osu.Framework.Audio.AudioManager.Tracks
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Tracks
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 46
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: The manager component responsible for audio tracks (e.g. songs).
+  example: []
+  syntax:
+    content: public ITrackStore Tracks { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Audio.Track.ITrackStore
+    content.vb: Public ReadOnly Property Tracks As ITrackStore
+  overload: osu.Framework.Audio.AudioManager.Tracks*
+- uid: osu.Framework.Audio.AudioManager.Samples
+  commentId: P:osu.Framework.Audio.AudioManager.Samples
+  id: Samples
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: Samples
+  nameWithType: AudioManager.Samples
+  fullName: osu.Framework.Audio.AudioManager.Samples
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Samples
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 51
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: The manager component responsible for audio samples (e.g. sound effects).
+  example: []
+  syntax:
+    content: public ISampleStore Samples { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Audio.Sample.ISampleStore
+    content.vb: Public ReadOnly Property Samples As ISampleStore
+  overload: osu.Framework.Audio.AudioManager.Samples*
+- uid: osu.Framework.Audio.AudioManager.TrackMixer
+  commentId: F:osu.Framework.Audio.AudioManager.TrackMixer
+  id: TrackMixer
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: TrackMixer
+  nameWithType: AudioManager.TrackMixer
+  fullName: osu.Framework.Audio.AudioManager.TrackMixer
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TrackMixer
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 61
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: The global mixer which all tracks are routed into by default.
+  example: []
+  syntax:
+    content: public readonly AudioMixer TrackMixer
+    return:
+      type: osu.Framework.Audio.Mixing.AudioMixer
+    content.vb: Public ReadOnly TrackMixer As AudioMixer
+- uid: osu.Framework.Audio.AudioManager.SampleMixer
+  commentId: F:osu.Framework.Audio.AudioManager.SampleMixer
+  id: SampleMixer
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: SampleMixer
+  nameWithType: AudioManager.SampleMixer
+  fullName: osu.Framework.Audio.AudioManager.SampleMixer
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: SampleMixer
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 66
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: The global mixer which all samples are routed into by default.
+  example: []
+  syntax:
+    content: public readonly AudioMixer SampleMixer
+    return:
+      type: osu.Framework.Audio.Mixing.AudioMixer
+    content.vb: Public ReadOnly SampleMixer As AudioMixer
+- uid: osu.Framework.Audio.AudioManager.AudioDeviceNames
+  commentId: P:osu.Framework.Audio.AudioManager.AudioDeviceNames
+  id: AudioDeviceNames
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: AudioDeviceNames
+  nameWithType: AudioManager.AudioDeviceNames
+  fullName: osu.Framework.Audio.AudioManager.AudioDeviceNames
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AudioDeviceNames
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 74
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: The names of all available audio devices.
+  remarks: This property does not contain the names of disabled audio devices.
+  example: []
+  syntax:
+    content: public IEnumerable<string> AudioDeviceNames { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public ReadOnly Property AudioDeviceNames As IEnumerable(Of String)
+  overload: osu.Framework.Audio.AudioManager.AudioDeviceNames*
+- uid: osu.Framework.Audio.AudioManager.OnNewDevice
+  commentId: E:osu.Framework.Audio.AudioManager.OnNewDevice
+  id: OnNewDevice
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: OnNewDevice
+  nameWithType: AudioManager.OnNewDevice
+  fullName: osu.Framework.Audio.AudioManager.OnNewDevice
+  type: Event
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: OnNewDevice
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 79
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Is fired whenever a new audio device is discovered and provides its name.
+  example: []
+  syntax:
+    content: public event Action<string> OnNewDevice
+    return:
+      type: System.Action{System.String}
+    content.vb: Public Event OnNewDevice As Action(Of String)
+- uid: osu.Framework.Audio.AudioManager.OnLostDevice
+  commentId: E:osu.Framework.Audio.AudioManager.OnLostDevice
+  id: OnLostDevice
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: OnLostDevice
+  nameWithType: AudioManager.OnLostDevice
+  fullName: osu.Framework.Audio.AudioManager.OnLostDevice
+  type: Event
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: OnLostDevice
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 84
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Is fired whenever an audio device is lost and provides its name.
+  example: []
+  syntax:
+    content: public event Action<string> OnLostDevice
+    return:
+      type: System.Action{System.String}
+    content.vb: Public Event OnLostDevice As Action(Of String)
+- uid: osu.Framework.Audio.AudioManager.AudioDevice
+  commentId: F:osu.Framework.Audio.AudioManager.AudioDevice
+  id: AudioDevice
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: AudioDevice
+  nameWithType: AudioManager.AudioDevice
+  fullName: osu.Framework.Audio.AudioManager.AudioDevice
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AudioDevice
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 90
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: >-
+    The preferred audio device we should use. A value of
+
+    <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref> denotes the OS default.
+  example: []
+  syntax:
+    content: public readonly Bindable<string> AudioDevice
+    return:
+      type: osu.Framework.Bindables.Bindable{System.String}
+    content.vb: Public ReadOnly AudioDevice As Bindable(Of String)
+- uid: osu.Framework.Audio.AudioManager.VolumeSample
+  commentId: F:osu.Framework.Audio.AudioManager.VolumeSample
+  id: VolumeSample
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: VolumeSample
+  nameWithType: AudioManager.VolumeSample
+  fullName: osu.Framework.Audio.AudioManager.VolumeSample
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: VolumeSample
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 95
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Volume of all samples played game-wide.
+  example: []
+  syntax:
+    content: public readonly BindableDouble VolumeSample
+    return:
+      type: osu.Framework.Bindables.BindableDouble
+    content.vb: Public ReadOnly VolumeSample As BindableDouble
+- uid: osu.Framework.Audio.AudioManager.VolumeTrack
+  commentId: F:osu.Framework.Audio.AudioManager.VolumeTrack
+  id: VolumeTrack
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: VolumeTrack
+  nameWithType: AudioManager.VolumeTrack
+  fullName: osu.Framework.Audio.AudioManager.VolumeTrack
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: VolumeTrack
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 104
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Volume of all tracks played game-wide.
+  example: []
+  syntax:
+    content: public readonly BindableDouble VolumeTrack
+    return:
+      type: osu.Framework.Bindables.BindableDouble
+    content.vb: Public ReadOnly VolumeTrack As BindableDouble
+- uid: osu.Framework.Audio.AudioManager.UsingGlobalMixer
+  commentId: P:osu.Framework.Audio.AudioManager.UsingGlobalMixer
+  id: UsingGlobalMixer
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: UsingGlobalMixer
+  nameWithType: AudioManager.UsingGlobalMixer
+  fullName: osu.Framework.Audio.AudioManager.UsingGlobalMixer
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: UsingGlobalMixer
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 114
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: >-
+    Whether a global mixer is being used for audio routing.
+
+    For now, this is only the case on Windows when using shared mode WASAPI initialisation.
+  example: []
+  syntax:
+    content: public IBindable<bool> UsingGlobalMixer { get; }
+    parameters: []
+    return:
+      type: osu.Framework.Bindables.IBindable{System.Boolean}
+    content.vb: Public ReadOnly Property UsingGlobalMixer As IBindable(Of Boolean)
+  overload: osu.Framework.Audio.AudioManager.UsingGlobalMixer*
+- uid: osu.Framework.Audio.AudioManager.IsLoaded
+  commentId: P:osu.Framework.Audio.AudioManager.IsLoaded
+  id: IsLoaded
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: IsLoaded
+  nameWithType: AudioManager.IsLoaded
+  fullName: osu.Framework.Audio.AudioManager.IsLoaded
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: IsLoaded
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 134
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Whether this component has finished loading its resources.
+  example: []
+  syntax:
+    content: public override bool IsLoaded { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property IsLoaded As Boolean
+  overridden: osu.Framework.Audio.AudioComponent.IsLoaded
+  overload: osu.Framework.Audio.AudioManager.IsLoaded*
+- uid: osu.Framework.Audio.AudioManager.EventScheduler
+  commentId: F:osu.Framework.Audio.AudioManager.EventScheduler
+  id: EventScheduler
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: EventScheduler
+  nameWithType: AudioManager.EventScheduler
+  fullName: osu.Framework.Audio.AudioManager.EventScheduler
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: EventScheduler
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 151
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: The scheduler used for invoking publicly exposed delegate events.
+  example: []
+  syntax:
+    content: public Scheduler EventScheduler
+    return:
+      type: osu.Framework.Threading.Scheduler
+    content.vb: Public EventScheduler As Scheduler
+- uid: osu.Framework.Audio.AudioManager.#ctor(osu.Framework.Threading.AudioThread,osu.Framework.IO.Stores.ResourceStore{System.Byte[]},osu.Framework.IO.Stores.ResourceStore{System.Byte[]})
+  commentId: M:osu.Framework.Audio.AudioManager.#ctor(osu.Framework.Threading.AudioThread,osu.Framework.IO.Stores.ResourceStore{System.Byte[]},osu.Framework.IO.Stores.ResourceStore{System.Byte[]})
+  id: '#ctor(osu.Framework.Threading.AudioThread,osu.Framework.IO.Stores.ResourceStore{System.Byte[]},osu.Framework.IO.Stores.ResourceStore{System.Byte[]})'
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: AudioManager(AudioThread, ResourceStore<byte[]>, ResourceStore<byte[]>)
+  nameWithType: AudioManager.AudioManager(AudioThread, ResourceStore<byte[]>, ResourceStore<byte[]>)
+  fullName: osu.Framework.Audio.AudioManager.AudioManager(osu.Framework.Threading.AudioThread, osu.Framework.IO.Stores.ResourceStore<byte[]>, osu.Framework.IO.Stores.ResourceStore<byte[]>)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 165
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Constructs an AudioStore given a track resource store, and a sample resource store.
+  example: []
+  syntax:
+    content: public AudioManager(AudioThread audioThread, ResourceStore<byte[]> trackStore, ResourceStore<byte[]> sampleStore)
+    parameters:
+    - id: audioThread
+      type: osu.Framework.Threading.AudioThread
+      description: The host's audio thread.
+    - id: trackStore
+      type: osu.Framework.IO.Stores.ResourceStore{System.Byte[]}
+      description: The resource store containing all audio tracks to be used in the future.
+    - id: sampleStore
+      type: osu.Framework.IO.Stores.ResourceStore{System.Byte[]}
+      description: The sample store containing all audio samples to be used in the future.
+    content.vb: Public Sub New(audioThread As AudioThread, trackStore As ResourceStore(Of Byte()), sampleStore As ResourceStore(Of Byte()))
+  overload: osu.Framework.Audio.AudioManager.#ctor*
+  nameWithType.vb: AudioManager.New(AudioThread, ResourceStore(Of Byte()), ResourceStore(Of Byte()))
+  fullName.vb: osu.Framework.Audio.AudioManager.New(osu.Framework.Threading.AudioThread, osu.Framework.IO.Stores.ResourceStore(Of Byte()), osu.Framework.IO.Stores.ResourceStore(Of Byte()))
+  name.vb: New(AudioThread, ResourceStore(Of Byte()), ResourceStore(Of Byte()))
+- uid: osu.Framework.Audio.AudioManager.Dispose(System.Boolean)
+  commentId: M:osu.Framework.Audio.AudioManager.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: AudioManager.Dispose(bool)
+  fullName: osu.Framework.Audio.AudioManager.Dispose(bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Dispose
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 224
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  example: []
+  syntax:
+    content: protected override void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overrides Sub Dispose(disposing As Boolean)
+  overridden: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.Dispose(System.Boolean)
+  overload: osu.Framework.Audio.AudioManager.Dispose*
+  nameWithType.vb: AudioManager.Dispose(Boolean)
+  fullName.vb: osu.Framework.Audio.AudioManager.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+- uid: osu.Framework.Audio.AudioManager.CreateAudioMixer(System.String)
+  commentId: M:osu.Framework.Audio.AudioManager.CreateAudioMixer(System.String)
+  id: CreateAudioMixer(System.String)
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: CreateAudioMixer(string)
+  nameWithType: AudioManager.CreateAudioMixer(string)
+  fullName: osu.Framework.Audio.AudioManager.CreateAudioMixer(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CreateAudioMixer
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 262
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Creates a new <xref href="osu.Framework.Audio.Mixing.AudioMixer" data-throw-if-not-resolved="false"></xref>.
+  remarks: Channels removed from this <xref href="osu.Framework.Audio.Mixing.AudioMixer" data-throw-if-not-resolved="false"></xref> fall back to the global <xref href="osu.Framework.Audio.AudioManager.SampleMixer" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public AudioMixer CreateAudioMixer(string identifier = null)
+    parameters:
+    - id: identifier
+      type: System.String
+      description: An identifier displayed on the audio mixer visualiser.
+    return:
+      type: osu.Framework.Audio.Mixing.AudioMixer
+    content.vb: Public Function CreateAudioMixer(identifier As String = Nothing) As AudioMixer
+  overload: osu.Framework.Audio.AudioManager.CreateAudioMixer*
+  nameWithType.vb: AudioManager.CreateAudioMixer(String)
+  fullName.vb: osu.Framework.Audio.AudioManager.CreateAudioMixer(String)
+  name.vb: CreateAudioMixer(String)
+- uid: osu.Framework.Audio.AudioManager.ItemAdded(osu.Framework.Audio.AudioComponent)
+  commentId: M:osu.Framework.Audio.AudioManager.ItemAdded(osu.Framework.Audio.AudioComponent)
+  id: ItemAdded(osu.Framework.Audio.AudioComponent)
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: ItemAdded(AudioComponent)
+  nameWithType: AudioManager.ItemAdded(AudioComponent)
+  fullName: osu.Framework.Audio.AudioManager.ItemAdded(osu.Framework.Audio.AudioComponent)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ItemAdded
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 272
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  example: []
+  syntax:
+    content: protected override void ItemAdded(AudioComponent item)
+    parameters:
+    - id: item
+      type: osu.Framework.Audio.AudioComponent
+    content.vb: Protected Overrides Sub ItemAdded(item As AudioComponent)
+  overridden: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.ItemAdded(osu.Framework.Audio.AudioComponent)
+  overload: osu.Framework.Audio.AudioManager.ItemAdded*
+- uid: osu.Framework.Audio.AudioManager.ItemRemoved(osu.Framework.Audio.AudioComponent)
+  commentId: M:osu.Framework.Audio.AudioManager.ItemRemoved(osu.Framework.Audio.AudioComponent)
+  id: ItemRemoved(osu.Framework.Audio.AudioComponent)
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: ItemRemoved(AudioComponent)
+  nameWithType: AudioManager.ItemRemoved(AudioComponent)
+  fullName: osu.Framework.Audio.AudioManager.ItemRemoved(osu.Framework.Audio.AudioComponent)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ItemRemoved
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 279
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  example: []
+  syntax:
+    content: protected override void ItemRemoved(AudioComponent item)
+    parameters:
+    - id: item
+      type: osu.Framework.Audio.AudioComponent
+    content.vb: Protected Overrides Sub ItemRemoved(item As AudioComponent)
+  overridden: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.ItemRemoved(osu.Framework.Audio.AudioComponent)
+  overload: osu.Framework.Audio.AudioManager.ItemRemoved*
+- uid: osu.Framework.Audio.AudioManager.GetTrackStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]},osu.Framework.Audio.Mixing.AudioMixer)
+  commentId: M:osu.Framework.Audio.AudioManager.GetTrackStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]},osu.Framework.Audio.Mixing.AudioMixer)
+  id: GetTrackStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]},osu.Framework.Audio.Mixing.AudioMixer)
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: GetTrackStore(IResourceStore<byte[]>, AudioMixer)
+  nameWithType: AudioManager.GetTrackStore(IResourceStore<byte[]>, AudioMixer)
+  fullName: osu.Framework.Audio.AudioManager.GetTrackStore(osu.Framework.IO.Stores.IResourceStore<byte[]>, osu.Framework.Audio.Mixing.AudioMixer)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetTrackStore
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 292
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: >-
+    Obtains the <xref href="osu.Framework.Audio.Track.TrackStore" data-throw-if-not-resolved="false"></xref> corresponding to a given resource store.
+
+    Returns the global <xref href="osu.Framework.Audio.Track.TrackStore" data-throw-if-not-resolved="false"></xref> if no resource store is passed.
+  example: []
+  syntax:
+    content: public ITrackStore GetTrackStore(IResourceStore<byte[]> store = null, AudioMixer mixer = null)
+    parameters:
+    - id: store
+      type: osu.Framework.IO.Stores.IResourceStore{System.Byte[]}
+      description: The <xref href="osu.Framework.IO.Stores.IResourceStore%601" data-throw-if-not-resolved="false"></xref> of which to retrieve the <xref href="osu.Framework.Audio.Track.TrackStore" data-throw-if-not-resolved="false"></xref>.
+    - id: mixer
+      type: osu.Framework.Audio.Mixing.AudioMixer
+      description: The <xref href="osu.Framework.Audio.Mixing.AudioMixer" data-throw-if-not-resolved="false"></xref> to use for tracks created by this store. Defaults to the global <xref href="osu.Framework.Audio.AudioManager.TrackMixer" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: osu.Framework.Audio.Track.ITrackStore
+    content.vb: Public Function GetTrackStore(store As IResourceStore(Of Byte()) = Nothing, mixer As AudioMixer = Nothing) As ITrackStore
+  overload: osu.Framework.Audio.AudioManager.GetTrackStore*
+  nameWithType.vb: AudioManager.GetTrackStore(IResourceStore(Of Byte()), AudioMixer)
+  fullName.vb: osu.Framework.Audio.AudioManager.GetTrackStore(osu.Framework.IO.Stores.IResourceStore(Of Byte()), osu.Framework.Audio.Mixing.AudioMixer)
+  name.vb: GetTrackStore(IResourceStore(Of Byte()), AudioMixer)
+- uid: osu.Framework.Audio.AudioManager.GetSampleStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]},osu.Framework.Audio.Mixing.AudioMixer)
+  commentId: M:osu.Framework.Audio.AudioManager.GetSampleStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]},osu.Framework.Audio.Mixing.AudioMixer)
+  id: GetSampleStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]},osu.Framework.Audio.Mixing.AudioMixer)
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: GetSampleStore(IResourceStore<byte[]>, AudioMixer)
+  nameWithType: AudioManager.GetSampleStore(IResourceStore<byte[]>, AudioMixer)
+  fullName: osu.Framework.Audio.AudioManager.GetSampleStore(osu.Framework.IO.Stores.IResourceStore<byte[]>, osu.Framework.Audio.Mixing.AudioMixer)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetSampleStore
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 312
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: >-
+    Obtains the <xref href="osu.Framework.Audio.Sample.SampleStore" data-throw-if-not-resolved="false"></xref> corresponding to a given resource store.
+
+    Returns the global <xref href="osu.Framework.Audio.Sample.SampleStore" data-throw-if-not-resolved="false"></xref> if no resource store is passed.
+  remarks: >-
+    By default, <code>.wav</code> and <code>.ogg</code> extensions will be automatically appended to lookups on the returned store
+
+    if the lookup does not correspond directly to an existing filename.
+
+    Additional extensions can be added via <xref href="osu.Framework.Audio.Sample.ISampleStore.AddExtension(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public ISampleStore GetSampleStore(IResourceStore<byte[]> store = null, AudioMixer mixer = null)
+    parameters:
+    - id: store
+      type: osu.Framework.IO.Stores.IResourceStore{System.Byte[]}
+      description: The <xref href="osu.Framework.IO.Stores.IResourceStore%601" data-throw-if-not-resolved="false"></xref> of which to retrieve the <xref href="osu.Framework.Audio.Sample.SampleStore" data-throw-if-not-resolved="false"></xref>.
+    - id: mixer
+      type: osu.Framework.Audio.Mixing.AudioMixer
+      description: The <xref href="osu.Framework.Audio.Mixing.AudioMixer" data-throw-if-not-resolved="false"></xref> to use for samples created by this store. Defaults to the global <xref href="osu.Framework.Audio.AudioManager.SampleMixer" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: osu.Framework.Audio.Sample.ISampleStore
+    content.vb: Public Function GetSampleStore(store As IResourceStore(Of Byte()) = Nothing, mixer As AudioMixer = Nothing) As ISampleStore
+  overload: osu.Framework.Audio.AudioManager.GetSampleStore*
+  nameWithType.vb: AudioManager.GetSampleStore(IResourceStore(Of Byte()), AudioMixer)
+  fullName.vb: osu.Framework.Audio.AudioManager.GetSampleStore(osu.Framework.IO.Stores.IResourceStore(Of Byte()), osu.Framework.Audio.Mixing.AudioMixer)
+  name.vb: GetSampleStore(IResourceStore(Of Byte()), AudioMixer)
+- uid: osu.Framework.Audio.AudioManager.InitBass(System.Int32)
+  commentId: M:osu.Framework.Audio.AudioManager.InitBass(System.Int32)
+  id: InitBass(System.Int32)
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: InitBass(int)
+  nameWithType: AudioManager.InitBass(int)
+  fullName: osu.Framework.Audio.AudioManager.InitBass(int)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: InitBass
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 390
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: >-
+    This method calls <xref href="ManagedBass.Bass.Init(System.Int32%2cSystem.Int32%2cManagedBass.DeviceInitFlags%2cSystem.IntPtr%2cSystem.IntPtr)" data-throw-if-not-resolved="false"></xref>.
+
+    It can be overridden for unit testing.
+  example: []
+  syntax:
+    content: protected virtual bool InitBass(int device)
+    parameters:
+    - id: device
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Protected Overridable Function InitBass(device As Integer) As Boolean
+  overload: osu.Framework.Audio.AudioManager.InitBass*
+  nameWithType.vb: AudioManager.InitBass(Integer)
+  fullName.vb: osu.Framework.Audio.AudioManager.InitBass(Integer)
+  name.vb: InitBass(Integer)
+- uid: osu.Framework.Audio.AudioManager.CheckForDeviceChanges(System.Collections.Immutable.ImmutableArray{ManagedBass.DeviceInfo})
+  commentId: M:osu.Framework.Audio.AudioManager.CheckForDeviceChanges(System.Collections.Immutable.ImmutableArray{ManagedBass.DeviceInfo})
+  id: CheckForDeviceChanges(System.Collections.Immutable.ImmutableArray{ManagedBass.DeviceInfo})
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: CheckForDeviceChanges(ImmutableArray<DeviceInfo>)
+  nameWithType: AudioManager.CheckForDeviceChanges(ImmutableArray<DeviceInfo>)
+  fullName: osu.Framework.Audio.AudioManager.CheckForDeviceChanges(System.Collections.Immutable.ImmutableArray<ManagedBass.DeviceInfo>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CheckForDeviceChanges
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 466
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: >-
+    Check whether any audio device changes have occurred.
+
+
+    Changes supported are:
+
+    - A new device is added
+
+    - An existing device is Enabled/Disabled or set as Default
+  remarks: This method is optimised to incur the lowest overhead possible.
+  example: []
+  syntax:
+    content: protected virtual bool CheckForDeviceChanges(ImmutableArray<DeviceInfo> previousDevices)
+    parameters:
+    - id: previousDevices
+      type: System.Collections.Immutable.ImmutableArray{ManagedBass.DeviceInfo}
+      description: The previous audio devices array.
+    return:
+      type: System.Boolean
+      description: Whether a change was detected.
+    content.vb: Protected Overridable Function CheckForDeviceChanges(previousDevices As ImmutableArray(Of DeviceInfo)) As Boolean
+  overload: osu.Framework.Audio.AudioManager.CheckForDeviceChanges*
+  nameWithType.vb: AudioManager.CheckForDeviceChanges(ImmutableArray(Of DeviceInfo))
+  fullName.vb: osu.Framework.Audio.AudioManager.CheckForDeviceChanges(System.Collections.Immutable.ImmutableArray(Of ManagedBass.DeviceInfo))
+  name.vb: CheckForDeviceChanges(ImmutableArray(Of DeviceInfo))
+- uid: osu.Framework.Audio.AudioManager.GetAllDevices
+  commentId: M:osu.Framework.Audio.AudioManager.GetAllDevices
+  id: GetAllDevices
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: GetAllDevices()
+  nameWithType: AudioManager.GetAllDevices()
+  fullName: osu.Framework.Audio.AudioManager.GetAllDevices()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetAllDevices
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 489
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  syntax:
+    content: protected virtual ImmutableArray<DeviceInfo> GetAllDevices()
+    return:
+      type: System.Collections.Immutable.ImmutableArray{ManagedBass.DeviceInfo}
+    content.vb: Protected Overridable Function GetAllDevices() As ImmutableArray(Of DeviceInfo)
+  overload: osu.Framework.Audio.AudioManager.GetAllDevices*
+- uid: osu.Framework.Audio.AudioManager.IsCurrentDeviceValid
+  commentId: M:osu.Framework.Audio.AudioManager.IsCurrentDeviceValid
+  id: IsCurrentDeviceValid
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: IsCurrentDeviceValid()
+  nameWithType: AudioManager.IsCurrentDeviceValid()
+  fullName: osu.Framework.Audio.AudioManager.IsCurrentDeviceValid()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: IsCurrentDeviceValid
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 501
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  syntax:
+    content: protected virtual bool IsCurrentDeviceValid()
+    return:
+      type: System.Boolean
+    content.vb: Protected Overridable Function IsCurrentDeviceValid() As Boolean
+  overload: osu.Framework.Audio.AudioManager.IsCurrentDeviceValid*
+- uid: osu.Framework.Audio.AudioManager.ToString
+  commentId: M:osu.Framework.Audio.AudioManager.ToString
+  id: ToString
+  parent: osu.Framework.Audio.AudioManager
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: AudioManager.ToString()
+  fullName: osu.Framework.Audio.AudioManager.ToString()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/AudioManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToString
+    path: osu.Framework/Audio/AudioManager.cs
+    startLine: 508
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: osu.Framework.Audio.AudioManager.ToString*
+references:
+- uid: osu.Framework.Audio
+  commentId: N:osu.Framework.Audio
+  href: osu.html
+  name: osu.Framework.Audio
+  nameWithType: osu.Framework.Audio
+  fullName: osu.Framework.Audio
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Audio
+    name: Audio
+    href: osu.Framework.Audio.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Audio
+    name: Audio
+    href: osu.Framework.Audio.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: osu.Framework.Audio.AudioComponent
+  commentId: T:osu.Framework.Audio.AudioComponent
+  parent: osu.Framework.Audio
+  href: osu.Framework.Audio.AudioComponent.html
+  name: AudioComponent
+  nameWithType: AudioComponent
+  fullName: osu.Framework.Audio.AudioComponent
+- uid: osu.Framework.Audio.AdjustableAudioComponent
+  commentId: T:osu.Framework.Audio.AdjustableAudioComponent
+  parent: osu.Framework.Audio
+  href: osu.Framework.Audio.AdjustableAudioComponent.html
+  name: AdjustableAudioComponent
+  nameWithType: AdjustableAudioComponent
+  fullName: osu.Framework.Audio.AdjustableAudioComponent
+- uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}
+  commentId: T:osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}
+  parent: osu.Framework.Audio
+  definition: osu.Framework.Audio.AudioCollectionManager`1
+  href: osu.Framework.Audio.AudioCollectionManager-1.html
+  name: AudioCollectionManager<AudioComponent>
+  nameWithType: AudioCollectionManager<AudioComponent>
+  fullName: osu.Framework.Audio.AudioCollectionManager<osu.Framework.Audio.AudioComponent>
+  nameWithType.vb: AudioCollectionManager(Of AudioComponent)
+  fullName.vb: osu.Framework.Audio.AudioCollectionManager(Of osu.Framework.Audio.AudioComponent)
+  name.vb: AudioCollectionManager(Of AudioComponent)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1
+    name: AudioCollectionManager
+    href: osu.Framework.Audio.AudioCollectionManager-1.html
+  - name: <
+  - uid: osu.Framework.Audio.AudioComponent
+    name: AudioComponent
+    href: osu.Framework.Audio.AudioComponent.html
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1
+    name: AudioCollectionManager
+    href: osu.Framework.Audio.AudioCollectionManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioComponent
+    name: AudioComponent
+    href: osu.Framework.Audio.AudioComponent.html
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: osu.Framework.IUpdateable
+  commentId: T:osu.Framework.IUpdateable
+  parent: osu.Framework
+  href: osu.Framework.IUpdateable.html
+  name: IUpdateable
+  nameWithType: IUpdateable
+  fullName: osu.Framework.IUpdateable
+- uid: osu.Framework.Audio.IAdjustableAudioComponent
+  commentId: T:osu.Framework.Audio.IAdjustableAudioComponent
+  parent: osu.Framework.Audio
+  href: osu.Framework.Audio.IAdjustableAudioComponent.html
+  name: IAdjustableAudioComponent
+  nameWithType: IAdjustableAudioComponent
+  fullName: osu.Framework.Audio.IAdjustableAudioComponent
+- uid: osu.Framework.Audio.IAggregateAudioAdjustment
+  commentId: T:osu.Framework.Audio.IAggregateAudioAdjustment
+  parent: osu.Framework.Audio
+  href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  name: IAggregateAudioAdjustment
+  nameWithType: IAggregateAudioAdjustment
+  fullName: osu.Framework.Audio.IAggregateAudioAdjustment
+- uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.AddItem(osu.Framework.Audio.AudioComponent)
+  commentId: M:osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.AddItem(osu.Framework.Audio.AudioComponent)
+  parent: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}
+  definition: osu.Framework.Audio.AudioCollectionManager`1.AddItem(`0)
+  href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_AddItem__0_
+  name: AddItem(AudioComponent)
+  nameWithType: AudioCollectionManager<AudioComponent>.AddItem(AudioComponent)
+  fullName: osu.Framework.Audio.AudioCollectionManager<osu.Framework.Audio.AudioComponent>.AddItem(osu.Framework.Audio.AudioComponent)
+  nameWithType.vb: AudioCollectionManager(Of AudioComponent).AddItem(AudioComponent)
+  fullName.vb: osu.Framework.Audio.AudioCollectionManager(Of osu.Framework.Audio.AudioComponent).AddItem(osu.Framework.Audio.AudioComponent)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.AddItem(osu.Framework.Audio.AudioComponent)
+    name: AddItem
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_AddItem__0_
+  - name: (
+  - uid: osu.Framework.Audio.AudioComponent
+    name: AudioComponent
+    href: osu.Framework.Audio.AudioComponent.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.AddItem(osu.Framework.Audio.AudioComponent)
+    name: AddItem
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_AddItem__0_
+  - name: (
+  - uid: osu.Framework.Audio.AudioComponent
+    name: AudioComponent
+    href: osu.Framework.Audio.AudioComponent.html
+  - name: )
+- uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.UpdateChildren
+  commentId: M:osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.UpdateChildren
+  parent: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}
+  definition: osu.Framework.Audio.AudioCollectionManager`1.UpdateChildren
+  href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_UpdateChildren
+  name: UpdateChildren()
+  nameWithType: AudioCollectionManager<AudioComponent>.UpdateChildren()
+  fullName: osu.Framework.Audio.AudioCollectionManager<osu.Framework.Audio.AudioComponent>.UpdateChildren()
+  nameWithType.vb: AudioCollectionManager(Of AudioComponent).UpdateChildren()
+  fullName.vb: osu.Framework.Audio.AudioCollectionManager(Of osu.Framework.Audio.AudioComponent).UpdateChildren()
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.UpdateChildren
+    name: UpdateChildren
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_UpdateChildren
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.UpdateChildren
+    name: UpdateChildren
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_UpdateChildren
+  - name: (
+  - name: )
+- uid: osu.Framework.Audio.AdjustableAudioComponent.Adjustments
+  commentId: P:osu.Framework.Audio.AdjustableAudioComponent.Adjustments
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_Adjustments
+  name: Adjustments
+  nameWithType: AdjustableAudioComponent.Adjustments
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.Adjustments
+- uid: osu.Framework.Audio.AdjustableAudioComponent.Volume
+  commentId: P:osu.Framework.Audio.AdjustableAudioComponent.Volume
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_Volume
+  name: Volume
+  nameWithType: AdjustableAudioComponent.Volume
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.Volume
+- uid: osu.Framework.Audio.AdjustableAudioComponent.Balance
+  commentId: P:osu.Framework.Audio.AdjustableAudioComponent.Balance
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_Balance
+  name: Balance
+  nameWithType: AdjustableAudioComponent.Balance
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.Balance
+- uid: osu.Framework.Audio.AdjustableAudioComponent.Frequency
+  commentId: P:osu.Framework.Audio.AdjustableAudioComponent.Frequency
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_Frequency
+  name: Frequency
+  nameWithType: AdjustableAudioComponent.Frequency
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.Frequency
+- uid: osu.Framework.Audio.AdjustableAudioComponent.Tempo
+  commentId: P:osu.Framework.Audio.AdjustableAudioComponent.Tempo
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_Tempo
+  name: Tempo
+  nameWithType: AdjustableAudioComponent.Tempo
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.Tempo
+- uid: osu.Framework.Audio.AdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  commentId: M:osu.Framework.Audio.AdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  isExternal: true
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_AddAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  name: AddAdjustment(AdjustableProperty, IBindable<double>)
+  nameWithType: AdjustableAudioComponent.AddAdjustment(AdjustableProperty, IBindable<double>)
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty, osu.Framework.Bindables.IBindable<double>)
+  nameWithType.vb: AdjustableAudioComponent.AddAdjustment(AdjustableProperty, IBindable(Of Double))
+  fullName.vb: osu.Framework.Audio.AdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty, osu.Framework.Bindables.IBindable(Of Double))
+  name.vb: AddAdjustment(AdjustableProperty, IBindable(Of Double))
+  spec.csharp:
+  - uid: osu.Framework.Audio.AdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+    name: AddAdjustment
+    href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_AddAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  - name: (
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AdjustableAudioComponent.AddAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+    name: AddAdjustment
+    href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_AddAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  - name: (
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: osu.Framework.Audio.AdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  commentId: M:osu.Framework.Audio.AdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  isExternal: true
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_RemoveAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  name: RemoveAdjustment(AdjustableProperty, IBindable<double>)
+  nameWithType: AdjustableAudioComponent.RemoveAdjustment(AdjustableProperty, IBindable<double>)
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty, osu.Framework.Bindables.IBindable<double>)
+  nameWithType.vb: AdjustableAudioComponent.RemoveAdjustment(AdjustableProperty, IBindable(Of Double))
+  fullName.vb: osu.Framework.Audio.AdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty, osu.Framework.Bindables.IBindable(Of Double))
+  name.vb: RemoveAdjustment(AdjustableProperty, IBindable(Of Double))
+  spec.csharp:
+  - uid: osu.Framework.Audio.AdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+    name: RemoveAdjustment
+    href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_RemoveAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  - name: (
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AdjustableAudioComponent.RemoveAdjustment(osu.Framework.Audio.AdjustableProperty,osu.Framework.Bindables.IBindable{System.Double})
+    name: RemoveAdjustment
+    href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_RemoveAdjustment_osu_Framework_Audio_AdjustableProperty_osu_Framework_Bindables_IBindable_System_Double__
+  - name: (
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: osu.Framework.Audio.AdjustableAudioComponent.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+  commentId: M:osu.Framework.Audio.AdjustableAudioComponent.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_RemoveAllAdjustments_osu_Framework_Audio_AdjustableProperty_
+  name: RemoveAllAdjustments(AdjustableProperty)
+  nameWithType: AdjustableAudioComponent.RemoveAllAdjustments(AdjustableProperty)
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AdjustableAudioComponent.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+    name: RemoveAllAdjustments
+    href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_RemoveAllAdjustments_osu_Framework_Audio_AdjustableProperty_
+  - name: (
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AdjustableAudioComponent.RemoveAllAdjustments(osu.Framework.Audio.AdjustableProperty)
+    name: RemoveAllAdjustments
+    href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_RemoveAllAdjustments_osu_Framework_Audio_AdjustableProperty_
+  - name: (
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: )
+- uid: osu.Framework.Audio.AdjustableAudioComponent.UpdateState
+  commentId: M:osu.Framework.Audio.AdjustableAudioComponent.UpdateState
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_UpdateState
+  name: UpdateState()
+  nameWithType: AdjustableAudioComponent.UpdateState()
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.UpdateState()
+  spec.csharp:
+  - uid: osu.Framework.Audio.AdjustableAudioComponent.UpdateState
+    name: UpdateState
+    href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_UpdateState
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AdjustableAudioComponent.UpdateState
+    name: UpdateState
+    href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_UpdateState
+  - name: (
+  - name: )
+- uid: osu.Framework.Audio.AdjustableAudioComponent.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  commentId: M:osu.Framework.Audio.AdjustableAudioComponent.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_BindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  name: BindAdjustments(IAggregateAudioAdjustment)
+  nameWithType: AdjustableAudioComponent.BindAdjustments(IAggregateAudioAdjustment)
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AdjustableAudioComponent.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+    name: BindAdjustments
+    href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_BindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AdjustableAudioComponent.BindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+    name: BindAdjustments
+    href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_BindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: )
+- uid: osu.Framework.Audio.AdjustableAudioComponent.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  commentId: M:osu.Framework.Audio.AdjustableAudioComponent.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_UnbindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  name: UnbindAdjustments(IAggregateAudioAdjustment)
+  nameWithType: AdjustableAudioComponent.UnbindAdjustments(IAggregateAudioAdjustment)
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AdjustableAudioComponent.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+    name: UnbindAdjustments
+    href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_UnbindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AdjustableAudioComponent.UnbindAdjustments(osu.Framework.Audio.IAggregateAudioAdjustment)
+    name: UnbindAdjustments
+    href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_UnbindAdjustments_osu_Framework_Audio_IAggregateAudioAdjustment_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: )
+- uid: osu.Framework.Audio.AdjustableAudioComponent.AggregateVolume
+  commentId: P:osu.Framework.Audio.AdjustableAudioComponent.AggregateVolume
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_AggregateVolume
+  name: AggregateVolume
+  nameWithType: AdjustableAudioComponent.AggregateVolume
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.AggregateVolume
+- uid: osu.Framework.Audio.AdjustableAudioComponent.AggregateBalance
+  commentId: P:osu.Framework.Audio.AdjustableAudioComponent.AggregateBalance
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_AggregateBalance
+  name: AggregateBalance
+  nameWithType: AdjustableAudioComponent.AggregateBalance
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.AggregateBalance
+- uid: osu.Framework.Audio.AdjustableAudioComponent.AggregateFrequency
+  commentId: P:osu.Framework.Audio.AdjustableAudioComponent.AggregateFrequency
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_AggregateFrequency
+  name: AggregateFrequency
+  nameWithType: AdjustableAudioComponent.AggregateFrequency
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.AggregateFrequency
+- uid: osu.Framework.Audio.AdjustableAudioComponent.AggregateTempo
+  commentId: P:osu.Framework.Audio.AdjustableAudioComponent.AggregateTempo
+  parent: osu.Framework.Audio.AdjustableAudioComponent
+  href: osu.Framework.Audio.AdjustableAudioComponent.html#osu_Framework_Audio_AdjustableAudioComponent_AggregateTempo
+  name: AggregateTempo
+  nameWithType: AdjustableAudioComponent.AggregateTempo
+  fullName: osu.Framework.Audio.AdjustableAudioComponent.AggregateTempo
+- uid: osu.Framework.Audio.AudioComponent.PendingActions
+  commentId: F:osu.Framework.Audio.AudioComponent.PendingActions
+  parent: osu.Framework.Audio.AudioComponent
+  href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_PendingActions
+  name: PendingActions
+  nameWithType: AudioComponent.PendingActions
+  fullName: osu.Framework.Audio.AudioComponent.PendingActions
+- uid: osu.Framework.Audio.AudioComponent.CanPerformInline
+  commentId: P:osu.Framework.Audio.AudioComponent.CanPerformInline
+  parent: osu.Framework.Audio.AudioComponent
+  href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_CanPerformInline
+  name: CanPerformInline
+  nameWithType: AudioComponent.CanPerformInline
+  fullName: osu.Framework.Audio.AudioComponent.CanPerformInline
+- uid: osu.Framework.Audio.AudioComponent.EnqueueAction(System.Action)
+  commentId: M:osu.Framework.Audio.AudioComponent.EnqueueAction(System.Action)
+  parent: osu.Framework.Audio.AudioComponent
+  isExternal: true
+  href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_EnqueueAction_System_Action_
+  name: EnqueueAction(Action)
+  nameWithType: AudioComponent.EnqueueAction(Action)
+  fullName: osu.Framework.Audio.AudioComponent.EnqueueAction(System.Action)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioComponent.EnqueueAction(System.Action)
+    name: EnqueueAction
+    href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_EnqueueAction_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioComponent.EnqueueAction(System.Action)
+    name: EnqueueAction
+    href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_EnqueueAction_System_Action_
+  - name: (
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
+- uid: osu.Framework.Audio.AudioComponent.Update
+  commentId: M:osu.Framework.Audio.AudioComponent.Update
+  parent: osu.Framework.Audio.AudioComponent
+  href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_Update
+  name: Update()
+  nameWithType: AudioComponent.Update()
+  fullName: osu.Framework.Audio.AudioComponent.Update()
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioComponent.Update
+    name: Update
+    href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_Update
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioComponent.Update
+    name: Update
+    href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_Update
+  - name: (
+  - name: )
+- uid: osu.Framework.Audio.AudioComponent.HasCompleted
+  commentId: P:osu.Framework.Audio.AudioComponent.HasCompleted
+  parent: osu.Framework.Audio.AudioComponent
+  href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_HasCompleted
+  name: HasCompleted
+  nameWithType: AudioComponent.HasCompleted
+  fullName: osu.Framework.Audio.AudioComponent.HasCompleted
+- uid: osu.Framework.Audio.AudioComponent.IsAlive
+  commentId: P:osu.Framework.Audio.AudioComponent.IsAlive
+  parent: osu.Framework.Audio.AudioComponent
+  href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_IsAlive
+  name: IsAlive
+  nameWithType: AudioComponent.IsAlive
+  fullName: osu.Framework.Audio.AudioComponent.IsAlive
+- uid: osu.Framework.Audio.AudioComponent.IsDisposed
+  commentId: F:osu.Framework.Audio.AudioComponent.IsDisposed
+  parent: osu.Framework.Audio.AudioComponent
+  href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_IsDisposed
+  name: IsDisposed
+  nameWithType: AudioComponent.IsDisposed
+  fullName: osu.Framework.Audio.AudioComponent.IsDisposed
+- uid: osu.Framework.Audio.AudioComponent.Dispose
+  commentId: M:osu.Framework.Audio.AudioComponent.Dispose
+  parent: osu.Framework.Audio.AudioComponent
+  href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_Dispose
+  name: Dispose()
+  nameWithType: AudioComponent.Dispose()
+  fullName: osu.Framework.Audio.AudioComponent.Dispose()
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioComponent.Dispose
+    name: Dispose
+    href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioComponent.Dispose
+    name: Dispose
+    href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_Dispose
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<AudioManager>(AudioManager)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<AudioManager>(AudioManager)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Audio.AudioManager>(osu.Framework.Audio.AudioManager)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of AudioManager)(AudioManager)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Audio.AudioManager)(osu.Framework.Audio.AudioManager)
+  name.vb: GetLocalisableDescription(Of AudioManager)(AudioManager)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Audio.AudioManager)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Audio.AudioManager)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<AudioManager>(AudioManager)
+  nameWithType: EnumerableExtensions.Yield<AudioManager>(AudioManager)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Audio.AudioManager>(osu.Framework.Audio.AudioManager)
+  nameWithType.vb: EnumerableExtensions.Yield(Of AudioManager)(AudioManager)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Audio.AudioManager)(osu.Framework.Audio.AudioManager)
+  name.vb: Yield(Of AudioManager)(AudioManager)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Audio.AudioManager)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Audio.AudioManager)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<AudioManager>(AudioManager)
+  nameWithType: ObjectExtensions.AsNonNull<AudioManager>(AudioManager)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Audio.AudioManager>(osu.Framework.Audio.AudioManager)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of AudioManager)(AudioManager)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Audio.AudioManager)(osu.Framework.Audio.AudioManager)
+  name.vb: AsNonNull(Of AudioManager)(AudioManager)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Audio.AudioManager)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Audio.AudioManager)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<AudioManager>(AudioManager)
+  nameWithType: ObjectExtensions.IsNotNull<AudioManager>(AudioManager)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Audio.AudioManager>(osu.Framework.Audio.AudioManager)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of AudioManager)(AudioManager)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Audio.AudioManager)(osu.Framework.Audio.AudioManager)
+  name.vb: IsNotNull(Of AudioManager)(AudioManager)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Audio.AudioManager)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Audio.AudioManager)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<AudioManager>(AudioManager)
+  nameWithType: ObjectExtensions.IsNull<AudioManager>(AudioManager)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Audio.AudioManager>(osu.Framework.Audio.AudioManager)
+  nameWithType.vb: ObjectExtensions.IsNull(Of AudioManager)(AudioManager)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Audio.AudioManager)(osu.Framework.Audio.AudioManager)
+  name.vb: IsNull(Of AudioManager)(AudioManager)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Audio.AudioManager)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Audio.AudioManager)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<AudioManager, TChild>(AudioManager, TChild)
+  nameWithType: ContainerExtensions.WithChild<AudioManager, TChild>(AudioManager, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Audio.AudioManager, TChild>(osu.Framework.Audio.AudioManager, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of AudioManager, TChild)(AudioManager, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Audio.AudioManager, TChild)(osu.Framework.Audio.AudioManager, TChild)
+  name.vb: WithChild(Of AudioManager, TChild)(AudioManager, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Audio.AudioManager,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Audio.AudioManager,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<AudioManager, TChild>(AudioManager, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<AudioManager, TChild>(AudioManager, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Audio.AudioManager, TChild>(osu.Framework.Audio.AudioManager, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of AudioManager, TChild)(AudioManager, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Audio.AudioManager, TChild)(osu.Framework.Audio.AudioManager, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of AudioManager, TChild)(AudioManager, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Audio.AudioManager,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Audio.AudioManager,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<AudioManager, TChild>(AudioManager, TChild)
+  nameWithType: ContainerExtensions.Wrap<AudioManager, TChild>(AudioManager, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Audio.AudioManager, TChild>(osu.Framework.Audio.AudioManager, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of AudioManager, TChild)(AudioManager, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Audio.AudioManager, TChild)(osu.Framework.Audio.AudioManager, TChild)
+  name.vb: Wrap(Of AudioManager, TChild)(AudioManager, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Audio.AudioManager,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Audio.AudioManager,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.AudioManager
+    name: AudioManager
+    href: osu.Framework.Audio.AudioManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Audio.IAggregateAudioAdjustment.osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.AdjustableProperty)
+  commentId: M:osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+  parent: osu.Framework.Audio.AggregateAdjustmentExtensions
+  definition: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+  href: osu.Framework.Audio.AggregateAdjustmentExtensions.html#osu_Framework_Audio_AggregateAdjustmentExtensions_GetAggregate_osu_Framework_Audio_IAggregateAudioAdjustment_osu_Framework_Audio_AdjustableProperty_
+  name: GetAggregate(IAggregateAudioAdjustment, AdjustableProperty)
+  nameWithType: AggregateAdjustmentExtensions.GetAggregate(IAggregateAudioAdjustment, AdjustableProperty)
+  fullName: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment, osu.Framework.Audio.AdjustableProperty)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+    name: GetAggregate
+    href: osu.Framework.Audio.AggregateAdjustmentExtensions.html#osu_Framework_Audio_AggregateAdjustmentExtensions_GetAggregate_osu_Framework_Audio_IAggregateAudioAdjustment_osu_Framework_Audio_AdjustableProperty_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+    name: GetAggregate
+    href: osu.Framework.Audio.AggregateAdjustmentExtensions.html#osu_Framework_Audio_AggregateAdjustmentExtensions_GetAggregate_osu_Framework_Audio_IAggregateAudioAdjustment_osu_Framework_Audio_AdjustableProperty_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Audio.AudioCollectionManager`1
+  commentId: T:osu.Framework.Audio.AudioCollectionManager`1
+  href: osu.Framework.Audio.AudioCollectionManager-1.html
+  name: AudioCollectionManager<T>
+  nameWithType: AudioCollectionManager<T>
+  fullName: osu.Framework.Audio.AudioCollectionManager<T>
+  nameWithType.vb: AudioCollectionManager(Of T)
+  fullName.vb: osu.Framework.Audio.AudioCollectionManager(Of T)
+  name.vb: AudioCollectionManager(Of T)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1
+    name: AudioCollectionManager
+    href: osu.Framework.Audio.AudioCollectionManager-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1
+    name: AudioCollectionManager
+    href: osu.Framework.Audio.AudioCollectionManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework
+  commentId: N:osu.Framework
+  href: osu.html
+  name: osu.Framework
+  nameWithType: osu.Framework
+  fullName: osu.Framework
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+- uid: osu.Framework.Audio.AudioCollectionManager`1.AddItem(`0)
+  commentId: M:osu.Framework.Audio.AudioCollectionManager`1.AddItem(`0)
+  href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_AddItem__0_
+  name: AddItem(T)
+  nameWithType: AudioCollectionManager<T>.AddItem(T)
+  fullName: osu.Framework.Audio.AudioCollectionManager<T>.AddItem(T)
+  nameWithType.vb: AudioCollectionManager(Of T).AddItem(T)
+  fullName.vb: osu.Framework.Audio.AudioCollectionManager(Of T).AddItem(T)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1.AddItem(`0)
+    name: AddItem
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_AddItem__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1.AddItem(`0)
+    name: AddItem
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_AddItem__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Audio.AudioCollectionManager`1.UpdateChildren
+  commentId: M:osu.Framework.Audio.AudioCollectionManager`1.UpdateChildren
+  href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_UpdateChildren
+  name: UpdateChildren()
+  nameWithType: AudioCollectionManager<T>.UpdateChildren()
+  fullName: osu.Framework.Audio.AudioCollectionManager<T>.UpdateChildren()
+  nameWithType.vb: AudioCollectionManager(Of T).UpdateChildren()
+  fullName.vb: osu.Framework.Audio.AudioCollectionManager(Of T).UpdateChildren()
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1.UpdateChildren
+    name: UpdateChildren
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_UpdateChildren
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1.UpdateChildren
+    name: UpdateChildren
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_UpdateChildren
+  - name: (
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+  commentId: M:osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+  href: osu.Framework.Audio.AggregateAdjustmentExtensions.html#osu_Framework_Audio_AggregateAdjustmentExtensions_GetAggregate_osu_Framework_Audio_IAggregateAudioAdjustment_osu_Framework_Audio_AdjustableProperty_
+  name: GetAggregate(IAggregateAudioAdjustment, AdjustableProperty)
+  nameWithType: AggregateAdjustmentExtensions.GetAggregate(IAggregateAudioAdjustment, AdjustableProperty)
+  fullName: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment, osu.Framework.Audio.AdjustableProperty)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+    name: GetAggregate
+    href: osu.Framework.Audio.AggregateAdjustmentExtensions.html#osu_Framework_Audio_AggregateAdjustmentExtensions_GetAggregate_osu_Framework_Audio_IAggregateAudioAdjustment_osu_Framework_Audio_AdjustableProperty_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AggregateAdjustmentExtensions.GetAggregate(osu.Framework.Audio.IAggregateAudioAdjustment,osu.Framework.Audio.AdjustableProperty)
+    name: GetAggregate
+    href: osu.Framework.Audio.AggregateAdjustmentExtensions.html#osu_Framework_Audio_AggregateAdjustmentExtensions_GetAggregate_osu_Framework_Audio_IAggregateAudioAdjustment_osu_Framework_Audio_AdjustableProperty_
+  - name: (
+  - uid: osu.Framework.Audio.IAggregateAudioAdjustment
+    name: IAggregateAudioAdjustment
+    href: osu.Framework.Audio.IAggregateAudioAdjustment.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Audio.AdjustableProperty
+    name: AdjustableProperty
+    href: osu.Framework.Audio.AdjustableProperty.html
+  - name: )
+- uid: osu.Framework.Audio.AggregateAdjustmentExtensions
+  commentId: T:osu.Framework.Audio.AggregateAdjustmentExtensions
+  parent: osu.Framework.Audio
+  href: osu.Framework.Audio.AggregateAdjustmentExtensions.html
+  name: AggregateAdjustmentExtensions
+  nameWithType: AggregateAdjustmentExtensions
+  fullName: osu.Framework.Audio.AggregateAdjustmentExtensions
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: ManagedBass.Bass.NoSoundDevice
+  commentId: F:ManagedBass.Bass.NoSoundDevice
+  isExternal: true
+  name: NoSoundDevice
+  nameWithType: Bass.NoSoundDevice
+  fullName: ManagedBass.Bass.NoSoundDevice
+- uid: osu.Framework.Audio.AudioManager.bass_default_device
+  commentId: F:osu.Framework.Audio.AudioManager.bass_default_device
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_bass_default_device
+  name: bass_default_device
+  nameWithType: AudioManager.bass_default_device
+  fullName: osu.Framework.Audio.AudioManager.bass_default_device
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: osu.Framework.Audio.AudioManager.Tracks*
+  commentId: Overload:osu.Framework.Audio.AudioManager.Tracks
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_Tracks
+  name: Tracks
+  nameWithType: AudioManager.Tracks
+  fullName: osu.Framework.Audio.AudioManager.Tracks
+- uid: osu.Framework.Audio.Track.ITrackStore
+  commentId: T:osu.Framework.Audio.Track.ITrackStore
+  parent: osu.Framework.Audio.Track
+  href: osu.Framework.Audio.Track.ITrackStore.html
+  name: ITrackStore
+  nameWithType: ITrackStore
+  fullName: osu.Framework.Audio.Track.ITrackStore
+- uid: osu.Framework.Audio.Track
+  commentId: N:osu.Framework.Audio.Track
+  href: osu.html
+  name: osu.Framework.Audio.Track
+  nameWithType: osu.Framework.Audio.Track
+  fullName: osu.Framework.Audio.Track
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Audio
+    name: Audio
+    href: osu.Framework.Audio.html
+  - name: .
+  - uid: osu.Framework.Audio.Track
+    name: Track
+    href: osu.Framework.Audio.Track.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Audio
+    name: Audio
+    href: osu.Framework.Audio.html
+  - name: .
+  - uid: osu.Framework.Audio.Track
+    name: Track
+    href: osu.Framework.Audio.Track.html
+- uid: osu.Framework.Audio.AudioManager.Samples*
+  commentId: Overload:osu.Framework.Audio.AudioManager.Samples
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_Samples
+  name: Samples
+  nameWithType: AudioManager.Samples
+  fullName: osu.Framework.Audio.AudioManager.Samples
+- uid: osu.Framework.Audio.Sample.ISampleStore
+  commentId: T:osu.Framework.Audio.Sample.ISampleStore
+  parent: osu.Framework.Audio.Sample
+  href: osu.Framework.Audio.Sample.ISampleStore.html
+  name: ISampleStore
+  nameWithType: ISampleStore
+  fullName: osu.Framework.Audio.Sample.ISampleStore
+- uid: osu.Framework.Audio.Sample
+  commentId: N:osu.Framework.Audio.Sample
+  href: osu.html
+  name: osu.Framework.Audio.Sample
+  nameWithType: osu.Framework.Audio.Sample
+  fullName: osu.Framework.Audio.Sample
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Audio
+    name: Audio
+    href: osu.Framework.Audio.html
+  - name: .
+  - uid: osu.Framework.Audio.Sample
+    name: Sample
+    href: osu.Framework.Audio.Sample.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Audio
+    name: Audio
+    href: osu.Framework.Audio.html
+  - name: .
+  - uid: osu.Framework.Audio.Sample
+    name: Sample
+    href: osu.Framework.Audio.Sample.html
+- uid: osu.Framework.Audio.Mixing.AudioMixer
+  commentId: T:osu.Framework.Audio.Mixing.AudioMixer
+  parent: osu.Framework.Audio.Mixing
+  href: osu.Framework.Audio.Mixing.AudioMixer.html
+  name: AudioMixer
+  nameWithType: AudioMixer
+  fullName: osu.Framework.Audio.Mixing.AudioMixer
+- uid: osu.Framework.Audio.Mixing
+  commentId: N:osu.Framework.Audio.Mixing
+  href: osu.html
+  name: osu.Framework.Audio.Mixing
+  nameWithType: osu.Framework.Audio.Mixing
+  fullName: osu.Framework.Audio.Mixing
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Audio
+    name: Audio
+    href: osu.Framework.Audio.html
+  - name: .
+  - uid: osu.Framework.Audio.Mixing
+    name: Mixing
+    href: osu.Framework.Audio.Mixing.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Audio
+    name: Audio
+    href: osu.Framework.Audio.html
+  - name: .
+  - uid: osu.Framework.Audio.Mixing
+    name: Mixing
+    href: osu.Framework.Audio.Mixing.html
+- uid: osu.Framework.Audio.AudioManager.AudioDeviceNames*
+  commentId: Overload:osu.Framework.Audio.AudioManager.AudioDeviceNames
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_AudioDeviceNames
+  name: AudioDeviceNames
+  nameWithType: AudioManager.AudioDeviceNames
+  fullName: osu.Framework.Audio.AudioManager.AudioDeviceNames
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Action{System.String}
+  commentId: T:System.Action{System.String}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<string>
+  nameWithType: Action<string>
+  fullName: System.Action<string>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.String.Empty
+  commentId: F:System.String.Empty
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string.empty
+  name: Empty
+  nameWithType: string.Empty
+  fullName: string.Empty
+  nameWithType.vb: String.Empty
+  fullName.vb: String.Empty
+- uid: osu.Framework.Bindables.Bindable{System.String}
+  commentId: T:osu.Framework.Bindables.Bindable{System.String}
+  parent: osu.Framework.Bindables
+  definition: osu.Framework.Bindables.Bindable`1
+  href: osu.Framework.Bindables.Bindable-1.html
+  name: Bindable<string>
+  nameWithType: Bindable<string>
+  fullName: osu.Framework.Bindables.Bindable<string>
+  nameWithType.vb: Bindable(Of String)
+  fullName.vb: osu.Framework.Bindables.Bindable(Of String)
+  name.vb: Bindable(Of String)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.Bindable`1
+    name: Bindable
+    href: osu.Framework.Bindables.Bindable-1.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.Bindable`1
+    name: Bindable
+    href: osu.Framework.Bindables.Bindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Bindables.Bindable`1
+  commentId: T:osu.Framework.Bindables.Bindable`1
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.Bindable-1.html
+  name: Bindable<T>
+  nameWithType: Bindable<T>
+  fullName: osu.Framework.Bindables.Bindable<T>
+  nameWithType.vb: Bindable(Of T)
+  fullName.vb: osu.Framework.Bindables.Bindable(Of T)
+  name.vb: Bindable(Of T)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.Bindable`1
+    name: Bindable
+    href: osu.Framework.Bindables.Bindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.Bindable`1
+    name: Bindable
+    href: osu.Framework.Bindables.Bindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Bindables
+  commentId: N:osu.Framework.Bindables
+  href: osu.html
+  name: osu.Framework.Bindables
+  nameWithType: osu.Framework.Bindables
+  fullName: osu.Framework.Bindables
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+- uid: osu.Framework.Bindables.BindableDouble
+  commentId: T:osu.Framework.Bindables.BindableDouble
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.BindableDouble.html
+  name: BindableDouble
+  nameWithType: BindableDouble
+  fullName: osu.Framework.Bindables.BindableDouble
+- uid: osu.Framework.Audio.AudioManager.UsingGlobalMixer*
+  commentId: Overload:osu.Framework.Audio.AudioManager.UsingGlobalMixer
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_UsingGlobalMixer
+  name: UsingGlobalMixer
+  nameWithType: AudioManager.UsingGlobalMixer
+  fullName: osu.Framework.Audio.AudioManager.UsingGlobalMixer
+- uid: osu.Framework.Bindables.IBindable{System.Boolean}
+  commentId: T:osu.Framework.Bindables.IBindable{System.Boolean}
+  parent: osu.Framework.Bindables
+  definition: osu.Framework.Bindables.IBindable`1
+  href: osu.Framework.Bindables.IBindable-1.html
+  name: IBindable<bool>
+  nameWithType: IBindable<bool>
+  fullName: osu.Framework.Bindables.IBindable<bool>
+  nameWithType.vb: IBindable(Of Boolean)
+  fullName.vb: osu.Framework.Bindables.IBindable(Of Boolean)
+  name.vb: IBindable(Of Boolean)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: osu.Framework.Bindables.IBindable`1
+  commentId: T:osu.Framework.Bindables.IBindable`1
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.IBindable-1.html
+  name: IBindable<T>
+  nameWithType: IBindable<T>
+  fullName: osu.Framework.Bindables.IBindable<T>
+  nameWithType.vb: IBindable(Of T)
+  fullName.vb: osu.Framework.Bindables.IBindable(Of T)
+  name.vb: IBindable(Of T)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.IBindable`1
+    name: IBindable
+    href: osu.Framework.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Audio.AudioComponent.IsLoaded
+  commentId: P:osu.Framework.Audio.AudioComponent.IsLoaded
+  parent: osu.Framework.Audio.AudioComponent
+  href: osu.Framework.Audio.AudioComponent.html#osu_Framework_Audio_AudioComponent_IsLoaded
+  name: IsLoaded
+  nameWithType: AudioComponent.IsLoaded
+  fullName: osu.Framework.Audio.AudioComponent.IsLoaded
+- uid: osu.Framework.Audio.AudioManager.IsLoaded*
+  commentId: Overload:osu.Framework.Audio.AudioManager.IsLoaded
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_IsLoaded
+  name: IsLoaded
+  nameWithType: AudioManager.IsLoaded
+  fullName: osu.Framework.Audio.AudioManager.IsLoaded
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Threading.Scheduler
+  commentId: T:osu.Framework.Threading.Scheduler
+  parent: osu.Framework.Threading
+  href: osu.Framework.Threading.Scheduler.html
+  name: Scheduler
+  nameWithType: Scheduler
+  fullName: osu.Framework.Threading.Scheduler
+- uid: osu.Framework.Threading
+  commentId: N:osu.Framework.Threading
+  href: osu.html
+  name: osu.Framework.Threading
+  nameWithType: osu.Framework.Threading
+  fullName: osu.Framework.Threading
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Threading
+    name: Threading
+    href: osu.Framework.Threading.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Threading
+    name: Threading
+    href: osu.Framework.Threading.html
+- uid: osu.Framework.Audio.AudioManager.#ctor*
+  commentId: Overload:osu.Framework.Audio.AudioManager.#ctor
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager__ctor_osu_Framework_Threading_AudioThread_osu_Framework_IO_Stores_ResourceStore_System_Byte____osu_Framework_IO_Stores_ResourceStore_System_Byte____
+  name: AudioManager
+  nameWithType: AudioManager.AudioManager
+  fullName: osu.Framework.Audio.AudioManager.AudioManager
+  nameWithType.vb: AudioManager.New
+  fullName.vb: osu.Framework.Audio.AudioManager.New
+  name.vb: New
+- uid: osu.Framework.Threading.AudioThread
+  commentId: T:osu.Framework.Threading.AudioThread
+  parent: osu.Framework.Threading
+  href: osu.Framework.Threading.AudioThread.html
+  name: AudioThread
+  nameWithType: AudioThread
+  fullName: osu.Framework.Threading.AudioThread
+- uid: osu.Framework.IO.Stores.ResourceStore{System.Byte[]}
+  commentId: T:osu.Framework.IO.Stores.ResourceStore{System.Byte[]}
+  parent: osu.Framework.IO.Stores
+  definition: osu.Framework.IO.Stores.ResourceStore`1
+  href: osu.Framework.IO.Stores.ResourceStore-1.html
+  name: ResourceStore<byte[]>
+  nameWithType: ResourceStore<byte[]>
+  fullName: osu.Framework.IO.Stores.ResourceStore<byte[]>
+  nameWithType.vb: ResourceStore(Of Byte())
+  fullName.vb: osu.Framework.IO.Stores.ResourceStore(Of Byte())
+  name.vb: ResourceStore(Of Byte())
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.ResourceStore`1
+    name: ResourceStore
+    href: osu.Framework.IO.Stores.ResourceStore-1.html
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.ResourceStore`1
+    name: ResourceStore
+    href: osu.Framework.IO.Stores.ResourceStore-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: osu.Framework.IO.Stores.ResourceStore`1
+  commentId: T:osu.Framework.IO.Stores.ResourceStore`1
+  href: osu.Framework.IO.Stores.ResourceStore-1.html
+  name: ResourceStore<T>
+  nameWithType: ResourceStore<T>
+  fullName: osu.Framework.IO.Stores.ResourceStore<T>
+  nameWithType.vb: ResourceStore(Of T)
+  fullName.vb: osu.Framework.IO.Stores.ResourceStore(Of T)
+  name.vb: ResourceStore(Of T)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.ResourceStore`1
+    name: ResourceStore
+    href: osu.Framework.IO.Stores.ResourceStore-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.ResourceStore`1
+    name: ResourceStore
+    href: osu.Framework.IO.Stores.ResourceStore-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.IO.Stores
+  commentId: N:osu.Framework.IO.Stores
+  href: osu.html
+  name: osu.Framework.IO.Stores
+  nameWithType: osu.Framework.IO.Stores
+  fullName: osu.Framework.IO.Stores
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.IO
+    name: IO
+    href: osu.Framework.IO.html
+  - name: .
+  - uid: osu.Framework.IO.Stores
+    name: Stores
+    href: osu.Framework.IO.Stores.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.IO
+    name: IO
+    href: osu.Framework.IO.html
+  - name: .
+  - uid: osu.Framework.IO.Stores
+    name: Stores
+    href: osu.Framework.IO.Stores.html
+- uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.Dispose(System.Boolean)
+  commentId: M:osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.Dispose(System.Boolean)
+  parent: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}
+  definition: osu.Framework.Audio.AudioCollectionManager`1.Dispose(System.Boolean)
+  href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_Dispose_System_Boolean_
+  name: Dispose(bool)
+  nameWithType: AudioCollectionManager<AudioComponent>.Dispose(bool)
+  fullName: osu.Framework.Audio.AudioCollectionManager<osu.Framework.Audio.AudioComponent>.Dispose(bool)
+  nameWithType.vb: AudioCollectionManager(Of AudioComponent).Dispose(Boolean)
+  fullName.vb: osu.Framework.Audio.AudioCollectionManager(Of osu.Framework.Audio.AudioComponent).Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.Dispose(System.Boolean)
+    name: Dispose
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_Dispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.Dispose(System.Boolean)
+    name: Dispose
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_Dispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.Dispose*
+  commentId: Overload:osu.Framework.Audio.AudioManager.Dispose
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_Dispose_System_Boolean_
+  name: Dispose
+  nameWithType: AudioManager.Dispose
+  fullName: osu.Framework.Audio.AudioManager.Dispose
+- uid: osu.Framework.Audio.AudioCollectionManager`1.Dispose(System.Boolean)
+  commentId: M:osu.Framework.Audio.AudioCollectionManager`1.Dispose(System.Boolean)
+  isExternal: true
+  href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_Dispose_System_Boolean_
+  name: Dispose(bool)
+  nameWithType: AudioCollectionManager<T>.Dispose(bool)
+  fullName: osu.Framework.Audio.AudioCollectionManager<T>.Dispose(bool)
+  nameWithType.vb: AudioCollectionManager(Of T).Dispose(Boolean)
+  fullName.vb: osu.Framework.Audio.AudioCollectionManager(Of T).Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1.Dispose(System.Boolean)
+    name: Dispose
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_Dispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1.Dispose(System.Boolean)
+    name: Dispose
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_Dispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.SampleMixer
+  commentId: F:osu.Framework.Audio.AudioManager.SampleMixer
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_SampleMixer
+  name: SampleMixer
+  nameWithType: AudioManager.SampleMixer
+  fullName: osu.Framework.Audio.AudioManager.SampleMixer
+- uid: osu.Framework.Audio.AudioManager.CreateAudioMixer*
+  commentId: Overload:osu.Framework.Audio.AudioManager.CreateAudioMixer
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_CreateAudioMixer_System_String_
+  name: CreateAudioMixer
+  nameWithType: AudioManager.CreateAudioMixer
+  fullName: osu.Framework.Audio.AudioManager.CreateAudioMixer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.ItemAdded(osu.Framework.Audio.AudioComponent)
+  commentId: M:osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.ItemAdded(osu.Framework.Audio.AudioComponent)
+  parent: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}
+  definition: osu.Framework.Audio.AudioCollectionManager`1.ItemAdded(`0)
+  href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_ItemAdded__0_
+  name: ItemAdded(AudioComponent)
+  nameWithType: AudioCollectionManager<AudioComponent>.ItemAdded(AudioComponent)
+  fullName: osu.Framework.Audio.AudioCollectionManager<osu.Framework.Audio.AudioComponent>.ItemAdded(osu.Framework.Audio.AudioComponent)
+  nameWithType.vb: AudioCollectionManager(Of AudioComponent).ItemAdded(AudioComponent)
+  fullName.vb: osu.Framework.Audio.AudioCollectionManager(Of osu.Framework.Audio.AudioComponent).ItemAdded(osu.Framework.Audio.AudioComponent)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.ItemAdded(osu.Framework.Audio.AudioComponent)
+    name: ItemAdded
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_ItemAdded__0_
+  - name: (
+  - uid: osu.Framework.Audio.AudioComponent
+    name: AudioComponent
+    href: osu.Framework.Audio.AudioComponent.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.ItemAdded(osu.Framework.Audio.AudioComponent)
+    name: ItemAdded
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_ItemAdded__0_
+  - name: (
+  - uid: osu.Framework.Audio.AudioComponent
+    name: AudioComponent
+    href: osu.Framework.Audio.AudioComponent.html
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.ItemAdded*
+  commentId: Overload:osu.Framework.Audio.AudioManager.ItemAdded
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_ItemAdded_osu_Framework_Audio_AudioComponent_
+  name: ItemAdded
+  nameWithType: AudioManager.ItemAdded
+  fullName: osu.Framework.Audio.AudioManager.ItemAdded
+- uid: osu.Framework.Audio.AudioCollectionManager`1.ItemAdded(`0)
+  commentId: M:osu.Framework.Audio.AudioCollectionManager`1.ItemAdded(`0)
+  href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_ItemAdded__0_
+  name: ItemAdded(T)
+  nameWithType: AudioCollectionManager<T>.ItemAdded(T)
+  fullName: osu.Framework.Audio.AudioCollectionManager<T>.ItemAdded(T)
+  nameWithType.vb: AudioCollectionManager(Of T).ItemAdded(T)
+  fullName.vb: osu.Framework.Audio.AudioCollectionManager(Of T).ItemAdded(T)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1.ItemAdded(`0)
+    name: ItemAdded
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_ItemAdded__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1.ItemAdded(`0)
+    name: ItemAdded
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_ItemAdded__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.ItemRemoved(osu.Framework.Audio.AudioComponent)
+  commentId: M:osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.ItemRemoved(osu.Framework.Audio.AudioComponent)
+  parent: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}
+  definition: osu.Framework.Audio.AudioCollectionManager`1.ItemRemoved(`0)
+  href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_ItemRemoved__0_
+  name: ItemRemoved(AudioComponent)
+  nameWithType: AudioCollectionManager<AudioComponent>.ItemRemoved(AudioComponent)
+  fullName: osu.Framework.Audio.AudioCollectionManager<osu.Framework.Audio.AudioComponent>.ItemRemoved(osu.Framework.Audio.AudioComponent)
+  nameWithType.vb: AudioCollectionManager(Of AudioComponent).ItemRemoved(AudioComponent)
+  fullName.vb: osu.Framework.Audio.AudioCollectionManager(Of osu.Framework.Audio.AudioComponent).ItemRemoved(osu.Framework.Audio.AudioComponent)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.ItemRemoved(osu.Framework.Audio.AudioComponent)
+    name: ItemRemoved
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_ItemRemoved__0_
+  - name: (
+  - uid: osu.Framework.Audio.AudioComponent
+    name: AudioComponent
+    href: osu.Framework.Audio.AudioComponent.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioCollectionManager{osu.Framework.Audio.AudioComponent}.ItemRemoved(osu.Framework.Audio.AudioComponent)
+    name: ItemRemoved
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_ItemRemoved__0_
+  - name: (
+  - uid: osu.Framework.Audio.AudioComponent
+    name: AudioComponent
+    href: osu.Framework.Audio.AudioComponent.html
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.ItemRemoved*
+  commentId: Overload:osu.Framework.Audio.AudioManager.ItemRemoved
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_ItemRemoved_osu_Framework_Audio_AudioComponent_
+  name: ItemRemoved
+  nameWithType: AudioManager.ItemRemoved
+  fullName: osu.Framework.Audio.AudioManager.ItemRemoved
+- uid: osu.Framework.Audio.AudioCollectionManager`1.ItemRemoved(`0)
+  commentId: M:osu.Framework.Audio.AudioCollectionManager`1.ItemRemoved(`0)
+  href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_ItemRemoved__0_
+  name: ItemRemoved(T)
+  nameWithType: AudioCollectionManager<T>.ItemRemoved(T)
+  fullName: osu.Framework.Audio.AudioCollectionManager<T>.ItemRemoved(T)
+  nameWithType.vb: AudioCollectionManager(Of T).ItemRemoved(T)
+  fullName.vb: osu.Framework.Audio.AudioCollectionManager(Of T).ItemRemoved(T)
+  spec.csharp:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1.ItemRemoved(`0)
+    name: ItemRemoved
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_ItemRemoved__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.AudioCollectionManager`1.ItemRemoved(`0)
+    name: ItemRemoved
+    href: osu.Framework.Audio.AudioCollectionManager-1.html#osu_Framework_Audio_AudioCollectionManager_1_ItemRemoved__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Audio.Track.TrackStore
+  commentId: T:osu.Framework.Audio.Track.TrackStore
+  href: osu.Framework.Audio.Track.TrackStore.html
+  name: TrackStore
+  nameWithType: TrackStore
+  fullName: osu.Framework.Audio.Track.TrackStore
+- uid: osu.Framework.IO.Stores.IResourceStore`1
+  commentId: T:osu.Framework.IO.Stores.IResourceStore`1
+  href: osu.Framework.IO.Stores.IResourceStore-1.html
+  name: IResourceStore<T>
+  nameWithType: IResourceStore<T>
+  fullName: osu.Framework.IO.Stores.IResourceStore<T>
+  nameWithType.vb: IResourceStore(Of T)
+  fullName.vb: osu.Framework.IO.Stores.IResourceStore(Of T)
+  name.vb: IResourceStore(Of T)
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.IResourceStore`1
+    name: IResourceStore
+    href: osu.Framework.IO.Stores.IResourceStore-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.IResourceStore`1
+    name: IResourceStore
+    href: osu.Framework.IO.Stores.IResourceStore-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.TrackMixer
+  commentId: F:osu.Framework.Audio.AudioManager.TrackMixer
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_TrackMixer
+  name: TrackMixer
+  nameWithType: AudioManager.TrackMixer
+  fullName: osu.Framework.Audio.AudioManager.TrackMixer
+- uid: osu.Framework.Audio.AudioManager.GetTrackStore*
+  commentId: Overload:osu.Framework.Audio.AudioManager.GetTrackStore
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_GetTrackStore_osu_Framework_IO_Stores_IResourceStore_System_Byte____osu_Framework_Audio_Mixing_AudioMixer_
+  name: GetTrackStore
+  nameWithType: AudioManager.GetTrackStore
+  fullName: osu.Framework.Audio.AudioManager.GetTrackStore
+- uid: osu.Framework.IO.Stores.IResourceStore{System.Byte[]}
+  commentId: T:osu.Framework.IO.Stores.IResourceStore{System.Byte[]}
+  parent: osu.Framework.IO.Stores
+  definition: osu.Framework.IO.Stores.IResourceStore`1
+  href: osu.Framework.IO.Stores.IResourceStore-1.html
+  name: IResourceStore<byte[]>
+  nameWithType: IResourceStore<byte[]>
+  fullName: osu.Framework.IO.Stores.IResourceStore<byte[]>
+  nameWithType.vb: IResourceStore(Of Byte())
+  fullName.vb: osu.Framework.IO.Stores.IResourceStore(Of Byte())
+  name.vb: IResourceStore(Of Byte())
+  spec.csharp:
+  - uid: osu.Framework.IO.Stores.IResourceStore`1
+    name: IResourceStore
+    href: osu.Framework.IO.Stores.IResourceStore-1.html
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.IO.Stores.IResourceStore`1
+    name: IResourceStore
+    href: osu.Framework.IO.Stores.IResourceStore-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: osu.Framework.Audio.Sample.SampleStore
+  commentId: T:osu.Framework.Audio.Sample.SampleStore
+  href: osu.Framework.Audio.Sample.SampleStore.html
+  name: SampleStore
+  nameWithType: SampleStore
+  fullName: osu.Framework.Audio.Sample.SampleStore
+- uid: osu.Framework.Audio.Sample.ISampleStore.AddExtension(System.String)
+  commentId: M:osu.Framework.Audio.Sample.ISampleStore.AddExtension(System.String)
+  isExternal: true
+  href: osu.Framework.Audio.Sample.ISampleStore.html#osu_Framework_Audio_Sample_ISampleStore_AddExtension_System_String_
+  name: AddExtension(string)
+  nameWithType: ISampleStore.AddExtension(string)
+  fullName: osu.Framework.Audio.Sample.ISampleStore.AddExtension(string)
+  nameWithType.vb: ISampleStore.AddExtension(String)
+  fullName.vb: osu.Framework.Audio.Sample.ISampleStore.AddExtension(String)
+  name.vb: AddExtension(String)
+  spec.csharp:
+  - uid: osu.Framework.Audio.Sample.ISampleStore.AddExtension(System.String)
+    name: AddExtension
+    href: osu.Framework.Audio.Sample.ISampleStore.html#osu_Framework_Audio_Sample_ISampleStore_AddExtension_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Audio.Sample.ISampleStore.AddExtension(System.String)
+    name: AddExtension
+    href: osu.Framework.Audio.Sample.ISampleStore.html#osu_Framework_Audio_Sample_ISampleStore_AddExtension_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.GetSampleStore*
+  commentId: Overload:osu.Framework.Audio.AudioManager.GetSampleStore
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_GetSampleStore_osu_Framework_IO_Stores_IResourceStore_System_Byte____osu_Framework_Audio_Mixing_AudioMixer_
+  name: GetSampleStore
+  nameWithType: AudioManager.GetSampleStore
+  fullName: osu.Framework.Audio.AudioManager.GetSampleStore
+- uid: ManagedBass.Bass.Init(System.Int32,System.Int32,ManagedBass.DeviceInitFlags,System.IntPtr,System.IntPtr)
+  commentId: M:ManagedBass.Bass.Init(System.Int32,System.Int32,ManagedBass.DeviceInitFlags,System.IntPtr,System.IntPtr)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Init(int, int, DeviceInitFlags, nint, nint)
+  nameWithType: Bass.Init(int, int, DeviceInitFlags, nint, nint)
+  fullName: ManagedBass.Bass.Init(int, int, ManagedBass.DeviceInitFlags, nint, nint)
+  nameWithType.vb: Bass.Init(Integer, Integer, DeviceInitFlags, IntPtr, IntPtr)
+  fullName.vb: ManagedBass.Bass.Init(Integer, Integer, ManagedBass.DeviceInitFlags, System.IntPtr, System.IntPtr)
+  name.vb: Init(Integer, Integer, DeviceInitFlags, IntPtr, IntPtr)
+  spec.csharp:
+  - uid: ManagedBass.Bass.Init(System.Int32,System.Int32,ManagedBass.DeviceInitFlags,System.IntPtr,System.IntPtr)
+    name: Init
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: ManagedBass.DeviceInitFlags
+    name: DeviceInitFlags
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: ','
+  - name: " "
+  - uid: System.IntPtr
+    name: nint
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+  spec.vb:
+  - uid: ManagedBass.Bass.Init(System.Int32,System.Int32,ManagedBass.DeviceInitFlags,System.IntPtr,System.IntPtr)
+    name: Init
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: ManagedBass.DeviceInitFlags
+    name: DeviceInitFlags
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: ','
+  - name: " "
+  - uid: System.IntPtr
+    name: IntPtr
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.intptr
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.InitBass*
+  commentId: Overload:osu.Framework.Audio.AudioManager.InitBass
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_InitBass_System_Int32_
+  name: InitBass
+  nameWithType: AudioManager.InitBass
+  fullName: osu.Framework.Audio.AudioManager.InitBass
+- uid: osu.Framework.Audio.AudioManager.CheckForDeviceChanges*
+  commentId: Overload:osu.Framework.Audio.AudioManager.CheckForDeviceChanges
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_CheckForDeviceChanges_System_Collections_Immutable_ImmutableArray_ManagedBass_DeviceInfo__
+  name: CheckForDeviceChanges
+  nameWithType: AudioManager.CheckForDeviceChanges
+  fullName: osu.Framework.Audio.AudioManager.CheckForDeviceChanges
+- uid: System.Collections.Immutable.ImmutableArray{ManagedBass.DeviceInfo}
+  commentId: T:System.Collections.Immutable.ImmutableArray{ManagedBass.DeviceInfo}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableArray`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<DeviceInfo>
+  nameWithType: ImmutableArray<DeviceInfo>
+  fullName: System.Collections.Immutable.ImmutableArray<ManagedBass.DeviceInfo>
+  nameWithType.vb: ImmutableArray(Of DeviceInfo)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of ManagedBass.DeviceInfo)
+  name.vb: ImmutableArray(Of DeviceInfo)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ManagedBass.DeviceInfo
+    name: DeviceInfo
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ManagedBass.DeviceInfo
+    name: DeviceInfo
+    isExternal: true
+  - name: )
+- uid: System.Collections.Immutable.ImmutableArray`1
+  commentId: T:System.Collections.Immutable.ImmutableArray`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<T>
+  nameWithType: ImmutableArray<T>
+  fullName: System.Collections.Immutable.ImmutableArray<T>
+  nameWithType.vb: ImmutableArray(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of T)
+  name.vb: ImmutableArray(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Immutable
+  commentId: N:System.Collections.Immutable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Immutable
+  nameWithType: System.Collections.Immutable
+  fullName: System.Collections.Immutable
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+- uid: osu.Framework.Audio.AudioManager.GetAllDevices*
+  commentId: Overload:osu.Framework.Audio.AudioManager.GetAllDevices
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_GetAllDevices
+  name: GetAllDevices
+  nameWithType: AudioManager.GetAllDevices
+  fullName: osu.Framework.Audio.AudioManager.GetAllDevices
+- uid: osu.Framework.Audio.AudioManager.IsCurrentDeviceValid*
+  commentId: Overload:osu.Framework.Audio.AudioManager.IsCurrentDeviceValid
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_IsCurrentDeviceValid
+  name: IsCurrentDeviceValid
+  nameWithType: AudioManager.IsCurrentDeviceValid
+  fullName: osu.Framework.Audio.AudioManager.IsCurrentDeviceValid
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: osu.Framework.Audio.AudioManager.ToString*
+  commentId: Overload:osu.Framework.Audio.AudioManager.ToString
+  href: osu.Framework.Audio.AudioManager.html#osu_Framework_Audio_AudioManager_ToString
+  name: ToString
+  nameWithType: AudioManager.ToString
+  fullName: osu.Framework.Audio.AudioManager.ToString

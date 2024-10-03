@@ -1,0 +1,666 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Utils.Validation
+  commentId: T:osu.Framework.Utils.Validation
+  id: Validation
+  parent: osu.Framework.Utils
+  children:
+  - osu.Framework.Utils.Validation.IsFinite(osu.Framework.Graphics.MarginPadding)
+  - osu.Framework.Utils.Validation.IsFinite(osuTK.Vector2)
+  - osu.Framework.Utils.Validation.IsSupportedBindableNumberType``1
+  - osu.Framework.Utils.Validation.TryParseUri(System.String,System.Uri@)
+  langs:
+  - csharp
+  - vb
+  name: Validation
+  nameWithType: Validation
+  fullName: osu.Framework.Utils.Validation
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Utils/Validation.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Validation
+    path: osu.Framework/Utils/Validation.cs
+    startLine: 12
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  syntax:
+    content: public static class Validation
+    content.vb: Public Module Validation
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: osu.Framework.Utils.Validation.IsFinite(osuTK.Vector2)
+  commentId: M:osu.Framework.Utils.Validation.IsFinite(osuTK.Vector2)
+  id: IsFinite(osuTK.Vector2)
+  parent: osu.Framework.Utils.Validation
+  langs:
+  - csharp
+  - vb
+  name: IsFinite(Vector2)
+  nameWithType: Validation.IsFinite(Vector2)
+  fullName: osu.Framework.Utils.Validation.IsFinite(osuTK.Vector2)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/Validation.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: IsFinite
+    path: osu.Framework/Utils/Validation.cs
+    startLine: 20
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: >-
+    Returns whether the two coordinates of a <xref href="osuTK.Vector2" data-throw-if-not-resolved="false"></xref> are not infinite or NaN.
+
+    <p>For further information, see <xref href="System.Single.IsFinite(System.Single)" data-throw-if-not-resolved="false"></xref>.</p>
+  example: []
+  syntax:
+    content: public static bool IsFinite(Vector2 toCheck)
+    parameters:
+    - id: toCheck
+      type: osuTK.Vector2
+      description: The <xref href="osuTK.Vector2" data-throw-if-not-resolved="false"></xref> to check.
+    return:
+      type: System.Boolean
+      description: False if X or Y are Infinity or NaN, true otherwise.
+    content.vb: Public Shared Function IsFinite(toCheck As Vector2) As Boolean
+  overload: osu.Framework.Utils.Validation.IsFinite*
+- uid: osu.Framework.Utils.Validation.IsFinite(osu.Framework.Graphics.MarginPadding)
+  commentId: M:osu.Framework.Utils.Validation.IsFinite(osu.Framework.Graphics.MarginPadding)
+  id: IsFinite(osu.Framework.Graphics.MarginPadding)
+  parent: osu.Framework.Utils.Validation
+  langs:
+  - csharp
+  - vb
+  name: IsFinite(MarginPadding)
+  nameWithType: Validation.IsFinite(MarginPadding)
+  fullName: osu.Framework.Utils.Validation.IsFinite(osu.Framework.Graphics.MarginPadding)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/Validation.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: IsFinite
+    path: osu.Framework/Utils/Validation.cs
+    startLine: 28
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: >-
+    Returns whether the components of a <xref href="osu.Framework.Graphics.MarginPadding" data-throw-if-not-resolved="false"></xref> are not infinite or NaN.
+
+    <p>For further information, see <xref href="System.Single.IsFinite(System.Single)" data-throw-if-not-resolved="false"></xref>.</p>
+  example: []
+  syntax:
+    content: public static bool IsFinite(MarginPadding toCheck)
+    parameters:
+    - id: toCheck
+      type: osu.Framework.Graphics.MarginPadding
+      description: The <xref href="osu.Framework.Graphics.MarginPadding" data-throw-if-not-resolved="false"></xref> to check.
+    return:
+      type: System.Boolean
+      description: False if either component of <code class="paramref">toCheck</code> are Infinity or NaN, true otherwise.
+    content.vb: Public Shared Function IsFinite(toCheck As MarginPadding) As Boolean
+  overload: osu.Framework.Utils.Validation.IsFinite*
+- uid: osu.Framework.Utils.Validation.TryParseUri(System.String,System.Uri@)
+  commentId: M:osu.Framework.Utils.Validation.TryParseUri(System.String,System.Uri@)
+  id: TryParseUri(System.String,System.Uri@)
+  parent: osu.Framework.Utils.Validation
+  langs:
+  - csharp
+  - vb
+  name: TryParseUri(string, out Uri?)
+  nameWithType: Validation.TryParseUri(string, out Uri?)
+  fullName: osu.Framework.Utils.Validation.TryParseUri(string, out System.Uri?)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/Validation.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TryParseUri
+    path: osu.Framework/Utils/Validation.cs
+    startLine: 43
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Attempts to parse <code class="paramref">uriString</code> as an absolute or relative <xref href="System.Uri" data-throw-if-not-resolved="false"></xref> in a platform-agnostic manner.
+  remarks: >-
+    This method is a workaround for inconsistencies across .NET and mono runtimes;
+
+    on mono runtimes paths starting with <code>/</code> are considered absolute as per POSIX,
+
+    and on .NET such paths are considered to be relative.
+
+    This method uses the .NET behaviour.
+
+    For more info, see <a href="https://www.mono-project.com/docs/faq/known-issues/urikind-relativeorabsolute/">Mono documentation</a>.
+  example: []
+  syntax:
+    content: public static bool TryParseUri(string uriString, out Uri? result)
+    parameters:
+    - id: uriString
+      type: System.String
+      description: The string representation of the URI to parse.
+    - id: result
+      type: System.Uri
+      description: The resultant parsed URI, if parsing succeeded.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if parsing succeeded; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> otherwise.
+    content.vb: Public Shared Function TryParseUri(uriString As String, result As Uri) As Boolean
+  overload: osu.Framework.Utils.Validation.TryParseUri*
+  nameWithType.vb: Validation.TryParseUri(String, Uri)
+  fullName.vb: osu.Framework.Utils.Validation.TryParseUri(String, System.Uri)
+  name.vb: TryParseUri(String, Uri)
+- uid: osu.Framework.Utils.Validation.IsSupportedBindableNumberType``1
+  commentId: M:osu.Framework.Utils.Validation.IsSupportedBindableNumberType``1
+  id: IsSupportedBindableNumberType``1
+  parent: osu.Framework.Utils.Validation
+  langs:
+  - csharp
+  - vb
+  name: IsSupportedBindableNumberType<T>()
+  nameWithType: Validation.IsSupportedBindableNumberType<T>()
+  fullName: osu.Framework.Utils.Validation.IsSupportedBindableNumberType<T>()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/Validation.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: IsSupportedBindableNumberType
+    path: osu.Framework/Utils/Validation.cs
+    startLine: 61
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Whether the specified type <code class="typeparamref">T</code> is a number type supported by <xref href="osu.Framework.Bindables.BindableNumber%601" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    Directly comparing typeof(T) to type literal is recognized pattern of JIT and very fast.
+
+    Just a pointer comparison for reference types, or constant for value types.
+
+    The check will become NOP in usages after optimization.
+  example: []
+  syntax:
+    content: public static bool IsSupportedBindableNumberType<T>()
+    typeParameters:
+    - id: T
+      description: The type to check for.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the type is supported; <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> otherwise.
+    content.vb: Public Shared Function IsSupportedBindableNumberType(Of T)() As Boolean
+  overload: osu.Framework.Utils.Validation.IsSupportedBindableNumberType*
+  nameWithType.vb: Validation.IsSupportedBindableNumberType(Of T)()
+  fullName.vb: osu.Framework.Utils.Validation.IsSupportedBindableNumberType(Of T)()
+  name.vb: IsSupportedBindableNumberType(Of T)()
+references:
+- uid: osu.Framework.Utils
+  commentId: N:osu.Framework.Utils
+  href: osu.html
+  name: osu.Framework.Utils
+  nameWithType: osu.Framework.Utils
+  fullName: osu.Framework.Utils
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Utils
+    name: Utils
+    href: osu.Framework.Utils.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Utils
+    name: Utils
+    href: osu.Framework.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single.IsFinite(System.Single)
+  commentId: M:System.Single.IsFinite(System.Single)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single.isfinite
+  name: IsFinite(float)
+  nameWithType: float.IsFinite(float)
+  fullName: float.IsFinite(float)
+  nameWithType.vb: Single.IsFinite(Single)
+  fullName.vb: Single.IsFinite(Single)
+  name.vb: IsFinite(Single)
+  spec.csharp:
+  - uid: System.Single.IsFinite(System.Single)
+    name: IsFinite
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single.isfinite
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: System.Single.IsFinite(System.Single)
+    name: IsFinite
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single.isfinite
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: osuTK.Vector2
+  commentId: T:osuTK.Vector2
+  parent: osuTK
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: osuTK.Vector2
+- uid: osu.Framework.Utils.Validation.IsFinite*
+  commentId: Overload:osu.Framework.Utils.Validation.IsFinite
+  href: osu.Framework.Utils.Validation.html#osu_Framework_Utils_Validation_IsFinite_osuTK_Vector2_
+  name: IsFinite
+  nameWithType: Validation.IsFinite
+  fullName: osu.Framework.Utils.Validation.IsFinite
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osuTK
+  commentId: N:osuTK
+  isExternal: true
+  name: osuTK
+  nameWithType: osuTK
+  fullName: osuTK
+- uid: osu.Framework.Graphics.MarginPadding
+  commentId: T:osu.Framework.Graphics.MarginPadding
+  parent: osu.Framework.Graphics
+  href: osu.Framework.Graphics.MarginPadding.html
+  name: MarginPadding
+  nameWithType: MarginPadding
+  fullName: osu.Framework.Graphics.MarginPadding
+- uid: osu.Framework.Graphics
+  commentId: N:osu.Framework.Graphics
+  href: osu.html
+  name: osu.Framework.Graphics
+  nameWithType: osu.Framework.Graphics
+  fullName: osu.Framework.Graphics
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: osu.Framework.Utils.Validation.TryParseUri*
+  commentId: Overload:osu.Framework.Utils.Validation.TryParseUri
+  href: osu.Framework.Utils.Validation.html#osu_Framework_Utils_Validation_TryParseUri_System_String_System_Uri__
+  name: TryParseUri
+  nameWithType: Validation.TryParseUri
+  fullName: osu.Framework.Utils.Validation.TryParseUri
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: osu.Framework.Bindables.BindableNumber`1
+  commentId: T:osu.Framework.Bindables.BindableNumber`1
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.BindableNumber-1.html
+  name: BindableNumber<T>
+  nameWithType: BindableNumber<T>
+  fullName: osu.Framework.Bindables.BindableNumber<T>
+  nameWithType.vb: BindableNumber(Of T)
+  fullName.vb: osu.Framework.Bindables.BindableNumber(Of T)
+  name.vb: BindableNumber(Of T)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.BindableNumber`1
+    name: BindableNumber
+    href: osu.Framework.Bindables.BindableNumber-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.BindableNumber`1
+    name: BindableNumber
+    href: osu.Framework.Bindables.BindableNumber-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Utils.Validation.IsSupportedBindableNumberType*
+  commentId: Overload:osu.Framework.Utils.Validation.IsSupportedBindableNumberType
+  href: osu.Framework.Utils.Validation.html#osu_Framework_Utils_Validation_IsSupportedBindableNumberType__1
+  name: IsSupportedBindableNumberType
+  nameWithType: Validation.IsSupportedBindableNumberType
+  fullName: osu.Framework.Utils.Validation.IsSupportedBindableNumberType
+- uid: osu.Framework.Bindables
+  commentId: N:osu.Framework.Bindables
+  href: osu.html
+  name: osu.Framework.Bindables
+  nameWithType: osu.Framework.Bindables
+  fullName: osu.Framework.Bindables
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html

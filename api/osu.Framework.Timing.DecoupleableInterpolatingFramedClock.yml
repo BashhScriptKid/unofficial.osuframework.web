@@ -1,0 +1,2138 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  commentId: T:osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  id: DecoupleableInterpolatingFramedClock
+  parent: osu.Framework.Timing
+  children:
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.#ctor
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ChangeSource(osu.Framework.Timing.IClock)
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.CurrentTime
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ElapsedFrameTime
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsCoupled
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProcessFrame
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedCurrentTime
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedElapsedTime
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Rate
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Reset
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ResetSpeedAdjustments
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Seek(System.Double)
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Start
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Stop
+  langs:
+  - csharp
+  - vb
+  name: DecoupleableInterpolatingFramedClock
+  nameWithType: DecoupleableInterpolatingFramedClock
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: DecoupleableInterpolatingFramedClock
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 18
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: >-
+    Adds the ability to keep the clock running even when the underlying source has stopped or cannot handle the current time range.
+
+    This is handled by performing seeks on the underlying source and checking whether they were successful or not.
+
+    On failure to seek, we take over with an internal clock until control can be returned to the actual source.
+
+
+    This clock type removes the requirement of having a source set.
+
+
+    If a <xref href="osu.Framework.Timing.InterpolatingFramedClock.Source" data-throw-if-not-resolved="false"></xref> is set, it is presumed that we have exclusive control over operations on it.
+
+    This is used to our advantage to allow correct <xref href="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning" data-throw-if-not-resolved="false"></xref> state tracking in the event of cross-thread communication delays (with an audio thread, for instance).
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("This clock implementation is too complex and no longer. Use DecouplingClock instead.")]
+
+      public class DecoupleableInterpolatingFramedClock : InterpolatingFramedClock, IFrameBasedClock, ISourceChangeableClock, IAdjustableClock, IClock
+    content.vb: >-
+      <Obsolete("This clock implementation is too complex and no longer. Use DecouplingClock instead.")>
+
+      Public Class DecoupleableInterpolatingFramedClock Inherits InterpolatingFramedClock Implements IFrameBasedClock, ISourceChangeableClock, IAdjustableClock, IClock
+  inheritance:
+  - System.Object
+  - osu.Framework.Timing.InterpolatingFramedClock
+  implements:
+  - osu.Framework.Timing.IFrameBasedClock
+  - osu.Framework.Timing.ISourceChangeableClock
+  - osu.Framework.Timing.IAdjustableClock
+  - osu.Framework.Timing.IClock
+  inheritedMembers:
+  - osu.Framework.Timing.InterpolatingFramedClock.AllowableErrorMilliseconds
+  - osu.Framework.Timing.InterpolatingFramedClock.IsInterpolating
+  - osu.Framework.Timing.InterpolatingFramedClock.Drift
+  - osu.Framework.Timing.InterpolatingFramedClock.Source
+  - osu.Framework.Timing.InterpolatingFramedClock.FramedSourceClock
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: This clock implementation is too complex and no longer. Use DecouplingClock instead.
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsCoupled
+  commentId: F:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsCoupled
+  id: IsCoupled
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: IsCoupled
+  nameWithType: DecoupleableInterpolatingFramedClock.IsCoupled
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsCoupled
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: IsCoupled
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 24
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Specify whether we are coupled 1:1 to SourceClock. If not, we can independently continue operation.
+  example: []
+  syntax:
+    content: public bool IsCoupled
+    return:
+      type: System.Boolean
+    content.vb: Public IsCoupled As Boolean
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.CurrentTime
+  commentId: P:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.CurrentTime
+  id: CurrentTime
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: CurrentTime
+  nameWithType: DecoupleableInterpolatingFramedClock.CurrentTime
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.CurrentTime
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CurrentTime
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 39
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: The current time of this clock, in milliseconds.
+  example: []
+  syntax:
+    content: public override double CurrentTime { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Overrides Property CurrentTime As Double
+  overridden: osu.Framework.Timing.InterpolatingFramedClock.CurrentTime
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.CurrentTime*
+  implements:
+  - osu.Framework.Timing.IClock.CurrentTime
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedCurrentTime
+  commentId: P:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedCurrentTime
+  id: ProposedCurrentTime
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: ProposedCurrentTime
+  nameWithType: DecoupleableInterpolatingFramedClock.ProposedCurrentTime
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedCurrentTime
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ProposedCurrentTime
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 43
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  syntax:
+    content: public double ProposedCurrentTime { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property ProposedCurrentTime As Double
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedCurrentTime*
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedElapsedTime
+  commentId: P:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedElapsedTime
+  id: ProposedElapsedTime
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: ProposedElapsedTime
+  nameWithType: DecoupleableInterpolatingFramedClock.ProposedElapsedTime
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedElapsedTime
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ProposedElapsedTime
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 45
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  syntax:
+    content: public double ProposedElapsedTime { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property ProposedElapsedTime As Double
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedElapsedTime*
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning
+  commentId: P:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning
+  id: IsRunning
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: IsRunning
+  nameWithType: DecoupleableInterpolatingFramedClock.IsRunning
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: IsRunning
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 47
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Whether this clock is currently running or not.
+  example: []
+  syntax:
+    content: public override bool IsRunning { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Property IsRunning As Boolean
+  overridden: osu.Framework.Timing.InterpolatingFramedClock.IsRunning
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning*
+  implements:
+  - osu.Framework.Timing.IClock.IsRunning
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ElapsedFrameTime
+  commentId: P:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ElapsedFrameTime
+  id: ElapsedFrameTime
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: ElapsedFrameTime
+  nameWithType: DecoupleableInterpolatingFramedClock.ElapsedFrameTime
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ElapsedFrameTime
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ElapsedFrameTime
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 51
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Elapsed time since last frame in milliseconds.
+  example: []
+  syntax:
+    content: public override double ElapsedFrameTime { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Overrides Property ElapsedFrameTime As Double
+  overridden: osu.Framework.Timing.InterpolatingFramedClock.ElapsedFrameTime
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ElapsedFrameTime*
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Rate
+  commentId: P:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Rate
+  id: Rate
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: Rate
+  nameWithType: DecoupleableInterpolatingFramedClock.Rate
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Rate
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Rate
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 53
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: The rate this clock is running at, relative to real-time.
+  example: []
+  syntax:
+    content: public double Rate { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Rate As Double
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Rate*
+  implements:
+  - osu.Framework.Timing.IAdjustableClock.Rate
+  - osu.Framework.Timing.IClock.Rate
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ResetSpeedAdjustments
+  commentId: M:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ResetSpeedAdjustments
+  id: ResetSpeedAdjustments
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: ResetSpeedAdjustments()
+  nameWithType: DecoupleableInterpolatingFramedClock.ResetSpeedAdjustments()
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ResetSpeedAdjustments()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ResetSpeedAdjustments
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 65
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Reset the rate to a stable value.
+  example: []
+  syntax:
+    content: public void ResetSpeedAdjustments()
+    content.vb: Public Sub ResetSpeedAdjustments()
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ResetSpeedAdjustments*
+  implements:
+  - osu.Framework.Timing.IAdjustableClock.ResetSpeedAdjustments
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.#ctor
+  commentId: M:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.#ctor
+  id: '#ctor'
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: DecoupleableInterpolatingFramedClock()
+  nameWithType: DecoupleableInterpolatingFramedClock.DecoupleableInterpolatingFramedClock()
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.DecoupleableInterpolatingFramedClock()
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 67
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  syntax:
+    content: public DecoupleableInterpolatingFramedClock()
+    content.vb: Public Sub New()
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.#ctor*
+  nameWithType.vb: DecoupleableInterpolatingFramedClock.New()
+  fullName.vb: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.New()
+  name.vb: New()
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProcessFrame
+  commentId: M:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProcessFrame
+  id: ProcessFrame
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: ProcessFrame()
+  nameWithType: DecoupleableInterpolatingFramedClock.ProcessFrame()
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProcessFrame()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ProcessFrame
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 72
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Processes one frame. Generally should be run once per update loop.
+  example: []
+  syntax:
+    content: public override void ProcessFrame()
+    content.vb: Public Overrides Sub ProcessFrame()
+  overridden: osu.Framework.Timing.InterpolatingFramedClock.ProcessFrame
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProcessFrame*
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ChangeSource(osu.Framework.Timing.IClock)
+  commentId: M:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ChangeSource(osu.Framework.Timing.IClock)
+  id: ChangeSource(osu.Framework.Timing.IClock)
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: ChangeSource(IClock?)
+  nameWithType: DecoupleableInterpolatingFramedClock.ChangeSource(IClock?)
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ChangeSource(osu.Framework.Timing.IClock?)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ChangeSource
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 134
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Change the source clock.
+  example: []
+  syntax:
+    content: public override void ChangeSource(IClock? source)
+    parameters:
+    - id: source
+      type: osu.Framework.Timing.IClock
+      description: The new source clock.
+    content.vb: Public Overrides Sub ChangeSource(source As IClock)
+  overridden: osu.Framework.Timing.InterpolatingFramedClock.ChangeSource(osu.Framework.Timing.IClock)
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ChangeSource*
+  nameWithType.vb: DecoupleableInterpolatingFramedClock.ChangeSource(IClock)
+  fullName.vb: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ChangeSource(osu.Framework.Timing.IClock)
+  name.vb: ChangeSource(IClock)
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Reset
+  commentId: M:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Reset
+  id: Reset
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: DecoupleableInterpolatingFramedClock.Reset()
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Reset()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Reset
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 150
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Stop and reset position.
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Reset*
+  implements:
+  - osu.Framework.Timing.IAdjustableClock.Reset
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Start
+  commentId: M:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Start
+  id: Start
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: DecoupleableInterpolatingFramedClock.Start()
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Start()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Start
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 158
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Start (resume) running.
+  example: []
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start()
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Start*
+  implements:
+  - osu.Framework.Timing.IAdjustableClock.Start
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Stop
+  commentId: M:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Stop
+  id: Stop
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: DecoupleableInterpolatingFramedClock.Stop()
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Stop()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Stop
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 171
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Stop (pause) running.
+  example: []
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub [Stop]()
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Stop*
+  implements:
+  - osu.Framework.Timing.IAdjustableClock.Stop
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Seek(System.Double)
+  commentId: M:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Seek(System.Double)
+  id: Seek(System.Double)
+  parent: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+  langs:
+  - csharp
+  - vb
+  name: Seek(double)
+  nameWithType: DecoupleableInterpolatingFramedClock.Seek(double)
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Seek(double)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Seek
+    path: osu.Framework/Timing/DecoupleableInterpolatingFramedClock.cs
+    startLine: 177
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Seek to a specific time position.
+  example: []
+  syntax:
+    content: public bool Seek(double position)
+    parameters:
+    - id: position
+      type: System.Double
+    return:
+      type: System.Boolean
+      description: Whether a seek was possible.
+    content.vb: Public Function Seek(position As Double) As Boolean
+  overload: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Seek*
+  implements:
+  - osu.Framework.Timing.IAdjustableClock.Seek(System.Double)
+  nameWithType.vb: DecoupleableInterpolatingFramedClock.Seek(Double)
+  fullName.vb: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Seek(Double)
+  name.vb: Seek(Double)
+references:
+- uid: osu.Framework.Timing.InterpolatingFramedClock.Source
+  commentId: P:osu.Framework.Timing.InterpolatingFramedClock.Source
+  parent: osu.Framework.Timing.InterpolatingFramedClock
+  href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_Source
+  name: Source
+  nameWithType: InterpolatingFramedClock.Source
+  fullName: osu.Framework.Timing.InterpolatingFramedClock.Source
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning
+  commentId: P:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_IsRunning
+  name: IsRunning
+  nameWithType: DecoupleableInterpolatingFramedClock.IsRunning
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning
+- uid: osu.Framework.Timing
+  commentId: N:osu.Framework.Timing
+  href: osu.html
+  name: osu.Framework.Timing
+  nameWithType: osu.Framework.Timing
+  fullName: osu.Framework.Timing
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Timing
+    name: Timing
+    href: osu.Framework.Timing.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Timing
+    name: Timing
+    href: osu.Framework.Timing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: osu.Framework.Timing.InterpolatingFramedClock
+  commentId: T:osu.Framework.Timing.InterpolatingFramedClock
+  parent: osu.Framework.Timing
+  href: osu.Framework.Timing.InterpolatingFramedClock.html
+  name: InterpolatingFramedClock
+  nameWithType: InterpolatingFramedClock
+  fullName: osu.Framework.Timing.InterpolatingFramedClock
+- uid: osu.Framework.Timing.IFrameBasedClock
+  commentId: T:osu.Framework.Timing.IFrameBasedClock
+  parent: osu.Framework.Timing
+  href: osu.Framework.Timing.IFrameBasedClock.html
+  name: IFrameBasedClock
+  nameWithType: IFrameBasedClock
+  fullName: osu.Framework.Timing.IFrameBasedClock
+- uid: osu.Framework.Timing.ISourceChangeableClock
+  commentId: T:osu.Framework.Timing.ISourceChangeableClock
+  parent: osu.Framework.Timing
+  href: osu.Framework.Timing.ISourceChangeableClock.html
+  name: ISourceChangeableClock
+  nameWithType: ISourceChangeableClock
+  fullName: osu.Framework.Timing.ISourceChangeableClock
+- uid: osu.Framework.Timing.IAdjustableClock
+  commentId: T:osu.Framework.Timing.IAdjustableClock
+  parent: osu.Framework.Timing
+  href: osu.Framework.Timing.IAdjustableClock.html
+  name: IAdjustableClock
+  nameWithType: IAdjustableClock
+  fullName: osu.Framework.Timing.IAdjustableClock
+- uid: osu.Framework.Timing.IClock
+  commentId: T:osu.Framework.Timing.IClock
+  parent: osu.Framework.Timing
+  href: osu.Framework.Timing.IClock.html
+  name: IClock
+  nameWithType: IClock
+  fullName: osu.Framework.Timing.IClock
+- uid: osu.Framework.Timing.InterpolatingFramedClock.AllowableErrorMilliseconds
+  commentId: P:osu.Framework.Timing.InterpolatingFramedClock.AllowableErrorMilliseconds
+  parent: osu.Framework.Timing.InterpolatingFramedClock
+  href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_AllowableErrorMilliseconds
+  name: AllowableErrorMilliseconds
+  nameWithType: InterpolatingFramedClock.AllowableErrorMilliseconds
+  fullName: osu.Framework.Timing.InterpolatingFramedClock.AllowableErrorMilliseconds
+- uid: osu.Framework.Timing.InterpolatingFramedClock.IsInterpolating
+  commentId: P:osu.Framework.Timing.InterpolatingFramedClock.IsInterpolating
+  parent: osu.Framework.Timing.InterpolatingFramedClock
+  href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_IsInterpolating
+  name: IsInterpolating
+  nameWithType: InterpolatingFramedClock.IsInterpolating
+  fullName: osu.Framework.Timing.InterpolatingFramedClock.IsInterpolating
+- uid: osu.Framework.Timing.InterpolatingFramedClock.Drift
+  commentId: P:osu.Framework.Timing.InterpolatingFramedClock.Drift
+  parent: osu.Framework.Timing.InterpolatingFramedClock
+  href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_Drift
+  name: Drift
+  nameWithType: InterpolatingFramedClock.Drift
+  fullName: osu.Framework.Timing.InterpolatingFramedClock.Drift
+- uid: osu.Framework.Timing.InterpolatingFramedClock.FramedSourceClock
+  commentId: F:osu.Framework.Timing.InterpolatingFramedClock.FramedSourceClock
+  parent: osu.Framework.Timing.InterpolatingFramedClock
+  href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_FramedSourceClock
+  name: FramedSourceClock
+  nameWithType: InterpolatingFramedClock.FramedSourceClock
+  fullName: osu.Framework.Timing.InterpolatingFramedClock.FramedSourceClock
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<DecoupleableInterpolatingFramedClock>(DecoupleableInterpolatingFramedClock)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<DecoupleableInterpolatingFramedClock>(DecoupleableInterpolatingFramedClock)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Timing.DecoupleableInterpolatingFramedClock>(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of DecoupleableInterpolatingFramedClock)(DecoupleableInterpolatingFramedClock)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Timing.DecoupleableInterpolatingFramedClock)(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+  name.vb: GetLocalisableDescription(Of DecoupleableInterpolatingFramedClock)(DecoupleableInterpolatingFramedClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<DecoupleableInterpolatingFramedClock>(DecoupleableInterpolatingFramedClock)
+  nameWithType: EnumerableExtensions.Yield<DecoupleableInterpolatingFramedClock>(DecoupleableInterpolatingFramedClock)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Timing.DecoupleableInterpolatingFramedClock>(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+  nameWithType.vb: EnumerableExtensions.Yield(Of DecoupleableInterpolatingFramedClock)(DecoupleableInterpolatingFramedClock)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Timing.DecoupleableInterpolatingFramedClock)(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+  name.vb: Yield(Of DecoupleableInterpolatingFramedClock)(DecoupleableInterpolatingFramedClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<DecoupleableInterpolatingFramedClock>(DecoupleableInterpolatingFramedClock)
+  nameWithType: ObjectExtensions.AsNonNull<DecoupleableInterpolatingFramedClock>(DecoupleableInterpolatingFramedClock)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Timing.DecoupleableInterpolatingFramedClock>(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of DecoupleableInterpolatingFramedClock)(DecoupleableInterpolatingFramedClock)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Timing.DecoupleableInterpolatingFramedClock)(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+  name.vb: AsNonNull(Of DecoupleableInterpolatingFramedClock)(DecoupleableInterpolatingFramedClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<DecoupleableInterpolatingFramedClock>(DecoupleableInterpolatingFramedClock)
+  nameWithType: ObjectExtensions.IsNotNull<DecoupleableInterpolatingFramedClock>(DecoupleableInterpolatingFramedClock)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Timing.DecoupleableInterpolatingFramedClock>(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of DecoupleableInterpolatingFramedClock)(DecoupleableInterpolatingFramedClock)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Timing.DecoupleableInterpolatingFramedClock)(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+  name.vb: IsNotNull(Of DecoupleableInterpolatingFramedClock)(DecoupleableInterpolatingFramedClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<DecoupleableInterpolatingFramedClock>(DecoupleableInterpolatingFramedClock)
+  nameWithType: ObjectExtensions.IsNull<DecoupleableInterpolatingFramedClock>(DecoupleableInterpolatingFramedClock)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Timing.DecoupleableInterpolatingFramedClock>(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+  nameWithType.vb: ObjectExtensions.IsNull(Of DecoupleableInterpolatingFramedClock)(DecoupleableInterpolatingFramedClock)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Timing.DecoupleableInterpolatingFramedClock)(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+  name.vb: IsNull(Of DecoupleableInterpolatingFramedClock)(DecoupleableInterpolatingFramedClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Timing.DecoupleableInterpolatingFramedClock)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<DecoupleableInterpolatingFramedClock, TChild>(DecoupleableInterpolatingFramedClock, TChild)
+  nameWithType: ContainerExtensions.WithChild<DecoupleableInterpolatingFramedClock, TChild>(DecoupleableInterpolatingFramedClock, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Timing.DecoupleableInterpolatingFramedClock, TChild>(osu.Framework.Timing.DecoupleableInterpolatingFramedClock, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of DecoupleableInterpolatingFramedClock, TChild)(DecoupleableInterpolatingFramedClock, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Timing.DecoupleableInterpolatingFramedClock, TChild)(osu.Framework.Timing.DecoupleableInterpolatingFramedClock, TChild)
+  name.vb: WithChild(Of DecoupleableInterpolatingFramedClock, TChild)(DecoupleableInterpolatingFramedClock, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Timing.DecoupleableInterpolatingFramedClock,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Timing.DecoupleableInterpolatingFramedClock,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<DecoupleableInterpolatingFramedClock, TChild>(DecoupleableInterpolatingFramedClock, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<DecoupleableInterpolatingFramedClock, TChild>(DecoupleableInterpolatingFramedClock, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Timing.DecoupleableInterpolatingFramedClock, TChild>(osu.Framework.Timing.DecoupleableInterpolatingFramedClock, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of DecoupleableInterpolatingFramedClock, TChild)(DecoupleableInterpolatingFramedClock, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Timing.DecoupleableInterpolatingFramedClock, TChild)(osu.Framework.Timing.DecoupleableInterpolatingFramedClock, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of DecoupleableInterpolatingFramedClock, TChild)(DecoupleableInterpolatingFramedClock, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Timing.DecoupleableInterpolatingFramedClock,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Timing.DecoupleableInterpolatingFramedClock,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<DecoupleableInterpolatingFramedClock, TChild>(DecoupleableInterpolatingFramedClock, TChild)
+  nameWithType: ContainerExtensions.Wrap<DecoupleableInterpolatingFramedClock, TChild>(DecoupleableInterpolatingFramedClock, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Timing.DecoupleableInterpolatingFramedClock, TChild>(osu.Framework.Timing.DecoupleableInterpolatingFramedClock, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of DecoupleableInterpolatingFramedClock, TChild)(DecoupleableInterpolatingFramedClock, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Timing.DecoupleableInterpolatingFramedClock, TChild)(osu.Framework.Timing.DecoupleableInterpolatingFramedClock, TChild)
+  name.vb: Wrap(Of DecoupleableInterpolatingFramedClock, TChild)(DecoupleableInterpolatingFramedClock, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Timing.DecoupleableInterpolatingFramedClock,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Timing.DecoupleableInterpolatingFramedClock,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock
+    name: DecoupleableInterpolatingFramedClock
+    href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Timing.InterpolatingFramedClock.CurrentTime
+  commentId: P:osu.Framework.Timing.InterpolatingFramedClock.CurrentTime
+  parent: osu.Framework.Timing.InterpolatingFramedClock
+  href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_CurrentTime
+  name: CurrentTime
+  nameWithType: InterpolatingFramedClock.CurrentTime
+  fullName: osu.Framework.Timing.InterpolatingFramedClock.CurrentTime
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.CurrentTime*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.CurrentTime
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_CurrentTime
+  name: CurrentTime
+  nameWithType: DecoupleableInterpolatingFramedClock.CurrentTime
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.CurrentTime
+- uid: osu.Framework.Timing.IClock.CurrentTime
+  commentId: P:osu.Framework.Timing.IClock.CurrentTime
+  parent: osu.Framework.Timing.IClock
+  href: osu.Framework.Timing.IClock.html#osu_Framework_Timing_IClock_CurrentTime
+  name: CurrentTime
+  nameWithType: IClock.CurrentTime
+  fullName: osu.Framework.Timing.IClock.CurrentTime
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedCurrentTime*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedCurrentTime
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ProposedCurrentTime
+  name: ProposedCurrentTime
+  nameWithType: DecoupleableInterpolatingFramedClock.ProposedCurrentTime
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedCurrentTime
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedElapsedTime*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedElapsedTime
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ProposedElapsedTime
+  name: ProposedElapsedTime
+  nameWithType: DecoupleableInterpolatingFramedClock.ProposedElapsedTime
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProposedElapsedTime
+- uid: osu.Framework.Timing.InterpolatingFramedClock.IsRunning
+  commentId: P:osu.Framework.Timing.InterpolatingFramedClock.IsRunning
+  parent: osu.Framework.Timing.InterpolatingFramedClock
+  href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_IsRunning
+  name: IsRunning
+  nameWithType: InterpolatingFramedClock.IsRunning
+  fullName: osu.Framework.Timing.InterpolatingFramedClock.IsRunning
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_IsRunning
+  name: IsRunning
+  nameWithType: DecoupleableInterpolatingFramedClock.IsRunning
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning
+- uid: osu.Framework.Timing.IClock.IsRunning
+  commentId: P:osu.Framework.Timing.IClock.IsRunning
+  parent: osu.Framework.Timing.IClock
+  href: osu.Framework.Timing.IClock.html#osu_Framework_Timing_IClock_IsRunning
+  name: IsRunning
+  nameWithType: IClock.IsRunning
+  fullName: osu.Framework.Timing.IClock.IsRunning
+- uid: osu.Framework.Timing.InterpolatingFramedClock.ElapsedFrameTime
+  commentId: P:osu.Framework.Timing.InterpolatingFramedClock.ElapsedFrameTime
+  parent: osu.Framework.Timing.InterpolatingFramedClock
+  href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_ElapsedFrameTime
+  name: ElapsedFrameTime
+  nameWithType: InterpolatingFramedClock.ElapsedFrameTime
+  fullName: osu.Framework.Timing.InterpolatingFramedClock.ElapsedFrameTime
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ElapsedFrameTime*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ElapsedFrameTime
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ElapsedFrameTime
+  name: ElapsedFrameTime
+  nameWithType: DecoupleableInterpolatingFramedClock.ElapsedFrameTime
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ElapsedFrameTime
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Rate*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Rate
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Rate
+  name: Rate
+  nameWithType: DecoupleableInterpolatingFramedClock.Rate
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Rate
+- uid: osu.Framework.Timing.IAdjustableClock.Rate
+  commentId: P:osu.Framework.Timing.IAdjustableClock.Rate
+  parent: osu.Framework.Timing.IAdjustableClock
+  href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Rate
+  name: Rate
+  nameWithType: IAdjustableClock.Rate
+  fullName: osu.Framework.Timing.IAdjustableClock.Rate
+- uid: osu.Framework.Timing.IClock.Rate
+  commentId: P:osu.Framework.Timing.IClock.Rate
+  parent: osu.Framework.Timing.IClock
+  href: osu.Framework.Timing.IClock.html#osu_Framework_Timing_IClock_Rate
+  name: Rate
+  nameWithType: IClock.Rate
+  fullName: osu.Framework.Timing.IClock.Rate
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ResetSpeedAdjustments*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ResetSpeedAdjustments
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ResetSpeedAdjustments
+  name: ResetSpeedAdjustments
+  nameWithType: DecoupleableInterpolatingFramedClock.ResetSpeedAdjustments
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ResetSpeedAdjustments
+- uid: osu.Framework.Timing.IAdjustableClock.ResetSpeedAdjustments
+  commentId: M:osu.Framework.Timing.IAdjustableClock.ResetSpeedAdjustments
+  parent: osu.Framework.Timing.IAdjustableClock
+  href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_ResetSpeedAdjustments
+  name: ResetSpeedAdjustments()
+  nameWithType: IAdjustableClock.ResetSpeedAdjustments()
+  fullName: osu.Framework.Timing.IAdjustableClock.ResetSpeedAdjustments()
+  spec.csharp:
+  - uid: osu.Framework.Timing.IAdjustableClock.ResetSpeedAdjustments
+    name: ResetSpeedAdjustments
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_ResetSpeedAdjustments
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Timing.IAdjustableClock.ResetSpeedAdjustments
+    name: ResetSpeedAdjustments
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_ResetSpeedAdjustments
+  - name: (
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.#ctor*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.#ctor
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock__ctor
+  name: DecoupleableInterpolatingFramedClock
+  nameWithType: DecoupleableInterpolatingFramedClock.DecoupleableInterpolatingFramedClock
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.DecoupleableInterpolatingFramedClock
+  nameWithType.vb: DecoupleableInterpolatingFramedClock.New
+  fullName.vb: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.New
+  name.vb: New
+- uid: osu.Framework.Timing.InterpolatingFramedClock.ProcessFrame
+  commentId: M:osu.Framework.Timing.InterpolatingFramedClock.ProcessFrame
+  parent: osu.Framework.Timing.InterpolatingFramedClock
+  href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_ProcessFrame
+  name: ProcessFrame()
+  nameWithType: InterpolatingFramedClock.ProcessFrame()
+  fullName: osu.Framework.Timing.InterpolatingFramedClock.ProcessFrame()
+  spec.csharp:
+  - uid: osu.Framework.Timing.InterpolatingFramedClock.ProcessFrame
+    name: ProcessFrame
+    href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_ProcessFrame
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Timing.InterpolatingFramedClock.ProcessFrame
+    name: ProcessFrame
+    href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_ProcessFrame
+  - name: (
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProcessFrame*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProcessFrame
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ProcessFrame
+  name: ProcessFrame
+  nameWithType: DecoupleableInterpolatingFramedClock.ProcessFrame
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ProcessFrame
+- uid: osu.Framework.Timing.InterpolatingFramedClock.ChangeSource(osu.Framework.Timing.IClock)
+  commentId: M:osu.Framework.Timing.InterpolatingFramedClock.ChangeSource(osu.Framework.Timing.IClock)
+  parent: osu.Framework.Timing.InterpolatingFramedClock
+  href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_ChangeSource_osu_Framework_Timing_IClock_
+  name: ChangeSource(IClock)
+  nameWithType: InterpolatingFramedClock.ChangeSource(IClock)
+  fullName: osu.Framework.Timing.InterpolatingFramedClock.ChangeSource(osu.Framework.Timing.IClock)
+  spec.csharp:
+  - uid: osu.Framework.Timing.InterpolatingFramedClock.ChangeSource(osu.Framework.Timing.IClock)
+    name: ChangeSource
+    href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_ChangeSource_osu_Framework_Timing_IClock_
+  - name: (
+  - uid: osu.Framework.Timing.IClock
+    name: IClock
+    href: osu.Framework.Timing.IClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Timing.InterpolatingFramedClock.ChangeSource(osu.Framework.Timing.IClock)
+    name: ChangeSource
+    href: osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_ChangeSource_osu_Framework_Timing_IClock_
+  - name: (
+  - uid: osu.Framework.Timing.IClock
+    name: IClock
+    href: osu.Framework.Timing.IClock.html
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ChangeSource*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ChangeSource
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_ChangeSource_osu_Framework_Timing_IClock_
+  name: ChangeSource
+  nameWithType: DecoupleableInterpolatingFramedClock.ChangeSource
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.ChangeSource
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Reset*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Reset
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Reset
+  name: Reset
+  nameWithType: DecoupleableInterpolatingFramedClock.Reset
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Reset
+- uid: osu.Framework.Timing.IAdjustableClock.Reset
+  commentId: M:osu.Framework.Timing.IAdjustableClock.Reset
+  parent: osu.Framework.Timing.IAdjustableClock
+  href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Reset
+  name: Reset()
+  nameWithType: IAdjustableClock.Reset()
+  fullName: osu.Framework.Timing.IAdjustableClock.Reset()
+  spec.csharp:
+  - uid: osu.Framework.Timing.IAdjustableClock.Reset
+    name: Reset
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Reset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Timing.IAdjustableClock.Reset
+    name: Reset
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Reset
+  - name: (
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Start*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Start
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Start
+  name: Start
+  nameWithType: DecoupleableInterpolatingFramedClock.Start
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Start
+- uid: osu.Framework.Timing.IAdjustableClock.Start
+  commentId: M:osu.Framework.Timing.IAdjustableClock.Start
+  parent: osu.Framework.Timing.IAdjustableClock
+  href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Start
+  name: Start()
+  nameWithType: IAdjustableClock.Start()
+  fullName: osu.Framework.Timing.IAdjustableClock.Start()
+  spec.csharp:
+  - uid: osu.Framework.Timing.IAdjustableClock.Start
+    name: Start
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Timing.IAdjustableClock.Start
+    name: Start
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Start
+  - name: (
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Stop*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Stop
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Stop
+  name: Stop
+  nameWithType: DecoupleableInterpolatingFramedClock.Stop
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Stop
+- uid: osu.Framework.Timing.IAdjustableClock.Stop
+  commentId: M:osu.Framework.Timing.IAdjustableClock.Stop
+  parent: osu.Framework.Timing.IAdjustableClock
+  href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Stop
+  name: Stop()
+  nameWithType: IAdjustableClock.Stop()
+  fullName: osu.Framework.Timing.IAdjustableClock.Stop()
+  spec.csharp:
+  - uid: osu.Framework.Timing.IAdjustableClock.Stop
+    name: Stop
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Stop
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Timing.IAdjustableClock.Stop
+    name: Stop
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Stop
+  - name: (
+  - name: )
+- uid: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Seek*
+  commentId: Overload:osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Seek
+  href: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_Seek_System_Double_
+  name: Seek
+  nameWithType: DecoupleableInterpolatingFramedClock.Seek
+  fullName: osu.Framework.Timing.DecoupleableInterpolatingFramedClock.Seek
+- uid: osu.Framework.Timing.IAdjustableClock.Seek(System.Double)
+  commentId: M:osu.Framework.Timing.IAdjustableClock.Seek(System.Double)
+  parent: osu.Framework.Timing.IAdjustableClock
+  isExternal: true
+  href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Seek_System_Double_
+  name: Seek(double)
+  nameWithType: IAdjustableClock.Seek(double)
+  fullName: osu.Framework.Timing.IAdjustableClock.Seek(double)
+  nameWithType.vb: IAdjustableClock.Seek(Double)
+  fullName.vb: osu.Framework.Timing.IAdjustableClock.Seek(Double)
+  name.vb: Seek(Double)
+  spec.csharp:
+  - uid: osu.Framework.Timing.IAdjustableClock.Seek(System.Double)
+    name: Seek
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Seek_System_Double_
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Timing.IAdjustableClock.Seek(System.Double)
+    name: Seek
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Seek_System_Double_
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )

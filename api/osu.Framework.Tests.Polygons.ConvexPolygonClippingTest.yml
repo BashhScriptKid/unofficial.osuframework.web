@@ -1,0 +1,1746 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  commentId: T:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  id: ConvexPolygonClippingTest
+  parent: osu.Framework.Tests.Polygons
+  children:
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestClipFullyContained(osuTK.Vector2[],osuTK.Vector2[])
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptyClip
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptySubject
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestExternalPolygon(osuTK.Vector2[],osuTK.Vector2[])
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestFuzzedEdgeCases(osuTK.Vector2[],osuTK.Vector2[])
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestGeneralClipping(osuTK.Vector2[],osuTK.Vector2[],osuTK.Vector2[])
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestLineClipping
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestPointClipping
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestSubjectFullyContained(osuTK.Vector2[],osuTK.Vector2[])
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestTriangleClipping
+  langs:
+  - csharp
+  - vb
+  name: ConvexPolygonClippingTest
+  nameWithType: ConvexPolygonClippingTest
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  type: Class
+  source:
+    remote:
+      path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ConvexPolygonClippingTest
+    path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+    startLine: 12
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Polygons
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class ConvexPolygonClippingTest
+    content.vb: >-
+      <TestFixture>
+
+      Public Class ConvexPolygonClippingTest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestExternalPolygon(osuTK.Vector2[],osuTK.Vector2[])
+  commentId: M:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestExternalPolygon(osuTK.Vector2[],osuTK.Vector2[])
+  id: TestExternalPolygon(osuTK.Vector2[],osuTK.Vector2[])
+  parent: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  langs:
+  - csharp
+  - vb
+  name: TestExternalPolygon(Vector2[], Vector2[])
+  nameWithType: ConvexPolygonClippingTest.TestExternalPolygon(Vector2[], Vector2[])
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestExternalPolygon(osuTK.Vector2[], osuTK.Vector2[])
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestExternalPolygon
+    path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+    startLine: 43
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Polygons
+  syntax:
+    content: >-
+      [TestCaseSource("externalTestCases")]
+
+      public void TestExternalPolygon(Vector2[] polygonVertices1, Vector2[] polygonVertices2)
+    parameters:
+    - id: polygonVertices1
+      type: osuTK.Vector2[]
+    - id: polygonVertices2
+      type: osuTK.Vector2[]
+    content.vb: >-
+      <TestCaseSource("externalTestCases")>
+
+      Public Sub TestExternalPolygon(polygonVertices1 As Vector2(), polygonVertices2 As Vector2())
+  overload: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestExternalPolygon*
+  attributes:
+  - type: NUnit.Framework.TestCaseSourceAttribute
+    ctor: NUnit.Framework.TestCaseSourceAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: externalTestCases
+  nameWithType.vb: ConvexPolygonClippingTest.TestExternalPolygon(Vector2(), Vector2())
+  fullName.vb: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestExternalPolygon(osuTK.Vector2(), osuTK.Vector2())
+  name.vb: TestExternalPolygon(Vector2(), Vector2())
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestSubjectFullyContained(osuTK.Vector2[],osuTK.Vector2[])
+  commentId: M:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestSubjectFullyContained(osuTK.Vector2[],osuTK.Vector2[])
+  id: TestSubjectFullyContained(osuTK.Vector2[],osuTK.Vector2[])
+  parent: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  langs:
+  - csharp
+  - vb
+  name: TestSubjectFullyContained(Vector2[], Vector2[])
+  nameWithType: ConvexPolygonClippingTest.TestSubjectFullyContained(Vector2[], Vector2[])
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestSubjectFullyContained(osuTK.Vector2[], osuTK.Vector2[])
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestSubjectFullyContained
+    path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+    startLine: 83
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Polygons
+  syntax:
+    content: >-
+      [TestCaseSource("subjectFullyContainedTestCases")]
+
+      public void TestSubjectFullyContained(Vector2[] clipVertices, Vector2[] subjectVertices)
+    parameters:
+    - id: clipVertices
+      type: osuTK.Vector2[]
+    - id: subjectVertices
+      type: osuTK.Vector2[]
+    content.vb: >-
+      <TestCaseSource("subjectFullyContainedTestCases")>
+
+      Public Sub TestSubjectFullyContained(clipVertices As Vector2(), subjectVertices As Vector2())
+  overload: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestSubjectFullyContained*
+  attributes:
+  - type: NUnit.Framework.TestCaseSourceAttribute
+    ctor: NUnit.Framework.TestCaseSourceAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: subjectFullyContainedTestCases
+  nameWithType.vb: ConvexPolygonClippingTest.TestSubjectFullyContained(Vector2(), Vector2())
+  fullName.vb: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestSubjectFullyContained(osuTK.Vector2(), osuTK.Vector2())
+  name.vb: TestSubjectFullyContained(Vector2(), Vector2())
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestClipFullyContained(osuTK.Vector2[],osuTK.Vector2[])
+  commentId: M:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestClipFullyContained(osuTK.Vector2[],osuTK.Vector2[])
+  id: TestClipFullyContained(osuTK.Vector2[],osuTK.Vector2[])
+  parent: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  langs:
+  - csharp
+  - vb
+  name: TestClipFullyContained(Vector2[], Vector2[])
+  nameWithType: ConvexPolygonClippingTest.TestClipFullyContained(Vector2[], Vector2[])
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestClipFullyContained(osuTK.Vector2[], osuTK.Vector2[])
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestClipFullyContained
+    path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+    startLine: 97
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Polygons
+  syntax:
+    content: >-
+      [TestCaseSource("subjectFullyContainedTestCases")]
+
+      public void TestClipFullyContained(Vector2[] subjectVertices, Vector2[] clipVertices)
+    parameters:
+    - id: subjectVertices
+      type: osuTK.Vector2[]
+    - id: clipVertices
+      type: osuTK.Vector2[]
+    content.vb: >-
+      <TestCaseSource("subjectFullyContainedTestCases")>
+
+      Public Sub TestClipFullyContained(subjectVertices As Vector2(), clipVertices As Vector2())
+  overload: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestClipFullyContained*
+  attributes:
+  - type: NUnit.Framework.TestCaseSourceAttribute
+    ctor: NUnit.Framework.TestCaseSourceAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: subjectFullyContainedTestCases
+  nameWithType.vb: ConvexPolygonClippingTest.TestClipFullyContained(Vector2(), Vector2())
+  fullName.vb: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestClipFullyContained(osuTK.Vector2(), osuTK.Vector2())
+  name.vb: TestClipFullyContained(Vector2(), Vector2())
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestGeneralClipping(osuTK.Vector2[],osuTK.Vector2[],osuTK.Vector2[])
+  commentId: M:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestGeneralClipping(osuTK.Vector2[],osuTK.Vector2[],osuTK.Vector2[])
+  id: TestGeneralClipping(osuTK.Vector2[],osuTK.Vector2[],osuTK.Vector2[])
+  parent: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  langs:
+  - csharp
+  - vb
+  name: TestGeneralClipping(Vector2[], Vector2[], Vector2[])
+  nameWithType: ConvexPolygonClippingTest.TestGeneralClipping(Vector2[], Vector2[], Vector2[])
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestGeneralClipping(osuTK.Vector2[], osuTK.Vector2[], osuTK.Vector2[])
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestGeneralClipping
+    path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+    startLine: 178
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Polygons
+  syntax:
+    content: >-
+      [TestCaseSource("generalClippingTestCases")]
+
+      public void TestGeneralClipping(Vector2[] clipVertices, Vector2[] subjectVertices, Vector2[] resultingVertices)
+    parameters:
+    - id: clipVertices
+      type: osuTK.Vector2[]
+    - id: subjectVertices
+      type: osuTK.Vector2[]
+    - id: resultingVertices
+      type: osuTK.Vector2[]
+    content.vb: >-
+      <TestCaseSource("generalClippingTestCases")>
+
+      Public Sub TestGeneralClipping(clipVertices As Vector2(), subjectVertices As Vector2(), resultingVertices As Vector2())
+  overload: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestGeneralClipping*
+  attributes:
+  - type: NUnit.Framework.TestCaseSourceAttribute
+    ctor: NUnit.Framework.TestCaseSourceAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: generalClippingTestCases
+  nameWithType.vb: ConvexPolygonClippingTest.TestGeneralClipping(Vector2(), Vector2(), Vector2())
+  fullName.vb: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestGeneralClipping(osuTK.Vector2(), osuTK.Vector2(), osuTK.Vector2())
+  name.vb: TestGeneralClipping(Vector2(), Vector2(), Vector2())
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestTriangleClipping
+  commentId: M:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestTriangleClipping
+  id: TestTriangleClipping
+  parent: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  langs:
+  - csharp
+  - vb
+  name: TestTriangleClipping()
+  nameWithType: ConvexPolygonClippingTest.TestTriangleClipping()
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestTriangleClipping()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestTriangleClipping
+    path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+    startLine: 193
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Polygons
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestTriangleClipping()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestTriangleClipping()
+  overload: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestTriangleClipping*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestLineClipping
+  commentId: M:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestLineClipping
+  id: TestLineClipping
+  parent: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  langs:
+  - csharp
+  - vb
+  name: TestLineClipping()
+  nameWithType: ConvexPolygonClippingTest.TestLineClipping()
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestLineClipping()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestLineClipping
+    path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+    startLine: 201
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Polygons
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestLineClipping()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestLineClipping()
+  overload: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestLineClipping*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestPointClipping
+  commentId: M:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestPointClipping
+  id: TestPointClipping
+  parent: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  langs:
+  - csharp
+  - vb
+  name: TestPointClipping()
+  nameWithType: ConvexPolygonClippingTest.TestPointClipping()
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestPointClipping()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestPointClipping
+    path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+    startLine: 213
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Polygons
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestPointClipping()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestPointClipping()
+  overload: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestPointClipping*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptyClip
+  commentId: M:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptyClip
+  id: TestEmptyClip
+  parent: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  langs:
+  - csharp
+  - vb
+  name: TestEmptyClip()
+  nameWithType: ConvexPolygonClippingTest.TestEmptyClip()
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptyClip()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestEmptyClip
+    path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+    startLine: 221
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Polygons
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestEmptyClip()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestEmptyClip()
+  overload: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptyClip*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptySubject
+  commentId: M:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptySubject
+  id: TestEmptySubject
+  parent: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  langs:
+  - csharp
+  - vb
+  name: TestEmptySubject()
+  nameWithType: ConvexPolygonClippingTest.TestEmptySubject()
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptySubject()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestEmptySubject
+    path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+    startLine: 232
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Polygons
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestEmptySubject()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestEmptySubject()
+  overload: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptySubject*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestFuzzedEdgeCases(osuTK.Vector2[],osuTK.Vector2[])
+  commentId: M:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestFuzzedEdgeCases(osuTK.Vector2[],osuTK.Vector2[])
+  id: TestFuzzedEdgeCases(osuTK.Vector2[],osuTK.Vector2[])
+  parent: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+  langs:
+  - csharp
+  - vb
+  name: TestFuzzedEdgeCases(Vector2[], Vector2[])
+  nameWithType: ConvexPolygonClippingTest.TestFuzzedEdgeCases(Vector2[], Vector2[])
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestFuzzedEdgeCases(osuTK.Vector2[], osuTK.Vector2[])
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestFuzzedEdgeCases
+    path: osu.Framework.Tests/Polygons/ConvexPolygonClippingTest.cs
+    startLine: 292
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Polygons
+  syntax:
+    content: >-
+      [TestCaseSource("fuzzedEdgeCases")]
+
+      public void TestFuzzedEdgeCases(Vector2[] clipVertices, Vector2[] subjectVertices)
+    parameters:
+    - id: clipVertices
+      type: osuTK.Vector2[]
+    - id: subjectVertices
+      type: osuTK.Vector2[]
+    content.vb: >-
+      <TestCaseSource("fuzzedEdgeCases")>
+
+      Public Sub TestFuzzedEdgeCases(clipVertices As Vector2(), subjectVertices As Vector2())
+  overload: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestFuzzedEdgeCases*
+  attributes:
+  - type: NUnit.Framework.TestCaseSourceAttribute
+    ctor: NUnit.Framework.TestCaseSourceAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: fuzzedEdgeCases
+  nameWithType.vb: ConvexPolygonClippingTest.TestFuzzedEdgeCases(Vector2(), Vector2())
+  fullName.vb: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestFuzzedEdgeCases(osuTK.Vector2(), osuTK.Vector2())
+  name.vb: TestFuzzedEdgeCases(Vector2(), Vector2())
+references:
+- uid: osu.Framework.Tests.Polygons
+  commentId: N:osu.Framework.Tests.Polygons
+  href: osu.html
+  name: osu.Framework.Tests.Polygons
+  nameWithType: osu.Framework.Tests.Polygons
+  fullName: osu.Framework.Tests.Polygons
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Tests
+    name: Tests
+    href: osu.Framework.Tests.html
+  - name: .
+  - uid: osu.Framework.Tests.Polygons
+    name: Polygons
+    href: osu.Framework.Tests.Polygons.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Tests
+    name: Tests
+    href: osu.Framework.Tests.html
+  - name: .
+  - uid: osu.Framework.Tests.Polygons
+    name: Polygons
+    href: osu.Framework.Tests.Polygons.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<ConvexPolygonClippingTest>(ConvexPolygonClippingTest)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<ConvexPolygonClippingTest>(ConvexPolygonClippingTest)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Tests.Polygons.ConvexPolygonClippingTest>(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of ConvexPolygonClippingTest)(ConvexPolygonClippingTest)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+  name.vb: GetLocalisableDescription(Of ConvexPolygonClippingTest)(ConvexPolygonClippingTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<ConvexPolygonClippingTest>(ConvexPolygonClippingTest)
+  nameWithType: EnumerableExtensions.Yield<ConvexPolygonClippingTest>(ConvexPolygonClippingTest)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Tests.Polygons.ConvexPolygonClippingTest>(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+  nameWithType.vb: EnumerableExtensions.Yield(Of ConvexPolygonClippingTest)(ConvexPolygonClippingTest)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+  name.vb: Yield(Of ConvexPolygonClippingTest)(ConvexPolygonClippingTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<ConvexPolygonClippingTest>(ConvexPolygonClippingTest)
+  nameWithType: ObjectExtensions.AsNonNull<ConvexPolygonClippingTest>(ConvexPolygonClippingTest)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Tests.Polygons.ConvexPolygonClippingTest>(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of ConvexPolygonClippingTest)(ConvexPolygonClippingTest)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+  name.vb: AsNonNull(Of ConvexPolygonClippingTest)(ConvexPolygonClippingTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<ConvexPolygonClippingTest>(ConvexPolygonClippingTest)
+  nameWithType: ObjectExtensions.IsNotNull<ConvexPolygonClippingTest>(ConvexPolygonClippingTest)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Tests.Polygons.ConvexPolygonClippingTest>(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of ConvexPolygonClippingTest)(ConvexPolygonClippingTest)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+  name.vb: IsNotNull(Of ConvexPolygonClippingTest)(ConvexPolygonClippingTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<ConvexPolygonClippingTest>(ConvexPolygonClippingTest)
+  nameWithType: ObjectExtensions.IsNull<ConvexPolygonClippingTest>(ConvexPolygonClippingTest)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Tests.Polygons.ConvexPolygonClippingTest>(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+  nameWithType.vb: ObjectExtensions.IsNull(Of ConvexPolygonClippingTest)(ConvexPolygonClippingTest)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+  name.vb: IsNull(Of ConvexPolygonClippingTest)(ConvexPolygonClippingTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: )
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<ConvexPolygonClippingTest, TChild>(ConvexPolygonClippingTest, TChild)
+  nameWithType: ContainerExtensions.WithChild<ConvexPolygonClippingTest, TChild>(ConvexPolygonClippingTest, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Tests.Polygons.ConvexPolygonClippingTest, TChild>(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of ConvexPolygonClippingTest, TChild)(ConvexPolygonClippingTest, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Tests.Polygons.ConvexPolygonClippingTest, TChild)(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest, TChild)
+  name.vb: WithChild(Of ConvexPolygonClippingTest, TChild)(ConvexPolygonClippingTest, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<ConvexPolygonClippingTest, TChild>(ConvexPolygonClippingTest, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<ConvexPolygonClippingTest, TChild>(ConvexPolygonClippingTest, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Tests.Polygons.ConvexPolygonClippingTest, TChild>(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of ConvexPolygonClippingTest, TChild)(ConvexPolygonClippingTest, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Tests.Polygons.ConvexPolygonClippingTest, TChild)(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of ConvexPolygonClippingTest, TChild)(ConvexPolygonClippingTest, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<ConvexPolygonClippingTest, TChild>(ConvexPolygonClippingTest, TChild)
+  nameWithType: ContainerExtensions.Wrap<ConvexPolygonClippingTest, TChild>(ConvexPolygonClippingTest, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Tests.Polygons.ConvexPolygonClippingTest, TChild>(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of ConvexPolygonClippingTest, TChild)(ConvexPolygonClippingTest, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Tests.Polygons.ConvexPolygonClippingTest, TChild)(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest, TChild)
+  name.vb: Wrap(Of ConvexPolygonClippingTest, TChild)(ConvexPolygonClippingTest, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Tests.Polygons.ConvexPolygonClippingTest,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest
+    name: ConvexPolygonClippingTest
+    href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestExternalPolygon*
+  commentId: Overload:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestExternalPolygon
+  href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html#osu_Framework_Tests_Polygons_ConvexPolygonClippingTest_TestExternalPolygon_osuTK_Vector2___osuTK_Vector2___
+  name: TestExternalPolygon
+  nameWithType: ConvexPolygonClippingTest.TestExternalPolygon
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestExternalPolygon
+- uid: osuTK.Vector2[]
+  isExternal: true
+  name: Vector2[]
+  nameWithType: Vector2[]
+  fullName: osuTK.Vector2[]
+  nameWithType.vb: Vector2()
+  fullName.vb: osuTK.Vector2()
+  name.vb: Vector2()
+  spec.csharp:
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: (
+  - name: )
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestSubjectFullyContained*
+  commentId: Overload:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestSubjectFullyContained
+  href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html#osu_Framework_Tests_Polygons_ConvexPolygonClippingTest_TestSubjectFullyContained_osuTK_Vector2___osuTK_Vector2___
+  name: TestSubjectFullyContained
+  nameWithType: ConvexPolygonClippingTest.TestSubjectFullyContained
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestSubjectFullyContained
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestClipFullyContained*
+  commentId: Overload:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestClipFullyContained
+  href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html#osu_Framework_Tests_Polygons_ConvexPolygonClippingTest_TestClipFullyContained_osuTK_Vector2___osuTK_Vector2___
+  name: TestClipFullyContained
+  nameWithType: ConvexPolygonClippingTest.TestClipFullyContained
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestClipFullyContained
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestGeneralClipping*
+  commentId: Overload:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestGeneralClipping
+  href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html#osu_Framework_Tests_Polygons_ConvexPolygonClippingTest_TestGeneralClipping_osuTK_Vector2___osuTK_Vector2___osuTK_Vector2___
+  name: TestGeneralClipping
+  nameWithType: ConvexPolygonClippingTest.TestGeneralClipping
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestGeneralClipping
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestTriangleClipping*
+  commentId: Overload:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestTriangleClipping
+  href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html#osu_Framework_Tests_Polygons_ConvexPolygonClippingTest_TestTriangleClipping
+  name: TestTriangleClipping
+  nameWithType: ConvexPolygonClippingTest.TestTriangleClipping
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestTriangleClipping
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestLineClipping*
+  commentId: Overload:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestLineClipping
+  href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html#osu_Framework_Tests_Polygons_ConvexPolygonClippingTest_TestLineClipping
+  name: TestLineClipping
+  nameWithType: ConvexPolygonClippingTest.TestLineClipping
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestLineClipping
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestPointClipping*
+  commentId: Overload:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestPointClipping
+  href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html#osu_Framework_Tests_Polygons_ConvexPolygonClippingTest_TestPointClipping
+  name: TestPointClipping
+  nameWithType: ConvexPolygonClippingTest.TestPointClipping
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestPointClipping
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptyClip*
+  commentId: Overload:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptyClip
+  href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html#osu_Framework_Tests_Polygons_ConvexPolygonClippingTest_TestEmptyClip
+  name: TestEmptyClip
+  nameWithType: ConvexPolygonClippingTest.TestEmptyClip
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptyClip
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptySubject*
+  commentId: Overload:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptySubject
+  href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html#osu_Framework_Tests_Polygons_ConvexPolygonClippingTest_TestEmptySubject
+  name: TestEmptySubject
+  nameWithType: ConvexPolygonClippingTest.TestEmptySubject
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestEmptySubject
+- uid: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestFuzzedEdgeCases*
+  commentId: Overload:osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestFuzzedEdgeCases
+  href: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.html#osu_Framework_Tests_Polygons_ConvexPolygonClippingTest_TestFuzzedEdgeCases_osuTK_Vector2___osuTK_Vector2___
+  name: TestFuzzedEdgeCases
+  nameWithType: ConvexPolygonClippingTest.TestFuzzedEdgeCases
+  fullName: osu.Framework.Tests.Polygons.ConvexPolygonClippingTest.TestFuzzedEdgeCases

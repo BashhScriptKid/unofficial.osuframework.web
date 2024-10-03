@@ -1,0 +1,727 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TextInputSource | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TextInputSource | osu!framework ">
+      
+      <meta name="description" content="A source from which we can retrieve user text input. Generally hides a native implementation from the game framework.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Input_TextInputSource.md&amp;value=---%0Auid%3A%20osu.Framework.Input.TextInputSource%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Input.TextInputSource">
+
+
+
+  <h1 id="osu_Framework_Input_TextInputSource" data-uid="osu.Framework.Input.TextInputSource" class="text-break">
+Class TextInputSource  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Input.html">Input</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A source from which we can retrieve user text input.
+Generally hides a native implementation from the game framework.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TextInputSource</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TextInputSource</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Testing.Input.ManualTextInputSource.html">ManualTextInputSource</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Input_TextInputSource_ImeActive_" data-uid="osu.Framework.Input.TextInputSource.ImeActive*"></a>
+
+  <h3 id="osu_Framework_Input_TextInputSource_ImeActive" data-uid="osu.Framework.Input.TextInputSource.ImeActive">
+  ImeActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether IME is actively providing text composition through <a class="xref" href="osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_OnImeComposition">OnImeComposition</a> and accepting input from the user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ImeActive { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Input_TextInputSource_Activate_" data-uid="osu.Framework.Input.TextInputSource.Activate*"></a>
+
+  <h3 id="osu_Framework_Input_TextInputSource_Activate_System_Boolean_osu_Framework_Graphics_Primitives_RectangleF_" data-uid="osu.Framework.Input.TextInputSource.Activate(System.Boolean,osu.Framework.Graphics.Primitives.RectangleF)">
+  Activate(bool, RectangleF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Activates this <a class="xref" href="osu.Framework.Input.TextInputSource.html">TextInputSource</a>.
+User text input can be acquired through <a class="xref" href="osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_OnTextInput">OnTextInput</a>, <a class="xref" href="osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_OnImeComposition">OnImeComposition</a> and <a class="xref" href="osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_OnImeResult">OnImeResult</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Activate(bool allowIme, RectangleF imeRectangle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>allowIme</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether input using IME should be allowed.</p>
+</dd>
+    <dt><code>imeRectangle</code> <a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a></dt>
+    <dd><p>Rough location of where the text will be input, so the native implementation
+can adjust virtual keyboards and IME popups.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Input_TextInputSource_Activate_System_Boolean_osu_Framework_Graphics_Primitives_RectangleF__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Each <a class="xref" href="osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Activate_System_Boolean_osu_Framework_Graphics_Primitives_RectangleF_">Activate(bool, RectangleF)</a> must be followed by a <a class="xref" href="osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Deactivate">Deactivate()</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Input_TextInputSource_ActivateTextInput_" data-uid="osu.Framework.Input.TextInputSource.ActivateTextInput*"></a>
+
+  <h3 id="osu_Framework_Input_TextInputSource_ActivateTextInput_System_Boolean_" data-uid="osu.Framework.Input.TextInputSource.ActivateTextInput(System.Boolean)">
+  ActivateTextInput(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Activates the native implementation that provides text input.
+Should be overriden per-platform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ActivateTextInput(bool allowIme)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>allowIme</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether input using IME should be allowed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Input_TextInputSource_ActivateTextInput_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>An active native implementation should call <a class="xref" href="osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerTextInput_System_String_">TriggerTextInput(string)</a> on new text input
+and forward IME composition events through <a class="xref" href="osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerImeComposition_System_String_System_Int32_System_Int32_">TriggerImeComposition(string, int, int)</a> and <a class="xref" href="osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerImeResult_System_String_">TriggerImeResult(string)</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Input_TextInputSource_Deactivate_" data-uid="osu.Framework.Input.TextInputSource.Deactivate*"></a>
+
+  <h3 id="osu_Framework_Input_TextInputSource_Deactivate" data-uid="osu.Framework.Input.TextInputSource.Deactivate">
+  Deactivate()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deactivates this <a class="xref" href="osu.Framework.Input.TextInputSource.html">TextInputSource</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Deactivate()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Input_TextInputSource_Deactivate_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Should be called once text input is no longer needed.
+Each <a class="xref" href="osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Deactivate">Deactivate()</a> must be preceded by an <a class="xref" href="osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Activate_System_Boolean_osu_Framework_Graphics_Primitives_RectangleF_">Activate(bool, RectangleF)</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Input_TextInputSource_DeactivateTextInput_" data-uid="osu.Framework.Input.TextInputSource.DeactivateTextInput*"></a>
+
+  <h3 id="osu_Framework_Input_TextInputSource_DeactivateTextInput" data-uid="osu.Framework.Input.TextInputSource.DeactivateTextInput">
+  DeactivateTextInput()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deactivates the native implementation that provides text input.
+Should be overriden per-platform.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void DeactivateTextInput()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_TextInputSource_EnsureActivated_" data-uid="osu.Framework.Input.TextInputSource.EnsureActivated*"></a>
+
+  <h3 id="osu_Framework_Input_TextInputSource_EnsureActivated_System_Boolean_System_Nullable_osu_Framework_Graphics_Primitives_RectangleF__" data-uid="osu.Framework.Input.TextInputSource.EnsureActivated(System.Boolean,System.Nullable{osu.Framework.Graphics.Primitives.RectangleF})">
+  EnsureActivated(bool, RectangleF?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensures that the native implementation that retrieves user text input is activated
+and that the user can start entering text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnsureActivated(bool allowIme, RectangleF? imeRectangle = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>allowIme</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether input using IME should be allowed.</p>
+</dd>
+    <dt><code>imeRectangle</code> <a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a>?</dt>
+    <dd><p>Rough location of where the text will be input, so the native implementation
+can adjust virtual keyboards and IME popups. Can be <code>null</code> to avoid changing
+the IME rectangle.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_TextInputSource_EnsureTextInputActivated_" data-uid="osu.Framework.Input.TextInputSource.EnsureTextInputActivated*"></a>
+
+  <h3 id="osu_Framework_Input_TextInputSource_EnsureTextInputActivated_System_Boolean_" data-uid="osu.Framework.Input.TextInputSource.EnsureTextInputActivated(System.Boolean)">
+  EnsureTextInputActivated(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Ensures that the native implementation that retrieves user text input is activated
+and that the user can start entering text.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void EnsureTextInputActivated(bool allowIme)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>allowIme</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether input using IME should be allowed.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Input_TextInputSource_EnsureTextInputActivated_System_Boolean__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Only called if the native implementation has been activated with <a class="xref" href="osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Activate_System_Boolean_osu_Framework_Graphics_Primitives_RectangleF_">Activate(bool, RectangleF)</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Input_TextInputSource_ResetIme_" data-uid="osu.Framework.Input.TextInputSource.ResetIme*"></a>
+
+  <h3 id="osu_Framework_Input_TextInputSource_ResetIme" data-uid="osu.Framework.Input.TextInputSource.ResetIme">
+  ResetIme()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets IME.
+This clears the current composition string and prepares it for new input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void ResetIme()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_TextInputSource_SetImeRectangle_" data-uid="osu.Framework.Input.TextInputSource.SetImeRectangle*"></a>
+
+  <h3 id="osu_Framework_Input_TextInputSource_SetImeRectangle_osu_Framework_Graphics_Primitives_RectangleF_" data-uid="osu.Framework.Input.TextInputSource.SetImeRectangle(osu.Framework.Graphics.Primitives.RectangleF)">
+  SetImeRectangle(RectangleF)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets where the native implementation displays IME controls and other text input elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void SetImeRectangle(RectangleF rectangle)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rectangle</code> <a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a></dt>
+    <dd><p>Should be provided in screen space.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_TextInputSource_TriggerImeComposition_" data-uid="osu.Framework.Input.TextInputSource.TriggerImeComposition*"></a>
+
+  <h3 id="osu_Framework_Input_TextInputSource_TriggerImeComposition_System_String_System_Int32_System_Int32_" data-uid="osu.Framework.Input.TextInputSource.TriggerImeComposition(System.String,System.Int32,System.Int32)">
+  TriggerImeComposition(string, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void TriggerImeComposition(string text, int start, int length)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>start</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>length</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_TextInputSource_TriggerImeResult_" data-uid="osu.Framework.Input.TextInputSource.TriggerImeResult*"></a>
+
+  <h3 id="osu_Framework_Input_TextInputSource_TriggerImeResult_System_String_" data-uid="osu.Framework.Input.TextInputSource.TriggerImeResult(System.String)">
+  TriggerImeResult(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void TriggerImeResult(string text)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_TextInputSource_TriggerTextInput_" data-uid="osu.Framework.Input.TextInputSource.TriggerTextInput*"></a>
+
+  <h3 id="osu_Framework_Input_TextInputSource_TriggerTextInput_System_String_" data-uid="osu.Framework.Input.TextInputSource.TriggerTextInput(System.String)">
+  TriggerTextInput(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void TriggerTextInput(string text)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="osu_Framework_Input_TextInputSource_OnImeComposition" data-uid="osu.Framework.Input.TextInputSource.OnImeComposition">
+  OnImeComposition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when IME composition starts or changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event TextInputSource.ImeCompositionDelegate OnImeComposition</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.TextInputSource.html">TextInputSource</a>.<a class="xref" href="osu.Framework.Input.TextInputSource.ImeCompositionDelegate.html">ImeCompositionDelegate</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <h4 class="section" id="osu_Framework_Input_TextInputSource_OnImeComposition_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Empty string for text means that the composition has been cancelled.</p>
+</div>
+
+
+
+
+
+  <h3 id="osu_Framework_Input_TextInputSource_OnImeResult" data-uid="osu.Framework.Input.TextInputSource.OnImeResult">
+  OnImeResult
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when IME composition successfully completes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;string&gt; OnImeResult</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_Input_TextInputSource_OnTextInput" data-uid="osu.Framework.Input.TextInputSource.OnTextInput">
+  OnTextInput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked on text input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;string&gt; OnTextInput</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/TextInputSource.cs/#L16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

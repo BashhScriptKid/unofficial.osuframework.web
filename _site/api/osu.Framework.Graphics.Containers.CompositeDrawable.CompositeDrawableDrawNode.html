@@ -1,0 +1,606 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CompositeDrawable.CompositeDrawableDrawNode | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CompositeDrawable.CompositeDrawableDrawNode | osu!framework ">
+      
+      <meta name="description" content="A draw node responsible for rendering a  and the s of its children.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode.md&amp;value=---%0Auid%3A%20osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode">
+
+
+
+  <h1 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode" class="text-break">
+Class CompositeDrawable.CompositeDrawableDrawNode  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Graphics.html">Graphics</a>.<a class="xref" href="osu.Framework.Graphics.Containers.html">Containers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A draw node responsible for rendering a <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a> and the <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a>s of its children.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected class CompositeDrawable.CompositeDrawableDrawNode : DrawNode, IDisposable, ICompositeDrawNode</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a></div>
+      <div><span class="xref">CompositeDrawable.CompositeDrawableDrawNode</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="osu.Framework.Graphics.ICompositeDrawNode.html">ICompositeDrawNode</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_DrawInfo">DrawNode.DrawInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_DrawColourInfo">DrawNode.DrawColourInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_InvalidationID">DrawNode.InvalidationID</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_DrawOther_osu_Framework_Graphics_DrawNode_osu_Framework_Graphics_Rendering_IRenderer_">DrawNode.DrawOther(DrawNode, IRenderer)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_DrawOtherOpaqueInterior_osu_Framework_Graphics_DrawNode_osu_Framework_Graphics_Rendering_IRenderer_">DrawNode.DrawOtherOpaqueInterior(DrawNode, IRenderer)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_ToString">DrawNode.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_IsDisposed">DrawNode.IsDisposed</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_Dispose">DrawNode.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode__ctor_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.#ctor*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode__ctor_osu_Framework_Graphics_Containers_CompositeDrawable_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.#ctor(osu.Framework.Graphics.Containers.CompositeDrawable)">
+  CompositeDrawableDrawNode(CompositeDrawable)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CompositeDrawableDrawNode(CompositeDrawable source)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_AddChildDrawNodes_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.AddChildDrawNodes*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_AddChildDrawNodes" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.AddChildDrawNodes">
+  AddChildDrawNodes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether <a class="xref" href="osu.Framework.Graphics.ICompositeDrawNode.html#osu_Framework_Graphics_ICompositeDrawNode_Children">Children</a> should be updated by the parenting <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool AddChildDrawNodes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_CanDrawOpaqueInterior_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.CanDrawOpaqueInterior*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_CanDrawOpaqueInterior" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.CanDrawOpaqueInterior">
+  CanDrawOpaqueInterior
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> can draw a opaque interior. <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_DrawOpaqueInterior_osu_Framework_Graphics_Rendering_IRenderer_">DrawOpaqueInterior(IRenderer)</a> will only be invoked if this value is <pre><code class="lang-csharp">true</code></pre>.
+Should not return <pre><code class="lang-csharp">true</code></pre> if <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_DrawOpaqueInterior_osu_Framework_Graphics_Rendering_IRenderer_">DrawOpaqueInterior(IRenderer)</a> will result in a no-op.
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool CanDrawOpaqueInterior { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_Children_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.Children*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_Children" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.Children">
+  Children
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a>s of the children of our <a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;DrawNode&gt; Children { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_HasOwnOpaqueInterior_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.HasOwnOpaqueInterior*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_HasOwnOpaqueInterior" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.HasOwnOpaqueInterior">
+  HasOwnOpaqueInterior
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L254"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> has its own opaque interior.
+If <code>false</code>, a child of the <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> may be the source of the opaque interior.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool HasOwnOpaqueInterior { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_Shader_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.Shader*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_Shader" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.Shader">
+  Shader
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="osu.Framework.Graphics.Shaders.IShader.html">IShader</a> to use for rendering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IShader Shader { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Shaders.IShader.html">IShader</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_Source_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.Source*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_Source" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.Source">
+  Source
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CompositeDrawable Source { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Containers.CompositeDrawable.html">CompositeDrawable</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_ApplyState_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.ApplyState*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_ApplyState" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.ApplyState">
+  ApplyState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Applies the state of <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_Source">Source</a> to this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> for use in rendering.
+The applied state must remain immutable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ApplyState()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_Dispose_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.Dispose*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_Dispose_System_Boolean_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Dispose(bool isDisposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>isDisposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_Draw_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.Draw*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_Draw_osu_Framework_Graphics_Rendering_IRenderer_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.Draw(osu.Framework.Graphics.Rendering.IRenderer)">
+  Draw(IRenderer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L182"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> to the screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Draw(IRenderer renderer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd><p>The renderer to draw with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_Draw_osu_Framework_Graphics_Rendering_IRenderer__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Subclasses must invoke <pre><code class="lang-csharp">base.Draw()</code></pre> prior to drawing vertices.
+</div>
+
+
+
+
+  <a id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_DrawOpaqueInterior_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.DrawOpaqueInterior*"></a>
+
+  <h3 id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_DrawOpaqueInterior_osu_Framework_Graphics_Rendering_IRenderer_" data-uid="osu.Framework.Graphics.Containers.CompositeDrawable.CompositeDrawableDrawNode.DrawOpaqueInterior(osu.Framework.Graphics.Rendering.IRenderer)">
+  DrawOpaqueInterior(IRenderer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draws the opaque interior of this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a> to the screen, if <a class="xref" href="osu.Framework.Graphics.DrawNode.html#osu_Framework_Graphics_DrawNode_CanDrawOpaqueInterior">CanDrawOpaqueInterior</a> indicates that an opaque interior can be drawn.
+The opaque interior must be a fully-opaque, non-blended area of this <a class="xref" href="osu.Framework.Graphics.DrawNode.html">DrawNode</a>, clipped to the current masking area via <pre><code class="lang-csharp">DrawClipped()</code></pre>.
+See <a class="xref" href="osu.Framework.Graphics.Sprites.SpriteDrawNode.html">SpriteDrawNode</a> for an example implementation.
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void DrawOpaqueInterior(IRenderer renderer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>renderer</code> <a class="xref" href="osu.Framework.Graphics.Rendering.IRenderer.html">IRenderer</a></dt>
+    <dd><p>The renderer to draw with.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Graphics_Containers_CompositeDrawable_CompositeDrawableDrawNode_DrawOpaqueInterior_osu_Framework_Graphics_Rendering_IRenderer__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Subclasses must invoke <pre><code class="lang-csharp">base.DrawOpaqueInterior()</code></pre> prior to drawing vertices.
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable_DrawNode.cs/#L23" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

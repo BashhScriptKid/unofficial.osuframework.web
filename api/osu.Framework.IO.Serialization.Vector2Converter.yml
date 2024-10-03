@@ -1,0 +1,2013 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.IO.Serialization.Vector2Converter
+  commentId: T:osu.Framework.IO.Serialization.Vector2Converter
+  id: Vector2Converter
+  parent: osu.Framework.IO.Serialization
+  children:
+  - osu.Framework.IO.Serialization.Vector2Converter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,osuTK.Vector2,System.Boolean,Newtonsoft.Json.JsonSerializer)
+  - osu.Framework.IO.Serialization.Vector2Converter.WriteJson(Newtonsoft.Json.JsonWriter,osuTK.Vector2,Newtonsoft.Json.JsonSerializer)
+  langs:
+  - csharp
+  - vb
+  name: Vector2Converter
+  nameWithType: Vector2Converter
+  fullName: osu.Framework.IO.Serialization.Vector2Converter
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/IO/Serialization/Vector2Converter.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Vector2Converter
+    path: osu.Framework/IO/Serialization/Vector2Converter.cs
+    startLine: 15
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.IO.Serialization
+  summary: A type of <xref href="Newtonsoft.Json.JsonConverter" data-throw-if-not-resolved="false"></xref> that serializes only the X and Y coordinates of a <xref href="osuTK.Vector2" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public class Vector2Converter : JsonConverter<Vector2>'
+    content.vb: Public Class Vector2Converter Inherits JsonConverter(Of Vector2)
+  inheritance:
+  - System.Object
+  - Newtonsoft.Json.JsonConverter
+  - Newtonsoft.Json.JsonConverter{osuTK.Vector2}
+  inheritedMembers:
+  - Newtonsoft.Json.JsonConverter{osuTK.Vector2}.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+  - Newtonsoft.Json.JsonConverter{osuTK.Vector2}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+  - Newtonsoft.Json.JsonConverter{osuTK.Vector2}.CanConvert(System.Type)
+  - Newtonsoft.Json.JsonConverter.CanRead
+  - Newtonsoft.Json.JsonConverter.CanWrite
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.IO.Serialization.Vector2Converter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,osuTK.Vector2,System.Boolean,Newtonsoft.Json.JsonSerializer)
+  commentId: M:osu.Framework.IO.Serialization.Vector2Converter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,osuTK.Vector2,System.Boolean,Newtonsoft.Json.JsonSerializer)
+  id: ReadJson(Newtonsoft.Json.JsonReader,System.Type,osuTK.Vector2,System.Boolean,Newtonsoft.Json.JsonSerializer)
+  parent: osu.Framework.IO.Serialization.Vector2Converter
+  langs:
+  - csharp
+  - vb
+  name: ReadJson(JsonReader, Type, Vector2, bool, JsonSerializer)
+  nameWithType: Vector2Converter.ReadJson(JsonReader, Type, Vector2, bool, JsonSerializer)
+  fullName: osu.Framework.IO.Serialization.Vector2Converter.ReadJson(Newtonsoft.Json.JsonReader, System.Type, osuTK.Vector2, bool, Newtonsoft.Json.JsonSerializer)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/IO/Serialization/Vector2Converter.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ReadJson
+    path: osu.Framework/IO/Serialization/Vector2Converter.cs
+    startLine: 17
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.IO.Serialization
+  summary: Reads the JSON representation of the object.
+  example: []
+  syntax:
+    content: public override Vector2 ReadJson(JsonReader reader, Type objectType, Vector2 existingValue, bool hasExistingValue, JsonSerializer serializer)
+    parameters:
+    - id: reader
+      type: Newtonsoft.Json.JsonReader
+      description: The <xref href="Newtonsoft.Json.JsonReader" data-throw-if-not-resolved="false"></xref> to read from.
+    - id: objectType
+      type: System.Type
+      description: Type of the object.
+    - id: existingValue
+      type: osuTK.Vector2
+      description: The existing value of object being read. If there is no existing value then <code>null</code> will be used.
+    - id: hasExistingValue
+      type: System.Boolean
+      description: The existing value has a value.
+    - id: serializer
+      type: Newtonsoft.Json.JsonSerializer
+      description: The calling serializer.
+    return:
+      type: osuTK.Vector2
+      description: The object value.
+    content.vb: Public Overrides Function ReadJson(reader As JsonReader, objectType As Type, existingValue As Vector2, hasExistingValue As Boolean, serializer As JsonSerializer) As Vector2
+  overridden: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,osuTK.Vector2,System.Boolean,Newtonsoft.Json.JsonSerializer)
+  overload: osu.Framework.IO.Serialization.Vector2Converter.ReadJson*
+  nameWithType.vb: Vector2Converter.ReadJson(JsonReader, Type, Vector2, Boolean, JsonSerializer)
+  fullName.vb: osu.Framework.IO.Serialization.Vector2Converter.ReadJson(Newtonsoft.Json.JsonReader, System.Type, osuTK.Vector2, Boolean, Newtonsoft.Json.JsonSerializer)
+  name.vb: ReadJson(JsonReader, Type, Vector2, Boolean, JsonSerializer)
+- uid: osu.Framework.IO.Serialization.Vector2Converter.WriteJson(Newtonsoft.Json.JsonWriter,osuTK.Vector2,Newtonsoft.Json.JsonSerializer)
+  commentId: M:osu.Framework.IO.Serialization.Vector2Converter.WriteJson(Newtonsoft.Json.JsonWriter,osuTK.Vector2,Newtonsoft.Json.JsonSerializer)
+  id: WriteJson(Newtonsoft.Json.JsonWriter,osuTK.Vector2,Newtonsoft.Json.JsonSerializer)
+  parent: osu.Framework.IO.Serialization.Vector2Converter
+  langs:
+  - csharp
+  - vb
+  name: WriteJson(JsonWriter, Vector2, JsonSerializer)
+  nameWithType: Vector2Converter.WriteJson(JsonWriter, Vector2, JsonSerializer)
+  fullName: osu.Framework.IO.Serialization.Vector2Converter.WriteJson(Newtonsoft.Json.JsonWriter, osuTK.Vector2, Newtonsoft.Json.JsonSerializer)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/IO/Serialization/Vector2Converter.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: WriteJson
+    path: osu.Framework/IO/Serialization/Vector2Converter.cs
+    startLine: 23
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.IO.Serialization
+  summary: Writes the JSON representation of the object.
+  example: []
+  syntax:
+    content: public override void WriteJson(JsonWriter writer, Vector2 value, JsonSerializer serializer)
+    parameters:
+    - id: writer
+      type: Newtonsoft.Json.JsonWriter
+      description: The <xref href="Newtonsoft.Json.JsonWriter" data-throw-if-not-resolved="false"></xref> to write to.
+    - id: value
+      type: osuTK.Vector2
+      description: The value.
+    - id: serializer
+      type: Newtonsoft.Json.JsonSerializer
+      description: The calling serializer.
+    content.vb: Public Overrides Sub WriteJson(writer As JsonWriter, value As Vector2, serializer As JsonSerializer)
+  overridden: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.WriteJson(Newtonsoft.Json.JsonWriter,osuTK.Vector2,Newtonsoft.Json.JsonSerializer)
+  overload: osu.Framework.IO.Serialization.Vector2Converter.WriteJson*
+references:
+- uid: Newtonsoft.Json.JsonConverter
+  commentId: T:Newtonsoft.Json.JsonConverter
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonConverter
+  nameWithType: JsonConverter
+  fullName: Newtonsoft.Json.JsonConverter
+- uid: osuTK.Vector2
+  commentId: T:osuTK.Vector2
+  parent: osuTK
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: osuTK.Vector2
+- uid: osu.Framework.IO.Serialization
+  commentId: N:osu.Framework.IO.Serialization
+  href: osu.html
+  name: osu.Framework.IO.Serialization
+  nameWithType: osu.Framework.IO.Serialization
+  fullName: osu.Framework.IO.Serialization
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.IO
+    name: IO
+    href: osu.Framework.IO.html
+  - name: .
+  - uid: osu.Framework.IO.Serialization
+    name: Serialization
+    href: osu.Framework.IO.Serialization.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.IO
+    name: IO
+    href: osu.Framework.IO.html
+  - name: .
+  - uid: osu.Framework.IO.Serialization
+    name: Serialization
+    href: osu.Framework.IO.Serialization.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}
+  commentId: T:Newtonsoft.Json.JsonConverter{osuTK.Vector2}
+  parent: Newtonsoft.Json
+  definition: Newtonsoft.Json.JsonConverter`1
+  name: JsonConverter<Vector2>
+  nameWithType: JsonConverter<Vector2>
+  fullName: Newtonsoft.Json.JsonConverter<osuTK.Vector2>
+  nameWithType.vb: JsonConverter(Of Vector2)
+  fullName.vb: Newtonsoft.Json.JsonConverter(Of osuTK.Vector2)
+  name.vb: JsonConverter(Of Vector2)
+  spec.csharp:
+  - uid: Newtonsoft.Json.JsonConverter`1
+    name: JsonConverter
+    isExternal: true
+  - name: <
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: Newtonsoft.Json.JsonConverter`1
+    name: JsonConverter
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+  commentId: M:Newtonsoft.Json.JsonConverter{osuTK.Vector2}.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+  parent: Newtonsoft.Json.JsonConverter{osuTK.Vector2}
+  definition: Newtonsoft.Json.JsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: WriteJson(JsonWriter, object, JsonSerializer)
+  nameWithType: JsonConverter<Vector2>.WriteJson(JsonWriter, object, JsonSerializer)
+  fullName: Newtonsoft.Json.JsonConverter<osuTK.Vector2>.WriteJson(Newtonsoft.Json.JsonWriter, object, Newtonsoft.Json.JsonSerializer)
+  nameWithType.vb: JsonConverter(Of Vector2).WriteJson(JsonWriter, Object, JsonSerializer)
+  fullName.vb: Newtonsoft.Json.JsonConverter(Of osuTK.Vector2).WriteJson(Newtonsoft.Json.JsonWriter, Object, Newtonsoft.Json.JsonSerializer)
+  name.vb: WriteJson(JsonWriter, Object, JsonSerializer)
+  spec.csharp:
+  - uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+    name: WriteJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonWriter
+    name: JsonWriter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+    name: WriteJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonWriter
+    name: JsonWriter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+- uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+  commentId: M:Newtonsoft.Json.JsonConverter{osuTK.Vector2}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+  parent: Newtonsoft.Json.JsonConverter{osuTK.Vector2}
+  definition: Newtonsoft.Json.JsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: ReadJson(JsonReader, Type, object, JsonSerializer)
+  nameWithType: JsonConverter<Vector2>.ReadJson(JsonReader, Type, object, JsonSerializer)
+  fullName: Newtonsoft.Json.JsonConverter<osuTK.Vector2>.ReadJson(Newtonsoft.Json.JsonReader, System.Type, object, Newtonsoft.Json.JsonSerializer)
+  nameWithType.vb: JsonConverter(Of Vector2).ReadJson(JsonReader, Type, Object, JsonSerializer)
+  fullName.vb: Newtonsoft.Json.JsonConverter(Of osuTK.Vector2).ReadJson(Newtonsoft.Json.JsonReader, System.Type, Object, Newtonsoft.Json.JsonSerializer)
+  name.vb: ReadJson(JsonReader, Type, Object, JsonSerializer)
+  spec.csharp:
+  - uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+    name: ReadJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonReader
+    name: JsonReader
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+    name: ReadJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonReader
+    name: JsonReader
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+- uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.CanConvert(System.Type)
+  commentId: M:Newtonsoft.Json.JsonConverter{osuTK.Vector2}.CanConvert(System.Type)
+  parent: Newtonsoft.Json.JsonConverter{osuTK.Vector2}
+  definition: Newtonsoft.Json.JsonConverter`1.CanConvert(System.Type)
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: CanConvert(Type)
+  nameWithType: JsonConverter<Vector2>.CanConvert(Type)
+  fullName: Newtonsoft.Json.JsonConverter<osuTK.Vector2>.CanConvert(System.Type)
+  nameWithType.vb: JsonConverter(Of Vector2).CanConvert(Type)
+  fullName.vb: Newtonsoft.Json.JsonConverter(Of osuTK.Vector2).CanConvert(System.Type)
+  spec.csharp:
+  - uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.CanConvert(System.Type)
+    name: CanConvert
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.CanConvert(System.Type)
+    name: CanConvert
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: Newtonsoft.Json.JsonConverter.CanRead
+  commentId: P:Newtonsoft.Json.JsonConverter.CanRead
+  parent: Newtonsoft.Json.JsonConverter
+  isExternal: true
+  name: CanRead
+  nameWithType: JsonConverter.CanRead
+  fullName: Newtonsoft.Json.JsonConverter.CanRead
+- uid: Newtonsoft.Json.JsonConverter.CanWrite
+  commentId: P:Newtonsoft.Json.JsonConverter.CanWrite
+  parent: Newtonsoft.Json.JsonConverter
+  isExternal: true
+  name: CanWrite
+  nameWithType: JsonConverter.CanWrite
+  fullName: Newtonsoft.Json.JsonConverter.CanWrite
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<Vector2Converter>(Vector2Converter)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<Vector2Converter>(Vector2Converter)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.IO.Serialization.Vector2Converter>(osu.Framework.IO.Serialization.Vector2Converter)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of Vector2Converter)(Vector2Converter)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.IO.Serialization.Vector2Converter)(osu.Framework.IO.Serialization.Vector2Converter)
+  name.vb: GetLocalisableDescription(Of Vector2Converter)(Vector2Converter)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.IO.Serialization.Vector2Converter)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.IO.Serialization.Vector2Converter)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+- uid: osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<Vector2Converter>(Vector2Converter)
+  nameWithType: EnumerableExtensions.Yield<Vector2Converter>(Vector2Converter)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.IO.Serialization.Vector2Converter>(osu.Framework.IO.Serialization.Vector2Converter)
+  nameWithType.vb: EnumerableExtensions.Yield(Of Vector2Converter)(Vector2Converter)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.IO.Serialization.Vector2Converter)(osu.Framework.IO.Serialization.Vector2Converter)
+  name.vb: Yield(Of Vector2Converter)(Vector2Converter)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.IO.Serialization.Vector2Converter)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.IO.Serialization.Vector2Converter)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+- uid: osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<Vector2Converter>(Vector2Converter)
+  nameWithType: ObjectExtensions.AsNonNull<Vector2Converter>(Vector2Converter)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.IO.Serialization.Vector2Converter>(osu.Framework.IO.Serialization.Vector2Converter)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of Vector2Converter)(Vector2Converter)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.IO.Serialization.Vector2Converter)(osu.Framework.IO.Serialization.Vector2Converter)
+  name.vb: AsNonNull(Of Vector2Converter)(Vector2Converter)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.IO.Serialization.Vector2Converter)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.IO.Serialization.Vector2Converter)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+- uid: osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<Vector2Converter>(Vector2Converter)
+  nameWithType: ObjectExtensions.IsNotNull<Vector2Converter>(Vector2Converter)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.IO.Serialization.Vector2Converter>(osu.Framework.IO.Serialization.Vector2Converter)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of Vector2Converter)(Vector2Converter)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.IO.Serialization.Vector2Converter)(osu.Framework.IO.Serialization.Vector2Converter)
+  name.vb: IsNotNull(Of Vector2Converter)(Vector2Converter)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.IO.Serialization.Vector2Converter)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.IO.Serialization.Vector2Converter)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+- uid: osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<Vector2Converter>(Vector2Converter)
+  nameWithType: ObjectExtensions.IsNull<Vector2Converter>(Vector2Converter)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.IO.Serialization.Vector2Converter>(osu.Framework.IO.Serialization.Vector2Converter)
+  nameWithType.vb: ObjectExtensions.IsNull(Of Vector2Converter)(Vector2Converter)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.IO.Serialization.Vector2Converter)(osu.Framework.IO.Serialization.Vector2Converter)
+  name.vb: IsNull(Of Vector2Converter)(Vector2Converter)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.IO.Serialization.Vector2Converter)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.IO.Serialization.Vector2Converter)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: )
+- uid: osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<Vector2Converter, TChild>(Vector2Converter, TChild)
+  nameWithType: ContainerExtensions.WithChild<Vector2Converter, TChild>(Vector2Converter, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.IO.Serialization.Vector2Converter, TChild>(osu.Framework.IO.Serialization.Vector2Converter, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of Vector2Converter, TChild)(Vector2Converter, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.IO.Serialization.Vector2Converter, TChild)(osu.Framework.IO.Serialization.Vector2Converter, TChild)
+  name.vb: WithChild(Of Vector2Converter, TChild)(Vector2Converter, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.IO.Serialization.Vector2Converter,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.IO.Serialization.Vector2Converter,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<Vector2Converter, TChild>(Vector2Converter, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<Vector2Converter, TChild>(Vector2Converter, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.IO.Serialization.Vector2Converter, TChild>(osu.Framework.IO.Serialization.Vector2Converter, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of Vector2Converter, TChild)(Vector2Converter, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.IO.Serialization.Vector2Converter, TChild)(osu.Framework.IO.Serialization.Vector2Converter, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of Vector2Converter, TChild)(Vector2Converter, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.IO.Serialization.Vector2Converter,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.IO.Serialization.Vector2Converter,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.IO.Serialization.Vector2Converter.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<Vector2Converter, TChild>(Vector2Converter, TChild)
+  nameWithType: ContainerExtensions.Wrap<Vector2Converter, TChild>(Vector2Converter, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.IO.Serialization.Vector2Converter, TChild>(osu.Framework.IO.Serialization.Vector2Converter, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of Vector2Converter, TChild)(Vector2Converter, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.IO.Serialization.Vector2Converter, TChild)(osu.Framework.IO.Serialization.Vector2Converter, TChild)
+  name.vb: Wrap(Of Vector2Converter, TChild)(Vector2Converter, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.IO.Serialization.Vector2Converter,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.IO.Serialization.Vector2Converter,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.IO.Serialization.Vector2Converter
+    name: Vector2Converter
+    href: osu.Framework.IO.Serialization.Vector2Converter.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: Newtonsoft.Json
+  commentId: N:Newtonsoft.Json
+  isExternal: true
+  name: Newtonsoft.Json
+  nameWithType: Newtonsoft.Json
+  fullName: Newtonsoft.Json
+  spec.csharp:
+  - uid: Newtonsoft
+    name: Newtonsoft
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json
+    name: Json
+    isExternal: true
+  spec.vb:
+  - uid: Newtonsoft
+    name: Newtonsoft
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json
+    name: Json
+    isExternal: true
+- uid: osuTK
+  commentId: N:osuTK
+  isExternal: true
+  name: osuTK
+  nameWithType: osuTK
+  fullName: osuTK
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Newtonsoft.Json.JsonConverter`1
+  commentId: T:Newtonsoft.Json.JsonConverter`1
+  isExternal: true
+  name: JsonConverter<T>
+  nameWithType: JsonConverter<T>
+  fullName: Newtonsoft.Json.JsonConverter<T>
+  nameWithType.vb: JsonConverter(Of T)
+  fullName.vb: Newtonsoft.Json.JsonConverter(Of T)
+  name.vb: JsonConverter(Of T)
+  spec.csharp:
+  - uid: Newtonsoft.Json.JsonConverter`1
+    name: JsonConverter
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Newtonsoft.Json.JsonConverter`1
+    name: JsonConverter
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Newtonsoft.Json.JsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+  commentId: M:Newtonsoft.Json.JsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: WriteJson(JsonWriter, object, JsonSerializer)
+  nameWithType: JsonConverter<T>.WriteJson(JsonWriter, object, JsonSerializer)
+  fullName: Newtonsoft.Json.JsonConverter<T>.WriteJson(Newtonsoft.Json.JsonWriter, object, Newtonsoft.Json.JsonSerializer)
+  nameWithType.vb: JsonConverter(Of T).WriteJson(JsonWriter, Object, JsonSerializer)
+  fullName.vb: Newtonsoft.Json.JsonConverter(Of T).WriteJson(Newtonsoft.Json.JsonWriter, Object, Newtonsoft.Json.JsonSerializer)
+  name.vb: WriteJson(JsonWriter, Object, JsonSerializer)
+  spec.csharp:
+  - uid: Newtonsoft.Json.JsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+    name: WriteJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonWriter
+    name: JsonWriter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Newtonsoft.Json.JsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)
+    name: WriteJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonWriter
+    name: JsonWriter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+- uid: Newtonsoft.Json.JsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+  commentId: M:Newtonsoft.Json.JsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: ReadJson(JsonReader, Type, object, JsonSerializer)
+  nameWithType: JsonConverter<T>.ReadJson(JsonReader, Type, object, JsonSerializer)
+  fullName: Newtonsoft.Json.JsonConverter<T>.ReadJson(Newtonsoft.Json.JsonReader, System.Type, object, Newtonsoft.Json.JsonSerializer)
+  nameWithType.vb: JsonConverter(Of T).ReadJson(JsonReader, Type, Object, JsonSerializer)
+  fullName.vb: Newtonsoft.Json.JsonConverter(Of T).ReadJson(Newtonsoft.Json.JsonReader, System.Type, Object, Newtonsoft.Json.JsonSerializer)
+  name.vb: ReadJson(JsonReader, Type, Object, JsonSerializer)
+  spec.csharp:
+  - uid: Newtonsoft.Json.JsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+    name: ReadJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonReader
+    name: JsonReader
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Newtonsoft.Json.JsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)
+    name: ReadJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonReader
+    name: JsonReader
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+- uid: Newtonsoft.Json.JsonConverter`1.CanConvert(System.Type)
+  commentId: M:Newtonsoft.Json.JsonConverter`1.CanConvert(System.Type)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: CanConvert(Type)
+  nameWithType: JsonConverter<T>.CanConvert(Type)
+  fullName: Newtonsoft.Json.JsonConverter<T>.CanConvert(System.Type)
+  nameWithType.vb: JsonConverter(Of T).CanConvert(Type)
+  fullName.vb: Newtonsoft.Json.JsonConverter(Of T).CanConvert(System.Type)
+  spec.csharp:
+  - uid: Newtonsoft.Json.JsonConverter`1.CanConvert(System.Type)
+    name: CanConvert
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: Newtonsoft.Json.JsonConverter`1.CanConvert(System.Type)
+    name: CanConvert
+    isExternal: true
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: Newtonsoft.Json.JsonReader
+  commentId: T:Newtonsoft.Json.JsonReader
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonReader
+  nameWithType: JsonReader
+  fullName: Newtonsoft.Json.JsonReader
+- uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,osuTK.Vector2,System.Boolean,Newtonsoft.Json.JsonSerializer)
+  commentId: M:Newtonsoft.Json.JsonConverter{osuTK.Vector2}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,osuTK.Vector2,System.Boolean,Newtonsoft.Json.JsonSerializer)
+  parent: Newtonsoft.Json.JsonConverter{osuTK.Vector2}
+  definition: Newtonsoft.Json.JsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,`0,System.Boolean,Newtonsoft.Json.JsonSerializer)
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: ReadJson(JsonReader, Type, Vector2, bool, JsonSerializer)
+  nameWithType: JsonConverter<Vector2>.ReadJson(JsonReader, Type, Vector2, bool, JsonSerializer)
+  fullName: Newtonsoft.Json.JsonConverter<osuTK.Vector2>.ReadJson(Newtonsoft.Json.JsonReader, System.Type, osuTK.Vector2, bool, Newtonsoft.Json.JsonSerializer)
+  nameWithType.vb: JsonConverter(Of Vector2).ReadJson(JsonReader, Type, Vector2, Boolean, JsonSerializer)
+  fullName.vb: Newtonsoft.Json.JsonConverter(Of osuTK.Vector2).ReadJson(Newtonsoft.Json.JsonReader, System.Type, osuTK.Vector2, Boolean, Newtonsoft.Json.JsonSerializer)
+  name.vb: ReadJson(JsonReader, Type, Vector2, Boolean, JsonSerializer)
+  spec.csharp:
+  - uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,osuTK.Vector2,System.Boolean,Newtonsoft.Json.JsonSerializer)
+    name: ReadJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonReader
+    name: JsonReader
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.ReadJson(Newtonsoft.Json.JsonReader,System.Type,osuTK.Vector2,System.Boolean,Newtonsoft.Json.JsonSerializer)
+    name: ReadJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonReader
+    name: JsonReader
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+- uid: osu.Framework.IO.Serialization.Vector2Converter.ReadJson*
+  commentId: Overload:osu.Framework.IO.Serialization.Vector2Converter.ReadJson
+  href: osu.Framework.IO.Serialization.Vector2Converter.html#osu_Framework_IO_Serialization_Vector2Converter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_osuTK_Vector2_System_Boolean_Newtonsoft_Json_JsonSerializer_
+  name: ReadJson
+  nameWithType: Vector2Converter.ReadJson
+  fullName: osu.Framework.IO.Serialization.Vector2Converter.ReadJson
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Newtonsoft.Json.JsonSerializer
+  commentId: T:Newtonsoft.Json.JsonSerializer
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonSerializer
+  nameWithType: JsonSerializer
+  fullName: Newtonsoft.Json.JsonSerializer
+- uid: Newtonsoft.Json.JsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,`0,System.Boolean,Newtonsoft.Json.JsonSerializer)
+  commentId: M:Newtonsoft.Json.JsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,`0,System.Boolean,Newtonsoft.Json.JsonSerializer)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: ReadJson(JsonReader, Type, T, bool, JsonSerializer)
+  nameWithType: JsonConverter<T>.ReadJson(JsonReader, Type, T, bool, JsonSerializer)
+  fullName: Newtonsoft.Json.JsonConverter<T>.ReadJson(Newtonsoft.Json.JsonReader, System.Type, T, bool, Newtonsoft.Json.JsonSerializer)
+  nameWithType.vb: JsonConverter(Of T).ReadJson(JsonReader, Type, T, Boolean, JsonSerializer)
+  fullName.vb: Newtonsoft.Json.JsonConverter(Of T).ReadJson(Newtonsoft.Json.JsonReader, System.Type, T, Boolean, Newtonsoft.Json.JsonSerializer)
+  name.vb: ReadJson(JsonReader, Type, T, Boolean, JsonSerializer)
+  spec.csharp:
+  - uid: Newtonsoft.Json.JsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,`0,System.Boolean,Newtonsoft.Json.JsonSerializer)
+    name: ReadJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonReader
+    name: JsonReader
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Newtonsoft.Json.JsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,`0,System.Boolean,Newtonsoft.Json.JsonSerializer)
+    name: ReadJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonReader
+    name: JsonReader
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+- uid: Newtonsoft.Json.JsonWriter
+  commentId: T:Newtonsoft.Json.JsonWriter
+  parent: Newtonsoft.Json
+  isExternal: true
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: Newtonsoft.Json.JsonWriter
+- uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.WriteJson(Newtonsoft.Json.JsonWriter,osuTK.Vector2,Newtonsoft.Json.JsonSerializer)
+  commentId: M:Newtonsoft.Json.JsonConverter{osuTK.Vector2}.WriteJson(Newtonsoft.Json.JsonWriter,osuTK.Vector2,Newtonsoft.Json.JsonSerializer)
+  parent: Newtonsoft.Json.JsonConverter{osuTK.Vector2}
+  definition: Newtonsoft.Json.JsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,`0,Newtonsoft.Json.JsonSerializer)
+  name: WriteJson(JsonWriter, Vector2, JsonSerializer)
+  nameWithType: JsonConverter<Vector2>.WriteJson(JsonWriter, Vector2, JsonSerializer)
+  fullName: Newtonsoft.Json.JsonConverter<osuTK.Vector2>.WriteJson(Newtonsoft.Json.JsonWriter, osuTK.Vector2, Newtonsoft.Json.JsonSerializer)
+  nameWithType.vb: JsonConverter(Of Vector2).WriteJson(JsonWriter, Vector2, JsonSerializer)
+  fullName.vb: Newtonsoft.Json.JsonConverter(Of osuTK.Vector2).WriteJson(Newtonsoft.Json.JsonWriter, osuTK.Vector2, Newtonsoft.Json.JsonSerializer)
+  spec.csharp:
+  - uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.WriteJson(Newtonsoft.Json.JsonWriter,osuTK.Vector2,Newtonsoft.Json.JsonSerializer)
+    name: WriteJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonWriter
+    name: JsonWriter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Newtonsoft.Json.JsonConverter{osuTK.Vector2}.WriteJson(Newtonsoft.Json.JsonWriter,osuTK.Vector2,Newtonsoft.Json.JsonSerializer)
+    name: WriteJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonWriter
+    name: JsonWriter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+- uid: osu.Framework.IO.Serialization.Vector2Converter.WriteJson*
+  commentId: Overload:osu.Framework.IO.Serialization.Vector2Converter.WriteJson
+  href: osu.Framework.IO.Serialization.Vector2Converter.html#osu_Framework_IO_Serialization_Vector2Converter_WriteJson_Newtonsoft_Json_JsonWriter_osuTK_Vector2_Newtonsoft_Json_JsonSerializer_
+  name: WriteJson
+  nameWithType: Vector2Converter.WriteJson
+  fullName: osu.Framework.IO.Serialization.Vector2Converter.WriteJson
+- uid: Newtonsoft.Json.JsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,`0,Newtonsoft.Json.JsonSerializer)
+  commentId: M:Newtonsoft.Json.JsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,`0,Newtonsoft.Json.JsonSerializer)
+  isExternal: true
+  name: WriteJson(JsonWriter, T, JsonSerializer)
+  nameWithType: JsonConverter<T>.WriteJson(JsonWriter, T, JsonSerializer)
+  fullName: Newtonsoft.Json.JsonConverter<T>.WriteJson(Newtonsoft.Json.JsonWriter, T, Newtonsoft.Json.JsonSerializer)
+  nameWithType.vb: JsonConverter(Of T).WriteJson(JsonWriter, T, JsonSerializer)
+  fullName.vb: Newtonsoft.Json.JsonConverter(Of T).WriteJson(Newtonsoft.Json.JsonWriter, T, Newtonsoft.Json.JsonSerializer)
+  spec.csharp:
+  - uid: Newtonsoft.Json.JsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,`0,Newtonsoft.Json.JsonSerializer)
+    name: WriteJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonWriter
+    name: JsonWriter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: Newtonsoft.Json.JsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,`0,Newtonsoft.Json.JsonSerializer)
+    name: WriteJson
+    isExternal: true
+  - name: (
+  - uid: Newtonsoft.Json.JsonWriter
+    name: JsonWriter
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.JsonSerializer
+    name: JsonSerializer
+    isExternal: true
+  - name: )

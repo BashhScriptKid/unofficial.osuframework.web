@@ -1,0 +1,1621 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest
+  commentId: T:osu.Framework.Tests.Bindables.BindableNumberTest
+  id: BindableNumberTest
+  parent: osu.Framework.Tests.Bindables
+  children:
+  - osu.Framework.Tests.Bindables.BindableNumberTest.TestAddValue(System.Type)
+  - osu.Framework.Tests.Bindables.BindableNumberTest.TestConstruction(System.Type)
+  - osu.Framework.Tests.Bindables.BindableNumberTest.TestDecimalPrecision
+  - osu.Framework.Tests.Bindables.BindableNumberTest.TestSetValue(System.Type)
+  - osu.Framework.Tests.Bindables.BindableNumberTest.TestValueChangeEventOccursAfterPrecisionChangeEvent
+  - osu.Framework.Tests.Bindables.BindableNumberTest.TestValueUpdatedOnPrecisionChange
+  langs:
+  - csharp
+  - vb
+  name: BindableNumberTest
+  nameWithType: BindableNumberTest
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest
+  type: Class
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: BindableNumberTest
+    path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+    startLine: 13
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class BindableNumberTest
+    content.vb: >-
+      <TestFixture>
+
+      Public Class BindableNumberTest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.TestConstruction(System.Type)
+  commentId: M:osu.Framework.Tests.Bindables.BindableNumberTest.TestConstruction(System.Type)
+  id: TestConstruction(System.Type)
+  parent: osu.Framework.Tests.Bindables.BindableNumberTest
+  langs:
+  - csharp
+  - vb
+  name: TestConstruction(Type)
+  nameWithType: BindableNumberTest.TestConstruction(Type)
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest.TestConstruction(System.Type)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestConstruction
+    path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+    startLine: 33
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  summary: Tests that all supported <xref href="osu.Framework.Bindables.BindableNumber%601" data-throw-if-not-resolved="false"></xref> types are constructible.
+  example: []
+  syntax:
+    content: >-
+      [TestCaseSource("typeSource")]
+
+      public void TestConstruction(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+    content.vb: >-
+      <TestCaseSource("typeSource")>
+
+      Public Sub TestConstruction(type As Type)
+  overload: osu.Framework.Tests.Bindables.BindableNumberTest.TestConstruction*
+  attributes:
+  - type: NUnit.Framework.TestCaseSourceAttribute
+    ctor: NUnit.Framework.TestCaseSourceAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: typeSource
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.TestSetValue(System.Type)
+  commentId: M:osu.Framework.Tests.Bindables.BindableNumberTest.TestSetValue(System.Type)
+  id: TestSetValue(System.Type)
+  parent: osu.Framework.Tests.Bindables.BindableNumberTest
+  langs:
+  - csharp
+  - vb
+  name: TestSetValue(Type)
+  nameWithType: BindableNumberTest.TestSetValue(Type)
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest.TestSetValue(System.Type)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestSetValue
+    path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+    startLine: 42
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  summary: Tests that value can be set on all supported <xref href="osu.Framework.Bindables.BindableNumber%601" data-throw-if-not-resolved="false"></xref> types.
+  example: []
+  syntax:
+    content: >-
+      [TestCaseSource("typeSource")]
+
+      public void TestSetValue(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+    content.vb: >-
+      <TestCaseSource("typeSource")>
+
+      Public Sub TestSetValue(type As Type)
+  overload: osu.Framework.Tests.Bindables.BindableNumberTest.TestSetValue*
+  attributes:
+  - type: NUnit.Framework.TestCaseSourceAttribute
+    ctor: NUnit.Framework.TestCaseSourceAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: typeSource
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.TestDecimalPrecision
+  commentId: M:osu.Framework.Tests.Bindables.BindableNumberTest.TestDecimalPrecision
+  id: TestDecimalPrecision
+  parent: osu.Framework.Tests.Bindables.BindableNumberTest
+  langs:
+  - csharp
+  - vb
+  name: TestDecimalPrecision()
+  nameWithType: BindableNumberTest.TestDecimalPrecision()
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest.TestDecimalPrecision()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestDecimalPrecision
+    path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+    startLine: 65
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  summary: >-
+    This test exercises that when sitting a decimal <xref href="osu.Framework.Bindables.BindableNumber%601.Precision" data-throw-if-not-resolved="false"></xref> like 0.1 on a <code>BindableNumber&lt;float&gt;</code>,
+
+    the resulting <xref href="osu.Framework.Bindables.BindableNumber%601.Value" data-throw-if-not-resolved="false"></xref> is the closest to the actual closest <code>float</code> number
+
+    to the real-world decimal.
+
+    This matters because certain methods of rounding to the precision specified on the <xref href="osu.Framework.Bindables.BindableNumber%601" data-throw-if-not-resolved="false"></xref>
+
+    cause rounding errors that show up elsewhere in undesirable ways.
+  example: []
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestDecimalPrecision()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestDecimalPrecision()
+  overload: osu.Framework.Tests.Bindables.BindableNumberTest.TestDecimalPrecision*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.TestAddValue(System.Type)
+  commentId: M:osu.Framework.Tests.Bindables.BindableNumberTest.TestAddValue(System.Type)
+  id: TestAddValue(System.Type)
+  parent: osu.Framework.Tests.Bindables.BindableNumberTest
+  langs:
+  - csharp
+  - vb
+  name: TestAddValue(Type)
+  nameWithType: BindableNumberTest.TestAddValue(Type)
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest.TestAddValue(System.Type)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestAddValue
+    path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+    startLine: 88
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  summary: Tests that value can be added to on all supported <xref href="osu.Framework.Bindables.BindableNumber%601" data-throw-if-not-resolved="false"></xref> types.
+  example: []
+  syntax:
+    content: >-
+      [TestCaseSource("typeSource")]
+
+      public void TestAddValue(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+    content.vb: >-
+      <TestCaseSource("typeSource")>
+
+      Public Sub TestAddValue(type As Type)
+  overload: osu.Framework.Tests.Bindables.BindableNumberTest.TestAddValue*
+  attributes:
+  - type: NUnit.Framework.TestCaseSourceAttribute
+    ctor: NUnit.Framework.TestCaseSourceAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: typeSource
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.TestValueUpdatedOnPrecisionChange
+  commentId: M:osu.Framework.Tests.Bindables.BindableNumberTest.TestValueUpdatedOnPrecisionChange
+  id: TestValueUpdatedOnPrecisionChange
+  parent: osu.Framework.Tests.Bindables.BindableNumberTest
+  langs:
+  - csharp
+  - vb
+  name: TestValueUpdatedOnPrecisionChange()
+  nameWithType: BindableNumberTest.TestValueUpdatedOnPrecisionChange()
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest.TestValueUpdatedOnPrecisionChange()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestValueUpdatedOnPrecisionChange
+    path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+    startLine: 107
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  summary: Tests that the value of a bindable is updated when the precision is changed.
+  example: []
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestValueUpdatedOnPrecisionChange()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestValueUpdatedOnPrecisionChange()
+  overload: osu.Framework.Tests.Bindables.BindableNumberTest.TestValueUpdatedOnPrecisionChange*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.TestValueChangeEventOccursAfterPrecisionChangeEvent
+  commentId: M:osu.Framework.Tests.Bindables.BindableNumberTest.TestValueChangeEventOccursAfterPrecisionChangeEvent
+  id: TestValueChangeEventOccursAfterPrecisionChangeEvent
+  parent: osu.Framework.Tests.Bindables.BindableNumberTest
+  langs:
+  - csharp
+  - vb
+  name: TestValueChangeEventOccursAfterPrecisionChangeEvent()
+  nameWithType: BindableNumberTest.TestValueChangeEventOccursAfterPrecisionChangeEvent()
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest.TestValueChangeEventOccursAfterPrecisionChangeEvent()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestValueChangeEventOccursAfterPrecisionChangeEvent
+    path: osu.Framework.Tests/Bindables/BindableNumberTest.cs
+    startLine: 122
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  summary: >-
+    Tests that the order of precision vs value changed events follows the order:
+
+    Precision (bound) -&gt; Precision -&gt; Value (bound) -&gt; Value
+  example: []
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestValueChangeEventOccursAfterPrecisionChangeEvent()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestValueChangeEventOccursAfterPrecisionChangeEvent()
+  overload: osu.Framework.Tests.Bindables.BindableNumberTest.TestValueChangeEventOccursAfterPrecisionChangeEvent*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: osu.Framework.Tests.Bindables
+  commentId: N:osu.Framework.Tests.Bindables
+  href: osu.html
+  name: osu.Framework.Tests.Bindables
+  nameWithType: osu.Framework.Tests.Bindables
+  fullName: osu.Framework.Tests.Bindables
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Tests
+    name: Tests
+    href: osu.Framework.Tests.html
+  - name: .
+  - uid: osu.Framework.Tests.Bindables
+    name: Bindables
+    href: osu.Framework.Tests.Bindables.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Tests
+    name: Tests
+    href: osu.Framework.Tests.html
+  - name: .
+  - uid: osu.Framework.Tests.Bindables
+    name: Bindables
+    href: osu.Framework.Tests.Bindables.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<BindableNumberTest>(BindableNumberTest)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<BindableNumberTest>(BindableNumberTest)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Tests.Bindables.BindableNumberTest>(osu.Framework.Tests.Bindables.BindableNumberTest)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of BindableNumberTest)(BindableNumberTest)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Tests.Bindables.BindableNumberTest)(osu.Framework.Tests.Bindables.BindableNumberTest)
+  name.vb: GetLocalisableDescription(Of BindableNumberTest)(BindableNumberTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Tests.Bindables.BindableNumberTest)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Tests.Bindables.BindableNumberTest)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<BindableNumberTest>(BindableNumberTest)
+  nameWithType: EnumerableExtensions.Yield<BindableNumberTest>(BindableNumberTest)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Tests.Bindables.BindableNumberTest>(osu.Framework.Tests.Bindables.BindableNumberTest)
+  nameWithType.vb: EnumerableExtensions.Yield(Of BindableNumberTest)(BindableNumberTest)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Tests.Bindables.BindableNumberTest)(osu.Framework.Tests.Bindables.BindableNumberTest)
+  name.vb: Yield(Of BindableNumberTest)(BindableNumberTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Tests.Bindables.BindableNumberTest)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Tests.Bindables.BindableNumberTest)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<BindableNumberTest>(BindableNumberTest)
+  nameWithType: ObjectExtensions.AsNonNull<BindableNumberTest>(BindableNumberTest)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Tests.Bindables.BindableNumberTest>(osu.Framework.Tests.Bindables.BindableNumberTest)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of BindableNumberTest)(BindableNumberTest)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Tests.Bindables.BindableNumberTest)(osu.Framework.Tests.Bindables.BindableNumberTest)
+  name.vb: AsNonNull(Of BindableNumberTest)(BindableNumberTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Tests.Bindables.BindableNumberTest)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Tests.Bindables.BindableNumberTest)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<BindableNumberTest>(BindableNumberTest)
+  nameWithType: ObjectExtensions.IsNotNull<BindableNumberTest>(BindableNumberTest)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Tests.Bindables.BindableNumberTest>(osu.Framework.Tests.Bindables.BindableNumberTest)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of BindableNumberTest)(BindableNumberTest)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Tests.Bindables.BindableNumberTest)(osu.Framework.Tests.Bindables.BindableNumberTest)
+  name.vb: IsNotNull(Of BindableNumberTest)(BindableNumberTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Tests.Bindables.BindableNumberTest)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Tests.Bindables.BindableNumberTest)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<BindableNumberTest>(BindableNumberTest)
+  nameWithType: ObjectExtensions.IsNull<BindableNumberTest>(BindableNumberTest)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Tests.Bindables.BindableNumberTest>(osu.Framework.Tests.Bindables.BindableNumberTest)
+  nameWithType.vb: ObjectExtensions.IsNull(Of BindableNumberTest)(BindableNumberTest)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Tests.Bindables.BindableNumberTest)(osu.Framework.Tests.Bindables.BindableNumberTest)
+  name.vb: IsNull(Of BindableNumberTest)(BindableNumberTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Tests.Bindables.BindableNumberTest)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Tests.Bindables.BindableNumberTest)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<BindableNumberTest, TChild>(BindableNumberTest, TChild)
+  nameWithType: ContainerExtensions.WithChild<BindableNumberTest, TChild>(BindableNumberTest, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Tests.Bindables.BindableNumberTest, TChild>(osu.Framework.Tests.Bindables.BindableNumberTest, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of BindableNumberTest, TChild)(BindableNumberTest, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Tests.Bindables.BindableNumberTest, TChild)(osu.Framework.Tests.Bindables.BindableNumberTest, TChild)
+  name.vb: WithChild(Of BindableNumberTest, TChild)(BindableNumberTest, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Tests.Bindables.BindableNumberTest,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Tests.Bindables.BindableNumberTest,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<BindableNumberTest, TChild>(BindableNumberTest, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<BindableNumberTest, TChild>(BindableNumberTest, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Tests.Bindables.BindableNumberTest, TChild>(osu.Framework.Tests.Bindables.BindableNumberTest, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of BindableNumberTest, TChild)(BindableNumberTest, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Tests.Bindables.BindableNumberTest, TChild)(osu.Framework.Tests.Bindables.BindableNumberTest, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of BindableNumberTest, TChild)(BindableNumberTest, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Tests.Bindables.BindableNumberTest,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Tests.Bindables.BindableNumberTest,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<BindableNumberTest, TChild>(BindableNumberTest, TChild)
+  nameWithType: ContainerExtensions.Wrap<BindableNumberTest, TChild>(BindableNumberTest, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Tests.Bindables.BindableNumberTest, TChild>(osu.Framework.Tests.Bindables.BindableNumberTest, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of BindableNumberTest, TChild)(BindableNumberTest, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Tests.Bindables.BindableNumberTest, TChild)(osu.Framework.Tests.Bindables.BindableNumberTest, TChild)
+  name.vb: Wrap(Of BindableNumberTest, TChild)(BindableNumberTest, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Tests.Bindables.BindableNumberTest,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Tests.Bindables.BindableNumberTest,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableNumberTest
+    name: BindableNumberTest
+    href: osu.Framework.Tests.Bindables.BindableNumberTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Bindables.BindableNumber`1
+  commentId: T:osu.Framework.Bindables.BindableNumber`1
+  parent: osu.Framework.Bindables
+  href: osu.Framework.Bindables.BindableNumber-1.html
+  name: BindableNumber<T>
+  nameWithType: BindableNumber<T>
+  fullName: osu.Framework.Bindables.BindableNumber<T>
+  nameWithType.vb: BindableNumber(Of T)
+  fullName.vb: osu.Framework.Bindables.BindableNumber(Of T)
+  name.vb: BindableNumber(Of T)
+  spec.csharp:
+  - uid: osu.Framework.Bindables.BindableNumber`1
+    name: BindableNumber
+    href: osu.Framework.Bindables.BindableNumber-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Bindables.BindableNumber`1
+    name: BindableNumber
+    href: osu.Framework.Bindables.BindableNumber-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.TestConstruction*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableNumberTest.TestConstruction
+  href: osu.Framework.Tests.Bindables.BindableNumberTest.html#osu_Framework_Tests_Bindables_BindableNumberTest_TestConstruction_System_Type_
+  name: TestConstruction
+  nameWithType: BindableNumberTest.TestConstruction
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest.TestConstruction
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: osu.Framework.Bindables
+  commentId: N:osu.Framework.Bindables
+  href: osu.html
+  name: osu.Framework.Bindables
+  nameWithType: osu.Framework.Bindables
+  fullName: osu.Framework.Bindables
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Bindables
+    name: Bindables
+    href: osu.Framework.Bindables.html
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.TestSetValue*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableNumberTest.TestSetValue
+  href: osu.Framework.Tests.Bindables.BindableNumberTest.html#osu_Framework_Tests_Bindables_BindableNumberTest_TestSetValue_System_Type_
+  name: TestSetValue
+  nameWithType: BindableNumberTest.TestSetValue
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest.TestSetValue
+- uid: osu.Framework.Bindables.BindableNumber`1.Precision
+  commentId: P:osu.Framework.Bindables.BindableNumber`1.Precision
+  href: osu.Framework.Bindables.BindableNumber-1.html#osu_Framework_Bindables_BindableNumber_1_Precision
+  name: Precision
+  nameWithType: BindableNumber<T>.Precision
+  fullName: osu.Framework.Bindables.BindableNumber<T>.Precision
+  nameWithType.vb: BindableNumber(Of T).Precision
+  fullName.vb: osu.Framework.Bindables.BindableNumber(Of T).Precision
+- uid: osu.Framework.Bindables.BindableNumber`1.Value
+  commentId: P:osu.Framework.Bindables.BindableNumber`1.Value
+  href: osu.Framework.Bindables.BindableNumber-1.html#osu_Framework_Bindables_BindableNumber_1_Value
+  name: Value
+  nameWithType: BindableNumber<T>.Value
+  fullName: osu.Framework.Bindables.BindableNumber<T>.Value
+  nameWithType.vb: BindableNumber(Of T).Value
+  fullName.vb: osu.Framework.Bindables.BindableNumber(Of T).Value
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.TestDecimalPrecision*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableNumberTest.TestDecimalPrecision
+  href: osu.Framework.Tests.Bindables.BindableNumberTest.html#osu_Framework_Tests_Bindables_BindableNumberTest_TestDecimalPrecision
+  name: TestDecimalPrecision
+  nameWithType: BindableNumberTest.TestDecimalPrecision
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest.TestDecimalPrecision
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.TestAddValue*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableNumberTest.TestAddValue
+  href: osu.Framework.Tests.Bindables.BindableNumberTest.html#osu_Framework_Tests_Bindables_BindableNumberTest_TestAddValue_System_Type_
+  name: TestAddValue
+  nameWithType: BindableNumberTest.TestAddValue
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest.TestAddValue
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.TestValueUpdatedOnPrecisionChange*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableNumberTest.TestValueUpdatedOnPrecisionChange
+  href: osu.Framework.Tests.Bindables.BindableNumberTest.html#osu_Framework_Tests_Bindables_BindableNumberTest_TestValueUpdatedOnPrecisionChange
+  name: TestValueUpdatedOnPrecisionChange
+  nameWithType: BindableNumberTest.TestValueUpdatedOnPrecisionChange
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest.TestValueUpdatedOnPrecisionChange
+- uid: osu.Framework.Tests.Bindables.BindableNumberTest.TestValueChangeEventOccursAfterPrecisionChangeEvent*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableNumberTest.TestValueChangeEventOccursAfterPrecisionChangeEvent
+  href: osu.Framework.Tests.Bindables.BindableNumberTest.html#osu_Framework_Tests_Bindables_BindableNumberTest_TestValueChangeEventOccursAfterPrecisionChangeEvent
+  name: TestValueChangeEventOccursAfterPrecisionChangeEvent
+  nameWithType: BindableNumberTest.TestValueChangeEventOccursAfterPrecisionChangeEvent
+  fullName: osu.Framework.Tests.Bindables.BindableNumberTest.TestValueChangeEventOccursAfterPrecisionChangeEvent

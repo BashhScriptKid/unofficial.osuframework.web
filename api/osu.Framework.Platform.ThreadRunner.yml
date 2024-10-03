@@ -1,0 +1,1869 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Platform.ThreadRunner
+  commentId: T:osu.Framework.Platform.ThreadRunner
+  id: ThreadRunner
+  parent: osu.Framework.Platform
+  children:
+  - osu.Framework.Platform.ThreadRunner.#ctor(osu.Framework.Threading.InputThread)
+  - osu.Framework.Platform.ThreadRunner.AddThread(osu.Framework.Threading.GameThread)
+  - osu.Framework.Platform.ThreadRunner.ExecutionMode
+  - osu.Framework.Platform.ThreadRunner.MaximumInactiveHz
+  - osu.Framework.Platform.ThreadRunner.MaximumUpdateHz
+  - osu.Framework.Platform.ThreadRunner.RemoveThread(osu.Framework.Threading.GameThread)
+  - osu.Framework.Platform.ThreadRunner.RunMainLoop
+  - osu.Framework.Platform.ThreadRunner.SetCulture(System.Globalization.CultureInfo)
+  - osu.Framework.Platform.ThreadRunner.Start
+  - osu.Framework.Platform.ThreadRunner.Stop
+  - osu.Framework.Platform.ThreadRunner.Suspend
+  - osu.Framework.Platform.ThreadRunner.Threads
+  langs:
+  - csharp
+  - vb
+  name: ThreadRunner
+  nameWithType: ThreadRunner
+  fullName: osu.Framework.Platform.ThreadRunner
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ThreadRunner
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 21
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Runs a game host in a specific threading mode.
+  example: []
+  syntax:
+    content: public class ThreadRunner
+    content.vb: Public Class ThreadRunner
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Platform.ThreadRunner.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Platform.ThreadRunner.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Platform.ThreadRunner.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Platform.ThreadRunner.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Platform.ThreadRunner.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Platform.ThreadRunner.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Platform.ThreadRunner.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Platform.ThreadRunner.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Platform.ThreadRunner.Threads
+  commentId: P:osu.Framework.Platform.ThreadRunner.Threads
+  id: Threads
+  parent: osu.Framework.Platform.ThreadRunner
+  langs:
+  - csharp
+  - vb
+  name: Threads
+  nameWithType: ThreadRunner.Threads
+  fullName: osu.Framework.Platform.ThreadRunner.Threads
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Threads
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 27
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  syntax:
+    content: public IReadOnlyCollection<GameThread> Threads { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{osu.Framework.Threading.GameThread}
+    content.vb: Public ReadOnly Property Threads As IReadOnlyCollection(Of GameThread)
+  overload: osu.Framework.Platform.ThreadRunner.Threads*
+- uid: osu.Framework.Platform.ThreadRunner.MaximumUpdateHz
+  commentId: P:osu.Framework.Platform.ThreadRunner.MaximumUpdateHz
+  id: MaximumUpdateHz
+  parent: osu.Framework.Platform.ThreadRunner
+  langs:
+  - csharp
+  - vb
+  name: MaximumUpdateHz
+  nameWithType: ThreadRunner.MaximumUpdateHz
+  fullName: osu.Framework.Platform.ThreadRunner.MaximumUpdateHz
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: MaximumUpdateHz
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 38
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  syntax:
+    content: public double MaximumUpdateHz { set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public WriteOnly Property MaximumUpdateHz As Double
+  overload: osu.Framework.Platform.ThreadRunner.MaximumUpdateHz*
+- uid: osu.Framework.Platform.ThreadRunner.MaximumInactiveHz
+  commentId: P:osu.Framework.Platform.ThreadRunner.MaximumInactiveHz
+  id: MaximumInactiveHz
+  parent: osu.Framework.Platform.ThreadRunner
+  langs:
+  - csharp
+  - vb
+  name: MaximumInactiveHz
+  nameWithType: ThreadRunner.MaximumInactiveHz
+  fullName: osu.Framework.Platform.ThreadRunner.MaximumInactiveHz
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: MaximumInactiveHz
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 49
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  syntax:
+    content: public double MaximumInactiveHz { set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public WriteOnly Property MaximumInactiveHz As Double
+  overload: osu.Framework.Platform.ThreadRunner.MaximumInactiveHz*
+- uid: osu.Framework.Platform.ThreadRunner.#ctor(osu.Framework.Threading.InputThread)
+  commentId: M:osu.Framework.Platform.ThreadRunner.#ctor(osu.Framework.Threading.InputThread)
+  id: '#ctor(osu.Framework.Threading.InputThread)'
+  parent: osu.Framework.Platform.ThreadRunner
+  langs:
+  - csharp
+  - vb
+  name: ThreadRunner(InputThread)
+  nameWithType: ThreadRunner.ThreadRunner(InputThread)
+  fullName: osu.Framework.Platform.ThreadRunner.ThreadRunner(osu.Framework.Threading.InputThread)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 65
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Construct a new ThreadRunner instance.
+  example: []
+  syntax:
+    content: public ThreadRunner(InputThread mainThread)
+    parameters:
+    - id: mainThread
+      type: osu.Framework.Threading.InputThread
+      description: The main window thread. Used for input in multi-threaded execution; all game logic in single-threaded execution.
+    content.vb: Public Sub New(mainThread As InputThread)
+  overload: osu.Framework.Platform.ThreadRunner.#ctor*
+  exceptions:
+  - type: System.NotImplementedException
+    commentId: T:System.NotImplementedException
+    description: ''
+  nameWithType.vb: ThreadRunner.New(InputThread)
+  fullName.vb: osu.Framework.Platform.ThreadRunner.New(osu.Framework.Threading.InputThread)
+  name.vb: New(InputThread)
+- uid: osu.Framework.Platform.ThreadRunner.AddThread(osu.Framework.Threading.GameThread)
+  commentId: M:osu.Framework.Platform.ThreadRunner.AddThread(osu.Framework.Threading.GameThread)
+  id: AddThread(osu.Framework.Threading.GameThread)
+  parent: osu.Framework.Platform.ThreadRunner
+  langs:
+  - csharp
+  - vb
+  name: AddThread(GameThread)
+  nameWithType: ThreadRunner.AddThread(GameThread)
+  fullName: osu.Framework.Platform.ThreadRunner.AddThread(osu.Framework.Threading.GameThread)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AddThread
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 74
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Add a new non-main thread. In single-threaded execution, threads will be executed in the order they are added.
+  example: []
+  syntax:
+    content: public void AddThread(GameThread thread)
+    parameters:
+    - id: thread
+      type: osu.Framework.Threading.GameThread
+    content.vb: Public Sub AddThread(thread As GameThread)
+  overload: osu.Framework.Platform.ThreadRunner.AddThread*
+- uid: osu.Framework.Platform.ThreadRunner.RemoveThread(osu.Framework.Threading.GameThread)
+  commentId: M:osu.Framework.Platform.ThreadRunner.RemoveThread(osu.Framework.Threading.GameThread)
+  id: RemoveThread(osu.Framework.Threading.GameThread)
+  parent: osu.Framework.Platform.ThreadRunner
+  langs:
+  - csharp
+  - vb
+  name: RemoveThread(GameThread)
+  nameWithType: ThreadRunner.RemoveThread(GameThread)
+  fullName: osu.Framework.Platform.ThreadRunner.RemoveThread(osu.Framework.Threading.GameThread)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: RemoveThread
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 86
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Remove a non-main thread.
+  example: []
+  syntax:
+    content: public void RemoveThread(GameThread thread)
+    parameters:
+    - id: thread
+      type: osu.Framework.Threading.GameThread
+    content.vb: Public Sub RemoveThread(thread As GameThread)
+  overload: osu.Framework.Platform.ThreadRunner.RemoveThread*
+- uid: osu.Framework.Platform.ThreadRunner.ExecutionMode
+  commentId: P:osu.Framework.Platform.ThreadRunner.ExecutionMode
+  id: ExecutionMode
+  parent: osu.Framework.Platform.ThreadRunner
+  langs:
+  - csharp
+  - vb
+  name: ExecutionMode
+  nameWithType: ThreadRunner.ExecutionMode
+  fullName: osu.Framework.Platform.ThreadRunner.ExecutionMode
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ExecutionMode
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 94
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  syntax:
+    content: public ExecutionMode ExecutionMode { set; }
+    parameters: []
+    return:
+      type: osu.Framework.Platform.ExecutionMode
+    content.vb: Public Property ExecutionMode As ExecutionMode
+  overload: osu.Framework.Platform.ThreadRunner.ExecutionMode*
+- uid: osu.Framework.Platform.ThreadRunner.RunMainLoop
+  commentId: M:osu.Framework.Platform.ThreadRunner.RunMainLoop
+  id: RunMainLoop
+  parent: osu.Framework.Platform.ThreadRunner
+  langs:
+  - csharp
+  - vb
+  name: RunMainLoop()
+  nameWithType: ThreadRunner.RunMainLoop()
+  fullName: osu.Framework.Platform.ThreadRunner.RunMainLoop()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: RunMainLoop
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 96
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  syntax:
+    content: public virtual void RunMainLoop()
+    content.vb: Public Overridable Sub RunMainLoop()
+  overload: osu.Framework.Platform.ThreadRunner.RunMainLoop*
+- uid: osu.Framework.Platform.ThreadRunner.Start
+  commentId: M:osu.Framework.Platform.ThreadRunner.Start
+  id: Start
+  parent: osu.Framework.Platform.ThreadRunner
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: ThreadRunner.Start()
+  fullName: osu.Framework.Platform.ThreadRunner.Start()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Start
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 125
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start()
+  overload: osu.Framework.Platform.ThreadRunner.Start*
+- uid: osu.Framework.Platform.ThreadRunner.Suspend
+  commentId: M:osu.Framework.Platform.ThreadRunner.Suspend
+  id: Suspend
+  parent: osu.Framework.Platform.ThreadRunner
+  langs:
+  - csharp
+  - vb
+  name: Suspend()
+  nameWithType: ThreadRunner.Suspend()
+  fullName: osu.Framework.Platform.ThreadRunner.Suspend()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Suspend
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 127
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  syntax:
+    content: public void Suspend()
+    content.vb: Public Sub Suspend()
+  overload: osu.Framework.Platform.ThreadRunner.Suspend*
+- uid: osu.Framework.Platform.ThreadRunner.Stop
+  commentId: M:osu.Framework.Platform.ThreadRunner.Stop
+  id: Stop
+  parent: osu.Framework.Platform.ThreadRunner
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: ThreadRunner.Stop()
+  fullName: osu.Framework.Platform.ThreadRunner.Stop()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Stop
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 136
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub [Stop]()
+  overload: osu.Framework.Platform.ThreadRunner.Stop*
+- uid: osu.Framework.Platform.ThreadRunner.SetCulture(System.Globalization.CultureInfo)
+  commentId: M:osu.Framework.Platform.ThreadRunner.SetCulture(System.Globalization.CultureInfo)
+  id: SetCulture(System.Globalization.CultureInfo)
+  parent: osu.Framework.Platform.ThreadRunner
+  langs:
+  - csharp
+  - vb
+  name: SetCulture(CultureInfo)
+  nameWithType: ThreadRunner.SetCulture(CultureInfo)
+  fullName: osu.Framework.Platform.ThreadRunner.SetCulture(System.Globalization.CultureInfo)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/ThreadRunner.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: SetCulture
+    path: osu.Framework/Platform/ThreadRunner.cs
+    startLine: 236
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Sets the current culture of all threads to the supplied <code class="paramref">culture</code>.
+  example: []
+  syntax:
+    content: public void SetCulture(CultureInfo culture)
+    parameters:
+    - id: culture
+      type: System.Globalization.CultureInfo
+    content.vb: Public Sub SetCulture(culture As CultureInfo)
+  overload: osu.Framework.Platform.ThreadRunner.SetCulture*
+references:
+- uid: osu.Framework.Platform
+  commentId: N:osu.Framework.Platform
+  href: osu.html
+  name: osu.Framework.Platform
+  nameWithType: osu.Framework.Platform
+  fullName: osu.Framework.Platform
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Platform.ThreadRunner.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<ThreadRunner>(ThreadRunner)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<ThreadRunner>(ThreadRunner)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Platform.ThreadRunner>(osu.Framework.Platform.ThreadRunner)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of ThreadRunner)(ThreadRunner)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Platform.ThreadRunner)(osu.Framework.Platform.ThreadRunner)
+  name.vb: GetLocalisableDescription(Of ThreadRunner)(ThreadRunner)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Platform.ThreadRunner)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Platform.ThreadRunner)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+- uid: osu.Framework.Platform.ThreadRunner.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<ThreadRunner>(ThreadRunner)
+  nameWithType: EnumerableExtensions.Yield<ThreadRunner>(ThreadRunner)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Platform.ThreadRunner>(osu.Framework.Platform.ThreadRunner)
+  nameWithType.vb: EnumerableExtensions.Yield(Of ThreadRunner)(ThreadRunner)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Platform.ThreadRunner)(osu.Framework.Platform.ThreadRunner)
+  name.vb: Yield(Of ThreadRunner)(ThreadRunner)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Platform.ThreadRunner)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Platform.ThreadRunner)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+- uid: osu.Framework.Platform.ThreadRunner.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<ThreadRunner>(ThreadRunner)
+  nameWithType: ObjectExtensions.AsNonNull<ThreadRunner>(ThreadRunner)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Platform.ThreadRunner>(osu.Framework.Platform.ThreadRunner)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of ThreadRunner)(ThreadRunner)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Platform.ThreadRunner)(osu.Framework.Platform.ThreadRunner)
+  name.vb: AsNonNull(Of ThreadRunner)(ThreadRunner)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Platform.ThreadRunner)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Platform.ThreadRunner)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+- uid: osu.Framework.Platform.ThreadRunner.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<ThreadRunner>(ThreadRunner)
+  nameWithType: ObjectExtensions.IsNotNull<ThreadRunner>(ThreadRunner)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Platform.ThreadRunner>(osu.Framework.Platform.ThreadRunner)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of ThreadRunner)(ThreadRunner)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Platform.ThreadRunner)(osu.Framework.Platform.ThreadRunner)
+  name.vb: IsNotNull(Of ThreadRunner)(ThreadRunner)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Platform.ThreadRunner)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Platform.ThreadRunner)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+- uid: osu.Framework.Platform.ThreadRunner.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<ThreadRunner>(ThreadRunner)
+  nameWithType: ObjectExtensions.IsNull<ThreadRunner>(ThreadRunner)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Platform.ThreadRunner>(osu.Framework.Platform.ThreadRunner)
+  nameWithType.vb: ObjectExtensions.IsNull(Of ThreadRunner)(ThreadRunner)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Platform.ThreadRunner)(osu.Framework.Platform.ThreadRunner)
+  name.vb: IsNull(Of ThreadRunner)(ThreadRunner)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Platform.ThreadRunner)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Platform.ThreadRunner)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: )
+- uid: osu.Framework.Platform.ThreadRunner.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<ThreadRunner, TChild>(ThreadRunner, TChild)
+  nameWithType: ContainerExtensions.WithChild<ThreadRunner, TChild>(ThreadRunner, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Platform.ThreadRunner, TChild>(osu.Framework.Platform.ThreadRunner, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of ThreadRunner, TChild)(ThreadRunner, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Platform.ThreadRunner, TChild)(osu.Framework.Platform.ThreadRunner, TChild)
+  name.vb: WithChild(Of ThreadRunner, TChild)(ThreadRunner, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Platform.ThreadRunner,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Platform.ThreadRunner,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Platform.ThreadRunner.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<ThreadRunner, TChild>(ThreadRunner, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<ThreadRunner, TChild>(ThreadRunner, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Platform.ThreadRunner, TChild>(osu.Framework.Platform.ThreadRunner, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of ThreadRunner, TChild)(ThreadRunner, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Platform.ThreadRunner, TChild)(osu.Framework.Platform.ThreadRunner, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of ThreadRunner, TChild)(ThreadRunner, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Platform.ThreadRunner,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Platform.ThreadRunner,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Platform.ThreadRunner.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<ThreadRunner, TChild>(ThreadRunner, TChild)
+  nameWithType: ContainerExtensions.Wrap<ThreadRunner, TChild>(ThreadRunner, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Platform.ThreadRunner, TChild>(osu.Framework.Platform.ThreadRunner, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of ThreadRunner, TChild)(ThreadRunner, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Platform.ThreadRunner, TChild)(osu.Framework.Platform.ThreadRunner, TChild)
+  name.vb: Wrap(Of ThreadRunner, TChild)(ThreadRunner, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Platform.ThreadRunner,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Platform.ThreadRunner,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.ThreadRunner
+    name: ThreadRunner
+    href: osu.Framework.Platform.ThreadRunner.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Platform.ThreadRunner.Threads*
+  commentId: Overload:osu.Framework.Platform.ThreadRunner.Threads
+  href: osu.Framework.Platform.ThreadRunner.html#osu_Framework_Platform_ThreadRunner_Threads
+  name: Threads
+  nameWithType: ThreadRunner.Threads
+  fullName: osu.Framework.Platform.ThreadRunner.Threads
+- uid: System.Collections.Generic.IReadOnlyCollection{osu.Framework.Threading.GameThread}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{osu.Framework.Threading.GameThread}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<GameThread>
+  nameWithType: IReadOnlyCollection<GameThread>
+  fullName: System.Collections.Generic.IReadOnlyCollection<osu.Framework.Threading.GameThread>
+  nameWithType.vb: IReadOnlyCollection(Of GameThread)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of osu.Framework.Threading.GameThread)
+  name.vb: IReadOnlyCollection(Of GameThread)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: osu.Framework.Platform.ThreadRunner.MaximumUpdateHz*
+  commentId: Overload:osu.Framework.Platform.ThreadRunner.MaximumUpdateHz
+  href: osu.Framework.Platform.ThreadRunner.html#osu_Framework_Platform_ThreadRunner_MaximumUpdateHz
+  name: MaximumUpdateHz
+  nameWithType: ThreadRunner.MaximumUpdateHz
+  fullName: osu.Framework.Platform.ThreadRunner.MaximumUpdateHz
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: osu.Framework.Platform.ThreadRunner.MaximumInactiveHz*
+  commentId: Overload:osu.Framework.Platform.ThreadRunner.MaximumInactiveHz
+  href: osu.Framework.Platform.ThreadRunner.html#osu_Framework_Platform_ThreadRunner_MaximumInactiveHz
+  name: MaximumInactiveHz
+  nameWithType: ThreadRunner.MaximumInactiveHz
+  fullName: osu.Framework.Platform.ThreadRunner.MaximumInactiveHz
+- uid: System.NotImplementedException
+  commentId: T:System.NotImplementedException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.notimplementedexception
+  name: NotImplementedException
+  nameWithType: NotImplementedException
+  fullName: System.NotImplementedException
+- uid: osu.Framework.Platform.ThreadRunner.#ctor*
+  commentId: Overload:osu.Framework.Platform.ThreadRunner.#ctor
+  href: osu.Framework.Platform.ThreadRunner.html#osu_Framework_Platform_ThreadRunner__ctor_osu_Framework_Threading_InputThread_
+  name: ThreadRunner
+  nameWithType: ThreadRunner.ThreadRunner
+  fullName: osu.Framework.Platform.ThreadRunner.ThreadRunner
+  nameWithType.vb: ThreadRunner.New
+  fullName.vb: osu.Framework.Platform.ThreadRunner.New
+  name.vb: New
+- uid: osu.Framework.Threading.InputThread
+  commentId: T:osu.Framework.Threading.InputThread
+  parent: osu.Framework.Threading
+  href: osu.Framework.Threading.InputThread.html
+  name: InputThread
+  nameWithType: InputThread
+  fullName: osu.Framework.Threading.InputThread
+- uid: osu.Framework.Threading
+  commentId: N:osu.Framework.Threading
+  href: osu.html
+  name: osu.Framework.Threading
+  nameWithType: osu.Framework.Threading
+  fullName: osu.Framework.Threading
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Threading
+    name: Threading
+    href: osu.Framework.Threading.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Threading
+    name: Threading
+    href: osu.Framework.Threading.html
+- uid: osu.Framework.Platform.ThreadRunner.AddThread*
+  commentId: Overload:osu.Framework.Platform.ThreadRunner.AddThread
+  href: osu.Framework.Platform.ThreadRunner.html#osu_Framework_Platform_ThreadRunner_AddThread_osu_Framework_Threading_GameThread_
+  name: AddThread
+  nameWithType: ThreadRunner.AddThread
+  fullName: osu.Framework.Platform.ThreadRunner.AddThread
+- uid: osu.Framework.Threading.GameThread
+  commentId: T:osu.Framework.Threading.GameThread
+  parent: osu.Framework.Threading
+  href: osu.Framework.Threading.GameThread.html
+  name: GameThread
+  nameWithType: GameThread
+  fullName: osu.Framework.Threading.GameThread
+- uid: osu.Framework.Platform.ThreadRunner.RemoveThread*
+  commentId: Overload:osu.Framework.Platform.ThreadRunner.RemoveThread
+  href: osu.Framework.Platform.ThreadRunner.html#osu_Framework_Platform_ThreadRunner_RemoveThread_osu_Framework_Threading_GameThread_
+  name: RemoveThread
+  nameWithType: ThreadRunner.RemoveThread
+  fullName: osu.Framework.Platform.ThreadRunner.RemoveThread
+- uid: osu.Framework.Platform.ThreadRunner.ExecutionMode*
+  commentId: Overload:osu.Framework.Platform.ThreadRunner.ExecutionMode
+  href: osu.Framework.Platform.ThreadRunner.html#osu_Framework_Platform_ThreadRunner_ExecutionMode
+  name: ExecutionMode
+  nameWithType: ThreadRunner.ExecutionMode
+  fullName: osu.Framework.Platform.ThreadRunner.ExecutionMode
+- uid: osu.Framework.Platform.ExecutionMode
+  commentId: T:osu.Framework.Platform.ExecutionMode
+  parent: osu.Framework.Platform
+  href: osu.Framework.Platform.ExecutionMode.html
+  name: ExecutionMode
+  nameWithType: ExecutionMode
+  fullName: osu.Framework.Platform.ExecutionMode
+- uid: osu.Framework.Platform.ThreadRunner.RunMainLoop*
+  commentId: Overload:osu.Framework.Platform.ThreadRunner.RunMainLoop
+  href: osu.Framework.Platform.ThreadRunner.html#osu_Framework_Platform_ThreadRunner_RunMainLoop
+  name: RunMainLoop
+  nameWithType: ThreadRunner.RunMainLoop
+  fullName: osu.Framework.Platform.ThreadRunner.RunMainLoop
+- uid: osu.Framework.Platform.ThreadRunner.Start*
+  commentId: Overload:osu.Framework.Platform.ThreadRunner.Start
+  href: osu.Framework.Platform.ThreadRunner.html#osu_Framework_Platform_ThreadRunner_Start
+  name: Start
+  nameWithType: ThreadRunner.Start
+  fullName: osu.Framework.Platform.ThreadRunner.Start
+- uid: osu.Framework.Platform.ThreadRunner.Suspend*
+  commentId: Overload:osu.Framework.Platform.ThreadRunner.Suspend
+  href: osu.Framework.Platform.ThreadRunner.html#osu_Framework_Platform_ThreadRunner_Suspend
+  name: Suspend
+  nameWithType: ThreadRunner.Suspend
+  fullName: osu.Framework.Platform.ThreadRunner.Suspend
+- uid: osu.Framework.Platform.ThreadRunner.Stop*
+  commentId: Overload:osu.Framework.Platform.ThreadRunner.Stop
+  href: osu.Framework.Platform.ThreadRunner.html#osu_Framework_Platform_ThreadRunner_Stop
+  name: Stop
+  nameWithType: ThreadRunner.Stop
+  fullName: osu.Framework.Platform.ThreadRunner.Stop
+- uid: osu.Framework.Platform.ThreadRunner.SetCulture*
+  commentId: Overload:osu.Framework.Platform.ThreadRunner.SetCulture
+  href: osu.Framework.Platform.ThreadRunner.html#osu_Framework_Platform_ThreadRunner_SetCulture_System_Globalization_CultureInfo_
+  name: SetCulture
+  nameWithType: ThreadRunner.SetCulture
+  fullName: osu.Framework.Platform.ThreadRunner.SetCulture
+- uid: System.Globalization.CultureInfo
+  commentId: T:System.Globalization.CultureInfo
+  parent: System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo
+  name: CultureInfo
+  nameWithType: CultureInfo
+  fullName: System.Globalization.CultureInfo
+- uid: System.Globalization
+  commentId: N:System.Globalization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Globalization
+  nameWithType: System.Globalization
+  fullName: System.Globalization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Globalization
+    name: Globalization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.globalization

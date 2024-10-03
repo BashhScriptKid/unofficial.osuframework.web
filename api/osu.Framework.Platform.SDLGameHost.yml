@@ -1,0 +1,3061 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Platform.SDLGameHost
+  commentId: T:osu.Framework.Platform.SDLGameHost
+  id: SDLGameHost
+  parent: osu.Framework.Platform
+  children:
+  - osu.Framework.Platform.SDLGameHost.#ctor(System.String,osu.Framework.HostOptions)
+  - osu.Framework.Platform.SDLGameHost.CapsLockEnabled
+  - osu.Framework.Platform.SDLGameHost.CreateAvailableInputHandlers
+  - osu.Framework.Platform.SDLGameHost.CreateClipboard
+  - osu.Framework.Platform.SDLGameHost.CreateTextInput
+  langs:
+  - csharp
+  - vb
+  name: SDLGameHost
+  nameWithType: SDLGameHost
+  fullName: osu.Framework.Platform.SDLGameHost
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Platform/SDLGameHost.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: SDLGameHost
+    path: osu.Framework/Platform/SDLGameHost.cs
+    startLine: 18
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  syntax:
+    content: 'public abstract class SDLGameHost : GameHost, IIpcHost, IDisposable'
+    content.vb: Public MustInherit Class SDLGameHost Inherits GameHost Implements IIpcHost, IDisposable
+  inheritance:
+  - System.Object
+  - osu.Framework.Platform.GameHost
+  derivedClasses:
+  - osu.Framework.Android.AndroidGameHost
+  - osu.Framework.Platform.DesktopGameHost
+  - osu.Framework.iOS.IOSGameHost
+  implements:
+  - osu.Framework.Platform.IIpcHost
+  - System.IDisposable
+  inheritedMembers:
+  - osu.Framework.Platform.GameHost.Window
+  - osu.Framework.Platform.GameHost.RequireWindowExists
+  - osu.Framework.Platform.GameHost.Renderer
+  - osu.Framework.Platform.GameHost.RendererInfo
+  - osu.Framework.Platform.GameHost.AllowBenchmarkUnlimitedFrames
+  - osu.Framework.Platform.GameHost.DebugConfig
+  - osu.Framework.Platform.GameHost.Config
+  - osu.Framework.Platform.GameHost.IsActive
+  - osu.Framework.Platform.GameHost.AllowScreenSuspension
+  - osu.Framework.Platform.GameHost.IsPrimaryInstance
+  - osu.Framework.Platform.GameHost.Activated
+  - osu.Framework.Platform.GameHost.Deactivated
+  - osu.Framework.Platform.GameHost.ExitRequested
+  - osu.Framework.Platform.GameHost.Exited
+  - osu.Framework.Platform.GameHost.ExceptionThrown
+  - osu.Framework.Platform.GameHost.MessageReceived
+  - osu.Framework.Platform.GameHost.OnScreenKeyboardOverlapsGameWindow
+  - osu.Framework.Platform.GameHost.CanExit
+  - osu.Framework.Platform.GameHost.CanSuspendToBackground
+  - osu.Framework.Platform.GameHost.OnMessageReceived(osu.Framework.Platform.IpcMessage)
+  - osu.Framework.Platform.GameHost.SendMessageAsync(osu.Framework.Platform.IpcMessage)
+  - osu.Framework.Platform.GameHost.OpenFileExternally(System.String)
+  - osu.Framework.Platform.GameHost.PresentFileExternally(System.String)
+  - osu.Framework.Platform.GameHost.OpenUrlExternally(System.String)
+  - osu.Framework.Platform.GameHost.CreateWindow(osu.Framework.Platform.GraphicsSurfaceType)
+  - osu.Framework.Platform.GameHost.GetClipboard
+  - osu.Framework.Platform.GameHost.CreateReadableKeyCombinationProvider
+  - osu.Framework.Platform.GameHost.InitialFileSelectorPath
+  - osu.Framework.Platform.GameHost.GetStorage(System.String)
+  - osu.Framework.Platform.GameHost.UserStoragePaths
+  - osu.Framework.Platform.GameHost.Storage
+  - osu.Framework.Platform.GameHost.CacheStorage
+  - osu.Framework.Platform.GameHost.Threads
+  - osu.Framework.Platform.GameHost.RegisterThread(osu.Framework.Threading.GameThread)
+  - osu.Framework.Platform.GameHost.UnregisterThread(osu.Framework.Threading.GameThread)
+  - osu.Framework.Platform.GameHost.DrawThread
+  - osu.Framework.Platform.GameHost.UpdateThread
+  - osu.Framework.Platform.GameHost.InputThread
+  - osu.Framework.Platform.GameHost.AudioThread
+  - osu.Framework.Platform.GameHost.MaximumUpdateHz
+  - osu.Framework.Platform.GameHost.MaximumDrawHz
+  - osu.Framework.Platform.GameHost.MaximumInactiveHz
+  - osu.Framework.Platform.GameHost.FullPath
+  - osu.Framework.Platform.GameHost.Name
+  - osu.Framework.Platform.GameHost.Options
+  - osu.Framework.Platform.GameHost.Dependencies
+  - osu.Framework.Platform.GameHost.CreateGLRenderer
+  - osu.Framework.Platform.GameHost.Collect
+  - osu.Framework.Platform.GameHost.OnActivated
+  - osu.Framework.Platform.GameHost.OnDeactivated
+  - osu.Framework.Platform.GameHost.OnExitRequested
+  - osu.Framework.Platform.GameHost.OnExited
+  - osu.Framework.Platform.GameHost.UpdateFrame
+  - osu.Framework.Platform.GameHost.DrawFrame
+  - osu.Framework.Platform.GameHost.Swap
+  - osu.Framework.Platform.GameHost.TakeScreenshotAsync
+  - osu.Framework.Platform.GameHost.ExecutionState
+  - osu.Framework.Platform.GameHost.Exit
+  - osu.Framework.Platform.GameHost.SuspendToBackground
+  - osu.Framework.Platform.GameHost.PerformExit(System.Boolean)
+  - osu.Framework.Platform.GameHost.Run(osu.Framework.Game)
+  - osu.Framework.Platform.GameHost.ResolvedRenderer
+  - osu.Framework.Platform.GameHost.GetPreferredRenderersForCurrentPlatform
+  - osu.Framework.Platform.GameHost.ChooseAndSetupRenderer
+  - osu.Framework.Platform.GameHost.SetupRendererAndWindow(System.String,osu.Framework.Platform.GraphicsSurfaceType)
+  - osu.Framework.Platform.GameHost.SetupRendererAndWindow(osu.Framework.Graphics.Rendering.IRenderer,osu.Framework.Platform.GraphicsSurfaceType)
+  - osu.Framework.Platform.GameHost.GetDefaultGameStorage
+  - osu.Framework.Platform.GameHost.Suspend
+  - osu.Framework.Platform.GameHost.Resume
+  - osu.Framework.Platform.GameHost.SetupForRun
+  - osu.Framework.Platform.GameHost.ResetInputHandlers
+  - osu.Framework.Platform.GameHost.SceneGraphClock
+  - osu.Framework.Platform.GameHost.PerformanceLogging
+  - osu.Framework.Platform.GameHost.SetupConfig(System.Collections.Generic.IDictionary{osu.Framework.Configuration.FrameworkSetting,System.Object})
+  - osu.Framework.Platform.GameHost.AvailableInputHandlers
+  - osu.Framework.Platform.GameHost.Dispose(System.Boolean)
+  - osu.Framework.Platform.GameHost.Dispose
+  - osu.Framework.Platform.GameHost.PlatformKeyBindings
+  - osu.Framework.Platform.GameHost.CreateTextureLoaderStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]})
+  - osu.Framework.Platform.GameHost.CreateVideoDecoder(System.IO.Stream)
+  - osu.Framework.Platform.GameHost.CreateThreadRunner(osu.Framework.Threading.InputThread)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Platform.SDLGameHost.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Platform.SDLGameHost.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Platform.SDLGameHost.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Platform.SDLGameHost.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Platform.SDLGameHost.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Platform.SDLGameHost.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Platform.SDLGameHost.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Platform.SDLGameHost.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Platform.SDLGameHost.CapsLockEnabled
+  commentId: P:osu.Framework.Platform.SDLGameHost.CapsLockEnabled
+  id: CapsLockEnabled
+  parent: osu.Framework.Platform.SDLGameHost
+  langs:
+  - csharp
+  - vb
+  name: CapsLockEnabled
+  nameWithType: SDLGameHost.CapsLockEnabled
+  fullName: osu.Framework.Platform.SDLGameHost.CapsLockEnabled
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Platform/SDLGameHost.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CapsLockEnabled
+    path: osu.Framework/Platform/SDLGameHost.cs
+    startLine: 20
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: If caps-lock is enabled on the system, false if not overwritten by a subclass
+  example: []
+  syntax:
+    content: public override bool CapsLockEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property CapsLockEnabled As Boolean
+  overridden: osu.Framework.Platform.GameHost.CapsLockEnabled
+  overload: osu.Framework.Platform.SDLGameHost.CapsLockEnabled*
+- uid: osu.Framework.Platform.SDLGameHost.#ctor(System.String,osu.Framework.HostOptions)
+  commentId: M:osu.Framework.Platform.SDLGameHost.#ctor(System.String,osu.Framework.HostOptions)
+  id: '#ctor(System.String,osu.Framework.HostOptions)'
+  parent: osu.Framework.Platform.SDLGameHost
+  langs:
+  - csharp
+  - vb
+  name: SDLGameHost(string, HostOptions?)
+  nameWithType: SDLGameHost.SDLGameHost(string, HostOptions?)
+  fullName: osu.Framework.Platform.SDLGameHost.SDLGameHost(string, osu.Framework.HostOptions?)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Platform/SDLGameHost.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Platform/SDLGameHost.cs
+    startLine: 22
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  syntax:
+    content: protected SDLGameHost(string gameName, HostOptions? options = null)
+    parameters:
+    - id: gameName
+      type: System.String
+    - id: options
+      type: osu.Framework.HostOptions
+    content.vb: Protected Sub New(gameName As String, options As HostOptions = Nothing)
+  overload: osu.Framework.Platform.SDLGameHost.#ctor*
+  nameWithType.vb: SDLGameHost.New(String, HostOptions)
+  fullName.vb: osu.Framework.Platform.SDLGameHost.New(String, osu.Framework.HostOptions)
+  name.vb: New(String, HostOptions)
+- uid: osu.Framework.Platform.SDLGameHost.CreateTextInput
+  commentId: M:osu.Framework.Platform.SDLGameHost.CreateTextInput
+  id: CreateTextInput
+  parent: osu.Framework.Platform.SDLGameHost
+  langs:
+  - csharp
+  - vb
+  name: CreateTextInput()
+  nameWithType: SDLGameHost.CreateTextInput()
+  fullName: osu.Framework.Platform.SDLGameHost.CreateTextInput()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDLGameHost.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CreateTextInput
+    path: osu.Framework/Platform/SDLGameHost.cs
+    startLine: 27
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  example: []
+  syntax:
+    content: protected override TextInputSource CreateTextInput()
+    return:
+      type: osu.Framework.Input.TextInputSource
+    content.vb: Protected Overrides Function CreateTextInput() As TextInputSource
+  overridden: osu.Framework.Platform.GameHost.CreateTextInput
+  overload: osu.Framework.Platform.SDLGameHost.CreateTextInput*
+- uid: osu.Framework.Platform.SDLGameHost.CreateClipboard
+  commentId: M:osu.Framework.Platform.SDLGameHost.CreateClipboard
+  id: CreateClipboard
+  parent: osu.Framework.Platform.SDLGameHost
+  langs:
+  - csharp
+  - vb
+  name: CreateClipboard()
+  nameWithType: SDLGameHost.CreateClipboard()
+  fullName: osu.Framework.Platform.SDLGameHost.CreateClipboard()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDLGameHost.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CreateClipboard
+    path: osu.Framework/Platform/SDLGameHost.cs
+    startLine: 35
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  example: []
+  syntax:
+    content: protected override Clipboard CreateClipboard()
+    return:
+      type: osu.Framework.Platform.Clipboard
+    content.vb: Protected Overrides Function CreateClipboard() As Clipboard
+  overridden: osu.Framework.Platform.GameHost.CreateClipboard
+  overload: osu.Framework.Platform.SDLGameHost.CreateClipboard*
+- uid: osu.Framework.Platform.SDLGameHost.CreateAvailableInputHandlers
+  commentId: M:osu.Framework.Platform.SDLGameHost.CreateAvailableInputHandlers
+  id: CreateAvailableInputHandlers
+  parent: osu.Framework.Platform.SDLGameHost
+  langs:
+  - csharp
+  - vb
+  name: CreateAvailableInputHandlers()
+  nameWithType: SDLGameHost.CreateAvailableInputHandlers()
+  fullName: osu.Framework.Platform.SDLGameHost.CreateAvailableInputHandlers()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDLGameHost.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CreateAvailableInputHandlers
+    path: osu.Framework/Platform/SDLGameHost.cs
+    startLine: 40
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Construct all input handlers for this host. The order here decides the priority given to handlers, with the earliest occurring having higher priority.
+  example: []
+  syntax:
+    content: protected override IEnumerable<InputHandler> CreateAvailableInputHandlers()
+    return:
+      type: System.Collections.Generic.IEnumerable{osu.Framework.Input.Handlers.InputHandler}
+    content.vb: Protected Overrides Function CreateAvailableInputHandlers() As IEnumerable(Of InputHandler)
+  overridden: osu.Framework.Platform.GameHost.CreateAvailableInputHandlers
+  overload: osu.Framework.Platform.SDLGameHost.CreateAvailableInputHandlers*
+references:
+- uid: osu.Framework.Platform
+  commentId: N:osu.Framework.Platform
+  href: osu.html
+  name: osu.Framework.Platform
+  nameWithType: osu.Framework.Platform
+  fullName: osu.Framework.Platform
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: osu.Framework.Platform.GameHost
+  commentId: T:osu.Framework.Platform.GameHost
+  parent: osu.Framework.Platform
+  href: osu.Framework.Platform.GameHost.html
+  name: GameHost
+  nameWithType: GameHost
+  fullName: osu.Framework.Platform.GameHost
+- uid: osu.Framework.Platform.IIpcHost
+  commentId: T:osu.Framework.Platform.IIpcHost
+  parent: osu.Framework.Platform
+  href: osu.Framework.Platform.IIpcHost.html
+  name: IIpcHost
+  nameWithType: IIpcHost
+  fullName: osu.Framework.Platform.IIpcHost
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: osu.Framework.Platform.GameHost.Window
+  commentId: P:osu.Framework.Platform.GameHost.Window
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Window
+  name: Window
+  nameWithType: GameHost.Window
+  fullName: osu.Framework.Platform.GameHost.Window
+- uid: osu.Framework.Platform.GameHost.RequireWindowExists
+  commentId: P:osu.Framework.Platform.GameHost.RequireWindowExists
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_RequireWindowExists
+  name: RequireWindowExists
+  nameWithType: GameHost.RequireWindowExists
+  fullName: osu.Framework.Platform.GameHost.RequireWindowExists
+- uid: osu.Framework.Platform.GameHost.Renderer
+  commentId: P:osu.Framework.Platform.GameHost.Renderer
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Renderer
+  name: Renderer
+  nameWithType: GameHost.Renderer
+  fullName: osu.Framework.Platform.GameHost.Renderer
+- uid: osu.Framework.Platform.GameHost.RendererInfo
+  commentId: P:osu.Framework.Platform.GameHost.RendererInfo
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_RendererInfo
+  name: RendererInfo
+  nameWithType: GameHost.RendererInfo
+  fullName: osu.Framework.Platform.GameHost.RendererInfo
+- uid: osu.Framework.Platform.GameHost.AllowBenchmarkUnlimitedFrames
+  commentId: P:osu.Framework.Platform.GameHost.AllowBenchmarkUnlimitedFrames
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_AllowBenchmarkUnlimitedFrames
+  name: AllowBenchmarkUnlimitedFrames
+  nameWithType: GameHost.AllowBenchmarkUnlimitedFrames
+  fullName: osu.Framework.Platform.GameHost.AllowBenchmarkUnlimitedFrames
+- uid: osu.Framework.Platform.GameHost.DebugConfig
+  commentId: P:osu.Framework.Platform.GameHost.DebugConfig
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_DebugConfig
+  name: DebugConfig
+  nameWithType: GameHost.DebugConfig
+  fullName: osu.Framework.Platform.GameHost.DebugConfig
+- uid: osu.Framework.Platform.GameHost.Config
+  commentId: P:osu.Framework.Platform.GameHost.Config
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Config
+  name: Config
+  nameWithType: GameHost.Config
+  fullName: osu.Framework.Platform.GameHost.Config
+- uid: osu.Framework.Platform.GameHost.IsActive
+  commentId: F:osu.Framework.Platform.GameHost.IsActive
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_IsActive
+  name: IsActive
+  nameWithType: GameHost.IsActive
+  fullName: osu.Framework.Platform.GameHost.IsActive
+- uid: osu.Framework.Platform.GameHost.AllowScreenSuspension
+  commentId: F:osu.Framework.Platform.GameHost.AllowScreenSuspension
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_AllowScreenSuspension
+  name: AllowScreenSuspension
+  nameWithType: GameHost.AllowScreenSuspension
+  fullName: osu.Framework.Platform.GameHost.AllowScreenSuspension
+- uid: osu.Framework.Platform.GameHost.IsPrimaryInstance
+  commentId: P:osu.Framework.Platform.GameHost.IsPrimaryInstance
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_IsPrimaryInstance
+  name: IsPrimaryInstance
+  nameWithType: GameHost.IsPrimaryInstance
+  fullName: osu.Framework.Platform.GameHost.IsPrimaryInstance
+- uid: osu.Framework.Platform.GameHost.Activated
+  commentId: E:osu.Framework.Platform.GameHost.Activated
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Activated
+  name: Activated
+  nameWithType: GameHost.Activated
+  fullName: osu.Framework.Platform.GameHost.Activated
+- uid: osu.Framework.Platform.GameHost.Deactivated
+  commentId: E:osu.Framework.Platform.GameHost.Deactivated
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Deactivated
+  name: Deactivated
+  nameWithType: GameHost.Deactivated
+  fullName: osu.Framework.Platform.GameHost.Deactivated
+- uid: osu.Framework.Platform.GameHost.ExitRequested
+  commentId: E:osu.Framework.Platform.GameHost.ExitRequested
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ExitRequested
+  name: ExitRequested
+  nameWithType: GameHost.ExitRequested
+  fullName: osu.Framework.Platform.GameHost.ExitRequested
+- uid: osu.Framework.Platform.GameHost.Exited
+  commentId: E:osu.Framework.Platform.GameHost.Exited
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Exited
+  name: Exited
+  nameWithType: GameHost.Exited
+  fullName: osu.Framework.Platform.GameHost.Exited
+- uid: osu.Framework.Platform.GameHost.ExceptionThrown
+  commentId: E:osu.Framework.Platform.GameHost.ExceptionThrown
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ExceptionThrown
+  name: ExceptionThrown
+  nameWithType: GameHost.ExceptionThrown
+  fullName: osu.Framework.Platform.GameHost.ExceptionThrown
+- uid: osu.Framework.Platform.GameHost.MessageReceived
+  commentId: E:osu.Framework.Platform.GameHost.MessageReceived
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_MessageReceived
+  name: MessageReceived
+  nameWithType: GameHost.MessageReceived
+  fullName: osu.Framework.Platform.GameHost.MessageReceived
+- uid: osu.Framework.Platform.GameHost.OnScreenKeyboardOverlapsGameWindow
+  commentId: P:osu.Framework.Platform.GameHost.OnScreenKeyboardOverlapsGameWindow
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnScreenKeyboardOverlapsGameWindow
+  name: OnScreenKeyboardOverlapsGameWindow
+  nameWithType: GameHost.OnScreenKeyboardOverlapsGameWindow
+  fullName: osu.Framework.Platform.GameHost.OnScreenKeyboardOverlapsGameWindow
+- uid: osu.Framework.Platform.GameHost.CanExit
+  commentId: P:osu.Framework.Platform.GameHost.CanExit
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CanExit
+  name: CanExit
+  nameWithType: GameHost.CanExit
+  fullName: osu.Framework.Platform.GameHost.CanExit
+- uid: osu.Framework.Platform.GameHost.CanSuspendToBackground
+  commentId: P:osu.Framework.Platform.GameHost.CanSuspendToBackground
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CanSuspendToBackground
+  name: CanSuspendToBackground
+  nameWithType: GameHost.CanSuspendToBackground
+  fullName: osu.Framework.Platform.GameHost.CanSuspendToBackground
+- uid: osu.Framework.Platform.GameHost.OnMessageReceived(osu.Framework.Platform.IpcMessage)
+  commentId: M:osu.Framework.Platform.GameHost.OnMessageReceived(osu.Framework.Platform.IpcMessage)
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnMessageReceived_osu_Framework_Platform_IpcMessage_
+  name: OnMessageReceived(IpcMessage)
+  nameWithType: GameHost.OnMessageReceived(IpcMessage)
+  fullName: osu.Framework.Platform.GameHost.OnMessageReceived(osu.Framework.Platform.IpcMessage)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.OnMessageReceived(osu.Framework.Platform.IpcMessage)
+    name: OnMessageReceived
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnMessageReceived_osu_Framework_Platform_IpcMessage_
+  - name: (
+  - uid: osu.Framework.Platform.IpcMessage
+    name: IpcMessage
+    href: osu.Framework.Platform.IpcMessage.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.OnMessageReceived(osu.Framework.Platform.IpcMessage)
+    name: OnMessageReceived
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnMessageReceived_osu_Framework_Platform_IpcMessage_
+  - name: (
+  - uid: osu.Framework.Platform.IpcMessage
+    name: IpcMessage
+    href: osu.Framework.Platform.IpcMessage.html
+  - name: )
+- uid: osu.Framework.Platform.GameHost.SendMessageAsync(osu.Framework.Platform.IpcMessage)
+  commentId: M:osu.Framework.Platform.GameHost.SendMessageAsync(osu.Framework.Platform.IpcMessage)
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SendMessageAsync_osu_Framework_Platform_IpcMessage_
+  name: SendMessageAsync(IpcMessage)
+  nameWithType: GameHost.SendMessageAsync(IpcMessage)
+  fullName: osu.Framework.Platform.GameHost.SendMessageAsync(osu.Framework.Platform.IpcMessage)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.SendMessageAsync(osu.Framework.Platform.IpcMessage)
+    name: SendMessageAsync
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SendMessageAsync_osu_Framework_Platform_IpcMessage_
+  - name: (
+  - uid: osu.Framework.Platform.IpcMessage
+    name: IpcMessage
+    href: osu.Framework.Platform.IpcMessage.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.SendMessageAsync(osu.Framework.Platform.IpcMessage)
+    name: SendMessageAsync
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SendMessageAsync_osu_Framework_Platform_IpcMessage_
+  - name: (
+  - uid: osu.Framework.Platform.IpcMessage
+    name: IpcMessage
+    href: osu.Framework.Platform.IpcMessage.html
+  - name: )
+- uid: osu.Framework.Platform.GameHost.OpenFileExternally(System.String)
+  commentId: M:osu.Framework.Platform.GameHost.OpenFileExternally(System.String)
+  parent: osu.Framework.Platform.GameHost
+  isExternal: true
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OpenFileExternally_System_String_
+  name: OpenFileExternally(string)
+  nameWithType: GameHost.OpenFileExternally(string)
+  fullName: osu.Framework.Platform.GameHost.OpenFileExternally(string)
+  nameWithType.vb: GameHost.OpenFileExternally(String)
+  fullName.vb: osu.Framework.Platform.GameHost.OpenFileExternally(String)
+  name.vb: OpenFileExternally(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.OpenFileExternally(System.String)
+    name: OpenFileExternally
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OpenFileExternally_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.OpenFileExternally(System.String)
+    name: OpenFileExternally
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OpenFileExternally_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.GameHost.PresentFileExternally(System.String)
+  commentId: M:osu.Framework.Platform.GameHost.PresentFileExternally(System.String)
+  parent: osu.Framework.Platform.GameHost
+  isExternal: true
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_PresentFileExternally_System_String_
+  name: PresentFileExternally(string)
+  nameWithType: GameHost.PresentFileExternally(string)
+  fullName: osu.Framework.Platform.GameHost.PresentFileExternally(string)
+  nameWithType.vb: GameHost.PresentFileExternally(String)
+  fullName.vb: osu.Framework.Platform.GameHost.PresentFileExternally(String)
+  name.vb: PresentFileExternally(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.PresentFileExternally(System.String)
+    name: PresentFileExternally
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_PresentFileExternally_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.PresentFileExternally(System.String)
+    name: PresentFileExternally
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_PresentFileExternally_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.GameHost.OpenUrlExternally(System.String)
+  commentId: M:osu.Framework.Platform.GameHost.OpenUrlExternally(System.String)
+  parent: osu.Framework.Platform.GameHost
+  isExternal: true
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OpenUrlExternally_System_String_
+  name: OpenUrlExternally(string)
+  nameWithType: GameHost.OpenUrlExternally(string)
+  fullName: osu.Framework.Platform.GameHost.OpenUrlExternally(string)
+  nameWithType.vb: GameHost.OpenUrlExternally(String)
+  fullName.vb: osu.Framework.Platform.GameHost.OpenUrlExternally(String)
+  name.vb: OpenUrlExternally(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.OpenUrlExternally(System.String)
+    name: OpenUrlExternally
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OpenUrlExternally_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.OpenUrlExternally(System.String)
+    name: OpenUrlExternally
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OpenUrlExternally_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.GameHost.CreateWindow(osu.Framework.Platform.GraphicsSurfaceType)
+  commentId: M:osu.Framework.Platform.GameHost.CreateWindow(osu.Framework.Platform.GraphicsSurfaceType)
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateWindow_osu_Framework_Platform_GraphicsSurfaceType_
+  name: CreateWindow(GraphicsSurfaceType)
+  nameWithType: GameHost.CreateWindow(GraphicsSurfaceType)
+  fullName: osu.Framework.Platform.GameHost.CreateWindow(osu.Framework.Platform.GraphicsSurfaceType)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.CreateWindow(osu.Framework.Platform.GraphicsSurfaceType)
+    name: CreateWindow
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateWindow_osu_Framework_Platform_GraphicsSurfaceType_
+  - name: (
+  - uid: osu.Framework.Platform.GraphicsSurfaceType
+    name: GraphicsSurfaceType
+    href: osu.Framework.Platform.GraphicsSurfaceType.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.CreateWindow(osu.Framework.Platform.GraphicsSurfaceType)
+    name: CreateWindow
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateWindow_osu_Framework_Platform_GraphicsSurfaceType_
+  - name: (
+  - uid: osu.Framework.Platform.GraphicsSurfaceType
+    name: GraphicsSurfaceType
+    href: osu.Framework.Platform.GraphicsSurfaceType.html
+  - name: )
+- uid: osu.Framework.Platform.GameHost.GetClipboard
+  commentId: M:osu.Framework.Platform.GameHost.GetClipboard
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetClipboard
+  name: GetClipboard()
+  nameWithType: GameHost.GetClipboard()
+  fullName: osu.Framework.Platform.GameHost.GetClipboard()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.GetClipboard
+    name: GetClipboard
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetClipboard
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.GetClipboard
+    name: GetClipboard
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetClipboard
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.CreateReadableKeyCombinationProvider
+  commentId: M:osu.Framework.Platform.GameHost.CreateReadableKeyCombinationProvider
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateReadableKeyCombinationProvider
+  name: CreateReadableKeyCombinationProvider()
+  nameWithType: GameHost.CreateReadableKeyCombinationProvider()
+  fullName: osu.Framework.Platform.GameHost.CreateReadableKeyCombinationProvider()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.CreateReadableKeyCombinationProvider
+    name: CreateReadableKeyCombinationProvider
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateReadableKeyCombinationProvider
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.CreateReadableKeyCombinationProvider
+    name: CreateReadableKeyCombinationProvider
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateReadableKeyCombinationProvider
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.InitialFileSelectorPath
+  commentId: P:osu.Framework.Platform.GameHost.InitialFileSelectorPath
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_InitialFileSelectorPath
+  name: InitialFileSelectorPath
+  nameWithType: GameHost.InitialFileSelectorPath
+  fullName: osu.Framework.Platform.GameHost.InitialFileSelectorPath
+- uid: osu.Framework.Platform.GameHost.GetStorage(System.String)
+  commentId: M:osu.Framework.Platform.GameHost.GetStorage(System.String)
+  parent: osu.Framework.Platform.GameHost
+  isExternal: true
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetStorage_System_String_
+  name: GetStorage(string)
+  nameWithType: GameHost.GetStorage(string)
+  fullName: osu.Framework.Platform.GameHost.GetStorage(string)
+  nameWithType.vb: GameHost.GetStorage(String)
+  fullName.vb: osu.Framework.Platform.GameHost.GetStorage(String)
+  name.vb: GetStorage(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.GetStorage(System.String)
+    name: GetStorage
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetStorage_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.GetStorage(System.String)
+    name: GetStorage
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetStorage_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.GameHost.UserStoragePaths
+  commentId: P:osu.Framework.Platform.GameHost.UserStoragePaths
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_UserStoragePaths
+  name: UserStoragePaths
+  nameWithType: GameHost.UserStoragePaths
+  fullName: osu.Framework.Platform.GameHost.UserStoragePaths
+- uid: osu.Framework.Platform.GameHost.Storage
+  commentId: P:osu.Framework.Platform.GameHost.Storage
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Storage
+  name: Storage
+  nameWithType: GameHost.Storage
+  fullName: osu.Framework.Platform.GameHost.Storage
+- uid: osu.Framework.Platform.GameHost.CacheStorage
+  commentId: P:osu.Framework.Platform.GameHost.CacheStorage
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CacheStorage
+  name: CacheStorage
+  nameWithType: GameHost.CacheStorage
+  fullName: osu.Framework.Platform.GameHost.CacheStorage
+- uid: osu.Framework.Platform.GameHost.Threads
+  commentId: P:osu.Framework.Platform.GameHost.Threads
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Threads
+  name: Threads
+  nameWithType: GameHost.Threads
+  fullName: osu.Framework.Platform.GameHost.Threads
+- uid: osu.Framework.Platform.GameHost.RegisterThread(osu.Framework.Threading.GameThread)
+  commentId: M:osu.Framework.Platform.GameHost.RegisterThread(osu.Framework.Threading.GameThread)
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_RegisterThread_osu_Framework_Threading_GameThread_
+  name: RegisterThread(GameThread)
+  nameWithType: GameHost.RegisterThread(GameThread)
+  fullName: osu.Framework.Platform.GameHost.RegisterThread(osu.Framework.Threading.GameThread)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.RegisterThread(osu.Framework.Threading.GameThread)
+    name: RegisterThread
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_RegisterThread_osu_Framework_Threading_GameThread_
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.RegisterThread(osu.Framework.Threading.GameThread)
+    name: RegisterThread
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_RegisterThread_osu_Framework_Threading_GameThread_
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+- uid: osu.Framework.Platform.GameHost.UnregisterThread(osu.Framework.Threading.GameThread)
+  commentId: M:osu.Framework.Platform.GameHost.UnregisterThread(osu.Framework.Threading.GameThread)
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_UnregisterThread_osu_Framework_Threading_GameThread_
+  name: UnregisterThread(GameThread)
+  nameWithType: GameHost.UnregisterThread(GameThread)
+  fullName: osu.Framework.Platform.GameHost.UnregisterThread(osu.Framework.Threading.GameThread)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.UnregisterThread(osu.Framework.Threading.GameThread)
+    name: UnregisterThread
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_UnregisterThread_osu_Framework_Threading_GameThread_
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.UnregisterThread(osu.Framework.Threading.GameThread)
+    name: UnregisterThread
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_UnregisterThread_osu_Framework_Threading_GameThread_
+  - name: (
+  - uid: osu.Framework.Threading.GameThread
+    name: GameThread
+    href: osu.Framework.Threading.GameThread.html
+  - name: )
+- uid: osu.Framework.Platform.GameHost.DrawThread
+  commentId: P:osu.Framework.Platform.GameHost.DrawThread
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_DrawThread
+  name: DrawThread
+  nameWithType: GameHost.DrawThread
+  fullName: osu.Framework.Platform.GameHost.DrawThread
+- uid: osu.Framework.Platform.GameHost.UpdateThread
+  commentId: P:osu.Framework.Platform.GameHost.UpdateThread
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_UpdateThread
+  name: UpdateThread
+  nameWithType: GameHost.UpdateThread
+  fullName: osu.Framework.Platform.GameHost.UpdateThread
+- uid: osu.Framework.Platform.GameHost.InputThread
+  commentId: P:osu.Framework.Platform.GameHost.InputThread
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_InputThread
+  name: InputThread
+  nameWithType: GameHost.InputThread
+  fullName: osu.Framework.Platform.GameHost.InputThread
+- uid: osu.Framework.Platform.GameHost.AudioThread
+  commentId: P:osu.Framework.Platform.GameHost.AudioThread
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_AudioThread
+  name: AudioThread
+  nameWithType: GameHost.AudioThread
+  fullName: osu.Framework.Platform.GameHost.AudioThread
+- uid: osu.Framework.Platform.GameHost.MaximumUpdateHz
+  commentId: P:osu.Framework.Platform.GameHost.MaximumUpdateHz
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_MaximumUpdateHz
+  name: MaximumUpdateHz
+  nameWithType: GameHost.MaximumUpdateHz
+  fullName: osu.Framework.Platform.GameHost.MaximumUpdateHz
+- uid: osu.Framework.Platform.GameHost.MaximumDrawHz
+  commentId: P:osu.Framework.Platform.GameHost.MaximumDrawHz
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_MaximumDrawHz
+  name: MaximumDrawHz
+  nameWithType: GameHost.MaximumDrawHz
+  fullName: osu.Framework.Platform.GameHost.MaximumDrawHz
+- uid: osu.Framework.Platform.GameHost.MaximumInactiveHz
+  commentId: P:osu.Framework.Platform.GameHost.MaximumInactiveHz
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_MaximumInactiveHz
+  name: MaximumInactiveHz
+  nameWithType: GameHost.MaximumInactiveHz
+  fullName: osu.Framework.Platform.GameHost.MaximumInactiveHz
+- uid: osu.Framework.Platform.GameHost.FullPath
+  commentId: P:osu.Framework.Platform.GameHost.FullPath
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_FullPath
+  name: FullPath
+  nameWithType: GameHost.FullPath
+  fullName: osu.Framework.Platform.GameHost.FullPath
+- uid: osu.Framework.Platform.GameHost.Name
+  commentId: P:osu.Framework.Platform.GameHost.Name
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Name
+  name: Name
+  nameWithType: GameHost.Name
+  fullName: osu.Framework.Platform.GameHost.Name
+- uid: osu.Framework.Platform.GameHost.Options
+  commentId: P:osu.Framework.Platform.GameHost.Options
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Options
+  name: Options
+  nameWithType: GameHost.Options
+  fullName: osu.Framework.Platform.GameHost.Options
+- uid: osu.Framework.Platform.GameHost.Dependencies
+  commentId: P:osu.Framework.Platform.GameHost.Dependencies
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Dependencies
+  name: Dependencies
+  nameWithType: GameHost.Dependencies
+  fullName: osu.Framework.Platform.GameHost.Dependencies
+- uid: osu.Framework.Platform.GameHost.CreateGLRenderer
+  commentId: M:osu.Framework.Platform.GameHost.CreateGLRenderer
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateGLRenderer
+  name: CreateGLRenderer()
+  nameWithType: GameHost.CreateGLRenderer()
+  fullName: osu.Framework.Platform.GameHost.CreateGLRenderer()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.CreateGLRenderer
+    name: CreateGLRenderer
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateGLRenderer
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.CreateGLRenderer
+    name: CreateGLRenderer
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateGLRenderer
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.Collect
+  commentId: M:osu.Framework.Platform.GameHost.Collect
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Collect
+  name: Collect()
+  nameWithType: GameHost.Collect()
+  fullName: osu.Framework.Platform.GameHost.Collect()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.Collect
+    name: Collect
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Collect
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.Collect
+    name: Collect
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Collect
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.OnActivated
+  commentId: M:osu.Framework.Platform.GameHost.OnActivated
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnActivated
+  name: OnActivated()
+  nameWithType: GameHost.OnActivated()
+  fullName: osu.Framework.Platform.GameHost.OnActivated()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.OnActivated
+    name: OnActivated
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnActivated
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.OnActivated
+    name: OnActivated
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnActivated
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.OnDeactivated
+  commentId: M:osu.Framework.Platform.GameHost.OnDeactivated
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnDeactivated
+  name: OnDeactivated()
+  nameWithType: GameHost.OnDeactivated()
+  fullName: osu.Framework.Platform.GameHost.OnDeactivated()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.OnDeactivated
+    name: OnDeactivated
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnDeactivated
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.OnDeactivated
+    name: OnDeactivated
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnDeactivated
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.OnExitRequested
+  commentId: M:osu.Framework.Platform.GameHost.OnExitRequested
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnExitRequested
+  name: OnExitRequested()
+  nameWithType: GameHost.OnExitRequested()
+  fullName: osu.Framework.Platform.GameHost.OnExitRequested()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.OnExitRequested
+    name: OnExitRequested
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnExitRequested
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.OnExitRequested
+    name: OnExitRequested
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnExitRequested
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.OnExited
+  commentId: M:osu.Framework.Platform.GameHost.OnExited
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnExited
+  name: OnExited()
+  nameWithType: GameHost.OnExited()
+  fullName: osu.Framework.Platform.GameHost.OnExited()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.OnExited
+    name: OnExited
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnExited
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.OnExited
+    name: OnExited
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_OnExited
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.UpdateFrame
+  commentId: M:osu.Framework.Platform.GameHost.UpdateFrame
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_UpdateFrame
+  name: UpdateFrame()
+  nameWithType: GameHost.UpdateFrame()
+  fullName: osu.Framework.Platform.GameHost.UpdateFrame()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.UpdateFrame
+    name: UpdateFrame
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_UpdateFrame
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.UpdateFrame
+    name: UpdateFrame
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_UpdateFrame
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.DrawFrame
+  commentId: M:osu.Framework.Platform.GameHost.DrawFrame
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_DrawFrame
+  name: DrawFrame()
+  nameWithType: GameHost.DrawFrame()
+  fullName: osu.Framework.Platform.GameHost.DrawFrame()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.DrawFrame
+    name: DrawFrame
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_DrawFrame
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.DrawFrame
+    name: DrawFrame
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_DrawFrame
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.Swap
+  commentId: M:osu.Framework.Platform.GameHost.Swap
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Swap
+  name: Swap()
+  nameWithType: GameHost.Swap()
+  fullName: osu.Framework.Platform.GameHost.Swap()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.Swap
+    name: Swap
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Swap
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.Swap
+    name: Swap
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Swap
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.TakeScreenshotAsync
+  commentId: M:osu.Framework.Platform.GameHost.TakeScreenshotAsync
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_TakeScreenshotAsync
+  name: TakeScreenshotAsync()
+  nameWithType: GameHost.TakeScreenshotAsync()
+  fullName: osu.Framework.Platform.GameHost.TakeScreenshotAsync()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.TakeScreenshotAsync
+    name: TakeScreenshotAsync
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_TakeScreenshotAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.TakeScreenshotAsync
+    name: TakeScreenshotAsync
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_TakeScreenshotAsync
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.ExecutionState
+  commentId: P:osu.Framework.Platform.GameHost.ExecutionState
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ExecutionState
+  name: ExecutionState
+  nameWithType: GameHost.ExecutionState
+  fullName: osu.Framework.Platform.GameHost.ExecutionState
+- uid: osu.Framework.Platform.GameHost.Exit
+  commentId: M:osu.Framework.Platform.GameHost.Exit
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Exit
+  name: Exit()
+  nameWithType: GameHost.Exit()
+  fullName: osu.Framework.Platform.GameHost.Exit()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.Exit
+    name: Exit
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Exit
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.Exit
+    name: Exit
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Exit
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.SuspendToBackground
+  commentId: M:osu.Framework.Platform.GameHost.SuspendToBackground
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SuspendToBackground
+  name: SuspendToBackground()
+  nameWithType: GameHost.SuspendToBackground()
+  fullName: osu.Framework.Platform.GameHost.SuspendToBackground()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.SuspendToBackground
+    name: SuspendToBackground
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SuspendToBackground
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.SuspendToBackground
+    name: SuspendToBackground
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SuspendToBackground
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.PerformExit(System.Boolean)
+  commentId: M:osu.Framework.Platform.GameHost.PerformExit(System.Boolean)
+  parent: osu.Framework.Platform.GameHost
+  isExternal: true
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_PerformExit_System_Boolean_
+  name: PerformExit(bool)
+  nameWithType: GameHost.PerformExit(bool)
+  fullName: osu.Framework.Platform.GameHost.PerformExit(bool)
+  nameWithType.vb: GameHost.PerformExit(Boolean)
+  fullName.vb: osu.Framework.Platform.GameHost.PerformExit(Boolean)
+  name.vb: PerformExit(Boolean)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.PerformExit(System.Boolean)
+    name: PerformExit
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_PerformExit_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.PerformExit(System.Boolean)
+    name: PerformExit
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_PerformExit_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: osu.Framework.Platform.GameHost.Run(osu.Framework.Game)
+  commentId: M:osu.Framework.Platform.GameHost.Run(osu.Framework.Game)
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Run_osu_Framework_Game_
+  name: Run(Game)
+  nameWithType: GameHost.Run(Game)
+  fullName: osu.Framework.Platform.GameHost.Run(osu.Framework.Game)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.Run(osu.Framework.Game)
+    name: Run
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Run_osu_Framework_Game_
+  - name: (
+  - uid: osu.Framework.Game
+    name: Game
+    href: osu.Framework.Game.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.Run(osu.Framework.Game)
+    name: Run
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Run_osu_Framework_Game_
+  - name: (
+  - uid: osu.Framework.Game
+    name: Game
+    href: osu.Framework.Game.html
+  - name: )
+- uid: osu.Framework.Platform.GameHost.ResolvedRenderer
+  commentId: P:osu.Framework.Platform.GameHost.ResolvedRenderer
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ResolvedRenderer
+  name: ResolvedRenderer
+  nameWithType: GameHost.ResolvedRenderer
+  fullName: osu.Framework.Platform.GameHost.ResolvedRenderer
+- uid: osu.Framework.Platform.GameHost.GetPreferredRenderersForCurrentPlatform
+  commentId: M:osu.Framework.Platform.GameHost.GetPreferredRenderersForCurrentPlatform
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetPreferredRenderersForCurrentPlatform
+  name: GetPreferredRenderersForCurrentPlatform()
+  nameWithType: GameHost.GetPreferredRenderersForCurrentPlatform()
+  fullName: osu.Framework.Platform.GameHost.GetPreferredRenderersForCurrentPlatform()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.GetPreferredRenderersForCurrentPlatform
+    name: GetPreferredRenderersForCurrentPlatform
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetPreferredRenderersForCurrentPlatform
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.GetPreferredRenderersForCurrentPlatform
+    name: GetPreferredRenderersForCurrentPlatform
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetPreferredRenderersForCurrentPlatform
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.ChooseAndSetupRenderer
+  commentId: M:osu.Framework.Platform.GameHost.ChooseAndSetupRenderer
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ChooseAndSetupRenderer
+  name: ChooseAndSetupRenderer()
+  nameWithType: GameHost.ChooseAndSetupRenderer()
+  fullName: osu.Framework.Platform.GameHost.ChooseAndSetupRenderer()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.ChooseAndSetupRenderer
+    name: ChooseAndSetupRenderer
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ChooseAndSetupRenderer
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.ChooseAndSetupRenderer
+    name: ChooseAndSetupRenderer
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ChooseAndSetupRenderer
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.SetupRendererAndWindow(System.String,osu.Framework.Platform.GraphicsSurfaceType)
+  commentId: M:osu.Framework.Platform.GameHost.SetupRendererAndWindow(System.String,osu.Framework.Platform.GraphicsSurfaceType)
+  parent: osu.Framework.Platform.GameHost
+  isExternal: true
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupRendererAndWindow_System_String_osu_Framework_Platform_GraphicsSurfaceType_
+  name: SetupRendererAndWindow(string, GraphicsSurfaceType)
+  nameWithType: GameHost.SetupRendererAndWindow(string, GraphicsSurfaceType)
+  fullName: osu.Framework.Platform.GameHost.SetupRendererAndWindow(string, osu.Framework.Platform.GraphicsSurfaceType)
+  nameWithType.vb: GameHost.SetupRendererAndWindow(String, GraphicsSurfaceType)
+  fullName.vb: osu.Framework.Platform.GameHost.SetupRendererAndWindow(String, osu.Framework.Platform.GraphicsSurfaceType)
+  name.vb: SetupRendererAndWindow(String, GraphicsSurfaceType)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.SetupRendererAndWindow(System.String,osu.Framework.Platform.GraphicsSurfaceType)
+    name: SetupRendererAndWindow
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupRendererAndWindow_System_String_osu_Framework_Platform_GraphicsSurfaceType_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Platform.GraphicsSurfaceType
+    name: GraphicsSurfaceType
+    href: osu.Framework.Platform.GraphicsSurfaceType.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.SetupRendererAndWindow(System.String,osu.Framework.Platform.GraphicsSurfaceType)
+    name: SetupRendererAndWindow
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupRendererAndWindow_System_String_osu_Framework_Platform_GraphicsSurfaceType_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Platform.GraphicsSurfaceType
+    name: GraphicsSurfaceType
+    href: osu.Framework.Platform.GraphicsSurfaceType.html
+  - name: )
+- uid: osu.Framework.Platform.GameHost.SetupRendererAndWindow(osu.Framework.Graphics.Rendering.IRenderer,osu.Framework.Platform.GraphicsSurfaceType)
+  commentId: M:osu.Framework.Platform.GameHost.SetupRendererAndWindow(osu.Framework.Graphics.Rendering.IRenderer,osu.Framework.Platform.GraphicsSurfaceType)
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupRendererAndWindow_osu_Framework_Graphics_Rendering_IRenderer_osu_Framework_Platform_GraphicsSurfaceType_
+  name: SetupRendererAndWindow(IRenderer, GraphicsSurfaceType)
+  nameWithType: GameHost.SetupRendererAndWindow(IRenderer, GraphicsSurfaceType)
+  fullName: osu.Framework.Platform.GameHost.SetupRendererAndWindow(osu.Framework.Graphics.Rendering.IRenderer, osu.Framework.Platform.GraphicsSurfaceType)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.SetupRendererAndWindow(osu.Framework.Graphics.Rendering.IRenderer,osu.Framework.Platform.GraphicsSurfaceType)
+    name: SetupRendererAndWindow
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupRendererAndWindow_osu_Framework_Graphics_Rendering_IRenderer_osu_Framework_Platform_GraphicsSurfaceType_
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IRenderer
+    name: IRenderer
+    href: osu.Framework.Graphics.Rendering.IRenderer.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Platform.GraphicsSurfaceType
+    name: GraphicsSurfaceType
+    href: osu.Framework.Platform.GraphicsSurfaceType.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.SetupRendererAndWindow(osu.Framework.Graphics.Rendering.IRenderer,osu.Framework.Platform.GraphicsSurfaceType)
+    name: SetupRendererAndWindow
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupRendererAndWindow_osu_Framework_Graphics_Rendering_IRenderer_osu_Framework_Platform_GraphicsSurfaceType_
+  - name: (
+  - uid: osu.Framework.Graphics.Rendering.IRenderer
+    name: IRenderer
+    href: osu.Framework.Graphics.Rendering.IRenderer.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Platform.GraphicsSurfaceType
+    name: GraphicsSurfaceType
+    href: osu.Framework.Platform.GraphicsSurfaceType.html
+  - name: )
+- uid: osu.Framework.Platform.GameHost.GetDefaultGameStorage
+  commentId: M:osu.Framework.Platform.GameHost.GetDefaultGameStorage
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetDefaultGameStorage
+  name: GetDefaultGameStorage()
+  nameWithType: GameHost.GetDefaultGameStorage()
+  fullName: osu.Framework.Platform.GameHost.GetDefaultGameStorage()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.GetDefaultGameStorage
+    name: GetDefaultGameStorage
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetDefaultGameStorage
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.GetDefaultGameStorage
+    name: GetDefaultGameStorage
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_GetDefaultGameStorage
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.Suspend
+  commentId: M:osu.Framework.Platform.GameHost.Suspend
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Suspend
+  name: Suspend()
+  nameWithType: GameHost.Suspend()
+  fullName: osu.Framework.Platform.GameHost.Suspend()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.Suspend
+    name: Suspend
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Suspend
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.Suspend
+    name: Suspend
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Suspend
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.Resume
+  commentId: M:osu.Framework.Platform.GameHost.Resume
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Resume
+  name: Resume()
+  nameWithType: GameHost.Resume()
+  fullName: osu.Framework.Platform.GameHost.Resume()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.Resume
+    name: Resume
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Resume
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.Resume
+    name: Resume
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Resume
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.SetupForRun
+  commentId: M:osu.Framework.Platform.GameHost.SetupForRun
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupForRun
+  name: SetupForRun()
+  nameWithType: GameHost.SetupForRun()
+  fullName: osu.Framework.Platform.GameHost.SetupForRun()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.SetupForRun
+    name: SetupForRun
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupForRun
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.SetupForRun
+    name: SetupForRun
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupForRun
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.ResetInputHandlers
+  commentId: M:osu.Framework.Platform.GameHost.ResetInputHandlers
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ResetInputHandlers
+  name: ResetInputHandlers()
+  nameWithType: GameHost.ResetInputHandlers()
+  fullName: osu.Framework.Platform.GameHost.ResetInputHandlers()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.ResetInputHandlers
+    name: ResetInputHandlers
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ResetInputHandlers
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.ResetInputHandlers
+    name: ResetInputHandlers
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_ResetInputHandlers
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.SceneGraphClock
+  commentId: P:osu.Framework.Platform.GameHost.SceneGraphClock
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SceneGraphClock
+  name: SceneGraphClock
+  nameWithType: GameHost.SceneGraphClock
+  fullName: osu.Framework.Platform.GameHost.SceneGraphClock
+- uid: osu.Framework.Platform.GameHost.PerformanceLogging
+  commentId: F:osu.Framework.Platform.GameHost.PerformanceLogging
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_PerformanceLogging
+  name: PerformanceLogging
+  nameWithType: GameHost.PerformanceLogging
+  fullName: osu.Framework.Platform.GameHost.PerformanceLogging
+- uid: osu.Framework.Platform.GameHost.SetupConfig(System.Collections.Generic.IDictionary{osu.Framework.Configuration.FrameworkSetting,System.Object})
+  commentId: M:osu.Framework.Platform.GameHost.SetupConfig(System.Collections.Generic.IDictionary{osu.Framework.Configuration.FrameworkSetting,System.Object})
+  parent: osu.Framework.Platform.GameHost
+  isExternal: true
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupConfig_System_Collections_Generic_IDictionary_osu_Framework_Configuration_FrameworkSetting_System_Object__
+  name: SetupConfig(IDictionary<FrameworkSetting, object>)
+  nameWithType: GameHost.SetupConfig(IDictionary<FrameworkSetting, object>)
+  fullName: osu.Framework.Platform.GameHost.SetupConfig(System.Collections.Generic.IDictionary<osu.Framework.Configuration.FrameworkSetting, object>)
+  nameWithType.vb: GameHost.SetupConfig(IDictionary(Of FrameworkSetting, Object))
+  fullName.vb: osu.Framework.Platform.GameHost.SetupConfig(System.Collections.Generic.IDictionary(Of osu.Framework.Configuration.FrameworkSetting, Object))
+  name.vb: SetupConfig(IDictionary(Of FrameworkSetting, Object))
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.SetupConfig(System.Collections.Generic.IDictionary{osu.Framework.Configuration.FrameworkSetting,System.Object})
+    name: SetupConfig
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupConfig_System_Collections_Generic_IDictionary_osu_Framework_Configuration_FrameworkSetting_System_Object__
+  - name: (
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: osu.Framework.Configuration.FrameworkSetting
+    name: FrameworkSetting
+    href: osu.Framework.Configuration.FrameworkSetting.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.SetupConfig(System.Collections.Generic.IDictionary{osu.Framework.Configuration.FrameworkSetting,System.Object})
+    name: SetupConfig
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_SetupConfig_System_Collections_Generic_IDictionary_osu_Framework_Configuration_FrameworkSetting_System_Object__
+  - name: (
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Configuration.FrameworkSetting
+    name: FrameworkSetting
+    href: osu.Framework.Configuration.FrameworkSetting.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: osu.Framework.Platform.GameHost.AvailableInputHandlers
+  commentId: P:osu.Framework.Platform.GameHost.AvailableInputHandlers
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_AvailableInputHandlers
+  name: AvailableInputHandlers
+  nameWithType: GameHost.AvailableInputHandlers
+  fullName: osu.Framework.Platform.GameHost.AvailableInputHandlers
+- uid: osu.Framework.Platform.GameHost.Dispose(System.Boolean)
+  commentId: M:osu.Framework.Platform.GameHost.Dispose(System.Boolean)
+  parent: osu.Framework.Platform.GameHost
+  isExternal: true
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Dispose_System_Boolean_
+  name: Dispose(bool)
+  nameWithType: GameHost.Dispose(bool)
+  fullName: osu.Framework.Platform.GameHost.Dispose(bool)
+  nameWithType.vb: GameHost.Dispose(Boolean)
+  fullName.vb: osu.Framework.Platform.GameHost.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.Dispose(System.Boolean)
+    name: Dispose
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Dispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.Dispose(System.Boolean)
+    name: Dispose
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Dispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: osu.Framework.Platform.GameHost.Dispose
+  commentId: M:osu.Framework.Platform.GameHost.Dispose
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Dispose
+  name: Dispose()
+  nameWithType: GameHost.Dispose()
+  fullName: osu.Framework.Platform.GameHost.Dispose()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.Dispose
+    name: Dispose
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.Dispose
+    name: Dispose
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_Dispose
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.GameHost.PlatformKeyBindings
+  commentId: P:osu.Framework.Platform.GameHost.PlatformKeyBindings
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_PlatformKeyBindings
+  name: PlatformKeyBindings
+  nameWithType: GameHost.PlatformKeyBindings
+  fullName: osu.Framework.Platform.GameHost.PlatformKeyBindings
+- uid: osu.Framework.Platform.GameHost.CreateTextureLoaderStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]})
+  commentId: M:osu.Framework.Platform.GameHost.CreateTextureLoaderStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]})
+  parent: osu.Framework.Platform.GameHost
+  isExternal: true
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateTextureLoaderStore_osu_Framework_IO_Stores_IResourceStore_System_Byte____
+  name: CreateTextureLoaderStore(IResourceStore<byte[]>)
+  nameWithType: GameHost.CreateTextureLoaderStore(IResourceStore<byte[]>)
+  fullName: osu.Framework.Platform.GameHost.CreateTextureLoaderStore(osu.Framework.IO.Stores.IResourceStore<byte[]>)
+  nameWithType.vb: GameHost.CreateTextureLoaderStore(IResourceStore(Of Byte()))
+  fullName.vb: osu.Framework.Platform.GameHost.CreateTextureLoaderStore(osu.Framework.IO.Stores.IResourceStore(Of Byte()))
+  name.vb: CreateTextureLoaderStore(IResourceStore(Of Byte()))
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.CreateTextureLoaderStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]})
+    name: CreateTextureLoaderStore
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateTextureLoaderStore_osu_Framework_IO_Stores_IResourceStore_System_Byte____
+  - name: (
+  - uid: osu.Framework.IO.Stores.IResourceStore`1
+    name: IResourceStore
+    href: osu.Framework.IO.Stores.IResourceStore-1.html
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.CreateTextureLoaderStore(osu.Framework.IO.Stores.IResourceStore{System.Byte[]})
+    name: CreateTextureLoaderStore
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateTextureLoaderStore_osu_Framework_IO_Stores_IResourceStore_System_Byte____
+  - name: (
+  - uid: osu.Framework.IO.Stores.IResourceStore`1
+    name: IResourceStore
+    href: osu.Framework.IO.Stores.IResourceStore-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+  - name: )
+- uid: osu.Framework.Platform.GameHost.CreateVideoDecoder(System.IO.Stream)
+  commentId: M:osu.Framework.Platform.GameHost.CreateVideoDecoder(System.IO.Stream)
+  parent: osu.Framework.Platform.GameHost
+  isExternal: true
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateVideoDecoder_System_IO_Stream_
+  name: CreateVideoDecoder(Stream)
+  nameWithType: GameHost.CreateVideoDecoder(Stream)
+  fullName: osu.Framework.Platform.GameHost.CreateVideoDecoder(System.IO.Stream)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.CreateVideoDecoder(System.IO.Stream)
+    name: CreateVideoDecoder
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateVideoDecoder_System_IO_Stream_
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.CreateVideoDecoder(System.IO.Stream)
+    name: CreateVideoDecoder
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateVideoDecoder_System_IO_Stream_
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+- uid: osu.Framework.Platform.GameHost.CreateThreadRunner(osu.Framework.Threading.InputThread)
+  commentId: M:osu.Framework.Platform.GameHost.CreateThreadRunner(osu.Framework.Threading.InputThread)
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateThreadRunner_osu_Framework_Threading_InputThread_
+  name: CreateThreadRunner(InputThread)
+  nameWithType: GameHost.CreateThreadRunner(InputThread)
+  fullName: osu.Framework.Platform.GameHost.CreateThreadRunner(osu.Framework.Threading.InputThread)
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.CreateThreadRunner(osu.Framework.Threading.InputThread)
+    name: CreateThreadRunner
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateThreadRunner_osu_Framework_Threading_InputThread_
+  - name: (
+  - uid: osu.Framework.Threading.InputThread
+    name: InputThread
+    href: osu.Framework.Threading.InputThread.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.CreateThreadRunner(osu.Framework.Threading.InputThread)
+    name: CreateThreadRunner
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateThreadRunner_osu_Framework_Threading_InputThread_
+  - name: (
+  - uid: osu.Framework.Threading.InputThread
+    name: InputThread
+    href: osu.Framework.Threading.InputThread.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Platform.SDLGameHost.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<SDLGameHost>(SDLGameHost)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<SDLGameHost>(SDLGameHost)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Platform.SDLGameHost>(osu.Framework.Platform.SDLGameHost)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of SDLGameHost)(SDLGameHost)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Platform.SDLGameHost)(osu.Framework.Platform.SDLGameHost)
+  name.vb: GetLocalisableDescription(Of SDLGameHost)(SDLGameHost)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Platform.SDLGameHost)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Platform.SDLGameHost)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+- uid: osu.Framework.Platform.SDLGameHost.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<SDLGameHost>(SDLGameHost)
+  nameWithType: EnumerableExtensions.Yield<SDLGameHost>(SDLGameHost)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Platform.SDLGameHost>(osu.Framework.Platform.SDLGameHost)
+  nameWithType.vb: EnumerableExtensions.Yield(Of SDLGameHost)(SDLGameHost)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Platform.SDLGameHost)(osu.Framework.Platform.SDLGameHost)
+  name.vb: Yield(Of SDLGameHost)(SDLGameHost)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Platform.SDLGameHost)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Platform.SDLGameHost)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+- uid: osu.Framework.Platform.SDLGameHost.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<SDLGameHost>(SDLGameHost)
+  nameWithType: ObjectExtensions.AsNonNull<SDLGameHost>(SDLGameHost)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Platform.SDLGameHost>(osu.Framework.Platform.SDLGameHost)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of SDLGameHost)(SDLGameHost)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Platform.SDLGameHost)(osu.Framework.Platform.SDLGameHost)
+  name.vb: AsNonNull(Of SDLGameHost)(SDLGameHost)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Platform.SDLGameHost)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Platform.SDLGameHost)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+- uid: osu.Framework.Platform.SDLGameHost.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<SDLGameHost>(SDLGameHost)
+  nameWithType: ObjectExtensions.IsNotNull<SDLGameHost>(SDLGameHost)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Platform.SDLGameHost>(osu.Framework.Platform.SDLGameHost)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of SDLGameHost)(SDLGameHost)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Platform.SDLGameHost)(osu.Framework.Platform.SDLGameHost)
+  name.vb: IsNotNull(Of SDLGameHost)(SDLGameHost)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Platform.SDLGameHost)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Platform.SDLGameHost)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+- uid: osu.Framework.Platform.SDLGameHost.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<SDLGameHost>(SDLGameHost)
+  nameWithType: ObjectExtensions.IsNull<SDLGameHost>(SDLGameHost)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Platform.SDLGameHost>(osu.Framework.Platform.SDLGameHost)
+  nameWithType.vb: ObjectExtensions.IsNull(Of SDLGameHost)(SDLGameHost)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Platform.SDLGameHost)(osu.Framework.Platform.SDLGameHost)
+  name.vb: IsNull(Of SDLGameHost)(SDLGameHost)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Platform.SDLGameHost)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Platform.SDLGameHost)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: )
+- uid: osu.Framework.Platform.SDLGameHost.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<SDLGameHost, TChild>(SDLGameHost, TChild)
+  nameWithType: ContainerExtensions.WithChild<SDLGameHost, TChild>(SDLGameHost, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Platform.SDLGameHost, TChild>(osu.Framework.Platform.SDLGameHost, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of SDLGameHost, TChild)(SDLGameHost, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Platform.SDLGameHost, TChild)(osu.Framework.Platform.SDLGameHost, TChild)
+  name.vb: WithChild(Of SDLGameHost, TChild)(SDLGameHost, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Platform.SDLGameHost,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Platform.SDLGameHost,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Platform.SDLGameHost.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<SDLGameHost, TChild>(SDLGameHost, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<SDLGameHost, TChild>(SDLGameHost, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Platform.SDLGameHost, TChild>(osu.Framework.Platform.SDLGameHost, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of SDLGameHost, TChild)(SDLGameHost, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Platform.SDLGameHost, TChild)(osu.Framework.Platform.SDLGameHost, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of SDLGameHost, TChild)(SDLGameHost, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Platform.SDLGameHost,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Platform.SDLGameHost,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Platform.SDLGameHost.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<SDLGameHost, TChild>(SDLGameHost, TChild)
+  nameWithType: ContainerExtensions.Wrap<SDLGameHost, TChild>(SDLGameHost, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Platform.SDLGameHost, TChild>(osu.Framework.Platform.SDLGameHost, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of SDLGameHost, TChild)(SDLGameHost, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Platform.SDLGameHost, TChild)(osu.Framework.Platform.SDLGameHost, TChild)
+  name.vb: Wrap(Of SDLGameHost, TChild)(SDLGameHost, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Platform.SDLGameHost,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Platform.SDLGameHost,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.SDLGameHost
+    name: SDLGameHost
+    href: osu.Framework.Platform.SDLGameHost.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Platform.GameHost.CapsLockEnabled
+  commentId: P:osu.Framework.Platform.GameHost.CapsLockEnabled
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CapsLockEnabled
+  name: CapsLockEnabled
+  nameWithType: GameHost.CapsLockEnabled
+  fullName: osu.Framework.Platform.GameHost.CapsLockEnabled
+- uid: osu.Framework.Platform.SDLGameHost.CapsLockEnabled*
+  commentId: Overload:osu.Framework.Platform.SDLGameHost.CapsLockEnabled
+  href: osu.Framework.Platform.SDLGameHost.html#osu_Framework_Platform_SDLGameHost_CapsLockEnabled
+  name: CapsLockEnabled
+  nameWithType: SDLGameHost.CapsLockEnabled
+  fullName: osu.Framework.Platform.SDLGameHost.CapsLockEnabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Platform.SDLGameHost.#ctor*
+  commentId: Overload:osu.Framework.Platform.SDLGameHost.#ctor
+  href: osu.Framework.Platform.SDLGameHost.html#osu_Framework_Platform_SDLGameHost__ctor_System_String_osu_Framework_HostOptions_
+  name: SDLGameHost
+  nameWithType: SDLGameHost.SDLGameHost
+  fullName: osu.Framework.Platform.SDLGameHost.SDLGameHost
+  nameWithType.vb: SDLGameHost.New
+  fullName.vb: osu.Framework.Platform.SDLGameHost.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: osu.Framework.HostOptions
+  commentId: T:osu.Framework.HostOptions
+  parent: osu.Framework
+  href: osu.Framework.HostOptions.html
+  name: HostOptions
+  nameWithType: HostOptions
+  fullName: osu.Framework.HostOptions
+- uid: osu.Framework
+  commentId: N:osu.Framework
+  href: osu.html
+  name: osu.Framework
+  nameWithType: osu.Framework
+  fullName: osu.Framework
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+- uid: osu.Framework.Platform.GameHost.CreateTextInput
+  commentId: M:osu.Framework.Platform.GameHost.CreateTextInput
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateTextInput
+  name: CreateTextInput()
+  nameWithType: GameHost.CreateTextInput()
+  fullName: osu.Framework.Platform.GameHost.CreateTextInput()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.CreateTextInput
+    name: CreateTextInput
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateTextInput
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.CreateTextInput
+    name: CreateTextInput
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateTextInput
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.SDLGameHost.CreateTextInput*
+  commentId: Overload:osu.Framework.Platform.SDLGameHost.CreateTextInput
+  href: osu.Framework.Platform.SDLGameHost.html#osu_Framework_Platform_SDLGameHost_CreateTextInput
+  name: CreateTextInput
+  nameWithType: SDLGameHost.CreateTextInput
+  fullName: osu.Framework.Platform.SDLGameHost.CreateTextInput
+- uid: osu.Framework.Input.TextInputSource
+  commentId: T:osu.Framework.Input.TextInputSource
+  parent: osu.Framework.Input
+  href: osu.Framework.Input.TextInputSource.html
+  name: TextInputSource
+  nameWithType: TextInputSource
+  fullName: osu.Framework.Input.TextInputSource
+- uid: osu.Framework.Input
+  commentId: N:osu.Framework.Input
+  href: osu.html
+  name: osu.Framework.Input
+  nameWithType: osu.Framework.Input
+  fullName: osu.Framework.Input
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+- uid: osu.Framework.Platform.GameHost.CreateClipboard
+  commentId: M:osu.Framework.Platform.GameHost.CreateClipboard
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateClipboard
+  name: CreateClipboard()
+  nameWithType: GameHost.CreateClipboard()
+  fullName: osu.Framework.Platform.GameHost.CreateClipboard()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.CreateClipboard
+    name: CreateClipboard
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateClipboard
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.CreateClipboard
+    name: CreateClipboard
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateClipboard
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.SDLGameHost.CreateClipboard*
+  commentId: Overload:osu.Framework.Platform.SDLGameHost.CreateClipboard
+  href: osu.Framework.Platform.SDLGameHost.html#osu_Framework_Platform_SDLGameHost_CreateClipboard
+  name: CreateClipboard
+  nameWithType: SDLGameHost.CreateClipboard
+  fullName: osu.Framework.Platform.SDLGameHost.CreateClipboard
+- uid: osu.Framework.Platform.Clipboard
+  commentId: T:osu.Framework.Platform.Clipboard
+  parent: osu.Framework.Platform
+  href: osu.Framework.Platform.Clipboard.html
+  name: Clipboard
+  nameWithType: Clipboard
+  fullName: osu.Framework.Platform.Clipboard
+- uid: osu.Framework.Platform.GameHost.CreateAvailableInputHandlers
+  commentId: M:osu.Framework.Platform.GameHost.CreateAvailableInputHandlers
+  parent: osu.Framework.Platform.GameHost
+  href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateAvailableInputHandlers
+  name: CreateAvailableInputHandlers()
+  nameWithType: GameHost.CreateAvailableInputHandlers()
+  fullName: osu.Framework.Platform.GameHost.CreateAvailableInputHandlers()
+  spec.csharp:
+  - uid: osu.Framework.Platform.GameHost.CreateAvailableInputHandlers
+    name: CreateAvailableInputHandlers
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateAvailableInputHandlers
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.GameHost.CreateAvailableInputHandlers
+    name: CreateAvailableInputHandlers
+    href: osu.Framework.Platform.GameHost.html#osu_Framework_Platform_GameHost_CreateAvailableInputHandlers
+  - name: (
+  - name: )
+- uid: osu.Framework.Platform.SDLGameHost.CreateAvailableInputHandlers*
+  commentId: Overload:osu.Framework.Platform.SDLGameHost.CreateAvailableInputHandlers
+  href: osu.Framework.Platform.SDLGameHost.html#osu_Framework_Platform_SDLGameHost_CreateAvailableInputHandlers
+  name: CreateAvailableInputHandlers
+  nameWithType: SDLGameHost.CreateAvailableInputHandlers
+  fullName: osu.Framework.Platform.SDLGameHost.CreateAvailableInputHandlers
+- uid: System.Collections.Generic.IEnumerable{osu.Framework.Input.Handlers.InputHandler}
+  commentId: T:System.Collections.Generic.IEnumerable{osu.Framework.Input.Handlers.InputHandler}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<InputHandler>
+  nameWithType: IEnumerable<InputHandler>
+  fullName: System.Collections.Generic.IEnumerable<osu.Framework.Input.Handlers.InputHandler>
+  nameWithType.vb: IEnumerable(Of InputHandler)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of osu.Framework.Input.Handlers.InputHandler)
+  name.vb: IEnumerable(Of InputHandler)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: osu.Framework.Input.Handlers.InputHandler
+    name: InputHandler
+    href: osu.Framework.Input.Handlers.InputHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.Handlers.InputHandler
+    name: InputHandler
+    href: osu.Framework.Input.Handlers.InputHandler.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

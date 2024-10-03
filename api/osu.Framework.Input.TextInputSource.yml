@@ -1,0 +1,2250 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Input.TextInputSource
+  commentId: T:osu.Framework.Input.TextInputSource
+  id: TextInputSource
+  parent: osu.Framework.Input
+  children:
+  - osu.Framework.Input.TextInputSource.Activate(System.Boolean,osu.Framework.Graphics.Primitives.RectangleF)
+  - osu.Framework.Input.TextInputSource.ActivateTextInput(System.Boolean)
+  - osu.Framework.Input.TextInputSource.Deactivate
+  - osu.Framework.Input.TextInputSource.DeactivateTextInput
+  - osu.Framework.Input.TextInputSource.EnsureActivated(System.Boolean,System.Nullable{osu.Framework.Graphics.Primitives.RectangleF})
+  - osu.Framework.Input.TextInputSource.EnsureTextInputActivated(System.Boolean)
+  - osu.Framework.Input.TextInputSource.ImeActive
+  - osu.Framework.Input.TextInputSource.OnImeComposition
+  - osu.Framework.Input.TextInputSource.OnImeResult
+  - osu.Framework.Input.TextInputSource.OnTextInput
+  - osu.Framework.Input.TextInputSource.ResetIme
+  - osu.Framework.Input.TextInputSource.SetImeRectangle(osu.Framework.Graphics.Primitives.RectangleF)
+  - osu.Framework.Input.TextInputSource.TriggerImeComposition(System.String,System.Int32,System.Int32)
+  - osu.Framework.Input.TextInputSource.TriggerImeResult(System.String)
+  - osu.Framework.Input.TextInputSource.TriggerTextInput(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TextInputSource
+  nameWithType: TextInputSource
+  fullName: osu.Framework.Input.TextInputSource
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TextInputSource
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 15
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: >-
+    A source from which we can retrieve user text input.
+
+    Generally hides a native implementation from the game framework.
+  example: []
+  syntax:
+    content: public class TextInputSource
+    content.vb: Public Class TextInputSource
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - osu.Framework.Testing.Input.ManualTextInputSource
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Input.TextInputSource.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Input.TextInputSource.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Input.TextInputSource.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Input.TextInputSource.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Input.TextInputSource.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Input.TextInputSource.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Input.TextInputSource.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Input.TextInputSource.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Input.TextInputSource.ImeActive
+  commentId: P:osu.Framework.Input.TextInputSource.ImeActive
+  id: ImeActive
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: ImeActive
+  nameWithType: TextInputSource.ImeActive
+  fullName: osu.Framework.Input.TextInputSource.ImeActive
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ImeActive
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 20
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Whether IME is actively providing text composition through <xref href="osu.Framework.Input.TextInputSource.OnImeComposition" data-throw-if-not-resolved="false"></xref> and accepting input from the user.
+  example: []
+  syntax:
+    content: public bool ImeActive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ImeActive As Boolean
+  overload: osu.Framework.Input.TextInputSource.ImeActive*
+- uid: osu.Framework.Input.TextInputSource.Activate(System.Boolean,osu.Framework.Graphics.Primitives.RectangleF)
+  commentId: M:osu.Framework.Input.TextInputSource.Activate(System.Boolean,osu.Framework.Graphics.Primitives.RectangleF)
+  id: Activate(System.Boolean,osu.Framework.Graphics.Primitives.RectangleF)
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: Activate(bool, RectangleF)
+  nameWithType: TextInputSource.Activate(bool, RectangleF)
+  fullName: osu.Framework.Input.TextInputSource.Activate(bool, osu.Framework.Graphics.Primitives.RectangleF)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Activate
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 39
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: >-
+    Activates this <xref href="osu.Framework.Input.TextInputSource" data-throw-if-not-resolved="false"></xref>.
+
+    User text input can be acquired through <xref href="osu.Framework.Input.TextInputSource.OnTextInput" data-throw-if-not-resolved="false"></xref>, <xref href="osu.Framework.Input.TextInputSource.OnImeComposition" data-throw-if-not-resolved="false"></xref> and <xref href="osu.Framework.Input.TextInputSource.OnImeResult" data-throw-if-not-resolved="false"></xref>.
+  remarks: Each <xref href="osu.Framework.Input.TextInputSource.Activate(System.Boolean%2cosu.Framework.Graphics.Primitives.RectangleF)" data-throw-if-not-resolved="false"></xref> must be followed by a <xref href="osu.Framework.Input.TextInputSource.Deactivate" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Activate(bool allowIme, RectangleF imeRectangle)
+    parameters:
+    - id: allowIme
+      type: System.Boolean
+      description: Whether input using IME should be allowed.
+    - id: imeRectangle
+      type: osu.Framework.Graphics.Primitives.RectangleF
+      description: >-
+        Rough location of where the text will be input, so the native implementation
+
+        can adjust virtual keyboards and IME popups.
+    content.vb: Public Sub Activate(allowIme As Boolean, imeRectangle As RectangleF)
+  overload: osu.Framework.Input.TextInputSource.Activate*
+  nameWithType.vb: TextInputSource.Activate(Boolean, RectangleF)
+  fullName.vb: osu.Framework.Input.TextInputSource.Activate(Boolean, osu.Framework.Graphics.Primitives.RectangleF)
+  name.vb: Activate(Boolean, RectangleF)
+- uid: osu.Framework.Input.TextInputSource.EnsureActivated(System.Boolean,System.Nullable{osu.Framework.Graphics.Primitives.RectangleF})
+  commentId: M:osu.Framework.Input.TextInputSource.EnsureActivated(System.Boolean,System.Nullable{osu.Framework.Graphics.Primitives.RectangleF})
+  id: EnsureActivated(System.Boolean,System.Nullable{osu.Framework.Graphics.Primitives.RectangleF})
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: EnsureActivated(bool, RectangleF?)
+  nameWithType: TextInputSource.EnsureActivated(bool, RectangleF?)
+  fullName: osu.Framework.Input.TextInputSource.EnsureActivated(bool, osu.Framework.Graphics.Primitives.RectangleF?)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: EnsureActivated
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 61
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: >-
+    Ensures that the native implementation that retrieves user text input is activated
+
+    and that the user can start entering text.
+  example: []
+  syntax:
+    content: public void EnsureActivated(bool allowIme, RectangleF? imeRectangle = null)
+    parameters:
+    - id: allowIme
+      type: System.Boolean
+      description: Whether input using IME should be allowed.
+    - id: imeRectangle
+      type: System.Nullable{osu.Framework.Graphics.Primitives.RectangleF}
+      description: >-
+        Rough location of where the text will be input, so the native implementation
+
+        can adjust virtual keyboards and IME popups. Can be <code>null</code> to avoid changing
+
+        the IME rectangle.
+    content.vb: Public Sub EnsureActivated(allowIme As Boolean, imeRectangle As RectangleF? = Nothing)
+  overload: osu.Framework.Input.TextInputSource.EnsureActivated*
+  nameWithType.vb: TextInputSource.EnsureActivated(Boolean, RectangleF?)
+  fullName.vb: osu.Framework.Input.TextInputSource.EnsureActivated(Boolean, osu.Framework.Graphics.Primitives.RectangleF?)
+  name.vb: EnsureActivated(Boolean, RectangleF?)
+- uid: osu.Framework.Input.TextInputSource.Deactivate
+  commentId: M:osu.Framework.Input.TextInputSource.Deactivate
+  id: Deactivate
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: Deactivate()
+  nameWithType: TextInputSource.Deactivate()
+  fullName: osu.Framework.Input.TextInputSource.Deactivate()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Deactivate
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 79
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Deactivates this <xref href="osu.Framework.Input.TextInputSource" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    Should be called once text input is no longer needed.
+
+    Each <xref href="osu.Framework.Input.TextInputSource.Deactivate" data-throw-if-not-resolved="false"></xref> must be preceded by an <xref href="osu.Framework.Input.TextInputSource.Activate(System.Boolean%2cosu.Framework.Graphics.Primitives.RectangleF)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Deactivate()
+    content.vb: Public Sub Deactivate()
+  overload: osu.Framework.Input.TextInputSource.Deactivate*
+- uid: osu.Framework.Input.TextInputSource.SetImeRectangle(osu.Framework.Graphics.Primitives.RectangleF)
+  commentId: M:osu.Framework.Input.TextInputSource.SetImeRectangle(osu.Framework.Graphics.Primitives.RectangleF)
+  id: SetImeRectangle(osu.Framework.Graphics.Primitives.RectangleF)
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: SetImeRectangle(RectangleF)
+  nameWithType: TextInputSource.SetImeRectangle(RectangleF)
+  fullName: osu.Framework.Input.TextInputSource.SetImeRectangle(osu.Framework.Graphics.Primitives.RectangleF)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: SetImeRectangle
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 89
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Sets where the native implementation displays IME controls and other text input elements.
+  example: []
+  syntax:
+    content: public virtual void SetImeRectangle(RectangleF rectangle)
+    parameters:
+    - id: rectangle
+      type: osu.Framework.Graphics.Primitives.RectangleF
+      description: Should be provided in screen space.
+    content.vb: Public Overridable Sub SetImeRectangle(rectangle As RectangleF)
+  overload: osu.Framework.Input.TextInputSource.SetImeRectangle*
+- uid: osu.Framework.Input.TextInputSource.ResetIme
+  commentId: M:osu.Framework.Input.TextInputSource.ResetIme
+  id: ResetIme
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: ResetIme()
+  nameWithType: TextInputSource.ResetIme()
+  fullName: osu.Framework.Input.TextInputSource.ResetIme()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ResetIme
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 97
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: >-
+    Resets IME.
+
+    This clears the current composition string and prepares it for new input.
+  example: []
+  syntax:
+    content: public virtual void ResetIme()
+    content.vb: Public Overridable Sub ResetIme()
+  overload: osu.Framework.Input.TextInputSource.ResetIme*
+- uid: osu.Framework.Input.TextInputSource.OnTextInput
+  commentId: E:osu.Framework.Input.TextInputSource.OnTextInput
+  id: OnTextInput
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: OnTextInput
+  nameWithType: TextInputSource.OnTextInput
+  fullName: osu.Framework.Input.TextInputSource.OnTextInput
+  type: Event
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: OnTextInput
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 105
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Invoked on text input.
+  example: []
+  syntax:
+    content: public event Action<string> OnTextInput
+    return:
+      type: System.Action{System.String}
+    content.vb: Public Event OnTextInput As Action(Of String)
+- uid: osu.Framework.Input.TextInputSource.OnImeComposition
+  commentId: E:osu.Framework.Input.TextInputSource.OnImeComposition
+  id: OnImeComposition
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: OnImeComposition
+  nameWithType: TextInputSource.OnImeComposition
+  fullName: osu.Framework.Input.TextInputSource.OnImeComposition
+  type: Event
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: OnImeComposition
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 111
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Invoked when IME composition starts or changes.
+  remarks: Empty string for text means that the composition has been cancelled.
+  example: []
+  syntax:
+    content: public event TextInputSource.ImeCompositionDelegate OnImeComposition
+    return:
+      type: osu.Framework.Input.TextInputSource.ImeCompositionDelegate
+    content.vb: Public Event OnImeComposition As TextInputSource.ImeCompositionDelegate
+- uid: osu.Framework.Input.TextInputSource.OnImeResult
+  commentId: E:osu.Framework.Input.TextInputSource.OnImeResult
+  id: OnImeResult
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: OnImeResult
+  nameWithType: TextInputSource.OnImeResult
+  fullName: osu.Framework.Input.TextInputSource.OnImeResult
+  type: Event
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: OnImeResult
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 116
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Invoked when IME composition successfully completes.
+  example: []
+  syntax:
+    content: public event Action<string> OnImeResult
+    return:
+      type: System.Action{System.String}
+    content.vb: Public Event OnImeResult As Action(Of String)
+- uid: osu.Framework.Input.TextInputSource.ActivateTextInput(System.Boolean)
+  commentId: M:osu.Framework.Input.TextInputSource.ActivateTextInput(System.Boolean)
+  id: ActivateTextInput(System.Boolean)
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: ActivateTextInput(bool)
+  nameWithType: TextInputSource.ActivateTextInput(bool)
+  fullName: osu.Framework.Input.TextInputSource.ActivateTextInput(bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ActivateTextInput
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 127
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: >-
+    Activates the native implementation that provides text input.
+
+    Should be overriden per-platform.
+  remarks: >-
+    An active native implementation should call <xref href="osu.Framework.Input.TextInputSource.TriggerTextInput(System.String)" data-throw-if-not-resolved="false"></xref> on new text input
+
+    and forward IME composition events through <xref href="osu.Framework.Input.TextInputSource.TriggerImeComposition(System.String%2cSystem.Int32%2cSystem.Int32)" data-throw-if-not-resolved="false"></xref> and <xref href="osu.Framework.Input.TextInputSource.TriggerImeResult(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: protected virtual void ActivateTextInput(bool allowIme)
+    parameters:
+    - id: allowIme
+      type: System.Boolean
+      description: Whether input using IME should be allowed.
+    content.vb: Protected Overridable Sub ActivateTextInput(allowIme As Boolean)
+  overload: osu.Framework.Input.TextInputSource.ActivateTextInput*
+  nameWithType.vb: TextInputSource.ActivateTextInput(Boolean)
+  fullName.vb: osu.Framework.Input.TextInputSource.ActivateTextInput(Boolean)
+  name.vb: ActivateTextInput(Boolean)
+- uid: osu.Framework.Input.TextInputSource.EnsureTextInputActivated(System.Boolean)
+  commentId: M:osu.Framework.Input.TextInputSource.EnsureTextInputActivated(System.Boolean)
+  id: EnsureTextInputActivated(System.Boolean)
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: EnsureTextInputActivated(bool)
+  nameWithType: TextInputSource.EnsureTextInputActivated(bool)
+  fullName: osu.Framework.Input.TextInputSource.EnsureTextInputActivated(bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: EnsureTextInputActivated
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 136
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: >-
+    Ensures that the native implementation that retrieves user text input is activated
+
+    and that the user can start entering text.
+  remarks: Only called if the native implementation has been activated with <xref href="osu.Framework.Input.TextInputSource.Activate(System.Boolean%2cosu.Framework.Graphics.Primitives.RectangleF)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: protected virtual void EnsureTextInputActivated(bool allowIme)
+    parameters:
+    - id: allowIme
+      type: System.Boolean
+      description: Whether input using IME should be allowed.
+    content.vb: Protected Overridable Sub EnsureTextInputActivated(allowIme As Boolean)
+  overload: osu.Framework.Input.TextInputSource.EnsureTextInputActivated*
+  nameWithType.vb: TextInputSource.EnsureTextInputActivated(Boolean)
+  fullName.vb: osu.Framework.Input.TextInputSource.EnsureTextInputActivated(Boolean)
+  name.vb: EnsureTextInputActivated(Boolean)
+- uid: osu.Framework.Input.TextInputSource.DeactivateTextInput
+  commentId: M:osu.Framework.Input.TextInputSource.DeactivateTextInput
+  id: DeactivateTextInput
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: DeactivateTextInput()
+  nameWithType: TextInputSource.DeactivateTextInput()
+  fullName: osu.Framework.Input.TextInputSource.DeactivateTextInput()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: DeactivateTextInput
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 144
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: >-
+    Deactivates the native implementation that provides text input.
+
+    Should be overriden per-platform.
+  example: []
+  syntax:
+    content: protected virtual void DeactivateTextInput()
+    content.vb: Protected Overridable Sub DeactivateTextInput()
+  overload: osu.Framework.Input.TextInputSource.DeactivateTextInput*
+- uid: osu.Framework.Input.TextInputSource.TriggerTextInput(System.String)
+  commentId: M:osu.Framework.Input.TextInputSource.TriggerTextInput(System.String)
+  id: TriggerTextInput(System.String)
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: TriggerTextInput(string)
+  nameWithType: TextInputSource.TriggerTextInput(string)
+  fullName: osu.Framework.Input.TextInputSource.TriggerTextInput(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TriggerTextInput
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 148
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  syntax:
+    content: protected void TriggerTextInput(string text)
+    parameters:
+    - id: text
+      type: System.String
+    content.vb: Protected Sub TriggerTextInput(text As String)
+  overload: osu.Framework.Input.TextInputSource.TriggerTextInput*
+  nameWithType.vb: TextInputSource.TriggerTextInput(String)
+  fullName.vb: osu.Framework.Input.TextInputSource.TriggerTextInput(String)
+  name.vb: TriggerTextInput(String)
+- uid: osu.Framework.Input.TextInputSource.TriggerImeComposition(System.String,System.Int32,System.Int32)
+  commentId: M:osu.Framework.Input.TextInputSource.TriggerImeComposition(System.String,System.Int32,System.Int32)
+  id: TriggerImeComposition(System.String,System.Int32,System.Int32)
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: TriggerImeComposition(string, int, int)
+  nameWithType: TextInputSource.TriggerImeComposition(string, int, int)
+  fullName: osu.Framework.Input.TextInputSource.TriggerImeComposition(string, int, int)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TriggerImeComposition
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 153
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  syntax:
+    content: protected void TriggerImeComposition(string text, int start, int length)
+    parameters:
+    - id: text
+      type: System.String
+    - id: start
+      type: System.Int32
+    - id: length
+      type: System.Int32
+    content.vb: Protected Sub TriggerImeComposition(text As String, start As Integer, length As Integer)
+  overload: osu.Framework.Input.TextInputSource.TriggerImeComposition*
+  nameWithType.vb: TextInputSource.TriggerImeComposition(String, Integer, Integer)
+  fullName.vb: osu.Framework.Input.TextInputSource.TriggerImeComposition(String, Integer, Integer)
+  name.vb: TriggerImeComposition(String, Integer, Integer)
+- uid: osu.Framework.Input.TextInputSource.TriggerImeResult(System.String)
+  commentId: M:osu.Framework.Input.TextInputSource.TriggerImeResult(System.String)
+  id: TriggerImeResult(System.String)
+  parent: osu.Framework.Input.TextInputSource
+  langs:
+  - csharp
+  - vb
+  name: TriggerImeResult(string)
+  nameWithType: TextInputSource.TriggerImeResult(string)
+  fullName: osu.Framework.Input.TextInputSource.TriggerImeResult(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/TextInputSource.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TriggerImeResult
+    path: osu.Framework/Input/TextInputSource.cs
+    startLine: 161
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  syntax:
+    content: protected void TriggerImeResult(string text)
+    parameters:
+    - id: text
+      type: System.String
+    content.vb: Protected Sub TriggerImeResult(text As String)
+  overload: osu.Framework.Input.TextInputSource.TriggerImeResult*
+  nameWithType.vb: TextInputSource.TriggerImeResult(String)
+  fullName.vb: osu.Framework.Input.TextInputSource.TriggerImeResult(String)
+  name.vb: TriggerImeResult(String)
+references:
+- uid: osu.Framework.Input
+  commentId: N:osu.Framework.Input
+  href: osu.html
+  name: osu.Framework.Input
+  nameWithType: osu.Framework.Input
+  fullName: osu.Framework.Input
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<TextInputSource>(TextInputSource)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<TextInputSource>(TextInputSource)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Input.TextInputSource>(osu.Framework.Input.TextInputSource)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of TextInputSource)(TextInputSource)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Input.TextInputSource)(osu.Framework.Input.TextInputSource)
+  name.vb: GetLocalisableDescription(Of TextInputSource)(TextInputSource)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Input.TextInputSource)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Input.TextInputSource)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<TextInputSource>(TextInputSource)
+  nameWithType: EnumerableExtensions.Yield<TextInputSource>(TextInputSource)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Input.TextInputSource>(osu.Framework.Input.TextInputSource)
+  nameWithType.vb: EnumerableExtensions.Yield(Of TextInputSource)(TextInputSource)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Input.TextInputSource)(osu.Framework.Input.TextInputSource)
+  name.vb: Yield(Of TextInputSource)(TextInputSource)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Input.TextInputSource)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Input.TextInputSource)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<TextInputSource>(TextInputSource)
+  nameWithType: ObjectExtensions.AsNonNull<TextInputSource>(TextInputSource)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Input.TextInputSource>(osu.Framework.Input.TextInputSource)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of TextInputSource)(TextInputSource)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Input.TextInputSource)(osu.Framework.Input.TextInputSource)
+  name.vb: AsNonNull(Of TextInputSource)(TextInputSource)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Input.TextInputSource)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Input.TextInputSource)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<TextInputSource>(TextInputSource)
+  nameWithType: ObjectExtensions.IsNotNull<TextInputSource>(TextInputSource)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Input.TextInputSource>(osu.Framework.Input.TextInputSource)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of TextInputSource)(TextInputSource)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Input.TextInputSource)(osu.Framework.Input.TextInputSource)
+  name.vb: IsNotNull(Of TextInputSource)(TextInputSource)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Input.TextInputSource)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Input.TextInputSource)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<TextInputSource>(TextInputSource)
+  nameWithType: ObjectExtensions.IsNull<TextInputSource>(TextInputSource)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Input.TextInputSource>(osu.Framework.Input.TextInputSource)
+  nameWithType.vb: ObjectExtensions.IsNull(Of TextInputSource)(TextInputSource)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Input.TextInputSource)(osu.Framework.Input.TextInputSource)
+  name.vb: IsNull(Of TextInputSource)(TextInputSource)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Input.TextInputSource)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Input.TextInputSource)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TextInputSource, TChild>(TextInputSource, TChild)
+  nameWithType: ContainerExtensions.WithChild<TextInputSource, TChild>(TextInputSource, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Input.TextInputSource, TChild>(osu.Framework.Input.TextInputSource, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TextInputSource, TChild)(TextInputSource, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Input.TextInputSource, TChild)(osu.Framework.Input.TextInputSource, TChild)
+  name.vb: WithChild(Of TextInputSource, TChild)(TextInputSource, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Input.TextInputSource,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Input.TextInputSource,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TextInputSource, TChild>(TextInputSource, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TextInputSource, TChild>(TextInputSource, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Input.TextInputSource, TChild>(osu.Framework.Input.TextInputSource, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TextInputSource, TChild)(TextInputSource, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Input.TextInputSource, TChild)(osu.Framework.Input.TextInputSource, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TextInputSource, TChild)(TextInputSource, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Input.TextInputSource,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Input.TextInputSource,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TextInputSource, TChild>(TextInputSource, TChild)
+  nameWithType: ContainerExtensions.Wrap<TextInputSource, TChild>(TextInputSource, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Input.TextInputSource, TChild>(osu.Framework.Input.TextInputSource, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TextInputSource, TChild)(TextInputSource, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Input.TextInputSource, TChild)(osu.Framework.Input.TextInputSource, TChild)
+  name.vb: Wrap(Of TextInputSource, TChild)(TextInputSource, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Input.TextInputSource,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Input.TextInputSource,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Input.TextInputSource.OnImeComposition
+  commentId: E:osu.Framework.Input.TextInputSource.OnImeComposition
+  parent: osu.Framework.Input.TextInputSource
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_OnImeComposition
+  name: OnImeComposition
+  nameWithType: TextInputSource.OnImeComposition
+  fullName: osu.Framework.Input.TextInputSource.OnImeComposition
+- uid: osu.Framework.Input.TextInputSource.ImeActive*
+  commentId: Overload:osu.Framework.Input.TextInputSource.ImeActive
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_ImeActive
+  name: ImeActive
+  nameWithType: TextInputSource.ImeActive
+  fullName: osu.Framework.Input.TextInputSource.ImeActive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Input.TextInputSource
+  commentId: T:osu.Framework.Input.TextInputSource
+  parent: osu.Framework.Input
+  href: osu.Framework.Input.TextInputSource.html
+  name: TextInputSource
+  nameWithType: TextInputSource
+  fullName: osu.Framework.Input.TextInputSource
+- uid: osu.Framework.Input.TextInputSource.OnTextInput
+  commentId: E:osu.Framework.Input.TextInputSource.OnTextInput
+  parent: osu.Framework.Input.TextInputSource
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_OnTextInput
+  name: OnTextInput
+  nameWithType: TextInputSource.OnTextInput
+  fullName: osu.Framework.Input.TextInputSource.OnTextInput
+- uid: osu.Framework.Input.TextInputSource.OnImeResult
+  commentId: E:osu.Framework.Input.TextInputSource.OnImeResult
+  parent: osu.Framework.Input.TextInputSource
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_OnImeResult
+  name: OnImeResult
+  nameWithType: TextInputSource.OnImeResult
+  fullName: osu.Framework.Input.TextInputSource.OnImeResult
+- uid: osu.Framework.Input.TextInputSource.Activate(System.Boolean,osu.Framework.Graphics.Primitives.RectangleF)
+  commentId: M:osu.Framework.Input.TextInputSource.Activate(System.Boolean,osu.Framework.Graphics.Primitives.RectangleF)
+  parent: osu.Framework.Input.TextInputSource
+  isExternal: true
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Activate_System_Boolean_osu_Framework_Graphics_Primitives_RectangleF_
+  name: Activate(bool, RectangleF)
+  nameWithType: TextInputSource.Activate(bool, RectangleF)
+  fullName: osu.Framework.Input.TextInputSource.Activate(bool, osu.Framework.Graphics.Primitives.RectangleF)
+  nameWithType.vb: TextInputSource.Activate(Boolean, RectangleF)
+  fullName.vb: osu.Framework.Input.TextInputSource.Activate(Boolean, osu.Framework.Graphics.Primitives.RectangleF)
+  name.vb: Activate(Boolean, RectangleF)
+  spec.csharp:
+  - uid: osu.Framework.Input.TextInputSource.Activate(System.Boolean,osu.Framework.Graphics.Primitives.RectangleF)
+    name: Activate
+    href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Activate_System_Boolean_osu_Framework_Graphics_Primitives_RectangleF_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Graphics.Primitives.RectangleF
+    name: RectangleF
+    href: osu.Framework.Graphics.Primitives.RectangleF.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.TextInputSource.Activate(System.Boolean,osu.Framework.Graphics.Primitives.RectangleF)
+    name: Activate
+    href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Activate_System_Boolean_osu_Framework_Graphics_Primitives_RectangleF_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Graphics.Primitives.RectangleF
+    name: RectangleF
+    href: osu.Framework.Graphics.Primitives.RectangleF.html
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.Deactivate
+  commentId: M:osu.Framework.Input.TextInputSource.Deactivate
+  parent: osu.Framework.Input.TextInputSource
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Deactivate
+  name: Deactivate()
+  nameWithType: TextInputSource.Deactivate()
+  fullName: osu.Framework.Input.TextInputSource.Deactivate()
+  spec.csharp:
+  - uid: osu.Framework.Input.TextInputSource.Deactivate
+    name: Deactivate
+    href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Deactivate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.TextInputSource.Deactivate
+    name: Deactivate
+    href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Deactivate
+  - name: (
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.Activate*
+  commentId: Overload:osu.Framework.Input.TextInputSource.Activate
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Activate_System_Boolean_osu_Framework_Graphics_Primitives_RectangleF_
+  name: Activate
+  nameWithType: TextInputSource.Activate
+  fullName: osu.Framework.Input.TextInputSource.Activate
+- uid: osu.Framework.Graphics.Primitives.RectangleF
+  commentId: T:osu.Framework.Graphics.Primitives.RectangleF
+  parent: osu.Framework.Graphics.Primitives
+  href: osu.Framework.Graphics.Primitives.RectangleF.html
+  name: RectangleF
+  nameWithType: RectangleF
+  fullName: osu.Framework.Graphics.Primitives.RectangleF
+- uid: osu.Framework.Graphics.Primitives
+  commentId: N:osu.Framework.Graphics.Primitives
+  href: osu.html
+  name: osu.Framework.Graphics.Primitives
+  nameWithType: osu.Framework.Graphics.Primitives
+  fullName: osu.Framework.Graphics.Primitives
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Primitives
+    name: Primitives
+    href: osu.Framework.Graphics.Primitives.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Primitives
+    name: Primitives
+    href: osu.Framework.Graphics.Primitives.html
+- uid: osu.Framework.Input.TextInputSource.EnsureActivated*
+  commentId: Overload:osu.Framework.Input.TextInputSource.EnsureActivated
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_EnsureActivated_System_Boolean_System_Nullable_osu_Framework_Graphics_Primitives_RectangleF__
+  name: EnsureActivated
+  nameWithType: TextInputSource.EnsureActivated
+  fullName: osu.Framework.Input.TextInputSource.EnsureActivated
+- uid: System.Nullable{osu.Framework.Graphics.Primitives.RectangleF}
+  commentId: T:System.Nullable{osu.Framework.Graphics.Primitives.RectangleF}
+  parent: System
+  definition: System.Nullable`1
+  href: osu.Framework.Graphics.Primitives.RectangleF.html
+  name: RectangleF?
+  nameWithType: RectangleF?
+  fullName: osu.Framework.Graphics.Primitives.RectangleF?
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Primitives.RectangleF
+    name: RectangleF
+    href: osu.Framework.Graphics.Primitives.RectangleF.html
+  - name: '?'
+  spec.vb:
+  - uid: osu.Framework.Graphics.Primitives.RectangleF
+    name: RectangleF
+    href: osu.Framework.Graphics.Primitives.RectangleF.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.Deactivate*
+  commentId: Overload:osu.Framework.Input.TextInputSource.Deactivate
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_Deactivate
+  name: Deactivate
+  nameWithType: TextInputSource.Deactivate
+  fullName: osu.Framework.Input.TextInputSource.Deactivate
+- uid: osu.Framework.Input.TextInputSource.SetImeRectangle*
+  commentId: Overload:osu.Framework.Input.TextInputSource.SetImeRectangle
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_SetImeRectangle_osu_Framework_Graphics_Primitives_RectangleF_
+  name: SetImeRectangle
+  nameWithType: TextInputSource.SetImeRectangle
+  fullName: osu.Framework.Input.TextInputSource.SetImeRectangle
+- uid: osu.Framework.Input.TextInputSource.ResetIme*
+  commentId: Overload:osu.Framework.Input.TextInputSource.ResetIme
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_ResetIme
+  name: ResetIme
+  nameWithType: TextInputSource.ResetIme
+  fullName: osu.Framework.Input.TextInputSource.ResetIme
+- uid: System.Action{System.String}
+  commentId: T:System.Action{System.String}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<string>
+  nameWithType: Action<string>
+  fullName: System.Action<string>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.ImeCompositionDelegate
+  commentId: T:osu.Framework.Input.TextInputSource.ImeCompositionDelegate
+  parent: osu.Framework.Input
+  href: osu.Framework.Input.TextInputSource.html
+  name: TextInputSource.ImeCompositionDelegate
+  nameWithType: TextInputSource.ImeCompositionDelegate
+  fullName: osu.Framework.Input.TextInputSource.ImeCompositionDelegate
+  spec.csharp:
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: .
+  - uid: osu.Framework.Input.TextInputSource.ImeCompositionDelegate
+    name: ImeCompositionDelegate
+    href: osu.Framework.Input.TextInputSource.ImeCompositionDelegate.html
+  spec.vb:
+  - uid: osu.Framework.Input.TextInputSource
+    name: TextInputSource
+    href: osu.Framework.Input.TextInputSource.html
+  - name: .
+  - uid: osu.Framework.Input.TextInputSource.ImeCompositionDelegate
+    name: ImeCompositionDelegate
+    href: osu.Framework.Input.TextInputSource.ImeCompositionDelegate.html
+- uid: osu.Framework.Input.TextInputSource.TriggerTextInput(System.String)
+  commentId: M:osu.Framework.Input.TextInputSource.TriggerTextInput(System.String)
+  parent: osu.Framework.Input.TextInputSource
+  isExternal: true
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerTextInput_System_String_
+  name: TriggerTextInput(string)
+  nameWithType: TextInputSource.TriggerTextInput(string)
+  fullName: osu.Framework.Input.TextInputSource.TriggerTextInput(string)
+  nameWithType.vb: TextInputSource.TriggerTextInput(String)
+  fullName.vb: osu.Framework.Input.TextInputSource.TriggerTextInput(String)
+  name.vb: TriggerTextInput(String)
+  spec.csharp:
+  - uid: osu.Framework.Input.TextInputSource.TriggerTextInput(System.String)
+    name: TriggerTextInput
+    href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerTextInput_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.TextInputSource.TriggerTextInput(System.String)
+    name: TriggerTextInput
+    href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerTextInput_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.TriggerImeComposition(System.String,System.Int32,System.Int32)
+  commentId: M:osu.Framework.Input.TextInputSource.TriggerImeComposition(System.String,System.Int32,System.Int32)
+  isExternal: true
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerImeComposition_System_String_System_Int32_System_Int32_
+  name: TriggerImeComposition(string, int, int)
+  nameWithType: TextInputSource.TriggerImeComposition(string, int, int)
+  fullName: osu.Framework.Input.TextInputSource.TriggerImeComposition(string, int, int)
+  nameWithType.vb: TextInputSource.TriggerImeComposition(String, Integer, Integer)
+  fullName.vb: osu.Framework.Input.TextInputSource.TriggerImeComposition(String, Integer, Integer)
+  name.vb: TriggerImeComposition(String, Integer, Integer)
+  spec.csharp:
+  - uid: osu.Framework.Input.TextInputSource.TriggerImeComposition(System.String,System.Int32,System.Int32)
+    name: TriggerImeComposition
+    href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerImeComposition_System_String_System_Int32_System_Int32_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.TextInputSource.TriggerImeComposition(System.String,System.Int32,System.Int32)
+    name: TriggerImeComposition
+    href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerImeComposition_System_String_System_Int32_System_Int32_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.TriggerImeResult(System.String)
+  commentId: M:osu.Framework.Input.TextInputSource.TriggerImeResult(System.String)
+  isExternal: true
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerImeResult_System_String_
+  name: TriggerImeResult(string)
+  nameWithType: TextInputSource.TriggerImeResult(string)
+  fullName: osu.Framework.Input.TextInputSource.TriggerImeResult(string)
+  nameWithType.vb: TextInputSource.TriggerImeResult(String)
+  fullName.vb: osu.Framework.Input.TextInputSource.TriggerImeResult(String)
+  name.vb: TriggerImeResult(String)
+  spec.csharp:
+  - uid: osu.Framework.Input.TextInputSource.TriggerImeResult(System.String)
+    name: TriggerImeResult
+    href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerImeResult_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.TextInputSource.TriggerImeResult(System.String)
+    name: TriggerImeResult
+    href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerImeResult_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Input.TextInputSource.ActivateTextInput*
+  commentId: Overload:osu.Framework.Input.TextInputSource.ActivateTextInput
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_ActivateTextInput_System_Boolean_
+  name: ActivateTextInput
+  nameWithType: TextInputSource.ActivateTextInput
+  fullName: osu.Framework.Input.TextInputSource.ActivateTextInput
+- uid: osu.Framework.Input.TextInputSource.EnsureTextInputActivated*
+  commentId: Overload:osu.Framework.Input.TextInputSource.EnsureTextInputActivated
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_EnsureTextInputActivated_System_Boolean_
+  name: EnsureTextInputActivated
+  nameWithType: TextInputSource.EnsureTextInputActivated
+  fullName: osu.Framework.Input.TextInputSource.EnsureTextInputActivated
+- uid: osu.Framework.Input.TextInputSource.DeactivateTextInput*
+  commentId: Overload:osu.Framework.Input.TextInputSource.DeactivateTextInput
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_DeactivateTextInput
+  name: DeactivateTextInput
+  nameWithType: TextInputSource.DeactivateTextInput
+  fullName: osu.Framework.Input.TextInputSource.DeactivateTextInput
+- uid: osu.Framework.Input.TextInputSource.TriggerTextInput*
+  commentId: Overload:osu.Framework.Input.TextInputSource.TriggerTextInput
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerTextInput_System_String_
+  name: TriggerTextInput
+  nameWithType: TextInputSource.TriggerTextInput
+  fullName: osu.Framework.Input.TextInputSource.TriggerTextInput
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: osu.Framework.Input.TextInputSource.TriggerImeComposition*
+  commentId: Overload:osu.Framework.Input.TextInputSource.TriggerImeComposition
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerImeComposition_System_String_System_Int32_System_Int32_
+  name: TriggerImeComposition
+  nameWithType: TextInputSource.TriggerImeComposition
+  fullName: osu.Framework.Input.TextInputSource.TriggerImeComposition
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: osu.Framework.Input.TextInputSource.TriggerImeResult*
+  commentId: Overload:osu.Framework.Input.TextInputSource.TriggerImeResult
+  href: osu.Framework.Input.TextInputSource.html#osu_Framework_Input_TextInputSource_TriggerImeResult_System_String_
+  name: TriggerImeResult
+  nameWithType: TextInputSource.TriggerImeResult
+  fullName: osu.Framework.Input.TextInputSource.TriggerImeResult

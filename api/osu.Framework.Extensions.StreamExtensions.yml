@@ -1,0 +1,1115 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Extensions.StreamExtensions
+  commentId: T:osu.Framework.Extensions.StreamExtensions
+  id: StreamExtensions
+  parent: osu.Framework.Extensions
+  children:
+  - osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArray(System.IO.Stream)
+  - osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArrayAsync(System.IO.Stream,System.Threading.CancellationToken)
+  - osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray(System.IO.Stream)
+  - osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArrayAsync(System.IO.Stream,System.Threading.CancellationToken)
+  - osu.Framework.Extensions.StreamExtensions.ReadBytesToArray(System.IO.Stream,System.Int32)
+  - osu.Framework.Extensions.StreamExtensions.ReadBytesToArrayAsync(System.IO.Stream,System.Int32,System.Threading.CancellationToken)
+  - osu.Framework.Extensions.StreamExtensions.ReadToFill(System.IO.Stream,System.Span{System.Byte})
+  - osu.Framework.Extensions.StreamExtensions.ReadToFillAsync(System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: StreamExtensions
+  nameWithType: StreamExtensions
+  fullName: osu.Framework.Extensions.StreamExtensions
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Extensions/StreamExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: StreamExtensions
+    path: osu.Framework/Extensions/StreamExtensions.cs
+    startLine: 10
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions
+  syntax:
+    content: public static class StreamExtensions
+    content.vb: Public Module StreamExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArray(System.IO.Stream)
+  commentId: M:osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArray(System.IO.Stream)
+  id: ReadAllBytesToArray(System.IO.Stream)
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.StreamExtensions
+  langs:
+  - csharp
+  - vb
+  name: ReadAllBytesToArray(Stream)
+  nameWithType: StreamExtensions.ReadAllBytesToArray(Stream)
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArray(System.IO.Stream)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/StreamExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ReadAllBytesToArray
+    path: osu.Framework/Extensions/StreamExtensions.cs
+    startLine: 21
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions
+  summary: Read the full content of a seekable stream.
+  remarks: For a non-seekable stream, use <xref href="osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray(System.IO.Stream)" data-throw-if-not-resolved="false"></xref> instead.
+  example: []
+  syntax:
+    content: public static byte[] ReadAllBytesToArray(this Stream stream)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: The stream to read.
+    return:
+      type: System.Byte[]
+      description: The full byte content.
+    content.vb: Public Shared Function ReadAllBytesToArray(stream As Stream) As Byte()
+  overload: osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArray*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The <code class="paramref">stream</code> does not allow seeking, or is too long.
+- uid: osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArrayAsync(System.IO.Stream,System.Threading.CancellationToken)
+  commentId: M:osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArrayAsync(System.IO.Stream,System.Threading.CancellationToken)
+  id: ReadAllBytesToArrayAsync(System.IO.Stream,System.Threading.CancellationToken)
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.StreamExtensions
+  langs:
+  - csharp
+  - vb
+  name: ReadAllBytesToArrayAsync(Stream, CancellationToken)
+  nameWithType: StreamExtensions.ReadAllBytesToArrayAsync(Stream, CancellationToken)
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArrayAsync(System.IO.Stream, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/StreamExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ReadAllBytesToArrayAsync
+    path: osu.Framework/Extensions/StreamExtensions.cs
+    startLine: 43
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions
+  summary: Read the full content of a seekable stream.
+  remarks: For a non-seekable stream, use <xref href="osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray(System.IO.Stream)" data-throw-if-not-resolved="false"></xref> instead.
+  example: []
+  syntax:
+    content: public static Task<byte[]> ReadAllBytesToArrayAsync(this Stream stream, CancellationToken cancellationToken = default)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: The stream to read.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A cancellation token.
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+      description: The full byte content.
+    content.vb: Public Shared Function ReadAllBytesToArrayAsync(stream As Stream, cancellationToken As CancellationToken = Nothing) As Task(Of Byte())
+  overload: osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArrayAsync*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The <code class="paramref">stream</code> does not allow seeking, or is too long.
+- uid: osu.Framework.Extensions.StreamExtensions.ReadBytesToArray(System.IO.Stream,System.Int32)
+  commentId: M:osu.Framework.Extensions.StreamExtensions.ReadBytesToArray(System.IO.Stream,System.Int32)
+  id: ReadBytesToArray(System.IO.Stream,System.Int32)
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.StreamExtensions
+  langs:
+  - csharp
+  - vb
+  name: ReadBytesToArray(Stream, int)
+  nameWithType: StreamExtensions.ReadBytesToArray(Stream, int)
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadBytesToArray(System.IO.Stream, int)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/StreamExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ReadBytesToArray
+    path: osu.Framework/Extensions/StreamExtensions.cs
+    startLine: 62
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions
+  summary: Read specified length from current position in stream.
+  example: []
+  syntax:
+    content: public static byte[] ReadBytesToArray(this Stream stream, int length)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: The stream to read.
+    - id: length
+      type: System.Int32
+      description: The length to read.
+    return:
+      type: System.Byte[]
+      description: The full byte content.
+    content.vb: Public Shared Function ReadBytesToArray(stream As Stream, length As Integer) As Byte()
+  overload: osu.Framework.Extensions.StreamExtensions.ReadBytesToArray*
+  exceptions:
+  - type: System.IO.EndOfStreamException
+    commentId: T:System.IO.EndOfStreamException
+    description: The <code class="paramref">length</code> specified exceeded the available data in the stream.
+  nameWithType.vb: StreamExtensions.ReadBytesToArray(Stream, Integer)
+  fullName.vb: osu.Framework.Extensions.StreamExtensions.ReadBytesToArray(System.IO.Stream, Integer)
+  name.vb: ReadBytesToArray(Stream, Integer)
+- uid: osu.Framework.Extensions.StreamExtensions.ReadBytesToArrayAsync(System.IO.Stream,System.Int32,System.Threading.CancellationToken)
+  commentId: M:osu.Framework.Extensions.StreamExtensions.ReadBytesToArrayAsync(System.IO.Stream,System.Int32,System.Threading.CancellationToken)
+  id: ReadBytesToArrayAsync(System.IO.Stream,System.Int32,System.Threading.CancellationToken)
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.StreamExtensions
+  langs:
+  - csharp
+  - vb
+  name: ReadBytesToArrayAsync(Stream, int, CancellationToken)
+  nameWithType: StreamExtensions.ReadBytesToArrayAsync(Stream, int, CancellationToken)
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadBytesToArrayAsync(System.IO.Stream, int, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/StreamExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ReadBytesToArrayAsync
+    path: osu.Framework/Extensions/StreamExtensions.cs
+    startLine: 77
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions
+  summary: Read the full content of a stream.
+  example: []
+  syntax:
+    content: public static Task<byte[]> ReadBytesToArrayAsync(this Stream stream, int length, CancellationToken cancellationToken = default)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: The stream to read.
+    - id: length
+      type: System.Int32
+      description: The length to read.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A cancellation token.
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+      description: The full byte content.
+    content.vb: Public Shared Function ReadBytesToArrayAsync(stream As Stream, length As Integer, cancellationToken As CancellationToken = Nothing) As Task(Of Byte())
+  overload: osu.Framework.Extensions.StreamExtensions.ReadBytesToArrayAsync*
+  exceptions:
+  - type: System.IO.EndOfStreamException
+    commentId: T:System.IO.EndOfStreamException
+    description: The <code class="paramref">length</code> specified exceeded the available data in the stream.
+  nameWithType.vb: StreamExtensions.ReadBytesToArrayAsync(Stream, Integer, CancellationToken)
+  fullName.vb: osu.Framework.Extensions.StreamExtensions.ReadBytesToArrayAsync(System.IO.Stream, Integer, System.Threading.CancellationToken)
+  name.vb: ReadBytesToArrayAsync(Stream, Integer, CancellationToken)
+- uid: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray(System.IO.Stream)
+  commentId: M:osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray(System.IO.Stream)
+  id: ReadAllRemainingBytesToArray(System.IO.Stream)
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.StreamExtensions
+  langs:
+  - csharp
+  - vb
+  name: ReadAllRemainingBytesToArray(Stream)
+  nameWithType: StreamExtensions.ReadAllRemainingBytesToArray(Stream)
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray(System.IO.Stream)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/StreamExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ReadAllRemainingBytesToArray
+    path: osu.Framework/Extensions/StreamExtensions.cs
+    startLine: 89
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions
+  summary: Read all bytes from a non-seekable stream.
+  example: []
+  syntax:
+    content: public static byte[] ReadAllRemainingBytesToArray(this Stream stream)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: The stream to read.
+    return:
+      type: System.Byte[]
+      description: The full byte content.
+    content.vb: Public Shared Function ReadAllRemainingBytesToArray(stream As Stream) As Byte()
+  overload: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray*
+- uid: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArrayAsync(System.IO.Stream,System.Threading.CancellationToken)
+  commentId: M:osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArrayAsync(System.IO.Stream,System.Threading.CancellationToken)
+  id: ReadAllRemainingBytesToArrayAsync(System.IO.Stream,System.Threading.CancellationToken)
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.StreamExtensions
+  langs:
+  - csharp
+  - vb
+  name: ReadAllRemainingBytesToArrayAsync(Stream, CancellationToken)
+  nameWithType: StreamExtensions.ReadAllRemainingBytesToArrayAsync(Stream, CancellationToken)
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArrayAsync(System.IO.Stream, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/StreamExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ReadAllRemainingBytesToArrayAsync
+    path: osu.Framework/Extensions/StreamExtensions.cs
+    startLine: 104
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions
+  summary: Read all bytes from a non-seekable stream.
+  example: []
+  syntax:
+    content: public static Task<byte[]> ReadAllRemainingBytesToArrayAsync(this Stream stream, CancellationToken cancellationToken = default)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: The stream to read.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A cancellation token.
+    return:
+      type: System.Threading.Tasks.Task{System.Byte[]}
+      description: The full byte content.
+    content.vb: Public Shared Function ReadAllRemainingBytesToArrayAsync(stream As Stream, cancellationToken As CancellationToken = Nothing) As Task(Of Byte())
+  overload: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArrayAsync*
+- uid: osu.Framework.Extensions.StreamExtensions.ReadToFill(System.IO.Stream,System.Span{System.Byte})
+  commentId: M:osu.Framework.Extensions.StreamExtensions.ReadToFill(System.IO.Stream,System.Span{System.Byte})
+  id: ReadToFill(System.IO.Stream,System.Span{System.Byte})
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.StreamExtensions
+  langs:
+  - csharp
+  - vb
+  name: ReadToFill(Stream, Span<byte>)
+  nameWithType: StreamExtensions.ReadToFill(Stream, Span<byte>)
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadToFill(System.IO.Stream, System.Span<byte>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/StreamExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ReadToFill
+    path: osu.Framework/Extensions/StreamExtensions.cs
+    startLine: 119
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions
+  summary: Reads bytes from a stream until the provided buffer is full.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Use Stream.ReadExactly")]
+
+      public static void ReadToFill(this Stream stream, Span<byte> buffer)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: The stream to read.
+    - id: buffer
+      type: System.Span{System.Byte}
+      description: The buffer to read into.
+    content.vb: >-
+      <Obsolete("Use Stream.ReadExactly")>
+
+      Public Shared Sub ReadToFill(stream As Stream, buffer As Span(Of Byte))
+  overload: osu.Framework.Extensions.StreamExtensions.ReadToFill*
+  exceptions:
+  - type: System.IO.EndOfStreamException
+    commentId: T:System.IO.EndOfStreamException
+    description: Throws if the stream didn't have enough content to fill the buffer.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use Stream.ReadExactly
+  nameWithType.vb: StreamExtensions.ReadToFill(Stream, Span(Of Byte))
+  fullName.vb: osu.Framework.Extensions.StreamExtensions.ReadToFill(System.IO.Stream, System.Span(Of Byte))
+  name.vb: ReadToFill(Stream, Span(Of Byte))
+- uid: osu.Framework.Extensions.StreamExtensions.ReadToFillAsync(System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)
+  commentId: M:osu.Framework.Extensions.StreamExtensions.ReadToFillAsync(System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)
+  id: ReadToFillAsync(System.IO.Stream,System.Memory{System.Byte},System.Threading.CancellationToken)
+  isExtensionMethod: true
+  parent: osu.Framework.Extensions.StreamExtensions
+  langs:
+  - csharp
+  - vb
+  name: ReadToFillAsync(Stream, Memory<byte>, CancellationToken)
+  nameWithType: StreamExtensions.ReadToFillAsync(Stream, Memory<byte>, CancellationToken)
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadToFillAsync(System.IO.Stream, System.Memory<byte>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Extensions/StreamExtensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ReadToFillAsync
+    path: osu.Framework/Extensions/StreamExtensions.cs
+    startLine: 129
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Extensions
+  summary: Reads bytes from a stream until the provided buffer is full.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Use Stream.ReadExactlyAsync")]
+
+      public static Task ReadToFillAsync(this Stream stream, Memory<byte> buffer, CancellationToken cancellationToken = default)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: The stream to read.
+    - id: buffer
+      type: System.Memory{System.Byte}
+      description: The buffer to read into.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A cancellation token.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Obsolete("Use Stream.ReadExactlyAsync")>
+
+      Public Shared Function ReadToFillAsync(stream As Stream, buffer As Memory(Of Byte), cancellationToken As CancellationToken = Nothing) As Task
+  overload: osu.Framework.Extensions.StreamExtensions.ReadToFillAsync*
+  exceptions:
+  - type: System.IO.EndOfStreamException
+    commentId: T:System.IO.EndOfStreamException
+    description: Throws if the stream didn't have enough content to fill the buffer.
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use Stream.ReadExactlyAsync
+  nameWithType.vb: StreamExtensions.ReadToFillAsync(Stream, Memory(Of Byte), CancellationToken)
+  fullName.vb: osu.Framework.Extensions.StreamExtensions.ReadToFillAsync(System.IO.Stream, System.Memory(Of Byte), System.Threading.CancellationToken)
+  name.vb: ReadToFillAsync(Stream, Memory(Of Byte), CancellationToken)
+references:
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray(System.IO.Stream)
+  commentId: M:osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray(System.IO.Stream)
+  isExternal: true
+  href: osu.Framework.Extensions.StreamExtensions.html#osu_Framework_Extensions_StreamExtensions_ReadAllRemainingBytesToArray_System_IO_Stream_
+  name: ReadAllRemainingBytesToArray(Stream)
+  nameWithType: StreamExtensions.ReadAllRemainingBytesToArray(Stream)
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray(System.IO.Stream)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray(System.IO.Stream)
+    name: ReadAllRemainingBytesToArray
+    href: osu.Framework.Extensions.StreamExtensions.html#osu_Framework_Extensions_StreamExtensions_ReadAllRemainingBytesToArray_System_IO_Stream_
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray(System.IO.Stream)
+    name: ReadAllRemainingBytesToArray
+    href: osu.Framework.Extensions.StreamExtensions.html#osu_Framework_Extensions_StreamExtensions_ReadAllRemainingBytesToArray_System_IO_Stream_
+  - name: (
+  - uid: System.IO.Stream
+    name: Stream
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  - name: )
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArray*
+  commentId: Overload:osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArray
+  href: osu.Framework.Extensions.StreamExtensions.html#osu_Framework_Extensions_StreamExtensions_ReadAllBytesToArray_System_IO_Stream_
+  name: ReadAllBytesToArray
+  nameWithType: StreamExtensions.ReadAllBytesToArray
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArray
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArrayAsync*
+  commentId: Overload:osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArrayAsync
+  href: osu.Framework.Extensions.StreamExtensions.html#osu_Framework_Extensions_StreamExtensions_ReadAllBytesToArrayAsync_System_IO_Stream_System_Threading_CancellationToken_
+  name: ReadAllBytesToArrayAsync
+  nameWithType: StreamExtensions.ReadAllBytesToArrayAsync
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadAllBytesToArrayAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{System.Byte[]}
+  commentId: T:System.Threading.Tasks.Task{System.Byte[]}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<byte[]>
+  nameWithType: Task<byte[]>
+  fullName: System.Threading.Tasks.Task<byte[]>
+  nameWithType.vb: Task(Of Byte())
+  fullName.vb: System.Threading.Tasks.Task(Of Byte())
+  name.vb: Task(Of Byte())
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.IO.EndOfStreamException
+  commentId: T:System.IO.EndOfStreamException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.endofstreamexception
+  name: EndOfStreamException
+  nameWithType: EndOfStreamException
+  fullName: System.IO.EndOfStreamException
+- uid: osu.Framework.Extensions.StreamExtensions.ReadBytesToArray*
+  commentId: Overload:osu.Framework.Extensions.StreamExtensions.ReadBytesToArray
+  href: osu.Framework.Extensions.StreamExtensions.html#osu_Framework_Extensions_StreamExtensions_ReadBytesToArray_System_IO_Stream_System_Int32_
+  name: ReadBytesToArray
+  nameWithType: StreamExtensions.ReadBytesToArray
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadBytesToArray
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: osu.Framework.Extensions.StreamExtensions.ReadBytesToArrayAsync*
+  commentId: Overload:osu.Framework.Extensions.StreamExtensions.ReadBytesToArrayAsync
+  href: osu.Framework.Extensions.StreamExtensions.html#osu_Framework_Extensions_StreamExtensions_ReadBytesToArrayAsync_System_IO_Stream_System_Int32_System_Threading_CancellationToken_
+  name: ReadBytesToArrayAsync
+  nameWithType: StreamExtensions.ReadBytesToArrayAsync
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadBytesToArrayAsync
+- uid: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray*
+  commentId: Overload:osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray
+  href: osu.Framework.Extensions.StreamExtensions.html#osu_Framework_Extensions_StreamExtensions_ReadAllRemainingBytesToArray_System_IO_Stream_
+  name: ReadAllRemainingBytesToArray
+  nameWithType: StreamExtensions.ReadAllRemainingBytesToArray
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArray
+- uid: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArrayAsync*
+  commentId: Overload:osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArrayAsync
+  href: osu.Framework.Extensions.StreamExtensions.html#osu_Framework_Extensions_StreamExtensions_ReadAllRemainingBytesToArrayAsync_System_IO_Stream_System_Threading_CancellationToken_
+  name: ReadAllRemainingBytesToArrayAsync
+  nameWithType: StreamExtensions.ReadAllRemainingBytesToArrayAsync
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadAllRemainingBytesToArrayAsync
+- uid: osu.Framework.Extensions.StreamExtensions.ReadToFill*
+  commentId: Overload:osu.Framework.Extensions.StreamExtensions.ReadToFill
+  href: osu.Framework.Extensions.StreamExtensions.html#osu_Framework_Extensions_StreamExtensions_ReadToFill_System_IO_Stream_System_Span_System_Byte__
+  name: ReadToFill
+  nameWithType: StreamExtensions.ReadToFill
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadToFill
+- uid: System.Span{System.Byte}
+  commentId: T:System.Span{System.Byte}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<byte>
+  nameWithType: Span<byte>
+  fullName: System.Span<byte>
+  nameWithType.vb: Span(Of Byte)
+  fullName.vb: System.Span(Of Byte)
+  name.vb: Span(Of Byte)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.StreamExtensions.ReadToFillAsync*
+  commentId: Overload:osu.Framework.Extensions.StreamExtensions.ReadToFillAsync
+  href: osu.Framework.Extensions.StreamExtensions.html#osu_Framework_Extensions_StreamExtensions_ReadToFillAsync_System_IO_Stream_System_Memory_System_Byte__System_Threading_CancellationToken_
+  name: ReadToFillAsync
+  nameWithType: StreamExtensions.ReadToFillAsync
+  fullName: osu.Framework.Extensions.StreamExtensions.ReadToFillAsync
+- uid: System.Memory{System.Byte}
+  commentId: T:System.Memory{System.Byte}
+  parent: System
+  definition: System.Memory`1
+  href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  name: Memory<byte>
+  nameWithType: Memory<byte>
+  fullName: System.Memory<byte>
+  nameWithType.vb: Memory(Of Byte)
+  fullName.vb: System.Memory(Of Byte)
+  name.vb: Memory(Of Byte)
+  spec.csharp:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Memory`1
+  commentId: T:System.Memory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  name: Memory<T>
+  nameWithType: Memory<T>
+  fullName: System.Memory<T>
+  nameWithType.vb: Memory(Of T)
+  fullName.vb: System.Memory(Of T)
+  name.vb: Memory(Of T)
+  spec.csharp:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

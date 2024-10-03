@@ -1,0 +1,977 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct KeyCombination | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct KeyCombination | osu!framework ">
+      
+      <meta name="description" content="Represent a combination of more than one s.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Input_Bindings_KeyCombination.md&amp;value=---%0Auid%3A%20osu.Framework.Input.Bindings.KeyCombination%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Input.Bindings.KeyCombination">
+
+
+
+  <h1 id="osu_Framework_Input_Bindings_KeyCombination" data-uid="osu.Framework.Input.Bindings.KeyCombination" class="text-break">
+Struct KeyCombination  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Input.html">Input</a>.<a class="xref" href="osu.Framework.Input.Bindings.html">Bindings</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represent a combination of more than one <a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a>s.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly struct KeyCombination : IEquatable&lt;KeyCombination&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html">KeyCombination</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination__ctor_" data-uid="osu.Framework.Input.Bindings.KeyCombination.#ctor*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination__ctor_System_Collections_Generic_ICollection_osu_Framework_Input_Bindings_InputKey__" data-uid="osu.Framework.Input.Bindings.KeyCombination.#ctor(System.Collections.Generic.ICollection{osu.Framework.Input.Bindings.InputKey})">
+  KeyCombination(ICollection&lt;InputKey&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a new instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyCombination(ICollection&lt;InputKey&gt;? keys)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>keys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a>&gt;</dt>
+    <dd><p>The keys.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination__ctor_" data-uid="osu.Framework.Input.Bindings.KeyCombination.#ctor*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination__ctor_System_String_" data-uid="osu.Framework.Input.Bindings.KeyCombination.#ctor(System.String)">
+  KeyCombination(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a new instance from string representation provided by <a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html#osu_Framework_Input_Bindings_KeyCombination_ToString">ToString()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyCombination(string keys)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>keys</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A comma-separated (KeyCode in integer) string representation of the keys.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Input_Bindings_KeyCombination__ctor_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This constructor is not optimized. Hot paths are assumed to use <a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html#osu_Framework_Input_Bindings_KeyCombination_FromInputState_osu_Framework_Input_States_InputState_System_Nullable_osuTK_Vector2__">FromInputState(InputState, Vector2?)</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination__ctor_" data-uid="osu.Framework.Input.Bindings.KeyCombination.#ctor*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination__ctor_osu_Framework_Input_Bindings_InputKey___" data-uid="osu.Framework.Input.Bindings.KeyCombination.#ctor(osu.Framework.Input.Bindings.InputKey[])">
+  KeyCombination(params InputKey[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a new instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public KeyCombination(params InputKey[] keys)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>keys</code> <a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a>[]</dt>
+    <dd><p>The keys.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Input_Bindings_KeyCombination__ctor_osu_Framework_Input_Bindings_InputKey____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This constructor is not optimized. Hot paths are assumed to use <a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html#osu_Framework_Input_Bindings_KeyCombination_FromInputState_osu_Framework_Input_States_InputState_System_Nullable_osuTK_Vector2__">FromInputState(InputState, Vector2?)</a>.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_Keys" data-uid="osu.Framework.Input.Bindings.KeyCombination.Keys">
+  Keys
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;InputKey&gt; Keys</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray</a>&lt;<a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_Equals_" data-uid="osu.Framework.Input.Bindings.KeyCombination.Equals*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_Equals_System_Object_" data-uid="osu.Framework.Input.Bindings.KeyCombination.Equals(System.Object)">
+  Equals(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L222"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether this instance and a specified object are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current instance.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_Equals_" data-uid="osu.Framework.Input.Bindings.KeyCombination.Equals*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_Equals_osu_Framework_Input_Bindings_KeyCombination_" data-uid="osu.Framework.Input.Bindings.KeyCombination.Equals(osu.Framework.Input.Bindings.KeyCombination)">
+  Equals(KeyCombination)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Indicates whether the current object is equal to another object of the same type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(KeyCombination other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html">KeyCombination</a></dt>
+    <dd><p>An object to compare with this object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current object is equal to the <code class="paramref">other</code> parameter; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_FromInputState_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromInputState*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_FromInputState_osu_Framework_Input_States_InputState_System_Nullable_osuTK_Vector2__" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromInputState(osu.Framework.Input.States.InputState,System.Nullable{osuTK.Vector2})">
+  FromInputState(InputState, Vector2?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Construct a new instance from input state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static KeyCombination FromInputState(InputState state, Vector2? scrollDelta = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="osu.Framework.Input.States.InputState.html">InputState</a></dt>
+    <dd><p>The input state object.</p>
+</dd>
+    <dt><code>scrollDelta</code> <span class="xref">Vector2</span>?</dt>
+    <dd><p>Delta of scroller's position.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html">KeyCombination</a></dt>
+    <dd><p>The new constructed <a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html">KeyCombination</a> instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Input_Bindings_KeyCombination_FromInputState_osu_Framework_Input_States_InputState_System_Nullable_osuTK_Vector2___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This factory method is optimized and should be used for hot paths.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_FromJoystickButton_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromJoystickButton*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_FromJoystickButton_osu_Framework_Input_JoystickButton_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromJoystickButton(osu.Framework.Input.JoystickButton)">
+  FromJoystickButton(JoystickButton)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InputKey FromJoystickButton(JoystickButton button)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>button</code> <a class="xref" href="osu.Framework.Input.JoystickButton.html">JoystickButton</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_FromKey_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromKey*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_FromKey_osuTK_Input_Key_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromKey(osuTK.Input.Key)">
+  FromKey(Key)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InputKey FromKey(Key key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <span class="xref">Key</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_FromMidiKey_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromMidiKey*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_FromMidiKey_osu_Framework_Input_MidiKey_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromMidiKey(osu.Framework.Input.MidiKey)">
+  FromMidiKey(MidiKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L326"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InputKey FromMidiKey(MidiKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="osu.Framework.Input.MidiKey.html">MidiKey</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_FromMouseButton_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromMouseButton*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_FromMouseButton_osuTK_Input_MouseButton_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromMouseButton(osuTK.Input.MouseButton)">
+  FromMouseButton(MouseButton)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InputKey FromMouseButton(MouseButton button)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>button</code> <span class="xref">MouseButton</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_FromScrollDelta_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromScrollDelta*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_FromScrollDelta_osuTK_Vector2_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromScrollDelta(osuTK.Vector2)">
+  FromScrollDelta(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerable&lt;InputKey&gt; FromScrollDelta(Vector2 scrollDelta)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>scrollDelta</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_FromTabletAuxiliaryButton_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromTabletAuxiliaryButton*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_FromTabletAuxiliaryButton_osu_Framework_Input_TabletAuxiliaryButton_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromTabletAuxiliaryButton(osu.Framework.Input.TabletAuxiliaryButton)">
+  FromTabletAuxiliaryButton(TabletAuxiliaryButton)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InputKey FromTabletAuxiliaryButton(TabletAuxiliaryButton auxiliaryButton)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>auxiliaryButton</code> <a class="xref" href="osu.Framework.Input.TabletAuxiliaryButton.html">TabletAuxiliaryButton</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_FromTabletPenButton_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromTabletPenButton*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_FromTabletPenButton_osu_Framework_Input_TabletPenButton_" data-uid="osu.Framework.Input.Bindings.KeyCombination.FromTabletPenButton(osu.Framework.Input.TabletPenButton)">
+  FromTabletPenButton(TabletPenButton)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static InputKey FromTabletPenButton(TabletPenButton penButton)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>penButton</code> <a class="xref" href="osu.Framework.Input.TabletPenButton.html">TabletPenButton</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_GetHashCode_" data-uid="osu.Framework.Input.Bindings.KeyCombination.GetHashCode*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_GetHashCode" data-uid="osu.Framework.Input.Bindings.KeyCombination.GetHashCode">
+  GetHashCode()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>A 32-bit signed integer that is the hash code for this instance.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_IsModifierKey_" data-uid="osu.Framework.Input.Bindings.KeyCombination.IsModifierKey*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_IsModifierKey_osu_Framework_Input_Bindings_InputKey_" data-uid="osu.Framework.Input.Bindings.KeyCombination.IsModifierKey(osu.Framework.Input.Bindings.InputKey)">
+  IsModifierKey(InputKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsModifierKey(InputKey key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_IsPressed_" data-uid="osu.Framework.Input.Bindings.KeyCombination.IsPressed*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_IsPressed_osu_Framework_Input_Bindings_KeyCombination_osu_Framework_Input_States_InputState_osu_Framework_Input_Bindings_KeyCombinationMatchingMode_" data-uid="osu.Framework.Input.Bindings.KeyCombination.IsPressed(osu.Framework.Input.Bindings.KeyCombination,osu.Framework.Input.States.InputState,osu.Framework.Input.Bindings.KeyCombinationMatchingMode)">
+  IsPressed(KeyCombination, InputState, KeyCombinationMatchingMode)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check whether the provided pressed keys are valid for this <a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html">KeyCombination</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPressed(KeyCombination pressedKeys, InputState inputState, KeyCombinationMatchingMode matchingMode)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pressedKeys</code> <a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html">KeyCombination</a></dt>
+    <dd><p>The potential pressed keys for this <a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html">KeyCombination</a>.</p>
+</dd>
+    <dt><code>inputState</code> <a class="xref" href="osu.Framework.Input.States.InputState.html">InputState</a></dt>
+    <dd><p>The current input state.</p>
+</dd>
+    <dt><code>matchingMode</code> <a class="xref" href="osu.Framework.Input.Bindings.KeyCombinationMatchingMode.html">KeyCombinationMatchingMode</a></dt>
+    <dd><p>The method for handling exact key matches.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether the pressedKeys keys are valid.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_ToString_" data-uid="osu.Framework.Input.Bindings.KeyCombination.ToString*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_ToString" data-uid="osu.Framework.Input.Bindings.KeyCombination.ToString">
+  ToString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get a string representation can be used with <a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html#osu_Framework_Input_Bindings_KeyCombination__ctor_System_String_">KeyCombination(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The string representation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_op_Implicit_" data-uid="osu.Framework.Input.Bindings.KeyCombination.op_Implicit*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_op_Implicit_System_String__osu_Framework_Input_Bindings_KeyCombination" data-uid="osu.Framework.Input.Bindings.KeyCombination.op_Implicit(System.String)~osu.Framework.Input.Bindings.KeyCombination">
+  implicit operator KeyCombination(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator KeyCombination(string stringRepresentation)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stringRepresentation</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html">KeyCombination</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_op_Implicit_" data-uid="osu.Framework.Input.Bindings.KeyCombination.op_Implicit*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_op_Implicit_osu_Framework_Input_Bindings_InputKey__osu_Framework_Input_Bindings_KeyCombination" data-uid="osu.Framework.Input.Bindings.KeyCombination.op_Implicit(osu.Framework.Input.Bindings.InputKey)~osu.Framework.Input.Bindings.KeyCombination">
+  implicit operator KeyCombination(InputKey)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator KeyCombination(InputKey singleKey)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>singleKey</code> <a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html">KeyCombination</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Input_Bindings_KeyCombination_op_Implicit_" data-uid="osu.Framework.Input.Bindings.KeyCombination.op_Implicit*"></a>
+
+  <h3 id="osu_Framework_Input_Bindings_KeyCombination_op_Implicit_osu_Framework_Input_Bindings_InputKey____osu_Framework_Input_Bindings_KeyCombination" data-uid="osu.Framework.Input.Bindings.KeyCombination.op_Implicit(osu.Framework.Input.Bindings.InputKey[])~osu.Framework.Input.Bindings.KeyCombination">
+  implicit operator KeyCombination(InputKey[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator KeyCombination(InputKey[] keys)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>keys</code> <a class="xref" href="osu.Framework.Input.Bindings.InputKey.html">InputKey</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Input.Bindings.KeyCombination.html">KeyCombination</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Bindings/KeyCombination.cs/#L20" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

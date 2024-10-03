@@ -1,0 +1,1428 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions
+  commentId: T:osu.Framework.Platform.SDL2.SDL2Extensions
+  id: SDL2Extensions
+  parent: osu.Framework.Platform.SDL2
+  children:
+  - osu.Framework.Platform.SDL2.SDL2Extensions.GetAndClearError
+  - osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName(SDL2.SDL.SDL_LogCategory)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName(SDL2.SDL.SDL_LogPriority)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.ReadableString(SDL2.SDL.SDL_DisplayMode)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.ToDisplayMode(SDL2.SDL.SDL_DisplayMode,System.Int32)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags(osu.Framework.Platform.GraphicsSurfaceType)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags(osu.Framework.Platform.WindowState)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickAxisSource(SDL2.SDL.SDL_GameControllerAxis)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickButton(SDL2.SDL.SDL_GameControllerButton)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.ToKey(SDL2.SDL.SDL_Keysym)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.ToSDLRect(osu.Framework.Graphics.Primitives.RectangleI)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.ToScancode(osu.Framework.Input.Bindings.InputKey)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.ToWindowState(SDL2.SDL.SDL_WindowFlags)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.TryGetStringFromBytePointer(System.Byte*,System.String@)
+  - osu.Framework.Platform.SDL2.SDL2Extensions.TryGetTouchName(SDL2.SDL.SDL_TouchFingerEvent,System.String@)
+  langs:
+  - csharp
+  - vb
+  name: SDL2Extensions
+  nameWithType: SDL2Extensions
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: SDL2Extensions
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 17
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  syntax:
+    content: public static class SDL2Extensions
+    content.vb: Public Module SDL2Extensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToKey(SDL2.SDL.SDL_Keysym)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.ToKey(SDL2.SDL.SDL_Keysym)
+  id: ToKey(SDL2.SDL.SDL_Keysym)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: ToKey(SDL_Keysym)
+  nameWithType: SDL2Extensions.ToKey(SDL.SDL_Keysym)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToKey(SDL2.SDL.SDL_Keysym)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToKey
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 19
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  syntax:
+    content: public static Key ToKey(this SDL.SDL_Keysym sdlKeysym)
+    parameters:
+    - id: sdlKeysym
+      type: SDL2.SDL.SDL_Keysym
+    return:
+      type: osuTK.Input.Key
+    content.vb: Public Shared Function ToKey(sdlKeysym As SDL.SDL_Keysym) As Key
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.ToKey*
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToScancode(osu.Framework.Input.Bindings.InputKey)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.ToScancode(osu.Framework.Input.Bindings.InputKey)
+  id: ToScancode(osu.Framework.Input.Bindings.InputKey)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: ToScancode(InputKey)
+  nameWithType: SDL2Extensions.ToScancode(InputKey)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToScancode(osu.Framework.Input.Bindings.InputKey)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToScancode
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 464
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  summary: Returns the corresponding <xref href="SDL2.SDL.SDL_Scancode" data-throw-if-not-resolved="false"></xref> for a given <xref href="osu.Framework.Input.Bindings.InputKey" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static SDL.SDL_Scancode ToScancode(this InputKey inputKey)
+    parameters:
+    - id: inputKey
+      type: osu.Framework.Input.Bindings.InputKey
+      description: Should be a keyboard key.
+    return:
+      type: SDL2.SDL.SDL_Scancode
+      description: >-
+        The corresponding <xref href="SDL2.SDL.SDL_Scancode" data-throw-if-not-resolved="false"></xref> if the <xref href="osu.Framework.Input.Bindings.InputKey" data-throw-if-not-resolved="false"></xref> is valid.
+
+        <xref href="SDL2.SDL.SDL_Scancode.SDL_SCANCODE_UNKNOWN" data-throw-if-not-resolved="false"></xref> otherwise.
+    content.vb: Public Shared Function ToScancode(inputKey As InputKey) As SDL.SDL_Scancode
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.ToScancode*
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToWindowState(SDL2.SDL.SDL_WindowFlags)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.ToWindowState(SDL2.SDL.SDL_WindowFlags)
+  id: ToWindowState(SDL2.SDL.SDL_WindowFlags)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: ToWindowState(SDL_WindowFlags)
+  nameWithType: SDL2Extensions.ToWindowState(SDL.SDL_WindowFlags)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToWindowState(SDL2.SDL.SDL_WindowFlags)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToWindowState
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 864
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  syntax:
+    content: public static WindowState ToWindowState(this SDL.SDL_WindowFlags windowFlags)
+    parameters:
+    - id: windowFlags
+      type: SDL2.SDL.SDL_WindowFlags
+    return:
+      type: osu.Framework.Platform.WindowState
+    content.vb: Public Shared Function ToWindowState(windowFlags As SDL.SDL_WindowFlags) As WindowState
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.ToWindowState*
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags(osu.Framework.Platform.WindowState)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags(osu.Framework.Platform.WindowState)
+  id: ToFlags(osu.Framework.Platform.WindowState)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: ToFlags(WindowState)
+  nameWithType: SDL2Extensions.ToFlags(WindowState)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags(osu.Framework.Platform.WindowState)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToFlags
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 882
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  syntax:
+    content: public static SDL.SDL_WindowFlags ToFlags(this WindowState state)
+    parameters:
+    - id: state
+      type: osu.Framework.Platform.WindowState
+    return:
+      type: SDL2.SDL.SDL_WindowFlags
+    content.vb: Public Shared Function ToFlags(state As WindowState) As SDL.SDL_WindowFlags
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags*
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags(osu.Framework.Platform.GraphicsSurfaceType)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags(osu.Framework.Platform.GraphicsSurfaceType)
+  id: ToFlags(osu.Framework.Platform.GraphicsSurfaceType)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: ToFlags(GraphicsSurfaceType)
+  nameWithType: SDL2Extensions.ToFlags(GraphicsSurfaceType)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags(osu.Framework.Platform.GraphicsSurfaceType)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToFlags
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 905
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  syntax:
+    content: public static SDL.SDL_WindowFlags ToFlags(this GraphicsSurfaceType surfaceType)
+    parameters:
+    - id: surfaceType
+      type: osu.Framework.Platform.GraphicsSurfaceType
+    return:
+      type: SDL2.SDL.SDL_WindowFlags
+    content.vb: Public Shared Function ToFlags(surfaceType As GraphicsSurfaceType) As SDL.SDL_WindowFlags
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags*
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickAxisSource(SDL2.SDL.SDL_GameControllerAxis)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickAxisSource(SDL2.SDL.SDL_GameControllerAxis)
+  id: ToJoystickAxisSource(SDL2.SDL.SDL_GameControllerAxis)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: ToJoystickAxisSource(SDL_GameControllerAxis)
+  nameWithType: SDL2Extensions.ToJoystickAxisSource(SDL.SDL_GameControllerAxis)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickAxisSource(SDL2.SDL.SDL_GameControllerAxis)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToJoystickAxisSource
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 923
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  syntax:
+    content: public static JoystickAxisSource ToJoystickAxisSource(this SDL.SDL_GameControllerAxis axis)
+    parameters:
+    - id: axis
+      type: SDL2.SDL.SDL_GameControllerAxis
+    return:
+      type: osu.Framework.Input.JoystickAxisSource
+    content.vb: Public Shared Function ToJoystickAxisSource(axis As SDL.SDL_GameControllerAxis) As JoystickAxisSource
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickAxisSource*
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickButton(SDL2.SDL.SDL_GameControllerButton)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickButton(SDL2.SDL.SDL_GameControllerButton)
+  id: ToJoystickButton(SDL2.SDL.SDL_GameControllerButton)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: ToJoystickButton(SDL_GameControllerButton)
+  nameWithType: SDL2Extensions.ToJoystickButton(SDL.SDL_GameControllerButton)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickButton(SDL2.SDL.SDL_GameControllerButton)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToJoystickButton
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 951
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  syntax:
+    content: public static JoystickButton ToJoystickButton(this SDL.SDL_GameControllerButton button)
+    parameters:
+    - id: button
+      type: SDL2.SDL.SDL_GameControllerButton
+    return:
+      type: osu.Framework.Input.JoystickButton
+    content.vb: Public Shared Function ToJoystickButton(button As SDL.SDL_GameControllerButton) As JoystickButton
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickButton*
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToSDLRect(osu.Framework.Graphics.Primitives.RectangleI)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.ToSDLRect(osu.Framework.Graphics.Primitives.RectangleI)
+  id: ToSDLRect(osu.Framework.Graphics.Primitives.RectangleI)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: ToSDLRect(RectangleI)
+  nameWithType: SDL2Extensions.ToSDLRect(RectangleI)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToSDLRect(osu.Framework.Graphics.Primitives.RectangleI)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToSDLRect
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 1006
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  syntax:
+    content: public static SDL.SDL_Rect ToSDLRect(this RectangleI rectangle)
+    parameters:
+    - id: rectangle
+      type: osu.Framework.Graphics.Primitives.RectangleI
+    return:
+      type: SDL2.SDL.SDL_Rect
+    content.vb: Public Shared Function ToSDLRect(rectangle As RectangleI) As SDL.SDL_Rect
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.ToSDLRect*
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.TryGetStringFromBytePointer(System.Byte*,System.String@)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.TryGetStringFromBytePointer(System.Byte*,System.String@)
+  id: TryGetStringFromBytePointer(System.Byte*,System.String@)
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: TryGetStringFromBytePointer(byte*, out string)
+  nameWithType: SDL2Extensions.TryGetStringFromBytePointer(byte*, out string)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.TryGetStringFromBytePointer(byte*, out string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TryGetStringFromBytePointer
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 1022
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  summary: Converts a UTF-8 byte pointer to a string.
+  remarks: Most commonly used with SDL text events.
+  example: []
+  syntax:
+    content: public static bool TryGetStringFromBytePointer(byte* bytePointer, out string str)
+    parameters:
+    - id: bytePointer
+      type: System.Byte*
+      description: Pointer to UTF-8 encoded byte array.
+    - id: str
+      type: System.String
+      description: The resulting string
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the <code class="paramref">bytePointer</code> was successfully converted to a string.
+    content.vb: Public Shared Function TryGetStringFromBytePointer(bytePointer As Byte*, str As String) As Boolean
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.TryGetStringFromBytePointer*
+  nameWithType.vb: SDL2Extensions.TryGetStringFromBytePointer(Byte*, String)
+  fullName.vb: osu.Framework.Platform.SDL2.SDL2Extensions.TryGetStringFromBytePointer(Byte*, String)
+  name.vb: TryGetStringFromBytePointer(Byte*, String)
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToDisplayMode(SDL2.SDL.SDL_DisplayMode,System.Int32)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.ToDisplayMode(SDL2.SDL.SDL_DisplayMode,System.Int32)
+  id: ToDisplayMode(SDL2.SDL.SDL_DisplayMode,System.Int32)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: ToDisplayMode(SDL_DisplayMode, int)
+  nameWithType: SDL2Extensions.ToDisplayMode(SDL.SDL_DisplayMode, int)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToDisplayMode(SDL2.SDL.SDL_DisplayMode, int)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToDisplayMode
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 1036
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  syntax:
+    content: public static DisplayMode ToDisplayMode(this SDL.SDL_DisplayMode mode, int displayIndex)
+    parameters:
+    - id: mode
+      type: SDL2.SDL.SDL_DisplayMode
+    - id: displayIndex
+      type: System.Int32
+    return:
+      type: osu.Framework.Platform.DisplayMode
+    content.vb: Public Shared Function ToDisplayMode(mode As SDL.SDL_DisplayMode, displayIndex As Integer) As DisplayMode
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.ToDisplayMode*
+  nameWithType.vb: SDL2Extensions.ToDisplayMode(SDL.SDL_DisplayMode, Integer)
+  fullName.vb: osu.Framework.Platform.SDL2.SDL2Extensions.ToDisplayMode(SDL2.SDL.SDL_DisplayMode, Integer)
+  name.vb: ToDisplayMode(SDL_DisplayMode, Integer)
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName(SDL2.SDL.SDL_LogCategory)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName(SDL2.SDL.SDL_LogCategory)
+  id: ReadableName(SDL2.SDL.SDL_LogCategory)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: ReadableName(SDL_LogCategory)
+  nameWithType: SDL2Extensions.ReadableName(SDL.SDL_LogCategory)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName(SDL2.SDL.SDL_LogCategory)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ReadableName
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 1042
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  syntax:
+    content: public static string ReadableName(this SDL.SDL_LogCategory category)
+    parameters:
+    - id: category
+      type: SDL2.SDL.SDL_LogCategory
+    return:
+      type: System.String
+    content.vb: Public Shared Function ReadableName(category As SDL.SDL_LogCategory) As String
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName*
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName(SDL2.SDL.SDL_LogPriority)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName(SDL2.SDL.SDL_LogPriority)
+  id: ReadableName(SDL2.SDL.SDL_LogPriority)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: ReadableName(SDL_LogPriority)
+  nameWithType: SDL2Extensions.ReadableName(SDL.SDL_LogPriority)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName(SDL2.SDL.SDL_LogPriority)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ReadableName
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 1078
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  syntax:
+    content: public static string ReadableName(this SDL.SDL_LogPriority priority)
+    parameters:
+    - id: priority
+      type: SDL2.SDL.SDL_LogPriority
+    return:
+      type: System.String
+    content.vb: Public Shared Function ReadableName(priority As SDL.SDL_LogPriority) As String
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName*
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableString(SDL2.SDL.SDL_DisplayMode)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.ReadableString(SDL2.SDL.SDL_DisplayMode)
+  id: ReadableString(SDL2.SDL.SDL_DisplayMode)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: ReadableString(SDL_DisplayMode)
+  nameWithType: SDL2Extensions.ReadableString(SDL.SDL_DisplayMode)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableString(SDL2.SDL.SDL_DisplayMode)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ReadableString
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 1111
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  summary: Gets the readable string for this <xref href="SDL2.SDL.SDL_DisplayMode" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static string ReadableString(this SDL.SDL_DisplayMode mode)
+    parameters:
+    - id: mode
+      type: SDL2.SDL.SDL_DisplayMode
+    return:
+      type: System.String
+      description: <code>string</code> in the format of <code>1920x1080@60</code>.
+    content.vb: Public Shared Function ReadableString(mode As SDL.SDL_DisplayMode) As String
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableString*
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.GetAndClearError
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.GetAndClearError
+  id: GetAndClearError
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: GetAndClearError()
+  nameWithType: SDL2Extensions.GetAndClearError()
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.GetAndClearError()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetAndClearError
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 1116
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  summary: Gets the SDL error, and then clears it.
+  example: []
+  syntax:
+    content: public static string GetAndClearError()
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetAndClearError() As String
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.GetAndClearError*
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.TryGetTouchName(SDL2.SDL.SDL_TouchFingerEvent,System.String@)
+  commentId: M:osu.Framework.Platform.SDL2.SDL2Extensions.TryGetTouchName(SDL2.SDL.SDL_TouchFingerEvent,System.String@)
+  id: TryGetTouchName(SDL2.SDL.SDL_TouchFingerEvent,System.String@)
+  isExtensionMethod: true
+  parent: osu.Framework.Platform.SDL2.SDL2Extensions
+  langs:
+  - csharp
+  - vb
+  name: TryGetTouchName(SDL_TouchFingerEvent, out string)
+  nameWithType: SDL2Extensions.TryGetTouchName(SDL.SDL_TouchFingerEvent, out string)
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.TryGetTouchName(SDL2.SDL.SDL_TouchFingerEvent, out string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TryGetTouchName
+    path: osu.Framework/Platform/SDL2/SDL2Extensions.cs
+    startLine: 1148
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform.SDL2
+  summary: Gets the <code class="paramref">name</code> of the touch device for this <xref href="SDL2.SDL.SDL_TouchFingerEvent" data-throw-if-not-resolved="false"></xref>.
+  remarks: On Windows, this will return <code>"touch"</code> for touchscreen events or <code>"pen"</code> for pen/tablet events.
+  example: []
+  syntax:
+    content: public static bool TryGetTouchName(this SDL.SDL_TouchFingerEvent e, out string name)
+    parameters:
+    - id: e
+      type: SDL2.SDL.SDL_TouchFingerEvent
+    - id: name
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function TryGetTouchName(e As SDL.SDL_TouchFingerEvent, name As String) As Boolean
+  overload: osu.Framework.Platform.SDL2.SDL2Extensions.TryGetTouchName*
+  nameWithType.vb: SDL2Extensions.TryGetTouchName(SDL.SDL_TouchFingerEvent, String)
+  fullName.vb: osu.Framework.Platform.SDL2.SDL2Extensions.TryGetTouchName(SDL2.SDL.SDL_TouchFingerEvent, String)
+  name.vb: TryGetTouchName(SDL_TouchFingerEvent, String)
+references:
+- uid: osu.Framework.Platform.SDL2
+  commentId: N:osu.Framework.Platform.SDL2
+  href: osu.html
+  name: osu.Framework.Platform.SDL2
+  nameWithType: osu.Framework.Platform.SDL2
+  fullName: osu.Framework.Platform.SDL2
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+  - name: .
+  - uid: osu.Framework.Platform.SDL2
+    name: SDL2
+    href: osu.Framework.Platform.SDL2.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+  - name: .
+  - uid: osu.Framework.Platform.SDL2
+    name: SDL2
+    href: osu.Framework.Platform.SDL2.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToKey*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.ToKey
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_ToKey_SDL2_SDL_SDL_Keysym_
+  name: ToKey
+  nameWithType: SDL2Extensions.ToKey
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToKey
+- uid: SDL2.SDL.SDL_Keysym
+  commentId: T:SDL2.SDL.SDL_Keysym
+  parent: SDL2
+  isExternal: true
+  name: SDL.SDL_Keysym
+  nameWithType: SDL.SDL_Keysym
+  fullName: SDL2.SDL.SDL_Keysym
+  spec.csharp:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_Keysym
+    name: SDL_Keysym
+    isExternal: true
+  spec.vb:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_Keysym
+    name: SDL_Keysym
+    isExternal: true
+- uid: osuTK.Input.Key
+  commentId: T:osuTK.Input.Key
+  parent: osuTK.Input
+  isExternal: true
+  name: Key
+  nameWithType: Key
+  fullName: osuTK.Input.Key
+- uid: SDL2
+  commentId: N:SDL2
+  isExternal: true
+  name: SDL2
+  nameWithType: SDL2
+  fullName: SDL2
+- uid: osuTK.Input
+  commentId: N:osuTK.Input
+  isExternal: true
+  name: osuTK.Input
+  nameWithType: osuTK.Input
+  fullName: osuTK.Input
+  spec.csharp:
+  - uid: osuTK
+    name: osuTK
+    isExternal: true
+  - name: .
+  - uid: osuTK.Input
+    name: Input
+    isExternal: true
+  spec.vb:
+  - uid: osuTK
+    name: osuTK
+    isExternal: true
+  - name: .
+  - uid: osuTK.Input
+    name: Input
+    isExternal: true
+- uid: SDL2.SDL.SDL_Scancode
+  commentId: T:SDL2.SDL.SDL_Scancode
+  parent: SDL2
+  isExternal: true
+  name: SDL.SDL_Scancode
+  nameWithType: SDL.SDL_Scancode
+  fullName: SDL2.SDL.SDL_Scancode
+  spec.csharp:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_Scancode
+    name: SDL_Scancode
+    isExternal: true
+  spec.vb:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_Scancode
+    name: SDL_Scancode
+    isExternal: true
+- uid: osu.Framework.Input.Bindings.InputKey
+  commentId: T:osu.Framework.Input.Bindings.InputKey
+  parent: osu.Framework.Input.Bindings
+  href: osu.Framework.Input.Bindings.InputKey.html
+  name: InputKey
+  nameWithType: InputKey
+  fullName: osu.Framework.Input.Bindings.InputKey
+- uid: SDL2.SDL.SDL_Scancode.SDL_SCANCODE_UNKNOWN
+  commentId: F:SDL2.SDL.SDL_Scancode.SDL_SCANCODE_UNKNOWN
+  isExternal: true
+  name: SDL_SCANCODE_UNKNOWN
+  nameWithType: SDL.SDL_Scancode.SDL_SCANCODE_UNKNOWN
+  fullName: SDL2.SDL.SDL_Scancode.SDL_SCANCODE_UNKNOWN
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToScancode*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.ToScancode
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_ToScancode_osu_Framework_Input_Bindings_InputKey_
+  name: ToScancode
+  nameWithType: SDL2Extensions.ToScancode
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToScancode
+- uid: osu.Framework.Input.Bindings
+  commentId: N:osu.Framework.Input.Bindings
+  href: osu.html
+  name: osu.Framework.Input.Bindings
+  nameWithType: osu.Framework.Input.Bindings
+  fullName: osu.Framework.Input.Bindings
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  - name: .
+  - uid: osu.Framework.Input.Bindings
+    name: Bindings
+    href: osu.Framework.Input.Bindings.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  - name: .
+  - uid: osu.Framework.Input.Bindings
+    name: Bindings
+    href: osu.Framework.Input.Bindings.html
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToWindowState*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.ToWindowState
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_ToWindowState_SDL2_SDL_SDL_WindowFlags_
+  name: ToWindowState
+  nameWithType: SDL2Extensions.ToWindowState
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToWindowState
+- uid: SDL2.SDL.SDL_WindowFlags
+  commentId: T:SDL2.SDL.SDL_WindowFlags
+  parent: SDL2
+  isExternal: true
+  name: SDL.SDL_WindowFlags
+  nameWithType: SDL.SDL_WindowFlags
+  fullName: SDL2.SDL.SDL_WindowFlags
+  spec.csharp:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_WindowFlags
+    name: SDL_WindowFlags
+    isExternal: true
+  spec.vb:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_WindowFlags
+    name: SDL_WindowFlags
+    isExternal: true
+- uid: osu.Framework.Platform.WindowState
+  commentId: T:osu.Framework.Platform.WindowState
+  parent: osu.Framework.Platform
+  href: osu.Framework.Platform.WindowState.html
+  name: WindowState
+  nameWithType: WindowState
+  fullName: osu.Framework.Platform.WindowState
+- uid: osu.Framework.Platform
+  commentId: N:osu.Framework.Platform
+  href: osu.html
+  name: osu.Framework.Platform
+  nameWithType: osu.Framework.Platform
+  fullName: osu.Framework.Platform
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_ToFlags_osu_Framework_Platform_WindowState_
+  name: ToFlags
+  nameWithType: SDL2Extensions.ToFlags
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToFlags
+- uid: osu.Framework.Platform.GraphicsSurfaceType
+  commentId: T:osu.Framework.Platform.GraphicsSurfaceType
+  parent: osu.Framework.Platform
+  href: osu.Framework.Platform.GraphicsSurfaceType.html
+  name: GraphicsSurfaceType
+  nameWithType: GraphicsSurfaceType
+  fullName: osu.Framework.Platform.GraphicsSurfaceType
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickAxisSource*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickAxisSource
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_ToJoystickAxisSource_SDL2_SDL_SDL_GameControllerAxis_
+  name: ToJoystickAxisSource
+  nameWithType: SDL2Extensions.ToJoystickAxisSource
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickAxisSource
+- uid: SDL2.SDL.SDL_GameControllerAxis
+  commentId: T:SDL2.SDL.SDL_GameControllerAxis
+  parent: SDL2
+  isExternal: true
+  name: SDL.SDL_GameControllerAxis
+  nameWithType: SDL.SDL_GameControllerAxis
+  fullName: SDL2.SDL.SDL_GameControllerAxis
+  spec.csharp:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_GameControllerAxis
+    name: SDL_GameControllerAxis
+    isExternal: true
+  spec.vb:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_GameControllerAxis
+    name: SDL_GameControllerAxis
+    isExternal: true
+- uid: osu.Framework.Input.JoystickAxisSource
+  commentId: T:osu.Framework.Input.JoystickAxisSource
+  parent: osu.Framework.Input
+  href: osu.Framework.Input.JoystickAxisSource.html
+  name: JoystickAxisSource
+  nameWithType: JoystickAxisSource
+  fullName: osu.Framework.Input.JoystickAxisSource
+- uid: osu.Framework.Input
+  commentId: N:osu.Framework.Input
+  href: osu.html
+  name: osu.Framework.Input
+  nameWithType: osu.Framework.Input
+  fullName: osu.Framework.Input
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickButton*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickButton
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_ToJoystickButton_SDL2_SDL_SDL_GameControllerButton_
+  name: ToJoystickButton
+  nameWithType: SDL2Extensions.ToJoystickButton
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToJoystickButton
+- uid: SDL2.SDL.SDL_GameControllerButton
+  commentId: T:SDL2.SDL.SDL_GameControllerButton
+  parent: SDL2
+  isExternal: true
+  name: SDL.SDL_GameControllerButton
+  nameWithType: SDL.SDL_GameControllerButton
+  fullName: SDL2.SDL.SDL_GameControllerButton
+  spec.csharp:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_GameControllerButton
+    name: SDL_GameControllerButton
+    isExternal: true
+  spec.vb:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_GameControllerButton
+    name: SDL_GameControllerButton
+    isExternal: true
+- uid: osu.Framework.Input.JoystickButton
+  commentId: T:osu.Framework.Input.JoystickButton
+  parent: osu.Framework.Input
+  href: osu.Framework.Input.JoystickButton.html
+  name: JoystickButton
+  nameWithType: JoystickButton
+  fullName: osu.Framework.Input.JoystickButton
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToSDLRect*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.ToSDLRect
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_ToSDLRect_osu_Framework_Graphics_Primitives_RectangleI_
+  name: ToSDLRect
+  nameWithType: SDL2Extensions.ToSDLRect
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToSDLRect
+- uid: osu.Framework.Graphics.Primitives.RectangleI
+  commentId: T:osu.Framework.Graphics.Primitives.RectangleI
+  parent: osu.Framework.Graphics.Primitives
+  href: osu.Framework.Graphics.Primitives.RectangleI.html
+  name: RectangleI
+  nameWithType: RectangleI
+  fullName: osu.Framework.Graphics.Primitives.RectangleI
+- uid: SDL2.SDL.SDL_Rect
+  commentId: T:SDL2.SDL.SDL_Rect
+  parent: SDL2
+  isExternal: true
+  name: SDL.SDL_Rect
+  nameWithType: SDL.SDL_Rect
+  fullName: SDL2.SDL.SDL_Rect
+  spec.csharp:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_Rect
+    name: SDL_Rect
+    isExternal: true
+  spec.vb:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_Rect
+    name: SDL_Rect
+    isExternal: true
+- uid: osu.Framework.Graphics.Primitives
+  commentId: N:osu.Framework.Graphics.Primitives
+  href: osu.html
+  name: osu.Framework.Graphics.Primitives
+  nameWithType: osu.Framework.Graphics.Primitives
+  fullName: osu.Framework.Graphics.Primitives
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Primitives
+    name: Primitives
+    href: osu.Framework.Graphics.Primitives.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Primitives
+    name: Primitives
+    href: osu.Framework.Graphics.Primitives.html
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.TryGetStringFromBytePointer*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.TryGetStringFromBytePointer
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_TryGetStringFromBytePointer_System_Byte__System_String__
+  name: TryGetStringFromBytePointer
+  nameWithType: SDL2Extensions.TryGetStringFromBytePointer
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.TryGetStringFromBytePointer
+- uid: System.Byte*
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte*
+  nameWithType: byte*
+  fullName: byte*
+  nameWithType.vb: Byte*
+  fullName.vb: Byte*
+  name.vb: Byte*
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '*'
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ToDisplayMode*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.ToDisplayMode
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_ToDisplayMode_SDL2_SDL_SDL_DisplayMode_System_Int32_
+  name: ToDisplayMode
+  nameWithType: SDL2Extensions.ToDisplayMode
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ToDisplayMode
+- uid: SDL2.SDL.SDL_DisplayMode
+  commentId: T:SDL2.SDL.SDL_DisplayMode
+  parent: SDL2
+  isExternal: true
+  name: SDL.SDL_DisplayMode
+  nameWithType: SDL.SDL_DisplayMode
+  fullName: SDL2.SDL.SDL_DisplayMode
+  spec.csharp:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_DisplayMode
+    name: SDL_DisplayMode
+    isExternal: true
+  spec.vb:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_DisplayMode
+    name: SDL_DisplayMode
+    isExternal: true
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: osu.Framework.Platform.DisplayMode
+  commentId: T:osu.Framework.Platform.DisplayMode
+  parent: osu.Framework.Platform
+  href: osu.Framework.Platform.DisplayMode.html
+  name: DisplayMode
+  nameWithType: DisplayMode
+  fullName: osu.Framework.Platform.DisplayMode
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_ReadableName_SDL2_SDL_SDL_LogCategory_
+  name: ReadableName
+  nameWithType: SDL2Extensions.ReadableName
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableName
+- uid: SDL2.SDL.SDL_LogCategory
+  commentId: T:SDL2.SDL.SDL_LogCategory
+  parent: SDL2
+  isExternal: true
+  name: SDL.SDL_LogCategory
+  nameWithType: SDL.SDL_LogCategory
+  fullName: SDL2.SDL.SDL_LogCategory
+  spec.csharp:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_LogCategory
+    name: SDL_LogCategory
+    isExternal: true
+  spec.vb:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_LogCategory
+    name: SDL_LogCategory
+    isExternal: true
+- uid: SDL2.SDL.SDL_LogPriority
+  commentId: T:SDL2.SDL.SDL_LogPriority
+  parent: SDL2
+  isExternal: true
+  name: SDL.SDL_LogPriority
+  nameWithType: SDL.SDL_LogPriority
+  fullName: SDL2.SDL.SDL_LogPriority
+  spec.csharp:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_LogPriority
+    name: SDL_LogPriority
+    isExternal: true
+  spec.vb:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_LogPriority
+    name: SDL_LogPriority
+    isExternal: true
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableString*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.ReadableString
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_ReadableString_SDL2_SDL_SDL_DisplayMode_
+  name: ReadableString
+  nameWithType: SDL2Extensions.ReadableString
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.ReadableString
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.GetAndClearError*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.GetAndClearError
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_GetAndClearError
+  name: GetAndClearError
+  nameWithType: SDL2Extensions.GetAndClearError
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.GetAndClearError
+- uid: SDL2.SDL.SDL_TouchFingerEvent
+  commentId: T:SDL2.SDL.SDL_TouchFingerEvent
+  parent: SDL2
+  isExternal: true
+  name: SDL.SDL_TouchFingerEvent
+  nameWithType: SDL.SDL_TouchFingerEvent
+  fullName: SDL2.SDL.SDL_TouchFingerEvent
+  spec.csharp:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_TouchFingerEvent
+    name: SDL_TouchFingerEvent
+    isExternal: true
+  spec.vb:
+  - uid: SDL2.SDL
+    name: SDL
+    isExternal: true
+  - name: .
+  - uid: SDL2.SDL.SDL_TouchFingerEvent
+    name: SDL_TouchFingerEvent
+    isExternal: true
+- uid: osu.Framework.Platform.SDL2.SDL2Extensions.TryGetTouchName*
+  commentId: Overload:osu.Framework.Platform.SDL2.SDL2Extensions.TryGetTouchName
+  href: osu.Framework.Platform.SDL2.SDL2Extensions.html#osu_Framework_Platform_SDL2_SDL2Extensions_TryGetTouchName_SDL2_SDL_SDL_TouchFingerEvent_System_String__
+  name: TryGetTouchName
+  nameWithType: SDL2Extensions.TryGetTouchName
+  fullName: osu.Framework.Platform.SDL2.SDL2Extensions.TryGetTouchName

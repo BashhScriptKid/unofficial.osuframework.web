@@ -1,0 +1,1102 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ConfigManager&lt;TLookup&gt; | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ConfigManager&lt;TLookup&gt; | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Configuration_ConfigManager_1.md&amp;value=---%0Auid%3A%20osu.Framework.Configuration.ConfigManager%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Configuration.ConfigManager`1">
+
+
+
+  <h1 id="osu_Framework_Configuration_ConfigManager_1" data-uid="osu.Framework.Configuration.ConfigManager`1" class="text-break">
+Class ConfigManager&lt;TLookup&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Configuration.html">Configuration</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ConfigManager&lt;TLookup&gt; : ConfigManager, IDisposable, ITrackableConfigManager, IConfigManager where TLookup : struct, Enum</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TLookup</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="osu.Framework.Configuration.ConfigManager.html">ConfigManager</a></div>
+      <div><span class="xref">ConfigManager&lt;TLookup&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="osu.Framework.Configuration.Tracking.ITrackableConfigManager.html">ITrackableConfigManager</a></div>
+      <div><a class="xref" href="osu.Framework.Configuration.IConfigManager.html">IConfigManager</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.Configuration.IniConfigManager-1.html">IniConfigManager&lt;TLookup&gt;</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="osu.Framework.Configuration.ConfigManager.html#osu_Framework_Configuration_ConfigManager_Load">ConfigManager.Load()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Configuration.ConfigManager.html#osu_Framework_Configuration_ConfigManager_QueueBackgroundSave">ConfigManager.QueueBackgroundSave()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Configuration.ConfigManager.html#osu_Framework_Configuration_ConfigManager_Save">ConfigManager.Save()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Configuration.ConfigManager.html#osu_Framework_Configuration_ConfigManager_PerformLoad">ConfigManager.PerformLoad()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Configuration.ConfigManager.html#osu_Framework_Configuration_ConfigManager_PerformSave">ConfigManager.PerformSave()</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Configuration.ConfigManager.html#osu_Framework_Configuration_ConfigManager_Dispose_System_Boolean_">ConfigManager.Dispose(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="osu.Framework.Configuration.ConfigManager.html#osu_Framework_Configuration_ConfigManager_Dispose">ConfigManager.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1__ctor_" data-uid="osu.Framework.Configuration.ConfigManager`1.#ctor*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1__ctor_System_Collections_Generic_IDictionary__0_System_Object__" data-uid="osu.Framework.Configuration.ConfigManager`1.#ctor(System.Collections.Generic.IDictionary{`0,System.Object})">
+  ConfigManager(IDictionary&lt;TLookup, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initialise a new <a class="xref" href="osu.Framework.Configuration.ConfigManager-1.html">ConfigManager&lt;TLookup&gt;</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ConfigManager(IDictionary&lt;TLookup, object&gt; defaultOverrides = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>defaultOverrides</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TLookup, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>Dictionary of overrides which should take precedence over defaults specified by the <a class="xref" href="osu.Framework.Configuration.ConfigManager-1.html">ConfigManager&lt;TLookup&gt;</a> implementation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_ConfigStore" data-uid="osu.Framework.Configuration.ConfigManager`1.ConfigStore">
+  ConfigStore
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly Dictionary&lt;TLookup, IBindable&gt; ConfigStore</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;TLookup, <a class="xref" href="osu.Framework.Bindables.IBindable.html">IBindable</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_AddMissingEntries_" data-uid="osu.Framework.Configuration.ConfigManager`1.AddMissingEntries*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_AddMissingEntries" data-uid="osu.Framework.Configuration.ConfigManager`1.AddMissingEntries">
+  AddMissingEntries
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether user specified configuration elements should be set even though a default was never specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool AddMissingEntries { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_AddBindable_" data-uid="osu.Framework.Configuration.ConfigManager`1.AddBindable*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_AddBindable__1__0_osu_Framework_Bindables_Bindable___0__" data-uid="osu.Framework.Configuration.ConfigManager`1.AddBindable``1(`0,osu.Framework.Bindables.Bindable{``0})">
+  AddBindable&lt;TBindable&gt;(TLookup, Bindable&lt;TBindable&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void AddBindable&lt;TBindable&gt;(TLookup lookup, Bindable&lt;TBindable&gt; bindable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd></dd>
+    <dt><code>bindable</code> <a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable</a>&lt;TBindable&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TBindable</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_BindWith_" data-uid="osu.Framework.Configuration.ConfigManager`1.BindWith*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_BindWith__1__0_osu_Framework_Bindables_Bindable___0__" data-uid="osu.Framework.Configuration.ConfigManager`1.BindWith``1(`0,osu.Framework.Bindables.Bindable{``0})">
+  BindWith&lt;TValue&gt;(TLookup, Bindable&lt;TValue&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Binds a local bindable with a configuration-backed bindable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BindWith&lt;TValue&gt;(TLookup lookup, Bindable&lt;TValue&gt; bindable)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd></dd>
+    <dt><code>bindable</code> <a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable</a>&lt;TValue&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_CheckLookupContainsPrivateInformation_" data-uid="osu.Framework.Configuration.ConfigManager`1.CheckLookupContainsPrivateInformation*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_CheckLookupContainsPrivateInformation__0_" data-uid="osu.Framework.Configuration.ConfigManager`1.CheckLookupContainsPrivateInformation(`0)">
+  CheckLookupContainsPrivateInformation(TLookup)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check whether a specific lookup may contain private user information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool CheckLookupContainsPrivateInformation(TLookup lookup)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd><p>The lookup type to check.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Whether private information is present.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_CreateTrackedSettings_" data-uid="osu.Framework.Configuration.ConfigManager`1.CreateTrackedSettings*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_CreateTrackedSettings" data-uid="osu.Framework.Configuration.ConfigManager`1.CreateTrackedSettings">
+  CreateTrackedSettings()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves all the settings of this <a class="xref" href="osu.Framework.Configuration.ConfigManager-1.html">ConfigManager&lt;TLookup&gt;</a> that are to be tracked for changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TrackedSettings CreateTrackedSettings()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Configuration.Tracking.TrackedSettings.html">TrackedSettings</a></dt>
+    <dd><p>A list of <a class="xref" href="osu.Framework.Configuration.Tracking.ITrackedSetting.html">ITrackedSetting</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_GetBindable_" data-uid="osu.Framework.Configuration.ConfigManager`1.GetBindable*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_GetBindable__1__0_" data-uid="osu.Framework.Configuration.ConfigManager`1.GetBindable``1(`0)">
+  GetBindable&lt;TValue&gt;(TLookup)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve a bindable. This will be a new instance weakly bound to the configuration backing.
+If you are further binding to events of a bindable retrieved using this method, ensure to hold
+a local reference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Bindable&lt;TValue&gt; GetBindable&lt;TValue&gt;(TLookup lookup)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable</a>&lt;TValue&gt;</dt>
+    <dd><p>A weakly bound copy of the specified bindable.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_GetCurrentConfigurationForLogging_" data-uid="osu.Framework.Configuration.ConfigManager`1.GetCurrentConfigurationForLogging*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_GetCurrentConfigurationForLogging" data-uid="osu.Framework.Configuration.ConfigManager`1.GetCurrentConfigurationForLogging">
+  GetCurrentConfigurationForLogging()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the full configuration for logging purposes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IDictionary&lt;TLookup, string&gt; GetCurrentConfigurationForLogging()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;TLookup, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Configuration_ConfigManager_1_GetCurrentConfigurationForLogging_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Excludes any potentially sensitive information via <a class="xref" href="osu.Framework.Configuration.ConfigManager-1.html#osu_Framework_Configuration_ConfigManager_1_CheckLookupContainsPrivateInformation__0_">CheckLookupContainsPrivateInformation(TLookup)</a>.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_GetOriginalBindable_" data-uid="osu.Framework.Configuration.ConfigManager`1.GetOriginalBindable*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_GetOriginalBindable__1__0_" data-uid="osu.Framework.Configuration.ConfigManager`1.GetOriginalBindable``1(`0)">
+  GetOriginalBindable&lt;TValue&gt;(TLookup)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Bindable&lt;TValue&gt; GetOriginalBindable&lt;TValue&gt;(TLookup lookup)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable</a>&lt;TValue&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_Get_" data-uid="osu.Framework.Configuration.ConfigManager`1.Get*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_Get__1__0_" data-uid="osu.Framework.Configuration.ConfigManager`1.Get``1(`0)">
+  Get&lt;TValue&gt;(TLookup)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TValue Get&lt;TValue&gt;(TLookup lookup)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TValue</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_InitialiseDefaults_" data-uid="osu.Framework.Configuration.ConfigManager`1.InitialiseDefaults*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_InitialiseDefaults" data-uid="osu.Framework.Configuration.ConfigManager`1.InitialiseDefaults">
+  InitialiseDefaults()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set all required default values via Set() calls.
+Note that defaults set here may be overridden by <a class="xref" href="osu.Framework.Configuration.ConfigManager-1.html#osu_Framework_Configuration_ConfigManager_1_defaultOverrides">defaultOverrides</a> provided in the constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void InitialiseDefaults()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_LoadInto_" data-uid="osu.Framework.Configuration.ConfigManager`1.LoadInto*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_LoadInto_osu_Framework_Configuration_Tracking_TrackedSettings_" data-uid="osu.Framework.Configuration.ConfigManager`1.LoadInto(osu.Framework.Configuration.Tracking.TrackedSettings)">
+  LoadInto(TrackedSettings)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads <a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable&lt;T&gt;</a>s into <a class="xref" href="osu.Framework.Configuration.Tracking.TrackedSettings.html">TrackedSettings</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadInto(TrackedSettings settings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settings</code> <a class="xref" href="osu.Framework.Configuration.Tracking.TrackedSettings.html">TrackedSettings</a></dt>
+    <dd><p>The settings to load into.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_SetDefault_" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_SetDefault__0_System_Boolean_" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault(`0,System.Boolean)">
+  SetDefault(TLookup, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a configuration's default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BindableBool SetDefault(TLookup lookup, bool value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd><p>The lookup key.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The default value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.BindableBool.html">BindableBool</a></dt>
+    <dd><p>The original bindable (not a bound copy).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_SetDefault_" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_SetDefault__0_System_Double_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault(`0,System.Double,System.Nullable{System.Double},System.Nullable{System.Double},System.Nullable{System.Double})">
+  SetDefault(TLookup, double, double?, double?, double?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a configuration's default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BindableDouble SetDefault(TLookup lookup, double value, double? min = null, double? max = null, double? precision = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd><p>The lookup key.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>The default value.</p>
+</dd>
+    <dt><code>min</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</dt>
+    <dd><p>The minimum value.</p>
+</dd>
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</dt>
+    <dd><p>The maximum value.</p>
+</dd>
+    <dt><code>precision</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>?</dt>
+    <dd><p>The value precision.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.BindableDouble.html">BindableDouble</a></dt>
+    <dd><p>The original bindable (not a bound copy).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_SetDefault_" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_SetDefault__0_System_Drawing_Size_System_Nullable_System_Drawing_Size__System_Nullable_System_Drawing_Size__" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault(`0,System.Drawing.Size,System.Nullable{System.Drawing.Size},System.Nullable{System.Drawing.Size})">
+  SetDefault(TLookup, Size, Size?, Size?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L204"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a configuration's default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BindableSize SetDefault(TLookup lookup, Size value, Size? min = null, Size? max = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd><p>The lookup key.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a></dt>
+    <dd><p>The default value.</p>
+</dd>
+    <dt><code>min</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a>?</dt>
+    <dd><p>The minimum value.</p>
+</dd>
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.drawing.size">Size</a>?</dt>
+    <dd><p>The maximum value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.BindableSize.html">BindableSize</a></dt>
+    <dd><p>The original bindable (not a bound copy).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_SetDefault_" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_SetDefault__0_System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault(`0,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+  SetDefault(TLookup, int, int?, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a configuration's default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BindableInt SetDefault(TLookup lookup, int value, int? min = null, int? max = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd><p>The lookup key.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The default value.</p>
+</dd>
+    <dt><code>min</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The minimum value.</p>
+</dd>
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The maximum value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.BindableInt.html">BindableInt</a></dt>
+    <dd><p>The original bindable (not a bound copy).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_SetDefault_" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_SetDefault__0_System_Single_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Single__" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault(`0,System.Single,System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single})">
+  SetDefault(TLookup, float, float?, float?, float?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a configuration's default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BindableFloat SetDefault(TLookup lookup, float value, float? min = null, float? max = null, float? precision = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd><p>The lookup key.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The default value.</p>
+</dd>
+    <dt><code>min</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd><p>The minimum value.</p>
+</dd>
+    <dt><code>max</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd><p>The maximum value.</p>
+</dd>
+    <dt><code>precision</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
+    <dd><p>The value precision.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.BindableFloat.html">BindableFloat</a></dt>
+    <dd><p>The original bindable (not a bound copy).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_SetDefault_" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_SetDefault__0_osu_Framework_Graphics_Colour4_" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault(`0,osu.Framework.Graphics.Colour4)">
+  SetDefault(TLookup, Colour4)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a configuration's default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected BindableColour4 SetDefault(TLookup lookup, Colour4 value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd><p>The lookup key.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="osu.Framework.Graphics.Colour4.html">Colour4</a></dt>
+    <dd><p>The default value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.BindableColour4.html">BindableColour4</a></dt>
+    <dd><p>The original bindable (not a bound copy).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_SetDefault_" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_SetDefault__1__0___0_" data-uid="osu.Framework.Configuration.ConfigManager`1.SetDefault``1(`0,``0)">
+  SetDefault&lt;TValue&gt;(TLookup, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a configuration's default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Bindable&lt;TValue&gt; SetDefault&lt;TValue&gt;(TLookup lookup, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd><p>The lookup key.</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The default value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Bindables.Bindable-1.html">Bindable</a>&lt;TValue&gt;</dt>
+    <dd><p>The original bindable (not a bound copy).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Configuration_ConfigManager_1_SetValue_" data-uid="osu.Framework.Configuration.ConfigManager`1.SetValue*"></a>
+
+  <h3 id="osu_Framework_Configuration_ConfigManager_1_SetValue__1__0___0_" data-uid="osu.Framework.Configuration.ConfigManager`1.SetValue``1(`0,``0)">
+  SetValue&lt;TValue&gt;(TLookup, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a configuration's value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetValue&lt;TValue&gt;(TLookup lookup, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>lookup</code> <span class="xref">TLookup</span></dt>
+    <dd><p>The lookup key.</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value. Will also become the default value if one has not already been initialised.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Configuration/ConfigManager.cs/#L18" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

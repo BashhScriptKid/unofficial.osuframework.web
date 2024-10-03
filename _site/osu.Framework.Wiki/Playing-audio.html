@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Tracks | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Tracks | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework.wiki/blob/master/Playing-audio.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="tracks">Tracks</h1>
+
+<p>Tracks are for playing single-instanced long-form audio. They offer the widest variety of adjustments possible, but are expensive and not recommended to be used for quick-fire or concurrent audio playback.</p>
+<ul>
+<li><strong><code>ITrackStore</code></strong>: Used to retrieve <code>Track</code> objects. The global track store is accessible through either <code>AudioManager.Tracks</code> or by <a href="/ppy/osu-framework/wiki/Dependency-Injection">resolving</a> an <code>ITrackStore</code> dependency into the <code>Drawable</code> object.</li>
+<li><strong><code>Track</code></strong>: The track, which is usually stored at a somewhat global level and played as required.</li>
+</ul>
+<p>The global track store provides access to all <code>.mp3</code> files placed in the application's <code>Resources/Tracks/</code> directory.</p>
+<p>The following is a typical usage pattern:</p>
+<pre><code class="lang-csharp">private Track track;
+private DrawableTrack drawableTrack;
+
+[BackgroundDependencyLoader]
+private void load(ITrackStore tracks)
+{
+    // Option 1: Raw tracks.
+    // This only has the audio adjustments (e.g. volume) of the track store applied to it.
+    track = tracks.Get(&quot;test-track.mp3&quot;);
+
+    // Option 2: Drawable tracks.
+    // Along with the track store's own adjustments, this version also has the adjustments of any parenting AudioContainers applied to it.
+    drawableTrack = new DrawableTrack(tracks.Get(&quot;test-sample.mp3&quot;));
+    Child = drawableTrack;
+
+    // Typically, either of the above are stored in a field in the Drawable object to be used later on. For example, in OnClick().
+
+    // You can adjust the volume of all tracks retrieved from the track store. Note that this is a global property.
+    // E.g. The track playback volume is calculated as: (track_store_volume) * (track_volume).
+    tracks.Volume.Value = 0.8;
+
+    // You can also adjust other properties on the track itself.
+    track.Volume.Value = 0.8;
+}
+
+// The following examples demonstrate usage of the raw Track object, but DrawableTrack can be used interchangeably.
+
+private bool playing;
+
+protected override bool OnClick(ClickEvent e)
+{
+    if (!playing)
+        track.Start();
+    else
+        track.Stop();
+
+    playing = !playing;
+    return true;
+}
+
+protected override bool OnDoubleClick(DoubleClickEvent e)
+{
+    track.Seek(0);
+    return true;
+}
+
+protected override void Dispose(bool isDisposing)
+{
+    base.Dispose(isDisposing);
+
+    // Be sure to dispose the track, otherwise memory will be leaked!
+    // This is automatic for DrawableTrack.
+    track.Dispose();
+}
+</code></pre>
+<h2 id="virtual-tracks">Virtual tracks</h2>
+<p><code>ITrackStore.GetVirtual()</code> can be used as a sane fallback value for cases where a non-null <code>Track</code> is always required. It mimics all positional methods of a non-virtual track without playing audio.</p>
+<h2 id="custom-track-stores">Custom track stores</h2>
+<p>In order to retrieve tracks from a different location than the default <code>Resources/Tracks/</code> directory, a custom track store is required.</p>
+<p>To create a custom track store, pass a <code>ResourceStore</code> to <code>AudioManager.GetTrackStore()</code>. This will return an <code>ITrackStore</code> to be used for future lookups. The custom track store will have its audio (e.g. volume) adjusted by the global track store.</p>
+<pre><code class="lang-csharp">[BackgroundDependencyLoader]
+private void load(AudioManager audio)
+{
+    var trackStore = audio.GetTrackStore(new ResourceStore&lt;byte[]&gt;(...));
+    trackStore.Get(&quot;test-track.mp3&quot;);
+}
+</code></pre>
+<h1 id="samples">Samples</h1>
+<p>Samples are for fast and concurrent playback of short audio clips. They feature automatic memory management with the intention of being fired-and-forgotten, but lack some notable features of <code>Track</code> such as time tracking, seeking, tempo adjustments, and on-demand restarting of playback.</p>
+<ul>
+<li><strong><code>ISampleStore</code></strong>: Used to retrieve <code>Sample</code> objects. The global sample store is accessible through either <code>AudioManager.Samples</code> or by <a href="/ppy/osu-framework/wiki/Dependency-Injection">resolving</a> an <code>ISampleStore</code> dependency into the <code>Drawable</code> object.</li>
+<li><strong><code>Sample</code></strong>: The sample, which is typically stored by the <code>Drawable</code> object in some fashion - either as the raw <code>Sample</code> or nested inside a <code>DrawableSample</code> object. Used in order to retrieve and play one or more <code>SampleChannel</code>s.</li>
+<li><strong><code>SampleChannel</code></strong>: The object which plays audio. This is typically fired-and-forgotten, with special cases in-case looping, adjusting volume/balance/frequency, or stopping audio playback is required.</li>
+</ul>
+<p>The global sample store provides access to all <code>.wav</code> and <code>.mp3</code> files placed in the application's <code>Resources/Samples/</code> directory.</p>
+<p>The following is a typical usage pattern:</p>
+<pre><code class="lang-cs">private Sample sample;
+private DrawableSample drawableSample;
+
+[BackgroundDependencyLoader]
+private void load(ISampleStore samples)
+{
+    // Option 1: Raw samples.
+    // This only has the audio adjustments (e.g. volume) of the sample store applied to it.
+    sample = samples.Get(&quot;test-sample.mp3&quot;);
+
+    // Option 2: Drawable samples.
+    // Along with the sample store's own adjustments, this version also has the adjustments of any parenting AudioContainers applied to it.
+    drawableSample = new DrawableSample(samples.Get(&quot;test-sample.mp3&quot;));
+    Child = drawableSample;
+
+    // Typically, either of the above are stored in a field in the Drawable object to be used later on. For example, in OnClick().
+
+    // You can adjust the volume of all samples retrieved from the sample store. Note that this is a global property.
+    // E.g. The channel playback volume is calculated as: (sample_store_volume) * (sample_volume) * (channel_volume).
+    samples.Volume.Value = 0.8;
+}
+
+protected override bool OnClick(ClickEvent e)
+{
+    // The following examples demonstrate usage of the raw Sample object, but DrawableSample can be used interchangeably.
+
+    // Play a normal channel from the sample.
+    // This can be called as many times as desired, but concurrent playback will only be heard
+    // up to sample.PlaybackConcurrency times from the same sample name (e.g. &quot;test-sample.mp3&quot;).
+    sample.Play();
+
+    // Play another normal channel. We'll be using this one for more examples later on.
+    var channel2 = sample.Play();
+
+    // Play a looping channel.
+    // It's recommended to retrieve the channel to set the looping flag first, and then to play the channel afterwards.
+    // The same applies to adjusting other channel properties, e.g. setting an initial volume.
+    var channel1 = sample.GetChannel();
+    channel1.Looping = true;
+    channel1.Play();
+
+    // Apply a volume adjustment to all channels (all three above, and any future ones) from the sample.
+    sample.Volume.Value = 0.5;
+
+    // Apply an independent volume adjustment to channel 1 only.
+    // The final volume of this channel will be 0.8 (store) * 0.5 (sample) * 0.5 (channel) = 0.2.
+    channel1.Volume.Value = 0.5;
+
+    // Stop channel 2, but keep channel 1 playing.
+    channel2.Stop();
+
+    // Resume playback of channel 2. This doesn't restart unless playback has finished.
+    channel2.Play();
+
+    return true;
+}
+
+protected override void Dispose(bool isDisposing)
+{
+    base.Dispose(isDisposing);
+
+    // Halts playback of all played channels from the sample. This is automatic for DrawableSample.
+    // Note: Omission doesn't always result in a memory leak, however it's recommended to stop
+    // longer sample playback when Drawables are disposed, and especially so for looping channels.
+    sample.Dispose();
+}
+</code></pre>
+<h2 id="virtual-samples">Virtual samples</h2>
+<p><code>SampleVirtual</code> can be used as a sane fallback value for cases where a non-null <code>Sample</code> is always required.</p>
+<h2 id="custom-sample-stores">Custom sample stores</h2>
+<p>In order to retrieve samples from a different location than the default <code>Resources/Samples/</code> directory, a custom sample store is required.</p>
+<p>To create a custom sample store, pass a <code>ResourceStore</code> to <code>AudioManager.GetSampleStore()</code>. This will return an <code>ISampleStore</code> to be used for future lookups. The custom sample store will have its audio (e.g. volume) adjusted by the global sample store.</p>
+<pre><code class="lang-csharp">[BackgroundDependencyLoader]
+private void load(AudioManager audio)
+{
+    var sampleStore = audio.GetSampleStore(new ResourceStore&lt;byte[]&gt;(...));
+    sampleStore.Get(&quot;test-sample.mp3&quot;);
+}
+</code></pre>
+<h1 id="mixing">Mixing</h1>
+<p>All <code>SampleChannel</code> and <code>Track</code> audio (hereby referred to as a &quot;channel&quot;) is routed through an <code>AudioMixer</code>. DSP effects can be applied to the <code>AudioMixer</code> to change the resultant audio of channels routed through it independent of other <code>AudioMixers</code> in the game.</p>
+<h2 id="global-audio-mixer">Global audio mixer</h2>
+<p>The global audio mixer affects all channels by default and can be accessed through <code>AudioManager.Mixer</code>. The following is a simple example of how to apply a DSP effect globally:</p>
+<pre><code class="lang-csharp">[BackgroundDependencyLoader]
+private void load(AudioManager audio, ISampleStore samples)
+{
+    // Add an effect to the global mixer.
+    audio.Mixer.Effects.Add(new ...);
+
+    // The sample has the above effect applied to it by default.
+    samples.Get(...).Play();
+
+    // The same is true for DrawableSample/DrawableTrack.
+    DrawableSample drawableSample;
+    Add(drawableSample = new DrawableSample(samples.Get(...)));
+    drawableSample.Play();
+}
+</code></pre>
+<h2 id="local-custom-audio-mixers">Local (custom) audio mixers</h2>
+<p>The global mixer provides too wide of an effect for use in many cases. There are two ways to create a mixer for only the specific audio which needs to be affected.</p>
+<p>One option is to create a locally managed <code>AudioMixer</code> through <code>AudioManager.CreateAudioMixer()</code>:</p>
+<pre><code class="lang-csharp">private AudioMixer mixer;
+
+[BackgroundDependencyLoader]
+private void load(AudioManager audio, ISampleStore samples)
+{
+    // Create the custom mixer.
+    mixer = audio.CreateAudioMixer();
+
+    // Add an effect to the mixer.
+    mixer.Effects.Add(new ...);
+
+    Sample sample = samples.Get(...);
+
+    // Add channels to the custom mixer in order to apply the effect to them.
+    SampleChannel channel = sample.GetChannel();
+    mixer.Add(channel);
+    channel.Play();
+
+    // Channels that are not added to the custom mixer will only be affected by the global mixer.
+    sample.Play();
+}
+
+protected override void Dispose(bool isDisposing)
+{
+    base.Dispose(isDisposing);
+
+    // Be sure to dispose the mixer, otherwise memory will be leaked!
+    mixer?.Dispose();
+}
+</code></pre>
+<p>The other option is to use <code>DrawableAudioMixer</code>, which takes care of the hard work behind the scenes:</p>
+<pre><code class="lang-csharp">[BackgroundDependencyLoader]
+private void load(ISampleStore samples)
+{
+    DrawableAudioMixer drawableAudioMixer;
+    DrawableSample drawableSample;
+
+    // Add a mixer to the hierarchy, this will affect DrawableSample/DrawableTrack children added to it, recursing until another DrawableAudioMixer is reached.
+    // Note: It will not affect Sample/SampleChannel/Tracks unless they're added manually!
+    Add(drawableAudioMixer = new DrawableAudioMixer
+    {
+        Child = drawableSample = new DrawableSample(samples.Get(...)),
+        Effects =
+        {
+            ...
+        }
+    });
+
+    // This sample has the above effect applied to it.
+    drawableSample.Play();
+
+    // As above, you can still add channels to the mixer manually to apply the effect to them.
+    Sample sample = samples.Get(...);
+    SampleChannel channel = sample.GetChannel();
+    drawableAudioMixer.Add(channel);
+    channel.Play();
+}
+</code></pre>
+<h2 id="effect-prioritisation">Effect prioritisation</h2>
+<p>Effects are applied in the order that they appear in the <code>AudioMixer.Effects</code> or <code>DrawableAudioMixer.Effects</code> list. Effects can be added, removed, or moved around in order to change their priority.</p>
+<h2 id="changing-the-audio-mixer">Changing the audio mixer</h2>
+<p>Channels can be moved to another audio mixer by adding or removing them from the <code>AudioMixer</code>:</p>
+<pre><code class="lang-csharp">[BackgroundDependencyLoader]
+private void load(ISampleStore samples)
+{
+    DrawableAudioMixer mixer1;
+    DrawableAudioMixer mixer2;
+
+    Children = new Drawable[]
+    {
+        mixer1 = new DrawableAudioMixer(),
+        mixer2 = new DrawableAudioMixer()
+    };
+
+    // Add the channel to the first mixer.
+    SampleChannel channel;
+    mixer1.Add(channel = samples.Get(...).Play());
+
+    // Move the channel to the second mixer.
+    mixer2.Add(channel);
+
+    // Remove the channel from the second mixer.
+    // Note: The channel will be moved to the global mixer, not mixer1 from above!
+    mixer2.Remove(channel);
+
+    // This has no effect. All channels must be played by one mixer.
+    audio.Mixer.Remove(channel);
+
+
+
+    // Similarly, for DrawableSample:
+    DrawableSample drawableSample = new DrawableSample(samples.Get(.));
+    SampleChannel channel1 = drawableSample.Play();
+    SampleChannel channel2 = drawableSample.Play();
+
+    // Add the entire sample to the first mixer, this affects both played channels.
+    mixer1.Add(drawableSample);
+
+    // Move the entire sample to the second mixer, this affects both played channels.
+    mixer1.Remove(drawableSample);
+    mixer2.Add(drawableSample);
+
+    // Move the first channel to the first mixer.
+    mixer1.Add(channel1);
+
+    // Move the second channel to the global mixer.
+    mixer2.Remove(channel2);
+
+    // Move the entire sample to the first mixer, this still affects both played channels.
+    mixer2.Remove(drawableSample);
+    mixer1.Add(drawableSample);
+}
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework.wiki/blob/master/Playing-audio.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

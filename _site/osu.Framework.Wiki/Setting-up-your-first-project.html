@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Getting started | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Getting started | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework.wiki/blob/master/Setting-up-your-first-project.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>This tutorial will show you how to create a new project integrating osu-framework from scratch. It is not meant to be a guide for contributing to the osu-framework project itself.</p>
+<ul>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#getting-started">Getting started</a>
+<ul>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#creating-a-new-project">Create a new project</a></li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#project-structure">Project structure</a></li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#game-logic">Game logic</a></li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#platform-specific-logic">Platform specific logic</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#testing">Testing</a>
+<ul>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#the-test-browser">The Test Browser</a></li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#adding-tests-to-the-test-browser">Adding tests to the test browser</a></li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#example-test">Example test</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#appendix">Appendix</a>
+<ul>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#BackgroundDependencyLoader-attribute">BackgroundDependencyLoader attribute</a></li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#setup-attribute">Setup Attribute</a></li>
+<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#further-reading">Further Reading</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="getting-started">Getting started</h1>
+<h2 id="creating-a-new-project">Creating a new project</h2>
+<p>To get started, a custom osu! game base project has been made available as a template pack in the .NET command line interface. Using this template, it is possible to quickly and easily generate a new project using <code>osu-framework</code> as a starting point for creating your own game.</p>
+<ol>
+<li><p>In your command line utility of choice, navigate to the folder in which you want to create the project.</p>
+</li>
+<li><p>Make sure the <code>osu-framework</code>  project template is downloaded by running <code>dotnet new install ppy.osu.Framework.Templates</code>.</p>
+</li>
+<li><p>Run <code>dotnet new osu-framework-game -n &lt;MyNewProjectName&gt;</code> to generate a new folder containing the project.</p>
+<blockquote>
+<p><strong>Warning</strong>
+Do not use spaces or hyphens in your project name. This does not play nice with the templating system.</p>
+</blockquote>
+</li>
+<li><p>Open the folder, and open <code>MyNewProjectName.sln</code> to begin!</p>
+</li>
+</ol>
+<blockquote>
+<p>In addition to the <code>osu-framework-game</code> template, a template named <code>osu-framework-flappy-game</code> is also available which serves as an example of creating a basic, but feature complete game with <code>osu-framework</code>.</p>
+</blockquote>
+<h2 id="project-structure">Project structure</h2>
+<p>When you open the solution file, you'll notice that there are three build projects inside it:</p>
+<ul>
+<li><code>MyNewProject.Game</code>: The main project that integrates with <code>osu-framework</code> and allows you to extend it by adding your own classes. All of your game specific logic should be implemented in this project.</li>
+<li><code>MyNewProject.Desktop</code>: As opposed to mobile devices, the <code>Desktop</code> project provides all of the system mechanisms and resources necessary to successfully run the project on desktop platforms. Separating this project from the <code>Game</code> project allows flexibility in supporting multiple platforms, such as mobile.</li>
+<li><code>MyNewProject.Game.Tests</code>: This project allows you to write and test the logic and UI of your project. It allows access to the Test Browser, which is a separate visual testing framework that will allow you to test your UI elements and other visuals.</li>
+</ul>
+<h2 id="game-logic">Game logic</h2>
+<p>If you open up <code>MyNewProject.Game/MyNewProjectGame.cs</code>, you'll see the class responsible for some basic game logic. It inherits from the <code>osu.Framework.Game</code> super-class and by default, implements a basic <a href="https://github.com/ppy/osu-framework/wiki/Screens-and-Screen-Stacks">screen stack</a> setup:</p>
+<pre><code class="lang-csharp">namespace MyNewProjectName.Game
+{
+    public partial class MainScreen : Screen
+    {
+        [BackgroundDependencyLoader]
+        private void load()
+        {
+            InternalChildren = new Drawable[]
+            {
+                new Box
+                {
+                    Colour = Color4.Violet,
+                    RelativeSizeAxes = Axes.Both,
+                },
+                new SpriteText
+                {
+                    Y = 20,
+                    Text = &quot;Main Screen&quot;,
+                    Anchor = Anchor.TopCentre,
+                    Origin = Anchor.TopCentre,
+                    Font = FontUsage.Default.With(size: 40)
+                },
+                new SpinningBox
+                {
+                    Anchor = Anchor.Centre,
+                }
+            };
+        }
+    }
+}
+</code></pre>
+<p>The main (and only) screen contains a spinning box visual:</p>
+<pre><code class="lang-csharp">namespace MyNewProjectName.Game
+{
+    public partial class MainScreen : Screen
+    {
+        [BackgroundDependencyLoader]
+        private void load()
+        {
+            InternalChildren = new Drawable[]
+            {
+                new Box
+                {
+                    Colour = Color4.Violet,
+                    RelativeSizeAxes = Axes.Both,
+                },
+                new SpriteText
+                {
+                    Y = 20,
+                    Text = &quot;Main Screen&quot;,
+                    Anchor = Anchor.TopCentre,
+                    Origin = Anchor.TopCentre,
+                    Font = FontUsage.Default.With(size: 40)
+                },
+                new SpinningBox
+                {
+                    Anchor = Anchor.Centre,
+                }
+            };
+        }
+    }
+}
+</code></pre>
+<h2 id="platform-specific-logic">Platform specific logic</h2>
+<p>The logic needed to begin execution of the game is located in <code>MyNewProject.Desktop/Program.cs</code>:</p>
+<pre><code class="lang-csharp">namespace MyNewProjectName.Desktop
+{
+    public static class Program
+    {
+        public static void Main()
+        {
+            using (GameHost host = Host.GetSuitableDesktopHost(@&quot;MyNewProjectName&quot;))
+            using (osu.Framework.Game game = new MyNewProjectNameGame())
+                host.Run(game);
+        }
+    }
+}
+</code></pre>
+<h2 id="testing">Testing</h2>
+<h3 id="the-test-browser">The test browser</h3>
+<p><code>osu-framework</code> includes a visual testing framework that helps provide tests that can be verified both visually and systematically via <a href="https://nunit.org/">NUnit</a>. When running the tests project, a utility called the <strong>test browser</strong> will collect all of your tests, and present them in an executable that presents all of the tests in a list.</p>
+<p>The pre-generated project will feature an example test class in <code>MyGameProject.Game.Tests/Visual/TestSceneMyNewProjectGame.cs</code>.</p>
+<p>In order for your test browser to discover tests, you will need to specify a namespace in which for the browser to look in when constructing it:</p>
+<pre><code class="lang-csharp">    public partial class MyNewProjectNameTestBrowser : MyNewProjectNameGameBase
+    {
+        protected override void LoadComplete()
+        {
+            base.LoadComplete();
+
+            AddRange(new Drawable[]
+            {
+                new TestBrowser(&quot;MyNewProjectName&quot;), // &lt;- see namespace specification here
+                new CursorContainer()
+            });
+        }
+
+        // rest of class omitted for brevity
+    }
+}
+</code></pre>
+<p>Below is an example of a visual test that displays <code>MyNewProjectGame</code> in full inside the test browser:</p>
+<pre><code class="lang-csharp">namespace MyNewProject.Game.Tests.Visual
+{
+    public partial class TestSceneMyNewProjectGame : TestScene
+    {
+        private MyNewProjectGame game;
+
+        [BackgroundDependencyLoader]
+        private void load(GameHost host)
+        {
+            game = new MyNewProjectGame();
+            game.SetHost(host);
+
+            AddGame(game);
+        }
+    }
+}
+</code></pre>
+<p>Note that in order for you to be able to run the visual tests, you will have to switch your run configuration to the visual tests project. The solution template will generate the setup code necessary for this in <code>MyGameProject.Game.Tests/Program.cs</code>.</p>
+<pre><code class="lang-csharp">namespace MyNewProjectName.Game.Tests
+{
+    public static class Program
+    {
+        public static void Main()
+        {
+            using (GameHost host = Host.GetSuitableDesktopHost(&quot;visual-tests&quot;))
+            using (var game = new MyNewProjectNameTestBrowser())
+                host.Run(game);
+        }
+    }
+}
+
+</code></pre>
+<h2 id="adding-tests-to-the-test-browser">Adding tests to the Test Browser</h2>
+<p>Now that our Test Browser is discovering tests from the specified namespace, we can start adding tests! To do so, create a new class that derives <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Testing/TestScene.cs"><code>TestScene</code></a> with the <a href="https://docs.nunit.org/articles/nunit/writing-tests/attributes/testfixture.html"><code>TestFixture</code></a> attribute. From here, we can add steps to this test of various types. For information on what types of steps are available, please refer to <a href="https://github.com/ppy/osu-framework/wiki/Development-and-Testing#steps-and-automated-testing">Dynamic Compilation and Visual Testing</a>.</p>
+<h2 id="example-test">Example Test</h2>
+<p>The following code adds a simple cube to the visual test browser that we created above. The cube has a rigid body attached, and should drop to the bottom of the screen when created. From here, we can choose to check the behavior of the cube by asserting that the cube eventually reaches the bottom via <code>AddAssert()</code>.</p>
+<pre><code class="lang-csharp">namespace AwesomeGame.VisualTests
+{
+    [TestFixture]
+    public class RigidCubeTest : TestScene
+    {
+        private RigidBodySimulation sim = null!;
+        
+        [BackgroundDependencyLoader]
+        private void load()
+        {
+             // Set up the simulation once before any tests are ran
+             Child = sim = new RigidBodySimulation { RelativeSizeAxes = Axes.Both };
+        }
+
+        [Test]
+        public void AwesomeTestName()
+        {
+            AddStep(&quot;Drop a cube&quot;, performDropCube);
+        }
+
+        private void performDropCube()
+        {
+            // Add a new cube to the simulation
+            RigidBodyContainer&lt;Drawable&gt; rbc = new RigidBodyContainer&lt;Drawable&gt;
+            {
+                Child = new Box
+                {
+                    Anchor = Anchor.Centre,
+                    Origin = Anchor.Centre,
+                    Size = new Vector2(150, 150),
+                    Colour = Color4.Tomato,
+                },
+                Position = new Vector2(500, 500),
+                Size = new Vector2(200, 200),
+                Rotation =  45,
+                Colour = Color4.Tomato,
+                Masking = true,
+            };
+            
+            sim.Add(rbc);
+        }
+    }
+}
+</code></pre>
+<h1 id="appendix">Appendix</h1>
+<h2 id="setup-attribute"><code>SetUp</code> attribute</h2>
+<p>The <a href="https://docs.nunit.org/articles/nunit/writing-tests/attributes/setup.html"><code>SetUp</code></a> NUnit attribute marks a method as a setup method that runs as a step before every group of tests in a test method. The steps created by this attribute get added to the visual test browser as well.</p>
+<h2 id="backgrounddependencyloader-attribute"><code>BackgroundDependencyLoader</code> attribute</h2>
+<p>The <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Allocation/BackgroundDependencyLoaderAttribute.cs"><code>BackgroundDependencyLoader</code></a> attribute denotes a method to be the load method of a <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Drawable.cs">Drawable</a>. You can specify a type in the method parameters to attempt to grab an object of that type that has been <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Caching/Cached.cs">cached</a>.</p>
+<h2 id="further-reading">Further reading</h2>
+<ul>
+<li>For information on how to load your own resources such as textures and audio, please read <a href="https://github.com/ppy/osu-framework/wiki/Setting-Up-Compiled-Resource-Stores">Setting Up Compiled Resource Stores</a>.</li>
+<li>For more information regarding dependency injection via the BackgroundDependencyLoader attribute, please read <a href="https://github.com/ppy/osu-framework/wiki/Dependency-Injection">Dependency Injection</a></li>
+<li>For additional reading on visual tests, please refer to <a href="https://github.com/ppy/osu-framework/wiki/Development-and-Testing">Dynamic Compilation and Visual Testing</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework.wiki/blob/master/Setting-up-your-first-project.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

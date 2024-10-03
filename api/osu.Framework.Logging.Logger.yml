@@ -1,0 +1,2513 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Logging.Logger
+  commentId: T:osu.Framework.Logging.Logger
+  id: Logger
+  parent: osu.Framework.Logging
+  children:
+  - osu.Framework.Logging.Logger.Add(System.String,osu.Framework.Logging.LogLevel,System.Exception,System.Boolean)
+  - osu.Framework.Logging.Logger.AddFilteredText(System.String)
+  - osu.Framework.Logging.Logger.ApplyFilters(System.String)
+  - osu.Framework.Logging.Logger.Debug(System.String)
+  - osu.Framework.Logging.Logger.Enabled
+  - osu.Framework.Logging.Logger.Error(System.Exception,System.String,System.String,System.Boolean)
+  - osu.Framework.Logging.Logger.Error(System.Exception,System.String,osu.Framework.Logging.LoggingTarget,System.Boolean)
+  - osu.Framework.Logging.Logger.Filename
+  - osu.Framework.Logging.Logger.Flush
+  - osu.Framework.Logging.Logger.GameIdentifier
+  - osu.Framework.Logging.Logger.GetLogger(System.String)
+  - osu.Framework.Logging.Logger.GetLogger(osu.Framework.Logging.LoggingTarget)
+  - osu.Framework.Logging.Logger.Level
+  - osu.Framework.Logging.Logger.Log(System.String,System.String,osu.Framework.Logging.LogLevel,System.Boolean)
+  - osu.Framework.Logging.Logger.Log(System.String,osu.Framework.Logging.LoggingTarget,osu.Framework.Logging.LogLevel,System.Boolean)
+  - osu.Framework.Logging.Logger.LogPrint(System.String,System.String,osu.Framework.Logging.LogLevel)
+  - osu.Framework.Logging.Logger.LogPrint(System.String,osu.Framework.Logging.LoggingTarget,osu.Framework.Logging.LogLevel)
+  - osu.Framework.Logging.Logger.Name
+  - osu.Framework.Logging.Logger.NewEntry
+  - osu.Framework.Logging.Logger.OutputToListeners
+  - osu.Framework.Logging.Logger.Storage
+  - osu.Framework.Logging.Logger.Target
+  - osu.Framework.Logging.Logger.TotalLogOperations
+  - osu.Framework.Logging.Logger.VersionIdentifier
+  langs:
+  - csharp
+  - vb
+  name: Logger
+  nameWithType: Logger
+  fullName: osu.Framework.Logging.Logger
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Logger
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 21
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: This class allows statically (globally) configuring and using logging functionality.
+  example: []
+  syntax:
+    content: public class Logger
+    content.vb: Public Class Logger
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Logging.Logger.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Logging.Logger.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Logging.Logger.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Logging.Logger.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Logging.Logger.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Logging.Logger.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Logging.Logger.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Logging.Logger.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Logging.Logger.Enabled
+  commentId: F:osu.Framework.Logging.Logger.Enabled
+  id: Enabled
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Enabled
+  nameWithType: Logger.Enabled
+  fullName: osu.Framework.Logging.Logger.Enabled
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Enabled
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 41
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: Whether logging is enabled. Setting this to false will disable all logging.
+  example: []
+  syntax:
+    content: public static bool Enabled
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Enabled As Boolean
+- uid: osu.Framework.Logging.Logger.Level
+  commentId: F:osu.Framework.Logging.Logger.Level
+  id: Level
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: Logger.Level
+  fullName: osu.Framework.Logging.Logger.Level
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Level
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 46
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: The minimum log-level a logged message needs to have to be logged. Default is <xref href="osu.Framework.Logging.LogLevel.Verbose" data-throw-if-not-resolved="false"></xref>. Please note that setting this to <xref href="osu.Framework.Logging.LogLevel.Debug" data-throw-if-not-resolved="false"></xref>  will log input events, including keypresses when entering a password.
+  example: []
+  syntax:
+    content: public static LogLevel Level
+    return:
+      type: osu.Framework.Logging.LogLevel
+    content.vb: Public Shared Level As LogLevel
+- uid: osu.Framework.Logging.Logger.GameIdentifier
+  commentId: F:osu.Framework.Logging.Logger.GameIdentifier
+  id: GameIdentifier
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: GameIdentifier
+  nameWithType: Logger.GameIdentifier
+  fullName: osu.Framework.Logging.Logger.GameIdentifier
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GameIdentifier
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 51
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: An identifier for the game written to log file headers to indicate where the log file came from.
+  example: []
+  syntax:
+    content: public static string GameIdentifier
+    return:
+      type: System.String
+    content.vb: Public Shared GameIdentifier As String
+- uid: osu.Framework.Logging.Logger.VersionIdentifier
+  commentId: F:osu.Framework.Logging.Logger.VersionIdentifier
+  id: VersionIdentifier
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: VersionIdentifier
+  nameWithType: Logger.VersionIdentifier
+  fullName: osu.Framework.Logging.Logger.VersionIdentifier
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: VersionIdentifier
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 56
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: An identifier for the version written to log file headers to indicate where the log file came from.
+  example: []
+  syntax:
+    content: public static string VersionIdentifier
+    return:
+      type: System.String
+    content.vb: Public Shared VersionIdentifier As String
+- uid: osu.Framework.Logging.Logger.Storage
+  commentId: P:osu.Framework.Logging.Logger.Storage
+  id: Storage
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Storage
+  nameWithType: Logger.Storage
+  fullName: osu.Framework.Logging.Logger.Storage
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Storage
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 63
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: The storage to place logs inside.
+  example: []
+  syntax:
+    content: public static Storage Storage { get; set; }
+    parameters: []
+    return:
+      type: osu.Framework.Platform.Storage
+    content.vb: Public Shared Property Storage As Storage
+  overload: osu.Framework.Logging.Logger.Storage*
+- uid: osu.Framework.Logging.Logger.Target
+  commentId: P:osu.Framework.Logging.Logger.Target
+  id: Target
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Target
+  nameWithType: Logger.Target
+  fullName: osu.Framework.Logging.Logger.Target
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Target
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 77
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: The target for which this logger logs information. This will only be null if the logger has a name.
+  example: []
+  syntax:
+    content: public LoggingTarget? Target { get; }
+    parameters: []
+    return:
+      type: System.Nullable{osu.Framework.Logging.LoggingTarget}
+    content.vb: Public ReadOnly Property Target As LoggingTarget?
+  overload: osu.Framework.Logging.Logger.Target*
+- uid: osu.Framework.Logging.Logger.Name
+  commentId: P:osu.Framework.Logging.Logger.Name
+  id: Name
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Logger.Name
+  fullName: osu.Framework.Logging.Logger.Name
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Name
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 82
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: The name of the logger.
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: osu.Framework.Logging.Logger.Name*
+- uid: osu.Framework.Logging.Logger.Filename
+  commentId: P:osu.Framework.Logging.Logger.Filename
+  id: Filename
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Filename
+  nameWithType: Logger.Filename
+  fullName: osu.Framework.Logging.Logger.Filename
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Filename
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 87
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: Gets the name of the file that this logger is logging to.
+  example: []
+  syntax:
+    content: public string Filename { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Filename As String
+  overload: osu.Framework.Logging.Logger.Filename*
+- uid: osu.Framework.Logging.Logger.TotalLogOperations
+  commentId: P:osu.Framework.Logging.Logger.TotalLogOperations
+  id: TotalLogOperations
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: TotalLogOperations
+  nameWithType: Logger.TotalLogOperations
+  fullName: osu.Framework.Logging.Logger.TotalLogOperations
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TotalLogOperations
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 89
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  syntax:
+    content: public int TotalLogOperations { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalLogOperations As Integer
+  overload: osu.Framework.Logging.Logger.TotalLogOperations*
+- uid: osu.Framework.Logging.Logger.AddFilteredText(System.String)
+  commentId: M:osu.Framework.Logging.Logger.AddFilteredText(System.String)
+  id: AddFilteredText(System.String)
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: AddFilteredText(string)
+  nameWithType: Logger.AddFilteredText(string)
+  fullName: osu.Framework.Logging.Logger.AddFilteredText(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AddFilteredText
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 121
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: >-
+    Add a plain-text phrase which should always be filtered from logs. The filtered phrase will be replaced with asterisks (*).
+
+    Useful for avoiding logging of credentials.
+
+    See also <xref href="osu.Framework.Logging.Logger.ApplyFilters(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static void AddFilteredText(string text)
+    parameters:
+    - id: text
+      type: System.String
+    content.vb: Public Shared Sub AddFilteredText(text As String)
+  overload: osu.Framework.Logging.Logger.AddFilteredText*
+  nameWithType.vb: Logger.AddFilteredText(String)
+  fullName.vb: osu.Framework.Logging.Logger.AddFilteredText(String)
+  name.vb: AddFilteredText(String)
+- uid: osu.Framework.Logging.Logger.ApplyFilters(System.String)
+  commentId: M:osu.Framework.Logging.Logger.ApplyFilters(System.String)
+  id: ApplyFilters(System.String)
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: ApplyFilters(string)
+  nameWithType: Logger.ApplyFilters(string)
+  fullName: osu.Framework.Logging.Logger.ApplyFilters(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ApplyFilters
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 134
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: >-
+    Removes phrases which should be filtered from logs.
+
+    Useful for avoiding logging of credentials.
+
+    See also <xref href="osu.Framework.Logging.Logger.AddFilteredText(System.String)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static string ApplyFilters(string message)
+    parameters:
+    - id: message
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function ApplyFilters(message As String) As String
+  overload: osu.Framework.Logging.Logger.ApplyFilters*
+  nameWithType.vb: Logger.ApplyFilters(String)
+  fullName.vb: osu.Framework.Logging.Logger.ApplyFilters(String)
+  name.vb: ApplyFilters(String)
+- uid: osu.Framework.Logging.Logger.Error(System.Exception,System.String,osu.Framework.Logging.LoggingTarget,System.Boolean)
+  commentId: M:osu.Framework.Logging.Logger.Error(System.Exception,System.String,osu.Framework.Logging.LoggingTarget,System.Boolean)
+  id: Error(System.Exception,System.String,osu.Framework.Logging.LoggingTarget,System.Boolean)
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Error(Exception, string, LoggingTarget, bool)
+  nameWithType: Logger.Error(Exception, string, LoggingTarget, bool)
+  fullName: osu.Framework.Logging.Logger.Error(System.Exception, string, osu.Framework.Logging.LoggingTarget, bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Error
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 152
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: Logs the given exception with the given description to the specified logging target.
+  example: []
+  syntax:
+    content: public static void Error(Exception e, string description, LoggingTarget target = LoggingTarget.Runtime, bool recursive = false)
+    parameters:
+    - id: e
+      type: System.Exception
+      description: The exception that should be logged.
+    - id: description
+      type: System.String
+      description: The description of the error that should be logged with the exception.
+    - id: target
+      type: osu.Framework.Logging.LoggingTarget
+      description: The logging target (file).
+    - id: recursive
+      type: System.Boolean
+      description: Whether the inner exceptions of the given exception <code class="paramref">e</code> should be logged recursively.
+    content.vb: Public Shared Sub [Error](e As Exception, description As String, target As LoggingTarget = LoggingTarget.Runtime, recursive As Boolean = False)
+  overload: osu.Framework.Logging.Logger.Error*
+  nameWithType.vb: Logger.Error(Exception, String, LoggingTarget, Boolean)
+  fullName.vb: osu.Framework.Logging.Logger.Error(System.Exception, String, osu.Framework.Logging.LoggingTarget, Boolean)
+  name.vb: Error(Exception, String, LoggingTarget, Boolean)
+- uid: osu.Framework.Logging.Logger.Error(System.Exception,System.String,System.String,System.Boolean)
+  commentId: M:osu.Framework.Logging.Logger.Error(System.Exception,System.String,System.String,System.Boolean)
+  id: Error(System.Exception,System.String,System.String,System.Boolean)
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Error(Exception, string, string, bool)
+  nameWithType: Logger.Error(Exception, string, string, bool)
+  fullName: osu.Framework.Logging.Logger.Error(System.Exception, string, string, bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Error
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 164
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: Logs the given exception with the given description to the logger with the given name.
+  example: []
+  syntax:
+    content: public static void Error(Exception e, string description, string name, bool recursive = false)
+    parameters:
+    - id: e
+      type: System.Exception
+      description: The exception that should be logged.
+    - id: description
+      type: System.String
+      description: The description of the error that should be logged with the exception.
+    - id: name
+      type: System.String
+      description: The logger name (file).
+    - id: recursive
+      type: System.Boolean
+      description: Whether the inner exceptions of the given exception <code class="paramref">e</code> should be logged recursively.
+    content.vb: Public Shared Sub [Error](e As Exception, description As String, name As String, recursive As Boolean = False)
+  overload: osu.Framework.Logging.Logger.Error*
+  nameWithType.vb: Logger.Error(Exception, String, String, Boolean)
+  fullName.vb: osu.Framework.Logging.Logger.Error(System.Exception, String, String, Boolean)
+  name.vb: Error(Exception, String, String, Boolean)
+- uid: osu.Framework.Logging.Logger.Log(System.String,osu.Framework.Logging.LoggingTarget,osu.Framework.Logging.LogLevel,System.Boolean)
+  commentId: M:osu.Framework.Logging.Logger.Log(System.String,osu.Framework.Logging.LoggingTarget,osu.Framework.Logging.LogLevel,System.Boolean)
+  id: Log(System.String,osu.Framework.Logging.LoggingTarget,osu.Framework.Logging.LogLevel,System.Boolean)
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Log(string, LoggingTarget, LogLevel, bool)
+  nameWithType: Logger.Log(string, LoggingTarget, LogLevel, bool)
+  fullName: osu.Framework.Logging.Logger.Log(string, osu.Framework.Logging.LoggingTarget, osu.Framework.Logging.LogLevel, bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Log
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 184
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: Log an arbitrary string to the specified logging target.
+  example: []
+  syntax:
+    content: public static void Log(string message, LoggingTarget target = LoggingTarget.Runtime, LogLevel level = LogLevel.Verbose, bool outputToListeners = true)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log. Can include newline (\n) characters to split into multiple lines.
+    - id: target
+      type: osu.Framework.Logging.LoggingTarget
+      description: The logging target (file).
+    - id: level
+      type: osu.Framework.Logging.LogLevel
+      description: The verbosity level.
+    - id: outputToListeners
+      type: System.Boolean
+      description: Whether the message should be sent to listeners of <xref href="osu.Framework.Logging.Logger.Debug(System.String)" data-throw-if-not-resolved="false"></xref> and <xref href="System.Console" data-throw-if-not-resolved="false"></xref>. True by default.
+    content.vb: Public Shared Sub Log(message As String, target As LoggingTarget = LoggingTarget.Runtime, level As LogLevel = LogLevel.Verbose, outputToListeners As Boolean = True)
+  overload: osu.Framework.Logging.Logger.Log*
+  nameWithType.vb: Logger.Log(String, LoggingTarget, LogLevel, Boolean)
+  fullName.vb: osu.Framework.Logging.Logger.Log(String, osu.Framework.Logging.LoggingTarget, osu.Framework.Logging.LogLevel, Boolean)
+  name.vb: Log(String, LoggingTarget, LogLevel, Boolean)
+- uid: osu.Framework.Logging.Logger.Log(System.String,System.String,osu.Framework.Logging.LogLevel,System.Boolean)
+  commentId: M:osu.Framework.Logging.Logger.Log(System.String,System.String,osu.Framework.Logging.LogLevel,System.Boolean)
+  id: Log(System.String,System.String,osu.Framework.Logging.LogLevel,System.Boolean)
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Log(string, string, LogLevel, bool)
+  nameWithType: Logger.Log(string, string, LogLevel, bool)
+  fullName: osu.Framework.Logging.Logger.Log(string, string, osu.Framework.Logging.LogLevel, bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Log
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 196
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: Log an arbitrary string to the logger with the given name.
+  example: []
+  syntax:
+    content: public static void Log(string message, string name, LogLevel level = LogLevel.Verbose, bool outputToListeners = true)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log. Can include newline (\n) characters to split into multiple lines.
+    - id: name
+      type: System.String
+      description: The logger name (file).
+    - id: level
+      type: osu.Framework.Logging.LogLevel
+      description: The verbosity level.
+    - id: outputToListeners
+      type: System.Boolean
+      description: Whether the message should be sent to listeners of <xref href="osu.Framework.Logging.Logger.Debug(System.String)" data-throw-if-not-resolved="false"></xref> and <xref href="System.Console" data-throw-if-not-resolved="false"></xref>. True by default.
+    content.vb: Public Shared Sub Log(message As String, name As String, level As LogLevel = LogLevel.Verbose, outputToListeners As Boolean = True)
+  overload: osu.Framework.Logging.Logger.Log*
+  nameWithType.vb: Logger.Log(String, String, LogLevel, Boolean)
+  fullName.vb: osu.Framework.Logging.Logger.Log(String, String, osu.Framework.Logging.LogLevel, Boolean)
+  name.vb: Log(String, String, LogLevel, Boolean)
+- uid: osu.Framework.Logging.Logger.LogPrint(System.String,osu.Framework.Logging.LoggingTarget,osu.Framework.Logging.LogLevel)
+  commentId: M:osu.Framework.Logging.Logger.LogPrint(System.String,osu.Framework.Logging.LoggingTarget,osu.Framework.Logging.LogLevel)
+  id: LogPrint(System.String,osu.Framework.Logging.LoggingTarget,osu.Framework.Logging.LogLevel)
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogPrint(string, LoggingTarget, LogLevel)
+  nameWithType: Logger.LogPrint(string, LoggingTarget, LogLevel)
+  fullName: osu.Framework.Logging.Logger.LogPrint(string, osu.Framework.Logging.LoggingTarget, osu.Framework.Logging.LogLevel)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: LogPrint
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 221
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: Logs a message to the specified logging target and also displays a print statement.
+  example: []
+  syntax:
+    content: public static void LogPrint(string message, LoggingTarget target = LoggingTarget.Runtime, LogLevel level = LogLevel.Verbose)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log. Can include newline (\n) characters to split into multiple lines.
+    - id: target
+      type: osu.Framework.Logging.LoggingTarget
+      description: The logging target (file).
+    - id: level
+      type: osu.Framework.Logging.LogLevel
+      description: The verbosity level.
+    content.vb: Public Shared Sub LogPrint(message As String, target As LoggingTarget = LoggingTarget.Runtime, level As LogLevel = LogLevel.Verbose)
+  overload: osu.Framework.Logging.Logger.LogPrint*
+  nameWithType.vb: Logger.LogPrint(String, LoggingTarget, LogLevel)
+  fullName.vb: osu.Framework.Logging.Logger.LogPrint(String, osu.Framework.Logging.LoggingTarget, osu.Framework.Logging.LogLevel)
+  name.vb: LogPrint(String, LoggingTarget, LogLevel)
+- uid: osu.Framework.Logging.Logger.LogPrint(System.String,System.String,osu.Framework.Logging.LogLevel)
+  commentId: M:osu.Framework.Logging.Logger.LogPrint(System.String,System.String,osu.Framework.Logging.LogLevel)
+  id: LogPrint(System.String,System.String,osu.Framework.Logging.LogLevel)
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogPrint(string, string, LogLevel)
+  nameWithType: Logger.LogPrint(string, string, LogLevel)
+  fullName: osu.Framework.Logging.Logger.LogPrint(string, string, osu.Framework.Logging.LogLevel)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: LogPrint
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 235
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: Logs a message to the logger with the given name and also displays a print statement.
+  example: []
+  syntax:
+    content: public static void LogPrint(string message, string name, LogLevel level = LogLevel.Verbose)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log. Can include newline (\n) characters to split into multiple lines.
+    - id: name
+      type: System.String
+      description: The logger name (file).
+    - id: level
+      type: osu.Framework.Logging.LogLevel
+      description: The verbosity level.
+    content.vb: Public Shared Sub LogPrint(message As String, name As String, level As LogLevel = LogLevel.Verbose)
+  overload: osu.Framework.Logging.Logger.LogPrint*
+  nameWithType.vb: Logger.LogPrint(String, String, LogLevel)
+  fullName.vb: osu.Framework.Logging.Logger.LogPrint(String, String, osu.Framework.Logging.LogLevel)
+  name.vb: LogPrint(String, String, LogLevel)
+- uid: osu.Framework.Logging.Logger.GetLogger(osu.Framework.Logging.LoggingTarget)
+  commentId: M:osu.Framework.Logging.Logger.GetLogger(osu.Framework.Logging.LoggingTarget)
+  id: GetLogger(osu.Framework.Logging.LoggingTarget)
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: GetLogger(LoggingTarget)
+  nameWithType: Logger.GetLogger(LoggingTarget)
+  fullName: osu.Framework.Logging.Logger.GetLogger(osu.Framework.Logging.LoggingTarget)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetLogger
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 248
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: For classes that regularly log to the same target, this method may be preferred over the static Log method.
+  example: []
+  syntax:
+    content: public static Logger GetLogger(LoggingTarget target = LoggingTarget.Runtime)
+    parameters:
+    - id: target
+      type: osu.Framework.Logging.LoggingTarget
+      description: The logging target.
+    return:
+      type: osu.Framework.Logging.Logger
+      description: The logger responsible for the given logging target.
+    content.vb: Public Shared Function GetLogger(target As LoggingTarget = LoggingTarget.Runtime) As Logger
+  overload: osu.Framework.Logging.Logger.GetLogger*
+- uid: osu.Framework.Logging.Logger.GetLogger(System.String)
+  commentId: M:osu.Framework.Logging.Logger.GetLogger(System.String)
+  id: GetLogger(System.String)
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: GetLogger(string)
+  nameWithType: Logger.GetLogger(string)
+  fullName: osu.Framework.Logging.Logger.GetLogger(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetLogger
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 255
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: For classes that regularly log to the same target, this method may be preferred over the static Log method.
+  example: []
+  syntax:
+    content: public static Logger GetLogger(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the custom logger.
+    return:
+      type: osu.Framework.Logging.Logger
+      description: The logger responsible for the given logging target.
+    content.vb: Public Shared Function GetLogger(name As String) As Logger
+  overload: osu.Framework.Logging.Logger.GetLogger*
+  nameWithType.vb: Logger.GetLogger(String)
+  fullName.vb: osu.Framework.Logging.Logger.GetLogger(String)
+  name.vb: GetLogger(String)
+- uid: osu.Framework.Logging.Logger.Debug(System.String)
+  commentId: M:osu.Framework.Logging.Logger.Debug(System.String)
+  id: Debug(System.String)
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Debug(string)
+  nameWithType: Logger.Debug(string)
+  fullName: osu.Framework.Logging.Logger.Debug(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Debug
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 272
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: Logs a new message with the <xref href="osu.Framework.Logging.LogLevel.Debug" data-throw-if-not-resolved="false"></xref> and will only be logged if your project is built in the Debug configuration. Please note that the default setting for <xref href="osu.Framework.Logging.Logger.Level" data-throw-if-not-resolved="false"></xref> is <xref href="osu.Framework.Logging.LogLevel.Verbose" data-throw-if-not-resolved="false"></xref> so unless you increase the <xref href="osu.Framework.Logging.Logger.Level" data-throw-if-not-resolved="false"></xref> to <xref href="osu.Framework.Logging.LogLevel.Debug" data-throw-if-not-resolved="false"></xref> messages printed with this method will not appear in the output.
+  example: []
+  syntax:
+    content: public void Debug(string message = "")
+    parameters:
+    - id: message
+      type: System.String
+      description: The message that should be logged.
+    content.vb: Public Sub Debug(message As String = "")
+  overload: osu.Framework.Logging.Logger.Debug*
+  nameWithType.vb: Logger.Debug(String)
+  fullName.vb: osu.Framework.Logging.Logger.Debug(String)
+  name.vb: Debug(String)
+- uid: osu.Framework.Logging.Logger.Add(System.String,osu.Framework.Logging.LogLevel,System.Exception,System.Boolean)
+  commentId: M:osu.Framework.Logging.Logger.Add(System.String,osu.Framework.Logging.LogLevel,System.Exception,System.Boolean)
+  id: Add(System.String,osu.Framework.Logging.LogLevel,System.Exception,System.Boolean)
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Add(string, LogLevel, Exception, bool)
+  nameWithType: Logger.Add(string, LogLevel, Exception, bool)
+  fullName: osu.Framework.Logging.Logger.Add(string, osu.Framework.Logging.LogLevel, System.Exception, bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Add
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 287
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: Log an arbitrary string to current log.
+  example: []
+  syntax:
+    content: public void Add(string message = "", LogLevel level = LogLevel.Verbose, Exception exception = null, bool outputToListeners = true)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log. Can include newline (\n) characters to split into multiple lines.
+    - id: level
+      type: osu.Framework.Logging.LogLevel
+      description: The verbosity level.
+    - id: exception
+      type: System.Exception
+      description: An optional related exception.
+    - id: outputToListeners
+      type: System.Boolean
+      description: Whether the message should be sent to listeners of <xref href="osu.Framework.Logging.Logger.Debug(System.String)" data-throw-if-not-resolved="false"></xref> and <xref href="System.Console" data-throw-if-not-resolved="false"></xref>. True by default.
+    content.vb: Public Sub Add(message As String = "", level As LogLevel = LogLevel.Verbose, exception As Exception = Nothing, outputToListeners As Boolean = True)
+  overload: osu.Framework.Logging.Logger.Add*
+  nameWithType.vb: Logger.Add(String, LogLevel, Exception, Boolean)
+  fullName.vb: osu.Framework.Logging.Logger.Add(String, osu.Framework.Logging.LogLevel, System.Exception, Boolean)
+  name.vb: Add(String, LogLevel, Exception, Boolean)
+- uid: osu.Framework.Logging.Logger.OutputToListeners
+  commentId: P:osu.Framework.Logging.Logger.OutputToListeners
+  id: OutputToListeners
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: OutputToListeners
+  nameWithType: Logger.OutputToListeners
+  fullName: osu.Framework.Logging.Logger.OutputToListeners
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: OutputToListeners
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 413
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: >-
+    Whether the output of this logger should be sent to listeners of <xref href="osu.Framework.Logging.Logger.Debug(System.String)" data-throw-if-not-resolved="false"></xref> and <xref href="System.Console" data-throw-if-not-resolved="false"></xref>.
+
+    Defaults to true.
+  example: []
+  syntax:
+    content: public bool OutputToListeners { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property OutputToListeners As Boolean
+  overload: osu.Framework.Logging.Logger.OutputToListeners*
+- uid: osu.Framework.Logging.Logger.NewEntry
+  commentId: E:osu.Framework.Logging.Logger.NewEntry
+  id: NewEntry
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: NewEntry
+  nameWithType: Logger.NewEntry
+  fullName: osu.Framework.Logging.Logger.NewEntry
+  type: Event
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: NewEntry
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 418
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: Fires whenever any logger tries to log a new entry, but before the entry is actually written to the logfile.
+  example: []
+  syntax:
+    content: public static event Action<LogEntry> NewEntry
+    return:
+      type: System.Action{osu.Framework.Logging.LogEntry}
+    content.vb: Public Shared Event NewEntry As Action(Of LogEntry)
+- uid: osu.Framework.Logging.Logger.Flush
+  commentId: M:osu.Framework.Logging.Logger.Flush
+  id: Flush
+  parent: osu.Framework.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Flush()
+  nameWithType: Logger.Flush()
+  fullName: osu.Framework.Logging.Logger.Flush()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Logging/Logger.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Flush
+    path: osu.Framework/Logging/Logger.cs
+    startLine: 470
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Logging
+  summary: Pause execution until all logger writes have completed and file handles have been closed.
+  example: []
+  syntax:
+    content: public static void Flush()
+    content.vb: Public Shared Sub Flush()
+  overload: osu.Framework.Logging.Logger.Flush*
+references:
+- uid: osu.Framework.Logging
+  commentId: N:osu.Framework.Logging
+  href: osu.html
+  name: osu.Framework.Logging
+  nameWithType: osu.Framework.Logging
+  fullName: osu.Framework.Logging
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Logging
+    name: Logging
+    href: osu.Framework.Logging.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Logging
+    name: Logging
+    href: osu.Framework.Logging.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Logging.Logger.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<Logger>(Logger)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<Logger>(Logger)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Logging.Logger>(osu.Framework.Logging.Logger)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of Logger)(Logger)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Logging.Logger)(osu.Framework.Logging.Logger)
+  name.vb: GetLocalisableDescription(Of Logger)(Logger)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Logging.Logger)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Logging.Logger)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+- uid: osu.Framework.Logging.Logger.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<Logger>(Logger)
+  nameWithType: EnumerableExtensions.Yield<Logger>(Logger)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Logging.Logger>(osu.Framework.Logging.Logger)
+  nameWithType.vb: EnumerableExtensions.Yield(Of Logger)(Logger)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Logging.Logger)(osu.Framework.Logging.Logger)
+  name.vb: Yield(Of Logger)(Logger)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Logging.Logger)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Logging.Logger)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+- uid: osu.Framework.Logging.Logger.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<Logger>(Logger)
+  nameWithType: ObjectExtensions.AsNonNull<Logger>(Logger)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Logging.Logger>(osu.Framework.Logging.Logger)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of Logger)(Logger)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Logging.Logger)(osu.Framework.Logging.Logger)
+  name.vb: AsNonNull(Of Logger)(Logger)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Logging.Logger)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Logging.Logger)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+- uid: osu.Framework.Logging.Logger.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<Logger>(Logger)
+  nameWithType: ObjectExtensions.IsNotNull<Logger>(Logger)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Logging.Logger>(osu.Framework.Logging.Logger)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of Logger)(Logger)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Logging.Logger)(osu.Framework.Logging.Logger)
+  name.vb: IsNotNull(Of Logger)(Logger)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Logging.Logger)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Logging.Logger)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+- uid: osu.Framework.Logging.Logger.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<Logger>(Logger)
+  nameWithType: ObjectExtensions.IsNull<Logger>(Logger)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Logging.Logger>(osu.Framework.Logging.Logger)
+  nameWithType.vb: ObjectExtensions.IsNull(Of Logger)(Logger)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Logging.Logger)(osu.Framework.Logging.Logger)
+  name.vb: IsNull(Of Logger)(Logger)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Logging.Logger)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Logging.Logger)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: )
+- uid: osu.Framework.Logging.Logger.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<Logger, TChild>(Logger, TChild)
+  nameWithType: ContainerExtensions.WithChild<Logger, TChild>(Logger, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Logging.Logger, TChild>(osu.Framework.Logging.Logger, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of Logger, TChild)(Logger, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Logging.Logger, TChild)(osu.Framework.Logging.Logger, TChild)
+  name.vb: WithChild(Of Logger, TChild)(Logger, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Logging.Logger,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Logging.Logger,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Logging.Logger.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<Logger, TChild>(Logger, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<Logger, TChild>(Logger, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Logging.Logger, TChild>(osu.Framework.Logging.Logger, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of Logger, TChild)(Logger, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Logging.Logger, TChild)(osu.Framework.Logging.Logger, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of Logger, TChild)(Logger, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Logging.Logger,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Logging.Logger,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Logging.Logger.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<Logger, TChild>(Logger, TChild)
+  nameWithType: ContainerExtensions.Wrap<Logger, TChild>(Logger, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Logging.Logger, TChild>(osu.Framework.Logging.Logger, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of Logger, TChild)(Logger, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Logging.Logger, TChild)(osu.Framework.Logging.Logger, TChild)
+  name.vb: Wrap(Of Logger, TChild)(Logger, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Logging.Logger,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Logging.Logger,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Logging.Logger
+    name: Logger
+    href: osu.Framework.Logging.Logger.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Logging.LogLevel.Verbose
+  commentId: F:osu.Framework.Logging.LogLevel.Verbose
+  href: osu.Framework.Logging.LogLevel.html#osu_Framework_Logging_LogLevel_Verbose
+  name: Verbose
+  nameWithType: LogLevel.Verbose
+  fullName: osu.Framework.Logging.LogLevel.Verbose
+- uid: osu.Framework.Logging.LogLevel.Debug
+  commentId: F:osu.Framework.Logging.LogLevel.Debug
+  href: osu.Framework.Logging.LogLevel.html#osu_Framework_Logging_LogLevel_Debug
+  name: Debug
+  nameWithType: LogLevel.Debug
+  fullName: osu.Framework.Logging.LogLevel.Debug
+- uid: osu.Framework.Logging.LogLevel
+  commentId: T:osu.Framework.Logging.LogLevel
+  parent: osu.Framework.Logging
+  href: osu.Framework.Logging.LogLevel.html
+  name: LogLevel
+  nameWithType: LogLevel
+  fullName: osu.Framework.Logging.LogLevel
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: osu.Framework.Logging.Logger.Storage*
+  commentId: Overload:osu.Framework.Logging.Logger.Storage
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Storage
+  name: Storage
+  nameWithType: Logger.Storage
+  fullName: osu.Framework.Logging.Logger.Storage
+- uid: osu.Framework.Platform.Storage
+  commentId: T:osu.Framework.Platform.Storage
+  parent: osu.Framework.Platform
+  href: osu.Framework.Platform.Storage.html
+  name: Storage
+  nameWithType: Storage
+  fullName: osu.Framework.Platform.Storage
+- uid: osu.Framework.Platform
+  commentId: N:osu.Framework.Platform
+  href: osu.html
+  name: osu.Framework.Platform
+  nameWithType: osu.Framework.Platform
+  fullName: osu.Framework.Platform
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+- uid: osu.Framework.Logging.Logger.Target*
+  commentId: Overload:osu.Framework.Logging.Logger.Target
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Target
+  name: Target
+  nameWithType: Logger.Target
+  fullName: osu.Framework.Logging.Logger.Target
+- uid: System.Nullable{osu.Framework.Logging.LoggingTarget}
+  commentId: T:System.Nullable{osu.Framework.Logging.LoggingTarget}
+  parent: System
+  definition: System.Nullable`1
+  href: osu.Framework.Logging.LoggingTarget.html
+  name: LoggingTarget?
+  nameWithType: LoggingTarget?
+  fullName: osu.Framework.Logging.LoggingTarget?
+  spec.csharp:
+  - uid: osu.Framework.Logging.LoggingTarget
+    name: LoggingTarget
+    href: osu.Framework.Logging.LoggingTarget.html
+  - name: '?'
+  spec.vb:
+  - uid: osu.Framework.Logging.LoggingTarget
+    name: LoggingTarget
+    href: osu.Framework.Logging.LoggingTarget.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Logging.Logger.Name*
+  commentId: Overload:osu.Framework.Logging.Logger.Name
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Name
+  name: Name
+  nameWithType: Logger.Name
+  fullName: osu.Framework.Logging.Logger.Name
+- uid: osu.Framework.Logging.Logger.Filename*
+  commentId: Overload:osu.Framework.Logging.Logger.Filename
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Filename
+  name: Filename
+  nameWithType: Logger.Filename
+  fullName: osu.Framework.Logging.Logger.Filename
+- uid: osu.Framework.Logging.Logger.TotalLogOperations*
+  commentId: Overload:osu.Framework.Logging.Logger.TotalLogOperations
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_TotalLogOperations
+  name: TotalLogOperations
+  nameWithType: Logger.TotalLogOperations
+  fullName: osu.Framework.Logging.Logger.TotalLogOperations
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: osu.Framework.Logging.Logger.ApplyFilters(System.String)
+  commentId: M:osu.Framework.Logging.Logger.ApplyFilters(System.String)
+  isExternal: true
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_ApplyFilters_System_String_
+  name: ApplyFilters(string)
+  nameWithType: Logger.ApplyFilters(string)
+  fullName: osu.Framework.Logging.Logger.ApplyFilters(string)
+  nameWithType.vb: Logger.ApplyFilters(String)
+  fullName.vb: osu.Framework.Logging.Logger.ApplyFilters(String)
+  name.vb: ApplyFilters(String)
+  spec.csharp:
+  - uid: osu.Framework.Logging.Logger.ApplyFilters(System.String)
+    name: ApplyFilters
+    href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_ApplyFilters_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Logging.Logger.ApplyFilters(System.String)
+    name: ApplyFilters
+    href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_ApplyFilters_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Logging.Logger.AddFilteredText*
+  commentId: Overload:osu.Framework.Logging.Logger.AddFilteredText
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_AddFilteredText_System_String_
+  name: AddFilteredText
+  nameWithType: Logger.AddFilteredText
+  fullName: osu.Framework.Logging.Logger.AddFilteredText
+- uid: osu.Framework.Logging.Logger.AddFilteredText(System.String)
+  commentId: M:osu.Framework.Logging.Logger.AddFilteredText(System.String)
+  isExternal: true
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_AddFilteredText_System_String_
+  name: AddFilteredText(string)
+  nameWithType: Logger.AddFilteredText(string)
+  fullName: osu.Framework.Logging.Logger.AddFilteredText(string)
+  nameWithType.vb: Logger.AddFilteredText(String)
+  fullName.vb: osu.Framework.Logging.Logger.AddFilteredText(String)
+  name.vb: AddFilteredText(String)
+  spec.csharp:
+  - uid: osu.Framework.Logging.Logger.AddFilteredText(System.String)
+    name: AddFilteredText
+    href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_AddFilteredText_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Logging.Logger.AddFilteredText(System.String)
+    name: AddFilteredText
+    href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_AddFilteredText_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Logging.Logger.ApplyFilters*
+  commentId: Overload:osu.Framework.Logging.Logger.ApplyFilters
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_ApplyFilters_System_String_
+  name: ApplyFilters
+  nameWithType: Logger.ApplyFilters
+  fullName: osu.Framework.Logging.Logger.ApplyFilters
+- uid: osu.Framework.Logging.Logger.Error*
+  commentId: Overload:osu.Framework.Logging.Logger.Error
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Error_System_Exception_System_String_osu_Framework_Logging_LoggingTarget_System_Boolean_
+  name: Error
+  nameWithType: Logger.Error
+  fullName: osu.Framework.Logging.Logger.Error
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: osu.Framework.Logging.LoggingTarget
+  commentId: T:osu.Framework.Logging.LoggingTarget
+  parent: osu.Framework.Logging
+  href: osu.Framework.Logging.LoggingTarget.html
+  name: LoggingTarget
+  nameWithType: LoggingTarget
+  fullName: osu.Framework.Logging.LoggingTarget
+- uid: osu.Framework.Logging.Logger.Debug(System.String)
+  commentId: M:osu.Framework.Logging.Logger.Debug(System.String)
+  isExternal: true
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Debug_System_String_
+  name: Debug(string)
+  nameWithType: Logger.Debug(string)
+  fullName: osu.Framework.Logging.Logger.Debug(string)
+  nameWithType.vb: Logger.Debug(String)
+  fullName.vb: osu.Framework.Logging.Logger.Debug(String)
+  name.vb: Debug(String)
+  spec.csharp:
+  - uid: osu.Framework.Logging.Logger.Debug(System.String)
+    name: Debug
+    href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Debug_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Logging.Logger.Debug(System.String)
+    name: Debug
+    href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Debug_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Console
+  commentId: T:System.Console
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.console
+  name: Console
+  nameWithType: Console
+  fullName: System.Console
+- uid: osu.Framework.Logging.Logger.Log*
+  commentId: Overload:osu.Framework.Logging.Logger.Log
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Log_System_String_osu_Framework_Logging_LoggingTarget_osu_Framework_Logging_LogLevel_System_Boolean_
+  name: Log
+  nameWithType: Logger.Log
+  fullName: osu.Framework.Logging.Logger.Log
+- uid: osu.Framework.Logging.Logger.LogPrint*
+  commentId: Overload:osu.Framework.Logging.Logger.LogPrint
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_LogPrint_System_String_osu_Framework_Logging_LoggingTarget_osu_Framework_Logging_LogLevel_
+  name: LogPrint
+  nameWithType: Logger.LogPrint
+  fullName: osu.Framework.Logging.Logger.LogPrint
+- uid: osu.Framework.Logging.Logger.GetLogger*
+  commentId: Overload:osu.Framework.Logging.Logger.GetLogger
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_GetLogger_osu_Framework_Logging_LoggingTarget_
+  name: GetLogger
+  nameWithType: Logger.GetLogger
+  fullName: osu.Framework.Logging.Logger.GetLogger
+- uid: osu.Framework.Logging.Logger
+  commentId: T:osu.Framework.Logging.Logger
+  parent: osu.Framework.Logging
+  href: osu.Framework.Logging.Logger.html
+  name: Logger
+  nameWithType: Logger
+  fullName: osu.Framework.Logging.Logger
+- uid: osu.Framework.Logging.Logger.Level
+  commentId: F:osu.Framework.Logging.Logger.Level
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Level
+  name: Level
+  nameWithType: Logger.Level
+  fullName: osu.Framework.Logging.Logger.Level
+- uid: osu.Framework.Logging.Logger.Debug*
+  commentId: Overload:osu.Framework.Logging.Logger.Debug
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Debug_System_String_
+  name: Debug
+  nameWithType: Logger.Debug
+  fullName: osu.Framework.Logging.Logger.Debug
+- uid: osu.Framework.Logging.Logger.Add*
+  commentId: Overload:osu.Framework.Logging.Logger.Add
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Add_System_String_osu_Framework_Logging_LogLevel_System_Exception_System_Boolean_
+  name: Add
+  nameWithType: Logger.Add
+  fullName: osu.Framework.Logging.Logger.Add
+- uid: osu.Framework.Logging.Logger.OutputToListeners*
+  commentId: Overload:osu.Framework.Logging.Logger.OutputToListeners
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_OutputToListeners
+  name: OutputToListeners
+  nameWithType: Logger.OutputToListeners
+  fullName: osu.Framework.Logging.Logger.OutputToListeners
+- uid: System.Action{osu.Framework.Logging.LogEntry}
+  commentId: T:System.Action{osu.Framework.Logging.LogEntry}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<LogEntry>
+  nameWithType: Action<LogEntry>
+  fullName: System.Action<osu.Framework.Logging.LogEntry>
+  nameWithType.vb: Action(Of LogEntry)
+  fullName.vb: System.Action(Of osu.Framework.Logging.LogEntry)
+  name.vb: Action(Of LogEntry)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: osu.Framework.Logging.LogEntry
+    name: LogEntry
+    href: osu.Framework.Logging.LogEntry.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Logging.LogEntry
+    name: LogEntry
+    href: osu.Framework.Logging.LogEntry.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Logging.Logger.Flush*
+  commentId: Overload:osu.Framework.Logging.Logger.Flush
+  href: osu.Framework.Logging.Logger.html#osu_Framework_Logging_Logger_Flush
+  name: Flush
+  nameWithType: Logger.Flush
+  fullName: osu.Framework.Logging.Logger.Flush

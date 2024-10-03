@@ -1,0 +1,650 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PathApproximator | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PathApproximator | osu!framework ">
+      
+      <meta name="description" content="Helper methods to approximate a path by interpolating a sequence of control points.">
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_Utils_PathApproximator.md&amp;value=---%0Auid%3A%20osu.Framework.Utils.PathApproximator%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.Utils.PathApproximator">
+
+
+
+  <h1 id="osu_Framework_Utils_PathApproximator" data-uid="osu.Framework.Utils.PathApproximator" class="text-break">
+Class PathApproximator  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Utils/PathApproximator.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.Utils.html">Utils</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Helper methods to approximate a path by interpolating a sequence of control points.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class PathApproximator</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PathApproximator</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_Utils_PathApproximator_BSplineToBezier_" data-uid="osu.Framework.Utils.PathApproximator.BSplineToBezier*"></a>
+
+  <h3 id="osu_Framework_Utils_PathApproximator_BSplineToBezier_System_ReadOnlySpan_osuTK_Vector2__System_Int32_" data-uid="osu.Framework.Utils.PathApproximator.BSplineToBezier(System.ReadOnlySpan{osuTK.Vector2},System.Int32)">
+  BSplineToBezier(ReadOnlySpan&lt;Vector2&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Utils/PathApproximator.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts a B-spline with polynomial order <code class="paramref">degree</code> to a series of Bezier control points
+via Boehm's algorithm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector2[] BSplineToBezier(ReadOnlySpan&lt;Vector2&gt; controlPoints, int degree)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controlPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>The control points.</p>
+</dd>
+    <dt><code>degree</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The polynomial order.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span>[]</dt>
+    <dd><p>An array of vectors containing control point positions for the resulting Bezier curve.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Utils_PathApproximator_BSplineToBezier_System_ReadOnlySpan_osuTK_Vector2__System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Does nothing if <code class="paramref">controlPoints</code> has zero points or one point.
+Algorithm unsuitable for large values of <code class="paramref">degree</code> with many knots.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">degree</code> was less than 1.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Utils_PathApproximator_BSplineToPiecewiseLinear_" data-uid="osu.Framework.Utils.PathApproximator.BSplineToPiecewiseLinear*"></a>
+
+  <h3 id="osu_Framework_Utils_PathApproximator_BSplineToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__System_Int32_" data-uid="osu.Framework.Utils.PathApproximator.BSplineToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2},System.Int32)">
+  BSplineToPiecewiseLinear(ReadOnlySpan&lt;Vector2&gt;, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Utils/PathApproximator.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a piecewise-linear approximation of a clamped uniform B-spline with polynomial order <code class="paramref">degree</code>,
+by dividing it into a series of bezier control points at its knots, then adaptively repeatedly
+subdividing those until their approximation error vanishes below a given threshold.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;Vector2&gt; BSplineToPiecewiseLinear(ReadOnlySpan&lt;Vector2&gt; controlPoints, int degree)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controlPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>The control points.</p>
+</dd>
+    <dt><code>degree</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The polynomial order.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>A list of vectors representing the piecewise-linear approximation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_Utils_PathApproximator_BSplineToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Does nothing if <code class="paramref">controlPoints</code> has zero points or one point.
+Generalises to bezier approximation functionality when <code class="paramref">degree</code> is too large to create knots.
+Algorithm unsuitable for large values of <code class="paramref">degree</code> with many knots.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p><code class="paramref">degree</code> was less than 1.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="osu_Framework_Utils_PathApproximator_BezierToPiecewiseLinear_" data-uid="osu.Framework.Utils.PathApproximator.BezierToPiecewiseLinear*"></a>
+
+  <h3 id="osu_Framework_Utils_PathApproximator_BezierToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__" data-uid="osu.Framework.Utils.PathApproximator.BezierToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})">
+  BezierToPiecewiseLinear(ReadOnlySpan&lt;Vector2&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Utils/PathApproximator.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a piecewise-linear approximation of a bezier curve, by adaptively repeatedly subdividing
+the control points until their approximation error vanishes below a given threshold.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;Vector2&gt; BezierToPiecewiseLinear(ReadOnlySpan&lt;Vector2&gt; controlPoints)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controlPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>The control points.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>A list of vectors representing the piecewise-linear approximation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Utils_PathApproximator_CatmullToPiecewiseLinear_" data-uid="osu.Framework.Utils.PathApproximator.CatmullToPiecewiseLinear*"></a>
+
+  <h3 id="osu_Framework_Utils_PathApproximator_CatmullToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__" data-uid="osu.Framework.Utils.PathApproximator.CatmullToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})">
+  CatmullToPiecewiseLinear(ReadOnlySpan&lt;Vector2&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Utils/PathApproximator.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a piecewise-linear approximation of a Catmull-Rom spline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;Vector2&gt; CatmullToPiecewiseLinear(ReadOnlySpan&lt;Vector2&gt; controlPoints)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controlPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>A list of vectors representing the piecewise-linear approximation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Utils_PathApproximator_CircularArcBoundingBox_" data-uid="osu.Framework.Utils.PathApproximator.CircularArcBoundingBox*"></a>
+
+  <h3 id="osu_Framework_Utils_PathApproximator_CircularArcBoundingBox_System_ReadOnlySpan_osuTK_Vector2__" data-uid="osu.Framework.Utils.PathApproximator.CircularArcBoundingBox(System.ReadOnlySpan{osuTK.Vector2})">
+  CircularArcBoundingBox(ReadOnlySpan&lt;Vector2&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Utils/PathApproximator.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes the bounding box of a circular arc.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static RectangleF CircularArcBoundingBox(ReadOnlySpan&lt;Vector2&gt; controlPoints)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controlPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>Three distinct points on the arc.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="osu.Framework.Graphics.Primitives.RectangleF.html">RectangleF</a></dt>
+    <dd><p>The rectangle inscribing the circular arc.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Utils_PathApproximator_CircularArcToPiecewiseLinear_" data-uid="osu.Framework.Utils.PathApproximator.CircularArcToPiecewiseLinear*"></a>
+
+  <h3 id="osu_Framework_Utils_PathApproximator_CircularArcToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__" data-uid="osu.Framework.Utils.PathApproximator.CircularArcToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})">
+  CircularArcToPiecewiseLinear(ReadOnlySpan&lt;Vector2&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Utils/PathApproximator.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a piecewise-linear approximation of a circular arc curve.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;Vector2&gt; CircularArcToPiecewiseLinear(ReadOnlySpan&lt;Vector2&gt; controlPoints)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controlPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>A list of vectors representing the piecewise-linear approximation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Utils_PathApproximator_LagrangePolynomialToPiecewiseLinear_" data-uid="osu.Framework.Utils.PathApproximator.LagrangePolynomialToPiecewiseLinear*"></a>
+
+  <h3 id="osu_Framework_Utils_PathApproximator_LagrangePolynomialToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__" data-uid="osu.Framework.Utils.PathApproximator.LagrangePolynomialToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})">
+  LagrangePolynomialToPiecewiseLinear(ReadOnlySpan&lt;Vector2&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Utils/PathApproximator.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a piecewise-linear approximation of a lagrange polynomial.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;Vector2&gt; LagrangePolynomialToPiecewiseLinear(ReadOnlySpan&lt;Vector2&gt; controlPoints)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controlPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>A list of vectors representing the piecewise-linear approximation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Utils_PathApproximator_LinearToPiecewiseLinear_" data-uid="osu.Framework.Utils.PathApproximator.LinearToPiecewiseLinear*"></a>
+
+  <h3 id="osu_Framework_Utils_PathApproximator_LinearToPiecewiseLinear_System_ReadOnlySpan_osuTK_Vector2__" data-uid="osu.Framework.Utils.PathApproximator.LinearToPiecewiseLinear(System.ReadOnlySpan{osuTK.Vector2})">
+  LinearToPiecewiseLinear(ReadOnlySpan&lt;Vector2&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Utils/PathApproximator.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a piecewise-linear approximation of a linear curve.
+Basically, returns the input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;Vector2&gt; LinearToPiecewiseLinear(ReadOnlySpan&lt;Vector2&gt; controlPoints)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>controlPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>A list of vectors representing the piecewise-linear approximation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Utils_PathApproximator_PiecewiseLinearToBSpline_" data-uid="osu.Framework.Utils.PathApproximator.PiecewiseLinearToBSpline*"></a>
+
+  <h3 id="osu_Framework_Utils_PathApproximator_PiecewiseLinearToBSpline_System_ReadOnlySpan_osuTK_Vector2__System_Int32_System_Int32_System_Int32_System_Int32_System_Single_System_Single_System_Single_System_Collections_Generic_List_osuTK_Vector2__System_Single_0__0___" data-uid="osu.Framework.Utils.PathApproximator.PiecewiseLinearToBSpline(System.ReadOnlySpan{osuTK.Vector2},System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Collections.Generic.List{osuTK.Vector2},System.Single[0:,0:])">
+  PiecewiseLinearToBSpline(ReadOnlySpan&lt;Vector2&gt;, int, int, int, int, float, float, float, List&lt;Vector2&gt;?, float[,]?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Utils/PathApproximator.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a B-spline approximation from a piecewise-linear path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;Vector2&gt; PiecewiseLinearToBSpline(ReadOnlySpan&lt;Vector2&gt; inputPath, int numControlPoints, int degree, int numTestPoints = 100, int maxIterations = 100, float learningRate = 8, float b1 = 0.8, float b2 = 0.99, List&lt;Vector2&gt;? initialControlPoints = null, float[,]? learnableMask = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inputPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>The piecewise-linear path to approximate.</p>
+</dd>
+    <dt><code>numControlPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of control points to use in the B-spline approximation.</p>
+</dd>
+    <dt><code>degree</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The polynomial order.</p>
+</dd>
+    <dt><code>numTestPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of points to evaluate the B-spline path at for optimization, basically a resolution.</p>
+</dd>
+    <dt><code>maxIterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of optimization steps.</p>
+</dd>
+    <dt><code>learningRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The rate of optimization. Larger values converge faster but can be unstable.</p>
+</dd>
+    <dt><code>b1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The B1 parameter for the Adam optimizer. Between 0 and 1.</p>
+</dd>
+    <dt><code>b2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The B2 parameter for the Adam optimizer. Between 0 and 1.</p>
+</dd>
+    <dt><code>initialControlPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>The initial B-spline control points to use before optimization. The length of this list should be equal to <code class="paramref">numControlPoints</code>.</p>
+</dd>
+    <dt><code>learnableMask</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[,]</dt>
+    <dd><p>Mask determining which control point positions are fixed and cannot be changed by the optimiser.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>A List of vectors representing the B-spline control points.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_Utils_PathApproximator_PiecewiseLinearToBezier_" data-uid="osu.Framework.Utils.PathApproximator.PiecewiseLinearToBezier*"></a>
+
+  <h3 id="osu_Framework_Utils_PathApproximator_PiecewiseLinearToBezier_System_ReadOnlySpan_osuTK_Vector2__System_Int32_System_Int32_System_Int32_System_Single_System_Single_System_Single_System_Collections_Generic_List_osuTK_Vector2__System_Single_0__0___" data-uid="osu.Framework.Utils.PathApproximator.PiecewiseLinearToBezier(System.ReadOnlySpan{osuTK.Vector2},System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Single,System.Collections.Generic.List{osuTK.Vector2},System.Single[0:,0:])">
+  PiecewiseLinearToBezier(ReadOnlySpan&lt;Vector2&gt;, int, int, int, float, float, float, List&lt;Vector2&gt;?, float[,]?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Utils/PathApproximator.cs/#L312"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a bezier curve approximation from a piecewise-linear path.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;Vector2&gt; PiecewiseLinearToBezier(ReadOnlySpan&lt;Vector2&gt; inputPath, int numControlPoints, int numTestPoints = 100, int maxIterations = 100, float learningRate = 8, float b1 = 0.8, float b2 = 0.99, List&lt;Vector2&gt;? initialControlPoints = null, float[,]? learnableMask = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inputPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>The piecewise-linear path to approximate.</p>
+</dd>
+    <dt><code>numControlPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of control points to use in the bezier approximation.</p>
+</dd>
+    <dt><code>numTestPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of points to evaluate the bezier path at for optimization, basically a resolution.</p>
+</dd>
+    <dt><code>maxIterations</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of optimization steps.</p>
+</dd>
+    <dt><code>learningRate</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The rate of optimization. Larger values converge faster but can be unstable.</p>
+</dd>
+    <dt><code>b1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The B1 parameter for the Adam optimizer. Between 0 and 1.</p>
+</dd>
+    <dt><code>b2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>The B2 parameter for the Adam optimizer. Between 0 and 1.</p>
+</dd>
+    <dt><code>initialControlPoints</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>The initial bezier control points to use before optimization. The length of this list should be equal to <code class="paramref">numControlPoints</code>.</p>
+</dd>
+    <dt><code>learnableMask</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[,]</dt>
+    <dd><p>Mask determining which control point positions are fixed and cannot be changed by the optimiser.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
+    <dd><p>A List of vectors representing the bezier control points.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Utils/PathApproximator.cs/#L16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

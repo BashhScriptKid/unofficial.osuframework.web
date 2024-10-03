@@ -1,0 +1,2123 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+  commentId: T:osu.Framework.Tests.Bindables.BindableLeasingTest
+  id: BindableLeasingTest
+  parent: osu.Framework.Tests.Bindables
+  children:
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.SetUp
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromBindingChain
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromLease
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestConsecutiveLeases
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindingToLeased
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindings
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledRevertedAfterLease(System.Boolean)
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledStateDuringLease
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleLeaseFails
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleReturnSilentlyNoops
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestIncorrectEndLease
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseAndReturn(System.Boolean)
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseFromBoundBindable
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseReturnedOnUnbindAll(System.Boolean)
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeasedBoundToMultiple
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestModifyAfterReturnFail
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestReturnFromBoundCopyOfLeaseFails
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestUnbindAllReturnsLease
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.TestValueChangeViaBindings
+  langs:
+  - csharp
+  - vb
+  name: BindableLeasingTest
+  nameWithType: BindableLeasingTest
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest
+  type: Class
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: BindableLeasingTest
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 11
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class BindableLeasingTest
+    content.vb: >-
+      <TestFixture>
+
+      Public Class BindableLeasingTest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.SetUp
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.SetUp
+  id: SetUp
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: SetUp()
+  nameWithType: BindableLeasingTest.SetUp()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.SetUp()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: SetUp
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 16
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [SetUp]
+
+      public void SetUp()
+    content.vb: >-
+      <SetUp>
+
+      Public Sub SetUp()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.SetUp*
+  attributes:
+  - type: NUnit.Framework.SetUpAttribute
+    ctor: NUnit.Framework.SetUpAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseAndReturn(System.Boolean)
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseAndReturn(System.Boolean)
+  id: TestLeaseAndReturn(System.Boolean)
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestLeaseAndReturn(bool)
+  nameWithType: BindableLeasingTest.TestLeaseAndReturn(bool)
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseAndReturn(bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestLeaseAndReturn
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 22
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [TestCase(false)]
+
+      [TestCase(true)]
+
+      public void TestLeaseAndReturn(bool revert)
+    parameters:
+    - id: revert
+      type: System.Boolean
+    content.vb: >-
+      <TestCase(False)>
+
+      <TestCase(True)>
+
+      Public Sub TestLeaseAndReturn(revert As Boolean)
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseAndReturn*
+  attributes:
+  - type: NUnit.Framework.TestCaseAttribute
+    ctor: NUnit.Framework.TestCaseAttribute.#ctor(System.Object)
+    arguments:
+    - type: System.Boolean
+      value: false
+  - type: NUnit.Framework.TestCaseAttribute
+    ctor: NUnit.Framework.TestCaseAttribute.#ctor(System.Object)
+    arguments:
+    - type: System.Boolean
+      value: true
+  nameWithType.vb: BindableLeasingTest.TestLeaseAndReturn(Boolean)
+  fullName.vb: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseAndReturn(Boolean)
+  name.vb: TestLeaseAndReturn(Boolean)
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseReturnedOnUnbindAll(System.Boolean)
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseReturnedOnUnbindAll(System.Boolean)
+  id: TestLeaseReturnedOnUnbindAll(System.Boolean)
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestLeaseReturnedOnUnbindAll(bool)
+  nameWithType: BindableLeasingTest.TestLeaseReturnedOnUnbindAll(bool)
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseReturnedOnUnbindAll(bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestLeaseReturnedOnUnbindAll
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 40
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [TestCase(false)]
+
+      [TestCase(true)]
+
+      public void TestLeaseReturnedOnUnbindAll(bool revert)
+    parameters:
+    - id: revert
+      type: System.Boolean
+    content.vb: >-
+      <TestCase(False)>
+
+      <TestCase(True)>
+
+      Public Sub TestLeaseReturnedOnUnbindAll(revert As Boolean)
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseReturnedOnUnbindAll*
+  attributes:
+  - type: NUnit.Framework.TestCaseAttribute
+    ctor: NUnit.Framework.TestCaseAttribute.#ctor(System.Object)
+    arguments:
+    - type: System.Boolean
+      value: false
+  - type: NUnit.Framework.TestCaseAttribute
+    ctor: NUnit.Framework.TestCaseAttribute.#ctor(System.Object)
+    arguments:
+    - type: System.Boolean
+      value: true
+  nameWithType.vb: BindableLeasingTest.TestLeaseReturnedOnUnbindAll(Boolean)
+  fullName.vb: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseReturnedOnUnbindAll(Boolean)
+  name.vb: TestLeaseReturnedOnUnbindAll(Boolean)
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestConsecutiveLeases
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestConsecutiveLeases
+  id: TestConsecutiveLeases
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestConsecutiveLeases()
+  nameWithType: BindableLeasingTest.TestConsecutiveLeases()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestConsecutiveLeases()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestConsecutiveLeases
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 58
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestConsecutiveLeases()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestConsecutiveLeases()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestConsecutiveLeases*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestModifyAfterReturnFail
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestModifyAfterReturnFail
+  id: TestModifyAfterReturnFail
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestModifyAfterReturnFail()
+  nameWithType: BindableLeasingTest.TestModifyAfterReturnFail()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestModifyAfterReturnFail()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestModifyAfterReturnFail
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 67
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestModifyAfterReturnFail()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestModifyAfterReturnFail()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestModifyAfterReturnFail*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleReturnSilentlyNoops
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleReturnSilentlyNoops
+  id: TestDoubleReturnSilentlyNoops
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestDoubleReturnSilentlyNoops()
+  nameWithType: BindableLeasingTest.TestDoubleReturnSilentlyNoops()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleReturnSilentlyNoops()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestDoubleReturnSilentlyNoops
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 77
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestDoubleReturnSilentlyNoops()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestDoubleReturnSilentlyNoops()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleReturnSilentlyNoops*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleLeaseFails
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleLeaseFails
+  id: TestDoubleLeaseFails
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestDoubleLeaseFails()
+  nameWithType: BindableLeasingTest.TestDoubleLeaseFails()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleLeaseFails()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestDoubleLeaseFails
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 86
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestDoubleLeaseFails()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestDoubleLeaseFails()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleLeaseFails*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestIncorrectEndLease
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestIncorrectEndLease
+  id: TestIncorrectEndLease
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestIncorrectEndLease()
+  nameWithType: BindableLeasingTest.TestIncorrectEndLease()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestIncorrectEndLease()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestIncorrectEndLease
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 93
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestIncorrectEndLease()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestIncorrectEndLease()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestIncorrectEndLease*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledStateDuringLease
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledStateDuringLease
+  id: TestDisabledStateDuringLease
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestDisabledStateDuringLease()
+  nameWithType: BindableLeasingTest.TestDisabledStateDuringLease()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledStateDuringLease()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestDisabledStateDuringLease
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 104
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestDisabledStateDuringLease()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestDisabledStateDuringLease()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledStateDuringLease*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindings
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindings
+  id: TestDisabledChangeViaBindings
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestDisabledChangeViaBindings()
+  nameWithType: BindableLeasingTest.TestDisabledChangeViaBindings()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindings()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestDisabledChangeViaBindings
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 142
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestDisabledChangeViaBindings()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestDisabledChangeViaBindings()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindings*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindingToLeased
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindingToLeased
+  id: TestDisabledChangeViaBindingToLeased
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestDisabledChangeViaBindingToLeased()
+  nameWithType: BindableLeasingTest.TestDisabledChangeViaBindingToLeased()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindingToLeased()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestDisabledChangeViaBindingToLeased
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 154
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestDisabledChangeViaBindingToLeased()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestDisabledChangeViaBindingToLeased()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindingToLeased*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestValueChangeViaBindings
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestValueChangeViaBindings
+  id: TestValueChangeViaBindings
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestValueChangeViaBindings()
+  nameWithType: BindableLeasingTest.TestValueChangeViaBindings()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestValueChangeViaBindings()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestValueChangeViaBindings
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 170
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestValueChangeViaBindings()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestValueChangeViaBindings()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestValueChangeViaBindings*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledRevertedAfterLease(System.Boolean)
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledRevertedAfterLease(System.Boolean)
+  id: TestDisabledRevertedAfterLease(System.Boolean)
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestDisabledRevertedAfterLease(bool)
+  nameWithType: BindableLeasingTest.TestDisabledRevertedAfterLease(bool)
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledRevertedAfterLease(bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestDisabledRevertedAfterLease
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 182
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [TestCase(false)]
+
+      [TestCase(true)]
+
+      public void TestDisabledRevertedAfterLease(bool revert)
+    parameters:
+    - id: revert
+      type: System.Boolean
+    content.vb: >-
+      <TestCase(False)>
+
+      <TestCase(True)>
+
+      Public Sub TestDisabledRevertedAfterLease(revert As Boolean)
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledRevertedAfterLease*
+  attributes:
+  - type: NUnit.Framework.TestCaseAttribute
+    ctor: NUnit.Framework.TestCaseAttribute.#ctor(System.Object)
+    arguments:
+    - type: System.Boolean
+      value: false
+  - type: NUnit.Framework.TestCaseAttribute
+    ctor: NUnit.Framework.TestCaseAttribute.#ctor(System.Object)
+    arguments:
+    - type: System.Boolean
+      value: true
+  nameWithType.vb: BindableLeasingTest.TestDisabledRevertedAfterLease(Boolean)
+  fullName.vb: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledRevertedAfterLease(Boolean)
+  name.vb: TestDisabledRevertedAfterLease(Boolean)
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseFromBoundBindable
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseFromBoundBindable
+  id: TestLeaseFromBoundBindable
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestLeaseFromBoundBindable()
+  nameWithType: BindableLeasingTest.TestLeaseFromBoundBindable()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseFromBoundBindable()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestLeaseFromBoundBindable
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 200
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestLeaseFromBoundBindable()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestLeaseFromBoundBindable()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseFromBoundBindable*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromLease
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromLease
+  id: TestCantLeaseFromLease
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestCantLeaseFromLease()
+  nameWithType: BindableLeasingTest.TestCantLeaseFromLease()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromLease()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestCantLeaseFromLease
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 242
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestCantLeaseFromLease()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestCantLeaseFromLease()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromLease*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromBindingChain
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromBindingChain
+  id: TestCantLeaseFromBindingChain
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestCantLeaseFromBindingChain()
+  nameWithType: BindableLeasingTest.TestCantLeaseFromBindingChain()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromBindingChain()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestCantLeaseFromBindingChain
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 249
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestCantLeaseFromBindingChain()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestCantLeaseFromBindingChain()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromBindingChain*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestReturnFromBoundCopyOfLeaseFails
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestReturnFromBoundCopyOfLeaseFails
+  id: TestReturnFromBoundCopyOfLeaseFails
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestReturnFromBoundCopyOfLeaseFails()
+  nameWithType: BindableLeasingTest.TestReturnFromBoundCopyOfLeaseFails()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestReturnFromBoundCopyOfLeaseFails()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestReturnFromBoundCopyOfLeaseFails
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 259
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestReturnFromBoundCopyOfLeaseFails()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestReturnFromBoundCopyOfLeaseFails()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestReturnFromBoundCopyOfLeaseFails*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestUnbindAllReturnsLease
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestUnbindAllReturnsLease
+  id: TestUnbindAllReturnsLease
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestUnbindAllReturnsLease()
+  nameWithType: BindableLeasingTest.TestUnbindAllReturnsLease()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestUnbindAllReturnsLease()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestUnbindAllReturnsLease
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 269
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestUnbindAllReturnsLease()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestUnbindAllReturnsLease()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestUnbindAllReturnsLease*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeasedBoundToMultiple
+  commentId: M:osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeasedBoundToMultiple
+  id: TestLeasedBoundToMultiple
+  parent: osu.Framework.Tests.Bindables.BindableLeasingTest
+  langs:
+  - csharp
+  - vb
+  name: TestLeasedBoundToMultiple()
+  nameWithType: BindableLeasingTest.TestLeasedBoundToMultiple()
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeasedBoundToMultiple()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestLeasedBoundToMultiple
+    path: osu.Framework.Tests/Bindables/BindableLeasingTest.cs
+    startLine: 277
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Bindables
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestLeasedBoundToMultiple()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestLeasedBoundToMultiple()
+  overload: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeasedBoundToMultiple*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: osu.Framework.Tests.Bindables
+  commentId: N:osu.Framework.Tests.Bindables
+  href: osu.html
+  name: osu.Framework.Tests.Bindables
+  nameWithType: osu.Framework.Tests.Bindables
+  fullName: osu.Framework.Tests.Bindables
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Tests
+    name: Tests
+    href: osu.Framework.Tests.html
+  - name: .
+  - uid: osu.Framework.Tests.Bindables
+    name: Bindables
+    href: osu.Framework.Tests.Bindables.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Tests
+    name: Tests
+    href: osu.Framework.Tests.html
+  - name: .
+  - uid: osu.Framework.Tests.Bindables
+    name: Bindables
+    href: osu.Framework.Tests.Bindables.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<BindableLeasingTest>(BindableLeasingTest)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<BindableLeasingTest>(BindableLeasingTest)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Tests.Bindables.BindableLeasingTest>(osu.Framework.Tests.Bindables.BindableLeasingTest)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of BindableLeasingTest)(BindableLeasingTest)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Tests.Bindables.BindableLeasingTest)(osu.Framework.Tests.Bindables.BindableLeasingTest)
+  name.vb: GetLocalisableDescription(Of BindableLeasingTest)(BindableLeasingTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Tests.Bindables.BindableLeasingTest)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Tests.Bindables.BindableLeasingTest)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<BindableLeasingTest>(BindableLeasingTest)
+  nameWithType: EnumerableExtensions.Yield<BindableLeasingTest>(BindableLeasingTest)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Tests.Bindables.BindableLeasingTest>(osu.Framework.Tests.Bindables.BindableLeasingTest)
+  nameWithType.vb: EnumerableExtensions.Yield(Of BindableLeasingTest)(BindableLeasingTest)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Tests.Bindables.BindableLeasingTest)(osu.Framework.Tests.Bindables.BindableLeasingTest)
+  name.vb: Yield(Of BindableLeasingTest)(BindableLeasingTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Tests.Bindables.BindableLeasingTest)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Tests.Bindables.BindableLeasingTest)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<BindableLeasingTest>(BindableLeasingTest)
+  nameWithType: ObjectExtensions.AsNonNull<BindableLeasingTest>(BindableLeasingTest)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Tests.Bindables.BindableLeasingTest>(osu.Framework.Tests.Bindables.BindableLeasingTest)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of BindableLeasingTest)(BindableLeasingTest)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Tests.Bindables.BindableLeasingTest)(osu.Framework.Tests.Bindables.BindableLeasingTest)
+  name.vb: AsNonNull(Of BindableLeasingTest)(BindableLeasingTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Tests.Bindables.BindableLeasingTest)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Tests.Bindables.BindableLeasingTest)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<BindableLeasingTest>(BindableLeasingTest)
+  nameWithType: ObjectExtensions.IsNotNull<BindableLeasingTest>(BindableLeasingTest)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Tests.Bindables.BindableLeasingTest>(osu.Framework.Tests.Bindables.BindableLeasingTest)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of BindableLeasingTest)(BindableLeasingTest)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Tests.Bindables.BindableLeasingTest)(osu.Framework.Tests.Bindables.BindableLeasingTest)
+  name.vb: IsNotNull(Of BindableLeasingTest)(BindableLeasingTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Tests.Bindables.BindableLeasingTest)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Tests.Bindables.BindableLeasingTest)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<BindableLeasingTest>(BindableLeasingTest)
+  nameWithType: ObjectExtensions.IsNull<BindableLeasingTest>(BindableLeasingTest)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Tests.Bindables.BindableLeasingTest>(osu.Framework.Tests.Bindables.BindableLeasingTest)
+  nameWithType.vb: ObjectExtensions.IsNull(Of BindableLeasingTest)(BindableLeasingTest)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Tests.Bindables.BindableLeasingTest)(osu.Framework.Tests.Bindables.BindableLeasingTest)
+  name.vb: IsNull(Of BindableLeasingTest)(BindableLeasingTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Tests.Bindables.BindableLeasingTest)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Tests.Bindables.BindableLeasingTest)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<BindableLeasingTest, TChild>(BindableLeasingTest, TChild)
+  nameWithType: ContainerExtensions.WithChild<BindableLeasingTest, TChild>(BindableLeasingTest, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Tests.Bindables.BindableLeasingTest, TChild>(osu.Framework.Tests.Bindables.BindableLeasingTest, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of BindableLeasingTest, TChild)(BindableLeasingTest, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Tests.Bindables.BindableLeasingTest, TChild)(osu.Framework.Tests.Bindables.BindableLeasingTest, TChild)
+  name.vb: WithChild(Of BindableLeasingTest, TChild)(BindableLeasingTest, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Tests.Bindables.BindableLeasingTest,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Tests.Bindables.BindableLeasingTest,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<BindableLeasingTest, TChild>(BindableLeasingTest, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<BindableLeasingTest, TChild>(BindableLeasingTest, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Tests.Bindables.BindableLeasingTest, TChild>(osu.Framework.Tests.Bindables.BindableLeasingTest, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of BindableLeasingTest, TChild)(BindableLeasingTest, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Tests.Bindables.BindableLeasingTest, TChild)(osu.Framework.Tests.Bindables.BindableLeasingTest, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of BindableLeasingTest, TChild)(BindableLeasingTest, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Tests.Bindables.BindableLeasingTest,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Tests.Bindables.BindableLeasingTest,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<BindableLeasingTest, TChild>(BindableLeasingTest, TChild)
+  nameWithType: ContainerExtensions.Wrap<BindableLeasingTest, TChild>(BindableLeasingTest, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Tests.Bindables.BindableLeasingTest, TChild>(osu.Framework.Tests.Bindables.BindableLeasingTest, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of BindableLeasingTest, TChild)(BindableLeasingTest, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Tests.Bindables.BindableLeasingTest, TChild)(osu.Framework.Tests.Bindables.BindableLeasingTest, TChild)
+  name.vb: Wrap(Of BindableLeasingTest, TChild)(BindableLeasingTest, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Tests.Bindables.BindableLeasingTest,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Tests.Bindables.BindableLeasingTest,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Bindables.BindableLeasingTest
+    name: BindableLeasingTest
+    href: osu.Framework.Tests.Bindables.BindableLeasingTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.SetUp*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.SetUp
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_SetUp
+  name: SetUp
+  nameWithType: BindableLeasingTest.SetUp
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.SetUp
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseAndReturn*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseAndReturn
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestLeaseAndReturn_System_Boolean_
+  name: TestLeaseAndReturn
+  nameWithType: BindableLeasingTest.TestLeaseAndReturn
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseAndReturn
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseReturnedOnUnbindAll*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseReturnedOnUnbindAll
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestLeaseReturnedOnUnbindAll_System_Boolean_
+  name: TestLeaseReturnedOnUnbindAll
+  nameWithType: BindableLeasingTest.TestLeaseReturnedOnUnbindAll
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseReturnedOnUnbindAll
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestConsecutiveLeases*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestConsecutiveLeases
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestConsecutiveLeases
+  name: TestConsecutiveLeases
+  nameWithType: BindableLeasingTest.TestConsecutiveLeases
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestConsecutiveLeases
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestModifyAfterReturnFail*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestModifyAfterReturnFail
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestModifyAfterReturnFail
+  name: TestModifyAfterReturnFail
+  nameWithType: BindableLeasingTest.TestModifyAfterReturnFail
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestModifyAfterReturnFail
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleReturnSilentlyNoops*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleReturnSilentlyNoops
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestDoubleReturnSilentlyNoops
+  name: TestDoubleReturnSilentlyNoops
+  nameWithType: BindableLeasingTest.TestDoubleReturnSilentlyNoops
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleReturnSilentlyNoops
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleLeaseFails*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleLeaseFails
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestDoubleLeaseFails
+  name: TestDoubleLeaseFails
+  nameWithType: BindableLeasingTest.TestDoubleLeaseFails
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDoubleLeaseFails
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestIncorrectEndLease*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestIncorrectEndLease
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestIncorrectEndLease
+  name: TestIncorrectEndLease
+  nameWithType: BindableLeasingTest.TestIncorrectEndLease
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestIncorrectEndLease
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledStateDuringLease*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledStateDuringLease
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestDisabledStateDuringLease
+  name: TestDisabledStateDuringLease
+  nameWithType: BindableLeasingTest.TestDisabledStateDuringLease
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledStateDuringLease
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindings*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindings
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestDisabledChangeViaBindings
+  name: TestDisabledChangeViaBindings
+  nameWithType: BindableLeasingTest.TestDisabledChangeViaBindings
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindings
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindingToLeased*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindingToLeased
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestDisabledChangeViaBindingToLeased
+  name: TestDisabledChangeViaBindingToLeased
+  nameWithType: BindableLeasingTest.TestDisabledChangeViaBindingToLeased
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledChangeViaBindingToLeased
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestValueChangeViaBindings*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestValueChangeViaBindings
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestValueChangeViaBindings
+  name: TestValueChangeViaBindings
+  nameWithType: BindableLeasingTest.TestValueChangeViaBindings
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestValueChangeViaBindings
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledRevertedAfterLease*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledRevertedAfterLease
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestDisabledRevertedAfterLease_System_Boolean_
+  name: TestDisabledRevertedAfterLease
+  nameWithType: BindableLeasingTest.TestDisabledRevertedAfterLease
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestDisabledRevertedAfterLease
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseFromBoundBindable*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseFromBoundBindable
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestLeaseFromBoundBindable
+  name: TestLeaseFromBoundBindable
+  nameWithType: BindableLeasingTest.TestLeaseFromBoundBindable
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeaseFromBoundBindable
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromLease*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromLease
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestCantLeaseFromLease
+  name: TestCantLeaseFromLease
+  nameWithType: BindableLeasingTest.TestCantLeaseFromLease
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromLease
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromBindingChain*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromBindingChain
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestCantLeaseFromBindingChain
+  name: TestCantLeaseFromBindingChain
+  nameWithType: BindableLeasingTest.TestCantLeaseFromBindingChain
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestCantLeaseFromBindingChain
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestReturnFromBoundCopyOfLeaseFails*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestReturnFromBoundCopyOfLeaseFails
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestReturnFromBoundCopyOfLeaseFails
+  name: TestReturnFromBoundCopyOfLeaseFails
+  nameWithType: BindableLeasingTest.TestReturnFromBoundCopyOfLeaseFails
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestReturnFromBoundCopyOfLeaseFails
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestUnbindAllReturnsLease*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestUnbindAllReturnsLease
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestUnbindAllReturnsLease
+  name: TestUnbindAllReturnsLease
+  nameWithType: BindableLeasingTest.TestUnbindAllReturnsLease
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestUnbindAllReturnsLease
+- uid: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeasedBoundToMultiple*
+  commentId: Overload:osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeasedBoundToMultiple
+  href: osu.Framework.Tests.Bindables.BindableLeasingTest.html#osu_Framework_Tests_Bindables_BindableLeasingTest_TestLeasedBoundToMultiple
+  name: TestLeasedBoundToMultiple
+  nameWithType: BindableLeasingTest.TestLeasedBoundToMultiple
+  fullName: osu.Framework.Tests.Bindables.BindableLeasingTest.TestLeasedBoundToMultiple

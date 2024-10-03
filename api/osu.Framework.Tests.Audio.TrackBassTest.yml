@@ -1,0 +1,2420 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Tests.Audio.TrackBassTest
+  commentId: T:osu.Framework.Tests.Audio.TrackBassTest
+  id: TrackBassTest
+  parent: osu.Framework.Tests.Audio
+  children:
+  - osu.Framework.Tests.Audio.TrackBassTest.Setup
+  - osu.Framework.Tests.Audio.TrackBassTest.Teardown
+  - osu.Framework.Tests.Audio.TrackBassTest.TestBitrate
+  - osu.Framework.Tests.Audio.TrackBassTest.TestCurrentTimeUpdatedAfterInlineSeek
+  - osu.Framework.Tests.Audio.TrackBassTest.TestHasCompletedResetsOnSeekBack
+  - osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStart
+  - osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStop
+  - osu.Framework.Tests.Audio.TrackBassTest.TestLoopingRestart(System.Double)
+  - osu.Framework.Tests.Audio.TrackBassTest.TestLoopingTrackDoesntSetCompleted
+  - osu.Framework.Tests.Audio.TrackBassTest.TestPlaybackToEnd
+  - osu.Framework.Tests.Audio.TrackBassTest.TestRateWithAggregateAdjustments
+  - osu.Framework.Tests.Audio.TrackBassTest.TestRestart
+  - osu.Framework.Tests.Audio.TrackBassTest.TestRestartAtEnd
+  - osu.Framework.Tests.Audio.TrackBassTest.TestRestartFromRestartPoint
+  - osu.Framework.Tests.Audio.TrackBassTest.TestSeek
+  - osu.Framework.Tests.Audio.TrackBassTest.TestSeekBackToSamePosition
+  - osu.Framework.Tests.Audio.TrackBassTest.TestSeekToEndFails
+  - osu.Framework.Tests.Audio.TrackBassTest.TestSeekWhileRunning
+  - osu.Framework.Tests.Audio.TrackBassTest.TestSetTempoNegative
+  - osu.Framework.Tests.Audio.TrackBassTest.TestStart
+  - osu.Framework.Tests.Audio.TrackBassTest.TestStartFromEndDoesNotRestart
+  - osu.Framework.Tests.Audio.TrackBassTest.TestStop
+  - osu.Framework.Tests.Audio.TrackBassTest.TestStopAtEnd
+  - osu.Framework.Tests.Audio.TrackBassTest.TestStopWhenDisposed
+  - osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyDoesntResumeTrack
+  - osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyHandling
+  langs:
+  - csharp
+  - vb
+  name: TrackBassTest
+  nameWithType: TrackBassTest
+  fullName: osu.Framework.Tests.Audio.TrackBassTest
+  type: Class
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TrackBassTest
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 16
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [TestFixture]
+
+      public class TrackBassTest
+    content.vb: >-
+      <TestFixture>
+
+      Public Class TrackBassTest
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  attributes:
+  - type: NUnit.Framework.TestFixtureAttribute
+    ctor: NUnit.Framework.TestFixtureAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.Setup
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.Setup
+  id: Setup
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: Setup()
+  nameWithType: TrackBassTest.Setup()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.Setup()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Setup
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 22
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [SetUp]
+
+      public void Setup()
+    content.vb: >-
+      <SetUp>
+
+      Public Sub Setup()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.Setup*
+  attributes:
+  - type: NUnit.Framework.SetUpAttribute
+    ctor: NUnit.Framework.SetUpAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.Teardown
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.Teardown
+  id: Teardown
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: Teardown()
+  nameWithType: TrackBassTest.Teardown()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.Teardown()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Teardown
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 31
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [TearDown]
+
+      public void Teardown()
+    content.vb: >-
+      <TearDown>
+
+      Public Sub Teardown()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.Teardown*
+  attributes:
+  - type: NUnit.Framework.TearDownAttribute
+    ctor: NUnit.Framework.TearDownAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestStart
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestStart
+  id: TestStart
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestStart()
+  nameWithType: TrackBassTest.TestStart()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestStart()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestStart
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 37
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestStart()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestStart()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestStart*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestStop
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestStop
+  id: TestStop
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestStop()
+  nameWithType: TrackBassTest.TestStop()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestStop()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestStop
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 51
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestStop()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestStop()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestStop*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestStopWhenDisposed
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestStopWhenDisposed
+  id: TestStopWhenDisposed
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestStopWhenDisposed()
+  nameWithType: TrackBassTest.TestStopWhenDisposed()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestStopWhenDisposed()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestStopWhenDisposed
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 68
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestStopWhenDisposed()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestStopWhenDisposed()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestStopWhenDisposed*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestStopAtEnd
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestStopAtEnd
+  id: TestStopAtEnd
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestStopAtEnd()
+  nameWithType: TrackBassTest.TestStopAtEnd()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestStopAtEnd()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestStopAtEnd
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 92
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestStopAtEnd()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestStopAtEnd()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestStopAtEnd*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestSeek
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestSeek
+  id: TestSeek
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestSeek()
+  nameWithType: TrackBassTest.TestSeek()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestSeek()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestSeek
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 107
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestSeek()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestSeek()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestSeek*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestSeekWhileRunning
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestSeekWhileRunning
+  id: TestSeekWhileRunning
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestSeekWhileRunning()
+  nameWithType: TrackBassTest.TestSeekWhileRunning()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestSeekWhileRunning()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestSeekWhileRunning
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 117
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestSeekWhileRunning()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestSeekWhileRunning()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestSeekWhileRunning*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestSeekToEndFails
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestSeekToEndFails
+  id: TestSeekToEndFails
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestSeekToEndFails()
+  nameWithType: TrackBassTest.TestSeekToEndFails()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestSeekToEndFails()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestSeekToEndFails
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 136
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  summary: Bass does not allow seeking to the end of the track. It should fail and the current time should not change.
+  example: []
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestSeekToEndFails()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestSeekToEndFails()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestSeekToEndFails*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestSeekBackToSamePosition
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestSeekBackToSamePosition
+  id: TestSeekBackToSamePosition
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestSeekBackToSamePosition()
+  nameWithType: TrackBassTest.TestSeekBackToSamePosition()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestSeekBackToSamePosition()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestSeekBackToSamePosition
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 148
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestSeekBackToSamePosition()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestSeekBackToSamePosition()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestSeekBackToSamePosition*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestPlaybackToEnd
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestPlaybackToEnd
+  id: TestPlaybackToEnd
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestPlaybackToEnd()
+  nameWithType: TrackBassTest.TestPlaybackToEnd()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestPlaybackToEnd()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestPlaybackToEnd
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 163
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestPlaybackToEnd()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestPlaybackToEnd()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestPlaybackToEnd*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestStartFromEndDoesNotRestart
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestStartFromEndDoesNotRestart
+  id: TestStartFromEndDoesNotRestart
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestStartFromEndDoesNotRestart()
+  nameWithType: TrackBassTest.TestStartFromEndDoesNotRestart()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestStartFromEndDoesNotRestart()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestStartFromEndDoesNotRestart
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 180
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  summary: >-
+    Bass restarts the track from the beginning if Start is called when the track has been completed.
+
+    This is blocked locally in <xref href="osu.Framework.Audio.Track.TrackBass" data-throw-if-not-resolved="false"></xref>, so this test expects the track to not restart.
+  example: []
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestStartFromEndDoesNotRestart()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestStartFromEndDoesNotRestart()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestStartFromEndDoesNotRestart*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestRestart
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestRestart
+  id: TestRestart
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestRestart()
+  nameWithType: TrackBassTest.TestRestart()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestRestart()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestRestart
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 194
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestRestart()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestRestart()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestRestart*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestRestartAtEnd
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestRestartAtEnd
+  id: TestRestartAtEnd
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestRestartAtEnd()
+  nameWithType: TrackBassTest.TestRestartAtEnd()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestRestartAtEnd()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestRestartAtEnd
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 208
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestRestartAtEnd()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestRestartAtEnd()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestRestartAtEnd*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestRestartFromRestartPoint
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestRestartFromRestartPoint
+  id: TestRestartFromRestartPoint
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestRestartFromRestartPoint()
+  nameWithType: TrackBassTest.TestRestartFromRestartPoint()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestRestartFromRestartPoint()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestRestartFromRestartPoint
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 222
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestRestartFromRestartPoint()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestRestartFromRestartPoint()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestRestartFromRestartPoint*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestLoopingRestart(System.Double)
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestLoopingRestart(System.Double)
+  id: TestLoopingRestart(System.Double)
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestLoopingRestart(double)
+  nameWithType: TrackBassTest.TestLoopingRestart(double)
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestLoopingRestart(double)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestLoopingRestart
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 235
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [TestCase(0)]
+
+      [TestCase(1000)]
+
+      public void TestLoopingRestart(double restartPoint)
+    parameters:
+    - id: restartPoint
+      type: System.Double
+    content.vb: >-
+      <TestCase(0)>
+
+      <TestCase(1000)>
+
+      Public Sub TestLoopingRestart(restartPoint As Double)
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestLoopingRestart*
+  attributes:
+  - type: NUnit.Framework.TestCaseAttribute
+    ctor: NUnit.Framework.TestCaseAttribute.#ctor(System.Object)
+    arguments:
+    - type: System.Int32
+      value: 0
+  - type: NUnit.Framework.TestCaseAttribute
+    ctor: NUnit.Framework.TestCaseAttribute.#ctor(System.Object)
+    arguments:
+    - type: System.Int32
+      value: 1000
+  nameWithType.vb: TrackBassTest.TestLoopingRestart(Double)
+  fullName.vb: osu.Framework.Tests.Audio.TrackBassTest.TestLoopingRestart(Double)
+  name.vb: TestLoopingRestart(Double)
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestSetTempoNegative
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestSetTempoNegative
+  id: TestSetTempoNegative
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestSetTempoNegative()
+  nameWithType: TrackBassTest.TestSetTempoNegative()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestSetTempoNegative()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestSetTempoNegative
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 264
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestSetTempoNegative()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestSetTempoNegative()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestSetTempoNegative*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestRateWithAggregateAdjustments
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestRateWithAggregateAdjustments
+  id: TestRateWithAggregateAdjustments
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestRateWithAggregateAdjustments()
+  nameWithType: TrackBassTest.TestRateWithAggregateAdjustments()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestRateWithAggregateAdjustments()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestRateWithAggregateAdjustments
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 278
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestRateWithAggregateAdjustments()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestRateWithAggregateAdjustments()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestRateWithAggregateAdjustments*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestLoopingTrackDoesntSetCompleted
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestLoopingTrackDoesntSetCompleted
+  id: TestLoopingTrackDoesntSetCompleted
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestLoopingTrackDoesntSetCompleted()
+  nameWithType: TrackBassTest.TestLoopingTrackDoesntSetCompleted()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestLoopingTrackDoesntSetCompleted()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestLoopingTrackDoesntSetCompleted
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 285
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestLoopingTrackDoesntSetCompleted()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestLoopingTrackDoesntSetCompleted()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestLoopingTrackDoesntSetCompleted*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestHasCompletedResetsOnSeekBack
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestHasCompletedResetsOnSeekBack
+  id: TestHasCompletedResetsOnSeekBack
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestHasCompletedResetsOnSeekBack()
+  nameWithType: TrackBassTest.TestHasCompletedResetsOnSeekBack()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestHasCompletedResetsOnSeekBack()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestHasCompletedResetsOnSeekBack
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 303
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestHasCompletedResetsOnSeekBack()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestHasCompletedResetsOnSeekBack()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestHasCompletedResetsOnSeekBack*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyHandling
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyHandling
+  id: TestZeroFrequencyHandling
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestZeroFrequencyHandling()
+  nameWithType: TrackBassTest.TestZeroFrequencyHandling()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyHandling()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestZeroFrequencyHandling
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 325
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestZeroFrequencyHandling()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestZeroFrequencyHandling()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyHandling*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyDoesntResumeTrack
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyDoesntResumeTrack
+  id: TestZeroFrequencyDoesntResumeTrack
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestZeroFrequencyDoesntResumeTrack()
+  nameWithType: TrackBassTest.TestZeroFrequencyDoesntResumeTrack()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyDoesntResumeTrack()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestZeroFrequencyDoesntResumeTrack
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 362
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  summary: Ensure setting a paused (or not yet played) track's frequency from zero to one doesn't resume / play it.
+  example: []
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestZeroFrequencyDoesntResumeTrack()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestZeroFrequencyDoesntResumeTrack()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyDoesntResumeTrack*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestBitrate
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestBitrate
+  id: TestBitrate
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestBitrate()
+  nameWithType: TrackBassTest.TestBitrate()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestBitrate()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestBitrate
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 389
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestBitrate()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestBitrate()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestBitrate*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStart
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStart
+  id: TestIsRunningUpdatedAfterInlineStart
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestIsRunningUpdatedAfterInlineStart()
+  nameWithType: TrackBassTest.TestIsRunningUpdatedAfterInlineStart()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStart()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestIsRunningUpdatedAfterInlineStart
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 399
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  summary: >-
+    Tests the case where a start call can be run inline due to already being on the audio thread.
+
+    Because it's immediately executed, a `Bass.Update()` call is not required before the channel's state is updated.
+  example: []
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestIsRunningUpdatedAfterInlineStart()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestIsRunningUpdatedAfterInlineStart()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStart*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStop
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStop
+  id: TestIsRunningUpdatedAfterInlineStop
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestIsRunningUpdatedAfterInlineStop()
+  nameWithType: TrackBassTest.TestIsRunningUpdatedAfterInlineStop()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStop()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestIsRunningUpdatedAfterInlineStop
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 410
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  summary: >-
+    Tests the case where a stop call can be run inline due to already being on the audio thread.
+
+    Because it's immediately executed, a `Bass.Update()` call is not required before the channel's state is updated.
+  example: []
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestIsRunningUpdatedAfterInlineStop()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestIsRunningUpdatedAfterInlineStop()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStop*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestCurrentTimeUpdatedAfterInlineSeek
+  commentId: M:osu.Framework.Tests.Audio.TrackBassTest.TestCurrentTimeUpdatedAfterInlineSeek
+  id: TestCurrentTimeUpdatedAfterInlineSeek
+  parent: osu.Framework.Tests.Audio.TrackBassTest
+  langs:
+  - csharp
+  - vb
+  name: TestCurrentTimeUpdatedAfterInlineSeek()
+  nameWithType: TrackBassTest.TestCurrentTimeUpdatedAfterInlineSeek()
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestCurrentTimeUpdatedAfterInlineSeek()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Tests/Audio/TrackBassTest.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: TestCurrentTimeUpdatedAfterInlineSeek
+    path: osu.Framework.Tests/Audio/TrackBassTest.cs
+    startLine: 424
+  assemblies:
+  - osu.Framework.Tests
+  namespace: osu.Framework.Tests.Audio
+  summary: >-
+    Tests the case where a seek call can be run inline due to already being on the audio thread.
+
+    Because it's immediately executed, a `Bass.Update()` call is not required before the channel's state is updated.
+  example: []
+  syntax:
+    content: >-
+      [Test]
+
+      public void TestCurrentTimeUpdatedAfterInlineSeek()
+    content.vb: >-
+      <Test>
+
+      Public Sub TestCurrentTimeUpdatedAfterInlineSeek()
+  overload: osu.Framework.Tests.Audio.TrackBassTest.TestCurrentTimeUpdatedAfterInlineSeek*
+  attributes:
+  - type: NUnit.Framework.TestAttribute
+    ctor: NUnit.Framework.TestAttribute.#ctor
+    arguments: []
+references:
+- uid: osu.Framework.Tests.Audio
+  commentId: N:osu.Framework.Tests.Audio
+  href: osu.html
+  name: osu.Framework.Tests.Audio
+  nameWithType: osu.Framework.Tests.Audio
+  fullName: osu.Framework.Tests.Audio
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Tests
+    name: Tests
+    href: osu.Framework.Tests.html
+  - name: .
+  - uid: osu.Framework.Tests.Audio
+    name: Audio
+    href: osu.Framework.Tests.Audio.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Tests
+    name: Tests
+    href: osu.Framework.Tests.html
+  - name: .
+  - uid: osu.Framework.Tests.Audio
+    name: Audio
+    href: osu.Framework.Tests.Audio.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<TrackBassTest>(TrackBassTest)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<TrackBassTest>(TrackBassTest)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Tests.Audio.TrackBassTest>(osu.Framework.Tests.Audio.TrackBassTest)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of TrackBassTest)(TrackBassTest)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Tests.Audio.TrackBassTest)(osu.Framework.Tests.Audio.TrackBassTest)
+  name.vb: GetLocalisableDescription(Of TrackBassTest)(TrackBassTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Tests.Audio.TrackBassTest)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Tests.Audio.TrackBassTest)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+- uid: osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<TrackBassTest>(TrackBassTest)
+  nameWithType: EnumerableExtensions.Yield<TrackBassTest>(TrackBassTest)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Tests.Audio.TrackBassTest>(osu.Framework.Tests.Audio.TrackBassTest)
+  nameWithType.vb: EnumerableExtensions.Yield(Of TrackBassTest)(TrackBassTest)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Tests.Audio.TrackBassTest)(osu.Framework.Tests.Audio.TrackBassTest)
+  name.vb: Yield(Of TrackBassTest)(TrackBassTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Tests.Audio.TrackBassTest)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Tests.Audio.TrackBassTest)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+- uid: osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<TrackBassTest>(TrackBassTest)
+  nameWithType: ObjectExtensions.AsNonNull<TrackBassTest>(TrackBassTest)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Tests.Audio.TrackBassTest>(osu.Framework.Tests.Audio.TrackBassTest)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of TrackBassTest)(TrackBassTest)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Tests.Audio.TrackBassTest)(osu.Framework.Tests.Audio.TrackBassTest)
+  name.vb: AsNonNull(Of TrackBassTest)(TrackBassTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Tests.Audio.TrackBassTest)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Tests.Audio.TrackBassTest)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+- uid: osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<TrackBassTest>(TrackBassTest)
+  nameWithType: ObjectExtensions.IsNotNull<TrackBassTest>(TrackBassTest)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Tests.Audio.TrackBassTest>(osu.Framework.Tests.Audio.TrackBassTest)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of TrackBassTest)(TrackBassTest)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Tests.Audio.TrackBassTest)(osu.Framework.Tests.Audio.TrackBassTest)
+  name.vb: IsNotNull(Of TrackBassTest)(TrackBassTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Tests.Audio.TrackBassTest)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Tests.Audio.TrackBassTest)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+- uid: osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<TrackBassTest>(TrackBassTest)
+  nameWithType: ObjectExtensions.IsNull<TrackBassTest>(TrackBassTest)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Tests.Audio.TrackBassTest>(osu.Framework.Tests.Audio.TrackBassTest)
+  nameWithType.vb: ObjectExtensions.IsNull(Of TrackBassTest)(TrackBassTest)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Tests.Audio.TrackBassTest)(osu.Framework.Tests.Audio.TrackBassTest)
+  name.vb: IsNull(Of TrackBassTest)(TrackBassTest)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Tests.Audio.TrackBassTest)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Tests.Audio.TrackBassTest)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: )
+- uid: osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TrackBassTest, TChild>(TrackBassTest, TChild)
+  nameWithType: ContainerExtensions.WithChild<TrackBassTest, TChild>(TrackBassTest, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Tests.Audio.TrackBassTest, TChild>(osu.Framework.Tests.Audio.TrackBassTest, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TrackBassTest, TChild)(TrackBassTest, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Tests.Audio.TrackBassTest, TChild)(osu.Framework.Tests.Audio.TrackBassTest, TChild)
+  name.vb: WithChild(Of TrackBassTest, TChild)(TrackBassTest, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Tests.Audio.TrackBassTest,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Tests.Audio.TrackBassTest,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TrackBassTest, TChild>(TrackBassTest, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TrackBassTest, TChild>(TrackBassTest, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Tests.Audio.TrackBassTest, TChild>(osu.Framework.Tests.Audio.TrackBassTest, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TrackBassTest, TChild)(TrackBassTest, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Tests.Audio.TrackBassTest, TChild)(osu.Framework.Tests.Audio.TrackBassTest, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TrackBassTest, TChild)(TrackBassTest, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Tests.Audio.TrackBassTest,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Tests.Audio.TrackBassTest,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Tests.Audio.TrackBassTest.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TrackBassTest, TChild>(TrackBassTest, TChild)
+  nameWithType: ContainerExtensions.Wrap<TrackBassTest, TChild>(TrackBassTest, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Tests.Audio.TrackBassTest, TChild>(osu.Framework.Tests.Audio.TrackBassTest, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TrackBassTest, TChild)(TrackBassTest, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Tests.Audio.TrackBassTest, TChild)(osu.Framework.Tests.Audio.TrackBassTest, TChild)
+  name.vb: Wrap(Of TrackBassTest, TChild)(TrackBassTest, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Tests.Audio.TrackBassTest,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Tests.Audio.TrackBassTest,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Tests.Audio.TrackBassTest
+    name: TrackBassTest
+    href: osu.Framework.Tests.Audio.TrackBassTest.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Tests.Audio.TrackBassTest.Setup*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.Setup
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_Setup
+  name: Setup
+  nameWithType: TrackBassTest.Setup
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.Setup
+- uid: osu.Framework.Tests.Audio.TrackBassTest.Teardown*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.Teardown
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_Teardown
+  name: Teardown
+  nameWithType: TrackBassTest.Teardown
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.Teardown
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestStart*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestStart
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestStart
+  name: TestStart
+  nameWithType: TrackBassTest.TestStart
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestStart
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestStop*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestStop
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestStop
+  name: TestStop
+  nameWithType: TrackBassTest.TestStop
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestStop
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestStopWhenDisposed*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestStopWhenDisposed
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestStopWhenDisposed
+  name: TestStopWhenDisposed
+  nameWithType: TrackBassTest.TestStopWhenDisposed
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestStopWhenDisposed
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestStopAtEnd*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestStopAtEnd
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestStopAtEnd
+  name: TestStopAtEnd
+  nameWithType: TrackBassTest.TestStopAtEnd
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestStopAtEnd
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestSeek*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestSeek
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestSeek
+  name: TestSeek
+  nameWithType: TrackBassTest.TestSeek
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestSeek
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestSeekWhileRunning*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestSeekWhileRunning
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestSeekWhileRunning
+  name: TestSeekWhileRunning
+  nameWithType: TrackBassTest.TestSeekWhileRunning
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestSeekWhileRunning
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestSeekToEndFails*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestSeekToEndFails
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestSeekToEndFails
+  name: TestSeekToEndFails
+  nameWithType: TrackBassTest.TestSeekToEndFails
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestSeekToEndFails
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestSeekBackToSamePosition*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestSeekBackToSamePosition
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestSeekBackToSamePosition
+  name: TestSeekBackToSamePosition
+  nameWithType: TrackBassTest.TestSeekBackToSamePosition
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestSeekBackToSamePosition
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestPlaybackToEnd*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestPlaybackToEnd
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestPlaybackToEnd
+  name: TestPlaybackToEnd
+  nameWithType: TrackBassTest.TestPlaybackToEnd
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestPlaybackToEnd
+- uid: osu.Framework.Audio.Track.TrackBass
+  commentId: T:osu.Framework.Audio.Track.TrackBass
+  href: osu.Framework.Audio.Track.TrackBass.html
+  name: TrackBass
+  nameWithType: TrackBass
+  fullName: osu.Framework.Audio.Track.TrackBass
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestStartFromEndDoesNotRestart*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestStartFromEndDoesNotRestart
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestStartFromEndDoesNotRestart
+  name: TestStartFromEndDoesNotRestart
+  nameWithType: TrackBassTest.TestStartFromEndDoesNotRestart
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestStartFromEndDoesNotRestart
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestRestart*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestRestart
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestRestart
+  name: TestRestart
+  nameWithType: TrackBassTest.TestRestart
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestRestart
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestRestartAtEnd*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestRestartAtEnd
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestRestartAtEnd
+  name: TestRestartAtEnd
+  nameWithType: TrackBassTest.TestRestartAtEnd
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestRestartAtEnd
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestRestartFromRestartPoint*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestRestartFromRestartPoint
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestRestartFromRestartPoint
+  name: TestRestartFromRestartPoint
+  nameWithType: TrackBassTest.TestRestartFromRestartPoint
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestRestartFromRestartPoint
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestLoopingRestart*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestLoopingRestart
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestLoopingRestart_System_Double_
+  name: TestLoopingRestart
+  nameWithType: TrackBassTest.TestLoopingRestart
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestLoopingRestart
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestSetTempoNegative*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestSetTempoNegative
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestSetTempoNegative
+  name: TestSetTempoNegative
+  nameWithType: TrackBassTest.TestSetTempoNegative
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestSetTempoNegative
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestRateWithAggregateAdjustments*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestRateWithAggregateAdjustments
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestRateWithAggregateAdjustments
+  name: TestRateWithAggregateAdjustments
+  nameWithType: TrackBassTest.TestRateWithAggregateAdjustments
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestRateWithAggregateAdjustments
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestLoopingTrackDoesntSetCompleted*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestLoopingTrackDoesntSetCompleted
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestLoopingTrackDoesntSetCompleted
+  name: TestLoopingTrackDoesntSetCompleted
+  nameWithType: TrackBassTest.TestLoopingTrackDoesntSetCompleted
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestLoopingTrackDoesntSetCompleted
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestHasCompletedResetsOnSeekBack*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestHasCompletedResetsOnSeekBack
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestHasCompletedResetsOnSeekBack
+  name: TestHasCompletedResetsOnSeekBack
+  nameWithType: TrackBassTest.TestHasCompletedResetsOnSeekBack
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestHasCompletedResetsOnSeekBack
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyHandling*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyHandling
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestZeroFrequencyHandling
+  name: TestZeroFrequencyHandling
+  nameWithType: TrackBassTest.TestZeroFrequencyHandling
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyHandling
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyDoesntResumeTrack*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyDoesntResumeTrack
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestZeroFrequencyDoesntResumeTrack
+  name: TestZeroFrequencyDoesntResumeTrack
+  nameWithType: TrackBassTest.TestZeroFrequencyDoesntResumeTrack
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestZeroFrequencyDoesntResumeTrack
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestBitrate*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestBitrate
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestBitrate
+  name: TestBitrate
+  nameWithType: TrackBassTest.TestBitrate
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestBitrate
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStart*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStart
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestIsRunningUpdatedAfterInlineStart
+  name: TestIsRunningUpdatedAfterInlineStart
+  nameWithType: TrackBassTest.TestIsRunningUpdatedAfterInlineStart
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStart
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStop*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStop
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestIsRunningUpdatedAfterInlineStop
+  name: TestIsRunningUpdatedAfterInlineStop
+  nameWithType: TrackBassTest.TestIsRunningUpdatedAfterInlineStop
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestIsRunningUpdatedAfterInlineStop
+- uid: osu.Framework.Tests.Audio.TrackBassTest.TestCurrentTimeUpdatedAfterInlineSeek*
+  commentId: Overload:osu.Framework.Tests.Audio.TrackBassTest.TestCurrentTimeUpdatedAfterInlineSeek
+  href: osu.Framework.Tests.Audio.TrackBassTest.html#osu_Framework_Tests_Audio_TrackBassTest_TestCurrentTimeUpdatedAfterInlineSeek
+  name: TestCurrentTimeUpdatedAfterInlineSeek
+  nameWithType: TrackBassTest.TestCurrentTimeUpdatedAfterInlineSeek
+  fullName: osu.Framework.Tests.Audio.TrackBassTest.TestCurrentTimeUpdatedAfterInlineSeek

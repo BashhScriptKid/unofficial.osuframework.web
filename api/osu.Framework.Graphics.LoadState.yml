@@ -1,0 +1,1568 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Graphics.LoadState
+  commentId: T:osu.Framework.Graphics.LoadState
+  id: LoadState
+  parent: osu.Framework.Graphics
+  children:
+  - osu.Framework.Graphics.LoadState.Loaded
+  - osu.Framework.Graphics.LoadState.Loading
+  - osu.Framework.Graphics.LoadState.NotLoaded
+  - osu.Framework.Graphics.LoadState.Ready
+  langs:
+  - csharp
+  - vb
+  name: LoadState
+  nameWithType: LoadState
+  fullName: osu.Framework.Graphics.LoadState
+  type: Enum
+  source:
+    remote:
+      path: osu.Framework/Graphics/Drawable.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: LoadState
+    path: osu.Framework/Graphics/Drawable.cs
+    startLine: 2806
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics
+  summary: Possible states of a <xref href="osu.Framework.Graphics.Drawable" data-throw-if-not-resolved="false"></xref> within the loading pipeline.
+  example: []
+  syntax:
+    content: public enum LoadState
+    content.vb: Public Enum LoadState
+  extensionMethods:
+  - System.IFormattable.osu.Framework.Extensions.FormattableExtensions.ToString(System.IFormatProvider)
+  - System.IFormattable.osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.String)
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Graphics.LoadState.osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast``1(osu.Framework.Graphics.LoadState)
+  - osu.Framework.Graphics.LoadState.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Graphics.LoadState.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Graphics.LoadState.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Graphics.LoadState.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Graphics.LoadState.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Graphics.LoadState.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Graphics.LoadState.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Graphics.LoadState.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Graphics.LoadState.NotLoaded
+  commentId: F:osu.Framework.Graphics.LoadState.NotLoaded
+  id: NotLoaded
+  parent: osu.Framework.Graphics.LoadState
+  langs:
+  - csharp
+  - vb
+  name: NotLoaded
+  nameWithType: LoadState.NotLoaded
+  fullName: osu.Framework.Graphics.LoadState.NotLoaded
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Graphics/Drawable.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: NotLoaded
+    path: osu.Framework/Graphics/Drawable.cs
+    startLine: 2811
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics
+  summary: Not loaded, and no load has been initiated yet.
+  example: []
+  syntax:
+    content: NotLoaded = 0
+    return:
+      type: osu.Framework.Graphics.LoadState
+- uid: osu.Framework.Graphics.LoadState.Loading
+  commentId: F:osu.Framework.Graphics.LoadState.Loading
+  id: Loading
+  parent: osu.Framework.Graphics.LoadState
+  langs:
+  - csharp
+  - vb
+  name: Loading
+  nameWithType: LoadState.Loading
+  fullName: osu.Framework.Graphics.LoadState.Loading
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Graphics/Drawable.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Loading
+    path: osu.Framework/Graphics/Drawable.cs
+    startLine: 2816
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics
+  summary: Currently loading (possibly and usually on a background thread via <xref href="osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponentAsync%60%601(%60%600%2cSystem.Action%7b%60%600%7d%2cSystem.Threading.CancellationToken%2cosu.Framework.Threading.Scheduler)" data-throw-if-not-resolved="false"></xref>).
+  example: []
+  syntax:
+    content: Loading = 1
+    return:
+      type: osu.Framework.Graphics.LoadState
+- uid: osu.Framework.Graphics.LoadState.Ready
+  commentId: F:osu.Framework.Graphics.LoadState.Ready
+  id: Ready
+  parent: osu.Framework.Graphics.LoadState
+  langs:
+  - csharp
+  - vb
+  name: Ready
+  nameWithType: LoadState.Ready
+  fullName: osu.Framework.Graphics.LoadState.Ready
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Graphics/Drawable.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Ready
+    path: osu.Framework/Graphics/Drawable.cs
+    startLine: 2823
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics
+  summary: >-
+    Loading is complete, but has not yet been finalized on the update thread
+
+    (<xref href="osu.Framework.Graphics.Drawable.LoadComplete" data-throw-if-not-resolved="false"></xref> has not been called yet, which
+
+    always runs on the update thread and requires <xref href="osu.Framework.Graphics.Drawable.IsAlive" data-throw-if-not-resolved="false"></xref>).
+  example: []
+  syntax:
+    content: Ready = 2
+    return:
+      type: osu.Framework.Graphics.LoadState
+- uid: osu.Framework.Graphics.LoadState.Loaded
+  commentId: F:osu.Framework.Graphics.LoadState.Loaded
+  id: Loaded
+  parent: osu.Framework.Graphics.LoadState
+  langs:
+  - csharp
+  - vb
+  name: Loaded
+  nameWithType: LoadState.Loaded
+  fullName: osu.Framework.Graphics.LoadState.Loaded
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Graphics/Drawable.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Loaded
+    path: osu.Framework/Graphics/Drawable.cs
+    startLine: 2828
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Graphics
+  summary: Loading is fully completed and the Drawable is now part of the scene graph.
+  example: []
+  syntax:
+    content: Loaded = 3
+    return:
+      type: osu.Framework.Graphics.LoadState
+references:
+- uid: osu.Framework.Graphics.Drawable
+  commentId: T:osu.Framework.Graphics.Drawable
+  parent: osu.Framework.Graphics
+  href: osu.Framework.Graphics.Drawable.html
+  name: Drawable
+  nameWithType: Drawable
+  fullName: osu.Framework.Graphics.Drawable
+- uid: osu.Framework.Graphics
+  commentId: N:osu.Framework.Graphics
+  href: osu.html
+  name: osu.Framework.Graphics
+  nameWithType: osu.Framework.Graphics
+  fullName: osu.Framework.Graphics
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+- uid: System.IFormattable.osu.Framework.Extensions.FormattableExtensions.ToString(System.IFormatProvider)
+  commentId: M:osu.Framework.Extensions.FormattableExtensions.ToString(System.IFormattable,System.IFormatProvider)
+  parent: osu.Framework.Extensions.FormattableExtensions
+  definition: osu.Framework.Extensions.FormattableExtensions.ToString(System.IFormattable,System.IFormatProvider)
+  href: osu.Framework.Extensions.FormattableExtensions.html#osu_Framework_Extensions_FormattableExtensions_ToString_System_IFormattable_System_IFormatProvider_
+  name: ToString(IFormattable, IFormatProvider)
+  nameWithType: FormattableExtensions.ToString(IFormattable, IFormatProvider)
+  fullName: osu.Framework.Extensions.FormattableExtensions.ToString(System.IFormattable, System.IFormatProvider)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.FormattableExtensions.ToString(System.IFormattable,System.IFormatProvider)
+    name: ToString
+    href: osu.Framework.Extensions.FormattableExtensions.html#osu_Framework_Extensions_FormattableExtensions_ToString_System_IFormattable_System_IFormatProvider_
+  - name: (
+  - uid: System.IFormattable
+    name: IFormattable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.FormattableExtensions.ToString(System.IFormattable,System.IFormatProvider)
+    name: ToString
+    href: osu.Framework.Extensions.FormattableExtensions.html#osu_Framework_Extensions_FormattableExtensions_ToString_System_IFormattable_System_IFormatProvider_
+  - name: (
+  - uid: System.IFormattable
+    name: IFormattable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.IFormattable.osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.String)
+  commentId: M:osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.IFormattable,System.String)
+  parent: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions
+  definition: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.IFormattable,System.String)
+  href: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.html#osu_Framework_Extensions_LocalisationExtensions_LocalisableStringExtensions_ToLocalisableString_System_IFormattable_System_String_
+  name: ToLocalisableString(IFormattable, string)
+  nameWithType: LocalisableStringExtensions.ToLocalisableString(IFormattable, string)
+  fullName: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.IFormattable, string)
+  nameWithType.vb: LocalisableStringExtensions.ToLocalisableString(IFormattable, String)
+  fullName.vb: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.IFormattable, String)
+  name.vb: ToLocalisableString(IFormattable, String)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.IFormattable,System.String)
+    name: ToLocalisableString
+    href: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.html#osu_Framework_Extensions_LocalisationExtensions_LocalisableStringExtensions_ToLocalisableString_System_IFormattable_System_String_
+  - name: (
+  - uid: System.IFormattable
+    name: IFormattable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.IFormattable,System.String)
+    name: ToLocalisableString
+    href: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.html#osu_Framework_Extensions_LocalisationExtensions_LocalisableStringExtensions_ToLocalisableString_System_IFormattable_System_String_
+  - name: (
+  - uid: System.IFormattable
+    name: IFormattable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Graphics.LoadState.osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast``1(osu.Framework.Graphics.LoadState)
+  commentId: M:osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast``1(``0,``0)
+  parent: osu.Framework.Extensions.EnumExtensions.EnumExtensions
+  definition: osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast``1(``0,``0)
+  href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_HasFlagFast__1___0___0_
+  name: HasFlagFast<LoadState>(LoadState, LoadState)
+  nameWithType: EnumExtensions.HasFlagFast<LoadState>(LoadState, LoadState)
+  fullName: osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast<osu.Framework.Graphics.LoadState>(osu.Framework.Graphics.LoadState, osu.Framework.Graphics.LoadState)
+  nameWithType.vb: EnumExtensions.HasFlagFast(Of LoadState)(LoadState, LoadState)
+  fullName.vb: osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast(Of osu.Framework.Graphics.LoadState)(osu.Framework.Graphics.LoadState, osu.Framework.Graphics.LoadState)
+  name.vb: HasFlagFast(Of LoadState)(LoadState, LoadState)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast``1(osu.Framework.Graphics.LoadState,osu.Framework.Graphics.LoadState)
+    name: HasFlagFast
+    href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_HasFlagFast__1___0___0_
+  - name: <
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast``1(osu.Framework.Graphics.LoadState,osu.Framework.Graphics.LoadState)
+    name: HasFlagFast
+    href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_HasFlagFast__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+- uid: osu.Framework.Graphics.LoadState.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<LoadState>(LoadState)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<LoadState>(LoadState)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Graphics.LoadState>(osu.Framework.Graphics.LoadState)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of LoadState)(LoadState)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Graphics.LoadState)(osu.Framework.Graphics.LoadState)
+  name.vb: GetLocalisableDescription(Of LoadState)(LoadState)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Graphics.LoadState)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Graphics.LoadState)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+- uid: osu.Framework.Graphics.LoadState.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<LoadState>(LoadState)
+  nameWithType: EnumerableExtensions.Yield<LoadState>(LoadState)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Graphics.LoadState>(osu.Framework.Graphics.LoadState)
+  nameWithType.vb: EnumerableExtensions.Yield(Of LoadState)(LoadState)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Graphics.LoadState)(osu.Framework.Graphics.LoadState)
+  name.vb: Yield(Of LoadState)(LoadState)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Graphics.LoadState)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Graphics.LoadState)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+- uid: osu.Framework.Graphics.LoadState.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<LoadState>(LoadState)
+  nameWithType: ObjectExtensions.AsNonNull<LoadState>(LoadState)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Graphics.LoadState>(osu.Framework.Graphics.LoadState)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of LoadState)(LoadState)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Graphics.LoadState)(osu.Framework.Graphics.LoadState)
+  name.vb: AsNonNull(Of LoadState)(LoadState)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Graphics.LoadState)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Graphics.LoadState)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+- uid: osu.Framework.Graphics.LoadState.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<LoadState>(LoadState)
+  nameWithType: ObjectExtensions.IsNotNull<LoadState>(LoadState)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Graphics.LoadState>(osu.Framework.Graphics.LoadState)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of LoadState)(LoadState)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Graphics.LoadState)(osu.Framework.Graphics.LoadState)
+  name.vb: IsNotNull(Of LoadState)(LoadState)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Graphics.LoadState)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Graphics.LoadState)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+- uid: osu.Framework.Graphics.LoadState.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<LoadState>(LoadState)
+  nameWithType: ObjectExtensions.IsNull<LoadState>(LoadState)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Graphics.LoadState>(osu.Framework.Graphics.LoadState)
+  nameWithType.vb: ObjectExtensions.IsNull(Of LoadState)(LoadState)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Graphics.LoadState)(osu.Framework.Graphics.LoadState)
+  name.vb: IsNull(Of LoadState)(LoadState)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Graphics.LoadState)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Graphics.LoadState)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: )
+- uid: osu.Framework.Graphics.LoadState.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<LoadState, TChild>(LoadState, TChild)
+  nameWithType: ContainerExtensions.WithChild<LoadState, TChild>(LoadState, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Graphics.LoadState, TChild>(osu.Framework.Graphics.LoadState, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of LoadState, TChild)(LoadState, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Graphics.LoadState, TChild)(osu.Framework.Graphics.LoadState, TChild)
+  name.vb: WithChild(Of LoadState, TChild)(LoadState, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Graphics.LoadState,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Graphics.LoadState,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.LoadState.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<LoadState, TChild>(LoadState, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<LoadState, TChild>(LoadState, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Graphics.LoadState, TChild>(osu.Framework.Graphics.LoadState, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of LoadState, TChild)(LoadState, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Graphics.LoadState, TChild)(osu.Framework.Graphics.LoadState, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of LoadState, TChild)(LoadState, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Graphics.LoadState,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Graphics.LoadState,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.LoadState.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<LoadState, TChild>(LoadState, TChild)
+  nameWithType: ContainerExtensions.Wrap<LoadState, TChild>(LoadState, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Graphics.LoadState, TChild>(osu.Framework.Graphics.LoadState, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of LoadState, TChild)(LoadState, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Graphics.LoadState, TChild)(osu.Framework.Graphics.LoadState, TChild)
+  name.vb: Wrap(Of LoadState, TChild)(LoadState, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Graphics.LoadState,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Graphics.LoadState,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Graphics.LoadState
+    name: LoadState
+    href: osu.Framework.Graphics.LoadState.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions.FormattableExtensions.ToString(System.IFormattable,System.IFormatProvider)
+  commentId: M:osu.Framework.Extensions.FormattableExtensions.ToString(System.IFormattable,System.IFormatProvider)
+  isExternal: true
+  href: osu.Framework.Extensions.FormattableExtensions.html#osu_Framework_Extensions_FormattableExtensions_ToString_System_IFormattable_System_IFormatProvider_
+  name: ToString(IFormattable, IFormatProvider)
+  nameWithType: FormattableExtensions.ToString(IFormattable, IFormatProvider)
+  fullName: osu.Framework.Extensions.FormattableExtensions.ToString(System.IFormattable, System.IFormatProvider)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.FormattableExtensions.ToString(System.IFormattable,System.IFormatProvider)
+    name: ToString
+    href: osu.Framework.Extensions.FormattableExtensions.html#osu_Framework_Extensions_FormattableExtensions_ToString_System_IFormattable_System_IFormatProvider_
+  - name: (
+  - uid: System.IFormattable
+    name: IFormattable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.FormattableExtensions.ToString(System.IFormattable,System.IFormatProvider)
+    name: ToString
+    href: osu.Framework.Extensions.FormattableExtensions.html#osu_Framework_Extensions_FormattableExtensions_ToString_System_IFormattable_System_IFormatProvider_
+  - name: (
+  - uid: System.IFormattable
+    name: IFormattable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: osu.Framework.Extensions.FormattableExtensions
+  commentId: T:osu.Framework.Extensions.FormattableExtensions
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.FormattableExtensions.html
+  name: FormattableExtensions
+  nameWithType: FormattableExtensions
+  fullName: osu.Framework.Extensions.FormattableExtensions
+- uid: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.IFormattable,System.String)
+  commentId: M:osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.IFormattable,System.String)
+  isExternal: true
+  href: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.html#osu_Framework_Extensions_LocalisationExtensions_LocalisableStringExtensions_ToLocalisableString_System_IFormattable_System_String_
+  name: ToLocalisableString(IFormattable, string)
+  nameWithType: LocalisableStringExtensions.ToLocalisableString(IFormattable, string)
+  fullName: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.IFormattable, string)
+  nameWithType.vb: LocalisableStringExtensions.ToLocalisableString(IFormattable, String)
+  fullName.vb: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.IFormattable, String)
+  name.vb: ToLocalisableString(IFormattable, String)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.IFormattable,System.String)
+    name: ToLocalisableString
+    href: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.html#osu_Framework_Extensions_LocalisationExtensions_LocalisableStringExtensions_ToLocalisableString_System_IFormattable_System_String_
+  - name: (
+  - uid: System.IFormattable
+    name: IFormattable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.ToLocalisableString(System.IFormattable,System.String)
+    name: ToLocalisableString
+    href: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.html#osu_Framework_Extensions_LocalisationExtensions_LocalisableStringExtensions_ToLocalisableString_System_IFormattable_System_String_
+  - name: (
+  - uid: System.IFormattable
+    name: IFormattable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformattable
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions
+  commentId: T:osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions
+  parent: osu.Framework.Extensions.LocalisationExtensions
+  href: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions.html
+  name: LocalisableStringExtensions
+  nameWithType: LocalisableStringExtensions
+  fullName: osu.Framework.Extensions.LocalisationExtensions.LocalisableStringExtensions
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast``1(``0,``0)
+  commentId: M:osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast``1(``0,``0)
+  href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_HasFlagFast__1___0___0_
+  name: HasFlagFast<T>(T, T)
+  nameWithType: EnumExtensions.HasFlagFast<T>(T, T)
+  fullName: osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast<T>(T, T)
+  nameWithType.vb: EnumExtensions.HasFlagFast(Of T)(T, T)
+  fullName.vb: osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast(Of T)(T, T)
+  name.vb: HasFlagFast(Of T)(T, T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast``1(``0,``0)
+    name: HasFlagFast
+    href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_HasFlagFast__1___0___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.EnumExtensions.EnumExtensions.HasFlagFast``1(``0,``0)
+    name: HasFlagFast
+    href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html#osu_Framework_Extensions_EnumExtensions_EnumExtensions_HasFlagFast__1___0___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.EnumExtensions.EnumExtensions
+  commentId: T:osu.Framework.Extensions.EnumExtensions.EnumExtensions
+  parent: osu.Framework.Extensions.EnumExtensions
+  href: osu.Framework.Extensions.EnumExtensions.EnumExtensions.html
+  name: EnumExtensions
+  nameWithType: EnumExtensions
+  fullName: osu.Framework.Extensions.EnumExtensions.EnumExtensions
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.LocalisationExtensions
+  commentId: N:osu.Framework.Extensions.LocalisationExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.LocalisationExtensions
+  nameWithType: osu.Framework.Extensions.LocalisationExtensions
+  fullName: osu.Framework.Extensions.LocalisationExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.LocalisationExtensions
+    name: LocalisationExtensions
+    href: osu.Framework.Extensions.LocalisationExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.LocalisationExtensions
+    name: LocalisationExtensions
+    href: osu.Framework.Extensions.LocalisationExtensions.html
+- uid: osu.Framework.Extensions.EnumExtensions
+  commentId: N:osu.Framework.Extensions.EnumExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.EnumExtensions
+  nameWithType: osu.Framework.Extensions.EnumExtensions
+  fullName: osu.Framework.Extensions.EnumExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.EnumExtensions
+    name: EnumExtensions
+    href: osu.Framework.Extensions.EnumExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.EnumExtensions
+    name: EnumExtensions
+    href: osu.Framework.Extensions.EnumExtensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Graphics.LoadState
+  commentId: T:osu.Framework.Graphics.LoadState
+  parent: osu.Framework.Graphics
+  href: osu.Framework.Graphics.LoadState.html
+  name: LoadState
+  nameWithType: LoadState
+  fullName: osu.Framework.Graphics.LoadState
+- uid: osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponentAsync``1(``0,System.Action{``0},System.Threading.CancellationToken,osu.Framework.Threading.Scheduler)
+  commentId: M:osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponentAsync``1(``0,System.Action{``0},System.Threading.CancellationToken,osu.Framework.Threading.Scheduler)
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_LoadComponentAsync__1___0_System_Action___0__System_Threading_CancellationToken_osu_Framework_Threading_Scheduler_
+  name: LoadComponentAsync<TLoadable>(TLoadable, Action<TLoadable>, CancellationToken, Scheduler)
+  nameWithType: CompositeDrawable.LoadComponentAsync<TLoadable>(TLoadable, Action<TLoadable>, CancellationToken, Scheduler)
+  fullName: osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponentAsync<TLoadable>(TLoadable, System.Action<TLoadable>, System.Threading.CancellationToken, osu.Framework.Threading.Scheduler)
+  nameWithType.vb: CompositeDrawable.LoadComponentAsync(Of TLoadable)(TLoadable, Action(Of TLoadable), CancellationToken, Scheduler)
+  fullName.vb: osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponentAsync(Of TLoadable)(TLoadable, System.Action(Of TLoadable), System.Threading.CancellationToken, osu.Framework.Threading.Scheduler)
+  name.vb: LoadComponentAsync(Of TLoadable)(TLoadable, Action(Of TLoadable), CancellationToken, Scheduler)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponentAsync``1(``0,System.Action{``0},System.Threading.CancellationToken,osu.Framework.Threading.Scheduler)
+    name: LoadComponentAsync
+    href: osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_LoadComponentAsync__1___0_System_Action___0__System_Threading_CancellationToken_osu_Framework_Threading_Scheduler_
+  - name: <
+  - name: TLoadable
+  - name: '>'
+  - name: (
+  - name: TLoadable
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: TLoadable
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Threading.Scheduler
+    name: Scheduler
+    href: osu.Framework.Threading.Scheduler.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.CompositeDrawable.LoadComponentAsync``1(``0,System.Action{``0},System.Threading.CancellationToken,osu.Framework.Threading.Scheduler)
+    name: LoadComponentAsync
+    href: osu.Framework.Graphics.Containers.CompositeDrawable.html#osu_Framework_Graphics_Containers_CompositeDrawable_LoadComponentAsync__1___0_System_Action___0__System_Threading_CancellationToken_osu_Framework_Threading_Scheduler_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TLoadable
+  - name: )
+  - name: (
+  - name: TLoadable
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TLoadable
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Threading.Scheduler
+    name: Scheduler
+    href: osu.Framework.Threading.Scheduler.html
+  - name: )
+- uid: osu.Framework.Graphics.Drawable.LoadComplete
+  commentId: M:osu.Framework.Graphics.Drawable.LoadComplete
+  parent: osu.Framework.Graphics.Drawable
+  href: osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LoadComplete
+  name: LoadComplete()
+  nameWithType: Drawable.LoadComplete()
+  fullName: osu.Framework.Graphics.Drawable.LoadComplete()
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Drawable.LoadComplete
+    name: LoadComplete
+    href: osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LoadComplete
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Drawable.LoadComplete
+    name: LoadComplete
+    href: osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_LoadComplete
+  - name: (
+  - name: )
+- uid: osu.Framework.Graphics.Drawable.IsAlive
+  commentId: P:osu.Framework.Graphics.Drawable.IsAlive
+  parent: osu.Framework.Graphics.Drawable
+  href: osu.Framework.Graphics.Drawable.html#osu_Framework_Graphics_Drawable_IsAlive
+  name: IsAlive
+  nameWithType: Drawable.IsAlive
+  fullName: osu.Framework.Graphics.Drawable.IsAlive

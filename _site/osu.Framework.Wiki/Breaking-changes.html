@@ -1,0 +1,1764 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>2024.121.1 | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="2024.121.1 | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework.wiki/blob/master/Breaking-changes.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>Occasionally we will make changes which require consumers of the framework to make amendments to maintain compatibility. Wherever possible, we maintain compatibility via <code>[Obsolete]</code> attributes, but it is encouraged that you leave obsolete warnings turned on, and deal with them sooner rather than later. Generally we aim to leave obsolete methods around for 3-6 months after obsoletion.</p>
+<p>This page serves to give a list of all breaking/major changes.</p>
+<h1 id="20241211"><a href="https://github.com/ppy/osu-framework/releases/tag/2024.121.1">2024.121.1</a></h1>
+<h2 id="drawablepoolget-wil-now-throw-if-the-drawablepool-did-not-begin-load"><code>DrawablePool.Get()</code> wil now throw if the <code>DrawablePool</code> did not begin load</h2>
+<p>Previously the pool would return drawables correctly before load, but it would not initialise the pool to correct default size, causing overheads on drawable retrieval (usually on update thread).</p>
+<h2 id="hostoptionsbindipc-has-been-superseded-by-hostoptionsipcport"><code>HostOptions.BindIPC</code> has been superseded by <code>HostOptions.IPCPort</code></h2>
+<p>Previously, the IPC port used for multiple instances of a single osu!framework app was hardcoded in the IPC host itself, effectively making it so that <em>all osu!framework apps</em> would share the same IPC port, which obviously cannot work.</p>
+<p>To allow multiple osu!framework apps to utilise IPC concurrently, <code>BindIPC</code> has thus been replaced by <code>IPCPort</code>.</p>
+<ul>
+<li>Setting <code>IPCPort = null</code> is equivalent to <code>BindIPC = false</code>.</li>
+<li>Setting <code>IPCPort</code> to a non-null value is equivalent to <code>BindIPC = true</code> <em>and</em> will force the use the specific port provided.</li>
+</ul>
+<p>Note that it is advised to use a &quot;user port&quot; (in the range of 1024-49151) as per RFC 6335.</p>
+<h1 id="202312130"><a href="https://github.com/ppy/osu-framework/releases/tag/2023.1213.0">2023.1213.0</a></h1>
+<h2 id="iparseableparse-has-received-an-iformatprovider-argument"><code>IParseable.Parse()</code> has received an <code>IFormatProvider</code> argument</h2>
+<p>This is provided to better treat input when typed by end users, by allowing the ability to respect their regional number settings.</p>
+<p>Existing usages of <code>IParseable.Parse()</code> should pass <code>CultureInfo.InvariantCulture</code> to preserve behaviour, including usages of <code>IBindable.Parse()</code>:</p>
+<pre><code class="lang-diff">  Bindable&lt;int&gt; bindable = new Bindable&lt;int&gt;();
+- bindable.Parse(5);
++ bindable.Parse(5, CultureInfo.InvariantCulture);
+</code></pre>
+<h2 id="drawnodedraw-is-no-longer-exposed-publicly"><code>DrawNode.Draw()</code> is no longer exposed publicly</h2>
+<p><code>Draw()</code> is now <code>protected</code> to match the signature of <code>DrawOpaqueInternal()</code>. <code>DrawNode</code>s which draw others no need to do so via a separate (provided) method.</p>
+<pre><code class="lang-diff">- public override void Draw(IRenderer renderer)
++ protected override void Draw(IRenderer renderer)
+  {
+      base.Draw(renderer);
+
+-     other.Draw(renderer);
++     DrawOther(other, renderer);
+  }
+</code></pre>
+<h2 id="dropdown-requires-a-search-bar-to-be-implemented"><code>Dropdown</code> requires a search bar to be implemented</h2>
+<p>All <code>Dropdown</code>s may now be searched, which requires them to implement a search bar component. Sample implementation:</p>
+<pre><code class="lang-csharp">public partial class MyDropdownHeader : DropdownHeader
+{
+    protected override DropdownSearchBar CreateSearchBar() =&gt; new MyDropdownSearchBar();
+
+    public partial class MyDropdownSearchBar : DropdownSearchBar
+    {
+        protected override void PopIn() =&gt; this.FadeIn();
+
+        protected override void PopOut() =&gt; this.FadeOut();
+
+        protected override TextBox CreateTextBox() =&gt; new MyTextBox
+        {
+            PlaceholderText = &quot;type to search&quot;
+        };
+    }
+}
+</code></pre>
+<h1 id="202310041"><a href="https://github.com/ppy/osu-framework/releases/tag/2023.1004.1">2023.1004.1</a></h1>
+<h2 id="decoupleableinterpolatingframedclock-is-obsoleted-use-decouplingclock-instead"><code>DecoupleableInterpolatingFramedClock</code> is obsoleted. Use <code>DecouplingClock</code> instead</h2>
+<p>See <a href="https://github.com/ppy/osu-framework/pull/6001">this PR</a> for more details on a migration path.</p>
+<h1 id="20239140"><a href="https://github.com/ppy/osu-framework/releases/tag/2023.914.0">2023.914.0</a></h1>
+<h2 id="masking-related-breaking-changes-from-20238220-have-been-reverted">Masking-related breaking changes from <a href="https://github.com/ppy/osu-framework/releases/tag/2023.822.0">2023.822.0</a> have been reverted</h2>
+<p>After pushing the SSBO masking changes to users, it turned out that the change <a href="https://github.com/ppy/osu/issues/24751">was not an unambiguous performance win as originally hoped</a>, and as such has been reverted for now in order to avoid diverting focus further away from more important concerns.</p>
+<p>In response, framework consumers need to revert any and all changes incurred by the aforementioned release. It is advised to keep the changes somewhere around, however, as the SSBO concept may be revisited at a later date.</p>
+<h1 id="20239040"><a href="https://github.com/ppy/osu-framework/releases/tag/2023.904.0">2023.904.0</a></h1>
+<h2 id="storagemove-will-overwrite-file-at-target-destination-if-present"><code>Storage.Move()</code> will overwrite file at target destination if present</h2>
+<p>Previously it would fail if a file already existed at the target destination. Overwriting is usually the preferred outcome.</p>
+<h1 id="20238220"><a href="https://github.com/ppy/osu-framework/releases/tag/2023.822.0">2023.822.0</a></h1>
+<h2 id="maskable-vertex-input-layout-has-changed">Maskable vertex input layout has changed</h2>
+<p>Vertices which want to use the built-in <code>VertexShaderDescriptor.TEXTURE</code> fragment shader, or the <code>sh_Masking.h</code> particle, will need to adjust the vertex input slightly:</p>
+<pre><code class="lang-diff">+ #include &quot;Internal/sh_MaskingInfo.h&quot;
+
+layout(location = 0) in vec2 m_Position;
++ layout(location = 1) in int m_MaskingIndex;
+
++ layout(location = 5) flat out int v_MaskingIndex;
++ layout(location = 6) out highp vec2 v_ScissorPosition;
+
+void main(void)
+{
++   InitMasking(m_MaskingIndex);
+
+    // Transform from screen space to masking space.
+-   highp vec3 maskingPos = g_ToMaskingSpace * vec3(m_Position, 1.0);
++   highp vec4 maskingPos = g_MaskingInfo.ToMaskingSpace * vec4(m_Position, 1.0, 0.0);
+    v_MaskingPosition = maskingPos.xy / maskingPos.z;
+
++   // Transform from screen space to scissor space.
++   highp vec4 scissorPos = g_MaskingInfo.ToScissorSpace * vec4(m_Position, 1.0, 0.0);
++   v_ScissorPosition = scissorPos.xy / scissorPos.z;
+
++   v_MaskingIndex = m_MaskingIndex;
+
+    gl_Position = g_ProjMatrix * vec4(m_Position, 1.0, 1.0);
+}
+</code></pre>
+<p>Likewise, the C# definition must also be updated to write the <code>m_MaskingIndex</code> input, and be constructed with an <code>IRenderer</code>:</p>
+<pre><code class="lang-diff">[StructLayout(LayoutKind.Sequential)]
+public struct MyCustomVertex : IEquatable&lt;MyCustomVertex&gt;, IVertex
+{
+    [VertexMember(2, VertexAttribPointerType.Float)]
+    public Vector2 Position;
+
++   [VertexMember(1, VertexAttribPointerType.Int)]
++   private readonly int maskingIndex;
+
++   public MyCustomVertex(IRenderer renderer)
++   {
++       this = default;
++       maskingIndex = renderer.CurrentMaskingIndex;
++   }
+
+    public readonly bool Equals(MyCustomVertex other) =&gt;
+        Position.Equals(other.Position)
++       &amp;&amp; maskingIndex == other.maskingIndex;
+}
+</code></pre>
+<h2 id="non-masking-fragment-shaders-must-use-non-masking-vertex-shaders">Non-masking fragment shaders must use non-masking vertex shaders</h2>
+<p>Any usages of <code>VertexShaderDescriptor.TEXTURE_2</code> as a vertex shader in-combination with a non-masking fragment shader (i.e. one that does not use the built-in <code>sh_Masking.h</code> particle), should be updated to use <code>VertexShaderDescriptor.TEXTURE_2_NO_MASKING</code> instead.</p>
+<h2 id="irendererpushscissoroffsetirendererpopscissoroffset-have-been-removed"><code>IRenderer.PushScissorOffset()</code>/<code>IRenderer.PopScissorOffset()</code> have been removed</h2>
+<p>The way masking applies scissor has changed such that this no longer has any use.</p>
+<h2 id="maskinginfo-layout-has-changed"><code>MaskingInfo</code> layout has changed</h2>
+<ul>
+<li><code>ScreenSpaceAABB</code> renamed to <code>ScreenSpaceScissorArea</code>.</li>
+<li><code>MaskingRect</code> renamed to <code>MaskingArea</code></li>
+<li><code>ToScissorSpace</code> added. If <code>ScreenSpaceScissorArea</code> truly represents a screen-space area, set this to <code>Matrix3.Identity</code>, otherwise set it to convert vertex coordinate inputs to the appropriate coordinate space of <code>ScreenSpaceScissorArea</code>.</li>
+</ul>
+<h1 id="20238170"><a href="https://github.com/ppy/osu-framework/releases/tag/2023.817.0">2023.817.0</a></h1>
+<h2 id="texturedvertex2d-must-be-initialised-with-an-irenderer"><code>TexturedVertex2D</code> must be initialised with an <code>IRenderer</code>.</h2>
+<p>The default constructor for this type has been obsoleted and will now generate a compiler error.</p>
+<h1 id="20237200"><a href="https://github.com/ppy/osu-framework/releases/tag/2023.720.0">2023.720.0</a></h1>
+<h2 id="source-generators-will-now-only-run-on-release-builds">Source generators will now only run on release builds</h2>
+<p>As we continue to add more source generators, we've seen increases in compile-time overheads, with local testing showing over 2x compile times with source generators turned on.</p>
+<p>osu!framework source generators are made to optimise builds at runtime (mostly by removing reflection overhead). As such, it doesn't make sense to run these for debug releases as they are basically custom release-targeting optimisations.</p>
+<p>This should not result in a noticeable change in runtime performance during debug, but will reduce compilation times by over 50% in most cases. This is valuable during debug as the most common case is frequently building / hot reloading for quick iteration.</p>
+<h1 id="20237140"><a href="https://github.com/ppy/osu-framework/releases/tag/2023.714.0">2023.714.0</a></h1>
+<h2 id="gamehostgetclipboard-is-obsolete"><code>GameHost.GetClipboard()</code> is obsolete</h2>
+<p>The new way to retrieve a <code>Clipboard</code> instance is to resolve it via dependency injection directly. This does not require resolving the <code>GameHost</code> anymore:</p>
+<pre><code class="lang-diff"> [BackgroundDependencyLoader]
+-private void load(GameHost host)
++private void load(Clipboard clipboard)
+ {
+-    host?.Clipboard.SetText(&quot;example&quot;);
++    clipboard.SetText(&quot;example&quot;);
+ }
+</code></pre>
+<h1 id="20236180"><a href="https://github.com/ppy/osu-framework/releases/tag/2023.618.0">2023.618.0</a></h1>
+<h2 id="adddropdownitemlocalisablestring-text-t-value-has-been-removed"><code>AddDropdownItem(LocalisableString text, T value)</code> has been removed</h2>
+<p>If you were using this, refactor your code to use <code>LocalisableString GenerateItemText(T value)</code> instead.</p>
+<p>Easiest way is to add <code>LocalisableString? CustomDropdownText</code> to your <code>T</code>, or wrap <code>T</code> in a class that has one.
+Then simply change <code>GenerateItemText()</code> to use that:</p>
+<pre><code class="lang-cs">public partial class MyDropdown : Dropdown&lt;T&gt;
+{
+    protected override LocalisableString GenerateItemText(T value)
+        =&gt; value.CustomDropdownText ?? base.GenerateItemText(value);
+}
+</code></pre>
+<h2 id="subclasses-of-focusedoverlaycontainer-must-now-implement-popinout">Subclasses of <code>FocusedOverlayContainer</code> must now implement <code>Pop{In,Out}()</code></h2>
+<p>Previously, subclasses of <code>FocusedOverlayContainer</code> were not forced to implement <code>Pop{In,Out}</code> themselves, despite actually needing to do so for the overlay to actually play transitions out correctly. This has now been changed and inheritors of the class must always implement <code>Pop{In,Out}</code>.</p>
+<p>In practice this should not break any reasonable consumers of the class, except for the need to remove any <code>base.Pop{In,Out}()</code> calls in classes that directly inherit <code>FocusedOverlayContainer</code> and call base in <code>Pop{In,Out}()</code>.</p>
+<h1 id="20233260"><a href="https://github.com/ppy/osu-framework/releases/tag/2023.326.0">2023.326.0</a></h1>
+<h2 id="ios-project-structure-has-been-revamped">iOS project structure has been revamped</h2>
+<p>In efforts to migrate the framework to SDL on iOS, the project structure required major changes. For consumers, you're required to remove the <code>AppDelegate</code> class attached in the game project as <code>GameAppDelegate</code> no longer exists, and change the <code>Application.Main</code> method to call <code>GameApplication.Main</code> as such:</p>
+<pre><code class="lang-diff">-        public static void Main(string[] args) =&gt; UIApplication.Main(args, null, typeof(AppDelegate));
++        public static void Main(string[] args) =&gt; GameApplication.Main(new MyGameIOS());
+</code></pre>
+<h1 id="20233220"><a href="https://github.com/ppy/osu-framework/releases/tag/2023.322.0">2023.322.0</a></h1>
+<h2 id="texturedshaderdrawnodetextureshader-is-made-private"><code>TexturedShaderDrawNode.TextureShader</code> is made private</h2>
+<p>This is partially done to force consumers into binding uniform blocks in the newly defined <code>TexturedShaderDrawNode.BindUniformResources</code> method, such that uniform blocks are always bound whenever the corresponding shader is used for drawing in the framework.</p>
+<p>For binding/unbinding shaders, use <code>TexturedShaderDrawNode.BindTextureShader</code>/<code>TexturedShaderDrawNode.UnbindTextureShader</code> instead.</p>
+<h1 id="20233140"><a href="https://github.com/ppy/osu-framework/releases/tag/2023.314.0">2023.314.0</a></h1>
+<h2 id="the-opengl-core-profile-is-now-used">The OpenGL Core profile is now used</h2>
+<p>Shaders now follow &quot;Vulkan GLSL&quot;, which is mostly documented in the spec: <a href="https://github.com/KhronosGroup/GLSL/blob/master/extensions/khr/GL_KHR_vulkan_glsl.txt"><code>GL_KHR_vulkan_glsl</code></a>. The primary differences are documented below:</p>
+<h3 id="vertex-shader-members">Vertex shader members</h3>
+<table>
+<tr>
+<th>old</th>
+<th>new</th>
+</tr><tr>
+<td>
+<pre><code class="lang-glsl">attribute lowp int In_Value;
+varying lowp int Out_Value;
+</code></pre>
+</td>
+<td>
+<pre><code class="lang-glsl">layout(location = 0) in lowp int InValue;
+layout(location = 0) out lowp int OutValue;
+</code></pre>
+</td>
+</tr>
+</table>
+<p>The location increases for each additional member in the respective <code>in</code>/<code>out</code> lists.</p>
+<h3 id="fragment-shader-members">Fragment shader members</h3>
+<table>
+<tr>
+<th>old</th>
+<th>new</th>
+</tr><tr>
+<td>
+<pre><code class="lang-glsl">varying lowp int In_Value;
+</code></pre>
+</td>
+<td>
+<pre><code class="lang-glsl">layout(location = 0) in lowp int InValue;
+</code></pre>
+</td>
+</tr>
+</table>
+<p>The location increases for each additional member, and must match the location of the respective member in the vertex shader.</p>
+<h3 id="fragment-shader-outputs">Fragment shader outputs</h3>
+<p>Fragment shaders are required to define an output variable.</p>
+<table>
+<tr>
+<th>old</th>
+<th>new</th>
+</tr><tr>
+<td>
+<pre><code class="lang-glsl">void main(void)
+{
+    gl_FragColor = vec4(0.0);
+}
+</code></pre>
+</td>
+<td>
+<pre><code class="lang-glsl">layout(location = 0) out vec4 colour;
+
+void main(void)
+{
+    colour = vec4(0.0);
+}
+</code></pre>
+</td>
+</tr>
+</table>
+<h3 id="uniform-members">Uniform members</h3>
+<p>Free-floating &quot;global&quot; uniforms are not supported. They must be placed in <a href="https://www.khronos.org/opengl/wiki/Interface_Block_(GLSL)#Buffer_backed">&quot;uniform blocks&quot;</a>.</p>
+<table>
+<tr>
+<th>old</th>
+<th>new</th>
+</tr><tr>
+<td>
+<pre><code class="lang-glsl">uniform lowp int Uniform_Value;
+</code></pre>
+</td>
+<td>
+<pre><code class="lang-glsl">layout(std140, set = 0, binding = 0) uniform MyUniforms
+{
+    lowp int Uniform_Value;
+};
+</code></pre>
+</td>
+</tr>
+</table>
+<p><strong>Notes:</strong></p>
+<ul>
+<li><code>std140</code> should always be used.</li>
+<li>The <code>set</code> increases for each unique uniform block.</li>
+<li><code>binding</code> is a special required value which indicates where in the program the block should be bound. osu!framework manages this for you and should be 0 for uniform blocks.</li>
+<li>Both shader stages can use the same uniform block from the same set, provided that the physical layout matches.</li>
+</ul>
+<p>Furthermore, this means that uniform blocks have become a first-class citizen in osu!framework. The code to make use of the above looks like this:</p>
+<pre><code class="lang-csharp">
+class MyDrawNode : DrawNode
+{
+    private IUniformBuffer&lt;MyBufferData&gt;? bufferData;
+
+    public override void Draw(IRenderer renderer)
+    {
+        base.Draw(renderer);
+
+        // Create the uniform buffer.
+        bufferData ??= renderer.CreateUniformBuffer&lt;MyBufferData&gt;();
+
+        // Update the uniform buffer.
+        bufferData.Data = bufferData.Data with
+        {
+            UniformValue = 5
+        };
+
+        // Bind the buffer to the shader.
+        shader.BindUniformBuffer(&quot;MyUniforms&quot;, bufferData);
+
+        shader.Bind();
+        // Draw...
+    }
+
+    protected override void Dispose(bool isDisposing)
+    {
+        base.Dispose(isDisposing);
+
+        // Ensure that the buffer is disposed.
+        bufferData?.Dispose();
+    }
+}
+
+// Pack = 1 is required.
+[StructLayout(LayoutKind.Sequential, Pack = 1)]
+// Record structs automatically implement IEquatable&lt;&gt;
+public record struct MyBufferData
+{
+    // Use types provided in the osu.Framework.Graphics.Shaders.Types namespace.
+    public UniformInt UniformValue;
+
+    // The struct must be a multiple of 16 bytes.
+    private readonly UniformPadding12 pad2;
+}
+</code></pre>
+<p>Runtime validation is present to notify of incorrect alignment/packing.</p>
+<h3 id="uniform-texturessamplers">Uniform textures/samplers</h3>
+<p>The combined sampler of GLSL is not supported.</p>
+<table>
+<tr>
+<th>old</th>
+<th>new</th>
+</tr><tr>
+<td>
+<pre><code class="lang-glsl">uniform lowp sampler2D Sampler;
+</code></pre>
+</td>
+<td>
+<pre><code class="lang-glsl">layout(set = 0, binding = 0) uniform lowp texture2D Texture;
+layout(set = 0, binding = 1) uniform lowp sampler Sampler;
+</code></pre>
+</td>
+</tr>
+</table>
+<p><strong>Notes:</strong></p>
+<ul>
+<li><code>std140</code> cannot be applied here unlike for uniform blocks.</li>
+<li>The <code>set</code> increases along with all other uniform blocks/textures.</li>
+<li>The texture and sampler are bound to different points. The texture being bound to 0 and sampler to 1 will be standard for osu!framework going forward.</li>
+</ul>
+<h3 id="sampling-textures">Sampling textures</h3>
+<table>
+<tr>
+<th>old</th>
+<th>new</th>
+</tr><tr>
+<td>
+<pre><code class="lang-glsl">vec4 col = texture2D(my_Sampler, ...);
+</code></pre>
+</td>
+<td>
+<pre><code class="lang-glsl">vec4 col = texture(sampler2D(my_Texture, my_Sampler), ...);
+</code></pre>
+</td>
+</tr>
+</table>
+<h1 id="202211290"><a href="https://github.com/ppy/osu-framework/releases/tag/2022.1129.0">2022.1129.0</a></h1>
+<h2 id="ihasfilterablechildren-has-been-removed-use-ifilterable-instead-httpsgithubcomppyosu-frameworkpull5530"><code>IHasFilterableChildren</code> has been removed; use <code>IFilterable</code> instead (<a href="https://github.com/ppy/osu-framework/pull/5530">https://github.com/ppy/osu-framework/pull/5530</a>)</h2>
+<p>Rather than rely on <code>IHasFilterableChildren</code> to descend down complex hierarchies for filtering purposes, <code>IContainerEnumerable&lt;T&gt;.Children</code> is used, which results in less boilerplate as you don't need to remember to implement it whenever needed.</p>
+<h2 id="iconditionalfilterable-is-introduced-httpsgithubcomppyosu-frameworkpull5530"><code>IConditionalFilterable</code> is introduced (<a href="https://github.com/ppy/osu-framework/pull/5530">https://github.com/ppy/osu-framework/pull/5530</a>)</h2>
+<p>By implementing <code>IConditionalFilterable</code>, you get one extra bindable to play with. If the value of said bindable is <code>true</code>, then the item is included in textual search as usual. If it is <code>false</code>, however, it - and its entire subtree - is excluded from further search on the premise that the item does not meet external criteria. In practical terms, you would set it to <code>false</code> when you want to hide some items inside a <code>SearchContainer</code> because they're unavailable due to other settings.</p>
+<h2 id="classes-used-in-dependency-injection-need-to-implement-the-idependencyinjectioncandidate-interface-httpsgithubcomppyosu-frameworkpull5548">Classes used in dependency injection need to implement the <code>IDependencyInjectionCandidate</code> interface (<a href="https://github.com/ppy/osu-framework/pull/5548">https://github.com/ppy/osu-framework/pull/5548</a>)</h2>
+<p>This does not affect <code>Drawable</code> subclasses.</p>
+<h1 id="202211260"><a href="https://github.com/ppy/osu-framework/releases/tag/2022.1126.0">2022.1126.0</a></h1>
+<h2 id="add-source-generator-for-dependency-injection-httpsgithubcomppyosu-frameworkpull5541">Add source generator for dependency injection (<a href="https://github.com/ppy/osu-framework/pull/5541">https://github.com/ppy/osu-framework/pull/5541</a>)</h2>
+<p>This one's been brewing for a long time while I tried to figure out the best way to do things. It provides a structural foundation on top of which we can build other source generators.</p>
+<p>For source generators to work at all for us, we unfortunately need to make every <code>Drawable</code> class <code>partial</code>. This can be done as a graceful upgrade – previous reflection pathways are still supported so no immediate changes should be required to your project to compile.</p>
+<h3 id="analyser--codefix">Analyser + codefix</h3>
+<p>I've created a pretty &quot;basic&quot; analyser for warning against non-<code>partial</code> classes when required. It attempts to discover:</p>
+<ul>
+<li>Types used as the argument to calls of <code>DependencyContainer.Inject()</code>.</li>
+<li>Types used as type arguments of <code>CachedModelDependencyContainer&lt;T&gt;</code>.</li>
+<li>Types implementing <code>ITransformable</code>, <code>IDrawable</code> or <code>ISourceGeneratedDependencyActivator</code>.</li>
+</ul>
+<p>This covers all current cases while being as least invasive as possible (i.e. not analysing every member of every class ever).</p>
+<p>A code fix has been provided for the diagnostic, however if you're planning to codefix the whole solution I suggest the running the following command until it outputs 0 changes:</p>
+<pre><code>dotnet format analyzers osu.Desktop.slnf --verbosity d
+</code></pre>
+<p>The code fix seems to not fix all issues on the first attempt. This is potentially caused by my implementation, however I've tried everything that I could find and nothing's worked. I'll look into fixing this as a future effort, however for the most part it's a one-time thing.</p>
+<p>The analyser and code fixer don't have tests at the moment. These are also planned in a future effort and will be structured similarly to the source generator tests and the <code>osu-localisation-analyser</code> project.</p>
+<h3 id="notes">Notes</h3>
+<ul>
+<li>Member accessor validation is not supported yet. I think these will probably be added to an analyser in a future effort, but I've disabled the relevant tests in <a href="https://github.com/smoogipoo/osu-framework/commit/f3324205ded5ed1c05fa3a92a8fc4b5c26ec7cb4">https://github.com/smoogipoo/osu-framework/commit/f3324205ded5ed1c05fa3a92a8fc4b5c26ec7cb4</a> for now.</li>
+<li>Build time has increased. This can probably be improved further, however I don't want to drag on this PR much longer.</li>
+<li>Going to definitions of classes is a +1 process now, with every single definition now giving you two locations.</li>
+<li>I eventually want to update the source generator to make use of <code>IIncrementalGenerator</code>, but there's a bit more reading to do for that.</li>
+<li>The class is generated via AST rather than raw code. This is a personal/stylistic choice because I originally implemented it using raw code and couldn't bear it.</li>
+<li>The SG code quality is not quite where I want it to be at the moment - it's lacking documentation (compared to something like <code>osu-localisation-analyser</code>) and the tests are lacking structure. This will be improved in a future effort.</li>
+</ul>
+<p>I have not tested VSCode compatibility, but I have no reason to believe it won't work, unlike <code>osu-localisation-analyser</code> where there's differences in how IDEs add files to workspaces from analysers/codefixes.</p>
+<h3 id="performance">Performance</h3>
+<p>Check the pull request thread for CPU and memory profiling, but the short of this is that framework allocations required for dependency injection are down 50% or more; overall allocations at runtime are down 50% (by object count) and also substantially by memory; CPU overhead for DI activation (ie. creating a new <code>Drawable</code>) is down magnitudes on first usage, and also marginally on subsequent usages.</p>
+<p>Put simply, it's a win all-round.</p>
+<h2 id="bindabletcopyto-should-be-implemented-for-any-custom-bindables-httpsgithubcomppyosu-frameworkpull5531"><code>Bindable&lt;T&gt;.CopyTo</code> should be implemented for any custom bindables (<a href="https://github.com/ppy/osu-framework/pull/5531">https://github.com/ppy/osu-framework/pull/5531</a>)</h2>
+<p>To improve the performance of creating clones of bindables (ie. via <code>GetUnboundCopy()</code>), the copy portion of <code>BindTo()</code> has been split out into its own method. If you have any custom bindable types which were copying values across within a <code>BindTo()</code> override, please move the copy operation to <code>CopyTo()</code> instead. Pay special attention to the direction of assignment, which will reverse from what it was in <code>BindTo</code>.</p>
+<p>A fix should look something like this:</p>
+<pre><code class="lang-diff">diff --git a/osu.Framework/Bindables/BindableNumber.cs b/osu.Framework/Bindables/BindableNumber.cs
+index 6d605667f..430da79d0 100644
+--- a/osu.Framework/Bindables/BindableNumber.cs
++++ b/osu.Framework/Bindables/BindableNumber.cs
+@@ -199,12 +199,12 @@ protected void TriggerPrecisionChange(BindableNumber&lt;T&gt; source = null, bool prop
+                 PrecisionChanged?.Invoke(precision);
+         }
+ 
+-        public override void BindTo(Bindable&lt;T&gt; them)
++        public override void CopyTo(Bindable&lt;T&gt; them)
+         {
+             if (them is BindableNumber&lt;T&gt; other)
+-                Precision = other.Precision;
++                other.Precision = Precision;
+ 
+-            base.BindTo(them);
++            base.CopyTo(them);
+         }
+ 
+         public override void UnbindEvents()
+
+</code></pre>
+<h1 id="20229070"><a href="https://github.com/ppy/osu-framework/releases/tag/2022.907.0">2022.907.0</a></h1>
+<h2 id="depthstencilfunction-renamed-to-buffertestfunction"><code>DepthStencilFunction</code> renamed to <code>BufferTestFunction</code></h2>
+<p>The new naming should better fit future usages outside of depth and stencil tests.</p>
+<h1 id="20229010"><a href="https://github.com/ppy/osu-framework/releases/tag/2022.901.0">2022.901.0</a></h1>
+<h2 id="compositedrawableremoveinternal-icontainerremove-icontainerremoverange-and-icontainerremoveall-now-require-a-bool-parameter"><code>CompositeDrawable.RemoveInternal</code>, <code>IContainer.Remove</code>, <code>IContainer.RemoveRange</code> and <code>IContainer.RemoveAll</code> now require a <code>bool</code> parameter</h2>
+<p>A common mistake we've seen made osu!-side is where drawables are <code>Remove</code>d from the hierarchy with the intention of never using them again. In such cases, disposal is not guaranteed – nor is unbinding of <code>Bindable</code> fields/properties – which can lead to event and object leakage.</p>
+<p>To prevent this from happening, a new <code>disposeImmediately</code> parameter has been added.</p>
+<p>Generally this should be set to <code>true</code> unless you intend to reuse the removed drawable (ie. by adding back to the hierarchy at a different location).</p>
+<h1 id="20228160"><a href="https://github.com/ppy/osu-framework/releases/tag/2022.816.0">2022.816.0</a></h1>
+<h2 id="depth-test-function-is-now-typed-to-depthstencilfunction">Depth test function is now typed to <code>DepthStencilFunction</code></h2>
+<p>In places where the <code>DepthInfo</code> struct is used with a custom depth function, the following changes are required.</p>
+<pre><code class="lang-diff">- new DepthInfo(function: DepthFunction.Never)
++ new DepthInfo(function: DepthStencilFunction.Never)
+
+- new DepthInfo(function: DepthFunction.Less)
++ new DepthInfo(function: DepthStencilFunction.LessThan)
+
+- new DepthInfo(function: DepthFunction.Lequal)
++ new DepthInfo(function: DepthStencilFunction.LessThanOrEqual)
+
+- new DepthInfo(function: DepthFunction.Equal)
++ new DepthInfo(function: DepthStencilFunction.Equal)
+
+- new DepthInfo(function: DepthFunction.Gequal)
++ new DepthInfo(function: DepthStencilFunction.GreaterThanOrEqual)
+
+- new DepthInfo(function: DepthFunction.Greater)
++ new DepthInfo(function: DepthStencilFunction.GreaterThan)
+
+- new DepthInfo(function: DepthFunction.Notequal)
++ new DepthInfo(function: DepthStencilFunction.NotEqual)
+
+- new DepthInfo(function: DepthFunction.Always)
++ new DepthInfo(function: DepthStencilFunction.Always)
+</code></pre>
+<h1 id="20228050"><a href="https://github.com/ppy/osu-framework/releases/tag/2022.805.0">2022.805.0</a></h1>
+<h2 id="irenderer-added-as-parameter-to-drawnode"><code>IRenderer</code> added as parameter to <code>DrawNode</code></h2>
+<p>In order to allow the framework to interoperate with different rendering backends, all rendering functions are now performed through a new <code>IRenderer</code> interface and parameter.</p>
+<pre><code class="lang-diff">- DrawNode.Draw(Action&lt;TexturedVertex2D&gt; vertexAction);
++ DrawNode.Draw(IRenderer renderer);
+- DrawNode.DrawOpaqueInterior(Action&lt;TexturedVertex2D&gt; vertexAction);
++ DrawNode.DrawOpaqueInterior(IRenderer renderer);
+</code></pre>
+<p>In places where the <code>vertexAction</code> parameter was previously used (e.g. to draw textures), <code>null</code> can be given as a parameter instead.</p>
+<h2 id="glwrapper-removed-replaced-by-calls-through-irenderer"><code>GLWrapper</code> removed, replaced by calls through <code>IRenderer</code></h2>
+<p>The static <code>GLWrapper</code> class has been removed, and all drawing functions should be performed via the new <code>DrawNode</code> parameter instead. There is a 1-1 API correlation between the classes.</p>
+<pre><code class="lang-diff">public class MyDrawNode : DrawNode
+{
+    public override void Draw(IRenderer renderer)
+    {
+        base.Draw(renderer);
+
+-       GLWrapper.PushDepthInfo(...);
++       renderer.PushDepthInfo(...);
+
+-       GLWrapper.SetBlend(...);
++       renderer.SetBlend(...);
+
+-       GLWrapper.PopDepthInfo();
++       renderer.PopDepthInfo();
+    }
+}
+</code></pre>
+<h2 id="texturewhitepixel-has-moved-to-irenderer"><code>Texture.WhitePixel</code> has moved to <code>IRenderer</code></h2>
+<p>For cases where it's used as a fallback texture, it can be retrieved by <a href="/ppy/osu-framework/wiki/Dependency-Injection">resolving</a> an <code>IRenderer</code> into the <code>Drawable</code> class and accessing <code>IRenderer.WhitePixel</code>.</p>
+<pre><code class="lang-diff">public class MyDrawable : Drawable
+{
++   [BackgroundDependencyLoader]
++   private void load(IRenderer renderer)
++   {
++       texture ??= renderer.WhitePixel;
++   }
+
+    private Texture texture;
+
+    public Texture Texture
+    {
+-       get =&gt; texture ?? Texture.WhitePixel;
++       get =&gt; texture;
+        set =&gt; texture = value;
+    }
+}
+</code></pre>
+<h2 id="texture-drawing-methods-moved-from-drawnode-to-irenderer-extension-methods">Texture drawing methods moved from <code>DrawNode</code> to <code>IRenderer</code> extension methods</h2>
+<p>Appearing alongside <code>IRenderer</code> is the new <code>RendererExtensions</code> class providing helper methods for common drawing procedures.</p>
+<pre><code class="lang-diff">public class MyDrawNode : DrawNode
+{
+    public override void Draw(IRenderer renderer)
+    {
+        base.Draw(renderer);
+
+-       DrawQuad(renderer.WhitePixel, ...);
++       renderer.DrawQuad(renderer.WhitePixel, ...);
+    }
+}
+</code></pre>
+<p>All of the following methods have been moved to this class:</p>
+<pre><code>DrawTriangle()
+DrawQuad()
+DrawClipped()
+DrawFrameBuffer()
+</code></pre>
+<h2 id="textures-must-be-created-through-the-irenderer">Textures must be created through the <code>IRenderer</code></h2>
+<p><a href="/ppy/osu-framework/wiki/Dependency-Injection">Resolve</a> an <code>IRenderer</code> into the <code>Drawable</code> class and use <code>IRenderer.CreateTexture()</code> method to create textures.</p>
+<pre><code class="lang-diff">public class MyDrawable : Drawable
+{
+-   private readonly Texture texture;
+
+-   public MyDrawable()
+-   {
+-       texture = new Texture(100, 100);
+-       texture.SetData(...);
+-   }
++   private Texture texture;
+
++   [BackgroundDependencyLoader]
++   private void load(IRenderer renderer)
++   {
++       texture = renderer.CreateTexture(100, 100);
++       texture.SetData(...);
++   }
+}
+</code></pre>
+<p><code>DummyRenderer</code> may be used for cases where textures need to be created and neither an <code>IRenderer</code> nor <code>GameHost</code> is accessible:</p>
+<pre><code class="lang-diff">[TestFixture]
+public class MyTestFixture
+{
+    public void CreateATexture()
+    {
+-       Texture texture = new Texture(1, 1);
++       Texture texture = new DummyRenderer().CreateTexture(1, 1);
+    }
+}
+</code></pre>
+<h2 id="texturegl-is-no-longer-accessible"><code>TextureGL</code> is no longer accessible</h2>
+<p>Properties such as <code>TextureGL.BypassTextureUploadQueueing</code> have been moved to <code>Texture</code> itself, and <code>Texture</code> can be used for all rendering procedures. When rendering, textures are now bound to different sampling units via an integer value.</p>
+<pre><code class="lang-diff">public class MyDrawable : Drawable
+{
+    private Texture texture;
+
+    [BackgroundDependencyLoader]
+    private void load(IRenderer renderer)
+    {
+        texture = renderer.CreateTexture(100, 100);
+-       texture.TextureGL.BypassUploadQueueing = true;
++       texture.BypassUploadQueueing = true;
+        texture.SetData(...);
+    }
+}
+
+public class MyDrawNode : DrawNode
+{
+    private Texture texture;
+
+    public override void Draw(IRenderer renderer)
+    {
+        base.Draw(renderer);
+
+-       texture.TextureGL.Bind();
+-       texture.TextureGL.Bind(TextureUnit.Texture1);
++       texture.Bind();
++       texture.Bind(1);
+
+        // Note: The texture binding above isn't required in either case for the call below.
+-       DrawQuad(texture.TextureGL, ...);
++       renderer.DrawQuad(texture, ...);
+    }
+}
+</code></pre>
+<h2 id="the-quadbatcht-and-linearbatcht-classes-are-no-longer-accessible">The <code>QuadBatch&lt;T&gt;</code> and <code>LinearBatch&lt;T&gt;</code> classes are no longer accessible</h2>
+<p>Create vertex batches via the <code>IRenderer</code> and store as an <code>IVertexBatch&lt;T&gt;</code> instead:</p>
+<pre><code class="lang-diff">public class MyDrawNode : DrawNode
+{
+-   private readonly QuadBatch&lt;TexturedVertex2D&gt; quadBatch = new QuadBatch&lt;TexturedVertex2D&gt;(1, 1);
+-   private readonly LinearBatch&lt;TexturedVertex2D&gt; linearBatch = new LinearBatch&lt;TexturedVertex2D&gt;(1, 1, PrimitiveType.Triangles);
++   private IVertexBatch&lt;TexturedVertex2D&gt; quadBatch;
++   private IVertexBatch&lt;TexturedVertex2D&gt; linearBatch;
+
+    public override void Draw(IRenderer renderer)
+    {
+        base.Draw(renderer);
+
++       quadBatch ??= renderer.CreateQuadBatch&lt;TexturedVertex2D&gt;(1, 1);
++       linearBatch ??= renderer.CreateLinearBatch&lt;TexturedVertex2D&gt;(1, 1, PrimitiveTopology.Triangles);
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        base.Dispose(disposing);
+        batch?.Dispose();
+    }
+}
+</code></pre>
+<p>Beware that when creating linear batches, the type parameter has changed from <code>PrimitiveType</code> to <code>PrimitiveTopology</code>!</p>
+<h2 id="the-framebuffer-class-is-no-longer-accessible">The <code>FrameBuffer</code> class is no longer accessible</h2>
+<p>Create frame buffers via the <code>IRenderer</code> and store as an <code>IFrameBuffer</code>.</p>
+<pre><code class="lang-diff">public class MyDrawNode : DrawNode
+{
+-   private readonly FrameBuffer myFrameBuffer = new FrameBuffer(new[] { RenderbufferInternalFormat.DepthComponent16 }, All.Nearest);
++   private IFrameBuffer myFrameBuffer;
+
+    public override void Draw(IRenderer renderer)
+    {
+        base.Draw(renderer);
+
++       myFrameBuffer ??= renderer.CreateFrameBuffer(new[] { RenderBufferFormat.D16 }, TextureFilteringMode.Nearest);
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        base.Dispose(disposing);
+        myFrameBuffer?.Dispose();
+    }
+}
+</code></pre>
+<p>Beware that the render buffer type parameter has changed from <code>RenderbufferInternalFormat</code> to <code>RenderBufferFormat</code>!</p>
+<h2 id="the-shader-class-is-no-longer-accessible">The <code>Shader</code> class is no longer accessible</h2>
+<p>Shaders are still created via the <code>ShaderManager</code>, but are now returned as <code>IShader</code>s.</p>
+<pre><code class="lang-diff">public class MyDrawable : Drawable
+{
+-   private Shader shader;
++   private IShader shader;
+
+    [BackgroundDependencyLoader]
+    private void load(ShaderManager shaders)
+    {
+        shader = shaders.Load(&quot;a&quot;, &quot;b&quot;);
+    }
+}
+</code></pre>
+<h2 id="texturestore-fontstore-and-largetexturestore-require-an-irenderer-constructor-parameter"><code>TextureStore</code>, <code>FontStore</code> and <code>LargeTextureStore</code> require an <code>IRenderer</code> constructor parameter</h2>
+<p>One common use case is to provide a new texture store from inside a derived <code>Game</code>, for which the following change is required:</p>
+<pre><code class="lang-diff">public class TestGame : osu.Framework.Game
+{
+    private DependencyContainer dependencies;
+
+    protected override IReadOnlyDependencyContainer CreateChildDependencies(IReadOnlyDependencyContainer parent) =&gt;
+        dependencies = new DependencyContainer(base.CreateChildDependencies(parent));
+
+    [BackgroundDependencyLoader]
+    private void load()
+    {
+-       var largeStore = new LargeTextureStore(Host.CreateTextureLoaderStore(new NamespacedResourceStore&lt;byte[]&gt;(Resources, @&quot;Textures&quot;)), All.Nearest);
++       var largeStore = new LargeTextureStore(Host.Renderer, Host.CreateTextureLoaderStore(new NamespacedResourceStore&lt;byte[]&gt;(Resources, @&quot;Textures&quot;)), TextureFilteringMode.Nearest);
+        largeStore.AddTextureSource(Host.CreateTextureLoaderStore(new OnlineStore()));
+        dependencies.Cache(largeStore);
+    }
+}
+</code></pre>
+<p>Beware that the filter mode parameter has changed from <code>All</code> to <code>TextureFilteringMode</code>!</p>
+<h2 id="some-texturedshaderdrawnode-members-now-take-an-irenderer-parameter">Some <code>TexturedShaderDrawNode</code> members now take an <code>IRenderer</code> parameter</h2>
+<pre><code class="lang-diff">public class MyDrawNode : TexturedShaderDrawNode
+{
+    public override void Draw(IRenderer renderer)
+    {
+        base.Draw(renderer);
+
+-       Shader.Bind();
++       var shader = GetAppropriateShader(renderer);
++       shader.Bind();
+
+        // ...
+
+-       Shader.Unbind();
++       shader.Unbind();
+    }
+
+-   protected override bool RequiresRoundedShader =&gt; ...;
++   protected override bool RequiresRoundedShader(IRenderer renderer) =&gt; ...;
+}
+
+</code></pre>
+<h2 id="ivertex-texturedvertex2d-et-al-have-been-re-namespaced"><code>IVertex</code>, <code>TexturedVertex2D</code>, et al. have been re-namespaced</h2>
+<p>They are now placed under the <code>osu.Framework.Graphics.Rendering.Vertices</code> namespace</p>
+<h2 id="several-enums-have-been-re-namespaced">Several enums have been re-namespaced</h2>
+<pre><code>WrapMode    -&gt; osu.Framework.Graphics.Textures.WrapMode
+Opacity     -&gt; osu.Framework.Graphics.Textures.Opacity
+ClearInfo   -&gt; osu.Framework.Graphics.Rendering.ClearInfo
+MaskingInfo -&gt; osu.Framework.Graphics.Rendering.MaskingInfo
+DepthInfo   -&gt; osu.Framework.Graphics.Rendering.DepthInfo
+</code></pre>
+<h1 id="20226240"><a href="https://github.com/ppy/osu-framework/releases/tag/2022.624.0">2022.624.0</a></h1>
+<h2 id="texturestoreaddstoreremovestore-have-been-split-into-store-and-texture-source-methods"><code>TextureStore.AddStore/RemoveStore</code> have been split into &quot;store&quot; and &quot;texture source&quot; methods</h2>
+<p>In an effort to make the texture API easier to comprehend, the <code>AddStore</code>/<code>RemoveStore</code> methods have been split into two pairs:</p>
+<ul>
+<li><code>AddTextureSource</code>/<code>RemoveTextureSource</code>, for adding/removing texture data lookup sources (i.e. <code>TextureLoaderStore</code>s)</li>
+<li><code>AddStore</code>/<code>RemoveStore</code>, for adding/removing <code>TextureStore</code>s.</li>
+</ul>
+<p>Any existing usages of <code>AddStore</code> for adding lookup sources must be changed to use <code>AddTextureSource</code> instead.</p>
+<h1 id="20226070"><a href="https://github.com/ppy/osu-framework/releases/tag/2022.607.0">2022.607.0</a></h1>
+<h2 id="unlimited-frame-limiter-is-no-longer-completely-unlimited-5235">&quot;Unlimited&quot; frame limiter is no longer completely unlimited #5235</h2>
+<p>Games using osu!framework can generally run at <em>very</em> high frame rates when not much is going on.</p>
+<p>This can be counter-productive due to the induced allocation and GPU overhead.</p>
+<ul>
+<li>Allocation overhead can lead to excess garbage collection</li>
+<li>GPU overhead can lead to unexpected pipeline blocking (and stutters as a result).
+Also, in general graphics card manufacturers do not test their hardware at insane frame rates and therefore drivers are not optimised to handle this kind of throughput.</li>
+<li>We only harvest input at 1000hz, so running any higher has zero benefits.</li>
+</ul>
+<p>If you think you know better for your specific application (or more correctly need to remove the limit for benchmarking), set <code>GameHost.AllowBenchmarkUnlimitedFrames</code> to <code>true</code>.</p>
+<h1 id="20225280"><a href="https://github.com/ppy/osu-framework/releases/tag/2022.528.0">2022.528.0</a></h1>
+<h2 id="ihasfiltertermsfilterterms-is-now-an-array-of-localisablestrings"><code>IHasFilterTerms.FilterTerms</code> is now an array of <code>LocalisableString</code>s</h2>
+<p>Supports filtering by either the original text or the localised form according to the currently selected language. Migration:</p>
+<pre><code class="lang-diff">- public IEnumerable&lt;string&gt; FilterTerms =&gt; new string[] { ... };
++ public IEnumerable&lt;LocalisableString&gt; FilterTerms =&gt; new LocalisableString[] { ... };
+</code></pre>
+<h2 id="scrolleventscrolldeltax-horizontal-scrolling-is-now-consistent-across-platforms"><code>ScrollEvent.ScrollDelta.X</code> (horizontal scrolling) is now consistent across platforms.</h2>
+<p>Previously, Windows, Linux and Android were inverted. Delta is positive when mouse wheel scrolled to the up or left, in non-&quot;natural&quot; scroll mode (ie. the classic way).</p>
+<h1 id="20224210"><a href="https://github.com/ppy/osu-framework/releases/tag/2022.421.0">2022.421.0</a></h1>
+<h2 id="iscreen-navigation-interface-methods-now-receive-an-event-args-structure"><code>IScreen</code> navigation interface methods now receive an &quot;event args&quot; structure</h2>
+<p>To allow adding more data to <code>IScreen</code> navigation interface methods in the future without further API breakage, their signatures have been changed to include an &quot;event args&quot; structure in the following manner:</p>
+<pre><code class="lang-diff">- void OnEntering(IScreen last);
++ void OnEntering(ScreenTransitionEvent e);
+
+- void OnExiting(IScreen next);
++ void OnExiting(ScreenExitEvent e);
+
+- void OnResuming(IScreen last);
++ void OnResuming(ScreenTransitionEvent e);
+
+- void OnSuspending(IScreen next);
++ void OnSuspending(ScreenTransitionEvent e);
+</code></pre>
+<p>The <code>last</code> and <code>next</code> arguments from the old signatures can now be accessed via <code>e.Last</code> and <code>e.Next</code> respectively.</p>
+<p>Additionally, <code>ScreenExitEvent</code> contains a new <code>Destination</code> member, that allows to specify which screen is the &quot;destination&quot; screen of an exit operation spanning multiple screens.</p>
+<h1 id="20222230"><a href="https://github.com/ppy/osu-framework/releases/tag/2022.223.0">2022.223.0</a></h1>
+<h2 id="visual-test-projects-now-use-native-net-6-hot-reload">Visual test projects now use native .NET 6 &quot;Hot reload&quot;</h2>
+<p>Over the years we have maintained our own version of hot reload, affectionately named &quot;dynamic compilation&quot;. Even after multiple complete rewrites of the system, there are still edge cases where it will unexpectedly fall over due to being too greedy in including what it considers required for the recompile.</p>
+<p>The startup cost when running in debug was considerable (around 10-30s initialisation) and the first-compile overhead could also be high (5-60s). In addition, the dependencies required to make it work increased the final assembly size of osu!framework, even for release deploys.</p>
+<p>With the introduction of cross-platform support for hot reload in .NET 6 we have made the decision to switch to the natively supported version.</p>
+<p>To use this new version:</p>
+<ul>
+<li>From Rider, you'll get a popup that you have to click &quot;Apply Changes&quot; when a change is made to code while running. You can bind a key to <code>Apply Hot Reload Changes</code> in Rider (defaults to Alt+F10) to make it quicker to apply changes.</li>
+<li>Running <code>dotnet watch</code> from CLI on your test project will automatically watch files and recompile when a hange is seen.</li>
+</ul>
+<p>New limitations:</p>
+<ul>
+<li>The limitations of hot reload are <a href="https://github.com/dotnet/roslyn/blob/main/docs/wiki/EnC-Supported-Edits.md">listed here</a>.</li>
+<li>Notably, adding new <code>override</code> methods or <code>class</code>es are not supported. You can workaround this for the common scenario of prototyping new components by creating subclasses and adding the <code>override</code> methods before the initial hot reload.</li>
+</ul>
+<p>We are interested in hearing feedback on this change, especially troubling cases where the previous behaviour worked better for you. Hope is that the limitations of the new method are outweighed by the leaner assembly, better performance, and (in general) up-front error when a change can't be applied, rather than an error that can be delayed longer than it would take to run a full recompile/restart.</p>
+<h1 id="20222140"><a href="https://github.com/ppy/osu-framework/releases/tag/2022.214.0">2022.214.0</a></h1>
+<h2 id="inputmanagerchangefocus-will-no-longer-switch-focus-to-drawables-that-are-not-alive-not-present-or-do-not-have-a-parent"><code>InputManager.ChangeFocus()</code> will no longer switch focus to drawables that are not alive, not present or do not have a parent</h2>
+<p>To avoid unusual scenarios concerning <code>ChangeFocus()</code>, wherein a drawable could potentially request focus and have focus automatically taken away from it every frame, <code>ChangeFocus()</code> now checks whether the target drawable is alive, present and has a parent before switching focus to it.</p>
+<p>This potentially breaks scenarios such as calling <code>ChangeFocus()</code> in <code>LoadComplete()</code> on a child drawable with the expectation that the child drawable should receive focus as soon as its ancestor is added to the draw hierarchy. In such scenarios, the suggested fix is to schedule the <code>ChangeFocus()</code> operation after children so that it is performed only when the child is fully prepared to receive focus.</p>
+<p>In general it is recommended to check the return value of <code>ChangeFocus()</code> to determine as to whether focus was actually changed.</p>
+<h2 id="compositedrawablebordercolour-has-changed-type-from-srgbcolour-to-colourinfo"><code>CompositeDrawable.BorderColour</code> has changed type from <code>SRGBColour</code> to <code>ColourInfo</code></h2>
+<p>To facilitate gradiented border support, the type of <code>CompositeDrawable.BorderColour</code> has changed from <code>SRGBColour</code> to <code>ColourInfo</code>. While some implicit conversions from <code>SRGBColour</code> to <code>ColourInfo</code> exist, some properties of <code>SRGBColour</code> are not available on <code>ColourInfo</code>, as the latter does not always represent a single colour, and may require appropriate adjustments.</p>
+<h1 id="202111180"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.1118.0">2021.1118.0</a></h1>
+<h2 id="keybindingcontainer-now-sends-key-repeat-events-by-default"><code>KeyBindingContainer</code> now sends key repeat events by default</h2>
+<p><code>KeyBindingContainers</code> are commonly used in UI, where we expect to be able to receive key repeats. Historically this was controlled by the <code>SendRepeats</code> flag, but now that all events send <code>KeyBindingPressEvent</code> with a repeat argument, handling this legacy mode of operation was causing more issues that it was worth. The default expectation should be that repeats arrive.</p>
+<p>For cases where key repeat may not be wanted (ie. gameplay, where your code is in complete control of user input and doesn't want to receive arbitrary key repeat events), you may opt out of receiving them by creating a subclass of <code>KeyBindingContainer</code>:</p>
+<pre><code class="lang-csharp">public class NoRepeatKeyBindingContainer : KeyBindingContainer&lt;T&gt;
+{
+    protected override bool HandleRepeats =&gt; false;
+}
+</code></pre>
+<p>Alternatively, if you have only certain cases which you wish to opt out of, you can early return in your <code>OnPressed</code> implementation:</p>
+<pre><code class="lang-csharp">public bool OnPressed(KeyBindingPressEvent&lt;MyAction&gt; e)
+{
+    if (e.Repeat)
+        return false;
+
+    if (e.Action == MyAction.Action)
+    {
+       ...
+    }
+}
+</code></pre>
+<h1 id="202111060"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.1106.0">2021.1106.0</a></h1>
+<h2 id="bufferedcontainercachedrawnframebuffer-has-been-moved-to-a-constructor-argument"><code>BufferedContainer.CacheDrawnFrameBuffer</code> has been moved to a constructor argument</h2>
+<pre><code class="lang-csharp">// old code:
+var bufferedContainer = new BufferedContainer() { CacheDrawnFrameBuffer = true };
+
+// new code:
+var bufferedContainer = new BufferedContainer(cachedFrameBuffer: true);
+</code></pre>
+<h2 id="ieffectcachedrawneffect-has-been-removed"><code>IEffect.CacheDrawnEffect</code> has been removed</h2>
+<p>We had no usages of this. If you were using it, nest the effected content in a <code>BufferedContainer</code> with <code>cachedFrameBuffer</code> set to <code>true</code>.</p>
+<h1 id="202110290"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.1029.0">2021.1029.0</a></h1>
+<h2 id="textflowcontainer-no-longer-returns-raw-spritetexts-returning-itextparts-instead"><code>TextFlowContainer</code> no longer returns raw <code>SpriteText</code>s, returning <code>ITextPart</code>s instead</h2>
+<p>In preparation for adding localisation support to <code>TextFlowContainer</code>s, the various <code>AddText()</code>/<code>AddLine()</code> overloads will no longer return raw <code>SpriteText</code>s. Instead, an <code>ITextPart</code> structure will be returned.</p>
+<p>Via <code>ITextPart</code>, the consumer can both access all <code>Drawables</code> associated with a given piece of text, as well as react to any future changes in representation of the text by subscribing to <code>DrawablePartsRecreated</code>. In the future, with more localisation changes, this event will be invoked once a <code>LocalisableString</code>'s displayable content changes, which will trigger a recreation of all parts' drawables, upon which any manual adjustments applied to <code>Drawables</code> can be re-applied again.</p>
+<p>For consumers wanting to implement their own <code>ITextPart</code>s to extend the functionality of <code>TextFlowContainer</code>, an abstract <code>TextPart</code> is also provided which implements the typical flow of handling <code>Drawables</code> and <code>DrawablePartsRecreated</code>. The only thing that a consumer has to do when inheriting that class is to implement <code>CreateDrawablesFor(TextFlowContainer)</code>.</p>
+<h1 id="20219161"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.916.1">2021.916.1</a></h1>
+<h2 id="ikeybindinghandlert-and-iscrollbindinghandlert-now-provide-uievents"><code>IKeyBindingHandler&lt;T&gt;</code> and <code>IScrollBindingHandler&lt;T&gt;</code> now provide <code>UIEvent</code>s</h2>
+<p>To allow for more arguments without changing the signature of the handling methods, and also for consistency with the input flow in general, both interfaces now provide <code>UIEvent</code>s rather than placing each parameter directly on the methods.</p>
+<pre><code class="lang-diff">- public bool OnPressed(T action) { }
+- public bool OnScroll(T action, float amount, bool isPrecise) { }
+- public void OnReleased(T action) { }
++ public bool OnPressed(KeyBindingPressEvent&lt;T&gt; e) { }
++ public bool OnScroll(KeyBindingScrollEvent&lt;T&gt; e) { }
++ public void OnReleased(KeyBindingReleaseEvent&lt;T&gt; e) { }
+</code></pre>
+<p>The following regex replacements can be used to simplify migration:</p>
+<pre><code>Find: bool OnPressed\((\w+)\s+(\w+)\)
+Replace: bool OnPressed(KeyBindingPressEvent&lt;$1&gt; e)
+
+Find: void OnReleased\((\w+)\s+(\w+)\)
+Replace: void OnReleased(KeyBindingReleaseEvent&lt;$1&gt; e)
+
+Find: bool OnScroll\((\w+) (\w+), float \w+, bool \w+\)
+Replace: bool OnScroll(KeyBindingScrollEvent&lt;$1&gt; e)
+</code></pre>
+<h1 id="20219070"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.907.0">2021.907.0</a></h1>
+<h2 id="animationclockcompositeplaybackposition-can-no-longer-go-below-0"><code>AnimationClockComposite.PlaybackPosition</code> can no longer go below 0</h2>
+<p>This is not a change to actual playback behaviour - it only affects the return value of the playback position, which now matches the underlying playback behaviour.</p>
+<h1 id="20218300"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.830.0">2021.830.0</a></h1>
+<h2 id="itooltipsetcontent-no-longer-require-returning-bool-value"><code>ITooltip.SetContent</code> no longer require returning <code>bool</code> value</h2>
+<p>Until now, the method of reusing tooltip instances was problematic (two tooltips handling the same data type could not exist). Instance sharing is now based on the constructed tooltip's <code>Type</code>, rather than the data type.</p>
+<p>An example of how you should update your code follows.</p>
+<p>Before:</p>
+<pre><code class="lang-csharp">public override bool SetContent(object content)
+{
+    if (!(content is CustomContent custom))
+        return false;
+
+    text.Text = content.ToString(); // whatever you need to do here.
+    return true;
+}
+</code></pre>
+<p>After:</p>
+<pre><code class="lang-csharp">public override void SetContent(object content)
+{
+    text.Text = content.ToString(); // whatever you need to do here.
+}
+</code></pre>
+<h1 id="20218180"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.818.0">2021.818.0</a></h1>
+<h2 id="all-custom-implementations-of-ibindable-must-implement-createinstance">All custom implementations of <code>IBindable</code> must implement <code>CreateInstance()</code></h2>
+<p>Bindables previously used <code>Activator.CreateInstance()</code> to implement the <code>GetBoundCopy()</code> call. In profiling this has turned out to be a bottleneck in some scenarios, so in order to reduce the associated runtime overhead to about half, all implementors of <code>IBindable</code> now must implement <code>CreateInstance()</code>.</p>
+<p>This also applies to all inheritors of framework-provided bindable types, who must instead override <code>CreateInstance()</code> from their base types.</p>
+<p>For a given leaf bindable type in the inheritance hierarchy, the method should return a new constructed instance of the leaf type. The recommended pattern to use is as follows:</p>
+<pre><code class="lang-csharp">public class BaseBindable : IBindable
+{
+    IBindable IBindable.CreateInstance() =&gt; CreateInstance();
+    protected virtual BaseBindable CreateInstance() =&gt; new BaseBindable();
+
+    IBindable IBindable.GetBoundCopy() =&gt; GetBoundCopy();
+    public BaseBindable GetBoundCopy()
+        =&gt; IBindable.GetBoundCopyImplementation(this); // automatically calls CreateInstance()
+}
+
+public sealed class CustomBindable : BaseBindable
+{
+    protected override BaseBindable CreateInstance() =&gt; new CustomBindable();
+}
+</code></pre>
+<h1 id="20218030"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.803.0">2021.803.0</a></h1>
+<h2 id="enumlocalisationmapper-for-enum-localisation-has-been-replaced-with-per-member-localisabledescription-attributes"><code>EnumLocalisationMapper</code> for enum localisation has been replaced with per-member <code>LocalisableDescription</code> attributes</h2>
+<p>As the current way for localising <code>enum</code>s require a side-class for the mapping, it became a tedious procedure to localise enums and lengthens a lot of files for supporting such.</p>
+<p>Therefore a new <code>LocalisableDescription</code> attribute has been added allowing for localisation in a more performant and single-lined way.</p>
+<pre><code class="lang-diff">-    [LocalisableEnum(typeof(SearchEnumLocalisationMapper))]
+     public enum Search
+     {
++        [LocalisableDescription(typeof(Strings), nameof(Strings.SearchHide))]
+         Hide,
+-        Show
+-    }
+-
+-    public class SearchEnumLocalisationMapper : EnumLocalisationMapper&lt;Search&gt;
+-    {
+-        public override LocalisableString Map(Search value)
+-        {
+-            switch (value)
+-            {
+-                case Search.Hide:
+-                    return Strings.SearchHide;
+-
+-                case Search.Show:
+-                    return Strings.SearchShow;
+
+-                default:
+-                    throw new ArgumentOutOfRangeException(nameof(value), value, null);
+-            }
+-        }
++        [LocalisableDescription(typeof(Strings), nameof(Strings.SearchShow))]
++        Show
+     }
+</code></pre>
+<p>This however require from all consumers to store the <code>LocalisableString</code>s in static providing classes, similar to <a href="https://github.com/ppy/osu/tree/master/osu.Game/Localisation">osu!'s <code>Strings</code> classes</a>.</p>
+<p>Benchmarks:</p>
+<ul>
+<li><p><code>EnumLocalisationMapper</code>:
+|                    Method | Times |          Mean |       Error |       StdDev |        Median |
+|-------------------------- |------ |--------------:|------------:|-------------:|--------------:|
+| GetLocalisableDescription |     1 |      6.866 us |   0.5021 us |     1.383 us |      6.316 us |
+| GetLocalisableDescription |    10 |     93.360 us |   4.9223 us |    13.883 us |     92.744 us |
+| GetLocalisableDescription |   100 |    817.775 us |  31.0268 us |    90.996 us |    812.132 us |
+| GetLocalisableDescription |  1000 | 10,794.319 us | 820.1783 us | 2,392.498 us | 10,718.182 us |</p>
+</li>
+<li><p><code>LocalisableDescription</code>:
+|                    Method | Times |         Mean |       Error |      StdDev |       Median |
+|-------------------------- |------ |-------------:|------------:|------------:|-------------:|
+| GetLocalisableDescription |     1 |     4.631 us |   0.1148 us |   0.3331 us |     4.514 us |
+| GetLocalisableDescription |    10 |    54.555 us |   1.3511 us |   3.9412 us |    54.440 us |
+| GetLocalisableDescription |   100 |   540.643 us |  15.9231 us |  45.6864 us |   539.138 us |
+| GetLocalisableDescription |  1000 | 7,218.708 us | 270.7659 us | 768.1179 us | 7,192.596 us |</p>
+</li>
+</ul>
+<h1 id="20217210"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.721.0">2021.721.0</a></h1>
+<h2 id="platformaction-type-is-changed-to-an-enum-type"><code>PlatformAction</code> type is changed to an enum type</h2>
+<p>If <code>PlatformAction.ActionType</code> was matched, change to a matching of <code>PlatformAction</code> itself like:</p>
+<pre><code class="lang-diff">bool OnPressed(PlatformAction action) {
+-    switch (action.ActionType)
++    switch (action)
+    {
+-        case PlatformActionType.Cut:
++        case PlatformAction.Cut:
+</code></pre>
+<p>For <code>PlatformActionMethod.Delete</code>, and if only the Delete key should be handled (not Backspace etc.), change to <code>PlatformAction.Delete</code>:</p>
+<pre><code class="lang-diff">-    switch (action.ActionMethod)
++    switch (action)
+    {
+-        case PlatformActionMethod.Delete:
++        case PlatformAction.Delete:
+</code></pre>
+<h1 id="20216280"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.628.0">2021.628.0</a></h1>
+<h2 id="ihastooltiptext-is-now-a-localisablestring"><code>IHasTooltip.Text</code> is now a <code>LocalisableString</code></h2>
+<p><code>IHasTooltip.Text</code> now takes a <code>LocalisableString</code> instead of  regular string. Users of custom tooltip containers may also have to change checks in the <code>SetContent()</code> method of their tooltip type to check if content is a <code>LocalisableString</code> instead of a regular string.</p>
+<h2 id="recently-added-gamethreadthreadpausing-has-been-removed">Recently added <code>GameThread.ThreadPausing</code> has been removed</h2>
+<p>This was only added in the previous release, but has since been replaced with the bindable <code>GameThread.State</code>, which gives more detail about the current state of the thread.</p>
+<h1 id="20216220"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.622.0">2021.622.0</a></h1>
+<h2 id="markdownheadinggetfontsizebylevel-now-specifies-absolute-sizes"><code>MarkdownHeading.GetFontSizeByLevel</code> now specifies absolute sizes</h2>
+<p>The result of this method is now more correctly applied to headers via <code>FontSize</code> rather than <code>Scale</code>. If you were overriding this method, please multiply your returned values by <code>20</code> to maintain sizing compatibility.</p>
+<h2 id="opensans-is-no-longer-provided-with-the-default-font-now-being-roboto">&quot;OpenSans&quot; is no longer provided, with the default font now being &quot;Roboto&quot;</h2>
+<p>We were already using Roboto in the visual tests contexts, but fallback to OpenSans could be seen for tool windows in both framework and consumer projects. In an effort to consolidate this visually, all framework components now use Roboto, the chosen font for osu!framework design logic.</p>
+<p>This means that if you were previously relying on the presence of OpenSans and do not want to switch to Roboto, you will need to re-add the font resources in your project. Instructions on doing this can be found <a href="https://github.com/ppy/osu-framework/wiki/Setting-Up-Fonts">here</a>.</p>
+<h1 id="20214190"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.419.0">2021.419.0</a></h1>
+<h2 id="rotationdirectioncounterclockwise-has-been-renamed-to-counterclockwise"><code>RotationDirection.CounterClockwise</code> has been renamed to <code>Counterclockwise</code></h2>
+<p>As it appears to be often one word, the enum member <code>CounterClockwise</code> has been renamed to <code>Counterclockwise</code>.</p>
+<h1 id="20214160"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.416.0">2021.416.0</a></h1>
+<h2 id="ibindable-ibindablet-and-ibindablelist-are-no-longer-iparseable"><code>IBindable</code>, <code>IBindable&lt;T&gt;</code>, and <code>IBindableList&lt;&gt;</code> are no longer <code>IParseable</code></h2>
+<p><code>IParseable</code> is only implemented on the <code>Bindable&lt;&gt;</code> and <code>BindableList&lt;&gt;</code> classes. Code that relied on this functionality should instead cast to <code>IParseable</code>.</p>
+<h1 id="20213300"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.330.0">2021.330.0</a></h1>
+<h2 id="inputhandler-no-longer-has-a-priority-property">InputHandler no longer has a Priority property</h2>
+<p>Priority is now decided by the construction order of <code>InputHandler</code>s in <code>CreateAvailableInputHandlers</code>.</p>
+<h1 id="20213170"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.317.0">2021.317.0</a></h1>
+<h2 id="configmanagerset-is-now-protected-and-renamed-to-setdefault">ConfigManager.Set is now protected and renamed to <code>SetDefault</code></h2>
+<p>Previously this method was <code>public</code> for convenience, but as it implicitly set the <code>Default</code> value of bindables it touched, could cause unexpected behaviour.</p>
+<ul>
+<li>For initialising defaults, switch to using <code>SetDefault</code> from <code>InitialiseDefaults</code></li>
+<li>For changing configuration values externally, use <code>SetValue</code> instead of <code>Set</code></li>
+</ul>
+<pre><code class="lang-csharp">// previously
+config.Set(ConfigType.Name, true);
+
+// now
+config.SetValue(ConfigType.Name, true);
+</code></pre>
+<h2 id="osutk-support-has-been-removed-in-most-places">osuTK support has been removed in most places</h2>
+<p>If you were supporting it via <code>GameHost</code> initialisation, you may need to remove a parameter. Internally, we still support it in a minimal way for Xamarin platforms.</p>
+<h1 id="20212250"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.225.0">2021.225.0</a></h1>
+<h2 id="the-regular-weight-of-opensans-has-been-renamed-to-opensans-regular">The regular weight of OpenSans has been renamed to OpenSans-Regular</h2>
+<p>Until now this font wasn't following the convention we use everywhere else. If you are referencing it directly, please update your strings to point to the new name.</p>
+<h2 id="localisedstring-no-longer-exists">LocalisedString no longer exists</h2>
+<p>For strings which have romanisable content, <code>RomanisableString</code> should be used instead.</p>
+<h2 id="multiple-ui-components-now-use-localisablestring-in-place-of-string">Multiple UI Components now use <code>LocalisableString</code> in place of <code>string</code></h2>
+<p>If you have custom implementations, you will need to update the overridden signatures.</p>
+<h2 id="explicit-tostring-may-be-required-where-previous-not">Explicit <code>ToString</code> may be required where previous not</h2>
+<p>Getting the current value of some strings (ie. on UI Components) will now require an explicit call to <code>.ToString()</code>.</p>
+<h1 id="20211060"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.106.0">2021.106.0</a></h1>
+<h2 id="games-will-now-throw-and-crash-immediately-on-performing-cross-thread-transform-operations">Games will now throw (and crash) immediately on performing cross-thread transform operations</h2>
+<p>This may mean that as a framework consumer you need to re-think how you are performing operations between drawables. The easiest way to avoid issue is to use <code>Schedule</code> to force the target code to be on the correct thread.</p>
+<h1 id="202010090"><a href="https://github.com/ppy/osu-framework/releases/tag/2020.1009.0">2020.1009.0</a></h1>
+<h2 id="waveformgraphbasecolour-should-be-used-instead-of-colour-for-the-default-frequency-colour"><code>WaveformGraph.BaseColour</code> should be used instead of <code>Colour</code> for the default frequency colour</h2>
+<p><code>Colour</code> now uniformly affects the entire graph as expected.</p>
+<h1 id="20209010"><a href="https://github.com/ppy/osu-framework/releases/tag/2020.901.0">2020.901.0</a></h1>
+<h2 id="iaggregateaudioadjustmentgetaggregate-has-been-made-an-extension-method"><code>IAggregateAudioAdjustment.GetAggregate()</code> has been made an extension method</h2>
+<p>To avoid aggregate adjustment implementations from having to implement both <code>Aggregate{Volume,Balance,Frequency,Tempo}</code> and <code>GetAggregate()</code>, the latter has been made an extension method returning one of the aforementioned four values for the appropriate property of the adjustment.</p>
+<p>Possible compilation failures related to <code>GetAggregate()</code> should be resolved by adding a using statement for the <code>osu.Framework.Audio</code> namespace to the files affected.</p>
+<h1 id="20208190"><a href="https://github.com/ppy/osu-framework/releases/tag/2020.819.0">2020.819.0</a></h1>
+<h2 id="textbox-events-only-trigger-on-user-input"><code>TextBox</code> events only trigger on user input</h2>
+<p>The events were specifically exposed to provide feedback on user input, but were triggering on programmatic manipulation of the textbox's text. See <a href="https://github.com/ppy/osu-framework/pull/3839/files">https://github.com/ppy/osu-framework/pull/3839/files</a>.</p>
+<h1 id="20207100"><a href="https://github.com/ppy/osu-framework/releases/tag/2020.710.0">2020.710.0</a></h1>
+<h2 id="textbox-will-no-longer-trigger-sound-effects"><code>TextBox</code> will no longer trigger sound effects</h2>
+<p>This is a fringe use-case, as the samples were never included with the framework, but if you happened to be providing them in your game resources, you will need to update your <code>TextBox</code> implementation to trigger them again. Check the <a href="https://github.com/ppy/osu/pull/9216">osu!-side changes</a> for an example of how to do this.</p>
+<h2 id="cachedmodeldependencycontainer-models-must-now-only-contain-read-only-fields"><code>CachedModelDependencyContainer</code> models must now only contain read-only fields</h2>
+<p>Mutating bindables of models attached to a <code>CachedModelDependencyContainer</code> can lead to crashes or otherwise unexpected behaviour, and is now disallowed.</p>
+<h1 id="20203020"><a href="https://github.com/ppy/osu-framework/releases/tag/2020.302.0">2020.302.0</a></h1>
+<h2 id="frameworkdebugconfig-no-longer-exposes-performancelogging"><code>FrameworkDebugConfig</code> no longer exposes <code>PerformanceLogging</code></h2>
+<p>Performance logging is now toggled by opening &quot;Global Statistics&quot; overlay via Ctrl+F2. To manually toggle it, you may access <code>GameHost.PerformanceLogging</code>, but note that a change to this bindable will be overridden by toggling the statistics overlay.</p>
+<h2 id="layout-validation-and-invalidation-has-been-reworked">Layout validation and invalidation has been reworked</h2>
+<p>To better cover edge-case scenarios where layout wasn't properly refreshed, the process of layout invalidation has changed.</p>
+<h3 id="in-cases-where-invalidate-affected-a-cached-member-the-following-adjustment-is-necessary">In cases where <code>Invalidate()</code> affected a <code>Cached</code> member, the following adjustment is necessary:</h3>
+<pre><code class="lang-diff">public class MyDrawable : Drawable
+{
+-    private readonly Cached myLayoutValue = new Cached();
+-
+-    protected override bool OnInvalidate(Invalidation invalidation, Drawable source, bool shallPropagate)
+-    {
+-        var result = base.OnInvalidate(invalidation, source, shallPropagate);
+-
+-        if ((invalidation &amp; (Invalidation.DrawSize | Invalidation.Presence)) &gt; 0) /* any invalidation type of your choice */
+-            result &amp;= !myLayoutValue.Invalidate();
+-
+-        return result;
+-    }
+
++    /* can also be a LayoutValue&lt;T&gt; */
++    private readonly LayoutValue myLayoutValue = new LayoutValue(Invalidation.DrawSize | Invalidation.Presence);
++
++    public MyDrawable()
++    {
++        AddLayout(myLayoutValue);
++    }
+}
+</code></pre>
+<h3 id="in-cases-where-invalidatefromchild-affected-a-cached-member-the-following-adjustment-is-necessary">In cases where <code>InvalidateFromChild()</code> affected a <code>Cached</code> member, the following adjustment is necessary:</h3>
+<pre><code class="lang-diff">public class MyDrawable : Drawable
+{
+-    private readonly Cached myLayoutValue = new Cached();
+-
+-    protected override void InvalidateFromChild(Invalidation invalidation, Drawable source)
+-    {
+-        if ((invalidation &amp; (Invalidation.DrawSize | Invalidation.Presence)) &gt; 0) /* any invalidation type of your choice */
+-            myLayoutValue.Invalidate();
+-    }
+
++    /* can also be a LayoutValue&lt;T&gt; */
++    private readonly LayoutValue myLayoutValue = new LayoutValue(Invalidation.DrawSize | Invalidation.Presence, InvalidationSource.Child);
++
++    public MyDrawable()
++    {
++        AddLayout(myLayoutValue);
++    }
+}
+</code></pre>
+<h3 id="in-cases-where-both-invalidate-and-invalidatefromchild-affected-the-same-cached-member-the-following-adjustment-is-required">In cases where <em>both</em> <code>Invalidate()</code> and <code>InvalidateFromChild()</code> affected the same <code>Cached</code> member, the following adjustment is required:</h3>
+<pre><code class="lang-diff">public class MyDrawable : Drawable
+{
+-    private readonly Cached myLayoutValue = new Cached();
+-
+-    protected override bool OnInvalidate(Invalidation invalidation, Drawable source, bool shallPropagate)
+-    {
+-        var result = base.OnInvalidate(invalidation, source, shallPropagate);
+-
+-        if ((invalidation &amp; Invalidation.DrawSize) &gt; 0) /* any invalidation type of your choice */
+-            result &amp;= !myLayoutValue.Invalidate();
+-
+-        return result;
+-    }
+-
+-    protected override void InvalidateFromChild(Invalidation invalidation, Drawable source)
+-    {
+-        if ((invalidation &amp; Invalidation.Presence) &gt; 0) /* any invalidation type of your choice */
+-            myLayoutValue.Invalidate();
+-    }
+
++    /* can also be a LayoutValue&lt;T&gt; */
++    private readonly LayoutValue myLocalLayoutValue = new LayoutValue(Invalidation.DrawSize);
++    private readonly LayoutValue myChildLayoutValue = new LayoutValue(Invalidation.Presence, InvalidationSource.Child);
++
++    public MyDrawable()
++    {
++        AddLayout(myLocalLayoutValue);
++        AddLayout(myChildLayoutValue);
++    }
++
++    protected override void Update()
++    {
++        base.Update();
++
++        /* wherever your re-validation was previously done */
++        if (!myChildLayoutValue.IsValid)
++        {
++            myLocalLayoutValue.Invalidate();
++            myChildLayoutValue.Validate();
++        }
++
++        if (!myLocalLayoutValue.IsValid)
++        {
++            /* your custom validation */
++            myLocalLayoutValue.Validate();
++        }
++    }
+}
+</code></pre>
+<h3 id="in-cases-where-custom-logic-that-cant-be-described-as-layout-was-done-in-invalidate-the-following-adjustment-is-necessary">In cases where custom logic that can't be described as layout was done in <code>Invalidate()</code>, the following adjustment is necessary:</h3>
+<pre><code class="lang-diff">public class MyDrawable : Drawable
+{
+-    protected override bool OnInvalidate(Invalidation invalidation, Drawable source, bool shallPropagate)
+-    {
+-        var result = base.OnInvalidate(invalidation, source, shallPropagate);
+-
+-        if ((invalidation &amp; (Invalidation.DrawSize | Invalidation.Presence)) &gt; 0) /* any invalidation type of your choice */
+-        {
+-            performCustomAction();
+-            result = true;
+-        }
+-
+-        return result;
+-    }
+
++    protected override bool OnInvalidate(Invalidation invalidation, InvalidationSource source)
++    {
++        var result = base.OnInvalidate(invalidation, source);
++
++        if ((invalidation &amp; (Invalidation.DrawSize | Invalidation.Presence)) &gt; 0) /* any invalidation type of your choice */
++        {
++            performCustomAction();
++            result = true;
++        }
++
++        return result;
++    }
+
+    private void performCustomAction()
+    {
+        /* custom invalidation logic here */
+    }
+}
+</code></pre>
+<h1 id="20202180"><a href="https://github.com/ppy/osu-framework/releases/tag/2020.218.0">2020.218.0</a></h1>
+<h2 id="bindablelisttitemsadded-is-now-obsolete"><code>BindableList&lt;T&gt;.ItemsAdded</code> is now obsolete</h2>
+<p>The <code>ItemsAdded</code> event failed to provide enough context when items are moved around or inserted into the list.</p>
+<p>It has been replaced by the <code>CollectionChanged</code> <a href="https://docs.microsoft.com/en-au/dotnet/api/system.collections.specialized.notifycollectionchangedeventhandler?view=netframework-4.8">NotifyCollectionChangedEventHandler</a>, which provides context such as the newly-added items and the indices at which the addition took place.</p>
+<p>This event is triggered by the following methods with <code>Action = NotifyCollectionChangedAction.Add</code>:</p>
+<pre><code class="lang-csharp">BindableList&lt;T&gt;.Add(T item)
+BindableList&lt;T&gt;.Insert(int index, T item)
+BindableList&lt;T&gt;.AddRange(IEnumerable&lt;T&gt; items)
+</code></pre>
+<p>The following is an example migration utilising the new <code>CollectionChanged</code> event:</p>
+<pre><code class="lang-diff">BindableList&lt;int&gt; list = new BindableList&lt;int&gt;();
+
+- list.ItemsAdded += items =&gt;
+- {
+-     foreach (var item in items)
+-         Console.WriteLine($&quot;Added: {item}&quot;);
+- }
+
++ list.CollectionChanged += (_, args) =&gt;
++ {
++     switch (args.Action)
++     {
++         case NotifyCollectionChangedAction.Add:
++             foreach (var item in args.NewItems.Cast&lt;int&gt;())
++                 Console.WriteLine($&quot;Added: {item});
++             break;
++     }
++ }
+</code></pre>
+<p>Note that <code>CollectionChanged</code> should <em>not</em> be used in conjunction with the <code>ItemsAdded</code> event.</p>
+<h2 id="bindablelisttitemsremoved-is-now-obsolete"><code>BindableList&lt;T&gt;.ItemsRemoved</code> is now obsolete</h2>
+<p>As above, the <code>ItemsRemoved</code> revent has also been replaced by the <code>CollectionChanged</code> <a href="https://docs.microsoft.com/en-au/dotnet/api/system.collections.specialized.notifycollectionchangedeventhandler?view=netframework-4.8">NotifyCollectionChangedEventHandler</a>.</p>
+<p>This event is triggered by the following methods with <code>Action = NotifyCollectionChangedAction.Remove</code>:</p>
+<pre><code class="lang-csharp">BindableList&lt;T&gt;.Clear()
+BindableList&lt;T&gt;.Remove(T item)
+BindableList&lt;T&gt;.RemoveRange(int index, int count)
+BindableList&lt;T&gt;.RemoveAt(int index)
+BindableList&lt;T&gt;.RemoveAll(Predicate&lt;T&gt; match)
+</code></pre>
+<p>The following is an example migration utilising the new <code>CollectionChanged</code> event:</p>
+<pre><code class="lang-diff">BindableList&lt;int&gt; list = new BindableList&lt;int&gt;();
+
+- list.ItemsRemoved += items =&gt;
+- {
+-     foreach (var item in items)
+-         Console.WriteLine($&quot;Removed: {item}&quot;);
+- }
+
++ list.CollectionChanged += (_, args) =&gt;
++ {
++     switch (args.Action)
++     {
++         // Handles both clear and remove events
++         case NotifyCollectionChangedAction.Remove:
++             foreach (var item in args.OldItems.Cast&lt;int&gt;())
++                 Console.WriteLine($&quot;Removed: {item});
++             break;
++     }
++ }
+</code></pre>
+<h1 id="20201220"><a href="https://github.com/ppy/osu-framework/releases/tag/2020.122.0">2020.122.0</a></h1>
+<h2 id="inputmanagercreatebuttonmanagerfor-was-renamed-to-inputmanagercreatebuttoneventmanagerfor">InputManager.CreateButtonManagerFor was renamed to InputManager.CreateButtonEventManagerFor</h2>
+<p>Changed to match other methods and the class name it was creating.</p>
+<h2 id="various-input-end-events-now-return-void-and-can-no-longer-block-propagation">Various input &quot;end&quot; events now return <code>void</code> and can no longer block propagation</h2>
+<p>Events affected:</p>
+<pre><code class="lang-csharp">Drawable.OnDoubleClick()
+Drawable.OnDrag()
+Drawable.OnDragEnd()
+Drawable.OnMouseUp()
+Drawable.OnKeyUp()
+Drawable.OnJoystickRelease()
+IKeyBindingHandler&lt;T&gt;.OnReleased()
+</code></pre>
+<p>A drawable may return <code>false</code> for an input &quot;begin&quot; event to allow the event to propagate further through the hierarchy. Previously, such a drawable could then return <code>true</code> for the input &quot;end&quot; event and prevent the event from propagating to the drawables which the input &quot;begin&quot; event was propagated to.<br>
+This could lead to incorrect implementations where drawables are left in weird states after handling input events.</p>
+<p>By returning <code>void</code>, the input &quot;end&quot; events can no longer be blocked by other drawables in the hierarchy and are guaranteed to be invoked if their respective input &quot;begin&quot; event was previously invoked.</p>
+<p>The following table illustrates the events for which the relationship is satisfied:</p>
+<table>
+<thead>
+<tr>
+<th>begin event</th>
+<th>end event(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OnDragStart()</code></td>
+<td><code>OnDrag()</code>, <code>OnDragEnd()</code></td>
+</tr>
+<tr>
+<td><code>OnMouseDown()</code></td>
+<td><code>OnMouseUp()</code></td>
+</tr>
+<tr>
+<td><code>OnKeyDown()</code></td>
+<td><code>OnKeyUp()</code></td>
+</tr>
+<tr>
+<td><code>OnJoystickPress()</code></td>
+<td><code>OnJoystickRelease()</code></td>
+</tr>
+<tr>
+<td><code>OnPressed()</code></td>
+<td><code>OnReleased()</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="20201090"><a href="https://github.com/ppy/osu-framework/releases/tag/2020.109.0">2020.109.0</a></h1>
+<h2 id="the-namespace-osuframeworkmathutils-has-been-removed">The namespace <code>osu.Framework.MathUtils</code> has been removed</h2>
+<p>All existing utility classes have been moved to the namespace <code>osu.Framework.Utils</code>.</p>
+<h1 id="201912240"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.1224.0">2019.1224.0</a></h1>
+<h2 id="textbox-and-all-related-components-are-now-abstract"><code>TextBox</code> and all related components are now abstract</h2>
+<p><code>BasicTextBox</code> is provided as a drop-in replacement that comes with the framework design language.</p>
+<h2 id="passwordtextbox-has-been-renamed"><code>PasswordTextBox</code> has been renamed</h2>
+<p>Renamed to <code>BasicPasswordTextBox</code> and comes with the framework design language.</p>
+<h1 id="201912111"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.1211.1">2019.1211.1</a></h1>
+<h2 id="the-value-provided-in-the-constructor-for-bindablet-is-now-used-as-both-the-initial-and-default-value">The value provided in the constructor for <code>Bindable&lt;T&gt;</code> is now used as both the initial and default value</h2>
+<p>The following lines of code are now identical.</p>
+<pre><code class="lang-csharp">var bindable1 = new Bindable&lt;int&gt;(10) { Default = 10 };
+var bindable2 = new Bindable&lt;int&gt;(10);
+</code></pre>
+<h1 id="201912101"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.1210.1">2019.1210.1</a></h1>
+<h2 id="performancelogging-was-moved-to-debugconfig">PerformanceLogging was moved to DebugConfig</h2>
+<p>As seen in <a href="https://github.com/ppy/osu/issues/6795">https://github.com/ppy/osu/issues/6795</a>, some users are turning on performance logging and leaving it on. This is not intended, as it adds a noticeable overhead to retrieve and write the stack traces to disk.</p>
+<p>This change allows the setting to reset each game execution, rather than be saved to a user's configuration file.</p>
+<h1 id="201911210"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.1121.0">2019.1121.0</a></h1>
+<h2 id="net-standard-21">.NET Standard 2.1</h2>
+<p>osu!framework now targets .NET Standard 2.1. Consumers of the framework will need to install the <a href="https://dotnet.microsoft.com/download/dotnet-core/3.0">.NET Core 3.0 SDK</a> and change their projects to target <code>netstandard2.1</code>/<code>netcoreapp3.0</code>.</p>
+<h2 id="webrequestresponsestring-and-webrequestresponsedata-properties-were-converted-to-methods"><code>WebRequest.ResponseString</code> and <code>WebRequest.ResponseData</code> properties were converted to methods</h2>
+<p><code>GetResponseString</code> and <code>GetResponseData</code> methods are provided as a replacement. This change was done in order to indicate that these operations are expensive(they do memory allocations in the heap on each call).</p>
+<h1 id="201911040"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.1104.0">2019.1104.0</a></h1>
+<h2 id="button-has-been-made-abstract"><code>Button</code> has been made abstract</h2>
+<p><code>BasicButton</code> is provided as a drop-in replacement that comes with the framework design language.</p>
+<h1 id="20199210"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.921.0">2019.921.0</a></h1>
+<h2 id="quadconservativearea-has-been-removed"><code>Quad.ConservativeArea</code> has been removed</h2>
+<p>It was inaccurate for certain <code>Quad</code>s. Use <code>Area</code> as a replacement.</p>
+<h1 id="20198210"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.821.0">2019.821.0</a></h1>
+<h2 id="spritetextusefixedwidthforcharacter-has-been-removed"><code>SpriteText.UseFixedWidthForCharacter</code> has been removed</h2>
+<p>Provide an array of <code>char</code>s as <code>SpriteText.FixedWidthExcludeCharacters</code> instead.</p>
+<h2 id="spritetextgettextureforcharacter-and-spritetextgetfallbacktextureforcharacter-have-been-removed"><code>SpriteText.GetTextureForCharacter</code> and <code>SpriteText.GetFallbackTextureForCharacter</code> have been removed.</h2>
+<p>Glyphs must now always be retrieved through an <code>ITexturedGlyphLookupStore</code>. The <code>SpriteText.CreateTextBuilder()</code> method is provided to allow overriding the store which glyphs are retrieved from.</p>
+<h2 id="blendingmodes-are-now-obsoleted"><code>BlendingModes</code> are now obsoleted</h2>
+<p>Please switch to using <code>BlendingParameters</code> static properties instead, whcih provide the same functionality. This change was made to expose full control over blend equations and simplify the blending class structure, which previously spanned three related types.</p>
+<h1 id="20198090"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.809.0">2019.809.0</a></h1>
+<h2 id="cached-is-now-a-class-and-requires-object-initialisation"><code>Cached</code> is now a class and requires object initialisation</h2>
+<p>Usages of <code>Cached</code> without initialising (via <code>new Cached()</code>) will need to be updated.</p>
+<h2 id="animation-no-longer-supports-autosizeaxes"><code>Animation</code> no longer supports <code>AutoSizeAxes</code></h2>
+<p><code>Animation</code> will automatically auto-size on axes which are not relative sized (via <code>RelativeSizeAxes</code>) and for which <code>Size</code> has not been set.</p>
+<h1 id="20197260"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.726.0">2019.726.0</a></h1>
+<h2 id="path-now-supports-autosizeaxes-and-is-set-to-auto-size-in-both-axes-by-default"><code>Path</code> now supports <code>AutoSizeAxes</code> and is set to auto-size in both axes by default</h2>
+<p>There are now three modes of operation for paths:</p>
+<pre><code>// Auto size
+new Path()
+
+// Static size
+new Path
+{
+    AutoSizeAxes = Axes.None,
+    Size = new Vector2(100)
+}
+
+// Relative size
+new Container
+{
+    Size = new Vector2(100),
+    new Path
+    {
+        AutoSizeAxes = Axes.None,
+        RelativeSizeAxes = Axes.Both
+    }
+}
+</code></pre>
+<h1 id="20197020"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.702.0">2019.702.0</a></h1>
+<h2 id="inputkey-enum-names-for-extra-mouse-buttons-have-been-renamed"><code>InputKey</code> enum names for extra mouse buttons have been renamed.</h2>
+<pre><code>MouseButtonX -&gt; ExtraMouseButtonX
+</code></pre>
+<h1 id="20196280"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.628.0">2019.628.0</a></h1>
+<h2 id="menu-and-several-related-components-have-been-made-abstract"><code>Menu</code> and several related components have been made abstract</h2>
+<p>For each component, there are two ways to resolve resulting errors:</p>
+<ol>
+<li><code>ContextMenuContainer</code>
+<ol>
+<li><code>BasicContextMenuContainer</code> is provided as a drop-in replacement that comes with the framework design language.</li>
+<li>Implement your own local <code>ContextMenuContainer</code>. The following is consumable code that matches the removed implementation. Rename it to suit your project and update your references:
+<pre><code class="lang-csharp">public class MyContextMenuContainer : ContextMenuContainer
+{
+    // If you have a custom menu, provide it here.
+    protected override Menu CreateMenu() =&gt; new BasicMenu(Direction.Vertical);
+}
+</code></pre>
+</li>
+</ol>
+</li>
+<li><code>Menu</code>
+<ol>
+<li><code>BasicMenu</code> is provided as a drop-in replacement that comes with the framework design language.</li>
+<li>Implement your own local <code>Menu</code>. The following is consumable code that matches the removed implementation. Rename it to suit your project and update your references:
+<pre><code class="lang-csharp">public class MyMenu : Menu
+{
+    public MyMenu(Direction direction, bool topLevelMenu = false)
+        : base(direction, topLevelMenu)
+    {
+    }
+
+    protected override Menu CreateSubMenu() =&gt; new MyMenu(Direction.Vertical);
+
+    protected override DrawableMenuItem CreateDrawableMenuItem(MenuItem item) =&gt; new MyDrawableMenuItem(item);
+
+    // If you have a custom scroll container, provide it here.
+    protected override ScrollContainer&lt;Drawable&gt; CreateScrollContainer(Direction direction) =&gt; new BasicScrollContainer(direction);
+
+    private class MyDrawableMenuItem : DrawableMenuItem
+    {
+        public MyDrawableMenuItem(MenuItem item)
+            : base(item)
+        {
+        }
+
+        protected override Drawable CreateContent() =&gt; new SpriteText
+        {
+            Anchor = Anchor.CentreLeft,
+            Origin = Anchor.CentreLeft,
+            Padding = new MarginPadding(5),
+            Font = new FontUsage(size: 17),
+        };
+    }
+}
+</code></pre>
+</li>
+</ol>
+</li>
+<li><code>DropdownMenu</code> / <code>DropdownMenuItem</code>. This is only applicable if you already implement a custom <code>Dropdown&lt;T&gt;</code>.
+<ol>
+<li>The following is consumable code that matches the removed implementation. Rename it to suit your project and update your references:
+<pre><code class="lang-csharp">public class MyDropdown&lt;T&gt; : Dropdown&lt;T&gt;
+{
+    // If you have a custom header, provide it here.
+    protected override DropdownHeader CreateHeader() =&gt; null;
+
+    protected override DropdownMenu CreateMenu() =&gt; new MyDropdownMenu();
+
+    private class MyDropdownMenu : DropdownMenu
+    {
+        // If you have a custom menu, provide it here.
+        protected override Menu CreateSubMenu() =&gt; new BasicMenu(Direction);
+
+        // If you have a custom scroll container, provide it here.
+        protected override ScrollContainer&lt;Drawable&gt; CreateScrollContainer(Direction direction) =&gt; new BasicScrollContainer(direction);
+
+        protected override DrawableDropdownMenuItem CreateDrawableDropdownMenuItem(MenuItem item) =&gt; new MyDrawableDropdownMenuItem(item);
+
+        private class MyDrawableDropdownMenuItem : DrawableDropdownMenuItem
+        {
+            public MyDrawableDropdownMenuItem(MenuItem item)
+                : base(item)
+            {
+            }
+
+            // If you have custom content, provide it here.
+            protected override Drawable CreateContent() =&gt; new SpriteText
+            {
+                Anchor = Anchor.CentreLeft,
+                Origin = Anchor.CentreLeft,
+                Padding = new MarginPadding(5),
+                Font = new FontUsage(size: 17),
+            };
+        }
+    }
+}
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="debugsettingactivegcmode-no-longer-exists"><code>DebugSetting.ActiveGCMode</code> no longer exists</h2>
+<p>If you were manually setting this, you can do so via <a href="https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/latency?view=netframework-4.8">.NET methods</a>.</p>
+<h1 id="20196140"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.614.0">2019.614.0</a></h1>
+<h2 id="scrollcontainert-is-now-abstract-and-scrollcontainer-no-longer-exists"><code>ScrollContainer&lt;T&gt;</code> is now abstract (and <code>ScrollContainer</code> no longer exists)</h2>
+<p>In a push to make the provided framework components design agnostic, <code>ScrollContainer</code> is no longer provided. As a framework consumer you have a few options to resolve this:</p>
+<ul>
+<li>Use <code>BasicScrollContainer</code></li>
+</ul>
+<p>The framework now provides <code>BasicScrollContainer</code> and <code>BasicScrollContainer&lt;T&gt;</code>. These are drop-in replacements but come with the framework design language, so it is only recommended as a temporary solution.</p>
+<ul>
+<li>Implement your own local <code>ScrollContainer</code></li>
+</ul>
+<p>Here is consumable code to provide a local implementation that matches the removed one. Rename to suit your project and update your references:</p>
+<pre><code class="lang-csharp">public class MyScrollContainer : ScrollContainer&lt;Drawable&gt;
+{
+    public MyScrollContainer(Direction scrollDirection = Direction.Vertical)
+        : base(scrollDirection)
+    {
+    }
+
+    protected override ScrollbarContainer CreateScrollbar(Direction direction) =&gt; new MyScrollbar(direction);
+
+    protected class MyScrollbar : ScrollbarContainer
+    {
+        private const float dim_size = 10;
+
+        private readonly Color4 hoverColour = Color4.White;
+        private readonly Color4 defaultColour = Color4.Gray;
+        private readonly Color4 highlightColour = Color4.Black;
+
+        private readonly Box box;
+
+        public MyScrollbar(Direction scrollDir)
+            : base(scrollDir)
+        {
+            Colour = defaultColour;
+
+            Blending = BlendingMode.Additive;
+
+            CornerRadius = 5;
+
+            const float margin = 3;
+
+            Margin = new MarginPadding
+            {
+                Left = scrollDir == Direction.Vertical ? margin : 0,
+                Right = scrollDir == Direction.Vertical ? margin : 0,
+                Top = scrollDir == Direction.Horizontal ? margin : 0,
+                Bottom = scrollDir == Direction.Horizontal ? margin : 0,
+            };
+
+            Masking = true;
+            Child = box = new Box { RelativeSizeAxes = Axes.Both };
+
+            ResizeTo(1);
+        }
+
+        public override void ResizeTo(float val, int duration = 0, Easing easing = Easing.None)
+        {
+            Vector2 size = new Vector2(dim_size)
+            {
+                [(int)ScrollDirection] = val
+            };
+            this.ResizeTo(size, duration, easing);
+        }
+
+        protected override bool OnHover(HoverEvent e)
+        {
+            this.FadeColour(hoverColour, 100);
+            return true;
+        }
+
+        protected override void OnHoverLost(HoverLostEvent e)
+        {
+            this.FadeColour(defaultColour, 100);
+        }
+
+        protected override bool OnMouseDown(MouseDownEvent e)
+        {
+            if (!base.OnMouseDown(e)) return false;
+
+            //note that we are changing the colour of the box here as to not interfere with the hover effect.
+            box.FadeColour(highlightColour, 100);
+            return true;
+        }
+
+        protected override bool OnMouseUp(MouseUpEvent e)
+        {
+            if (e.Button != MouseButton.Left) return false;
+
+            box.FadeColour(Color4.White, 100);
+
+            return base.OnMouseUp(e);
+        }
+    }
+}
+</code></pre>
+<h1 id="20196110"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.611.0">2019.611.0</a></h1>
+<h2 id="linearvertexbuffer-and-quadvertexbuffer-can-no-longer-be-constructed-outside-of-osuframework"><code>LinearVertexBuffer</code> and <code>QuadVertexBuffer</code> can no longer be constructed outside of osu!framework.</h2>
+<p>For existing code, <code>LinearBatch(size, 1)</code> and <code>QuadBatch(size, 1)</code> may be used to replace vertex buffer usages. Code must be updated to always invoke <code>batch.Add(vertex)</code> with the vertices that should be drawn.</p>
+<p><code>VertexBuffer</code> may still be derived for custom implementations.</p>
+<h2 id="visibilitycontainer-now-exposes-visibility-via-a-bindable">VisibilityContainer now exposes visibility via a bindable</h2>
+<p><code>VisibilityContainer</code> no longer implements <code>IStateful&lt;Visibility&gt;</code>, instead exposing a single <code>Bindable&lt;Visibility&gt; State</code>.</p>
+<h1 id="20196060"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.606.0">2019.606.0</a></h1>
+<h2 id="texturedrawtriangle-and-texturedrawquad-have-been-removed-2475"><code>Texture.DrawTriangle()</code> and <code>Texture.DrawQuad()</code> have been removed (<a href="https://github.com/ppy/osu-framework/pull/2475">#2475</a>)</h2>
+<p>Use <code>DrawNode.DrawTriangle()</code> and <code>DrawNode.DrawQuad()</code> instead.</p>
+<h1 id="20196040"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.604.0">2019.604.0</a></h1>
+<h2 id="global-trackstore-and-resourcestores-can-no-longer-access-resources-that-are-out-of-their-respective-namespaces">Global <code>TrackStore</code> and <code>ResourceStore</code>s can no longer access resources that are out of their respective namespaces.</h2>
+<p>Previously, it was possible to access any resource as a part of <code>TrackStore</code> and <code>SampleStore</code> via their <code>Get</code> methods because the entire resource store would be nested inside them.</p>
+<p>This nesting has been removed, so you can now only access files that are part of their specified namespaces (folders).</p>
+<ul>
+<li>For <code>TrackStore</code>, this will be the <code>Tracks</code> namespace.</li>
+<li>For <code>SampleStore</code>, this will be the <code>Samples</code> namespace.</li>
+</ul>
+<h2 id="audio-stores-have-been-renamed">Audio stores have been renamed</h2>
+<p>To bring naming in-line with the purpose of audio stores, the following classes have been renamed:</p>
+<p><code>SampleManager</code> -&gt; <code>SampleStore</code><br>
+<code>TrackManager</code> -&gt; <code>TrackStore</code></p>
+<p>In line with this, return values of <code>GetSampleStore</code> and <code>GetTrackStore</code> now return <code>ISampleStore</code> and <code>ITrackStore</code> respectively, hiding the underlying manager logic.</p>
+<p>The public variables relating to these stores have been renamed to reflect this change:</p>
+<p><code>AudioManager.Track</code> -&gt; <code>AudioManager.Tracks</code><br>
+<code>AudioManager.Sample</code> -&gt; <code>AudioManager.Samples</code></p>
+<h2 id="virtual-tracks-must-be-retrieved-from-itrackstore">Virtual tracks must be retrieved from <code>ITrackStore</code></h2>
+<p><code>ITrackStore</code> now has a <code>GetVirtual</code> method which will create a virtual track. This will handle adding the track correctly to the audio subsystem. If one wishes to create a custom type of virtual tracks (a super-edge-case) you could implement the <code>ITrackStore</code> interface and manually add your component to <code>AudioManager</code> via <code>AddItem</code>.</p>
+<h1 id="20195230"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.523.0">2019.523.0</a></h1>
+<h2 id="tabcontrol-can-now-select-nothing-2430">TabControl can now select nothing <a href="https://github.com/ppy/osu-framework/pull/2430">#2430</a></h2>
+<p>While this does not match most OS implementations of a tab control, this was deemed useful for o!f usage scenarios.</p>
+<p>Previously, this code would throw an exception.</p>
+<pre><code class="lang-csharp">tabControl.Current.Value = null;
+</code></pre>
+<p>Now it is allowed.</p>
+<h2 id="dropdown-can-now-select-nothing-2428">Dropdown can now select nothing <a href="https://github.com/ppy/osu-framework/pull/2428">#2428</a></h2>
+<p>Previously, this code would throw an exception.</p>
+<pre><code class="lang-csharp">dropdownMenu.Current.Value = null;
+</code></pre>
+<p>Now it is allowed. Note that implementations of dropdown should be updated to handle this (common scenario is that the <code>DropdownHeader</code> would not correctly handle a <code>string.Empty</code> case if it was using AutoSize in the Y axis).</p>
+<h2 id="tabitemisremovable-is-true-by-default-2425"><code>TabItem.IsRemovable</code> is true by default <a href="https://github.com/ppy/osu-framework/pull/2425">#2425</a></h2>
+<p>This felt like a more sane default. Any existing usage of custom <code>TabItem</code>s where <code>IsRemovable</code> was overridden, or any existing usage where removal is explicitly <em>not</em> wanted need to be updated.</p>
+<h1 id="20195140"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.514.0">2019.514.0</a></h1>
+<h2 id="gameframestatisticsmode-is-now-a-bindable-named-gameframestatistics-2399"><code>Game.FrameStatisticsMode</code> is now a bindable named <code>Game.FrameStatistics</code> <a href="https://github.com/ppy/osu-framework/pull/2399">#2399</a></h2>
+<p>This allows consumers to hook value changed events so they can, for instance, save the (framework) FPS display's state to config and handle hotkey-based changes.</p>
+<h2 id="visual-testcases-are-now-testscenes-2365">Visual <code>TestCase</code>s are now <code>TestScene</code>s <a href="https://github.com/ppy/osu-framework/pull/2365">#2365</a></h2>
+<p>The term <code>TestCase</code> is used by testing frameworks to denote single methods inside a test class. We were using it on the class itself as a prefix, which got quite confusing. This resolves the conflict and feels more correct as these are visual tests – ie. &quot;scenes&quot;.</p>
+<p>Note that the <code>TestCase</code> prefix is still supported by tooling for the time being. We still recommend you update (via a simple rename) as soon as possible.</p>
+<h1 id="20194270"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.427.0">2019.427.0</a></h1>
+<h2 id="drawableapplydrawnode-has-been-removed-2314"><code>Drawable.ApplyDrawNode()</code> has been removed <a href="https://github.com/ppy/osu-framework/pull/2314">#2314</a></h2>
+<p>The direction of application of <code>DrawNode</code> states has been inversed.</p>
+<p>Previously:</p>
+<pre><code class="lang-csharp">class MyCustomDrawable : Drawable
+{
+    private bool state;
+
+    protected override DrawNode CreateDrawNode() =&gt; new CustomDrawNode();
+
+    protected override void ApplyDrawNode(DrawNode node)
+    {
+        base.ApplyDrawNode(node);
+
+        var n = (CustomDrawNode)n;
+        
+        n.State = state; 
+    }
+
+    private class CustomDrawNode : DrawNode
+    {
+        public bool State;
+    }
+}
+</code></pre>
+<p>Now:</p>
+<pre><code class="lang-csharp">class MyCustomDrawable : Drawable
+{
+    private bool state;
+
+    protected override DrawNode CreateDrawNode() =&gt; new CustomDrawNode(this);
+
+    private class CustomDrawNode : DrawNode
+    {
+        protected new MyCustomDrawable Source =&gt; (MyCustomDrawable)base.Source;
+
+        private bool state;
+
+        public CustomDrawNode(MyCustomDrawable source)
+            : base(source)
+        {
+        }
+
+        public override void ApplyState()
+        {
+            base.ApplyState();
+
+            state = Source.state;
+        }
+    }
+}
+</code></pre>
+<h2 id="the-namespace-of-edgeeffectparameters-and-edgeeffecttype-has-changed-2314">The namespace of <code>EdgeEffectParameters</code> and <code>EdgeEffectType</code> has changed <a href="https://github.com/ppy/osu-framework/pull/2314">#2314</a></h2>
+<p>They now reside in <code>osu.Framework.Graphics.Effects</code>.</p>
+<h1 id="20193270"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.327.0">2019.327.0</a></h1>
+<h2 id="font-fallback-order-changes-2296">Font fallback order changes <a href="https://github.com/ppy/osu-framework/pull/2296">#2296</a></h2>
+<p>Games adding their own fonts can now do so directly to <code>Game.Fonts</code>. Fallback (framework-side) fonts are now always at the lowest priority.</p>
+<p>Previously:</p>
+<pre><code class="lang-csharp">// this completely overrides the framework default. will need to change once we make a proper FontStore.
+dependencies.Cache(Fonts = new FontStore(new GlyphStore(Resources, @&quot;Fonts/FontAwesome&quot;)));
+Fonts.AddStore(new GlyphStore(Resources, @&quot;Fonts/osuFont&quot;));
+</code></pre>
+<p>now:</p>
+<pre><code class="lang-csharp">Fonts.AddStore(new GlyphStore(Resources, @&quot;Fonts/osuFont&quot;));
+</code></pre>
+<h2 id="fontawesome-and-spriteicon-is-provided-by-the-framework-2293">FontAwesome and SpriteIcon is provided by the framework <a href="https://github.com/ppy/osu-framework/pull/2293">#2293</a></h2>
+<p>If you manually added either of these to your project, please remove them.</p>
+<p>Usage:</p>
+<pre><code class="lang-csharp">new SpriteIcon
+{
+    Icon = FontAwesome.Refresh,
+};
+</code></pre>
+<h1 id="20193190"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.319.0">2019.319.0</a></h1>
+<h2 id="parameter-order-of-adduntilstep--addwaitstep-reversed-2256">Parameter order of <code>AddUntilStep</code> / <code>AddWaitStep</code> reversed <a href="https://github.com/ppy/osu-framework/pull/2256">#2256</a></h2>
+<p>In order to standardise parameter order, these two methods' parameters have been reversed. Old parameter order methods are available temporarily (as <code>[Obsolete]</code>) to ease migration.</p>
+<h2 id="new-attribute-setupsteps-added-2266">New attribute <code>[SetUpSteps]</code> added <a href="https://github.com/ppy/osu-framework/pull/2266">#2266</a></h2>
+<p>Finally allows steps to be added that will run before every <code>[Test]</code> method.</p>
+<h1 id="20192210"><a href="https://github.com/ppy/osu-framework/releases/tag/2019.221.0">2019.221.0</a></h1>
+<h2 id="implicit-operator-removed-from-bindable-2152">Implicit operator removed from <code>Bindable</code> <a href="https://github.com/ppy/osu-framework/pull/2152">#2152</a></h2>
+<p>In order to avoid accidental misuse / misunderstandings, <code>.Value</code> must always be added to <code>Bindable</code> when requesting its value. One such case which used to be confusing:</p>
+<pre><code class="lang-csharp">Bindable&lt;Drawable&gt; bindableDrawable = new Bindable&lt;Drawable&gt;();
+
+if (bindableDrawable != null)
+{
+    // true
+}
+
+if (bindableDrawable.Value != null)
+{
+    // false
+}
+
+Drawable drawable = null;
+
+if (bindableDrawable == drawable)
+{
+    // ???
+}
+</code></pre>
+<h3 id="bindablevaluechanged-now-provides-valuechangedevent-2012">Bindable.ValueChanged now provides <code>ValueChangedEvent</code> <a href="https://github.com/ppy/osu-framework/pull/2012">#2012</a></h3>
+<p>It is now possible to access the old value. This was a common requirement in bindable usage which we had issues with until now.</p>
+<pre><code class="lang-csharp">
+bindable.ValueChanged += e =&gt;
+{
+    Console.WriteLine($&quot;Value changed from {e.OldValue} to {e.NewValue}&quot;);
+}
+</code></pre>
+<h3 id="introduction-of-fontusage-2043">Introduction of <code>FontUsage</code> <a href="https://github.com/ppy/osu-framework/pull/2043">#2043</a></h3>
+<p>While old methods of setting font attributes will still work, they are now marked as <code>[Obsoleted]</code>. You should use <code>Font = new FontUsage(size: 200)</code> going forward. For convenience, you can adjust existing fonts like so:</p>
+<pre><code class="lang-csharp">var font = new FontUsage(family: &quot;SourceCodePro&quot;);
+
+var fontWithSize = font.With(size: 24);
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework.wiki/blob/master/Breaking-changes.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1449 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class WebRequest | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class WebRequest | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework/new/master/apiSpec/new?filename=osu_Framework_IO_Network_WebRequest.md&amp;value=---%0Auid%3A%20osu.Framework.IO.Network.WebRequest%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="osu.Framework.IO.Network.WebRequest">
+
+
+
+  <h1 id="osu_Framework_IO_Network_WebRequest" data-uid="osu.Framework.IO.Network.WebRequest" class="text-break">
+Class WebRequest  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="osu.html">osu</a>.<a class="xref" href="osu.Framework.html">Framework</a>.<a class="xref" href="osu.Framework.IO.html">IO</a>.<a class="xref" href="osu.Framework.IO.Network.html">Network</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>osu.Framework.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class WebRequest : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">WebRequest</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="osu.Framework.IO.Network.FileWebRequest.html">FileWebRequest</a></div>
+      <div><a class="xref" href="osu.Framework.IO.Network.JsonWebRequest-1.html">JsonWebRequest&lt;T&gt;</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_">ExtensionMethods.GetDescription(object)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_">ExtensionMethods.GetLocalisableDescription&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_">EnumerableExtensions.Yield&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_">ObjectExtensions.AsNonNull&lt;T&gt;(T?)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_">ObjectExtensions.IsNotNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_">ObjectExtensions.IsNull&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_">ContainerExtensions.WithChild&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__">ContainerExtensions.WithChildren&lt;TContainer, TChild&gt;(TContainer, IEnumerable&lt;TChild&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_">ContainerExtensions.Wrap&lt;TContainer, TChild&gt;(TContainer, TChild)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="osu_Framework_IO_Network_WebRequest__ctor_" data-uid="osu.Framework.IO.Network.WebRequest.#ctor*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest__ctor_System_String_System_Object___" data-uid="osu.Framework.IO.Network.WebRequest.#ctor(System.String,System.Object[])">
+  WebRequest(string, params object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public WebRequest(string url = null, params object[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>url</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_AllowRetryOnTimeout" data-uid="osu.Framework.IO.Network.WebRequest.AllowRetryOnTimeout">
+  AllowRetryOnTimeout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether this request should internally retry (up to <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_MAX_RETRIES">MAX_RETRIES</a> times) on a timeout before throwing an exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowRetryOnTimeout</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_ContentType" data-uid="osu.Framework.IO.Network.WebRequest.ContentType">
+  ContentType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The content type when POST content is provided.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ContentType</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_DEFAULT_TIMEOUT" data-uid="osu.Framework.IO.Network.WebRequest.DEFAULT_TIMEOUT">
+  DEFAULT_TIMEOUT
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int DEFAULT_TIMEOUT = 10000</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Method" data-uid="osu.Framework.IO.Network.WebRequest.Method">
+  Method
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpMethod Method</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.httpmethod">HttpMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Timeout" data-uid="osu.Framework.IO.Network.WebRequest.Timeout">
+  Timeout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The amount of time from last sent or received data to trigger a timeout and abort the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Timeout</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Url" data-uid="osu.Framework.IO.Network.WebRequest.Url">
+  Url
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The URL of this request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Url</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_Aborted_" data-uid="osu.Framework.IO.Network.WebRequest.Aborted*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Aborted" data-uid="osu.Framework.IO.Network.WebRequest.Aborted">
+  Aborted
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the <a class="xref" href="osu.Framework.IO.Network.WebRequest.html">WebRequest</a> was aborted due to an exception or a user abort request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Aborted { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_Accept_" data-uid="osu.Framework.IO.Network.WebRequest.Accept*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Accept" data-uid="osu.Framework.IO.Network.WebRequest.Accept">
+  Accept
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The type of content expected by this web request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string Accept { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_AllowInsecureRequests_" data-uid="osu.Framework.IO.Network.WebRequest.AllowInsecureRequests*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_AllowInsecureRequests" data-uid="osu.Framework.IO.Network.WebRequest.AllowInsecureRequests">
+  AllowInsecureRequests
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether non-SSL requests should be allowed. Defaults to disabled.
+In the default state, http:// requests will be automatically converted to https://.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllowInsecureRequests { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="osu_Framework_IO_Network_WebRequest_AllowInsecureRequests_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Setting this overrides the <code>OSU_INSECURE_REQUESTS</code> environment variable.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_Completed_" data-uid="osu.Framework.IO.Network.WebRequest.Completed*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Completed" data-uid="osu.Framework.IO.Network.WebRequest.Completed">
+  Completed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Whether the <a class="xref" href="osu.Framework.IO.Network.WebRequest.html">WebRequest</a> has been run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Completed { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_ResponseHeaders_" data-uid="osu.Framework.IO.Network.WebRequest.ResponseHeaders*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_ResponseHeaders" data-uid="osu.Framework.IO.Network.WebRequest.ResponseHeaders">
+  ResponseHeaders
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpResponseHeaders ResponseHeaders { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.net.http.headers.httpresponseheaders">HttpResponseHeaders</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_ResponseStream_" data-uid="osu.Framework.IO.Network.WebRequest.ResponseStream*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_ResponseStream" data-uid="osu.Framework.IO.Network.WebRequest.ResponseStream">
+  ResponseStream
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The response stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Stream ResponseStream { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_UserAgent_" data-uid="osu.Framework.IO.Network.WebRequest.UserAgent*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_UserAgent" data-uid="osu.Framework.IO.Network.WebRequest.UserAgent">
+  UserAgent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The value of the User-agent HTTP header.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string UserAgent { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_Abort_" data-uid="osu.Framework.IO.Network.WebRequest.Abort*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Abort" data-uid="osu.Framework.IO.Network.WebRequest.Abort">
+  Abort()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L613"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forcefully abort the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Abort()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_AddFile_" data-uid="osu.Framework.IO.Network.WebRequest.AddFile*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_AddFile_System_String_System_Byte___" data-uid="osu.Framework.IO.Network.WebRequest.AddFile(System.String,System.Byte[])">
+  AddFile(string, byte[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L670"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a new FILE parameter to this request. Replaces any existing file with the same name.
+This may not be used in conjunction with <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_AddRaw_System_IO_Stream_">AddRaw(Stream)</a>. GET requests may not contain files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddFile(string name, byte[] data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the file. This becomes the name of the file in a multi-part form POST content.</p>
+</dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The file data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_AddHeader_" data-uid="osu.Framework.IO.Network.WebRequest.AddHeader*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_AddHeader_System_String_System_String_" data-uid="osu.Framework.IO.Network.WebRequest.AddHeader(System.String,System.String)">
+  AddHeader(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L740"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a new header to this request. Replaces any existing header with the same name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddHeader(string name, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the header.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The header value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_AddParameter_" data-uid="osu.Framework.IO.Network.WebRequest.AddParameter*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_AddParameter_System_String_System_String_" data-uid="osu.Framework.IO.Network.WebRequest.AddParameter(System.String,System.String)">
+  AddParameter(string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L696"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>
+Add a new parameter to this request. Replaces any existing parameter with the same name.
+</p>
+<p>
+If this request's <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_Method">Method</a> supports a request body (<code>POST, PUT, DELETE, PATCH</code>), a <a class="xref" href="osu.Framework.IO.Network.RequestParameterType.html#osu_Framework_IO_Network_RequestParameterType_Form">Form</a> parameter will be added;
+otherwise, a <a class="xref" href="osu.Framework.IO.Network.RequestParameterType.html#osu_Framework_IO_Network_RequestParameterType_Query">Query</a> parameter will be added.
+For more fine-grained control over the parameter type, use the <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_AddParameter_System_String_System_String_osu_Framework_IO_Network_RequestParameterType_">AddParameter(string, string, RequestParameterType)</a> overload.
+</p>
+<p>
+  <a class="xref" href="osu.Framework.IO.Network.RequestParameterType.html#osu_Framework_IO_Network_RequestParameterType_Form">Form</a> parameters may not be used in conjunction with <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_AddRaw_System_IO_Stream_">AddRaw(Stream)</a>.
+</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddParameter(string name, string value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the parameter.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The parameter value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_IO_Network_WebRequest_AddParameter_System_String_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Values added to the request URL query string are automatically percent-encoded before sending the request.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_AddParameter_" data-uid="osu.Framework.IO.Network.WebRequest.AddParameter*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_AddParameter_System_String_System_String_osu_Framework_IO_Network_RequestParameterType_" data-uid="osu.Framework.IO.Network.WebRequest.AddParameter(System.String,System.String,osu.Framework.IO.Network.RequestParameterType)">
+  AddParameter(string, string, RequestParameterType)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L709"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Add a new parameter to this request. Replaces any existing parameter with the same name.
+<a class="xref" href="osu.Framework.IO.Network.RequestParameterType.html#osu_Framework_IO_Network_RequestParameterType_Form">Form</a> parameters may not be used in conjunction with <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_AddRaw_System_IO_Stream_">AddRaw(Stream)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddParameter(string name, string value, RequestParameterType type)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the parameter.</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The parameter value.</p>
+</dd>
+    <dt><code>type</code> <a class="xref" href="osu.Framework.IO.Network.RequestParameterType.html">RequestParameterType</a></dt>
+    <dd><p>The type of the request parameter.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="osu_Framework_IO_Network_WebRequest_AddParameter_System_String_System_String_osu_Framework_IO_Network_RequestParameterType__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Values added to the request URL query string are automatically percent-encoded before sending the request.</p>
+</div>
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_AddRaw_" data-uid="osu.Framework.IO.Network.WebRequest.AddRaw*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_AddRaw_System_Byte___" data-uid="osu.Framework.IO.Network.WebRequest.AddRaw(System.Byte[])">
+  AddRaw(byte[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L644"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a raw POST body to this request.
+This may not be used in conjunction with <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_AddFile_System_String_System_Byte___">AddFile(string, byte[])</a> and <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_AddParameter_System_String_System_String_osu_Framework_IO_Network_RequestParameterType_">AddParameter(string, string, RequestParameterType)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRaw(byte[] bytes)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>bytes</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The raw data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_AddRaw_" data-uid="osu.Framework.IO.Network.WebRequest.AddRaw*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_AddRaw_System_IO_Stream_" data-uid="osu.Framework.IO.Network.WebRequest.AddRaw(System.IO.Stream)">
+  AddRaw(Stream)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L655"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a raw POST body to this request.
+This may not be used in conjunction with <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_AddFile_System_String_System_Byte___">AddFile(string, byte[])</a>
+and <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_AddParameter_System_String_System_String_osu_Framework_IO_Network_RequestParameterType_">AddParameter(string, string, RequestParameterType)</a> with the request type of <a class="xref" href="osu.Framework.IO.Network.RequestParameterType.html#osu_Framework_IO_Network_RequestParameterType_Form">Form</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRaw(Stream stream)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stream</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd><p>The stream containing the raw data. This stream will <em>not</em> be finalized by this request.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_AddRaw_" data-uid="osu.Framework.IO.Network.WebRequest.AddRaw*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_AddRaw_System_String_" data-uid="osu.Framework.IO.Network.WebRequest.AddRaw(System.String)">
+  AddRaw(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L634"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Adds a raw POST body to this request.
+This may not be used in conjunction with <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_AddFile_System_String_System_Byte___">AddFile(string, byte[])</a> and <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_AddParameter_System_String_System_String_osu_Framework_IO_Network_RequestParameterType_">AddParameter(string, string, RequestParameterType)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRaw(string text)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The text.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_Complete_" data-uid="osu.Framework.IO.Network.WebRequest.Complete*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Complete_System_Exception_" data-uid="osu.Framework.IO.Network.WebRequest.Complete(System.Exception)">
+  Complete(Exception)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L499"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Task Complete(Exception e = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_CreateOutputStream_" data-uid="osu.Framework.IO.Network.WebRequest.CreateOutputStream*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_CreateOutputStream" data-uid="osu.Framework.IO.Network.WebRequest.CreateOutputStream">
+  CreateOutputStream()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Stream CreateOutputStream()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.stream">Stream</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_Dispose_" data-uid="osu.Framework.IO.Network.WebRequest.Dispose*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Dispose" data-uid="osu.Framework.IO.Network.WebRequest.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L781"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_Dispose_" data-uid="osu.Framework.IO.Network.WebRequest.Dispose*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Dispose_System_Boolean_" data-uid="osu.Framework.IO.Network.WebRequest.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L766"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_GetResponseData_" data-uid="osu.Framework.IO.Network.WebRequest.GetResponseData*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_GetResponseData" data-uid="osu.Framework.IO.Network.WebRequest.GetResponseData">
+  GetResponseData()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve the full response body as an array of bytes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[CanBeNull]
+public byte[] GetResponseData()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>The response body.
+Can be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the request hasn't yet <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_Completed">Completed</a>, or if it has been <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_Aborted">Aborted</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_GetResponseString_" data-uid="osu.Framework.IO.Network.WebRequest.GetResponseString*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_GetResponseString" data-uid="osu.Framework.IO.Network.WebRequest.GetResponseString">
+  GetResponseString()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L212"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieve the full response body as a UTF8 encoded string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[CanBeNull]
+public string GetResponseString()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The response body.
+Can be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the request hasn't yet <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_Completed">Completed</a>, or if it has been <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_Aborted">Aborted</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_Perform_" data-uid="osu.Framework.IO.Network.WebRequest.Perform*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Perform" data-uid="osu.Framework.IO.Network.WebRequest.Perform">
+  Perform()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L438"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs the request synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Perform()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_PerformAsync_" data-uid="osu.Framework.IO.Network.WebRequest.PerformAsync*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_PerformAsync_System_Threading_CancellationToken_" data-uid="osu.Framework.IO.Network.WebRequest.PerformAsync(System.Threading.CancellationToken)">
+  PerformAsync(CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs the request asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task PerformAsync(CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>A token to cancel the request.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_PrePerform_" data-uid="osu.Framework.IO.Network.WebRequest.PrePerform*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_PrePerform" data-uid="osu.Framework.IO.Network.WebRequest.PrePerform">
+  PrePerform()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L455"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Task to run direct before performing the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void PrePerform()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="osu_Framework_IO_Network_WebRequest_ProcessResponse_" data-uid="osu.Framework.IO.Network.WebRequest.ProcessResponse*"></a>
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_ProcessResponse" data-uid="osu.Framework.IO.Network.WebRequest.ProcessResponse">
+  ProcessResponse()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L606"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs any post-processing of the response.
+Exceptions thrown in this method will be passed to <a class="xref" href="osu.Framework.IO.Network.WebRequest.html#osu_Framework_IO_Network_WebRequest_Failed">Failed</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void ProcessResponse()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_DownloadProgress" data-uid="osu.Framework.IO.Network.WebRequest.DownloadProgress">
+  DownloadProgress
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the download progress has changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;long, long&gt; DownloadProgress</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Failed" data-uid="osu.Framework.IO.Network.WebRequest.Failed">
+  Failed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the <a class="xref" href="osu.Framework.IO.Network.WebRequest.html">WebRequest</a> has failed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;Exception&gt; Failed</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Finished" data-uid="osu.Framework.IO.Network.WebRequest.Finished">
+  Finished
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the <a class="xref" href="osu.Framework.IO.Network.WebRequest.html">WebRequest</a> has finished successfully.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action Finished</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_Started" data-uid="osu.Framework.IO.Network.WebRequest.Started">
+  Started
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when a response has been received, but not data has been received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action Started</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="osu_Framework_IO_Network_WebRequest_UploadProgress" data-uid="osu.Framework.IO.Network.WebRequest.UploadProgress">
+  UploadProgress
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked when the upload progress has changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;long, long&gt; UploadProgress</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/IO/Network/WebRequest.cs/#L24" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

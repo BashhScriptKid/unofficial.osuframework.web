@@ -1,0 +1,855 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Utils.Precision
+  commentId: T:osu.Framework.Utils.Precision
+  id: Precision
+  parent: osu.Framework.Utils
+  children:
+  - osu.Framework.Utils.Precision.AlmostBigger(System.Double,System.Double,System.Double)
+  - osu.Framework.Utils.Precision.AlmostBigger(System.Single,System.Single,System.Single)
+  - osu.Framework.Utils.Precision.AlmostEquals(System.Double,System.Double,System.Double)
+  - osu.Framework.Utils.Precision.AlmostEquals(System.Single,System.Single,System.Single)
+  - osu.Framework.Utils.Precision.AlmostEquals(osuTK.Vector2,osuTK.Vector2,System.Single)
+  - osu.Framework.Utils.Precision.AlmostIntersects(osu.Framework.Graphics.Primitives.RectangleF,osu.Framework.Graphics.Primitives.RectangleF,System.Single)
+  - osu.Framework.Utils.Precision.DOUBLE_EPSILON
+  - osu.Framework.Utils.Precision.DefinitelyBigger(System.Double,System.Double,System.Double)
+  - osu.Framework.Utils.Precision.DefinitelyBigger(System.Single,System.Single,System.Single)
+  - osu.Framework.Utils.Precision.FLOAT_EPSILON
+  langs:
+  - csharp
+  - vb
+  name: Precision
+  nameWithType: Precision
+  fullName: osu.Framework.Utils.Precision
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Utils/Precision.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Precision
+    path: osu.Framework/Utils/Precision.cs
+    startLine: 12
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Utility class to compare <xref href="System.Single" data-throw-if-not-resolved="false"></xref> or <xref href="System.Double" data-throw-if-not-resolved="false"></xref> values for equality.
+  example: []
+  syntax:
+    content: public static class Precision
+    content.vb: Public Module Precision
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: osu.Framework.Utils.Precision.FLOAT_EPSILON
+  commentId: F:osu.Framework.Utils.Precision.FLOAT_EPSILON
+  id: FLOAT_EPSILON
+  parent: osu.Framework.Utils.Precision
+  langs:
+  - csharp
+  - vb
+  name: FLOAT_EPSILON
+  nameWithType: Precision.FLOAT_EPSILON
+  fullName: osu.Framework.Utils.Precision.FLOAT_EPSILON
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Utils/Precision.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: FLOAT_EPSILON
+    path: osu.Framework/Utils/Precision.cs
+    startLine: 17
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: The default epsilon for all <xref href="System.Single" data-throw-if-not-resolved="false"></xref> values.
+  example: []
+  syntax:
+    content: public const float FLOAT_EPSILON = 0.001
+    return:
+      type: System.Single
+    content.vb: Public Const FLOAT_EPSILON As Single = 0.001
+- uid: osu.Framework.Utils.Precision.DOUBLE_EPSILON
+  commentId: F:osu.Framework.Utils.Precision.DOUBLE_EPSILON
+  id: DOUBLE_EPSILON
+  parent: osu.Framework.Utils.Precision
+  langs:
+  - csharp
+  - vb
+  name: DOUBLE_EPSILON
+  nameWithType: Precision.DOUBLE_EPSILON
+  fullName: osu.Framework.Utils.Precision.DOUBLE_EPSILON
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Utils/Precision.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: DOUBLE_EPSILON
+    path: osu.Framework/Utils/Precision.cs
+    startLine: 22
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: The default epsilon for all <xref href="System.Double" data-throw-if-not-resolved="false"></xref> values.
+  example: []
+  syntax:
+    content: public const double DOUBLE_EPSILON = 1E-07
+    return:
+      type: System.Double
+    content.vb: Public Const DOUBLE_EPSILON As Double = 1E-07
+- uid: osu.Framework.Utils.Precision.DefinitelyBigger(System.Single,System.Single,System.Single)
+  commentId: M:osu.Framework.Utils.Precision.DefinitelyBigger(System.Single,System.Single,System.Single)
+  id: DefinitelyBigger(System.Single,System.Single,System.Single)
+  parent: osu.Framework.Utils.Precision
+  langs:
+  - csharp
+  - vb
+  name: DefinitelyBigger(float, float, float)
+  nameWithType: Precision.DefinitelyBigger(float, float, float)
+  fullName: osu.Framework.Utils.Precision.DefinitelyBigger(float, float, float)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/Precision.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: DefinitelyBigger
+    path: osu.Framework/Utils/Precision.cs
+    startLine: 31
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Computes whether a value is definitely greater than another given an acceptable difference.
+  example: []
+  syntax:
+    content: public static bool DefinitelyBigger(float value1, float value2, float acceptableDifference = 0.001)
+    parameters:
+    - id: value1
+      type: System.Single
+      description: The value to compare.
+    - id: value2
+      type: System.Single
+      description: The value to compare against.
+    - id: acceptableDifference
+      type: System.Single
+      description: The acceptable difference. Defaults to <xref href="osu.Framework.Utils.Precision.FLOAT_EPSILON" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: Whether <code class="paramref">value1</code> is definitely greater than <code class="paramref">value2</code>.
+    content.vb: Public Shared Function DefinitelyBigger(value1 As Single, value2 As Single, acceptableDifference As Single = 0.001) As Boolean
+  overload: osu.Framework.Utils.Precision.DefinitelyBigger*
+  nameWithType.vb: Precision.DefinitelyBigger(Single, Single, Single)
+  fullName.vb: osu.Framework.Utils.Precision.DefinitelyBigger(Single, Single, Single)
+  name.vb: DefinitelyBigger(Single, Single, Single)
+- uid: osu.Framework.Utils.Precision.DefinitelyBigger(System.Double,System.Double,System.Double)
+  commentId: M:osu.Framework.Utils.Precision.DefinitelyBigger(System.Double,System.Double,System.Double)
+  id: DefinitelyBigger(System.Double,System.Double,System.Double)
+  parent: osu.Framework.Utils.Precision
+  langs:
+  - csharp
+  - vb
+  name: DefinitelyBigger(double, double, double)
+  nameWithType: Precision.DefinitelyBigger(double, double, double)
+  fullName: osu.Framework.Utils.Precision.DefinitelyBigger(double, double, double)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/Precision.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: DefinitelyBigger
+    path: osu.Framework/Utils/Precision.cs
+    startLine: 40
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Computes whether a value is definitely greater than another given an acceptable difference.
+  example: []
+  syntax:
+    content: public static bool DefinitelyBigger(double value1, double value2, double acceptableDifference = 1E-07)
+    parameters:
+    - id: value1
+      type: System.Double
+      description: The value to compare.
+    - id: value2
+      type: System.Double
+      description: The value to compare against.
+    - id: acceptableDifference
+      type: System.Double
+      description: The acceptable difference. Defaults to <xref href="osu.Framework.Utils.Precision.DOUBLE_EPSILON" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: Whether <code class="paramref">value1</code> is definitely greater than <code class="paramref">value2</code>.
+    content.vb: Public Shared Function DefinitelyBigger(value1 As Double, value2 As Double, acceptableDifference As Double = 1E-07) As Boolean
+  overload: osu.Framework.Utils.Precision.DefinitelyBigger*
+  nameWithType.vb: Precision.DefinitelyBigger(Double, Double, Double)
+  fullName.vb: osu.Framework.Utils.Precision.DefinitelyBigger(Double, Double, Double)
+  name.vb: DefinitelyBigger(Double, Double, Double)
+- uid: osu.Framework.Utils.Precision.AlmostBigger(System.Single,System.Single,System.Single)
+  commentId: M:osu.Framework.Utils.Precision.AlmostBigger(System.Single,System.Single,System.Single)
+  id: AlmostBigger(System.Single,System.Single,System.Single)
+  parent: osu.Framework.Utils.Precision
+  langs:
+  - csharp
+  - vb
+  name: AlmostBigger(float, float, float)
+  nameWithType: Precision.AlmostBigger(float, float, float)
+  fullName: osu.Framework.Utils.Precision.AlmostBigger(float, float, float)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/Precision.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AlmostBigger
+    path: osu.Framework/Utils/Precision.cs
+    startLine: 49
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Computes whether a value is almost greater than another given an acceptable difference.
+  example: []
+  syntax:
+    content: public static bool AlmostBigger(float value1, float value2, float acceptableDifference = 0.001)
+    parameters:
+    - id: value1
+      type: System.Single
+      description: The value to compare.
+    - id: value2
+      type: System.Single
+      description: The value to compare against.
+    - id: acceptableDifference
+      type: System.Single
+      description: The acceptable difference. Defaults to <xref href="osu.Framework.Utils.Precision.FLOAT_EPSILON" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: Whether <code class="paramref">value1</code> is almost greater than <code class="paramref">value2</code>.
+    content.vb: Public Shared Function AlmostBigger(value1 As Single, value2 As Single, acceptableDifference As Single = 0.001) As Boolean
+  overload: osu.Framework.Utils.Precision.AlmostBigger*
+  nameWithType.vb: Precision.AlmostBigger(Single, Single, Single)
+  fullName.vb: osu.Framework.Utils.Precision.AlmostBigger(Single, Single, Single)
+  name.vb: AlmostBigger(Single, Single, Single)
+- uid: osu.Framework.Utils.Precision.AlmostBigger(System.Double,System.Double,System.Double)
+  commentId: M:osu.Framework.Utils.Precision.AlmostBigger(System.Double,System.Double,System.Double)
+  id: AlmostBigger(System.Double,System.Double,System.Double)
+  parent: osu.Framework.Utils.Precision
+  langs:
+  - csharp
+  - vb
+  name: AlmostBigger(double, double, double)
+  nameWithType: Precision.AlmostBigger(double, double, double)
+  fullName: osu.Framework.Utils.Precision.AlmostBigger(double, double, double)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/Precision.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AlmostBigger
+    path: osu.Framework/Utils/Precision.cs
+    startLine: 58
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Computes whether a value is almost greater than another given an acceptable difference.
+  example: []
+  syntax:
+    content: public static bool AlmostBigger(double value1, double value2, double acceptableDifference = 1E-07)
+    parameters:
+    - id: value1
+      type: System.Double
+      description: The value to compare.
+    - id: value2
+      type: System.Double
+      description: The value to compare against.
+    - id: acceptableDifference
+      type: System.Double
+      description: The acceptable difference. Defaults to <xref href="osu.Framework.Utils.Precision.DOUBLE_EPSILON" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: Whether <code class="paramref">value1</code> is almost greater than <code class="paramref">value2</code>.
+    content.vb: Public Shared Function AlmostBigger(value1 As Double, value2 As Double, acceptableDifference As Double = 1E-07) As Boolean
+  overload: osu.Framework.Utils.Precision.AlmostBigger*
+  nameWithType.vb: Precision.AlmostBigger(Double, Double, Double)
+  fullName.vb: osu.Framework.Utils.Precision.AlmostBigger(Double, Double, Double)
+  name.vb: AlmostBigger(Double, Double, Double)
+- uid: osu.Framework.Utils.Precision.AlmostEquals(System.Single,System.Single,System.Single)
+  commentId: M:osu.Framework.Utils.Precision.AlmostEquals(System.Single,System.Single,System.Single)
+  id: AlmostEquals(System.Single,System.Single,System.Single)
+  parent: osu.Framework.Utils.Precision
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(float, float, float)
+  nameWithType: Precision.AlmostEquals(float, float, float)
+  fullName: osu.Framework.Utils.Precision.AlmostEquals(float, float, float)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/Precision.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AlmostEquals
+    path: osu.Framework/Utils/Precision.cs
+    startLine: 67
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Computes whether two values are equal within an acceptable difference.
+  example: []
+  syntax:
+    content: public static bool AlmostEquals(float value1, float value2, float acceptableDifference = 0.001)
+    parameters:
+    - id: value1
+      type: System.Single
+      description: The first value.
+    - id: value2
+      type: System.Single
+      description: The second value.
+    - id: acceptableDifference
+      type: System.Single
+      description: The acceptable difference. Defaults to <xref href="osu.Framework.Utils.Precision.FLOAT_EPSILON" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: Whether <code class="paramref">value1</code> and <code class="paramref">value2</code> are almost equal.
+    content.vb: Public Shared Function AlmostEquals(value1 As Single, value2 As Single, acceptableDifference As Single = 0.001) As Boolean
+  overload: osu.Framework.Utils.Precision.AlmostEquals*
+  nameWithType.vb: Precision.AlmostEquals(Single, Single, Single)
+  fullName.vb: osu.Framework.Utils.Precision.AlmostEquals(Single, Single, Single)
+  name.vb: AlmostEquals(Single, Single, Single)
+- uid: osu.Framework.Utils.Precision.AlmostEquals(osuTK.Vector2,osuTK.Vector2,System.Single)
+  commentId: M:osu.Framework.Utils.Precision.AlmostEquals(osuTK.Vector2,osuTK.Vector2,System.Single)
+  id: AlmostEquals(osuTK.Vector2,osuTK.Vector2,System.Single)
+  parent: osu.Framework.Utils.Precision
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(Vector2, Vector2, float)
+  nameWithType: Precision.AlmostEquals(Vector2, Vector2, float)
+  fullName: osu.Framework.Utils.Precision.AlmostEquals(osuTK.Vector2, osuTK.Vector2, float)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/Precision.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AlmostEquals
+    path: osu.Framework/Utils/Precision.cs
+    startLine: 76
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Computes whether two <xref href="osuTK.Vector2" data-throw-if-not-resolved="false"></xref>s are equal within an acceptable difference.
+  example: []
+  syntax:
+    content: public static bool AlmostEquals(Vector2 value1, Vector2 value2, float acceptableDifference = 0.001)
+    parameters:
+    - id: value1
+      type: osuTK.Vector2
+      description: The first <xref href="osuTK.Vector2" data-throw-if-not-resolved="false"></xref>.
+    - id: value2
+      type: osuTK.Vector2
+      description: The second <xref href="osuTK.Vector2" data-throw-if-not-resolved="false"></xref>.
+    - id: acceptableDifference
+      type: System.Single
+      description: The acceptable difference. Defaults to <xref href="osu.Framework.Utils.Precision.FLOAT_EPSILON" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: Whether <code class="paramref">value1</code> and <code class="paramref">value2</code> are almost equal.
+    content.vb: Public Shared Function AlmostEquals(value1 As Vector2, value2 As Vector2, acceptableDifference As Single = 0.001) As Boolean
+  overload: osu.Framework.Utils.Precision.AlmostEquals*
+  nameWithType.vb: Precision.AlmostEquals(Vector2, Vector2, Single)
+  fullName.vb: osu.Framework.Utils.Precision.AlmostEquals(osuTK.Vector2, osuTK.Vector2, Single)
+  name.vb: AlmostEquals(Vector2, Vector2, Single)
+- uid: osu.Framework.Utils.Precision.AlmostEquals(System.Double,System.Double,System.Double)
+  commentId: M:osu.Framework.Utils.Precision.AlmostEquals(System.Double,System.Double,System.Double)
+  id: AlmostEquals(System.Double,System.Double,System.Double)
+  parent: osu.Framework.Utils.Precision
+  langs:
+  - csharp
+  - vb
+  name: AlmostEquals(double, double, double)
+  nameWithType: Precision.AlmostEquals(double, double, double)
+  fullName: osu.Framework.Utils.Precision.AlmostEquals(double, double, double)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/Precision.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AlmostEquals
+    path: osu.Framework/Utils/Precision.cs
+    startLine: 85
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Computes whether two values are equal within an acceptable difference.
+  example: []
+  syntax:
+    content: public static bool AlmostEquals(double value1, double value2, double acceptableDifference = 1E-07)
+    parameters:
+    - id: value1
+      type: System.Double
+      description: The first value.
+    - id: value2
+      type: System.Double
+      description: The second value.
+    - id: acceptableDifference
+      type: System.Double
+      description: The acceptable difference. Defaults to <xref href="osu.Framework.Utils.Precision.DOUBLE_EPSILON" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: Whether <code class="paramref">value1</code> and <code class="paramref">value2</code> are almost equal.
+    content.vb: Public Shared Function AlmostEquals(value1 As Double, value2 As Double, acceptableDifference As Double = 1E-07) As Boolean
+  overload: osu.Framework.Utils.Precision.AlmostEquals*
+  nameWithType.vb: Precision.AlmostEquals(Double, Double, Double)
+  fullName.vb: osu.Framework.Utils.Precision.AlmostEquals(Double, Double, Double)
+  name.vb: AlmostEquals(Double, Double, Double)
+- uid: osu.Framework.Utils.Precision.AlmostIntersects(osu.Framework.Graphics.Primitives.RectangleF,osu.Framework.Graphics.Primitives.RectangleF,System.Single)
+  commentId: M:osu.Framework.Utils.Precision.AlmostIntersects(osu.Framework.Graphics.Primitives.RectangleF,osu.Framework.Graphics.Primitives.RectangleF,System.Single)
+  id: AlmostIntersects(osu.Framework.Graphics.Primitives.RectangleF,osu.Framework.Graphics.Primitives.RectangleF,System.Single)
+  parent: osu.Framework.Utils.Precision
+  langs:
+  - csharp
+  - vb
+  name: AlmostIntersects(RectangleF, RectangleF, float)
+  nameWithType: Precision.AlmostIntersects(RectangleF, RectangleF, float)
+  fullName: osu.Framework.Utils.Precision.AlmostIntersects(osu.Framework.Graphics.Primitives.RectangleF, osu.Framework.Graphics.Primitives.RectangleF, float)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Utils/Precision.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AlmostIntersects
+    path: osu.Framework/Utils/Precision.cs
+    startLine: 94
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Utils
+  summary: Computes whether two <xref href="osu.Framework.Graphics.Primitives.RectangleF" data-throw-if-not-resolved="false"></xref>s intersect within an acceptable difference.
+  example: []
+  syntax:
+    content: public static bool AlmostIntersects(RectangleF rect1, RectangleF rect2, float acceptableDifference = 0.001)
+    parameters:
+    - id: rect1
+      type: osu.Framework.Graphics.Primitives.RectangleF
+      description: The first <xref href="osu.Framework.Graphics.Primitives.RectangleF" data-throw-if-not-resolved="false"></xref>.
+    - id: rect2
+      type: osu.Framework.Graphics.Primitives.RectangleF
+      description: The second <xref href="osu.Framework.Graphics.Primitives.RectangleF" data-throw-if-not-resolved="false"></xref>.
+    - id: acceptableDifference
+      type: System.Single
+      description: The acceptable difference. Defaults to <xref href="osu.Framework.Utils.Precision.FLOAT_EPSILON" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: Whether <code class="paramref">rect1</code> and <code class="paramref">rect2</code> intersect.
+    content.vb: Public Shared Function AlmostIntersects(rect1 As RectangleF, rect2 As RectangleF, acceptableDifference As Single = 0.001) As Boolean
+  overload: osu.Framework.Utils.Precision.AlmostIntersects*
+  nameWithType.vb: Precision.AlmostIntersects(RectangleF, RectangleF, Single)
+  fullName.vb: osu.Framework.Utils.Precision.AlmostIntersects(osu.Framework.Graphics.Primitives.RectangleF, osu.Framework.Graphics.Primitives.RectangleF, Single)
+  name.vb: AlmostIntersects(RectangleF, RectangleF, Single)
+references:
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: osu.Framework.Utils
+  commentId: N:osu.Framework.Utils
+  href: osu.html
+  name: osu.Framework.Utils
+  nameWithType: osu.Framework.Utils
+  fullName: osu.Framework.Utils
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Utils
+    name: Utils
+    href: osu.Framework.Utils.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Utils
+    name: Utils
+    href: osu.Framework.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Utils.Precision.FLOAT_EPSILON
+  commentId: F:osu.Framework.Utils.Precision.FLOAT_EPSILON
+  href: osu.Framework.Utils.Precision.html#osu_Framework_Utils_Precision_FLOAT_EPSILON
+  name: FLOAT_EPSILON
+  nameWithType: Precision.FLOAT_EPSILON
+  fullName: osu.Framework.Utils.Precision.FLOAT_EPSILON
+- uid: osu.Framework.Utils.Precision.DefinitelyBigger*
+  commentId: Overload:osu.Framework.Utils.Precision.DefinitelyBigger
+  href: osu.Framework.Utils.Precision.html#osu_Framework_Utils_Precision_DefinitelyBigger_System_Single_System_Single_System_Single_
+  name: DefinitelyBigger
+  nameWithType: Precision.DefinitelyBigger
+  fullName: osu.Framework.Utils.Precision.DefinitelyBigger
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Utils.Precision.DOUBLE_EPSILON
+  commentId: F:osu.Framework.Utils.Precision.DOUBLE_EPSILON
+  href: osu.Framework.Utils.Precision.html#osu_Framework_Utils_Precision_DOUBLE_EPSILON
+  name: DOUBLE_EPSILON
+  nameWithType: Precision.DOUBLE_EPSILON
+  fullName: osu.Framework.Utils.Precision.DOUBLE_EPSILON
+- uid: osu.Framework.Utils.Precision.AlmostBigger*
+  commentId: Overload:osu.Framework.Utils.Precision.AlmostBigger
+  href: osu.Framework.Utils.Precision.html#osu_Framework_Utils_Precision_AlmostBigger_System_Single_System_Single_System_Single_
+  name: AlmostBigger
+  nameWithType: Precision.AlmostBigger
+  fullName: osu.Framework.Utils.Precision.AlmostBigger
+- uid: osu.Framework.Utils.Precision.AlmostEquals*
+  commentId: Overload:osu.Framework.Utils.Precision.AlmostEquals
+  href: osu.Framework.Utils.Precision.html#osu_Framework_Utils_Precision_AlmostEquals_System_Single_System_Single_System_Single_
+  name: AlmostEquals
+  nameWithType: Precision.AlmostEquals
+  fullName: osu.Framework.Utils.Precision.AlmostEquals
+- uid: osuTK.Vector2
+  commentId: T:osuTK.Vector2
+  parent: osuTK
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: osuTK.Vector2
+- uid: osuTK
+  commentId: N:osuTK
+  isExternal: true
+  name: osuTK
+  nameWithType: osuTK
+  fullName: osuTK
+- uid: osu.Framework.Graphics.Primitives.RectangleF
+  commentId: T:osu.Framework.Graphics.Primitives.RectangleF
+  parent: osu.Framework.Graphics.Primitives
+  href: osu.Framework.Graphics.Primitives.RectangleF.html
+  name: RectangleF
+  nameWithType: RectangleF
+  fullName: osu.Framework.Graphics.Primitives.RectangleF
+- uid: osu.Framework.Utils.Precision.AlmostIntersects*
+  commentId: Overload:osu.Framework.Utils.Precision.AlmostIntersects
+  href: osu.Framework.Utils.Precision.html#osu_Framework_Utils_Precision_AlmostIntersects_osu_Framework_Graphics_Primitives_RectangleF_osu_Framework_Graphics_Primitives_RectangleF_System_Single_
+  name: AlmostIntersects
+  nameWithType: Precision.AlmostIntersects
+  fullName: osu.Framework.Utils.Precision.AlmostIntersects
+- uid: osu.Framework.Graphics.Primitives
+  commentId: N:osu.Framework.Graphics.Primitives
+  href: osu.html
+  name: osu.Framework.Graphics.Primitives
+  nameWithType: osu.Framework.Graphics.Primitives
+  fullName: osu.Framework.Graphics.Primitives
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Primitives
+    name: Primitives
+    href: osu.Framework.Graphics.Primitives.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Primitives
+    name: Primitives
+    href: osu.Framework.Graphics.Primitives.html

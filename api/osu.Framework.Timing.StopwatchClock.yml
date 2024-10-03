@@ -1,0 +1,1963 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Timing.StopwatchClock
+  commentId: T:osu.Framework.Timing.StopwatchClock
+  id: StopwatchClock
+  parent: osu.Framework.Timing
+  children:
+  - osu.Framework.Timing.StopwatchClock.#ctor(System.Boolean)
+  - osu.Framework.Timing.StopwatchClock.CurrentTime
+  - osu.Framework.Timing.StopwatchClock.Rate
+  - osu.Framework.Timing.StopwatchClock.Reset
+  - osu.Framework.Timing.StopwatchClock.ResetSpeedAdjustments
+  - osu.Framework.Timing.StopwatchClock.Restart
+  - osu.Framework.Timing.StopwatchClock.Seek(System.Double)
+  - osu.Framework.Timing.StopwatchClock.ToString
+  langs:
+  - csharp
+  - vb
+  name: StopwatchClock
+  nameWithType: StopwatchClock
+  fullName: osu.Framework.Timing.StopwatchClock
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Timing/StopwatchClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: StopwatchClock
+    path: osu.Framework/Timing/StopwatchClock.cs
+    startLine: 9
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  syntax:
+    content: 'public class StopwatchClock : Stopwatch, IAdjustableClock, IClock'
+    content.vb: Public Class StopwatchClock Inherits Stopwatch Implements IAdjustableClock, IClock
+  inheritance:
+  - System.Object
+  - System.Diagnostics.Stopwatch
+  derivedClasses:
+  - osu.Framework.Tests.Clocks.TestStopwatchClockWithRangeLimit
+  implements:
+  - osu.Framework.Timing.IAdjustableClock
+  - osu.Framework.Timing.IClock
+  inheritedMembers:
+  - System.Diagnostics.Stopwatch.Frequency
+  - System.Diagnostics.Stopwatch.IsHighResolution
+  - System.Diagnostics.Stopwatch.GetTimestamp
+  - System.Diagnostics.Stopwatch.GetElapsedTime(System.Int64)
+  - System.Diagnostics.Stopwatch.GetElapsedTime(System.Int64,System.Int64)
+  - System.Diagnostics.Stopwatch.Start
+  - System.Diagnostics.Stopwatch.StartNew
+  - System.Diagnostics.Stopwatch.Stop
+  - System.Diagnostics.Stopwatch.Elapsed
+  - System.Diagnostics.Stopwatch.ElapsedMilliseconds
+  - System.Diagnostics.Stopwatch.ElapsedTicks
+  - System.Diagnostics.Stopwatch.IsRunning
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Timing.StopwatchClock.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Timing.StopwatchClock.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Timing.StopwatchClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Timing.StopwatchClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Timing.StopwatchClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Timing.StopwatchClock.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Timing.StopwatchClock.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Timing.StopwatchClock.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Timing.StopwatchClock.#ctor(System.Boolean)
+  commentId: M:osu.Framework.Timing.StopwatchClock.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: osu.Framework.Timing.StopwatchClock
+  langs:
+  - csharp
+  - vb
+  name: StopwatchClock(bool)
+  nameWithType: StopwatchClock.StopwatchClock(bool)
+  fullName: osu.Framework.Timing.StopwatchClock.StopwatchClock(bool)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Timing/StopwatchClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Timing/StopwatchClock.cs
+    startLine: 23
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  syntax:
+    content: public StopwatchClock(bool start = false)
+    parameters:
+    - id: start
+      type: System.Boolean
+    content.vb: Public Sub New(start As Boolean = False)
+  overload: osu.Framework.Timing.StopwatchClock.#ctor*
+  nameWithType.vb: StopwatchClock.New(Boolean)
+  fullName.vb: osu.Framework.Timing.StopwatchClock.New(Boolean)
+  name.vb: New(Boolean)
+- uid: osu.Framework.Timing.StopwatchClock.CurrentTime
+  commentId: P:osu.Framework.Timing.StopwatchClock.CurrentTime
+  id: CurrentTime
+  parent: osu.Framework.Timing.StopwatchClock
+  langs:
+  - csharp
+  - vb
+  name: CurrentTime
+  nameWithType: StopwatchClock.CurrentTime
+  fullName: osu.Framework.Timing.StopwatchClock.CurrentTime
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Timing/StopwatchClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CurrentTime
+    path: osu.Framework/Timing/StopwatchClock.cs
+    startLine: 29
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: The current time of this clock, in milliseconds.
+  example: []
+  syntax:
+    content: public virtual double CurrentTime { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Overridable ReadOnly Property CurrentTime As Double
+  overload: osu.Framework.Timing.StopwatchClock.CurrentTime*
+  implements:
+  - osu.Framework.Timing.IClock.CurrentTime
+- uid: osu.Framework.Timing.StopwatchClock.Rate
+  commentId: P:osu.Framework.Timing.StopwatchClock.Rate
+  id: Rate
+  parent: osu.Framework.Timing.StopwatchClock
+  langs:
+  - csharp
+  - vb
+  name: Rate
+  nameWithType: StopwatchClock.Rate
+  fullName: osu.Framework.Timing.StopwatchClock.Rate
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Timing/StopwatchClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Rate
+    path: osu.Framework/Timing/StopwatchClock.cs
+    startLine: 40
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: The rate this clock is running at, relative to real-time.
+  example: []
+  syntax:
+    content: public double Rate { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Rate As Double
+  overload: osu.Framework.Timing.StopwatchClock.Rate*
+  implements:
+  - osu.Framework.Timing.IAdjustableClock.Rate
+  - osu.Framework.Timing.IClock.Rate
+- uid: osu.Framework.Timing.StopwatchClock.Reset
+  commentId: M:osu.Framework.Timing.StopwatchClock.Reset
+  id: Reset
+  parent: osu.Framework.Timing.StopwatchClock
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: StopwatchClock.Reset()
+  fullName: osu.Framework.Timing.StopwatchClock.Reset()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/StopwatchClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Reset
+    path: osu.Framework/Timing/StopwatchClock.cs
+    startLine: 54
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Stop and reset position.
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: osu.Framework.Timing.StopwatchClock.Reset*
+  implements:
+  - osu.Framework.Timing.IAdjustableClock.Reset
+- uid: osu.Framework.Timing.StopwatchClock.Restart
+  commentId: M:osu.Framework.Timing.StopwatchClock.Restart
+  id: Restart
+  parent: osu.Framework.Timing.StopwatchClock
+  langs:
+  - csharp
+  - vb
+  name: Restart()
+  nameWithType: StopwatchClock.Restart()
+  fullName: osu.Framework.Timing.StopwatchClock.Restart()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/StopwatchClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Restart
+    path: osu.Framework/Timing/StopwatchClock.cs
+    startLine: 60
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  syntax:
+    content: public void Restart()
+    content.vb: Public Sub Restart()
+  overload: osu.Framework.Timing.StopwatchClock.Restart*
+- uid: osu.Framework.Timing.StopwatchClock.ResetSpeedAdjustments
+  commentId: M:osu.Framework.Timing.StopwatchClock.ResetSpeedAdjustments
+  id: ResetSpeedAdjustments
+  parent: osu.Framework.Timing.StopwatchClock
+  langs:
+  - csharp
+  - vb
+  name: ResetSpeedAdjustments()
+  nameWithType: StopwatchClock.ResetSpeedAdjustments()
+  fullName: osu.Framework.Timing.StopwatchClock.ResetSpeedAdjustments()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/StopwatchClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ResetSpeedAdjustments
+    path: osu.Framework/Timing/StopwatchClock.cs
+    startLine: 66
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Reset the rate to a stable value.
+  example: []
+  syntax:
+    content: public void ResetSpeedAdjustments()
+    content.vb: Public Sub ResetSpeedAdjustments()
+  overload: osu.Framework.Timing.StopwatchClock.ResetSpeedAdjustments*
+  implements:
+  - osu.Framework.Timing.IAdjustableClock.ResetSpeedAdjustments
+- uid: osu.Framework.Timing.StopwatchClock.Seek(System.Double)
+  commentId: M:osu.Framework.Timing.StopwatchClock.Seek(System.Double)
+  id: Seek(System.Double)
+  parent: osu.Framework.Timing.StopwatchClock
+  langs:
+  - csharp
+  - vb
+  name: Seek(double)
+  nameWithType: StopwatchClock.Seek(double)
+  fullName: osu.Framework.Timing.StopwatchClock.Seek(double)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/StopwatchClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Seek
+    path: osu.Framework/Timing/StopwatchClock.cs
+    startLine: 68
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Seek to a specific time position.
+  example: []
+  syntax:
+    content: public virtual bool Seek(double position)
+    parameters:
+    - id: position
+      type: System.Double
+    return:
+      type: System.Boolean
+      description: Whether a seek was possible.
+    content.vb: Public Overridable Function Seek(position As Double) As Boolean
+  overload: osu.Framework.Timing.StopwatchClock.Seek*
+  implements:
+  - osu.Framework.Timing.IAdjustableClock.Seek(System.Double)
+  nameWithType.vb: StopwatchClock.Seek(Double)
+  fullName.vb: osu.Framework.Timing.StopwatchClock.Seek(Double)
+  name.vb: Seek(Double)
+- uid: osu.Framework.Timing.StopwatchClock.ToString
+  commentId: M:osu.Framework.Timing.StopwatchClock.ToString
+  id: ToString
+  parent: osu.Framework.Timing.StopwatchClock
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: StopwatchClock.ToString()
+  fullName: osu.Framework.Timing.StopwatchClock.ToString()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Timing/StopwatchClock.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ToString
+    path: osu.Framework/Timing/StopwatchClock.cs
+    startLine: 75
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Timing
+  summary: Returns the <xref href="System.Diagnostics.Stopwatch.Elapsed" data-throw-if-not-resolved="false"></xref> time as a string.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: The elapsed time string in the same format used by <xref href="System.TimeSpan.ToString" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Diagnostics.Stopwatch.ToString
+  overload: osu.Framework.Timing.StopwatchClock.ToString*
+references:
+- uid: osu.Framework.Timing
+  commentId: N:osu.Framework.Timing
+  href: osu.html
+  name: osu.Framework.Timing
+  nameWithType: osu.Framework.Timing
+  fullName: osu.Framework.Timing
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Timing
+    name: Timing
+    href: osu.Framework.Timing.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Timing
+    name: Timing
+    href: osu.Framework.Timing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Diagnostics.Stopwatch
+  commentId: T:System.Diagnostics.Stopwatch
+  parent: System.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch
+  name: Stopwatch
+  nameWithType: Stopwatch
+  fullName: System.Diagnostics.Stopwatch
+- uid: osu.Framework.Timing.IAdjustableClock
+  commentId: T:osu.Framework.Timing.IAdjustableClock
+  parent: osu.Framework.Timing
+  href: osu.Framework.Timing.IAdjustableClock.html
+  name: IAdjustableClock
+  nameWithType: IAdjustableClock
+  fullName: osu.Framework.Timing.IAdjustableClock
+- uid: osu.Framework.Timing.IClock
+  commentId: T:osu.Framework.Timing.IClock
+  parent: osu.Framework.Timing
+  href: osu.Framework.Timing.IClock.html
+  name: IClock
+  nameWithType: IClock
+  fullName: osu.Framework.Timing.IClock
+- uid: System.Diagnostics.Stopwatch.Frequency
+  commentId: F:System.Diagnostics.Stopwatch.Frequency
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.frequency
+  name: Frequency
+  nameWithType: Stopwatch.Frequency
+  fullName: System.Diagnostics.Stopwatch.Frequency
+- uid: System.Diagnostics.Stopwatch.IsHighResolution
+  commentId: F:System.Diagnostics.Stopwatch.IsHighResolution
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.ishighresolution
+  name: IsHighResolution
+  nameWithType: Stopwatch.IsHighResolution
+  fullName: System.Diagnostics.Stopwatch.IsHighResolution
+- uid: System.Diagnostics.Stopwatch.GetTimestamp
+  commentId: M:System.Diagnostics.Stopwatch.GetTimestamp
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.gettimestamp
+  name: GetTimestamp()
+  nameWithType: Stopwatch.GetTimestamp()
+  fullName: System.Diagnostics.Stopwatch.GetTimestamp()
+  spec.csharp:
+  - uid: System.Diagnostics.Stopwatch.GetTimestamp
+    name: GetTimestamp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.gettimestamp
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Diagnostics.Stopwatch.GetTimestamp
+    name: GetTimestamp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.gettimestamp
+  - name: (
+  - name: )
+- uid: System.Diagnostics.Stopwatch.GetElapsedTime(System.Int64)
+  commentId: M:System.Diagnostics.Stopwatch.GetElapsedTime(System.Int64)
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.getelapsedtime#system-diagnostics-stopwatch-getelapsedtime(system-int64)
+  name: GetElapsedTime(long)
+  nameWithType: Stopwatch.GetElapsedTime(long)
+  fullName: System.Diagnostics.Stopwatch.GetElapsedTime(long)
+  nameWithType.vb: Stopwatch.GetElapsedTime(Long)
+  fullName.vb: System.Diagnostics.Stopwatch.GetElapsedTime(Long)
+  name.vb: GetElapsedTime(Long)
+  spec.csharp:
+  - uid: System.Diagnostics.Stopwatch.GetElapsedTime(System.Int64)
+    name: GetElapsedTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.getelapsedtime#system-diagnostics-stopwatch-getelapsedtime(system-int64)
+  - name: (
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+  spec.vb:
+  - uid: System.Diagnostics.Stopwatch.GetElapsedTime(System.Int64)
+    name: GetElapsedTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.getelapsedtime#system-diagnostics-stopwatch-getelapsedtime(system-int64)
+  - name: (
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+- uid: System.Diagnostics.Stopwatch.GetElapsedTime(System.Int64,System.Int64)
+  commentId: M:System.Diagnostics.Stopwatch.GetElapsedTime(System.Int64,System.Int64)
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.getelapsedtime#system-diagnostics-stopwatch-getelapsedtime(system-int64-system-int64)
+  name: GetElapsedTime(long, long)
+  nameWithType: Stopwatch.GetElapsedTime(long, long)
+  fullName: System.Diagnostics.Stopwatch.GetElapsedTime(long, long)
+  nameWithType.vb: Stopwatch.GetElapsedTime(Long, Long)
+  fullName.vb: System.Diagnostics.Stopwatch.GetElapsedTime(Long, Long)
+  name.vb: GetElapsedTime(Long, Long)
+  spec.csharp:
+  - uid: System.Diagnostics.Stopwatch.GetElapsedTime(System.Int64,System.Int64)
+    name: GetElapsedTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.getelapsedtime#system-diagnostics-stopwatch-getelapsedtime(system-int64-system-int64)
+  - name: (
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: ','
+  - name: " "
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+  spec.vb:
+  - uid: System.Diagnostics.Stopwatch.GetElapsedTime(System.Int64,System.Int64)
+    name: GetElapsedTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.getelapsedtime#system-diagnostics-stopwatch-getelapsedtime(system-int64-system-int64)
+  - name: (
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: ','
+  - name: " "
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+- uid: System.Diagnostics.Stopwatch.Start
+  commentId: M:System.Diagnostics.Stopwatch.Start
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.start
+  name: Start()
+  nameWithType: Stopwatch.Start()
+  fullName: System.Diagnostics.Stopwatch.Start()
+  spec.csharp:
+  - uid: System.Diagnostics.Stopwatch.Start
+    name: Start
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Diagnostics.Stopwatch.Start
+    name: Start
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.start
+  - name: (
+  - name: )
+- uid: System.Diagnostics.Stopwatch.StartNew
+  commentId: M:System.Diagnostics.Stopwatch.StartNew
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.startnew
+  name: StartNew()
+  nameWithType: Stopwatch.StartNew()
+  fullName: System.Diagnostics.Stopwatch.StartNew()
+  spec.csharp:
+  - uid: System.Diagnostics.Stopwatch.StartNew
+    name: StartNew
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.startnew
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Diagnostics.Stopwatch.StartNew
+    name: StartNew
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.startnew
+  - name: (
+  - name: )
+- uid: System.Diagnostics.Stopwatch.Stop
+  commentId: M:System.Diagnostics.Stopwatch.Stop
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.stop
+  name: Stop()
+  nameWithType: Stopwatch.Stop()
+  fullName: System.Diagnostics.Stopwatch.Stop()
+  spec.csharp:
+  - uid: System.Diagnostics.Stopwatch.Stop
+    name: Stop
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.stop
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Diagnostics.Stopwatch.Stop
+    name: Stop
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.stop
+  - name: (
+  - name: )
+- uid: System.Diagnostics.Stopwatch.Elapsed
+  commentId: P:System.Diagnostics.Stopwatch.Elapsed
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.elapsed
+  name: Elapsed
+  nameWithType: Stopwatch.Elapsed
+  fullName: System.Diagnostics.Stopwatch.Elapsed
+- uid: System.Diagnostics.Stopwatch.ElapsedMilliseconds
+  commentId: P:System.Diagnostics.Stopwatch.ElapsedMilliseconds
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.elapsedmilliseconds
+  name: ElapsedMilliseconds
+  nameWithType: Stopwatch.ElapsedMilliseconds
+  fullName: System.Diagnostics.Stopwatch.ElapsedMilliseconds
+- uid: System.Diagnostics.Stopwatch.ElapsedTicks
+  commentId: P:System.Diagnostics.Stopwatch.ElapsedTicks
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.elapsedticks
+  name: ElapsedTicks
+  nameWithType: Stopwatch.ElapsedTicks
+  fullName: System.Diagnostics.Stopwatch.ElapsedTicks
+- uid: System.Diagnostics.Stopwatch.IsRunning
+  commentId: P:System.Diagnostics.Stopwatch.IsRunning
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.isrunning
+  name: IsRunning
+  nameWithType: Stopwatch.IsRunning
+  fullName: System.Diagnostics.Stopwatch.IsRunning
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Timing.StopwatchClock.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<StopwatchClock>(StopwatchClock)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<StopwatchClock>(StopwatchClock)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Timing.StopwatchClock>(osu.Framework.Timing.StopwatchClock)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of StopwatchClock)(StopwatchClock)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Timing.StopwatchClock)(osu.Framework.Timing.StopwatchClock)
+  name.vb: GetLocalisableDescription(Of StopwatchClock)(StopwatchClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Timing.StopwatchClock)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Timing.StopwatchClock)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+- uid: osu.Framework.Timing.StopwatchClock.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<StopwatchClock>(StopwatchClock)
+  nameWithType: EnumerableExtensions.Yield<StopwatchClock>(StopwatchClock)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Timing.StopwatchClock>(osu.Framework.Timing.StopwatchClock)
+  nameWithType.vb: EnumerableExtensions.Yield(Of StopwatchClock)(StopwatchClock)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Timing.StopwatchClock)(osu.Framework.Timing.StopwatchClock)
+  name.vb: Yield(Of StopwatchClock)(StopwatchClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Timing.StopwatchClock)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Timing.StopwatchClock)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+- uid: osu.Framework.Timing.StopwatchClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<StopwatchClock>(StopwatchClock)
+  nameWithType: ObjectExtensions.AsNonNull<StopwatchClock>(StopwatchClock)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Timing.StopwatchClock>(osu.Framework.Timing.StopwatchClock)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of StopwatchClock)(StopwatchClock)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Timing.StopwatchClock)(osu.Framework.Timing.StopwatchClock)
+  name.vb: AsNonNull(Of StopwatchClock)(StopwatchClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Timing.StopwatchClock)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Timing.StopwatchClock)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+- uid: osu.Framework.Timing.StopwatchClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<StopwatchClock>(StopwatchClock)
+  nameWithType: ObjectExtensions.IsNotNull<StopwatchClock>(StopwatchClock)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Timing.StopwatchClock>(osu.Framework.Timing.StopwatchClock)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of StopwatchClock)(StopwatchClock)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Timing.StopwatchClock)(osu.Framework.Timing.StopwatchClock)
+  name.vb: IsNotNull(Of StopwatchClock)(StopwatchClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Timing.StopwatchClock)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Timing.StopwatchClock)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+- uid: osu.Framework.Timing.StopwatchClock.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<StopwatchClock>(StopwatchClock)
+  nameWithType: ObjectExtensions.IsNull<StopwatchClock>(StopwatchClock)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Timing.StopwatchClock>(osu.Framework.Timing.StopwatchClock)
+  nameWithType.vb: ObjectExtensions.IsNull(Of StopwatchClock)(StopwatchClock)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Timing.StopwatchClock)(osu.Framework.Timing.StopwatchClock)
+  name.vb: IsNull(Of StopwatchClock)(StopwatchClock)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Timing.StopwatchClock)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Timing.StopwatchClock)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: )
+- uid: osu.Framework.Timing.StopwatchClock.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<StopwatchClock, TChild>(StopwatchClock, TChild)
+  nameWithType: ContainerExtensions.WithChild<StopwatchClock, TChild>(StopwatchClock, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Timing.StopwatchClock, TChild>(osu.Framework.Timing.StopwatchClock, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of StopwatchClock, TChild)(StopwatchClock, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Timing.StopwatchClock, TChild)(osu.Framework.Timing.StopwatchClock, TChild)
+  name.vb: WithChild(Of StopwatchClock, TChild)(StopwatchClock, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Timing.StopwatchClock,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Timing.StopwatchClock,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Timing.StopwatchClock.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<StopwatchClock, TChild>(StopwatchClock, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<StopwatchClock, TChild>(StopwatchClock, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Timing.StopwatchClock, TChild>(osu.Framework.Timing.StopwatchClock, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of StopwatchClock, TChild)(StopwatchClock, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Timing.StopwatchClock, TChild)(osu.Framework.Timing.StopwatchClock, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of StopwatchClock, TChild)(StopwatchClock, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Timing.StopwatchClock,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Timing.StopwatchClock,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Timing.StopwatchClock.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<StopwatchClock, TChild>(StopwatchClock, TChild)
+  nameWithType: ContainerExtensions.Wrap<StopwatchClock, TChild>(StopwatchClock, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Timing.StopwatchClock, TChild>(osu.Framework.Timing.StopwatchClock, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of StopwatchClock, TChild)(StopwatchClock, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Timing.StopwatchClock, TChild)(osu.Framework.Timing.StopwatchClock, TChild)
+  name.vb: Wrap(Of StopwatchClock, TChild)(StopwatchClock, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Timing.StopwatchClock,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Timing.StopwatchClock,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Timing.StopwatchClock
+    name: StopwatchClock
+    href: osu.Framework.Timing.StopwatchClock.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Diagnostics
+  commentId: N:System.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Diagnostics
+  nameWithType: System.Diagnostics
+  fullName: System.Diagnostics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Timing.StopwatchClock.#ctor*
+  commentId: Overload:osu.Framework.Timing.StopwatchClock.#ctor
+  href: osu.Framework.Timing.StopwatchClock.html#osu_Framework_Timing_StopwatchClock__ctor_System_Boolean_
+  name: StopwatchClock
+  nameWithType: StopwatchClock.StopwatchClock
+  fullName: osu.Framework.Timing.StopwatchClock.StopwatchClock
+  nameWithType.vb: StopwatchClock.New
+  fullName.vb: osu.Framework.Timing.StopwatchClock.New
+  name.vb: New
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Timing.StopwatchClock.CurrentTime*
+  commentId: Overload:osu.Framework.Timing.StopwatchClock.CurrentTime
+  href: osu.Framework.Timing.StopwatchClock.html#osu_Framework_Timing_StopwatchClock_CurrentTime
+  name: CurrentTime
+  nameWithType: StopwatchClock.CurrentTime
+  fullName: osu.Framework.Timing.StopwatchClock.CurrentTime
+- uid: osu.Framework.Timing.IClock.CurrentTime
+  commentId: P:osu.Framework.Timing.IClock.CurrentTime
+  parent: osu.Framework.Timing.IClock
+  href: osu.Framework.Timing.IClock.html#osu_Framework_Timing_IClock_CurrentTime
+  name: CurrentTime
+  nameWithType: IClock.CurrentTime
+  fullName: osu.Framework.Timing.IClock.CurrentTime
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: osu.Framework.Timing.StopwatchClock.Rate*
+  commentId: Overload:osu.Framework.Timing.StopwatchClock.Rate
+  href: osu.Framework.Timing.StopwatchClock.html#osu_Framework_Timing_StopwatchClock_Rate
+  name: Rate
+  nameWithType: StopwatchClock.Rate
+  fullName: osu.Framework.Timing.StopwatchClock.Rate
+- uid: osu.Framework.Timing.IAdjustableClock.Rate
+  commentId: P:osu.Framework.Timing.IAdjustableClock.Rate
+  parent: osu.Framework.Timing.IAdjustableClock
+  href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Rate
+  name: Rate
+  nameWithType: IAdjustableClock.Rate
+  fullName: osu.Framework.Timing.IAdjustableClock.Rate
+- uid: osu.Framework.Timing.IClock.Rate
+  commentId: P:osu.Framework.Timing.IClock.Rate
+  parent: osu.Framework.Timing.IClock
+  href: osu.Framework.Timing.IClock.html#osu_Framework_Timing_IClock_Rate
+  name: Rate
+  nameWithType: IClock.Rate
+  fullName: osu.Framework.Timing.IClock.Rate
+- uid: osu.Framework.Timing.StopwatchClock.Reset*
+  commentId: Overload:osu.Framework.Timing.StopwatchClock.Reset
+  href: osu.Framework.Timing.StopwatchClock.html#osu_Framework_Timing_StopwatchClock_Reset
+  name: Reset
+  nameWithType: StopwatchClock.Reset
+  fullName: osu.Framework.Timing.StopwatchClock.Reset
+- uid: osu.Framework.Timing.IAdjustableClock.Reset
+  commentId: M:osu.Framework.Timing.IAdjustableClock.Reset
+  parent: osu.Framework.Timing.IAdjustableClock
+  href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Reset
+  name: Reset()
+  nameWithType: IAdjustableClock.Reset()
+  fullName: osu.Framework.Timing.IAdjustableClock.Reset()
+  spec.csharp:
+  - uid: osu.Framework.Timing.IAdjustableClock.Reset
+    name: Reset
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Reset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Timing.IAdjustableClock.Reset
+    name: Reset
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Reset
+  - name: (
+  - name: )
+- uid: osu.Framework.Timing.StopwatchClock.Restart*
+  commentId: Overload:osu.Framework.Timing.StopwatchClock.Restart
+  href: osu.Framework.Timing.StopwatchClock.html#osu_Framework_Timing_StopwatchClock_Restart
+  name: Restart
+  nameWithType: StopwatchClock.Restart
+  fullName: osu.Framework.Timing.StopwatchClock.Restart
+- uid: osu.Framework.Timing.StopwatchClock.ResetSpeedAdjustments*
+  commentId: Overload:osu.Framework.Timing.StopwatchClock.ResetSpeedAdjustments
+  href: osu.Framework.Timing.StopwatchClock.html#osu_Framework_Timing_StopwatchClock_ResetSpeedAdjustments
+  name: ResetSpeedAdjustments
+  nameWithType: StopwatchClock.ResetSpeedAdjustments
+  fullName: osu.Framework.Timing.StopwatchClock.ResetSpeedAdjustments
+- uid: osu.Framework.Timing.IAdjustableClock.ResetSpeedAdjustments
+  commentId: M:osu.Framework.Timing.IAdjustableClock.ResetSpeedAdjustments
+  parent: osu.Framework.Timing.IAdjustableClock
+  href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_ResetSpeedAdjustments
+  name: ResetSpeedAdjustments()
+  nameWithType: IAdjustableClock.ResetSpeedAdjustments()
+  fullName: osu.Framework.Timing.IAdjustableClock.ResetSpeedAdjustments()
+  spec.csharp:
+  - uid: osu.Framework.Timing.IAdjustableClock.ResetSpeedAdjustments
+    name: ResetSpeedAdjustments
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_ResetSpeedAdjustments
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Timing.IAdjustableClock.ResetSpeedAdjustments
+    name: ResetSpeedAdjustments
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_ResetSpeedAdjustments
+  - name: (
+  - name: )
+- uid: osu.Framework.Timing.StopwatchClock.Seek*
+  commentId: Overload:osu.Framework.Timing.StopwatchClock.Seek
+  href: osu.Framework.Timing.StopwatchClock.html#osu_Framework_Timing_StopwatchClock_Seek_System_Double_
+  name: Seek
+  nameWithType: StopwatchClock.Seek
+  fullName: osu.Framework.Timing.StopwatchClock.Seek
+- uid: osu.Framework.Timing.IAdjustableClock.Seek(System.Double)
+  commentId: M:osu.Framework.Timing.IAdjustableClock.Seek(System.Double)
+  parent: osu.Framework.Timing.IAdjustableClock
+  isExternal: true
+  href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Seek_System_Double_
+  name: Seek(double)
+  nameWithType: IAdjustableClock.Seek(double)
+  fullName: osu.Framework.Timing.IAdjustableClock.Seek(double)
+  nameWithType.vb: IAdjustableClock.Seek(Double)
+  fullName.vb: osu.Framework.Timing.IAdjustableClock.Seek(Double)
+  name.vb: Seek(Double)
+  spec.csharp:
+  - uid: osu.Framework.Timing.IAdjustableClock.Seek(System.Double)
+    name: Seek
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Seek_System_Double_
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Timing.IAdjustableClock.Seek(System.Double)
+    name: Seek
+    href: osu.Framework.Timing.IAdjustableClock.html#osu_Framework_Timing_IAdjustableClock_Seek_System_Double_
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: System.TimeSpan.ToString
+  commentId: M:System.TimeSpan.ToString
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan.tostring#system-timespan-tostring
+  name: ToString()
+  nameWithType: TimeSpan.ToString()
+  fullName: System.TimeSpan.ToString()
+  spec.csharp:
+  - uid: System.TimeSpan.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan.tostring#system-timespan-tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.TimeSpan.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan.tostring#system-timespan-tostring
+  - name: (
+  - name: )
+- uid: System.Diagnostics.Stopwatch.ToString
+  commentId: M:System.Diagnostics.Stopwatch.ToString
+  parent: System.Diagnostics.Stopwatch
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.tostring
+  name: ToString()
+  nameWithType: Stopwatch.ToString()
+  fullName: System.Diagnostics.Stopwatch.ToString()
+  spec.csharp:
+  - uid: System.Diagnostics.Stopwatch.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Diagnostics.Stopwatch.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch.tostring
+  - name: (
+  - name: )
+- uid: osu.Framework.Timing.StopwatchClock.ToString*
+  commentId: Overload:osu.Framework.Timing.StopwatchClock.ToString
+  href: osu.Framework.Timing.StopwatchClock.html#osu_Framework_Timing_StopwatchClock_ToString
+  name: ToString
+  nameWithType: StopwatchClock.ToString
+  fullName: osu.Framework.Timing.StopwatchClock.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

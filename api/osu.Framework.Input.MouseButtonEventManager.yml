@@ -1,0 +1,2643 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Input.MouseButtonEventManager
+  commentId: T:osu.Framework.Input.MouseButtonEventManager
+  id: MouseButtonEventManager
+  parent: osu.Framework.Input
+  children:
+  - osu.Framework.Input.MouseButtonEventManager.#ctor(osuTK.Input.MouseButton)
+  - osu.Framework.Input.MouseButtonEventManager.ChangeFocusOnClick
+  - osu.Framework.Input.MouseButtonEventManager.ClickDragDistance
+  - osu.Framework.Input.MouseButtonEventManager.ClickedDrawable
+  - osu.Framework.Input.MouseButtonEventManager.DoubleClickTime
+  - osu.Framework.Input.MouseButtonEventManager.DragStarted
+  - osu.Framework.Input.MouseButtonEventManager.DraggedDrawable
+  - osu.Framework.Input.MouseButtonEventManager.EnableClick
+  - osu.Framework.Input.MouseButtonEventManager.EnableDrag
+  - osu.Framework.Input.MouseButtonEventManager.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  - osu.Framework.Input.MouseButtonEventManager.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  - osu.Framework.Input.MouseButtonEventManager.HandlePositionChange(osu.Framework.Input.States.InputState,osuTK.Vector2)
+  - osu.Framework.Input.MouseButtonEventManager.LastClickTime
+  - osu.Framework.Input.MouseButtonEventManager.MouseDownPosition
+  langs:
+  - csharp
+  - vb
+  name: MouseButtonEventManager
+  nameWithType: MouseButtonEventManager
+  fullName: osu.Framework.Input.MouseButtonEventManager
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: MouseButtonEventManager
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 21
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Manages state and events (click, drag and double-click) for a single mouse button.
+  example: []
+  syntax:
+    content: 'public abstract class MouseButtonEventManager : ButtonEventManager<MouseButton>'
+    content.vb: Public MustInherit Class MouseButtonEventManager Inherits ButtonEventManager(Of MouseButton)
+  inheritance:
+  - System.Object
+  - osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}
+  inheritedMembers:
+  - osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.Button
+  - osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.ButtonDownInputQueue
+  - osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.InputQueue
+  - osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonStateChange(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  - osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.PropagateButtonEvent(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable},osu.Framework.Input.Events.UIEvent)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Input.MouseButtonEventManager.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Input.MouseButtonEventManager.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Input.MouseButtonEventManager.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Input.MouseButtonEventManager.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Input.MouseButtonEventManager.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Input.MouseButtonEventManager.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Input.MouseButtonEventManager.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Input.MouseButtonEventManager.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Input.MouseButtonEventManager.EnableDrag
+  commentId: P:osu.Framework.Input.MouseButtonEventManager.EnableDrag
+  id: EnableDrag
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: EnableDrag
+  nameWithType: MouseButtonEventManager.EnableDrag
+  fullName: osu.Framework.Input.MouseButtonEventManager.EnableDrag
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: EnableDrag
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 26
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Whether dragging is handled by the managed button.
+  example: []
+  syntax:
+    content: public abstract bool EnableDrag { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public MustOverride ReadOnly Property EnableDrag As Boolean
+  overload: osu.Framework.Input.MouseButtonEventManager.EnableDrag*
+- uid: osu.Framework.Input.MouseButtonEventManager.EnableClick
+  commentId: P:osu.Framework.Input.MouseButtonEventManager.EnableClick
+  id: EnableClick
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: EnableClick
+  nameWithType: MouseButtonEventManager.EnableClick
+  fullName: osu.Framework.Input.MouseButtonEventManager.EnableClick
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: EnableClick
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 31
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Whether click and double click are handled by the managed button.
+  example: []
+  syntax:
+    content: public abstract bool EnableClick { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public MustOverride ReadOnly Property EnableClick As Boolean
+  overload: osu.Framework.Input.MouseButtonEventManager.EnableClick*
+- uid: osu.Framework.Input.MouseButtonEventManager.ChangeFocusOnClick
+  commentId: P:osu.Framework.Input.MouseButtonEventManager.ChangeFocusOnClick
+  id: ChangeFocusOnClick
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: ChangeFocusOnClick
+  nameWithType: MouseButtonEventManager.ChangeFocusOnClick
+  fullName: osu.Framework.Input.MouseButtonEventManager.ChangeFocusOnClick
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ChangeFocusOnClick
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 36
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Whether focus is changed when the button is clicked.
+  example: []
+  syntax:
+    content: public abstract bool ChangeFocusOnClick { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public MustOverride ReadOnly Property ChangeFocusOnClick As Boolean
+  overload: osu.Framework.Input.MouseButtonEventManager.ChangeFocusOnClick*
+- uid: osu.Framework.Input.MouseButtonEventManager.#ctor(osuTK.Input.MouseButton)
+  commentId: M:osu.Framework.Input.MouseButtonEventManager.#ctor(osuTK.Input.MouseButton)
+  id: '#ctor(osuTK.Input.MouseButton)'
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: MouseButtonEventManager(MouseButton)
+  nameWithType: MouseButtonEventManager.MouseButtonEventManager(MouseButton)
+  fullName: osu.Framework.Input.MouseButtonEventManager.MouseButtonEventManager(osuTK.Input.MouseButton)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 44
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  syntax:
+    content: protected MouseButtonEventManager(MouseButton button)
+    parameters:
+    - id: button
+      type: osuTK.Input.MouseButton
+    content.vb: Protected Sub New(button As MouseButton)
+  overload: osu.Framework.Input.MouseButtonEventManager.#ctor*
+  nameWithType.vb: MouseButtonEventManager.New(MouseButton)
+  fullName.vb: osu.Framework.Input.MouseButtonEventManager.New(osuTK.Input.MouseButton)
+  name.vb: New(MouseButton)
+- uid: osu.Framework.Input.MouseButtonEventManager.DoubleClickTime
+  commentId: P:osu.Framework.Input.MouseButtonEventManager.DoubleClickTime
+  id: DoubleClickTime
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: DoubleClickTime
+  nameWithType: MouseButtonEventManager.DoubleClickTime
+  fullName: osu.Framework.Input.MouseButtonEventManager.DoubleClickTime
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: DoubleClickTime
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 52
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: The maximum time between two clicks for a double-click to be considered.
+  example: []
+  syntax:
+    content: public virtual float DoubleClickTime { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Overridable ReadOnly Property DoubleClickTime As Single
+  overload: osu.Framework.Input.MouseButtonEventManager.DoubleClickTime*
+- uid: osu.Framework.Input.MouseButtonEventManager.ClickDragDistance
+  commentId: P:osu.Framework.Input.MouseButtonEventManager.ClickDragDistance
+  id: ClickDragDistance
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: ClickDragDistance
+  nameWithType: MouseButtonEventManager.ClickDragDistance
+  fullName: osu.Framework.Input.MouseButtonEventManager.ClickDragDistance
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ClickDragDistance
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 57
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: The distance that must be moved until a dragged click becomes invalid.
+  example: []
+  syntax:
+    content: public virtual float ClickDragDistance { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Overridable ReadOnly Property ClickDragDistance As Single
+  overload: osu.Framework.Input.MouseButtonEventManager.ClickDragDistance*
+- uid: osu.Framework.Input.MouseButtonEventManager.MouseDownPosition
+  commentId: P:osu.Framework.Input.MouseButtonEventManager.MouseDownPosition
+  id: MouseDownPosition
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: MouseDownPosition
+  nameWithType: MouseButtonEventManager.MouseDownPosition
+  fullName: osu.Framework.Input.MouseButtonEventManager.MouseDownPosition
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: MouseDownPosition
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 62
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: The position of the mouse when the last time the button is pressed.
+  example: []
+  syntax:
+    content: public Vector2? MouseDownPosition { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{osuTK.Vector2}
+    content.vb: Public Property MouseDownPosition As Vector2?
+  overload: osu.Framework.Input.MouseButtonEventManager.MouseDownPosition*
+- uid: osu.Framework.Input.MouseButtonEventManager.LastClickTime
+  commentId: F:osu.Framework.Input.MouseButtonEventManager.LastClickTime
+  id: LastClickTime
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: LastClickTime
+  nameWithType: MouseButtonEventManager.LastClickTime
+  fullName: osu.Framework.Input.MouseButtonEventManager.LastClickTime
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: LastClickTime
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 67
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: The time of last click.
+  example: []
+  syntax:
+    content: protected double? LastClickTime
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Protected LastClickTime As Double?
+- uid: osu.Framework.Input.MouseButtonEventManager.ClickedDrawable
+  commentId: F:osu.Framework.Input.MouseButtonEventManager.ClickedDrawable
+  id: ClickedDrawable
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: ClickedDrawable
+  nameWithType: MouseButtonEventManager.ClickedDrawable
+  fullName: osu.Framework.Input.MouseButtonEventManager.ClickedDrawable
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ClickedDrawable
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 72
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: The drawable which is clicked by the last click.
+  example: []
+  syntax:
+    content: protected WeakReference<Drawable> ClickedDrawable
+    return:
+      type: System.WeakReference{osu.Framework.Graphics.Drawable}
+    content.vb: Protected ClickedDrawable As WeakReference(Of Drawable)
+- uid: osu.Framework.Input.MouseButtonEventManager.DragStarted
+  commentId: F:osu.Framework.Input.MouseButtonEventManager.DragStarted
+  id: DragStarted
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: DragStarted
+  nameWithType: MouseButtonEventManager.DragStarted
+  fullName: osu.Framework.Input.MouseButtonEventManager.DragStarted
+  type: Field
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: DragStarted
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 77
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Whether a drag operation has started and <xref href="osu.Framework.Input.MouseButtonEventManager.DraggedDrawable" data-throw-if-not-resolved="false"></xref> has been searched for.
+  example: []
+  syntax:
+    content: protected bool DragStarted
+    return:
+      type: System.Boolean
+    content.vb: Protected DragStarted As Boolean
+- uid: osu.Framework.Input.MouseButtonEventManager.DraggedDrawable
+  commentId: P:osu.Framework.Input.MouseButtonEventManager.DraggedDrawable
+  id: DraggedDrawable
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: DraggedDrawable
+  nameWithType: MouseButtonEventManager.DraggedDrawable
+  fullName: osu.Framework.Input.MouseButtonEventManager.DraggedDrawable
+  type: Property
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: DraggedDrawable
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 82
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: The <xref href="osu.Framework.Graphics.Drawable" data-throw-if-not-resolved="false"></xref> which is currently being dragged. null if none is.
+  example: []
+  syntax:
+    content: public Drawable? DraggedDrawable { get; protected set; }
+    parameters: []
+    return:
+      type: osu.Framework.Graphics.Drawable
+    content.vb: Public Property DraggedDrawable As Drawable
+  overload: osu.Framework.Input.MouseButtonEventManager.DraggedDrawable*
+- uid: osu.Framework.Input.MouseButtonEventManager.HandlePositionChange(osu.Framework.Input.States.InputState,osuTK.Vector2)
+  commentId: M:osu.Framework.Input.MouseButtonEventManager.HandlePositionChange(osu.Framework.Input.States.InputState,osuTK.Vector2)
+  id: HandlePositionChange(osu.Framework.Input.States.InputState,osuTK.Vector2)
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: HandlePositionChange(InputState, Vector2)
+  nameWithType: MouseButtonEventManager.HandlePositionChange(InputState, Vector2)
+  fullName: osu.Framework.Input.MouseButtonEventManager.HandlePositionChange(osu.Framework.Input.States.InputState, osuTK.Vector2)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: HandlePositionChange
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 84
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  syntax:
+    content: public void HandlePositionChange(InputState state, Vector2 lastPosition)
+    parameters:
+    - id: state
+      type: osu.Framework.Input.States.InputState
+    - id: lastPosition
+      type: osuTK.Vector2
+    content.vb: Public Sub HandlePositionChange(state As InputState, lastPosition As Vector2)
+  overload: osu.Framework.Input.MouseButtonEventManager.HandlePositionChange*
+- uid: osu.Framework.Input.MouseButtonEventManager.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  commentId: M:osu.Framework.Input.MouseButtonEventManager.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  id: HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: HandleButtonDown(InputState, List<Drawable>)
+  nameWithType: MouseButtonEventManager.HandleButtonDown(InputState, List<Drawable>)
+  fullName: osu.Framework.Input.MouseButtonEventManager.HandleButtonDown(osu.Framework.Input.States.InputState, System.Collections.Generic.List<osu.Framework.Graphics.Drawable>)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: HandleButtonDown
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 100
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Handles the button being pressed.
+  example: []
+  syntax:
+    content: protected override Drawable? HandleButtonDown(InputState state, List<Drawable> targets)
+    parameters:
+    - id: state
+      type: osu.Framework.Input.States.InputState
+      description: The current <xref href="osu.Framework.Input.States.InputState" data-throw-if-not-resolved="false"></xref>.
+    - id: targets
+      type: System.Collections.Generic.List{osu.Framework.Graphics.Drawable}
+      description: The list of possible targets that can handle the event.
+    return:
+      type: osu.Framework.Graphics.Drawable
+      description: The <xref href="osu.Framework.Graphics.Drawable" data-throw-if-not-resolved="false"></xref> that handled the event.
+    content.vb: Protected Overrides Function HandleButtonDown(state As InputState, targets As List(Of Drawable)) As Drawable
+  overridden: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  overload: osu.Framework.Input.MouseButtonEventManager.HandleButtonDown*
+  nameWithType.vb: MouseButtonEventManager.HandleButtonDown(InputState, List(Of Drawable))
+  fullName.vb: osu.Framework.Input.MouseButtonEventManager.HandleButtonDown(osu.Framework.Input.States.InputState, System.Collections.Generic.List(Of osu.Framework.Graphics.Drawable))
+  name.vb: HandleButtonDown(InputState, List(Of Drawable))
+- uid: osu.Framework.Input.MouseButtonEventManager.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  commentId: M:osu.Framework.Input.MouseButtonEventManager.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  id: HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  parent: osu.Framework.Input.MouseButtonEventManager
+  langs:
+  - csharp
+  - vb
+  name: HandleButtonUp(InputState, List<Drawable>?)
+  nameWithType: MouseButtonEventManager.HandleButtonUp(InputState, List<Drawable>?)
+  fullName: osu.Framework.Input.MouseButtonEventManager.HandleButtonUp(osu.Framework.Input.States.InputState, System.Collections.Generic.List<osu.Framework.Graphics.Drawable>?)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Input/MouseButtonEventManager.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: HandleButtonUp
+    path: osu.Framework/Input/MouseButtonEventManager.cs
+    startLine: 122
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Input
+  summary: Handles the button being released.
+  example: []
+  syntax:
+    content: protected override void HandleButtonUp(InputState state, List<Drawable>? targets)
+    parameters:
+    - id: state
+      type: osu.Framework.Input.States.InputState
+      description: The current <xref href="osu.Framework.Input.States.InputState" data-throw-if-not-resolved="false"></xref>.
+    - id: targets
+      type: System.Collections.Generic.List{osu.Framework.Graphics.Drawable}
+      description: The list of targets that must handle the event. This will contain targets up to the target that handled the button down event.
+    content.vb: Protected Overrides Sub HandleButtonUp(state As InputState, targets As List(Of Drawable))
+  overridden: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  overload: osu.Framework.Input.MouseButtonEventManager.HandleButtonUp*
+  nameWithType.vb: MouseButtonEventManager.HandleButtonUp(InputState, List(Of Drawable))
+  fullName.vb: osu.Framework.Input.MouseButtonEventManager.HandleButtonUp(osu.Framework.Input.States.InputState, System.Collections.Generic.List(Of osu.Framework.Graphics.Drawable))
+  name.vb: HandleButtonUp(InputState, List(Of Drawable))
+references:
+- uid: osu.Framework.Input
+  commentId: N:osu.Framework.Input
+  href: osu.html
+  name: osu.Framework.Input
+  nameWithType: osu.Framework.Input
+  fullName: osu.Framework.Input
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}
+  commentId: T:osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}
+  parent: osu.Framework.Input
+  definition: osu.Framework.Input.ButtonEventManager`1
+  href: osu.Framework.Input.ButtonEventManager-1.html
+  name: ButtonEventManager<MouseButton>
+  nameWithType: ButtonEventManager<MouseButton>
+  fullName: osu.Framework.Input.ButtonEventManager<osuTK.Input.MouseButton>
+  nameWithType.vb: ButtonEventManager(Of MouseButton)
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of osuTK.Input.MouseButton)
+  name.vb: ButtonEventManager(Of MouseButton)
+  spec.csharp:
+  - uid: osu.Framework.Input.ButtonEventManager`1
+    name: ButtonEventManager
+    href: osu.Framework.Input.ButtonEventManager-1.html
+  - name: <
+  - uid: osuTK.Input.MouseButton
+    name: MouseButton
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Input.ButtonEventManager`1
+    name: ButtonEventManager
+    href: osu.Framework.Input.ButtonEventManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osuTK.Input.MouseButton
+    name: MouseButton
+    isExternal: true
+  - name: )
+- uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.Button
+  commentId: F:osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.Button
+  parent: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}
+  definition: osu.Framework.Input.ButtonEventManager`1.Button
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_Button
+  name: Button
+  nameWithType: ButtonEventManager<MouseButton>.Button
+  fullName: osu.Framework.Input.ButtonEventManager<osuTK.Input.MouseButton>.Button
+  nameWithType.vb: ButtonEventManager(Of MouseButton).Button
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of osuTK.Input.MouseButton).Button
+- uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.ButtonDownInputQueue
+  commentId: P:osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.ButtonDownInputQueue
+  parent: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}
+  definition: osu.Framework.Input.ButtonEventManager`1.ButtonDownInputQueue
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_ButtonDownInputQueue
+  name: ButtonDownInputQueue
+  nameWithType: ButtonEventManager<MouseButton>.ButtonDownInputQueue
+  fullName: osu.Framework.Input.ButtonEventManager<osuTK.Input.MouseButton>.ButtonDownInputQueue
+  nameWithType.vb: ButtonEventManager(Of MouseButton).ButtonDownInputQueue
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of osuTK.Input.MouseButton).ButtonDownInputQueue
+- uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.InputQueue
+  commentId: P:osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.InputQueue
+  parent: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}
+  definition: osu.Framework.Input.ButtonEventManager`1.InputQueue
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_InputQueue
+  name: InputQueue
+  nameWithType: ButtonEventManager<MouseButton>.InputQueue
+  fullName: osu.Framework.Input.ButtonEventManager<osuTK.Input.MouseButton>.InputQueue
+  nameWithType.vb: ButtonEventManager(Of MouseButton).InputQueue
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of osuTK.Input.MouseButton).InputQueue
+- uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonStateChange(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  commentId: M:osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonStateChange(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  parent: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}
+  definition: osu.Framework.Input.ButtonEventManager`1.HandleButtonStateChange(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonStateChange_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_ButtonStateChangeKind_
+  name: HandleButtonStateChange(InputState, ButtonStateChangeKind)
+  nameWithType: ButtonEventManager<MouseButton>.HandleButtonStateChange(InputState, ButtonStateChangeKind)
+  fullName: osu.Framework.Input.ButtonEventManager<osuTK.Input.MouseButton>.HandleButtonStateChange(osu.Framework.Input.States.InputState, osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  nameWithType.vb: ButtonEventManager(Of MouseButton).HandleButtonStateChange(InputState, ButtonStateChangeKind)
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of osuTK.Input.MouseButton).HandleButtonStateChange(osu.Framework.Input.States.InputState, osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  spec.csharp:
+  - uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonStateChange(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+    name: HandleButtonStateChange
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonStateChange_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_ButtonStateChangeKind_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.ButtonStateChangeKind
+    name: ButtonStateChangeKind
+    href: osu.Framework.Input.StateChanges.ButtonStateChangeKind.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonStateChange(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+    name: HandleButtonStateChange
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonStateChange_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_ButtonStateChangeKind_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.ButtonStateChangeKind
+    name: ButtonStateChangeKind
+    href: osu.Framework.Input.StateChanges.ButtonStateChangeKind.html
+  - name: )
+- uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.PropagateButtonEvent(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable},osu.Framework.Input.Events.UIEvent)
+  commentId: M:osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.PropagateButtonEvent(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable},osu.Framework.Input.Events.UIEvent)
+  parent: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}
+  definition: osu.Framework.Input.ButtonEventManager`1.PropagateButtonEvent(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable},osu.Framework.Input.Events.UIEvent)
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_PropagateButtonEvent_System_Collections_Generic_IEnumerable_osu_Framework_Graphics_Drawable__osu_Framework_Input_Events_UIEvent_
+  name: PropagateButtonEvent(IEnumerable<Drawable>, UIEvent)
+  nameWithType: ButtonEventManager<MouseButton>.PropagateButtonEvent(IEnumerable<Drawable>, UIEvent)
+  fullName: osu.Framework.Input.ButtonEventManager<osuTK.Input.MouseButton>.PropagateButtonEvent(System.Collections.Generic.IEnumerable<osu.Framework.Graphics.Drawable>, osu.Framework.Input.Events.UIEvent)
+  nameWithType.vb: ButtonEventManager(Of MouseButton).PropagateButtonEvent(IEnumerable(Of Drawable), UIEvent)
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of osuTK.Input.MouseButton).PropagateButtonEvent(System.Collections.Generic.IEnumerable(Of osu.Framework.Graphics.Drawable), osu.Framework.Input.Events.UIEvent)
+  name.vb: PropagateButtonEvent(IEnumerable(Of Drawable), UIEvent)
+  spec.csharp:
+  - uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.PropagateButtonEvent(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable},osu.Framework.Input.Events.UIEvent)
+    name: PropagateButtonEvent
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_PropagateButtonEvent_System_Collections_Generic_IEnumerable_osu_Framework_Graphics_Drawable__osu_Framework_Input_Events_UIEvent_
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.Events.UIEvent
+    name: UIEvent
+    href: osu.Framework.Input.Events.UIEvent.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.PropagateButtonEvent(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable},osu.Framework.Input.Events.UIEvent)
+    name: PropagateButtonEvent
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_PropagateButtonEvent_System_Collections_Generic_IEnumerable_osu_Framework_Graphics_Drawable__osu_Framework_Input_Events_UIEvent_
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.Events.UIEvent
+    name: UIEvent
+    href: osu.Framework.Input.Events.UIEvent.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Input.MouseButtonEventManager.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<MouseButtonEventManager>(MouseButtonEventManager)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<MouseButtonEventManager>(MouseButtonEventManager)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Input.MouseButtonEventManager>(osu.Framework.Input.MouseButtonEventManager)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of MouseButtonEventManager)(MouseButtonEventManager)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Input.MouseButtonEventManager)(osu.Framework.Input.MouseButtonEventManager)
+  name.vb: GetLocalisableDescription(Of MouseButtonEventManager)(MouseButtonEventManager)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Input.MouseButtonEventManager)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Input.MouseButtonEventManager)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+- uid: osu.Framework.Input.MouseButtonEventManager.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<MouseButtonEventManager>(MouseButtonEventManager)
+  nameWithType: EnumerableExtensions.Yield<MouseButtonEventManager>(MouseButtonEventManager)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Input.MouseButtonEventManager>(osu.Framework.Input.MouseButtonEventManager)
+  nameWithType.vb: EnumerableExtensions.Yield(Of MouseButtonEventManager)(MouseButtonEventManager)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Input.MouseButtonEventManager)(osu.Framework.Input.MouseButtonEventManager)
+  name.vb: Yield(Of MouseButtonEventManager)(MouseButtonEventManager)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Input.MouseButtonEventManager)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Input.MouseButtonEventManager)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+- uid: osu.Framework.Input.MouseButtonEventManager.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<MouseButtonEventManager>(MouseButtonEventManager)
+  nameWithType: ObjectExtensions.AsNonNull<MouseButtonEventManager>(MouseButtonEventManager)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Input.MouseButtonEventManager>(osu.Framework.Input.MouseButtonEventManager)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of MouseButtonEventManager)(MouseButtonEventManager)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Input.MouseButtonEventManager)(osu.Framework.Input.MouseButtonEventManager)
+  name.vb: AsNonNull(Of MouseButtonEventManager)(MouseButtonEventManager)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Input.MouseButtonEventManager)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Input.MouseButtonEventManager)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+- uid: osu.Framework.Input.MouseButtonEventManager.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<MouseButtonEventManager>(MouseButtonEventManager)
+  nameWithType: ObjectExtensions.IsNotNull<MouseButtonEventManager>(MouseButtonEventManager)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Input.MouseButtonEventManager>(osu.Framework.Input.MouseButtonEventManager)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of MouseButtonEventManager)(MouseButtonEventManager)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Input.MouseButtonEventManager)(osu.Framework.Input.MouseButtonEventManager)
+  name.vb: IsNotNull(Of MouseButtonEventManager)(MouseButtonEventManager)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Input.MouseButtonEventManager)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Input.MouseButtonEventManager)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+- uid: osu.Framework.Input.MouseButtonEventManager.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<MouseButtonEventManager>(MouseButtonEventManager)
+  nameWithType: ObjectExtensions.IsNull<MouseButtonEventManager>(MouseButtonEventManager)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Input.MouseButtonEventManager>(osu.Framework.Input.MouseButtonEventManager)
+  nameWithType.vb: ObjectExtensions.IsNull(Of MouseButtonEventManager)(MouseButtonEventManager)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Input.MouseButtonEventManager)(osu.Framework.Input.MouseButtonEventManager)
+  name.vb: IsNull(Of MouseButtonEventManager)(MouseButtonEventManager)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Input.MouseButtonEventManager)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Input.MouseButtonEventManager)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: )
+- uid: osu.Framework.Input.MouseButtonEventManager.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<MouseButtonEventManager, TChild>(MouseButtonEventManager, TChild)
+  nameWithType: ContainerExtensions.WithChild<MouseButtonEventManager, TChild>(MouseButtonEventManager, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Input.MouseButtonEventManager, TChild>(osu.Framework.Input.MouseButtonEventManager, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of MouseButtonEventManager, TChild)(MouseButtonEventManager, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Input.MouseButtonEventManager, TChild)(osu.Framework.Input.MouseButtonEventManager, TChild)
+  name.vb: WithChild(Of MouseButtonEventManager, TChild)(MouseButtonEventManager, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Input.MouseButtonEventManager,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Input.MouseButtonEventManager,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Input.MouseButtonEventManager.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<MouseButtonEventManager, TChild>(MouseButtonEventManager, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<MouseButtonEventManager, TChild>(MouseButtonEventManager, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Input.MouseButtonEventManager, TChild>(osu.Framework.Input.MouseButtonEventManager, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of MouseButtonEventManager, TChild)(MouseButtonEventManager, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Input.MouseButtonEventManager, TChild)(osu.Framework.Input.MouseButtonEventManager, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of MouseButtonEventManager, TChild)(MouseButtonEventManager, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Input.MouseButtonEventManager,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Input.MouseButtonEventManager,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Input.MouseButtonEventManager.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<MouseButtonEventManager, TChild>(MouseButtonEventManager, TChild)
+  nameWithType: ContainerExtensions.Wrap<MouseButtonEventManager, TChild>(MouseButtonEventManager, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Input.MouseButtonEventManager, TChild>(osu.Framework.Input.MouseButtonEventManager, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of MouseButtonEventManager, TChild)(MouseButtonEventManager, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Input.MouseButtonEventManager, TChild)(osu.Framework.Input.MouseButtonEventManager, TChild)
+  name.vb: Wrap(Of MouseButtonEventManager, TChild)(MouseButtonEventManager, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Input.MouseButtonEventManager,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Input.MouseButtonEventManager,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Input.MouseButtonEventManager
+    name: MouseButtonEventManager
+    href: osu.Framework.Input.MouseButtonEventManager.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Input.ButtonEventManager`1
+  commentId: T:osu.Framework.Input.ButtonEventManager`1
+  href: osu.Framework.Input.ButtonEventManager-1.html
+  name: ButtonEventManager<TButton>
+  nameWithType: ButtonEventManager<TButton>
+  fullName: osu.Framework.Input.ButtonEventManager<TButton>
+  nameWithType.vb: ButtonEventManager(Of TButton)
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of TButton)
+  name.vb: ButtonEventManager(Of TButton)
+  spec.csharp:
+  - uid: osu.Framework.Input.ButtonEventManager`1
+    name: ButtonEventManager
+    href: osu.Framework.Input.ButtonEventManager-1.html
+  - name: <
+  - name: TButton
+  - name: '>'
+  spec.vb:
+  - uid: osu.Framework.Input.ButtonEventManager`1
+    name: ButtonEventManager
+    href: osu.Framework.Input.ButtonEventManager-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TButton
+  - name: )
+- uid: osu.Framework.Input.ButtonEventManager`1.Button
+  commentId: F:osu.Framework.Input.ButtonEventManager`1.Button
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_Button
+  name: Button
+  nameWithType: ButtonEventManager<TButton>.Button
+  fullName: osu.Framework.Input.ButtonEventManager<TButton>.Button
+  nameWithType.vb: ButtonEventManager(Of TButton).Button
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of TButton).Button
+- uid: osu.Framework.Input.ButtonEventManager`1.ButtonDownInputQueue
+  commentId: P:osu.Framework.Input.ButtonEventManager`1.ButtonDownInputQueue
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_ButtonDownInputQueue
+  name: ButtonDownInputQueue
+  nameWithType: ButtonEventManager<TButton>.ButtonDownInputQueue
+  fullName: osu.Framework.Input.ButtonEventManager<TButton>.ButtonDownInputQueue
+  nameWithType.vb: ButtonEventManager(Of TButton).ButtonDownInputQueue
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of TButton).ButtonDownInputQueue
+- uid: osu.Framework.Input.ButtonEventManager`1.InputQueue
+  commentId: P:osu.Framework.Input.ButtonEventManager`1.InputQueue
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_InputQueue
+  name: InputQueue
+  nameWithType: ButtonEventManager<TButton>.InputQueue
+  fullName: osu.Framework.Input.ButtonEventManager<TButton>.InputQueue
+  nameWithType.vb: ButtonEventManager(Of TButton).InputQueue
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of TButton).InputQueue
+- uid: osu.Framework.Input.ButtonEventManager`1.HandleButtonStateChange(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  commentId: M:osu.Framework.Input.ButtonEventManager`1.HandleButtonStateChange(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonStateChange_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_ButtonStateChangeKind_
+  name: HandleButtonStateChange(InputState, ButtonStateChangeKind)
+  nameWithType: ButtonEventManager<TButton>.HandleButtonStateChange(InputState, ButtonStateChangeKind)
+  fullName: osu.Framework.Input.ButtonEventManager<TButton>.HandleButtonStateChange(osu.Framework.Input.States.InputState, osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  nameWithType.vb: ButtonEventManager(Of TButton).HandleButtonStateChange(InputState, ButtonStateChangeKind)
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of TButton).HandleButtonStateChange(osu.Framework.Input.States.InputState, osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+  spec.csharp:
+  - uid: osu.Framework.Input.ButtonEventManager`1.HandleButtonStateChange(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+    name: HandleButtonStateChange
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonStateChange_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_ButtonStateChangeKind_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.ButtonStateChangeKind
+    name: ButtonStateChangeKind
+    href: osu.Framework.Input.StateChanges.ButtonStateChangeKind.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.ButtonEventManager`1.HandleButtonStateChange(osu.Framework.Input.States.InputState,osu.Framework.Input.StateChanges.ButtonStateChangeKind)
+    name: HandleButtonStateChange
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonStateChange_osu_Framework_Input_States_InputState_osu_Framework_Input_StateChanges_ButtonStateChangeKind_
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.StateChanges.ButtonStateChangeKind
+    name: ButtonStateChangeKind
+    href: osu.Framework.Input.StateChanges.ButtonStateChangeKind.html
+  - name: )
+- uid: osu.Framework.Input.ButtonEventManager`1.PropagateButtonEvent(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable},osu.Framework.Input.Events.UIEvent)
+  commentId: M:osu.Framework.Input.ButtonEventManager`1.PropagateButtonEvent(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable},osu.Framework.Input.Events.UIEvent)
+  isExternal: true
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_PropagateButtonEvent_System_Collections_Generic_IEnumerable_osu_Framework_Graphics_Drawable__osu_Framework_Input_Events_UIEvent_
+  name: PropagateButtonEvent(IEnumerable<Drawable>, UIEvent)
+  nameWithType: ButtonEventManager<TButton>.PropagateButtonEvent(IEnumerable<Drawable>, UIEvent)
+  fullName: osu.Framework.Input.ButtonEventManager<TButton>.PropagateButtonEvent(System.Collections.Generic.IEnumerable<osu.Framework.Graphics.Drawable>, osu.Framework.Input.Events.UIEvent)
+  nameWithType.vb: ButtonEventManager(Of TButton).PropagateButtonEvent(IEnumerable(Of Drawable), UIEvent)
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of TButton).PropagateButtonEvent(System.Collections.Generic.IEnumerable(Of osu.Framework.Graphics.Drawable), osu.Framework.Input.Events.UIEvent)
+  name.vb: PropagateButtonEvent(IEnumerable(Of Drawable), UIEvent)
+  spec.csharp:
+  - uid: osu.Framework.Input.ButtonEventManager`1.PropagateButtonEvent(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable},osu.Framework.Input.Events.UIEvent)
+    name: PropagateButtonEvent
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_PropagateButtonEvent_System_Collections_Generic_IEnumerable_osu_Framework_Graphics_Drawable__osu_Framework_Input_Events_UIEvent_
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.Events.UIEvent
+    name: UIEvent
+    href: osu.Framework.Input.Events.UIEvent.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.ButtonEventManager`1.PropagateButtonEvent(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Drawable},osu.Framework.Input.Events.UIEvent)
+    name: PropagateButtonEvent
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_PropagateButtonEvent_System_Collections_Generic_IEnumerable_osu_Framework_Graphics_Drawable__osu_Framework_Input_Events_UIEvent_
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Input.Events.UIEvent
+    name: UIEvent
+    href: osu.Framework.Input.Events.UIEvent.html
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Input.MouseButtonEventManager.EnableDrag*
+  commentId: Overload:osu.Framework.Input.MouseButtonEventManager.EnableDrag
+  href: osu.Framework.Input.MouseButtonEventManager.html#osu_Framework_Input_MouseButtonEventManager_EnableDrag
+  name: EnableDrag
+  nameWithType: MouseButtonEventManager.EnableDrag
+  fullName: osu.Framework.Input.MouseButtonEventManager.EnableDrag
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Input.MouseButtonEventManager.EnableClick*
+  commentId: Overload:osu.Framework.Input.MouseButtonEventManager.EnableClick
+  href: osu.Framework.Input.MouseButtonEventManager.html#osu_Framework_Input_MouseButtonEventManager_EnableClick
+  name: EnableClick
+  nameWithType: MouseButtonEventManager.EnableClick
+  fullName: osu.Framework.Input.MouseButtonEventManager.EnableClick
+- uid: osu.Framework.Input.MouseButtonEventManager.ChangeFocusOnClick*
+  commentId: Overload:osu.Framework.Input.MouseButtonEventManager.ChangeFocusOnClick
+  href: osu.Framework.Input.MouseButtonEventManager.html#osu_Framework_Input_MouseButtonEventManager_ChangeFocusOnClick
+  name: ChangeFocusOnClick
+  nameWithType: MouseButtonEventManager.ChangeFocusOnClick
+  fullName: osu.Framework.Input.MouseButtonEventManager.ChangeFocusOnClick
+- uid: osu.Framework.Input.MouseButtonEventManager.#ctor*
+  commentId: Overload:osu.Framework.Input.MouseButtonEventManager.#ctor
+  href: osu.Framework.Input.MouseButtonEventManager.html#osu_Framework_Input_MouseButtonEventManager__ctor_osuTK_Input_MouseButton_
+  name: MouseButtonEventManager
+  nameWithType: MouseButtonEventManager.MouseButtonEventManager
+  fullName: osu.Framework.Input.MouseButtonEventManager.MouseButtonEventManager
+  nameWithType.vb: MouseButtonEventManager.New
+  fullName.vb: osu.Framework.Input.MouseButtonEventManager.New
+  name.vb: New
+- uid: osuTK.Input.MouseButton
+  commentId: T:osuTK.Input.MouseButton
+  parent: osuTK.Input
+  isExternal: true
+  name: MouseButton
+  nameWithType: MouseButton
+  fullName: osuTK.Input.MouseButton
+- uid: osuTK.Input
+  commentId: N:osuTK.Input
+  isExternal: true
+  name: osuTK.Input
+  nameWithType: osuTK.Input
+  fullName: osuTK.Input
+  spec.csharp:
+  - uid: osuTK
+    name: osuTK
+    isExternal: true
+  - name: .
+  - uid: osuTK.Input
+    name: Input
+    isExternal: true
+  spec.vb:
+  - uid: osuTK
+    name: osuTK
+    isExternal: true
+  - name: .
+  - uid: osuTK.Input
+    name: Input
+    isExternal: true
+- uid: osu.Framework.Input.MouseButtonEventManager.DoubleClickTime*
+  commentId: Overload:osu.Framework.Input.MouseButtonEventManager.DoubleClickTime
+  href: osu.Framework.Input.MouseButtonEventManager.html#osu_Framework_Input_MouseButtonEventManager_DoubleClickTime
+  name: DoubleClickTime
+  nameWithType: MouseButtonEventManager.DoubleClickTime
+  fullName: osu.Framework.Input.MouseButtonEventManager.DoubleClickTime
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: osu.Framework.Input.MouseButtonEventManager.ClickDragDistance*
+  commentId: Overload:osu.Framework.Input.MouseButtonEventManager.ClickDragDistance
+  href: osu.Framework.Input.MouseButtonEventManager.html#osu_Framework_Input_MouseButtonEventManager_ClickDragDistance
+  name: ClickDragDistance
+  nameWithType: MouseButtonEventManager.ClickDragDistance
+  fullName: osu.Framework.Input.MouseButtonEventManager.ClickDragDistance
+- uid: osu.Framework.Input.MouseButtonEventManager.MouseDownPosition*
+  commentId: Overload:osu.Framework.Input.MouseButtonEventManager.MouseDownPosition
+  href: osu.Framework.Input.MouseButtonEventManager.html#osu_Framework_Input_MouseButtonEventManager_MouseDownPosition
+  name: MouseDownPosition
+  nameWithType: MouseButtonEventManager.MouseDownPosition
+  fullName: osu.Framework.Input.MouseButtonEventManager.MouseDownPosition
+- uid: System.Nullable{osuTK.Vector2}
+  commentId: T:System.Nullable{osuTK.Vector2}
+  parent: System
+  definition: System.Nullable`1
+  name: Vector2?
+  nameWithType: Vector2?
+  fullName: osuTK.Vector2?
+  spec.csharp:
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '?'
+  spec.vb:
+  - uid: osuTK.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: System.WeakReference{osu.Framework.Graphics.Drawable}
+  commentId: T:System.WeakReference{osu.Framework.Graphics.Drawable}
+  parent: System
+  definition: System.WeakReference`1
+  href: https://learn.microsoft.com/dotnet/api/system.weakreference-1
+  name: WeakReference<Drawable>
+  nameWithType: WeakReference<Drawable>
+  fullName: System.WeakReference<osu.Framework.Graphics.Drawable>
+  nameWithType.vb: WeakReference(Of Drawable)
+  fullName.vb: System.WeakReference(Of osu.Framework.Graphics.Drawable)
+  name.vb: WeakReference(Of Drawable)
+  spec.csharp:
+  - uid: System.WeakReference`1
+    name: WeakReference
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.weakreference-1
+  - name: <
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: '>'
+  spec.vb:
+  - uid: System.WeakReference`1
+    name: WeakReference
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.weakreference-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: )
+- uid: System.WeakReference`1
+  commentId: T:System.WeakReference`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.weakreference-1
+  name: WeakReference<T>
+  nameWithType: WeakReference<T>
+  fullName: System.WeakReference<T>
+  nameWithType.vb: WeakReference(Of T)
+  fullName.vb: System.WeakReference(Of T)
+  name.vb: WeakReference(Of T)
+  spec.csharp:
+  - uid: System.WeakReference`1
+    name: WeakReference
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.weakreference-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.WeakReference`1
+    name: WeakReference
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.weakreference-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Input.MouseButtonEventManager.DraggedDrawable
+  commentId: P:osu.Framework.Input.MouseButtonEventManager.DraggedDrawable
+  href: osu.Framework.Input.MouseButtonEventManager.html#osu_Framework_Input_MouseButtonEventManager_DraggedDrawable
+  name: DraggedDrawable
+  nameWithType: MouseButtonEventManager.DraggedDrawable
+  fullName: osu.Framework.Input.MouseButtonEventManager.DraggedDrawable
+- uid: osu.Framework.Graphics.Drawable
+  commentId: T:osu.Framework.Graphics.Drawable
+  parent: osu.Framework.Graphics
+  href: osu.Framework.Graphics.Drawable.html
+  name: Drawable
+  nameWithType: Drawable
+  fullName: osu.Framework.Graphics.Drawable
+- uid: osu.Framework.Input.MouseButtonEventManager.DraggedDrawable*
+  commentId: Overload:osu.Framework.Input.MouseButtonEventManager.DraggedDrawable
+  href: osu.Framework.Input.MouseButtonEventManager.html#osu_Framework_Input_MouseButtonEventManager_DraggedDrawable
+  name: DraggedDrawable
+  nameWithType: MouseButtonEventManager.DraggedDrawable
+  fullName: osu.Framework.Input.MouseButtonEventManager.DraggedDrawable
+- uid: osu.Framework.Graphics
+  commentId: N:osu.Framework.Graphics
+  href: osu.html
+  name: osu.Framework.Graphics
+  nameWithType: osu.Framework.Graphics
+  fullName: osu.Framework.Graphics
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+- uid: osu.Framework.Input.MouseButtonEventManager.HandlePositionChange*
+  commentId: Overload:osu.Framework.Input.MouseButtonEventManager.HandlePositionChange
+  href: osu.Framework.Input.MouseButtonEventManager.html#osu_Framework_Input_MouseButtonEventManager_HandlePositionChange_osu_Framework_Input_States_InputState_osuTK_Vector2_
+  name: HandlePositionChange
+  nameWithType: MouseButtonEventManager.HandlePositionChange
+  fullName: osu.Framework.Input.MouseButtonEventManager.HandlePositionChange
+- uid: osu.Framework.Input.States.InputState
+  commentId: T:osu.Framework.Input.States.InputState
+  parent: osu.Framework.Input.States
+  href: osu.Framework.Input.States.InputState.html
+  name: InputState
+  nameWithType: InputState
+  fullName: osu.Framework.Input.States.InputState
+- uid: osuTK.Vector2
+  commentId: T:osuTK.Vector2
+  parent: osuTK
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: osuTK.Vector2
+- uid: osu.Framework.Input.States
+  commentId: N:osu.Framework.Input.States
+  href: osu.html
+  name: osu.Framework.Input.States
+  nameWithType: osu.Framework.Input.States
+  fullName: osu.Framework.Input.States
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  - name: .
+  - uid: osu.Framework.Input.States
+    name: States
+    href: osu.Framework.Input.States.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Input
+    name: Input
+    href: osu.Framework.Input.html
+  - name: .
+  - uid: osu.Framework.Input.States
+    name: States
+    href: osu.Framework.Input.States.html
+- uid: osuTK
+  commentId: N:osuTK
+  isExternal: true
+  name: osuTK
+  nameWithType: osuTK
+  fullName: osuTK
+- uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  commentId: M:osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  parent: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}
+  definition: osu.Framework.Input.ButtonEventManager`1.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonDown_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  name: HandleButtonDown(InputState, List<Drawable>)
+  nameWithType: ButtonEventManager<MouseButton>.HandleButtonDown(InputState, List<Drawable>)
+  fullName: osu.Framework.Input.ButtonEventManager<osuTK.Input.MouseButton>.HandleButtonDown(osu.Framework.Input.States.InputState, System.Collections.Generic.List<osu.Framework.Graphics.Drawable>)
+  nameWithType.vb: ButtonEventManager(Of MouseButton).HandleButtonDown(InputState, List(Of Drawable))
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of osuTK.Input.MouseButton).HandleButtonDown(osu.Framework.Input.States.InputState, System.Collections.Generic.List(Of osu.Framework.Graphics.Drawable))
+  name.vb: HandleButtonDown(InputState, List(Of Drawable))
+  spec.csharp:
+  - uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+    name: HandleButtonDown
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonDown_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+    name: HandleButtonDown
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonDown_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: )
+  - name: )
+- uid: osu.Framework.Input.MouseButtonEventManager.HandleButtonDown*
+  commentId: Overload:osu.Framework.Input.MouseButtonEventManager.HandleButtonDown
+  href: osu.Framework.Input.MouseButtonEventManager.html#osu_Framework_Input_MouseButtonEventManager_HandleButtonDown_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  name: HandleButtonDown
+  nameWithType: MouseButtonEventManager.HandleButtonDown
+  fullName: osu.Framework.Input.MouseButtonEventManager.HandleButtonDown
+- uid: System.Collections.Generic.List{osu.Framework.Graphics.Drawable}
+  commentId: T:System.Collections.Generic.List{osu.Framework.Graphics.Drawable}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Drawable>
+  nameWithType: List<Drawable>
+  fullName: System.Collections.Generic.List<osu.Framework.Graphics.Drawable>
+  nameWithType.vb: List(Of Drawable)
+  fullName.vb: System.Collections.Generic.List(Of osu.Framework.Graphics.Drawable)
+  name.vb: List(Of Drawable)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: )
+- uid: osu.Framework.Input.ButtonEventManager`1.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  commentId: M:osu.Framework.Input.ButtonEventManager`1.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  isExternal: true
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonDown_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  name: HandleButtonDown(InputState, List<Drawable>)
+  nameWithType: ButtonEventManager<TButton>.HandleButtonDown(InputState, List<Drawable>)
+  fullName: osu.Framework.Input.ButtonEventManager<TButton>.HandleButtonDown(osu.Framework.Input.States.InputState, System.Collections.Generic.List<osu.Framework.Graphics.Drawable>)
+  nameWithType.vb: ButtonEventManager(Of TButton).HandleButtonDown(InputState, List(Of Drawable))
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of TButton).HandleButtonDown(osu.Framework.Input.States.InputState, System.Collections.Generic.List(Of osu.Framework.Graphics.Drawable))
+  name.vb: HandleButtonDown(InputState, List(Of Drawable))
+  spec.csharp:
+  - uid: osu.Framework.Input.ButtonEventManager`1.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+    name: HandleButtonDown
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonDown_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.ButtonEventManager`1.HandleButtonDown(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+    name: HandleButtonDown
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonDown_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  commentId: M:osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  parent: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}
+  definition: osu.Framework.Input.ButtonEventManager`1.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonUp_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  name: HandleButtonUp(InputState, List<Drawable>)
+  nameWithType: ButtonEventManager<MouseButton>.HandleButtonUp(InputState, List<Drawable>)
+  fullName: osu.Framework.Input.ButtonEventManager<osuTK.Input.MouseButton>.HandleButtonUp(osu.Framework.Input.States.InputState, System.Collections.Generic.List<osu.Framework.Graphics.Drawable>)
+  nameWithType.vb: ButtonEventManager(Of MouseButton).HandleButtonUp(InputState, List(Of Drawable))
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of osuTK.Input.MouseButton).HandleButtonUp(osu.Framework.Input.States.InputState, System.Collections.Generic.List(Of osu.Framework.Graphics.Drawable))
+  name.vb: HandleButtonUp(InputState, List(Of Drawable))
+  spec.csharp:
+  - uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+    name: HandleButtonUp
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonUp_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.ButtonEventManager{osuTK.Input.MouseButton}.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+    name: HandleButtonUp
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonUp_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: )
+  - name: )
+- uid: osu.Framework.Input.MouseButtonEventManager.HandleButtonUp*
+  commentId: Overload:osu.Framework.Input.MouseButtonEventManager.HandleButtonUp
+  href: osu.Framework.Input.MouseButtonEventManager.html#osu_Framework_Input_MouseButtonEventManager_HandleButtonUp_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  name: HandleButtonUp
+  nameWithType: MouseButtonEventManager.HandleButtonUp
+  fullName: osu.Framework.Input.MouseButtonEventManager.HandleButtonUp
+- uid: osu.Framework.Input.ButtonEventManager`1.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  commentId: M:osu.Framework.Input.ButtonEventManager`1.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+  isExternal: true
+  href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonUp_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  name: HandleButtonUp(InputState, List<Drawable>)
+  nameWithType: ButtonEventManager<TButton>.HandleButtonUp(InputState, List<Drawable>)
+  fullName: osu.Framework.Input.ButtonEventManager<TButton>.HandleButtonUp(osu.Framework.Input.States.InputState, System.Collections.Generic.List<osu.Framework.Graphics.Drawable>)
+  nameWithType.vb: ButtonEventManager(Of TButton).HandleButtonUp(InputState, List(Of Drawable))
+  fullName.vb: osu.Framework.Input.ButtonEventManager(Of TButton).HandleButtonUp(osu.Framework.Input.States.InputState, System.Collections.Generic.List(Of osu.Framework.Graphics.Drawable))
+  name.vb: HandleButtonUp(InputState, List(Of Drawable))
+  spec.csharp:
+  - uid: osu.Framework.Input.ButtonEventManager`1.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+    name: HandleButtonUp
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonUp_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Input.ButtonEventManager`1.HandleButtonUp(osu.Framework.Input.States.InputState,System.Collections.Generic.List{osu.Framework.Graphics.Drawable})
+    name: HandleButtonUp
+    href: osu.Framework.Input.ButtonEventManager-1.html#osu_Framework_Input_ButtonEventManager_1_HandleButtonUp_osu_Framework_Input_States_InputState_System_Collections_Generic_List_osu_Framework_Graphics_Drawable__
+  - name: (
+  - uid: osu.Framework.Input.States.InputState
+    name: InputState
+    href: osu.Framework.Input.States.InputState.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Drawable
+    name: Drawable
+    href: osu.Framework.Graphics.Drawable.html
+  - name: )
+  - name: )

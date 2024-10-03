@@ -1,0 +1,2229 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Allocation.DependencyContainer
+  commentId: T:osu.Framework.Allocation.DependencyContainer
+  id: DependencyContainer
+  parent: osu.Framework.Allocation
+  children:
+  - osu.Framework.Allocation.DependencyContainer.#ctor(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  - osu.Framework.Allocation.DependencyContainer.Cache(System.Object)
+  - osu.Framework.Allocation.DependencyContainer.Cache(System.Object,osu.Framework.Allocation.CacheInfo)
+  - osu.Framework.Allocation.DependencyContainer.CacheAs``1(System.Type,``0)
+  - osu.Framework.Allocation.DependencyContainer.CacheAs``1(System.Type,``0,osu.Framework.Allocation.CacheInfo)
+  - osu.Framework.Allocation.DependencyContainer.CacheAs``1(``0)
+  - osu.Framework.Allocation.DependencyContainer.CacheAs``1(``0,osu.Framework.Allocation.CacheInfo)
+  - osu.Framework.Allocation.DependencyContainer.Get(System.Type)
+  - osu.Framework.Allocation.DependencyContainer.Get(System.Type,osu.Framework.Allocation.CacheInfo)
+  - osu.Framework.Allocation.DependencyContainer.Inject``1(``0)
+  langs:
+  - csharp
+  - vb
+  name: DependencyContainer
+  nameWithType: DependencyContainer
+  fullName: osu.Framework.Allocation.DependencyContainer
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Allocation/DependencyContainer.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: DependencyContainer
+    path: osu.Framework/Allocation/DependencyContainer.cs
+    startLine: 15
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Allocation
+  summary: Hierarchically caches dependencies and can inject those automatically into types registered for dependency injection.
+  example: []
+  syntax:
+    content: 'public class DependencyContainer : IReadOnlyDependencyContainer'
+    content.vb: Public Class DependencyContainer Implements IReadOnlyDependencyContainer
+  inheritance:
+  - System.Object
+  implements:
+  - osu.Framework.Allocation.IReadOnlyDependencyContainer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Allocation.DependencyContainer.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Allocation.DependencyContainer.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Allocation.DependencyContainer.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Allocation.DependencyContainer.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Allocation.DependencyContainer.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Allocation.DependencyContainer.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Allocation.DependencyContainer.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Allocation.DependencyContainer.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  - osu.Framework.Allocation.IReadOnlyDependencyContainer.osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1
+  - osu.Framework.Allocation.IReadOnlyDependencyContainer.osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.CacheInfo)
+  - osu.Framework.Allocation.IReadOnlyDependencyContainer.osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1({T}@)
+  - osu.Framework.Allocation.IReadOnlyDependencyContainer.osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1({T}@,osu.Framework.Allocation.CacheInfo)
+- uid: osu.Framework.Allocation.DependencyContainer.#ctor(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  commentId: M:osu.Framework.Allocation.DependencyContainer.#ctor(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  id: '#ctor(osu.Framework.Allocation.IReadOnlyDependencyContainer)'
+  parent: osu.Framework.Allocation.DependencyContainer
+  langs:
+  - csharp
+  - vb
+  name: DependencyContainer(IReadOnlyDependencyContainer)
+  nameWithType: DependencyContainer.DependencyContainer(IReadOnlyDependencyContainer)
+  fullName: osu.Framework.Allocation.DependencyContainer.DependencyContainer(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Allocation/DependencyContainer.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Allocation/DependencyContainer.cs
+    startLine: 25
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Allocation
+  summary: Create a new DependencyContainer instance.
+  example: []
+  syntax:
+    content: public DependencyContainer(IReadOnlyDependencyContainer parent = null)
+    parameters:
+    - id: parent
+      type: osu.Framework.Allocation.IReadOnlyDependencyContainer
+      description: An optional parent container which we should use as a fallback for cache lookups.
+    content.vb: Public Sub New(parent As IReadOnlyDependencyContainer = Nothing)
+  overload: osu.Framework.Allocation.DependencyContainer.#ctor*
+  nameWithType.vb: DependencyContainer.New(IReadOnlyDependencyContainer)
+  fullName.vb: osu.Framework.Allocation.DependencyContainer.New(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  name.vb: New(IReadOnlyDependencyContainer)
+- uid: osu.Framework.Allocation.DependencyContainer.Cache(System.Object)
+  commentId: M:osu.Framework.Allocation.DependencyContainer.Cache(System.Object)
+  id: Cache(System.Object)
+  parent: osu.Framework.Allocation.DependencyContainer
+  langs:
+  - csharp
+  - vb
+  name: Cache(object)
+  nameWithType: DependencyContainer.Cache(object)
+  fullName: osu.Framework.Allocation.DependencyContainer.Cache(object)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Allocation/DependencyContainer.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Cache
+    path: osu.Framework/Allocation/DependencyContainer.cs
+    startLine: 34
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Allocation
+  summary: Caches an instance of a type as its most derived type. This instance will be returned each time you <xref href="osu.Framework.Allocation.DependencyContainer.Get(System.Type)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Cache(object instance)
+    parameters:
+    - id: instance
+      type: System.Object
+      description: The instance to cache.
+    content.vb: Public Sub Cache(instance As Object)
+  overload: osu.Framework.Allocation.DependencyContainer.Cache*
+  nameWithType.vb: DependencyContainer.Cache(Object)
+  fullName.vb: osu.Framework.Allocation.DependencyContainer.Cache(Object)
+  name.vb: Cache(Object)
+- uid: osu.Framework.Allocation.DependencyContainer.Cache(System.Object,osu.Framework.Allocation.CacheInfo)
+  commentId: M:osu.Framework.Allocation.DependencyContainer.Cache(System.Object,osu.Framework.Allocation.CacheInfo)
+  id: Cache(System.Object,osu.Framework.Allocation.CacheInfo)
+  parent: osu.Framework.Allocation.DependencyContainer
+  langs:
+  - csharp
+  - vb
+  name: Cache(object, CacheInfo)
+  nameWithType: DependencyContainer.Cache(object, CacheInfo)
+  fullName: osu.Framework.Allocation.DependencyContainer.Cache(object, osu.Framework.Allocation.CacheInfo)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Allocation/DependencyContainer.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Cache
+    path: osu.Framework/Allocation/DependencyContainer.cs
+    startLine: 42
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Allocation
+  summary: Caches an instance of a type as its most derived type. This instance will be returned each time you <xref href="osu.Framework.Allocation.DependencyContainer.Get(System.Type)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Cache(object instance, CacheInfo info)
+    parameters:
+    - id: instance
+      type: System.Object
+      description: The instance to cache.
+    - id: info
+      type: osu.Framework.Allocation.CacheInfo
+      description: Extra information to identify <code class="paramref">instance</code> in the cache.
+    content.vb: Public Sub Cache(instance As Object, info As CacheInfo)
+  overload: osu.Framework.Allocation.DependencyContainer.Cache*
+  nameWithType.vb: DependencyContainer.Cache(Object, CacheInfo)
+  fullName.vb: osu.Framework.Allocation.DependencyContainer.Cache(Object, osu.Framework.Allocation.CacheInfo)
+  name.vb: Cache(Object, CacheInfo)
+- uid: osu.Framework.Allocation.DependencyContainer.CacheAs``1(``0)
+  commentId: M:osu.Framework.Allocation.DependencyContainer.CacheAs``1(``0)
+  id: CacheAs``1(``0)
+  parent: osu.Framework.Allocation.DependencyContainer
+  langs:
+  - csharp
+  - vb
+  name: CacheAs<T>(T)
+  nameWithType: DependencyContainer.CacheAs<T>(T)
+  fullName: osu.Framework.Allocation.DependencyContainer.CacheAs<T>(T)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Allocation/DependencyContainer.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CacheAs
+    path: osu.Framework/Allocation/DependencyContainer.cs
+    startLine: 49
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Allocation
+  summary: Caches an instance of a type as a type of <code class="typeparamref">T</code>. This instance will be returned each time you <xref href="osu.Framework.Allocation.DependencyContainer.Get(System.Type)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public void CacheAs<T>(T instance) where T : class'
+    parameters:
+    - id: instance
+      type: '{T}'
+      description: The instance to cache. Must be or derive from <code class="typeparamref">T</code>.
+    typeParameters:
+    - id: T
+    content.vb: Public Sub CacheAs(Of T As Class)(instance As T)
+  overload: osu.Framework.Allocation.DependencyContainer.CacheAs*
+  nameWithType.vb: DependencyContainer.CacheAs(Of T)(T)
+  fullName.vb: osu.Framework.Allocation.DependencyContainer.CacheAs(Of T)(T)
+  name.vb: CacheAs(Of T)(T)
+- uid: osu.Framework.Allocation.DependencyContainer.CacheAs``1(``0,osu.Framework.Allocation.CacheInfo)
+  commentId: M:osu.Framework.Allocation.DependencyContainer.CacheAs``1(``0,osu.Framework.Allocation.CacheInfo)
+  id: CacheAs``1(``0,osu.Framework.Allocation.CacheInfo)
+  parent: osu.Framework.Allocation.DependencyContainer
+  langs:
+  - csharp
+  - vb
+  name: CacheAs<T>(T, CacheInfo)
+  nameWithType: DependencyContainer.CacheAs<T>(T, CacheInfo)
+  fullName: osu.Framework.Allocation.DependencyContainer.CacheAs<T>(T, osu.Framework.Allocation.CacheInfo)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Allocation/DependencyContainer.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CacheAs
+    path: osu.Framework/Allocation/DependencyContainer.cs
+    startLine: 57
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Allocation
+  summary: Caches an instance of a type as a type of <code class="typeparamref">T</code>. This instance will be returned each time you <xref href="osu.Framework.Allocation.DependencyContainer.Get(System.Type)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public void CacheAs<T>(T instance, CacheInfo info) where T : class'
+    parameters:
+    - id: instance
+      type: '{T}'
+      description: The instance to cache. Must be or derive from <code class="typeparamref">T</code>.
+    - id: info
+      type: osu.Framework.Allocation.CacheInfo
+      description: Extra information to identify <code class="paramref">instance</code> in the cache.
+    typeParameters:
+    - id: T
+    content.vb: Public Sub CacheAs(Of T As Class)(instance As T, info As CacheInfo)
+  overload: osu.Framework.Allocation.DependencyContainer.CacheAs*
+  nameWithType.vb: DependencyContainer.CacheAs(Of T)(T, CacheInfo)
+  fullName.vb: osu.Framework.Allocation.DependencyContainer.CacheAs(Of T)(T, osu.Framework.Allocation.CacheInfo)
+  name.vb: CacheAs(Of T)(T, CacheInfo)
+- uid: osu.Framework.Allocation.DependencyContainer.CacheAs``1(System.Type,``0)
+  commentId: M:osu.Framework.Allocation.DependencyContainer.CacheAs``1(System.Type,``0)
+  id: CacheAs``1(System.Type,``0)
+  parent: osu.Framework.Allocation.DependencyContainer
+  langs:
+  - csharp
+  - vb
+  name: CacheAs<T>(Type, T)
+  nameWithType: DependencyContainer.CacheAs<T>(Type, T)
+  fullName: osu.Framework.Allocation.DependencyContainer.CacheAs<T>(System.Type, T)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Allocation/DependencyContainer.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CacheAs
+    path: osu.Framework/Allocation/DependencyContainer.cs
+    startLine: 65
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Allocation
+  summary: Caches an instance of a type as a type of <code class="paramref">type</code>. This instance will be returned each time you <xref href="osu.Framework.Allocation.DependencyContainer.Get(System.Type)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public void CacheAs<T>(Type type, T instance) where T : class'
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to cache <code class="paramref">instance</code> as.
+    - id: instance
+      type: '{T}'
+      description: The instance to cache. Must be or derive from <code class="paramref">type</code>.
+    typeParameters:
+    - id: T
+    content.vb: Public Sub CacheAs(Of T As Class)(type As Type, instance As T)
+  overload: osu.Framework.Allocation.DependencyContainer.CacheAs*
+  nameWithType.vb: DependencyContainer.CacheAs(Of T)(Type, T)
+  fullName.vb: osu.Framework.Allocation.DependencyContainer.CacheAs(Of T)(System.Type, T)
+  name.vb: CacheAs(Of T)(Type, T)
+- uid: osu.Framework.Allocation.DependencyContainer.CacheAs``1(System.Type,``0,osu.Framework.Allocation.CacheInfo)
+  commentId: M:osu.Framework.Allocation.DependencyContainer.CacheAs``1(System.Type,``0,osu.Framework.Allocation.CacheInfo)
+  id: CacheAs``1(System.Type,``0,osu.Framework.Allocation.CacheInfo)
+  parent: osu.Framework.Allocation.DependencyContainer
+  langs:
+  - csharp
+  - vb
+  name: CacheAs<T>(Type, T, CacheInfo)
+  nameWithType: DependencyContainer.CacheAs<T>(Type, T, CacheInfo)
+  fullName: osu.Framework.Allocation.DependencyContainer.CacheAs<T>(System.Type, T, osu.Framework.Allocation.CacheInfo)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Allocation/DependencyContainer.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CacheAs
+    path: osu.Framework/Allocation/DependencyContainer.cs
+    startLine: 74
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Allocation
+  summary: Caches an instance of a type as a type of <code class="paramref">type</code>. This instance will be returned each time you <xref href="osu.Framework.Allocation.DependencyContainer.Get(System.Type)" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public void CacheAs<T>(Type type, T instance, CacheInfo info) where T : class'
+    parameters:
+    - id: type
+      type: System.Type
+      description: The type to cache <code class="paramref">instance</code> as.
+    - id: instance
+      type: '{T}'
+      description: The instance to cache. Must be or derive from <code class="paramref">type</code>.
+    - id: info
+      type: osu.Framework.Allocation.CacheInfo
+      description: Extra information to identify <code class="paramref">instance</code> in the cache.
+    typeParameters:
+    - id: T
+    content.vb: Public Sub CacheAs(Of T As Class)(type As Type, instance As T, info As CacheInfo)
+  overload: osu.Framework.Allocation.DependencyContainer.CacheAs*
+  nameWithType.vb: DependencyContainer.CacheAs(Of T)(Type, T, CacheInfo)
+  fullName.vb: osu.Framework.Allocation.DependencyContainer.CacheAs(Of T)(System.Type, T, osu.Framework.Allocation.CacheInfo)
+  name.vb: CacheAs(Of T)(Type, T, CacheInfo)
+- uid: osu.Framework.Allocation.DependencyContainer.Get(System.Type)
+  commentId: M:osu.Framework.Allocation.DependencyContainer.Get(System.Type)
+  id: Get(System.Type)
+  parent: osu.Framework.Allocation.DependencyContainer
+  langs:
+  - csharp
+  - vb
+  name: Get(Type)
+  nameWithType: DependencyContainer.Get(Type)
+  fullName: osu.Framework.Allocation.DependencyContainer.Get(System.Type)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Allocation/DependencyContainer.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Get
+    path: osu.Framework/Allocation/DependencyContainer.cs
+    startLine: 166
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Allocation
+  summary: Retrieves a cached dependency of <code class="paramref">type</code> if it exists and null otherwise.
+  example: []
+  syntax:
+    content: public object Get(Type type)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The dependency type to query for.
+    return:
+      type: System.Object
+      description: The requested dependency, or null if not found.
+    content.vb: Public Function [Get](type As Type) As Object
+  overload: osu.Framework.Allocation.DependencyContainer.Get*
+  implements:
+  - osu.Framework.Allocation.IReadOnlyDependencyContainer.Get(System.Type)
+- uid: osu.Framework.Allocation.DependencyContainer.Get(System.Type,osu.Framework.Allocation.CacheInfo)
+  commentId: M:osu.Framework.Allocation.DependencyContainer.Get(System.Type,osu.Framework.Allocation.CacheInfo)
+  id: Get(System.Type,osu.Framework.Allocation.CacheInfo)
+  parent: osu.Framework.Allocation.DependencyContainer
+  langs:
+  - csharp
+  - vb
+  name: Get(Type, CacheInfo)
+  nameWithType: DependencyContainer.Get(Type, CacheInfo)
+  fullName: osu.Framework.Allocation.DependencyContainer.Get(System.Type, osu.Framework.Allocation.CacheInfo)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Allocation/DependencyContainer.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Get
+    path: osu.Framework/Allocation/DependencyContainer.cs
+    startLine: 169
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Allocation
+  summary: Retrieves a cached dependency of <code class="paramref">type</code> if it exists and null otherwise.
+  example: []
+  syntax:
+    content: public object Get(Type type, CacheInfo info)
+    parameters:
+    - id: type
+      type: System.Type
+      description: The dependency type to query for.
+    - id: info
+      type: osu.Framework.Allocation.CacheInfo
+      description: Extra information that identifies the cached dependency.
+    return:
+      type: System.Object
+      description: The requested dependency, or null if not found.
+    content.vb: Public Function [Get](type As Type, info As CacheInfo) As Object
+  overload: osu.Framework.Allocation.DependencyContainer.Get*
+  implements:
+  - osu.Framework.Allocation.IReadOnlyDependencyContainer.Get(System.Type,osu.Framework.Allocation.CacheInfo)
+- uid: osu.Framework.Allocation.DependencyContainer.Inject``1(``0)
+  commentId: M:osu.Framework.Allocation.DependencyContainer.Inject``1(``0)
+  id: Inject``1(``0)
+  parent: osu.Framework.Allocation.DependencyContainer
+  langs:
+  - csharp
+  - vb
+  name: Inject<T>(T)
+  nameWithType: DependencyContainer.Inject<T>(T)
+  fullName: osu.Framework.Allocation.DependencyContainer.Inject<T>(T)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Allocation/DependencyContainer.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Inject
+    path: osu.Framework/Allocation/DependencyContainer.cs
+    startLine: 185
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Allocation
+  summary: Injects dependencies into the given instance.
+  example: []
+  syntax:
+    content: 'public void Inject<T>(T instance) where T : class, IDependencyInjectionCandidate'
+    parameters:
+    - id: instance
+      type: '{T}'
+      description: The instance to inject dependencies into.
+    typeParameters:
+    - id: T
+      description: The type of the instance to inject dependencies into.
+    content.vb: Public Sub Inject(Of T As {Class, IDependencyInjectionCandidate})(instance As T)
+  overload: osu.Framework.Allocation.DependencyContainer.Inject*
+  exceptions:
+  - type: System.OperationCanceledException
+    commentId: T:System.OperationCanceledException
+    description: When the injection process was cancelled.
+  implements:
+  - osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject``1({T})
+  nameWithType.vb: DependencyContainer.Inject(Of T)(T)
+  fullName.vb: osu.Framework.Allocation.DependencyContainer.Inject(Of T)(T)
+  name.vb: Inject(Of T)(T)
+references:
+- uid: osu.Framework.Allocation
+  commentId: N:osu.Framework.Allocation
+  href: osu.html
+  name: osu.Framework.Allocation
+  nameWithType: osu.Framework.Allocation
+  fullName: osu.Framework.Allocation
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Allocation
+    name: Allocation
+    href: osu.Framework.Allocation.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Allocation
+    name: Allocation
+    href: osu.Framework.Allocation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+  commentId: T:osu.Framework.Allocation.IReadOnlyDependencyContainer
+  parent: osu.Framework.Allocation
+  href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  name: IReadOnlyDependencyContainer
+  nameWithType: IReadOnlyDependencyContainer
+  fullName: osu.Framework.Allocation.IReadOnlyDependencyContainer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Allocation.DependencyContainer.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<DependencyContainer>(DependencyContainer)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<DependencyContainer>(DependencyContainer)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Allocation.DependencyContainer>(osu.Framework.Allocation.DependencyContainer)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of DependencyContainer)(DependencyContainer)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Allocation.DependencyContainer)(osu.Framework.Allocation.DependencyContainer)
+  name.vb: GetLocalisableDescription(Of DependencyContainer)(DependencyContainer)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Allocation.DependencyContainer)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Allocation.DependencyContainer)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+- uid: osu.Framework.Allocation.DependencyContainer.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<DependencyContainer>(DependencyContainer)
+  nameWithType: EnumerableExtensions.Yield<DependencyContainer>(DependencyContainer)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Allocation.DependencyContainer>(osu.Framework.Allocation.DependencyContainer)
+  nameWithType.vb: EnumerableExtensions.Yield(Of DependencyContainer)(DependencyContainer)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Allocation.DependencyContainer)(osu.Framework.Allocation.DependencyContainer)
+  name.vb: Yield(Of DependencyContainer)(DependencyContainer)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Allocation.DependencyContainer)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Allocation.DependencyContainer)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+- uid: osu.Framework.Allocation.DependencyContainer.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<DependencyContainer>(DependencyContainer)
+  nameWithType: ObjectExtensions.AsNonNull<DependencyContainer>(DependencyContainer)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Allocation.DependencyContainer>(osu.Framework.Allocation.DependencyContainer)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of DependencyContainer)(DependencyContainer)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Allocation.DependencyContainer)(osu.Framework.Allocation.DependencyContainer)
+  name.vb: AsNonNull(Of DependencyContainer)(DependencyContainer)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Allocation.DependencyContainer)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Allocation.DependencyContainer)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+- uid: osu.Framework.Allocation.DependencyContainer.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<DependencyContainer>(DependencyContainer)
+  nameWithType: ObjectExtensions.IsNotNull<DependencyContainer>(DependencyContainer)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Allocation.DependencyContainer>(osu.Framework.Allocation.DependencyContainer)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of DependencyContainer)(DependencyContainer)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Allocation.DependencyContainer)(osu.Framework.Allocation.DependencyContainer)
+  name.vb: IsNotNull(Of DependencyContainer)(DependencyContainer)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Allocation.DependencyContainer)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Allocation.DependencyContainer)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+- uid: osu.Framework.Allocation.DependencyContainer.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<DependencyContainer>(DependencyContainer)
+  nameWithType: ObjectExtensions.IsNull<DependencyContainer>(DependencyContainer)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Allocation.DependencyContainer>(osu.Framework.Allocation.DependencyContainer)
+  nameWithType.vb: ObjectExtensions.IsNull(Of DependencyContainer)(DependencyContainer)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Allocation.DependencyContainer)(osu.Framework.Allocation.DependencyContainer)
+  name.vb: IsNull(Of DependencyContainer)(DependencyContainer)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Allocation.DependencyContainer)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Allocation.DependencyContainer)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: )
+- uid: osu.Framework.Allocation.DependencyContainer.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<DependencyContainer, TChild>(DependencyContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<DependencyContainer, TChild>(DependencyContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Allocation.DependencyContainer, TChild>(osu.Framework.Allocation.DependencyContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of DependencyContainer, TChild)(DependencyContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Allocation.DependencyContainer, TChild)(osu.Framework.Allocation.DependencyContainer, TChild)
+  name.vb: WithChild(Of DependencyContainer, TChild)(DependencyContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Allocation.DependencyContainer,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Allocation.DependencyContainer,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Allocation.DependencyContainer.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<DependencyContainer, TChild>(DependencyContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<DependencyContainer, TChild>(DependencyContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Allocation.DependencyContainer, TChild>(osu.Framework.Allocation.DependencyContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of DependencyContainer, TChild)(DependencyContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Allocation.DependencyContainer, TChild)(osu.Framework.Allocation.DependencyContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of DependencyContainer, TChild)(DependencyContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Allocation.DependencyContainer,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Allocation.DependencyContainer,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Allocation.DependencyContainer.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<DependencyContainer, TChild>(DependencyContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<DependencyContainer, TChild>(DependencyContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Allocation.DependencyContainer, TChild>(osu.Framework.Allocation.DependencyContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of DependencyContainer, TChild)(DependencyContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Allocation.DependencyContainer, TChild)(osu.Framework.Allocation.DependencyContainer, TChild)
+  name.vb: Wrap(Of DependencyContainer, TChild)(DependencyContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Allocation.DependencyContainer,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Allocation.DependencyContainer,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.DependencyContainer
+    name: DependencyContainer
+    href: osu.Framework.Allocation.DependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1
+  commentId: M:osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  parent: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions
+  definition: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_Get__1_osu_Framework_Allocation_IReadOnlyDependencyContainer_
+  name: Get<T>(IReadOnlyDependencyContainer)
+  nameWithType: ReadOnlyDependencyContainerExtensions.Get<T>(IReadOnlyDependencyContainer)
+  fullName: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get<T>(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  nameWithType.vb: ReadOnlyDependencyContainerExtensions.Get(Of T)(IReadOnlyDependencyContainer)
+  fullName.vb: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get(Of T)(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  name.vb: Get(Of T)(IReadOnlyDependencyContainer)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+    name: Get
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_Get__1_osu_Framework_Allocation_IReadOnlyDependencyContainer_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+    name: Get
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_Get__1_osu_Framework_Allocation_IReadOnlyDependencyContainer_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: )
+- uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.CacheInfo)
+  commentId: M:osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,osu.Framework.Allocation.CacheInfo)
+  parent: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions
+  definition: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,osu.Framework.Allocation.CacheInfo)
+  href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_Get__1_osu_Framework_Allocation_IReadOnlyDependencyContainer_osu_Framework_Allocation_CacheInfo_
+  name: Get<T>(IReadOnlyDependencyContainer, CacheInfo)
+  nameWithType: ReadOnlyDependencyContainerExtensions.Get<T>(IReadOnlyDependencyContainer, CacheInfo)
+  fullName: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get<T>(osu.Framework.Allocation.IReadOnlyDependencyContainer, osu.Framework.Allocation.CacheInfo)
+  nameWithType.vb: ReadOnlyDependencyContainerExtensions.Get(Of T)(IReadOnlyDependencyContainer, CacheInfo)
+  fullName.vb: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get(Of T)(osu.Framework.Allocation.IReadOnlyDependencyContainer, osu.Framework.Allocation.CacheInfo)
+  name.vb: Get(Of T)(IReadOnlyDependencyContainer, CacheInfo)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,osu.Framework.Allocation.CacheInfo)
+    name: Get
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_Get__1_osu_Framework_Allocation_IReadOnlyDependencyContainer_osu_Framework_Allocation_CacheInfo_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Allocation.CacheInfo
+    name: CacheInfo
+    href: osu.Framework.Allocation.CacheInfo.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,osu.Framework.Allocation.CacheInfo)
+    name: Get
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_Get__1_osu_Framework_Allocation_IReadOnlyDependencyContainer_osu_Framework_Allocation_CacheInfo_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Allocation.CacheInfo
+    name: CacheInfo
+    href: osu.Framework.Allocation.CacheInfo.html
+  - name: )
+- uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1({T}@)
+  commentId: M:osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@)
+  parent: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions
+  definition: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@)
+  href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_TryGet__1_osu_Framework_Allocation_IReadOnlyDependencyContainer___0__
+  name: TryGet<T>(IReadOnlyDependencyContainer, out T)
+  nameWithType: ReadOnlyDependencyContainerExtensions.TryGet<T>(IReadOnlyDependencyContainer, out T)
+  fullName: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet<T>(osu.Framework.Allocation.IReadOnlyDependencyContainer, out T)
+  nameWithType.vb: ReadOnlyDependencyContainerExtensions.TryGet(Of T)(IReadOnlyDependencyContainer, T)
+  fullName.vb: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet(Of T)(osu.Framework.Allocation.IReadOnlyDependencyContainer, T)
+  name.vb: TryGet(Of T)(IReadOnlyDependencyContainer, T)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@)
+    name: TryGet
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_TryGet__1_osu_Framework_Allocation_IReadOnlyDependencyContainer___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@)
+    name: TryGet
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_TryGet__1_osu_Framework_Allocation_IReadOnlyDependencyContainer___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1({T}@,osu.Framework.Allocation.CacheInfo)
+  commentId: M:osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@,osu.Framework.Allocation.CacheInfo)
+  parent: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions
+  definition: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@,osu.Framework.Allocation.CacheInfo)
+  href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_TryGet__1_osu_Framework_Allocation_IReadOnlyDependencyContainer___0__osu_Framework_Allocation_CacheInfo_
+  name: TryGet<T>(IReadOnlyDependencyContainer, out T, CacheInfo)
+  nameWithType: ReadOnlyDependencyContainerExtensions.TryGet<T>(IReadOnlyDependencyContainer, out T, CacheInfo)
+  fullName: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet<T>(osu.Framework.Allocation.IReadOnlyDependencyContainer, out T, osu.Framework.Allocation.CacheInfo)
+  nameWithType.vb: ReadOnlyDependencyContainerExtensions.TryGet(Of T)(IReadOnlyDependencyContainer, T, CacheInfo)
+  fullName.vb: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet(Of T)(osu.Framework.Allocation.IReadOnlyDependencyContainer, T, osu.Framework.Allocation.CacheInfo)
+  name.vb: TryGet(Of T)(IReadOnlyDependencyContainer, T, CacheInfo)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@,osu.Framework.Allocation.CacheInfo)
+    name: TryGet
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_TryGet__1_osu_Framework_Allocation_IReadOnlyDependencyContainer___0__osu_Framework_Allocation_CacheInfo_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Allocation.CacheInfo
+    name: CacheInfo
+    href: osu.Framework.Allocation.CacheInfo.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@,osu.Framework.Allocation.CacheInfo)
+    name: TryGet
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_TryGet__1_osu_Framework_Allocation_IReadOnlyDependencyContainer___0__osu_Framework_Allocation_CacheInfo_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Allocation.CacheInfo
+    name: CacheInfo
+    href: osu.Framework.Allocation.CacheInfo.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  commentId: M:osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_Get__1_osu_Framework_Allocation_IReadOnlyDependencyContainer_
+  name: Get<T>(IReadOnlyDependencyContainer)
+  nameWithType: ReadOnlyDependencyContainerExtensions.Get<T>(IReadOnlyDependencyContainer)
+  fullName: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get<T>(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  nameWithType.vb: ReadOnlyDependencyContainerExtensions.Get(Of T)(IReadOnlyDependencyContainer)
+  fullName.vb: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get(Of T)(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+  name.vb: Get(Of T)(IReadOnlyDependencyContainer)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+    name: Get
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_Get__1_osu_Framework_Allocation_IReadOnlyDependencyContainer_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer)
+    name: Get
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_Get__1_osu_Framework_Allocation_IReadOnlyDependencyContainer_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: )
+- uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions
+  commentId: T:osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions
+  parent: osu.Framework.Allocation
+  href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html
+  name: ReadOnlyDependencyContainerExtensions
+  nameWithType: ReadOnlyDependencyContainerExtensions
+  fullName: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions
+- uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,osu.Framework.Allocation.CacheInfo)
+  commentId: M:osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,osu.Framework.Allocation.CacheInfo)
+  href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_Get__1_osu_Framework_Allocation_IReadOnlyDependencyContainer_osu_Framework_Allocation_CacheInfo_
+  name: Get<T>(IReadOnlyDependencyContainer, CacheInfo)
+  nameWithType: ReadOnlyDependencyContainerExtensions.Get<T>(IReadOnlyDependencyContainer, CacheInfo)
+  fullName: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get<T>(osu.Framework.Allocation.IReadOnlyDependencyContainer, osu.Framework.Allocation.CacheInfo)
+  nameWithType.vb: ReadOnlyDependencyContainerExtensions.Get(Of T)(IReadOnlyDependencyContainer, CacheInfo)
+  fullName.vb: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get(Of T)(osu.Framework.Allocation.IReadOnlyDependencyContainer, osu.Framework.Allocation.CacheInfo)
+  name.vb: Get(Of T)(IReadOnlyDependencyContainer, CacheInfo)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,osu.Framework.Allocation.CacheInfo)
+    name: Get
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_Get__1_osu_Framework_Allocation_IReadOnlyDependencyContainer_osu_Framework_Allocation_CacheInfo_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Allocation.CacheInfo
+    name: CacheInfo
+    href: osu.Framework.Allocation.CacheInfo.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.Get``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,osu.Framework.Allocation.CacheInfo)
+    name: Get
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_Get__1_osu_Framework_Allocation_IReadOnlyDependencyContainer_osu_Framework_Allocation_CacheInfo_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Allocation.CacheInfo
+    name: CacheInfo
+    href: osu.Framework.Allocation.CacheInfo.html
+  - name: )
+- uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@)
+  commentId: M:osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@)
+  href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_TryGet__1_osu_Framework_Allocation_IReadOnlyDependencyContainer___0__
+  name: TryGet<T>(IReadOnlyDependencyContainer, out T)
+  nameWithType: ReadOnlyDependencyContainerExtensions.TryGet<T>(IReadOnlyDependencyContainer, out T)
+  fullName: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet<T>(osu.Framework.Allocation.IReadOnlyDependencyContainer, out T)
+  nameWithType.vb: ReadOnlyDependencyContainerExtensions.TryGet(Of T)(IReadOnlyDependencyContainer, T)
+  fullName.vb: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet(Of T)(osu.Framework.Allocation.IReadOnlyDependencyContainer, T)
+  name.vb: TryGet(Of T)(IReadOnlyDependencyContainer, T)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@)
+    name: TryGet
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_TryGet__1_osu_Framework_Allocation_IReadOnlyDependencyContainer___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@)
+    name: TryGet
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_TryGet__1_osu_Framework_Allocation_IReadOnlyDependencyContainer___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@,osu.Framework.Allocation.CacheInfo)
+  commentId: M:osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@,osu.Framework.Allocation.CacheInfo)
+  href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_TryGet__1_osu_Framework_Allocation_IReadOnlyDependencyContainer___0__osu_Framework_Allocation_CacheInfo_
+  name: TryGet<T>(IReadOnlyDependencyContainer, out T, CacheInfo)
+  nameWithType: ReadOnlyDependencyContainerExtensions.TryGet<T>(IReadOnlyDependencyContainer, out T, CacheInfo)
+  fullName: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet<T>(osu.Framework.Allocation.IReadOnlyDependencyContainer, out T, osu.Framework.Allocation.CacheInfo)
+  nameWithType.vb: ReadOnlyDependencyContainerExtensions.TryGet(Of T)(IReadOnlyDependencyContainer, T, CacheInfo)
+  fullName.vb: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet(Of T)(osu.Framework.Allocation.IReadOnlyDependencyContainer, T, osu.Framework.Allocation.CacheInfo)
+  name.vb: TryGet(Of T)(IReadOnlyDependencyContainer, T, CacheInfo)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@,osu.Framework.Allocation.CacheInfo)
+    name: TryGet
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_TryGet__1_osu_Framework_Allocation_IReadOnlyDependencyContainer___0__osu_Framework_Allocation_CacheInfo_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Allocation.CacheInfo
+    name: CacheInfo
+    href: osu.Framework.Allocation.CacheInfo.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.TryGet``1(osu.Framework.Allocation.IReadOnlyDependencyContainer,``0@,osu.Framework.Allocation.CacheInfo)
+    name: TryGet
+    href: osu.Framework.Allocation.ReadOnlyDependencyContainerExtensions.html#osu_Framework_Allocation_ReadOnlyDependencyContainerExtensions_TryGet__1_osu_Framework_Allocation_IReadOnlyDependencyContainer___0__osu_Framework_Allocation_CacheInfo_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer
+    name: IReadOnlyDependencyContainer
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Allocation.CacheInfo
+    name: CacheInfo
+    href: osu.Framework.Allocation.CacheInfo.html
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Allocation.DependencyContainer.#ctor*
+  commentId: Overload:osu.Framework.Allocation.DependencyContainer.#ctor
+  href: osu.Framework.Allocation.DependencyContainer.html#osu_Framework_Allocation_DependencyContainer__ctor_osu_Framework_Allocation_IReadOnlyDependencyContainer_
+  name: DependencyContainer
+  nameWithType: DependencyContainer.DependencyContainer
+  fullName: osu.Framework.Allocation.DependencyContainer.DependencyContainer
+  nameWithType.vb: DependencyContainer.New
+  fullName.vb: osu.Framework.Allocation.DependencyContainer.New
+  name.vb: New
+- uid: osu.Framework.Allocation.DependencyContainer.Get(System.Type)
+  commentId: M:osu.Framework.Allocation.DependencyContainer.Get(System.Type)
+  isExternal: true
+  href: osu.Framework.Allocation.DependencyContainer.html#osu_Framework_Allocation_DependencyContainer_Get_System_Type_
+  name: Get(Type)
+  nameWithType: DependencyContainer.Get(Type)
+  fullName: osu.Framework.Allocation.DependencyContainer.Get(System.Type)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.DependencyContainer.Get(System.Type)
+    name: Get
+    href: osu.Framework.Allocation.DependencyContainer.html#osu_Framework_Allocation_DependencyContainer_Get_System_Type_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.DependencyContainer.Get(System.Type)
+    name: Get
+    href: osu.Framework.Allocation.DependencyContainer.html#osu_Framework_Allocation_DependencyContainer_Get_System_Type_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: osu.Framework.Allocation.DependencyContainer.Cache*
+  commentId: Overload:osu.Framework.Allocation.DependencyContainer.Cache
+  href: osu.Framework.Allocation.DependencyContainer.html#osu_Framework_Allocation_DependencyContainer_Cache_System_Object_
+  name: Cache
+  nameWithType: DependencyContainer.Cache
+  fullName: osu.Framework.Allocation.DependencyContainer.Cache
+- uid: osu.Framework.Allocation.CacheInfo
+  commentId: T:osu.Framework.Allocation.CacheInfo
+  parent: osu.Framework.Allocation
+  href: osu.Framework.Allocation.CacheInfo.html
+  name: CacheInfo
+  nameWithType: CacheInfo
+  fullName: osu.Framework.Allocation.CacheInfo
+- uid: osu.Framework.Allocation.DependencyContainer.CacheAs*
+  commentId: Overload:osu.Framework.Allocation.DependencyContainer.CacheAs
+  href: osu.Framework.Allocation.DependencyContainer.html#osu_Framework_Allocation_DependencyContainer_CacheAs__1___0_
+  name: CacheAs
+  nameWithType: DependencyContainer.CacheAs
+  fullName: osu.Framework.Allocation.DependencyContainer.CacheAs
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: osu.Framework.Allocation.DependencyContainer.Get*
+  commentId: Overload:osu.Framework.Allocation.DependencyContainer.Get
+  href: osu.Framework.Allocation.DependencyContainer.html#osu_Framework_Allocation_DependencyContainer_Get_System_Type_
+  name: Get
+  nameWithType: DependencyContainer.Get
+  fullName: osu.Framework.Allocation.DependencyContainer.Get
+- uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.Get(System.Type)
+  commentId: M:osu.Framework.Allocation.IReadOnlyDependencyContainer.Get(System.Type)
+  parent: osu.Framework.Allocation.IReadOnlyDependencyContainer
+  isExternal: true
+  href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html#osu_Framework_Allocation_IReadOnlyDependencyContainer_Get_System_Type_
+  name: Get(Type)
+  nameWithType: IReadOnlyDependencyContainer.Get(Type)
+  fullName: osu.Framework.Allocation.IReadOnlyDependencyContainer.Get(System.Type)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.Get(System.Type)
+    name: Get
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html#osu_Framework_Allocation_IReadOnlyDependencyContainer_Get_System_Type_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.Get(System.Type)
+    name: Get
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html#osu_Framework_Allocation_IReadOnlyDependencyContainer_Get_System_Type_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.Get(System.Type,osu.Framework.Allocation.CacheInfo)
+  commentId: M:osu.Framework.Allocation.IReadOnlyDependencyContainer.Get(System.Type,osu.Framework.Allocation.CacheInfo)
+  parent: osu.Framework.Allocation.IReadOnlyDependencyContainer
+  isExternal: true
+  href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html#osu_Framework_Allocation_IReadOnlyDependencyContainer_Get_System_Type_osu_Framework_Allocation_CacheInfo_
+  name: Get(Type, CacheInfo)
+  nameWithType: IReadOnlyDependencyContainer.Get(Type, CacheInfo)
+  fullName: osu.Framework.Allocation.IReadOnlyDependencyContainer.Get(System.Type, osu.Framework.Allocation.CacheInfo)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.Get(System.Type,osu.Framework.Allocation.CacheInfo)
+    name: Get
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html#osu_Framework_Allocation_IReadOnlyDependencyContainer_Get_System_Type_osu_Framework_Allocation_CacheInfo_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Allocation.CacheInfo
+    name: CacheInfo
+    href: osu.Framework.Allocation.CacheInfo.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.Get(System.Type,osu.Framework.Allocation.CacheInfo)
+    name: Get
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html#osu_Framework_Allocation_IReadOnlyDependencyContainer_Get_System_Type_osu_Framework_Allocation_CacheInfo_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Allocation.CacheInfo
+    name: CacheInfo
+    href: osu.Framework.Allocation.CacheInfo.html
+  - name: )
+- uid: System.OperationCanceledException
+  commentId: T:System.OperationCanceledException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.operationcanceledexception
+  name: OperationCanceledException
+  nameWithType: OperationCanceledException
+  fullName: System.OperationCanceledException
+- uid: osu.Framework.Allocation.DependencyContainer.Inject*
+  commentId: Overload:osu.Framework.Allocation.DependencyContainer.Inject
+  href: osu.Framework.Allocation.DependencyContainer.html#osu_Framework_Allocation_DependencyContainer_Inject__1___0_
+  name: Inject
+  nameWithType: DependencyContainer.Inject
+  fullName: osu.Framework.Allocation.DependencyContainer.Inject
+- uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject``1({T})
+  commentId: M:osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject``1(``0)
+  parent: osu.Framework.Allocation.IReadOnlyDependencyContainer
+  definition: osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject``1(``0)
+  href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html#osu_Framework_Allocation_IReadOnlyDependencyContainer_Inject__1___0_
+  name: Inject<T>(T)
+  nameWithType: IReadOnlyDependencyContainer.Inject<T>(T)
+  fullName: osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject<T>(T)
+  nameWithType.vb: IReadOnlyDependencyContainer.Inject(Of T)(T)
+  fullName.vb: osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject(Of T)(T)
+  name.vb: Inject(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject``1(``0)
+    name: Inject
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html#osu_Framework_Allocation_IReadOnlyDependencyContainer_Inject__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject``1(``0)
+    name: Inject
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html#osu_Framework_Allocation_IReadOnlyDependencyContainer_Inject__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject``1(``0)
+  commentId: M:osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject``1(``0)
+  href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html#osu_Framework_Allocation_IReadOnlyDependencyContainer_Inject__1___0_
+  name: Inject<T>(T)
+  nameWithType: IReadOnlyDependencyContainer.Inject<T>(T)
+  fullName: osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject<T>(T)
+  nameWithType.vb: IReadOnlyDependencyContainer.Inject(Of T)(T)
+  fullName.vb: osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject(Of T)(T)
+  name.vb: Inject(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject``1(``0)
+    name: Inject
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html#osu_Framework_Allocation_IReadOnlyDependencyContainer_Inject__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Allocation.IReadOnlyDependencyContainer.Inject``1(``0)
+    name: Inject
+    href: osu.Framework.Allocation.IReadOnlyDependencyContainer.html#osu_Framework_Allocation_IReadOnlyDependencyContainer_Inject__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )

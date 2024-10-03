@@ -1,0 +1,2047 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+  commentId: T:osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+  id: AndroidVideoDecoder
+  parent: osu.Framework.Android.Graphics.Video
+  children:
+  - osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.IO.Stream)
+  - osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.String)
+  - osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.CreateFuncs
+  - osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.GetAvailableDecoders(FFmpeg.AutoGen.AVInputFormat*,FFmpeg.AutoGen.AVCodecID,osu.Framework.Graphics.Video.HardwareVideoDecoder)
+  langs:
+  - csharp
+  - vb
+  name: AndroidVideoDecoder
+  nameWithType: AndroidVideoDecoder
+  fullName: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+  type: Class
+  source:
+    remote:
+      path: osu.Framework.Android/Graphics/Video/AndroidVideoDecoder.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: AndroidVideoDecoder
+    path: osu.Framework.Android/Graphics/Video/AndroidVideoDecoder.cs
+    startLine: 17
+  assemblies:
+  - osu.Framework.Android
+  namespace: osu.Framework.Android.Graphics.Video
+  syntax:
+    content: 'public class AndroidVideoDecoder : VideoDecoder, IDisposable'
+    content.vb: Public Class AndroidVideoDecoder Inherits VideoDecoder Implements IDisposable
+  inheritance:
+  - System.Object
+  - osu.Framework.Graphics.Video.VideoDecoder
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - osu.Framework.Graphics.Video.VideoDecoder.Duration
+  - osu.Framework.Graphics.Video.VideoDecoder.IsRunning
+  - osu.Framework.Graphics.Video.VideoDecoder.IsFaulted
+  - osu.Framework.Graphics.Video.VideoDecoder.LastDecodedFrameTime
+  - osu.Framework.Graphics.Video.VideoDecoder.FrameRate
+  - osu.Framework.Graphics.Video.VideoDecoder.CanSeek
+  - osu.Framework.Graphics.Video.VideoDecoder.State
+  - osu.Framework.Graphics.Video.VideoDecoder.TargetHardwareVideoDecoders
+  - osu.Framework.Graphics.Video.VideoDecoder.Seek(System.Double)
+  - osu.Framework.Graphics.Video.VideoDecoder.ReturnFrames(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Video.DecodedFrame})
+  - osu.Framework.Graphics.Video.VideoDecoder.StartDecoding
+  - osu.Framework.Graphics.Video.VideoDecoder.StopDecodingAsync
+  - osu.Framework.Graphics.Video.VideoDecoder.GetDecodedFrames
+  - osu.Framework.Graphics.Video.VideoDecoder.GetConversionMatrix
+  - osu.Framework.Graphics.Video.VideoDecoder.Dispose
+  - osu.Framework.Graphics.Video.VideoDecoder.Dispose(System.Boolean)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.String)
+  commentId: M:osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.String)
+  id: '#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.String)'
+  parent: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+  langs:
+  - csharp
+  - vb
+  name: AndroidVideoDecoder(IRenderer, string)
+  nameWithType: AndroidVideoDecoder.AndroidVideoDecoder(IRenderer, string)
+  fullName: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.AndroidVideoDecoder(osu.Framework.Graphics.Rendering.IRenderer, string)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework.Android/Graphics/Video/AndroidVideoDecoder.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework.Android/Graphics/Video/AndroidVideoDecoder.cs
+    startLine: 135
+  assemblies:
+  - osu.Framework.Android
+  namespace: osu.Framework.Android.Graphics.Video
+  syntax:
+    content: public AndroidVideoDecoder(IRenderer renderer, string filename)
+    parameters:
+    - id: renderer
+      type: osu.Framework.Graphics.Rendering.IRenderer
+    - id: filename
+      type: System.String
+    content.vb: Public Sub New(renderer As IRenderer, filename As String)
+  overload: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.#ctor*
+  nameWithType.vb: AndroidVideoDecoder.New(IRenderer, String)
+  fullName.vb: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.New(osu.Framework.Graphics.Rendering.IRenderer, String)
+  name.vb: New(IRenderer, String)
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.IO.Stream)
+  commentId: M:osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.IO.Stream)
+  id: '#ctor(osu.Framework.Graphics.Rendering.IRenderer,System.IO.Stream)'
+  parent: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+  langs:
+  - csharp
+  - vb
+  name: AndroidVideoDecoder(IRenderer, Stream)
+  nameWithType: AndroidVideoDecoder.AndroidVideoDecoder(IRenderer, Stream)
+  fullName: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.AndroidVideoDecoder(osu.Framework.Graphics.Rendering.IRenderer, System.IO.Stream)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework.Android/Graphics/Video/AndroidVideoDecoder.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework.Android/Graphics/Video/AndroidVideoDecoder.cs
+    startLine: 140
+  assemblies:
+  - osu.Framework.Android
+  namespace: osu.Framework.Android.Graphics.Video
+  syntax:
+    content: public AndroidVideoDecoder(IRenderer renderer, Stream videoStream)
+    parameters:
+    - id: renderer
+      type: osu.Framework.Graphics.Rendering.IRenderer
+    - id: videoStream
+      type: System.IO.Stream
+    content.vb: Public Sub New(renderer As IRenderer, videoStream As Stream)
+  overload: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.#ctor*
+  nameWithType.vb: AndroidVideoDecoder.New(IRenderer, Stream)
+  fullName.vb: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.New(osu.Framework.Graphics.Rendering.IRenderer, System.IO.Stream)
+  name.vb: New(IRenderer, Stream)
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.GetAvailableDecoders(FFmpeg.AutoGen.AVInputFormat*,FFmpeg.AutoGen.AVCodecID,osu.Framework.Graphics.Video.HardwareVideoDecoder)
+  commentId: M:osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.GetAvailableDecoders(FFmpeg.AutoGen.AVInputFormat*,FFmpeg.AutoGen.AVCodecID,osu.Framework.Graphics.Video.HardwareVideoDecoder)
+  id: GetAvailableDecoders(FFmpeg.AutoGen.AVInputFormat*,FFmpeg.AutoGen.AVCodecID,osu.Framework.Graphics.Video.HardwareVideoDecoder)
+  parent: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+  langs:
+  - csharp
+  - vb
+  name: GetAvailableDecoders(AVInputFormat*, AVCodecID, HardwareVideoDecoder)
+  nameWithType: AndroidVideoDecoder.GetAvailableDecoders(AVInputFormat*, AVCodecID, HardwareVideoDecoder)
+  fullName: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.GetAvailableDecoders(FFmpeg.AutoGen.AVInputFormat*, FFmpeg.AutoGen.AVCodecID, osu.Framework.Graphics.Video.HardwareVideoDecoder)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Android/Graphics/Video/AndroidVideoDecoder.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetAvailableDecoders
+    path: osu.Framework.Android/Graphics/Video/AndroidVideoDecoder.cs
+    startLine: 151
+  assemblies:
+  - osu.Framework.Android
+  namespace: osu.Framework.Android.Graphics.Video
+  remarks: Returned HW devices are not guaranteed to be available on the current machine, they only represent what the loaded FFmpeg libraries support.
+  example: []
+  syntax:
+    content: protected override IEnumerable<(FFmpegCodec codec, AVHWDeviceType hwDeviceType)> GetAvailableDecoders(AVInputFormat* inputFormat, AVCodecID codecId, HardwareVideoDecoder targetHwDecoders)
+    parameters:
+    - id: inputFormat
+      type: FFmpeg.AutoGen.AVInputFormat*
+    - id: codecId
+      type: FFmpeg.AutoGen.AVCodecID
+    - id: targetHwDecoders
+      type: osu.Framework.Graphics.Video.HardwareVideoDecoder
+    return:
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{osu.Framework.Graphics.Video.FFmpegCodec,FFmpeg.AutoGen.AVHWDeviceType}}
+    content.vb: Protected Overrides Function GetAvailableDecoders(inputFormat As AVInputFormat*, codecId As AVCodecID, targetHwDecoders As HardwareVideoDecoder) As IEnumerable(Of (codec As FFmpegCodec, hwDeviceType As AVHWDeviceType))
+  overridden: osu.Framework.Graphics.Video.VideoDecoder.GetAvailableDecoders(FFmpeg.AutoGen.AVInputFormat*,FFmpeg.AutoGen.AVCodecID,osu.Framework.Graphics.Video.HardwareVideoDecoder)
+  overload: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.GetAvailableDecoders*
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.CreateFuncs
+  commentId: M:osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.CreateFuncs
+  id: CreateFuncs
+  parent: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+  langs:
+  - csharp
+  - vb
+  name: CreateFuncs()
+  nameWithType: AndroidVideoDecoder.CreateFuncs()
+  fullName: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.CreateFuncs()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework.Android/Graphics/Video/AndroidVideoDecoder.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: CreateFuncs
+    path: osu.Framework.Android/Graphics/Video/AndroidVideoDecoder.cs
+    startLine: 177
+  assemblies:
+  - osu.Framework.Android
+  namespace: osu.Framework.Android.Graphics.Video
+  example: []
+  syntax:
+    content: protected override FFmpegFuncs CreateFuncs()
+    return:
+      type: osu.Framework.Graphics.Video.FFmpegFuncs
+    content.vb: Protected Overrides Function CreateFuncs() As FFmpegFuncs
+  overridden: osu.Framework.Graphics.Video.VideoDecoder.CreateFuncs
+  overload: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.CreateFuncs*
+references:
+- uid: osu.Framework.Android.Graphics.Video
+  commentId: N:osu.Framework.Android.Graphics.Video
+  href: osu.html
+  name: osu.Framework.Android.Graphics.Video
+  nameWithType: osu.Framework.Android.Graphics.Video
+  fullName: osu.Framework.Android.Graphics.Video
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Android
+    name: Android
+    href: osu.Framework.Android.html
+  - name: .
+  - uid: osu.Framework.Android.Graphics
+    name: Graphics
+    href: osu.Framework.Android.Graphics.html
+  - name: .
+  - uid: osu.Framework.Android.Graphics.Video
+    name: Video
+    href: osu.Framework.Android.Graphics.Video.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Android
+    name: Android
+    href: osu.Framework.Android.html
+  - name: .
+  - uid: osu.Framework.Android.Graphics
+    name: Graphics
+    href: osu.Framework.Android.Graphics.html
+  - name: .
+  - uid: osu.Framework.Android.Graphics.Video
+    name: Video
+    href: osu.Framework.Android.Graphics.Video.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: osu.Framework.Graphics.Video.VideoDecoder
+  commentId: T:osu.Framework.Graphics.Video.VideoDecoder
+  parent: osu.Framework.Graphics.Video
+  href: osu.Framework.Graphics.Video.VideoDecoder.html
+  name: VideoDecoder
+  nameWithType: VideoDecoder
+  fullName: osu.Framework.Graphics.Video.VideoDecoder
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: osu.Framework.Graphics.Video.VideoDecoder.Duration
+  commentId: P:osu.Framework.Graphics.Video.VideoDecoder.Duration
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  name: Duration
+  nameWithType: VideoDecoder.Duration
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.Duration
+- uid: osu.Framework.Graphics.Video.VideoDecoder.IsRunning
+  commentId: P:osu.Framework.Graphics.Video.VideoDecoder.IsRunning
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  name: IsRunning
+  nameWithType: VideoDecoder.IsRunning
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.IsRunning
+- uid: osu.Framework.Graphics.Video.VideoDecoder.IsFaulted
+  commentId: P:osu.Framework.Graphics.Video.VideoDecoder.IsFaulted
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  name: IsFaulted
+  nameWithType: VideoDecoder.IsFaulted
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.IsFaulted
+- uid: osu.Framework.Graphics.Video.VideoDecoder.LastDecodedFrameTime
+  commentId: P:osu.Framework.Graphics.Video.VideoDecoder.LastDecodedFrameTime
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  name: LastDecodedFrameTime
+  nameWithType: VideoDecoder.LastDecodedFrameTime
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.LastDecodedFrameTime
+- uid: osu.Framework.Graphics.Video.VideoDecoder.FrameRate
+  commentId: P:osu.Framework.Graphics.Video.VideoDecoder.FrameRate
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  name: FrameRate
+  nameWithType: VideoDecoder.FrameRate
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.FrameRate
+- uid: osu.Framework.Graphics.Video.VideoDecoder.CanSeek
+  commentId: P:osu.Framework.Graphics.Video.VideoDecoder.CanSeek
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  href: osu.Framework.Graphics.Video.VideoDecoder.html#osu_Framework_Graphics_Video_VideoDecoder_CanSeek
+  name: CanSeek
+  nameWithType: VideoDecoder.CanSeek
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.CanSeek
+- uid: osu.Framework.Graphics.Video.VideoDecoder.State
+  commentId: P:osu.Framework.Graphics.Video.VideoDecoder.State
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  name: State
+  nameWithType: VideoDecoder.State
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.State
+- uid: osu.Framework.Graphics.Video.VideoDecoder.TargetHardwareVideoDecoders
+  commentId: F:osu.Framework.Graphics.Video.VideoDecoder.TargetHardwareVideoDecoders
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  name: TargetHardwareVideoDecoders
+  nameWithType: VideoDecoder.TargetHardwareVideoDecoders
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.TargetHardwareVideoDecoders
+- uid: osu.Framework.Graphics.Video.VideoDecoder.Seek(System.Double)
+  commentId: M:osu.Framework.Graphics.Video.VideoDecoder.Seek(System.Double)
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Seek(double)
+  nameWithType: VideoDecoder.Seek(double)
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.Seek(double)
+  nameWithType.vb: VideoDecoder.Seek(Double)
+  fullName.vb: osu.Framework.Graphics.Video.VideoDecoder.Seek(Double)
+  name.vb: Seek(Double)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.Seek(System.Double)
+    name: Seek
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.Seek(System.Double)
+    name: Seek
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: osu.Framework.Graphics.Video.VideoDecoder.ReturnFrames(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Video.DecodedFrame})
+  commentId: M:osu.Framework.Graphics.Video.VideoDecoder.ReturnFrames(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Video.DecodedFrame})
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: ReturnFrames(IEnumerable<DecodedFrame>)
+  nameWithType: VideoDecoder.ReturnFrames(IEnumerable<DecodedFrame>)
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.ReturnFrames(System.Collections.Generic.IEnumerable<osu.Framework.Graphics.Video.DecodedFrame>)
+  nameWithType.vb: VideoDecoder.ReturnFrames(IEnumerable(Of DecodedFrame))
+  fullName.vb: osu.Framework.Graphics.Video.VideoDecoder.ReturnFrames(System.Collections.Generic.IEnumerable(Of osu.Framework.Graphics.Video.DecodedFrame))
+  name.vb: ReturnFrames(IEnumerable(Of DecodedFrame))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.ReturnFrames(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Video.DecodedFrame})
+    name: ReturnFrames
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: osu.Framework.Graphics.Video.DecodedFrame
+    name: DecodedFrame
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.ReturnFrames(System.Collections.Generic.IEnumerable{osu.Framework.Graphics.Video.DecodedFrame})
+    name: ReturnFrames
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Graphics.Video.DecodedFrame
+    name: DecodedFrame
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Video.VideoDecoder.StartDecoding
+  commentId: M:osu.Framework.Graphics.Video.VideoDecoder.StartDecoding
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  href: osu.Framework.Graphics.Video.VideoDecoder.html#osu_Framework_Graphics_Video_VideoDecoder_StartDecoding
+  name: StartDecoding()
+  nameWithType: VideoDecoder.StartDecoding()
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.StartDecoding()
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.StartDecoding
+    name: StartDecoding
+    href: osu.Framework.Graphics.Video.VideoDecoder.html#osu_Framework_Graphics_Video_VideoDecoder_StartDecoding
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.StartDecoding
+    name: StartDecoding
+    href: osu.Framework.Graphics.Video.VideoDecoder.html#osu_Framework_Graphics_Video_VideoDecoder_StartDecoding
+  - name: (
+  - name: )
+- uid: osu.Framework.Graphics.Video.VideoDecoder.StopDecodingAsync
+  commentId: M:osu.Framework.Graphics.Video.VideoDecoder.StopDecodingAsync
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  name: StopDecodingAsync()
+  nameWithType: VideoDecoder.StopDecodingAsync()
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.StopDecodingAsync()
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.StopDecodingAsync
+    name: StopDecodingAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.StopDecodingAsync
+    name: StopDecodingAsync
+  - name: (
+  - name: )
+- uid: osu.Framework.Graphics.Video.VideoDecoder.GetDecodedFrames
+  commentId: M:osu.Framework.Graphics.Video.VideoDecoder.GetDecodedFrames
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  href: osu.Framework.Graphics.Video.VideoDecoder.html#osu_Framework_Graphics_Video_VideoDecoder_GetDecodedFrames
+  name: GetDecodedFrames()
+  nameWithType: VideoDecoder.GetDecodedFrames()
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.GetDecodedFrames()
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.GetDecodedFrames
+    name: GetDecodedFrames
+    href: osu.Framework.Graphics.Video.VideoDecoder.html#osu_Framework_Graphics_Video_VideoDecoder_GetDecodedFrames
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.GetDecodedFrames
+    name: GetDecodedFrames
+    href: osu.Framework.Graphics.Video.VideoDecoder.html#osu_Framework_Graphics_Video_VideoDecoder_GetDecodedFrames
+  - name: (
+  - name: )
+- uid: osu.Framework.Graphics.Video.VideoDecoder.GetConversionMatrix
+  commentId: M:osu.Framework.Graphics.Video.VideoDecoder.GetConversionMatrix
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  name: GetConversionMatrix()
+  nameWithType: VideoDecoder.GetConversionMatrix()
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.GetConversionMatrix()
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.GetConversionMatrix
+    name: GetConversionMatrix
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.GetConversionMatrix
+    name: GetConversionMatrix
+  - name: (
+  - name: )
+- uid: osu.Framework.Graphics.Video.VideoDecoder.Dispose
+  commentId: M:osu.Framework.Graphics.Video.VideoDecoder.Dispose
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  name: Dispose()
+  nameWithType: VideoDecoder.Dispose()
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.Dispose()
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.Dispose
+    name: Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.Dispose
+    name: Dispose
+  - name: (
+  - name: )
+- uid: osu.Framework.Graphics.Video.VideoDecoder.Dispose(System.Boolean)
+  commentId: M:osu.Framework.Graphics.Video.VideoDecoder.Dispose(System.Boolean)
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: Dispose(bool)
+  nameWithType: VideoDecoder.Dispose(bool)
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.Dispose(bool)
+  nameWithType.vb: VideoDecoder.Dispose(Boolean)
+  fullName.vb: osu.Framework.Graphics.Video.VideoDecoder.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.Dispose(System.Boolean)
+    name: Dispose
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.Dispose(System.Boolean)
+    name: Dispose
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<AndroidVideoDecoder>(AndroidVideoDecoder)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<AndroidVideoDecoder>(AndroidVideoDecoder)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Android.Graphics.Video.AndroidVideoDecoder>(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of AndroidVideoDecoder)(AndroidVideoDecoder)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+  name.vb: GetLocalisableDescription(Of AndroidVideoDecoder)(AndroidVideoDecoder)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<AndroidVideoDecoder>(AndroidVideoDecoder)
+  nameWithType: EnumerableExtensions.Yield<AndroidVideoDecoder>(AndroidVideoDecoder)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Android.Graphics.Video.AndroidVideoDecoder>(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+  nameWithType.vb: EnumerableExtensions.Yield(Of AndroidVideoDecoder)(AndroidVideoDecoder)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+  name.vb: Yield(Of AndroidVideoDecoder)(AndroidVideoDecoder)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<AndroidVideoDecoder>(AndroidVideoDecoder)
+  nameWithType: ObjectExtensions.AsNonNull<AndroidVideoDecoder>(AndroidVideoDecoder)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Android.Graphics.Video.AndroidVideoDecoder>(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of AndroidVideoDecoder)(AndroidVideoDecoder)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+  name.vb: AsNonNull(Of AndroidVideoDecoder)(AndroidVideoDecoder)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<AndroidVideoDecoder>(AndroidVideoDecoder)
+  nameWithType: ObjectExtensions.IsNotNull<AndroidVideoDecoder>(AndroidVideoDecoder)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Android.Graphics.Video.AndroidVideoDecoder>(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of AndroidVideoDecoder)(AndroidVideoDecoder)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+  name.vb: IsNotNull(Of AndroidVideoDecoder)(AndroidVideoDecoder)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<AndroidVideoDecoder>(AndroidVideoDecoder)
+  nameWithType: ObjectExtensions.IsNull<AndroidVideoDecoder>(AndroidVideoDecoder)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Android.Graphics.Video.AndroidVideoDecoder>(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+  nameWithType.vb: ObjectExtensions.IsNull(Of AndroidVideoDecoder)(AndroidVideoDecoder)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+  name.vb: IsNull(Of AndroidVideoDecoder)(AndroidVideoDecoder)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: )
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<AndroidVideoDecoder, TChild>(AndroidVideoDecoder, TChild)
+  nameWithType: ContainerExtensions.WithChild<AndroidVideoDecoder, TChild>(AndroidVideoDecoder, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Android.Graphics.Video.AndroidVideoDecoder, TChild>(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of AndroidVideoDecoder, TChild)(AndroidVideoDecoder, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Android.Graphics.Video.AndroidVideoDecoder, TChild)(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder, TChild)
+  name.vb: WithChild(Of AndroidVideoDecoder, TChild)(AndroidVideoDecoder, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<AndroidVideoDecoder, TChild>(AndroidVideoDecoder, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<AndroidVideoDecoder, TChild>(AndroidVideoDecoder, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Android.Graphics.Video.AndroidVideoDecoder, TChild>(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of AndroidVideoDecoder, TChild)(AndroidVideoDecoder, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Android.Graphics.Video.AndroidVideoDecoder, TChild)(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of AndroidVideoDecoder, TChild)(AndroidVideoDecoder, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<AndroidVideoDecoder, TChild>(AndroidVideoDecoder, TChild)
+  nameWithType: ContainerExtensions.Wrap<AndroidVideoDecoder, TChild>(AndroidVideoDecoder, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Android.Graphics.Video.AndroidVideoDecoder, TChild>(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of AndroidVideoDecoder, TChild)(AndroidVideoDecoder, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Android.Graphics.Video.AndroidVideoDecoder, TChild)(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder, TChild)
+  name.vb: Wrap(Of AndroidVideoDecoder, TChild)(AndroidVideoDecoder, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Android.Graphics.Video.AndroidVideoDecoder,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder
+    name: AndroidVideoDecoder
+    href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Graphics.Video
+  commentId: N:osu.Framework.Graphics.Video
+  href: osu.html
+  name: osu.Framework.Graphics.Video
+  nameWithType: osu.Framework.Graphics.Video
+  fullName: osu.Framework.Graphics.Video
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Video
+    name: Video
+    href: osu.Framework.Graphics.Video.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Video
+    name: Video
+    href: osu.Framework.Graphics.Video.html
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.#ctor*
+  commentId: Overload:osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.#ctor
+  href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html#osu_Framework_Android_Graphics_Video_AndroidVideoDecoder__ctor_osu_Framework_Graphics_Rendering_IRenderer_System_String_
+  name: AndroidVideoDecoder
+  nameWithType: AndroidVideoDecoder.AndroidVideoDecoder
+  fullName: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.AndroidVideoDecoder
+  nameWithType.vb: AndroidVideoDecoder.New
+  fullName.vb: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.New
+  name.vb: New
+- uid: osu.Framework.Graphics.Rendering.IRenderer
+  commentId: T:osu.Framework.Graphics.Rendering.IRenderer
+  parent: osu.Framework.Graphics.Rendering
+  href: osu.Framework.Graphics.Rendering.IRenderer.html
+  name: IRenderer
+  nameWithType: IRenderer
+  fullName: osu.Framework.Graphics.Rendering.IRenderer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: osu.Framework.Graphics.Rendering
+  commentId: N:osu.Framework.Graphics.Rendering
+  href: osu.html
+  name: osu.Framework.Graphics.Rendering
+  nameWithType: osu.Framework.Graphics.Rendering
+  fullName: osu.Framework.Graphics.Rendering
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Rendering
+    name: Rendering
+    href: osu.Framework.Graphics.Rendering.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Rendering
+    name: Rendering
+    href: osu.Framework.Graphics.Rendering.html
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: osu.Framework.Graphics.Video.VideoDecoder.GetAvailableDecoders(FFmpeg.AutoGen.AVInputFormat*,FFmpeg.AutoGen.AVCodecID,osu.Framework.Graphics.Video.HardwareVideoDecoder)
+  commentId: M:osu.Framework.Graphics.Video.VideoDecoder.GetAvailableDecoders(FFmpeg.AutoGen.AVInputFormat*,FFmpeg.AutoGen.AVCodecID,osu.Framework.Graphics.Video.HardwareVideoDecoder)
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  isExternal: true
+  name: GetAvailableDecoders(AVInputFormat*, AVCodecID, HardwareVideoDecoder)
+  nameWithType: VideoDecoder.GetAvailableDecoders(AVInputFormat*, AVCodecID, HardwareVideoDecoder)
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.GetAvailableDecoders(FFmpeg.AutoGen.AVInputFormat*, FFmpeg.AutoGen.AVCodecID, osu.Framework.Graphics.Video.HardwareVideoDecoder)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.GetAvailableDecoders(FFmpeg.AutoGen.AVInputFormat*,FFmpeg.AutoGen.AVCodecID,osu.Framework.Graphics.Video.HardwareVideoDecoder)
+    name: GetAvailableDecoders
+  - name: (
+  - uid: FFmpeg.AutoGen.AVInputFormat
+    name: AVInputFormat
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: FFmpeg.AutoGen.AVCodecID
+    name: AVCodecID
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Graphics.Video.HardwareVideoDecoder
+    name: HardwareVideoDecoder
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.GetAvailableDecoders(FFmpeg.AutoGen.AVInputFormat*,FFmpeg.AutoGen.AVCodecID,osu.Framework.Graphics.Video.HardwareVideoDecoder)
+    name: GetAvailableDecoders
+  - name: (
+  - uid: FFmpeg.AutoGen.AVInputFormat
+    name: AVInputFormat
+    isExternal: true
+  - name: '*'
+  - name: ','
+  - name: " "
+  - uid: FFmpeg.AutoGen.AVCodecID
+    name: AVCodecID
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: osu.Framework.Graphics.Video.HardwareVideoDecoder
+    name: HardwareVideoDecoder
+  - name: )
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.GetAvailableDecoders*
+  commentId: Overload:osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.GetAvailableDecoders
+  href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html#osu_Framework_Android_Graphics_Video_AndroidVideoDecoder_GetAvailableDecoders_FFmpeg_AutoGen_AVInputFormat__FFmpeg_AutoGen_AVCodecID_osu_Framework_Graphics_Video_HardwareVideoDecoder_
+  name: GetAvailableDecoders
+  nameWithType: AndroidVideoDecoder.GetAvailableDecoders
+  fullName: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.GetAvailableDecoders
+- uid: FFmpeg.AutoGen.AVInputFormat*
+  isExternal: true
+  name: AVInputFormat*
+  nameWithType: AVInputFormat*
+  fullName: FFmpeg.AutoGen.AVInputFormat*
+  spec.csharp:
+  - uid: FFmpeg.AutoGen.AVInputFormat
+    name: AVInputFormat
+    isExternal: true
+  - name: '*'
+  spec.vb:
+  - uid: FFmpeg.AutoGen.AVInputFormat
+    name: AVInputFormat
+    isExternal: true
+  - name: '*'
+- uid: FFmpeg.AutoGen.AVCodecID
+  commentId: T:FFmpeg.AutoGen.AVCodecID
+  parent: FFmpeg.AutoGen
+  isExternal: true
+  name: AVCodecID
+  nameWithType: AVCodecID
+  fullName: FFmpeg.AutoGen.AVCodecID
+- uid: osu.Framework.Graphics.Video.HardwareVideoDecoder
+  commentId: T:osu.Framework.Graphics.Video.HardwareVideoDecoder
+  parent: osu.Framework.Graphics.Video
+  href: osu.Framework.Graphics.Video.HardwareVideoDecoder.html
+  name: HardwareVideoDecoder
+  nameWithType: HardwareVideoDecoder
+  fullName: osu.Framework.Graphics.Video.HardwareVideoDecoder
+- uid: System.Collections.Generic.IEnumerable{System.ValueTuple{osu.Framework.Graphics.Video.FFmpegCodec,FFmpeg.AutoGen.AVHWDeviceType}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.ValueTuple{osu.Framework.Graphics.Video.FFmpegCodec,FFmpeg.AutoGen.AVHWDeviceType}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<(FFmpegCodec codec, AVHWDeviceType hwDeviceType)>
+  nameWithType: IEnumerable<(FFmpegCodec codec, AVHWDeviceType hwDeviceType)>
+  fullName: System.Collections.Generic.IEnumerable<(osu.Framework.Graphics.Video.FFmpegCodec codec, FFmpeg.AutoGen.AVHWDeviceType hwDeviceType)>
+  nameWithType.vb: IEnumerable(Of (codec As FFmpegCodec, hwDeviceType As AVHWDeviceType))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of (codec As osu.Framework.Graphics.Video.FFmpegCodec, hwDeviceType As FFmpeg.AutoGen.AVHWDeviceType))
+  name.vb: IEnumerable(Of (codec As FFmpegCodec, hwDeviceType As AVHWDeviceType))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: (
+  - uid: osu.Framework.Graphics.Video.FFmpegCodec
+    name: FFmpegCodec
+    href: osu.Framework.Graphics.Video.FFmpegCodec.html
+  - name: " "
+  - uid: System.ValueTuple{osu.Framework.Graphics.Video.FFmpegCodec,FFmpeg.AutoGen.AVHWDeviceType}.codec
+    name: codec
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-osu.framework.graphics.video.ffmpegcodec,ffmpeg.autogen.avhwdevicetype-.codec
+  - name: ','
+  - name: " "
+  - uid: FFmpeg.AutoGen.AVHWDeviceType
+    name: AVHWDeviceType
+    isExternal: true
+  - name: " "
+  - uid: System.ValueTuple{osu.Framework.Graphics.Video.FFmpegCodec,FFmpeg.AutoGen.AVHWDeviceType}.hwDeviceType
+    name: hwDeviceType
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-osu.framework.graphics.video.ffmpegcodec,ffmpeg.autogen.avhwdevicetype-.hwdevicetype
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{osu.Framework.Graphics.Video.FFmpegCodec,FFmpeg.AutoGen.AVHWDeviceType}.codec
+    name: codec
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-osu.framework.graphics.video.ffmpegcodec,ffmpeg.autogen.avhwdevicetype-.codec
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: osu.Framework.Graphics.Video.FFmpegCodec
+    name: FFmpegCodec
+    href: osu.Framework.Graphics.Video.FFmpegCodec.html
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{osu.Framework.Graphics.Video.FFmpegCodec,FFmpeg.AutoGen.AVHWDeviceType}.hwDeviceType
+    name: hwDeviceType
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-osu.framework.graphics.video.ffmpegcodec,ffmpeg.autogen.avhwdevicetype-.hwdevicetype
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: FFmpeg.AutoGen.AVHWDeviceType
+    name: AVHWDeviceType
+    isExternal: true
+  - name: )
+  - name: )
+- uid: FFmpeg.AutoGen
+  commentId: N:FFmpeg.AutoGen
+  isExternal: true
+  name: FFmpeg.AutoGen
+  nameWithType: FFmpeg.AutoGen
+  fullName: FFmpeg.AutoGen
+  spec.csharp:
+  - uid: FFmpeg
+    name: FFmpeg
+    isExternal: true
+  - name: .
+  - uid: FFmpeg.AutoGen
+    name: AutoGen
+    isExternal: true
+  spec.vb:
+  - uid: FFmpeg
+    name: FFmpeg
+    isExternal: true
+  - name: .
+  - uid: FFmpeg.AutoGen
+    name: AutoGen
+    isExternal: true
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: osu.Framework.Graphics.Video.VideoDecoder.CreateFuncs
+  commentId: M:osu.Framework.Graphics.Video.VideoDecoder.CreateFuncs
+  parent: osu.Framework.Graphics.Video.VideoDecoder
+  name: CreateFuncs()
+  nameWithType: VideoDecoder.CreateFuncs()
+  fullName: osu.Framework.Graphics.Video.VideoDecoder.CreateFuncs()
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.CreateFuncs
+    name: CreateFuncs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Video.VideoDecoder.CreateFuncs
+    name: CreateFuncs
+  - name: (
+  - name: )
+- uid: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.CreateFuncs*
+  commentId: Overload:osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.CreateFuncs
+  href: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.html#osu_Framework_Android_Graphics_Video_AndroidVideoDecoder_CreateFuncs
+  name: CreateFuncs
+  nameWithType: AndroidVideoDecoder.CreateFuncs
+  fullName: osu.Framework.Android.Graphics.Video.AndroidVideoDecoder.CreateFuncs
+- uid: osu.Framework.Graphics.Video.FFmpegFuncs
+  commentId: T:osu.Framework.Graphics.Video.FFmpegFuncs
+  parent: osu.Framework.Graphics.Video
+  href: osu.Framework.Graphics.Video.FFmpegFuncs.html
+  name: FFmpegFuncs
+  nameWithType: FFmpegFuncs
+  fullName: osu.Framework.Graphics.Video.FFmpegFuncs

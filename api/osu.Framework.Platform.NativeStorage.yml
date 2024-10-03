@@ -1,0 +1,2521 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Platform.NativeStorage
+  commentId: T:osu.Framework.Platform.NativeStorage
+  id: NativeStorage
+  parent: osu.Framework.Platform
+  children:
+  - osu.Framework.Platform.NativeStorage.#ctor(System.String,osu.Framework.Platform.GameHost)
+  - osu.Framework.Platform.NativeStorage.Delete(System.String)
+  - osu.Framework.Platform.NativeStorage.DeleteDirectory(System.String)
+  - osu.Framework.Platform.NativeStorage.Exists(System.String)
+  - osu.Framework.Platform.NativeStorage.ExistsDirectory(System.String)
+  - osu.Framework.Platform.NativeStorage.GetDirectories(System.String)
+  - osu.Framework.Platform.NativeStorage.GetFiles(System.String,System.String)
+  - osu.Framework.Platform.NativeStorage.GetFullPath(System.String,System.Boolean)
+  - osu.Framework.Platform.NativeStorage.GetStorageForDirectory(System.String)
+  - osu.Framework.Platform.NativeStorage.GetStream(System.String,System.IO.FileAccess,System.IO.FileMode)
+  - osu.Framework.Platform.NativeStorage.Move(System.String,System.String)
+  - osu.Framework.Platform.NativeStorage.OpenFileExternally(System.String)
+  - osu.Framework.Platform.NativeStorage.PresentFileExternally(System.String)
+  langs:
+  - csharp
+  - vb
+  name: NativeStorage
+  nameWithType: NativeStorage
+  fullName: osu.Framework.Platform.NativeStorage
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: NativeStorage
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 15
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  syntax:
+    content: 'public class NativeStorage : Storage'
+    content.vb: Public Class NativeStorage Inherits Storage
+  inheritance:
+  - System.Object
+  - osu.Framework.Platform.Storage
+  derivedClasses:
+  - osu.Framework.Android.AndroidStorage
+  - osu.Framework.Platform.DesktopStorage
+  - osu.Framework.Testing.TemporaryNativeStorage
+  - osu.Framework.iOS.IOSStorage
+  inheritedMembers:
+  - osu.Framework.Platform.Storage.BasePath
+  - osu.Framework.Platform.Storage.CreateFileSafely(System.String)
+  - osu.Framework.Platform.Storage.PresentExternally
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Platform.NativeStorage.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Platform.NativeStorage.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Platform.NativeStorage.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Platform.NativeStorage.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Platform.NativeStorage.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Platform.NativeStorage.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Platform.NativeStorage.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Platform.NativeStorage.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Platform.NativeStorage.#ctor(System.String,osu.Framework.Platform.GameHost)
+  commentId: M:osu.Framework.Platform.NativeStorage.#ctor(System.String,osu.Framework.Platform.GameHost)
+  id: '#ctor(System.String,osu.Framework.Platform.GameHost)'
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: NativeStorage(string, GameHost)
+  nameWithType: NativeStorage.NativeStorage(string, GameHost)
+  fullName: osu.Framework.Platform.NativeStorage.NativeStorage(string, osu.Framework.Platform.GameHost)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 19
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  syntax:
+    content: public NativeStorage(string path, GameHost host = null)
+    parameters:
+    - id: path
+      type: System.String
+    - id: host
+      type: osu.Framework.Platform.GameHost
+    content.vb: Public Sub New(path As String, host As GameHost = Nothing)
+  overload: osu.Framework.Platform.NativeStorage.#ctor*
+  nameWithType.vb: NativeStorage.New(String, GameHost)
+  fullName.vb: osu.Framework.Platform.NativeStorage.New(String, osu.Framework.Platform.GameHost)
+  name.vb: New(String, GameHost)
+- uid: osu.Framework.Platform.NativeStorage.Exists(System.String)
+  commentId: M:osu.Framework.Platform.NativeStorage.Exists(System.String)
+  id: Exists(System.String)
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: Exists(string)
+  nameWithType: NativeStorage.Exists(string)
+  fullName: osu.Framework.Platform.NativeStorage.Exists(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Exists
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 25
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Check whether a file exists at the specified path.
+  example: []
+  syntax:
+    content: public override bool Exists(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path to check.
+    return:
+      type: System.Boolean
+      description: Whether a file exists.
+    content.vb: Public Overrides Function Exists(path As String) As Boolean
+  overridden: osu.Framework.Platform.Storage.Exists(System.String)
+  overload: osu.Framework.Platform.NativeStorage.Exists*
+  nameWithType.vb: NativeStorage.Exists(String)
+  fullName.vb: osu.Framework.Platform.NativeStorage.Exists(String)
+  name.vb: Exists(String)
+- uid: osu.Framework.Platform.NativeStorage.ExistsDirectory(System.String)
+  commentId: M:osu.Framework.Platform.NativeStorage.ExistsDirectory(System.String)
+  id: ExistsDirectory(System.String)
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: ExistsDirectory(string)
+  nameWithType: NativeStorage.ExistsDirectory(string)
+  fullName: osu.Framework.Platform.NativeStorage.ExistsDirectory(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: ExistsDirectory
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 27
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Check whether a directory exists at the specified path.
+  example: []
+  syntax:
+    content: public override bool ExistsDirectory(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path to check.
+    return:
+      type: System.Boolean
+      description: Whether a directory exists.
+    content.vb: Public Overrides Function ExistsDirectory(path As String) As Boolean
+  overridden: osu.Framework.Platform.Storage.ExistsDirectory(System.String)
+  overload: osu.Framework.Platform.NativeStorage.ExistsDirectory*
+  nameWithType.vb: NativeStorage.ExistsDirectory(String)
+  fullName.vb: osu.Framework.Platform.NativeStorage.ExistsDirectory(String)
+  name.vb: ExistsDirectory(String)
+- uid: osu.Framework.Platform.NativeStorage.DeleteDirectory(System.String)
+  commentId: M:osu.Framework.Platform.NativeStorage.DeleteDirectory(System.String)
+  id: DeleteDirectory(System.String)
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: DeleteDirectory(string)
+  nameWithType: NativeStorage.DeleteDirectory(string)
+  fullName: osu.Framework.Platform.NativeStorage.DeleteDirectory(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: DeleteDirectory
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 29
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Delete a directory and all its contents recursively.
+  example: []
+  syntax:
+    content: public override void DeleteDirectory(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path of the directory to delete.
+    content.vb: Public Overrides Sub DeleteDirectory(path As String)
+  overridden: osu.Framework.Platform.Storage.DeleteDirectory(System.String)
+  overload: osu.Framework.Platform.NativeStorage.DeleteDirectory*
+  nameWithType.vb: NativeStorage.DeleteDirectory(String)
+  fullName.vb: osu.Framework.Platform.NativeStorage.DeleteDirectory(String)
+  name.vb: DeleteDirectory(String)
+- uid: osu.Framework.Platform.NativeStorage.Delete(System.String)
+  commentId: M:osu.Framework.Platform.NativeStorage.Delete(System.String)
+  id: Delete(System.String)
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: Delete(string)
+  nameWithType: NativeStorage.Delete(string)
+  fullName: osu.Framework.Platform.NativeStorage.Delete(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Delete
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 38
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Delete a file.
+  example: []
+  syntax:
+    content: public override void Delete(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path of the file to delete.
+    content.vb: Public Overrides Sub Delete(path As String)
+  overridden: osu.Framework.Platform.Storage.Delete(System.String)
+  overload: osu.Framework.Platform.NativeStorage.Delete*
+  nameWithType.vb: NativeStorage.Delete(String)
+  fullName.vb: osu.Framework.Platform.NativeStorage.Delete(String)
+  name.vb: Delete(String)
+- uid: osu.Framework.Platform.NativeStorage.Move(System.String,System.String)
+  commentId: M:osu.Framework.Platform.NativeStorage.Move(System.String,System.String)
+  id: Move(System.String,System.String)
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: Move(string, string)
+  nameWithType: NativeStorage.Move(string, string)
+  fullName: osu.Framework.Platform.NativeStorage.Move(string, string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Move
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 46
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Move a file from one location to another. File must exist. Destination will be overwritten if exists.
+  example: []
+  syntax:
+    content: public override void Move(string from, string to)
+    parameters:
+    - id: from
+      type: System.String
+      description: The file path to move.
+    - id: to
+      type: System.String
+      description: The destination path.
+    content.vb: Public Overrides Sub Move(from As String, [to] As String)
+  overridden: osu.Framework.Platform.Storage.Move(System.String,System.String)
+  overload: osu.Framework.Platform.NativeStorage.Move*
+  nameWithType.vb: NativeStorage.Move(String, String)
+  fullName.vb: osu.Framework.Platform.NativeStorage.Move(String, String)
+  name.vb: Move(String, String)
+- uid: osu.Framework.Platform.NativeStorage.GetDirectories(System.String)
+  commentId: M:osu.Framework.Platform.NativeStorage.GetDirectories(System.String)
+  id: GetDirectories(System.String)
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: GetDirectories(string)
+  nameWithType: NativeStorage.GetDirectories(string)
+  fullName: osu.Framework.Platform.NativeStorage.GetDirectories(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetDirectories
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 53
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Retrieve a list of directories at the specified path.
+  example: []
+  syntax:
+    content: public override IEnumerable<string> GetDirectories(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path to list.
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: A list of directories in the path, relative to the path of this storage.
+    content.vb: Public Overrides Function GetDirectories(path As String) As IEnumerable(Of String)
+  overridden: osu.Framework.Platform.Storage.GetDirectories(System.String)
+  overload: osu.Framework.Platform.NativeStorage.GetDirectories*
+  nameWithType.vb: NativeStorage.GetDirectories(String)
+  fullName.vb: osu.Framework.Platform.NativeStorage.GetDirectories(String)
+  name.vb: GetDirectories(String)
+- uid: osu.Framework.Platform.NativeStorage.GetFiles(System.String,System.String)
+  commentId: M:osu.Framework.Platform.NativeStorage.GetFiles(System.String,System.String)
+  id: GetFiles(System.String,System.String)
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: GetFiles(string, string)
+  nameWithType: NativeStorage.GetFiles(string, string)
+  fullName: osu.Framework.Platform.NativeStorage.GetFiles(string, string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetFiles
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 55
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Retrieve a list of files at the specified path.
+  example: []
+  syntax:
+    content: public override IEnumerable<string> GetFiles(string path, string pattern = "*")
+    parameters:
+    - id: path
+      type: System.String
+      description: The path to list.
+    - id: pattern
+      type: System.String
+      description: An optional search pattern. Accepts "*" wildcard.
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: A list of files in the path, relative to the path of this storage.
+    content.vb: Public Overrides Function GetFiles(path As String, pattern As String = "*") As IEnumerable(Of String)
+  overridden: osu.Framework.Platform.Storage.GetFiles(System.String,System.String)
+  overload: osu.Framework.Platform.NativeStorage.GetFiles*
+  nameWithType.vb: NativeStorage.GetFiles(String, String)
+  fullName.vb: osu.Framework.Platform.NativeStorage.GetFiles(String, String)
+  name.vb: GetFiles(String, String)
+- uid: osu.Framework.Platform.NativeStorage.GetFullPath(System.String,System.Boolean)
+  commentId: M:osu.Framework.Platform.NativeStorage.GetFullPath(System.String,System.Boolean)
+  id: GetFullPath(System.String,System.Boolean)
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: GetFullPath(string, bool)
+  nameWithType: NativeStorage.GetFullPath(string, bool)
+  fullName: osu.Framework.Platform.NativeStorage.GetFullPath(string, bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetFullPath
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 68
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Get a usable filesystem path for the provided incomplete path.
+  example: []
+  syntax:
+    content: public override string GetFullPath(string path, bool createIfNotExisting = false)
+    parameters:
+    - id: path
+      type: System.String
+      description: An incomplete path, usually provided as user input.
+    - id: createIfNotExisting
+      type: System.Boolean
+      description: Create the path if it doesn't already exist.
+    return:
+      type: System.String
+      description: A usable filesystem path.
+    content.vb: Public Overrides Function GetFullPath(path As String, createIfNotExisting As Boolean = False) As String
+  overridden: osu.Framework.Platform.Storage.GetFullPath(System.String,System.Boolean)
+  overload: osu.Framework.Platform.NativeStorage.GetFullPath*
+  nameWithType.vb: NativeStorage.GetFullPath(String, Boolean)
+  fullName.vb: osu.Framework.Platform.NativeStorage.GetFullPath(String, Boolean)
+  name.vb: GetFullPath(String, Boolean)
+- uid: osu.Framework.Platform.NativeStorage.OpenFileExternally(System.String)
+  commentId: M:osu.Framework.Platform.NativeStorage.OpenFileExternally(System.String)
+  id: OpenFileExternally(System.String)
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: OpenFileExternally(string)
+  nameWithType: NativeStorage.OpenFileExternally(string)
+  fullName: osu.Framework.Platform.NativeStorage.OpenFileExternally(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: OpenFileExternally
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 81
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Requests that a file be opened externally with an associated application, if available.
+  example: []
+  syntax:
+    content: public override bool OpenFileExternally(string filename)
+    parameters:
+    - id: filename
+      type: System.String
+      description: The relative path to the file which should be opened.
+    return:
+      type: System.Boolean
+      description: Whether the file was successfully opened.
+    content.vb: Public Overrides Function OpenFileExternally(filename As String) As Boolean
+  overridden: osu.Framework.Platform.Storage.OpenFileExternally(System.String)
+  overload: osu.Framework.Platform.NativeStorage.OpenFileExternally*
+  nameWithType.vb: NativeStorage.OpenFileExternally(String)
+  fullName.vb: osu.Framework.Platform.NativeStorage.OpenFileExternally(String)
+  name.vb: OpenFileExternally(String)
+- uid: osu.Framework.Platform.NativeStorage.PresentFileExternally(System.String)
+  commentId: M:osu.Framework.Platform.NativeStorage.PresentFileExternally(System.String)
+  id: PresentFileExternally(System.String)
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: PresentFileExternally(string)
+  nameWithType: NativeStorage.PresentFileExternally(string)
+  fullName: osu.Framework.Platform.NativeStorage.PresentFileExternally(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: PresentFileExternally
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 84
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Requests to present a file externally in the platform's native file browser.
+  remarks: This will open the parent folder and, (if available) highlight the file.
+  example: []
+  syntax:
+    content: public override bool PresentFileExternally(string filename)
+    parameters:
+    - id: filename
+      type: System.String
+      description: Relative path to the file.
+    return:
+      type: System.Boolean
+      description: Whether the file was successfully presented.
+    content.vb: Public Overrides Function PresentFileExternally(filename As String) As Boolean
+  overridden: osu.Framework.Platform.Storage.PresentFileExternally(System.String)
+  overload: osu.Framework.Platform.NativeStorage.PresentFileExternally*
+  nameWithType.vb: NativeStorage.PresentFileExternally(String)
+  fullName.vb: osu.Framework.Platform.NativeStorage.PresentFileExternally(String)
+  name.vb: PresentFileExternally(String)
+- uid: osu.Framework.Platform.NativeStorage.GetStream(System.String,System.IO.FileAccess,System.IO.FileMode)
+  commentId: M:osu.Framework.Platform.NativeStorage.GetStream(System.String,System.IO.FileAccess,System.IO.FileMode)
+  id: GetStream(System.String,System.IO.FileAccess,System.IO.FileMode)
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: GetStream(string, FileAccess, FileMode)
+  nameWithType: NativeStorage.GetStream(string, FileAccess, FileMode)
+  fullName: osu.Framework.Platform.NativeStorage.GetStream(string, System.IO.FileAccess, System.IO.FileMode)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetStream
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 87
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: Retrieve a stream from an underlying file inside this storage.
+  example: []
+  syntax:
+    content: public override Stream GetStream(string path, FileAccess access = FileAccess.Read, FileMode mode = FileMode.OpenOrCreate)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path of the file.
+    - id: access
+      type: System.IO.FileAccess
+      description: The access requirements.
+    - id: mode
+      type: System.IO.FileMode
+      description: The mode in which the file should be opened.
+    return:
+      type: System.IO.Stream
+      description: A stream associated with the requested path.
+    content.vb: Public Overrides Function GetStream(path As String, access As FileAccess = FileAccess.Read, mode As FileMode = FileMode.OpenOrCreate) As Stream
+  overridden: osu.Framework.Platform.Storage.GetStream(System.String,System.IO.FileAccess,System.IO.FileMode)
+  overload: osu.Framework.Platform.NativeStorage.GetStream*
+  nameWithType.vb: NativeStorage.GetStream(String, FileAccess, FileMode)
+  fullName.vb: osu.Framework.Platform.NativeStorage.GetStream(String, System.IO.FileAccess, System.IO.FileMode)
+  name.vb: GetStream(String, FileAccess, FileMode)
+- uid: osu.Framework.Platform.NativeStorage.GetStorageForDirectory(System.String)
+  commentId: M:osu.Framework.Platform.NativeStorage.GetStorageForDirectory(System.String)
+  id: GetStorageForDirectory(System.String)
+  parent: osu.Framework.Platform.NativeStorage
+  langs:
+  - csharp
+  - vb
+  name: GetStorageForDirectory(string)
+  nameWithType: NativeStorage.GetStorageForDirectory(string)
+  fullName: osu.Framework.Platform.NativeStorage.GetStorageForDirectory(string)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Platform/NativeStorage.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetStorageForDirectory
+    path: osu.Framework/Platform/NativeStorage.cs
+    startLine: 111
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Platform
+  summary: >-
+    Retrieve a <xref href="osu.Framework.Platform.Storage" data-throw-if-not-resolved="false"></xref> for a contained directory.
+
+    Creates the path if not existing.
+  example: []
+  syntax:
+    content: public override Storage GetStorageForDirectory(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The subdirectory to use as a root.
+      attributes:
+      - type: JetBrains.Annotations.NotNullAttribute
+        ctor: JetBrains.Annotations.NotNullAttribute.#ctor
+        arguments: []
+    return:
+      type: osu.Framework.Platform.Storage
+      description: A more specific storage.
+    content.vb: Public Overrides Function GetStorageForDirectory(path As String) As Storage
+  overridden: osu.Framework.Platform.Storage.GetStorageForDirectory(System.String)
+  overload: osu.Framework.Platform.NativeStorage.GetStorageForDirectory*
+  nameWithType.vb: NativeStorage.GetStorageForDirectory(String)
+  fullName.vb: osu.Framework.Platform.NativeStorage.GetStorageForDirectory(String)
+  name.vb: GetStorageForDirectory(String)
+references:
+- uid: osu.Framework.Platform
+  commentId: N:osu.Framework.Platform
+  href: osu.html
+  name: osu.Framework.Platform
+  nameWithType: osu.Framework.Platform
+  fullName: osu.Framework.Platform
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Platform
+    name: Platform
+    href: osu.Framework.Platform.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: osu.Framework.Platform.Storage
+  commentId: T:osu.Framework.Platform.Storage
+  parent: osu.Framework.Platform
+  href: osu.Framework.Platform.Storage.html
+  name: Storage
+  nameWithType: Storage
+  fullName: osu.Framework.Platform.Storage
+- uid: osu.Framework.Platform.Storage.BasePath
+  commentId: P:osu.Framework.Platform.Storage.BasePath
+  parent: osu.Framework.Platform.Storage
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_BasePath
+  name: BasePath
+  nameWithType: Storage.BasePath
+  fullName: osu.Framework.Platform.Storage.BasePath
+- uid: osu.Framework.Platform.Storage.CreateFileSafely(System.String)
+  commentId: M:osu.Framework.Platform.Storage.CreateFileSafely(System.String)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_CreateFileSafely_System_String_
+  name: CreateFileSafely(string)
+  nameWithType: Storage.CreateFileSafely(string)
+  fullName: osu.Framework.Platform.Storage.CreateFileSafely(string)
+  nameWithType.vb: Storage.CreateFileSafely(String)
+  fullName.vb: osu.Framework.Platform.Storage.CreateFileSafely(String)
+  name.vb: CreateFileSafely(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.CreateFileSafely(System.String)
+    name: CreateFileSafely
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_CreateFileSafely_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.CreateFileSafely(System.String)
+    name: CreateFileSafely
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_CreateFileSafely_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.Storage.PresentExternally
+  commentId: M:osu.Framework.Platform.Storage.PresentExternally
+  parent: osu.Framework.Platform.Storage
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_PresentExternally
+  name: PresentExternally()
+  nameWithType: Storage.PresentExternally()
+  fullName: osu.Framework.Platform.Storage.PresentExternally()
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.PresentExternally
+    name: PresentExternally
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_PresentExternally
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.PresentExternally
+    name: PresentExternally
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_PresentExternally
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<NativeStorage>(NativeStorage)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<NativeStorage>(NativeStorage)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Platform.NativeStorage>(osu.Framework.Platform.NativeStorage)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of NativeStorage)(NativeStorage)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Platform.NativeStorage)(osu.Framework.Platform.NativeStorage)
+  name.vb: GetLocalisableDescription(Of NativeStorage)(NativeStorage)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Platform.NativeStorage)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Platform.NativeStorage)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<NativeStorage>(NativeStorage)
+  nameWithType: EnumerableExtensions.Yield<NativeStorage>(NativeStorage)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Platform.NativeStorage>(osu.Framework.Platform.NativeStorage)
+  nameWithType.vb: EnumerableExtensions.Yield(Of NativeStorage)(NativeStorage)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Platform.NativeStorage)(osu.Framework.Platform.NativeStorage)
+  name.vb: Yield(Of NativeStorage)(NativeStorage)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Platform.NativeStorage)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Platform.NativeStorage)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<NativeStorage>(NativeStorage)
+  nameWithType: ObjectExtensions.AsNonNull<NativeStorage>(NativeStorage)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Platform.NativeStorage>(osu.Framework.Platform.NativeStorage)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of NativeStorage)(NativeStorage)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Platform.NativeStorage)(osu.Framework.Platform.NativeStorage)
+  name.vb: AsNonNull(Of NativeStorage)(NativeStorage)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Platform.NativeStorage)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Platform.NativeStorage)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<NativeStorage>(NativeStorage)
+  nameWithType: ObjectExtensions.IsNotNull<NativeStorage>(NativeStorage)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Platform.NativeStorage>(osu.Framework.Platform.NativeStorage)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of NativeStorage)(NativeStorage)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Platform.NativeStorage)(osu.Framework.Platform.NativeStorage)
+  name.vb: IsNotNull(Of NativeStorage)(NativeStorage)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Platform.NativeStorage)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Platform.NativeStorage)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<NativeStorage>(NativeStorage)
+  nameWithType: ObjectExtensions.IsNull<NativeStorage>(NativeStorage)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Platform.NativeStorage>(osu.Framework.Platform.NativeStorage)
+  nameWithType.vb: ObjectExtensions.IsNull(Of NativeStorage)(NativeStorage)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Platform.NativeStorage)(osu.Framework.Platform.NativeStorage)
+  name.vb: IsNull(Of NativeStorage)(NativeStorage)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Platform.NativeStorage)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Platform.NativeStorage)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<NativeStorage, TChild>(NativeStorage, TChild)
+  nameWithType: ContainerExtensions.WithChild<NativeStorage, TChild>(NativeStorage, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Platform.NativeStorage, TChild>(osu.Framework.Platform.NativeStorage, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of NativeStorage, TChild)(NativeStorage, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Platform.NativeStorage, TChild)(osu.Framework.Platform.NativeStorage, TChild)
+  name.vb: WithChild(Of NativeStorage, TChild)(NativeStorage, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Platform.NativeStorage,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Platform.NativeStorage,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<NativeStorage, TChild>(NativeStorage, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<NativeStorage, TChild>(NativeStorage, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Platform.NativeStorage, TChild>(osu.Framework.Platform.NativeStorage, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of NativeStorage, TChild)(NativeStorage, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Platform.NativeStorage, TChild)(osu.Framework.Platform.NativeStorage, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of NativeStorage, TChild)(NativeStorage, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Platform.NativeStorage,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Platform.NativeStorage,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<NativeStorage, TChild>(NativeStorage, TChild)
+  nameWithType: ContainerExtensions.Wrap<NativeStorage, TChild>(NativeStorage, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Platform.NativeStorage, TChild>(osu.Framework.Platform.NativeStorage, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of NativeStorage, TChild)(NativeStorage, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Platform.NativeStorage, TChild)(osu.Framework.Platform.NativeStorage, TChild)
+  name.vb: Wrap(Of NativeStorage, TChild)(NativeStorage, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Platform.NativeStorage,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Platform.NativeStorage,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Platform.NativeStorage
+    name: NativeStorage
+    href: osu.Framework.Platform.NativeStorage.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Platform.NativeStorage.#ctor*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.#ctor
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage__ctor_System_String_osu_Framework_Platform_GameHost_
+  name: NativeStorage
+  nameWithType: NativeStorage.NativeStorage
+  fullName: osu.Framework.Platform.NativeStorage.NativeStorage
+  nameWithType.vb: NativeStorage.New
+  fullName.vb: osu.Framework.Platform.NativeStorage.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: osu.Framework.Platform.GameHost
+  commentId: T:osu.Framework.Platform.GameHost
+  parent: osu.Framework.Platform
+  href: osu.Framework.Platform.GameHost.html
+  name: GameHost
+  nameWithType: GameHost
+  fullName: osu.Framework.Platform.GameHost
+- uid: osu.Framework.Platform.Storage.Exists(System.String)
+  commentId: M:osu.Framework.Platform.Storage.Exists(System.String)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_Exists_System_String_
+  name: Exists(string)
+  nameWithType: Storage.Exists(string)
+  fullName: osu.Framework.Platform.Storage.Exists(string)
+  nameWithType.vb: Storage.Exists(String)
+  fullName.vb: osu.Framework.Platform.Storage.Exists(String)
+  name.vb: Exists(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.Exists(System.String)
+    name: Exists
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_Exists_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.Exists(System.String)
+    name: Exists
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_Exists_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.Exists*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.Exists
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage_Exists_System_String_
+  name: Exists
+  nameWithType: NativeStorage.Exists
+  fullName: osu.Framework.Platform.NativeStorage.Exists
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: osu.Framework.Platform.Storage.ExistsDirectory(System.String)
+  commentId: M:osu.Framework.Platform.Storage.ExistsDirectory(System.String)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_ExistsDirectory_System_String_
+  name: ExistsDirectory(string)
+  nameWithType: Storage.ExistsDirectory(string)
+  fullName: osu.Framework.Platform.Storage.ExistsDirectory(string)
+  nameWithType.vb: Storage.ExistsDirectory(String)
+  fullName.vb: osu.Framework.Platform.Storage.ExistsDirectory(String)
+  name.vb: ExistsDirectory(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.ExistsDirectory(System.String)
+    name: ExistsDirectory
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_ExistsDirectory_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.ExistsDirectory(System.String)
+    name: ExistsDirectory
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_ExistsDirectory_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.ExistsDirectory*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.ExistsDirectory
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage_ExistsDirectory_System_String_
+  name: ExistsDirectory
+  nameWithType: NativeStorage.ExistsDirectory
+  fullName: osu.Framework.Platform.NativeStorage.ExistsDirectory
+- uid: osu.Framework.Platform.Storage.DeleteDirectory(System.String)
+  commentId: M:osu.Framework.Platform.Storage.DeleteDirectory(System.String)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_DeleteDirectory_System_String_
+  name: DeleteDirectory(string)
+  nameWithType: Storage.DeleteDirectory(string)
+  fullName: osu.Framework.Platform.Storage.DeleteDirectory(string)
+  nameWithType.vb: Storage.DeleteDirectory(String)
+  fullName.vb: osu.Framework.Platform.Storage.DeleteDirectory(String)
+  name.vb: DeleteDirectory(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.DeleteDirectory(System.String)
+    name: DeleteDirectory
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_DeleteDirectory_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.DeleteDirectory(System.String)
+    name: DeleteDirectory
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_DeleteDirectory_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.DeleteDirectory*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.DeleteDirectory
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage_DeleteDirectory_System_String_
+  name: DeleteDirectory
+  nameWithType: NativeStorage.DeleteDirectory
+  fullName: osu.Framework.Platform.NativeStorage.DeleteDirectory
+- uid: osu.Framework.Platform.Storage.Delete(System.String)
+  commentId: M:osu.Framework.Platform.Storage.Delete(System.String)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_Delete_System_String_
+  name: Delete(string)
+  nameWithType: Storage.Delete(string)
+  fullName: osu.Framework.Platform.Storage.Delete(string)
+  nameWithType.vb: Storage.Delete(String)
+  fullName.vb: osu.Framework.Platform.Storage.Delete(String)
+  name.vb: Delete(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.Delete(System.String)
+    name: Delete
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_Delete_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.Delete(System.String)
+    name: Delete
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_Delete_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.Delete*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.Delete
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage_Delete_System_String_
+  name: Delete
+  nameWithType: NativeStorage.Delete
+  fullName: osu.Framework.Platform.NativeStorage.Delete
+- uid: osu.Framework.Platform.Storage.Move(System.String,System.String)
+  commentId: M:osu.Framework.Platform.Storage.Move(System.String,System.String)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_Move_System_String_System_String_
+  name: Move(string, string)
+  nameWithType: Storage.Move(string, string)
+  fullName: osu.Framework.Platform.Storage.Move(string, string)
+  nameWithType.vb: Storage.Move(String, String)
+  fullName.vb: osu.Framework.Platform.Storage.Move(String, String)
+  name.vb: Move(String, String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.Move(System.String,System.String)
+    name: Move
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_Move_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.Move(System.String,System.String)
+    name: Move
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_Move_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.Move*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.Move
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage_Move_System_String_System_String_
+  name: Move
+  nameWithType: NativeStorage.Move
+  fullName: osu.Framework.Platform.NativeStorage.Move
+- uid: osu.Framework.Platform.Storage.GetDirectories(System.String)
+  commentId: M:osu.Framework.Platform.Storage.GetDirectories(System.String)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetDirectories_System_String_
+  name: GetDirectories(string)
+  nameWithType: Storage.GetDirectories(string)
+  fullName: osu.Framework.Platform.Storage.GetDirectories(string)
+  nameWithType.vb: Storage.GetDirectories(String)
+  fullName.vb: osu.Framework.Platform.Storage.GetDirectories(String)
+  name.vb: GetDirectories(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.GetDirectories(System.String)
+    name: GetDirectories
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetDirectories_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.GetDirectories(System.String)
+    name: GetDirectories
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetDirectories_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.GetDirectories*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.GetDirectories
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage_GetDirectories_System_String_
+  name: GetDirectories
+  nameWithType: NativeStorage.GetDirectories
+  fullName: osu.Framework.Platform.NativeStorage.GetDirectories
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: osu.Framework.Platform.Storage.GetFiles(System.String,System.String)
+  commentId: M:osu.Framework.Platform.Storage.GetFiles(System.String,System.String)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetFiles_System_String_System_String_
+  name: GetFiles(string, string)
+  nameWithType: Storage.GetFiles(string, string)
+  fullName: osu.Framework.Platform.Storage.GetFiles(string, string)
+  nameWithType.vb: Storage.GetFiles(String, String)
+  fullName.vb: osu.Framework.Platform.Storage.GetFiles(String, String)
+  name.vb: GetFiles(String, String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.GetFiles(System.String,System.String)
+    name: GetFiles
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetFiles_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.GetFiles(System.String,System.String)
+    name: GetFiles
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetFiles_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.GetFiles*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.GetFiles
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage_GetFiles_System_String_System_String_
+  name: GetFiles
+  nameWithType: NativeStorage.GetFiles
+  fullName: osu.Framework.Platform.NativeStorage.GetFiles
+- uid: osu.Framework.Platform.Storage.GetFullPath(System.String,System.Boolean)
+  commentId: M:osu.Framework.Platform.Storage.GetFullPath(System.String,System.Boolean)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetFullPath_System_String_System_Boolean_
+  name: GetFullPath(string, bool)
+  nameWithType: Storage.GetFullPath(string, bool)
+  fullName: osu.Framework.Platform.Storage.GetFullPath(string, bool)
+  nameWithType.vb: Storage.GetFullPath(String, Boolean)
+  fullName.vb: osu.Framework.Platform.Storage.GetFullPath(String, Boolean)
+  name.vb: GetFullPath(String, Boolean)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.GetFullPath(System.String,System.Boolean)
+    name: GetFullPath
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetFullPath_System_String_System_Boolean_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.GetFullPath(System.String,System.Boolean)
+    name: GetFullPath
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetFullPath_System_String_System_Boolean_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.GetFullPath*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.GetFullPath
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage_GetFullPath_System_String_System_Boolean_
+  name: GetFullPath
+  nameWithType: NativeStorage.GetFullPath
+  fullName: osu.Framework.Platform.NativeStorage.GetFullPath
+- uid: osu.Framework.Platform.Storage.OpenFileExternally(System.String)
+  commentId: M:osu.Framework.Platform.Storage.OpenFileExternally(System.String)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_OpenFileExternally_System_String_
+  name: OpenFileExternally(string)
+  nameWithType: Storage.OpenFileExternally(string)
+  fullName: osu.Framework.Platform.Storage.OpenFileExternally(string)
+  nameWithType.vb: Storage.OpenFileExternally(String)
+  fullName.vb: osu.Framework.Platform.Storage.OpenFileExternally(String)
+  name.vb: OpenFileExternally(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.OpenFileExternally(System.String)
+    name: OpenFileExternally
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_OpenFileExternally_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.OpenFileExternally(System.String)
+    name: OpenFileExternally
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_OpenFileExternally_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.OpenFileExternally*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.OpenFileExternally
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage_OpenFileExternally_System_String_
+  name: OpenFileExternally
+  nameWithType: NativeStorage.OpenFileExternally
+  fullName: osu.Framework.Platform.NativeStorage.OpenFileExternally
+- uid: osu.Framework.Platform.Storage.PresentFileExternally(System.String)
+  commentId: M:osu.Framework.Platform.Storage.PresentFileExternally(System.String)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_PresentFileExternally_System_String_
+  name: PresentFileExternally(string)
+  nameWithType: Storage.PresentFileExternally(string)
+  fullName: osu.Framework.Platform.Storage.PresentFileExternally(string)
+  nameWithType.vb: Storage.PresentFileExternally(String)
+  fullName.vb: osu.Framework.Platform.Storage.PresentFileExternally(String)
+  name.vb: PresentFileExternally(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.PresentFileExternally(System.String)
+    name: PresentFileExternally
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_PresentFileExternally_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.PresentFileExternally(System.String)
+    name: PresentFileExternally
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_PresentFileExternally_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.PresentFileExternally*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.PresentFileExternally
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage_PresentFileExternally_System_String_
+  name: PresentFileExternally
+  nameWithType: NativeStorage.PresentFileExternally
+  fullName: osu.Framework.Platform.NativeStorage.PresentFileExternally
+- uid: osu.Framework.Platform.Storage.GetStream(System.String,System.IO.FileAccess,System.IO.FileMode)
+  commentId: M:osu.Framework.Platform.Storage.GetStream(System.String,System.IO.FileAccess,System.IO.FileMode)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetStream_System_String_System_IO_FileAccess_System_IO_FileMode_
+  name: GetStream(string, FileAccess, FileMode)
+  nameWithType: Storage.GetStream(string, FileAccess, FileMode)
+  fullName: osu.Framework.Platform.Storage.GetStream(string, System.IO.FileAccess, System.IO.FileMode)
+  nameWithType.vb: Storage.GetStream(String, FileAccess, FileMode)
+  fullName.vb: osu.Framework.Platform.Storage.GetStream(String, System.IO.FileAccess, System.IO.FileMode)
+  name.vb: GetStream(String, FileAccess, FileMode)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.GetStream(System.String,System.IO.FileAccess,System.IO.FileMode)
+    name: GetStream
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetStream_System_String_System_IO_FileAccess_System_IO_FileMode_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IO.FileAccess
+    name: FileAccess
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.fileaccess
+  - name: ','
+  - name: " "
+  - uid: System.IO.FileMode
+    name: FileMode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.filemode
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.GetStream(System.String,System.IO.FileAccess,System.IO.FileMode)
+    name: GetStream
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetStream_System_String_System_IO_FileAccess_System_IO_FileMode_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IO.FileAccess
+    name: FileAccess
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.fileaccess
+  - name: ','
+  - name: " "
+  - uid: System.IO.FileMode
+    name: FileMode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io.filemode
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.GetStream*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.GetStream
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage_GetStream_System_String_System_IO_FileAccess_System_IO_FileMode_
+  name: GetStream
+  nameWithType: NativeStorage.GetStream
+  fullName: osu.Framework.Platform.NativeStorage.GetStream
+- uid: System.IO.FileAccess
+  commentId: T:System.IO.FileAccess
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.fileaccess
+  name: FileAccess
+  nameWithType: FileAccess
+  fullName: System.IO.FileAccess
+- uid: System.IO.FileMode
+  commentId: T:System.IO.FileMode
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.filemode
+  name: FileMode
+  nameWithType: FileMode
+  fullName: System.IO.FileMode
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: osu.Framework.Platform.Storage.GetStorageForDirectory(System.String)
+  commentId: M:osu.Framework.Platform.Storage.GetStorageForDirectory(System.String)
+  parent: osu.Framework.Platform.Storage
+  isExternal: true
+  href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetStorageForDirectory_System_String_
+  name: GetStorageForDirectory(string)
+  nameWithType: Storage.GetStorageForDirectory(string)
+  fullName: osu.Framework.Platform.Storage.GetStorageForDirectory(string)
+  nameWithType.vb: Storage.GetStorageForDirectory(String)
+  fullName.vb: osu.Framework.Platform.Storage.GetStorageForDirectory(String)
+  name.vb: GetStorageForDirectory(String)
+  spec.csharp:
+  - uid: osu.Framework.Platform.Storage.GetStorageForDirectory(System.String)
+    name: GetStorageForDirectory
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetStorageForDirectory_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Platform.Storage.GetStorageForDirectory(System.String)
+    name: GetStorageForDirectory
+    href: osu.Framework.Platform.Storage.html#osu_Framework_Platform_Storage_GetStorageForDirectory_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: osu.Framework.Platform.NativeStorage.GetStorageForDirectory*
+  commentId: Overload:osu.Framework.Platform.NativeStorage.GetStorageForDirectory
+  href: osu.Framework.Platform.NativeStorage.html#osu_Framework_Platform_NativeStorage_GetStorageForDirectory_System_String_
+  name: GetStorageForDirectory
+  nameWithType: NativeStorage.GetStorageForDirectory
+  fullName: osu.Framework.Platform.NativeStorage.GetStorageForDirectory

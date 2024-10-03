@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Implementation | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Implementation | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nuget icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ppy/osu-framework.wiki/blob/master/Dependency-Injection.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p>In osu!framework, we support dependency injection at a <code>Drawable</code> level. Internally, this is done via <code>DependencyContainer</code>s, which are passed down the hierarchy and can be overridden at any point for further customisation (or replacement) by a child.</p>
+<p>The general usage for this is to fulfill a dependency that can come from a parent (potentially many levels above the point of usage). It is important to understand the general concept of <a href="https://en.wikipedia.org/wiki/Dependency_injection">dependency injection</a> before reading on.</p>
+<h1 id="implementation">Implementation</h1>
+<p>osu!framework's dependency injection mechanism heavily leans on C# attributes, namely <code>[Cached]</code>, <code>[Resolved]</code>, and <code>[BackgroundDependencyLoader]</code>. Setting the dependencies up is done via one of two pathways: source generation and reflection. Understanding this is key, as the source generation pathway benefits from compile-time optimisations, but requires consumers to adjust their code accordingly.</p>
+<h2 id="source-generation">Source generation</h2>
+<p>Since the 2022.1126.0 release, the primary supported implementation of dependency injection relies on <a href="https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview">source generators</a>. The primary implications of this for framework consumers are as follows:</p>
+<ul>
+<li>For the source generator-based dependency injection to work, <code>Drawable</code> classes must be <code>partial</code> so that the source generator can inject the DI machinery into the class. Non-compliant drawables will raise the <a href="https://github.com/ppy/osu-framework/blob/e5f1aabc22f2f149f48c4fd9ca7c6f8381b00ec0/osu.Framework.SourceGeneration/Analysers/DiagnosticRules.cs#L14-L21"><code>OFSG001</code></a> code inspection.</li>
+<li>In more complicated custom DI usages, if it is desired to <code>.Inject()</code> dependencies into a custom non-drawable class, it must implement the marker <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Allocation/IDependencyInjectionCandidate.cs"><code>IDependencyInjectionCandidate</code></a> interface.</li>
+</ul>
+<p>The implementation of the source generator can be viewed <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework.SourceGeneration/Generators/Dependencies/DependencyInjectionSourceGenerator.cs">here</a>.</p>
+<p>For a fast compile-run cycle, source generators are by default only ran on release builds. Debug builds will use the reflection pathway as a fallback.</p>
+<h2 id="reflection">Reflection</h2>
+<p>The original, legacy implementation of dependency injection heavily uses reflection. It will be used if user drawables are not marked <code>partial</code>, as the source generator cannot attach its own code to such drawables.</p>
+<p>Since the source generator pathway was introduced, this implementation is supported for backwards compatibility, but generally not recommended for new projects.</p>
+<h1 id="storing-and-retrieving-dependencies">Storing and retrieving dependencies</h1>
+<p>There are a few ways dependencies can be <strong>cached</strong> (stored) and <strong>resolved</strong> (retrieved):</p>
+<h2 id="cached-on-drawable-members"><code>[Cached]</code> on drawable members</h2>
+<p>This is the simplest implementation.</p>
+<pre><code class="lang-csharp">/// &lt;summary&gt;
+/// A class which caches something for use by children.
+/// &lt;/summary&gt;
+public partial class MyGame : Game
+{
+    [Cached]
+    protected readonly MyStore Store = new MyStore();
+
+    public MyGame()
+    {
+        Child = new Container
+        {
+            RelativeSizeAxes = Axes.Both,
+            Child = new Container
+            {
+                RelativeSizeAxes = Axes.Both,
+                Child = new Container
+                {
+                    RelativeSizeAxes = Axes.Both,
+                    Child = new MyComponent()
+                }
+            },
+        };
+    }
+}
+
+/// &lt;summary&gt;
+/// A component that consumed the cached class.
+/// &lt;/summary&gt;
+public partial class MyComponent : CompositeDrawable
+{
+    [Resolved]
+    protected MyStore FetchedStore { get; private set; } = null!;
+
+    protected override void LoadComplete()
+    {
+        base.LoadComplete();
+
+        InternalChild = new SpriteText
+        {
+            Text = FetchedStore.GetAwesomeThing()
+        };
+    }
+}
+
+/// &lt;summary&gt;
+/// A class which is to be cached via DI.
+/// &lt;/summary&gt;
+public class MyStore
+{
+    public string GetAwesomeThing() =&gt; &quot;awesome thing!&quot;;
+}
+</code></pre>
+<p>Members marked with either of these attributes are cached or resolved in their respective classes before the <a href="#using-BackgroundDependencyLoader-to-resolve"><code>[BackgroundDependencyLoader]</code></a>-annotated method is run.</p>
+<h2 id="using-backgrounddependencyloader-to-resolve">Using <code>[BackgroundDependencyLoader]</code> to resolve</h2>
+<p>This can be useful if you want to ensure everything happens in the (potentially asynchronous) <code>load()</code> method.</p>
+<pre><code class="lang-csharp">/// &lt;summary&gt;
+/// A class which caches something for use by children.
+/// &lt;/summary&gt;
+public partial class MyGame : Game
+{
+    [Cached]
+    protected readonly MyStore Store = new MyStore();
+
+    public MyGame()
+    {
+        Child = new Container
+        {
+            RelativeSizeAxes = Axes.Both,
+            Child = new Container
+            {
+                RelativeSizeAxes = Axes.Both,
+                Child = new Container
+                {
+                    RelativeSizeAxes = Axes.Both,
+                    Child = new MyComponent()
+                }
+            },
+        };
+    }
+}
+
+/// &lt;summary&gt;
+/// A component that consumed the cached class.
+/// &lt;/summary&gt;
+public partial class MyComponent : CompositeDrawable
+{
+    [BackgroundDependencyLoader]
+    private void load(MyStore store)
+    {
+        InternalChild = new SpriteText
+        {
+            Text = store.GetAwesomeThing()
+        };
+    }
+}
+
+/// &lt;summary&gt;
+/// An class which is to be cached via DI.
+/// &lt;/summary&gt;
+public class MyStore
+{
+    public string GetAwesomeThing() =&gt; &quot;awesome thing!&quot;;
+}
+</code></pre>
+<h2 id="using-createchilddependencies-to-cache">Using <code>CreateChildDependencies()</code> to cache</h2>
+<p>Some more advanced scenarios may require use of this method instead of the <code>[Cached]</code> attribute, such as if late initialisation of the cacheable objects is required.</p>
+<pre><code class="lang-csharp">/// &lt;summary&gt;
+/// A class which caches something for use by children.
+/// &lt;/summary&gt;
+public partial class MyGame : Game
+{
+    protected MyStore Store;
+
+    public MyGame()
+    {
+        Child = new Container
+        {
+            RelativeSizeAxes = Axes.Both,
+            Child = new Container
+            {
+                RelativeSizeAxes = Axes.Both,
+                Child = new Container
+                {
+                    RelativeSizeAxes = Axes.Both,
+                    Child = new MyComponent()
+                }
+            },
+        };
+    }
+
+    protected override IReadOnlyDependencyContainer CreateChildDependencies(IReadOnlyDependencyContainer parent)
+    {
+        var dependencies = new DependencyContainer(base.CreateChildDependencies(parent));
+        dependencies.Cache(Store = new MyStore());
+        return dependencies;
+    }
+}
+</code></pre>
+<p>Note that the <code>DependencyContainer</code> class exposes two methods for caching dependencies:</p>
+<ul>
+<li><p><code>.Cache()</code> will always cache the dependency using its <em>runtime, most derived type</em>. The implications of this are demonstrated by the following example:</p>
+<pre><code class="lang-csharp">public abstract class BaseDependency { }
+public class DerivedDependency : BaseDependency { }
+
+public partial class DependencyProvider
+{
+    private BaseDependency dependency;
+
+    protected override IReadOnlyDependencyContainer CreateChildDependencies(IReadOnlyDependencyContainer parent)
+    {
+        var dependencies = new DependencyContainer(base.CreateChildDependencies(parent));
+        dependencies.Cache(dependency = new DerivedDependency());
+        return dependencies;
+    }
+}
+
+public partial class DependencyConsumer
+{
+    [Resolved]
+    private BaseDependency baseDependency { get; set; }       // WRONG - will fail at runtime
+
+    [Resolved]
+    private DerivedDependency derivedDependency { get; set; } // OK
+}
+</code></pre>
+</li>
+<li><p><code>.CacheAs&lt;T&gt;()</code> will cache the dependency using its <em>declared</em> type, as demonstrated by the following example:</p>
+<pre><code class="lang-csharp">public abstract class BaseDependency { }
+public class DerivedDependency : BaseDependency { }
+
+public partial class DependencyProvider
+{
+    private BaseDependency dependency;
+
+    protected override IReadOnlyDependencyContainer CreateChildDependencies(IReadOnlyDependencyContainer parent)
+    {
+        var dependencies = new DependencyContainer(base.CreateChildDependencies(parent));
+        dependencies.CacheAs(dependency = new DerivedDependency());
+        return dependencies;
+    }
+}
+
+public partial class DependencyConsumer
+{
+    [Resolved]
+    private BaseDependency baseDependency { get; set; }       // OK
+
+    [Resolved]
+    private DerivedDependency derivedDependency { get; set; } // WRONG - will fail at runtime
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="cached-on-drawable-classes"><code>[Cached]</code> on drawable classes</h2>
+<p>Drawable classes themselves can be annotated with the <code>[Cached]</code> attribute. In that case, the attribute is interpreted such that all instances of the drawable class will cache themselves to all of their children.</p>
+<p>The caching will use the type <em>at the point of declaration</em>. To illustrate, given the following structure:</p>
+<pre><code class="lang-csharp">[Cached]
+public partial class A : Drawable { }
+                      
+public partial class B : A { }
+</code></pre>
+<p>the following things will happen:</p>
+<ul>
+<li>Instances of <code>A</code> will cache themselves to their children using type <code>A</code>.</li>
+<li>Instances of <code>B</code> will cache themselves to their children using type <code>A</code>.</li>
+<li>Instances of <code>B</code> will <strong>not</strong> cache themselves to their children using type <code>B</code>. For that to happen, the <code>[Cached]</code> attribute would have to be repeated on type <code>B</code>.</li>
+</ul>
+<h2 id="cached-on-interfaces-implemented-by-a-drawable-class"><code>[Cached]</code> on interfaces implemented by a drawable class</h2>
+<p>A variant of type-based caching above is available via interfaces. Interfaces can be annotated with <code>[Cached]</code>; every <code>Drawable</code> will cache itself to its children using every interface type annotated with <code>[Cached]</code> that it implements. As an example:</p>
+<pre><code class="lang-csharp">[Cached]
+public interface IFirstInterface { }
+
+[Cached]
+public interface ISecondInterface { }
+
+public interface IThirdInterface : ISecondInterface { }
+
+public partial class Dependency : Drawable, IFirstInterface, IThirdInterface { }
+</code></pre>
+<p>all instances of <code>Dependency</code>:</p>
+<ul>
+<li>will cache themselves to children as <code>IFirstInterface</code>,</li>
+<li>will cache themselves to children as <code>ISecondInterface</code> (transitively via <code>IThirdInterface</code>),</li>
+<li>will <strong>not</strong> cache themselves to children as <code>IThirdInterface</code> (as, analogously to classes, <code>[Cached]</code> is only valid on types it is explicitly put on)</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ppy/osu-framework.wiki/blob/master/Dependency-Injection.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

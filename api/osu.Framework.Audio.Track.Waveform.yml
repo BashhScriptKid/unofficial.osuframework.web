@@ -1,0 +1,1904 @@
+### YamlMime:ManagedReference
+items:
+- uid: osu.Framework.Audio.Track.Waveform
+  commentId: T:osu.Framework.Audio.Track.Waveform
+  id: Waveform
+  parent: osu.Framework.Audio.Track
+  children:
+  - osu.Framework.Audio.Track.Waveform.#ctor(System.IO.Stream)
+  - osu.Framework.Audio.Track.Waveform.Dispose
+  - osu.Framework.Audio.Track.Waveform.Dispose(System.Boolean)
+  - osu.Framework.Audio.Track.Waveform.GenerateResampledAsync(System.Int32,System.Threading.CancellationToken)
+  - osu.Framework.Audio.Track.Waveform.GetChannels
+  - osu.Framework.Audio.Track.Waveform.GetChannelsAsync
+  - osu.Framework.Audio.Track.Waveform.GetPoints
+  - osu.Framework.Audio.Track.Waveform.GetPointsAsync
+  langs:
+  - csharp
+  - vb
+  name: Waveform
+  nameWithType: Waveform
+  fullName: osu.Framework.Audio.Track.Waveform
+  type: Class
+  source:
+    remote:
+      path: osu.Framework/Audio/Track/Waveform.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Waveform
+    path: osu.Framework/Audio/Track/Waveform.cs
+    startLine: 20
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio.Track
+  summary: Processes audio sample data such that it can then be consumed to generate waveform plots of the audio.
+  example: []
+  syntax:
+    content: 'public class Waveform : IDisposable'
+    content.vb: Public Class Waveform Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  - osu.Framework.Audio.Track.Waveform.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  - osu.Framework.Audio.Track.Waveform.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  - osu.Framework.Audio.Track.Waveform.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  - osu.Framework.Audio.Track.Waveform.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  - osu.Framework.Audio.Track.Waveform.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  - osu.Framework.Audio.Track.Waveform.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  - osu.Framework.Audio.Track.Waveform.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  - osu.Framework.Audio.Track.Waveform.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+- uid: osu.Framework.Audio.Track.Waveform.#ctor(System.IO.Stream)
+  commentId: M:osu.Framework.Audio.Track.Waveform.#ctor(System.IO.Stream)
+  id: '#ctor(System.IO.Stream)'
+  parent: osu.Framework.Audio.Track.Waveform
+  langs:
+  - csharp
+  - vb
+  name: Waveform(Stream?)
+  nameWithType: Waveform.Waveform(Stream?)
+  fullName: osu.Framework.Audio.Track.Waveform.Waveform(System.IO.Stream?)
+  type: Constructor
+  source:
+    remote:
+      path: osu.Framework/Audio/Track/Waveform.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: .ctor
+    path: osu.Framework/Audio/Track/Waveform.cs
+    startLine: 79
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio.Track
+  summary: Constructs a new <xref href="osu.Framework.Audio.Track.Waveform" data-throw-if-not-resolved="false"></xref> from provided audio data.
+  example: []
+  syntax:
+    content: public Waveform(Stream? data)
+    parameters:
+    - id: data
+      type: System.IO.Stream
+      description: >-
+        The sample data stream.
+
+        The <xref href="osu.Framework.Audio.Track.Waveform" data-throw-if-not-resolved="false"></xref> will take ownership of this stream and dispose it when done reading track data.
+
+        If null, an empty waveform is constructed.
+    content.vb: Public Sub New(data As Stream)
+  overload: osu.Framework.Audio.Track.Waveform.#ctor*
+  nameWithType.vb: Waveform.New(Stream)
+  fullName.vb: osu.Framework.Audio.Track.Waveform.New(System.IO.Stream)
+  name.vb: New(Stream)
+- uid: osu.Framework.Audio.Track.Waveform.GenerateResampledAsync(System.Int32,System.Threading.CancellationToken)
+  commentId: M:osu.Framework.Audio.Track.Waveform.GenerateResampledAsync(System.Int32,System.Threading.CancellationToken)
+  id: GenerateResampledAsync(System.Int32,System.Threading.CancellationToken)
+  parent: osu.Framework.Audio.Track.Waveform
+  langs:
+  - csharp
+  - vb
+  name: GenerateResampledAsync(int, CancellationToken)
+  nameWithType: Waveform.GenerateResampledAsync(int, CancellationToken)
+  fullName: osu.Framework.Audio.Track.Waveform.GenerateResampledAsync(int, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/Track/Waveform.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GenerateResampledAsync
+    path: osu.Framework/Audio/Track/Waveform.cs
+    startLine: 270
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio.Track
+  summary: Creates a new <xref href="osu.Framework.Audio.Track.Waveform" data-throw-if-not-resolved="false"></xref> containing a specific number of data points by selecting the average value of each sampled group.
+  example: []
+  syntax:
+    content: public Task<Waveform> GenerateResampledAsync(int pointCount, CancellationToken cancellationToken = default)
+    parameters:
+    - id: pointCount
+      type: System.Int32
+      description: The number of points the resulting <xref href="osu.Framework.Audio.Track.Waveform" data-throw-if-not-resolved="false"></xref> should contain.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The token to cancel the task.
+    return:
+      type: System.Threading.Tasks.Task{osu.Framework.Audio.Track.Waveform}
+      description: An async task for the generation of the <xref href="osu.Framework.Audio.Track.Waveform" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function GenerateResampledAsync(pointCount As Integer, cancellationToken As CancellationToken = Nothing) As Task(Of Waveform)
+  overload: osu.Framework.Audio.Track.Waveform.GenerateResampledAsync*
+  nameWithType.vb: Waveform.GenerateResampledAsync(Integer, CancellationToken)
+  fullName.vb: osu.Framework.Audio.Track.Waveform.GenerateResampledAsync(Integer, System.Threading.CancellationToken)
+  name.vb: GenerateResampledAsync(Integer, CancellationToken)
+- uid: osu.Framework.Audio.Track.Waveform.GetPoints
+  commentId: M:osu.Framework.Audio.Track.Waveform.GetPoints
+  id: GetPoints
+  parent: osu.Framework.Audio.Track.Waveform
+  langs:
+  - csharp
+  - vb
+  name: GetPoints()
+  nameWithType: Waveform.GetPoints()
+  fullName: osu.Framework.Audio.Track.Waveform.GetPoints()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/Track/Waveform.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetPoints
+    path: osu.Framework/Audio/Track/Waveform.cs
+    startLine: 362
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio.Track
+  summary: Gets all the points represented by this <xref href="osu.Framework.Audio.Track.Waveform" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Waveform.Point[] GetPoints()
+    return:
+      type: osu.Framework.Audio.Track.Waveform.Point[]
+    content.vb: Public Function GetPoints() As Waveform.Point()
+  overload: osu.Framework.Audio.Track.Waveform.GetPoints*
+- uid: osu.Framework.Audio.Track.Waveform.GetPointsAsync
+  commentId: M:osu.Framework.Audio.Track.Waveform.GetPointsAsync
+  id: GetPointsAsync
+  parent: osu.Framework.Audio.Track.Waveform
+  langs:
+  - csharp
+  - vb
+  name: GetPointsAsync()
+  nameWithType: Waveform.GetPointsAsync()
+  fullName: osu.Framework.Audio.Track.Waveform.GetPointsAsync()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/Track/Waveform.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetPointsAsync
+    path: osu.Framework/Audio/Track/Waveform.cs
+    startLine: 367
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio.Track
+  summary: Gets all the points represented by this <xref href="osu.Framework.Audio.Track.Waveform" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Task<Waveform.Point[]> GetPointsAsync()
+    return:
+      type: System.Threading.Tasks.Task{osu.Framework.Audio.Track.Waveform.Point[]}
+    content.vb: Public Function GetPointsAsync() As Task(Of Waveform.Point())
+  overload: osu.Framework.Audio.Track.Waveform.GetPointsAsync*
+- uid: osu.Framework.Audio.Track.Waveform.GetChannels
+  commentId: M:osu.Framework.Audio.Track.Waveform.GetChannels
+  id: GetChannels
+  parent: osu.Framework.Audio.Track.Waveform
+  langs:
+  - csharp
+  - vb
+  name: GetChannels()
+  nameWithType: Waveform.GetChannels()
+  fullName: osu.Framework.Audio.Track.Waveform.GetChannels()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/Track/Waveform.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetChannels
+    path: osu.Framework/Audio/Track/Waveform.cs
+    startLine: 376
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio.Track
+  summary: Gets the number of channels represented by each <xref href="osu.Framework.Audio.Track.Waveform.Point" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public int GetChannels()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetChannels() As Integer
+  overload: osu.Framework.Audio.Track.Waveform.GetChannels*
+- uid: osu.Framework.Audio.Track.Waveform.GetChannelsAsync
+  commentId: M:osu.Framework.Audio.Track.Waveform.GetChannelsAsync
+  id: GetChannelsAsync
+  parent: osu.Framework.Audio.Track.Waveform
+  langs:
+  - csharp
+  - vb
+  name: GetChannelsAsync()
+  nameWithType: Waveform.GetChannelsAsync()
+  fullName: osu.Framework.Audio.Track.Waveform.GetChannelsAsync()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/Track/Waveform.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: GetChannelsAsync
+    path: osu.Framework/Audio/Track/Waveform.cs
+    startLine: 381
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio.Track
+  summary: Gets the number of channels represented by each <xref href="osu.Framework.Audio.Track.Waveform.Point" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Task<int> GetChannelsAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+    content.vb: Public Function GetChannelsAsync() As Task(Of Integer)
+  overload: osu.Framework.Audio.Track.Waveform.GetChannelsAsync*
+- uid: osu.Framework.Audio.Track.Waveform.Dispose
+  commentId: M:osu.Framework.Audio.Track.Waveform.Dispose
+  id: Dispose
+  parent: osu.Framework.Audio.Track.Waveform
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Waveform.Dispose()
+  fullName: osu.Framework.Audio.Track.Waveform.Dispose()
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/Track/Waveform.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Dispose
+    path: osu.Framework/Audio/Track/Waveform.cs
+    startLine: 389
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio.Track
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: osu.Framework.Audio.Track.Waveform.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: osu.Framework.Audio.Track.Waveform.Dispose(System.Boolean)
+  commentId: M:osu.Framework.Audio.Track.Waveform.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: osu.Framework.Audio.Track.Waveform
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: Waveform.Dispose(bool)
+  fullName: osu.Framework.Audio.Track.Waveform.Dispose(bool)
+  type: Method
+  source:
+    remote:
+      path: osu.Framework/Audio/Track/Waveform.cs
+      branch: master
+      repo: https://github.com/ppy/osu-framework
+    id: Dispose
+    path: osu.Framework/Audio/Track/Waveform.cs
+    startLine: 397
+  assemblies:
+  - osu.Framework
+  namespace: osu.Framework.Audio.Track
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: osu.Framework.Audio.Track.Waveform.Dispose*
+  nameWithType.vb: Waveform.Dispose(Boolean)
+  fullName.vb: osu.Framework.Audio.Track.Waveform.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+references:
+- uid: osu.Framework.Audio.Track
+  commentId: N:osu.Framework.Audio.Track
+  href: osu.html
+  name: osu.Framework.Audio.Track
+  nameWithType: osu.Framework.Audio.Track
+  fullName: osu.Framework.Audio.Track
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Audio
+    name: Audio
+    href: osu.Framework.Audio.html
+  - name: .
+  - uid: osu.Framework.Audio.Track
+    name: Track
+    href: osu.Framework.Audio.Track.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Audio
+    name: Audio
+    href: osu.Framework.Audio.html
+  - name: .
+  - uid: osu.Framework.Audio.Track
+    name: Track
+    href: osu.Framework.Audio.Track.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.osu.Framework.Extensions.ExtensionMethods.GetDescription
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Audio.Track.Waveform.osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  parent: osu.Framework.Extensions.ExtensionMethods
+  definition: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<Waveform>(Waveform)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<Waveform>(Waveform)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<osu.Framework.Audio.Track.Waveform>(osu.Framework.Audio.Track.Waveform)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of Waveform)(Waveform)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of osu.Framework.Audio.Track.Waveform)(osu.Framework.Audio.Track.Waveform)
+  name.vb: GetLocalisableDescription(Of Waveform)(Waveform)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Audio.Track.Waveform)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(osu.Framework.Audio.Track.Waveform)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+- uid: osu.Framework.Audio.Track.Waveform.osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  parent: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  definition: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<Waveform>(Waveform)
+  nameWithType: EnumerableExtensions.Yield<Waveform>(Waveform)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<osu.Framework.Audio.Track.Waveform>(osu.Framework.Audio.Track.Waveform)
+  nameWithType.vb: EnumerableExtensions.Yield(Of Waveform)(Waveform)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of osu.Framework.Audio.Track.Waveform)(osu.Framework.Audio.Track.Waveform)
+  name.vb: Yield(Of Waveform)(Waveform)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Audio.Track.Waveform)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(osu.Framework.Audio.Track.Waveform)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+- uid: osu.Framework.Audio.Track.Waveform.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<Waveform>(Waveform)
+  nameWithType: ObjectExtensions.AsNonNull<Waveform>(Waveform)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<osu.Framework.Audio.Track.Waveform>(osu.Framework.Audio.Track.Waveform)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of Waveform)(Waveform)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of osu.Framework.Audio.Track.Waveform)(osu.Framework.Audio.Track.Waveform)
+  name.vb: AsNonNull(Of Waveform)(Waveform)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Audio.Track.Waveform)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(osu.Framework.Audio.Track.Waveform)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+- uid: osu.Framework.Audio.Track.Waveform.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<Waveform>(Waveform)
+  nameWithType: ObjectExtensions.IsNotNull<Waveform>(Waveform)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<osu.Framework.Audio.Track.Waveform>(osu.Framework.Audio.Track.Waveform)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of Waveform)(Waveform)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of osu.Framework.Audio.Track.Waveform)(osu.Framework.Audio.Track.Waveform)
+  name.vb: IsNotNull(Of Waveform)(Waveform)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Audio.Track.Waveform)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(osu.Framework.Audio.Track.Waveform)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+- uid: osu.Framework.Audio.Track.Waveform.osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  parent: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  definition: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<Waveform>(Waveform)
+  nameWithType: ObjectExtensions.IsNull<Waveform>(Waveform)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<osu.Framework.Audio.Track.Waveform>(osu.Framework.Audio.Track.Waveform)
+  nameWithType.vb: ObjectExtensions.IsNull(Of Waveform)(Waveform)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of osu.Framework.Audio.Track.Waveform)(osu.Framework.Audio.Track.Waveform)
+  name.vb: IsNull(Of Waveform)(Waveform)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Audio.Track.Waveform)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(osu.Framework.Audio.Track.Waveform)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+- uid: osu.Framework.Audio.Track.Waveform.osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<Waveform, TChild>(Waveform, TChild)
+  nameWithType: ContainerExtensions.WithChild<Waveform, TChild>(Waveform, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<osu.Framework.Audio.Track.Waveform, TChild>(osu.Framework.Audio.Track.Waveform, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of Waveform, TChild)(Waveform, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of osu.Framework.Audio.Track.Waveform, TChild)(osu.Framework.Audio.Track.Waveform, TChild)
+  name.vb: WithChild(Of Waveform, TChild)(Waveform, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Audio.Track.Waveform,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(osu.Framework.Audio.Track.Waveform,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Audio.Track.Waveform.osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(System.Collections.Generic.IEnumerable{{TChild}})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<Waveform, TChild>(Waveform, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<Waveform, TChild>(Waveform, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<osu.Framework.Audio.Track.Waveform, TChild>(osu.Framework.Audio.Track.Waveform, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of Waveform, TChild)(Waveform, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of osu.Framework.Audio.Track.Waveform, TChild)(osu.Framework.Audio.Track.Waveform, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of Waveform, TChild)(Waveform, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Audio.Track.Waveform,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(osu.Framework.Audio.Track.Waveform,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Audio.Track.Waveform.osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2({TChild})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  parent: osu.Framework.Graphics.Containers.ContainerExtensions
+  definition: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<Waveform, TChild>(Waveform, TChild)
+  nameWithType: ContainerExtensions.Wrap<Waveform, TChild>(Waveform, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<osu.Framework.Audio.Track.Waveform, TChild>(osu.Framework.Audio.Track.Waveform, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of Waveform, TChild)(Waveform, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of osu.Framework.Audio.Track.Waveform, TChild)(osu.Framework.Audio.Track.Waveform, TChild)
+  name.vb: Wrap(Of Waveform, TChild)(Waveform, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Audio.Track.Waveform,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(osu.Framework.Audio.Track.Waveform,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+  isExternal: true
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  name: GetDescription(object)
+  nameWithType: ExtensionMethods.GetDescription(object)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetDescription(object)
+  nameWithType.vb: ExtensionMethods.GetDescription(Object)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetDescription(Object)
+  name.vb: GetDescription(Object)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetDescription(System.Object)
+    name: GetDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetDescription_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: osu.Framework.Extensions.ExtensionMethods
+  commentId: T:osu.Framework.Extensions.ExtensionMethods
+  parent: osu.Framework.Extensions
+  href: osu.Framework.Extensions.ExtensionMethods.html
+  name: ExtensionMethods
+  nameWithType: ExtensionMethods
+  fullName: osu.Framework.Extensions.ExtensionMethods
+- uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  commentId: M:osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+  href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  name: GetLocalisableDescription<T>(T)
+  nameWithType: ExtensionMethods.GetLocalisableDescription<T>(T)
+  fullName: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription<T>(T)
+  nameWithType.vb: ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription(Of T)(T)
+  name.vb: GetLocalisableDescription(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ExtensionMethods.GetLocalisableDescription``1(``0)
+    name: GetLocalisableDescription
+    href: osu.Framework.Extensions.ExtensionMethods.html#osu_Framework_Extensions_ExtensionMethods_GetLocalisableDescription__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  commentId: M:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  name: Yield<T>(T)
+  nameWithType: EnumerableExtensions.Yield<T>(T)
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield<T>(T)
+  nameWithType.vb: EnumerableExtensions.Yield(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield(Of T)(T)
+  name.vb: Yield(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.Yield``1(``0)
+    name: Yield
+    href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html#osu_Framework_Extensions_IEnumerableExtensions_EnumerableExtensions_Yield__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  commentId: T:osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+  parent: osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  name: AsNonNull<T>(T)
+  nameWithType: ObjectExtensions.AsNonNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull<T>(T)
+  nameWithType.vb: ObjectExtensions.AsNonNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull(Of T)(T)
+  name.vb: AsNonNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.AsNonNull``1(``0)
+    name: AsNonNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_AsNonNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  commentId: T:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+  parent: osu.Framework.Extensions.ObjectExtensions
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  name: IsNotNull<T>(T)
+  nameWithType: ObjectExtensions.IsNotNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNotNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull(Of T)(T)
+  name.vb: IsNotNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNotNull``1(``0)
+    name: IsNotNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNotNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  commentId: M:osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+  href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  name: IsNull<T>(T)
+  nameWithType: ObjectExtensions.IsNull<T>(T)
+  fullName: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull<T>(T)
+  nameWithType.vb: ObjectExtensions.IsNull(Of T)(T)
+  fullName.vb: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull(Of T)(T)
+  name.vb: IsNull(Of T)(T)
+  spec.csharp:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.IsNull``1(``0)
+    name: IsNull
+    href: osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.html#osu_Framework_Extensions_ObjectExtensions_ObjectExtensions_IsNull__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  name: WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: WithChild(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChild``2(``0,``1)
+    name: WithChild
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChild__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions
+  commentId: T:osu.Framework.Graphics.Containers.ContainerExtensions
+  parent: osu.Framework.Graphics.Containers
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html
+  name: ContainerExtensions
+  nameWithType: ContainerExtensions
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+  isExternal: true
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  name: WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  nameWithType: ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, IEnumerable<TChild>)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren<TContainer, TChild>(TContainer, System.Collections.Generic.IEnumerable<TChild>)
+  nameWithType.vb: ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren(Of TContainer, TChild)(TContainer, System.Collections.Generic.IEnumerable(Of TChild))
+  name.vb: WithChildren(Of TContainer, TChild)(TContainer, IEnumerable(Of TChild))
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TChild
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.WithChildren``2(``0,System.Collections.Generic.IEnumerable{``1})
+    name: WithChildren
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_WithChildren__2___0_System_Collections_Generic_IEnumerable___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: )
+- uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  commentId: M:osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+  href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  name: Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType: ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  fullName: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap<TContainer, TChild>(TContainer, TChild)
+  nameWithType.vb: ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  fullName.vb: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap(Of TContainer, TChild)(TContainer, TChild)
+  name.vb: Wrap(Of TContainer, TChild)(TContainer, TChild)
+  spec.csharp:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: <
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: '>'
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  spec.vb:
+  - uid: osu.Framework.Graphics.Containers.ContainerExtensions.Wrap``2(``0,``1)
+    name: Wrap
+    href: osu.Framework.Graphics.Containers.ContainerExtensions.html#osu_Framework_Graphics_Containers_ContainerExtensions_Wrap__2___0___1_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+  - name: (
+  - name: TContainer
+  - name: ','
+  - name: " "
+  - name: TChild
+  - name: )
+- uid: osu.Framework.Extensions
+  commentId: N:osu.Framework.Extensions
+  href: osu.html
+  name: osu.Framework.Extensions
+  nameWithType: osu.Framework.Extensions
+  fullName: osu.Framework.Extensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+- uid: osu.Framework.Extensions.IEnumerableExtensions
+  commentId: N:osu.Framework.Extensions.IEnumerableExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.IEnumerableExtensions
+  nameWithType: osu.Framework.Extensions.IEnumerableExtensions
+  fullName: osu.Framework.Extensions.IEnumerableExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.IEnumerableExtensions
+    name: IEnumerableExtensions
+    href: osu.Framework.Extensions.IEnumerableExtensions.html
+- uid: osu.Framework.Extensions.ObjectExtensions
+  commentId: N:osu.Framework.Extensions.ObjectExtensions
+  href: osu.html
+  name: osu.Framework.Extensions.ObjectExtensions
+  nameWithType: osu.Framework.Extensions.ObjectExtensions
+  fullName: osu.Framework.Extensions.ObjectExtensions
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Extensions
+    name: Extensions
+    href: osu.Framework.Extensions.html
+  - name: .
+  - uid: osu.Framework.Extensions.ObjectExtensions
+    name: ObjectExtensions
+    href: osu.Framework.Extensions.ObjectExtensions.html
+- uid: osu.Framework.Graphics.Containers
+  commentId: N:osu.Framework.Graphics.Containers
+  href: osu.html
+  name: osu.Framework.Graphics.Containers
+  nameWithType: osu.Framework.Graphics.Containers
+  fullName: osu.Framework.Graphics.Containers
+  spec.csharp:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+  spec.vb:
+  - uid: osu
+    name: osu
+    href: osu.html
+  - name: .
+  - uid: osu.Framework
+    name: Framework
+    href: osu.Framework.html
+  - name: .
+  - uid: osu.Framework.Graphics
+    name: Graphics
+    href: osu.Framework.Graphics.html
+  - name: .
+  - uid: osu.Framework.Graphics.Containers
+    name: Containers
+    href: osu.Framework.Graphics.Containers.html
+- uid: osu.Framework.Audio.Track.Waveform
+  commentId: T:osu.Framework.Audio.Track.Waveform
+  parent: osu.Framework.Audio.Track
+  href: osu.Framework.Audio.Track.Waveform.html
+  name: Waveform
+  nameWithType: Waveform
+  fullName: osu.Framework.Audio.Track.Waveform
+- uid: osu.Framework.Audio.Track.Waveform.#ctor*
+  commentId: Overload:osu.Framework.Audio.Track.Waveform.#ctor
+  href: osu.Framework.Audio.Track.Waveform.html#osu_Framework_Audio_Track_Waveform__ctor_System_IO_Stream_
+  name: Waveform
+  nameWithType: Waveform.Waveform
+  fullName: osu.Framework.Audio.Track.Waveform.Waveform
+  nameWithType.vb: Waveform.New
+  fullName.vb: osu.Framework.Audio.Track.Waveform.New
+  name.vb: New
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: osu.Framework.Audio.Track.Waveform.GenerateResampledAsync*
+  commentId: Overload:osu.Framework.Audio.Track.Waveform.GenerateResampledAsync
+  href: osu.Framework.Audio.Track.Waveform.html#osu_Framework_Audio_Track_Waveform_GenerateResampledAsync_System_Int32_System_Threading_CancellationToken_
+  name: GenerateResampledAsync
+  nameWithType: Waveform.GenerateResampledAsync
+  fullName: osu.Framework.Audio.Track.Waveform.GenerateResampledAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{osu.Framework.Audio.Track.Waveform}
+  commentId: T:System.Threading.Tasks.Task{osu.Framework.Audio.Track.Waveform}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Waveform>
+  nameWithType: Task<Waveform>
+  fullName: System.Threading.Tasks.Task<osu.Framework.Audio.Track.Waveform>
+  nameWithType.vb: Task(Of Waveform)
+  fullName.vb: System.Threading.Tasks.Task(Of osu.Framework.Audio.Track.Waveform)
+  name.vb: Task(Of Waveform)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: osu.Framework.Audio.Track.Waveform.GetPoints*
+  commentId: Overload:osu.Framework.Audio.Track.Waveform.GetPoints
+  href: osu.Framework.Audio.Track.Waveform.html#osu_Framework_Audio_Track_Waveform_GetPoints
+  name: GetPoints
+  nameWithType: Waveform.GetPoints
+  fullName: osu.Framework.Audio.Track.Waveform.GetPoints
+- uid: osu.Framework.Audio.Track.Waveform.Point[]
+  isExternal: true
+  href: osu.Framework.Audio.Track.Waveform.Point.html
+  name: Point[]
+  nameWithType: Waveform.Point[]
+  fullName: osu.Framework.Audio.Track.Waveform.Point[]
+  nameWithType.vb: Waveform.Point()
+  fullName.vb: osu.Framework.Audio.Track.Waveform.Point()
+  name.vb: Point()
+  spec.csharp:
+  - uid: osu.Framework.Audio.Track.Waveform.Point
+    name: Point
+    href: osu.Framework.Audio.Track.Waveform.Point.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: osu.Framework.Audio.Track.Waveform.Point
+    name: Point
+    href: osu.Framework.Audio.Track.Waveform.Point.html
+  - name: (
+  - name: )
+- uid: osu.Framework.Audio.Track.Waveform.GetPointsAsync*
+  commentId: Overload:osu.Framework.Audio.Track.Waveform.GetPointsAsync
+  href: osu.Framework.Audio.Track.Waveform.html#osu_Framework_Audio_Track_Waveform_GetPointsAsync
+  name: GetPointsAsync
+  nameWithType: Waveform.GetPointsAsync
+  fullName: osu.Framework.Audio.Track.Waveform.GetPointsAsync
+- uid: System.Threading.Tasks.Task{osu.Framework.Audio.Track.Waveform.Point[]}
+  commentId: T:System.Threading.Tasks.Task{osu.Framework.Audio.Track.Waveform.Point[]}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Waveform.Point[]>
+  nameWithType: Task<Waveform.Point[]>
+  fullName: System.Threading.Tasks.Task<osu.Framework.Audio.Track.Waveform.Point[]>
+  nameWithType.vb: Task(Of Waveform.Point())
+  fullName.vb: System.Threading.Tasks.Task(Of osu.Framework.Audio.Track.Waveform.Point())
+  name.vb: Task(Of Waveform.Point())
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: .
+  - uid: osu.Framework.Audio.Track.Waveform.Point
+    name: Point
+    href: osu.Framework.Audio.Track.Waveform.Point.html
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: .
+  - uid: osu.Framework.Audio.Track.Waveform.Point
+    name: Point
+    href: osu.Framework.Audio.Track.Waveform.Point.html
+  - name: (
+  - name: )
+  - name: )
+- uid: osu.Framework.Audio.Track.Waveform.Point
+  commentId: T:osu.Framework.Audio.Track.Waveform.Point
+  href: osu.Framework.Audio.Track.Waveform.html
+  name: Waveform.Point
+  nameWithType: Waveform.Point
+  fullName: osu.Framework.Audio.Track.Waveform.Point
+  spec.csharp:
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: .
+  - uid: osu.Framework.Audio.Track.Waveform.Point
+    name: Point
+    href: osu.Framework.Audio.Track.Waveform.Point.html
+  spec.vb:
+  - uid: osu.Framework.Audio.Track.Waveform
+    name: Waveform
+    href: osu.Framework.Audio.Track.Waveform.html
+  - name: .
+  - uid: osu.Framework.Audio.Track.Waveform.Point
+    name: Point
+    href: osu.Framework.Audio.Track.Waveform.Point.html
+- uid: osu.Framework.Audio.Track.Waveform.GetChannels*
+  commentId: Overload:osu.Framework.Audio.Track.Waveform.GetChannels
+  href: osu.Framework.Audio.Track.Waveform.html#osu_Framework_Audio_Track_Waveform_GetChannels
+  name: GetChannels
+  nameWithType: Waveform.GetChannels
+  fullName: osu.Framework.Audio.Track.Waveform.GetChannels
+- uid: osu.Framework.Audio.Track.Waveform.GetChannelsAsync*
+  commentId: Overload:osu.Framework.Audio.Track.Waveform.GetChannelsAsync
+  href: osu.Framework.Audio.Track.Waveform.html#osu_Framework_Audio_Track_Waveform_GetChannelsAsync
+  name: GetChannelsAsync
+  nameWithType: Waveform.GetChannelsAsync
+  fullName: osu.Framework.Audio.Track.Waveform.GetChannelsAsync
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<int>
+  nameWithType: Task<int>
+  fullName: System.Threading.Tasks.Task<int>
+  nameWithType.vb: Task(Of Integer)
+  fullName.vb: System.Threading.Tasks.Task(Of Integer)
+  name.vb: Task(Of Integer)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: osu.Framework.Audio.Track.Waveform.Dispose*
+  commentId: Overload:osu.Framework.Audio.Track.Waveform.Dispose
+  href: osu.Framework.Audio.Track.Waveform.html#osu_Framework_Audio_Track_Waveform_Dispose
+  name: Dispose
+  nameWithType: Waveform.Dispose
+  fullName: osu.Framework.Audio.Track.Waveform.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
