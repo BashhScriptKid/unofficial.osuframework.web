@@ -121,7 +121,7 @@
 </li>
 </ul>
 <p>The threading mode can be set using the <code>ExecutionMode</code> framework setting, or using the <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F7</kbd> shortcut.</p>
-<p>Note that in either mode, it is possible that other tasks, such as asynchronous loads of drawables via <code>CompositeDrawable.LoadComponentAsync()</code> (see <a href="https://github.com/ppy/osu-framework/wiki/Asynchronous-loading">docs on asynchronous loading</a>), or <code>Task</code>s running on the .NET runtime's thread pool, can use additional OS threads.</p>
+<p>Note that in either mode, it is possible that other tasks, such as asynchronous loads of drawables via <code>CompositeDrawable.LoadComponentAsync()</code> (see <a href="./osu.Framework.wiki/Asynchronous-loading">docs on asynchronous loading</a>), or <code>Task</code>s running on the .NET runtime's thread pool, can use additional OS threads.</p>
 <h1 id="scheduling">Scheduling</h1>
 <p>Relatively often, there is a need to change the state of a <code>Drawable</code> or <code>Component</code> in response from a callback which is not executing on the game's update thread.
 An example of this would be updating the text and transforms to a <code>SpriteText</code> in response to a web request.

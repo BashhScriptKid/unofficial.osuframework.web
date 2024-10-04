@@ -86,31 +86,8 @@
 
         <article data-uid="">
 
-<p>This tutorial will show you how to create a new project integrating osu-framework from scratch. It is not meant to be a guide for contributing to the osu-framework project itself.</p>
-<ul>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#getting-started">Getting started</a>
-<ul>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#creating-a-new-project">Create a new project</a></li>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#project-structure">Project structure</a></li>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#game-logic">Game logic</a></li>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#platform-specific-logic">Platform specific logic</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#testing">Testing</a>
-<ul>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#the-test-browser">The Test Browser</a></li>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#adding-tests-to-the-test-browser">Adding tests to the test browser</a></li>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#example-test">Example test</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#appendix">Appendix</a>
-<ul>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#BackgroundDependencyLoader-attribute">BackgroundDependencyLoader attribute</a></li>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#setup-attribute">Setup Attribute</a></li>
-<li><a href="https://github.com/ppy/osu-framework/wiki/Setting-up-your-first-project#further-reading">Further Reading</a></li>
-</ul>
-</li>
-</ul>
+<p>This tutorial will show you how to create a new project integrating osu-framework from scratch.</p>
+<p>It is not meant to be a guide for contributing to the osu-framework project itself. in which case, you should check out the <a href="../CONTRIBUTING.md">contributing</a></p>
 <h1 id="getting-started">Getting started</h1>
 <h2 id="creating-a-new-project">Creating a new project</h2>
 <p>To get started, a custom osu! game base project has been made available as a template pack in the .NET command line interface. Using this template, it is possible to quickly and easily generate a new project using <code>osu-framework</code> as a starting point for creating your own game.</p>
@@ -120,10 +97,10 @@
 <li><p>Make sure the <code>osu-framework</code>  project template is downloaded by running <code>dotnet new install ppy.osu.Framework.Templates</code>.</p>
 </li>
 <li><p>Run <code>dotnet new osu-framework-game -n &lt;MyNewProjectName&gt;</code> to generate a new folder containing the project.</p>
-<blockquote>
-<p><strong>Warning</strong>
-Do not use spaces or hyphens in your project name. This does not play nice with the templating system.</p>
-</blockquote>
+<div class="WARNING">
+<h5>Warning</h5>
+<p>Do not use spaces or hyphens in your project name. This does not play nice with the templating system.</p>
+</div>
 </li>
 <li><p>Open the folder, and open <code>MyNewProjectName.sln</code> to begin!</p>
 </li>
@@ -139,7 +116,7 @@ Do not use spaces or hyphens in your project name. This does not play nice with 
 <li><code>MyNewProject.Game.Tests</code>: This project allows you to write and test the logic and UI of your project. It allows access to the Test Browser, which is a separate visual testing framework that will allow you to test your UI elements and other visuals.</li>
 </ul>
 <h2 id="game-logic">Game logic</h2>
-<p>If you open up <code>MyNewProject.Game/MyNewProjectGame.cs</code>, you'll see the class responsible for some basic game logic. It inherits from the <code>osu.Framework.Game</code> super-class and by default, implements a basic <a href="https://github.com/ppy/osu-framework/wiki/Screens-and-Screen-Stacks">screen stack</a> setup:</p>
+<p>If you open up <code>MyNewProject.Game/MyNewProjectGame.cs</code>, you'll see the class responsible for some basic game logic. It inherits from the <code>osu.Framework.Game</code> super-class and by default, implements a basic <a href="./osu.Framework.wiki/Screens-and-Screen-Stacks">screen stack</a> setup:</p>
 <pre><code class="lang-csharp">namespace MyNewProjectName.Game
 {
     public partial class MainScreen : Screen
@@ -218,8 +195,8 @@ Do not use spaces or hyphens in your project name. This does not play nice with 
     }
 }
 </code></pre>
-<h2 id="testing">Testing</h2>
-<h3 id="the-test-browser">The test browser</h3>
+<h1 id="testing">Testing</h1>
+<h2 id="the-test-browser">The test browser</h2>
 <p><code>osu-framework</code> includes a visual testing framework that helps provide tests that can be verified both visually and systematically via <a href="https://nunit.org/">NUnit</a>. When running the tests project, a utility called the <strong>test browser</strong> will collect all of your tests, and present them in an executable that presents all of the tests in a list.</p>
 <p>The pre-generated project will feature an example test class in <code>MyGameProject.Game.Tests/Visual/TestSceneMyNewProjectGame.cs</code>.</p>
 <p>In order for your test browser to discover tests, you will need to specify a namespace in which for the browser to look in when constructing it:</p>
@@ -274,7 +251,7 @@ Do not use spaces or hyphens in your project name. This does not play nice with 
 
 </code></pre>
 <h2 id="adding-tests-to-the-test-browser">Adding tests to the Test Browser</h2>
-<p>Now that our Test Browser is discovering tests from the specified namespace, we can start adding tests! To do so, create a new class that derives <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Testing/TestScene.cs"><code>TestScene</code></a> with the <a href="https://docs.nunit.org/articles/nunit/writing-tests/attributes/testfixture.html"><code>TestFixture</code></a> attribute. From here, we can add steps to this test of various types. For information on what types of steps are available, please refer to <a href="https://github.com/ppy/osu-framework/wiki/Development-and-Testing#steps-and-automated-testing">Dynamic Compilation and Visual Testing</a>.</p>
+<p>Now that our Test Browser is discovering tests from the specified namespace, we can start adding tests! To do so, create a new class that derives <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Testing/TestScene.cs"><code>TestScene</code></a> with the <a href="https://docs.nunit.org/articles/nunit/writing-tests/attributes/testfixture.html"><code>TestFixture</code></a> attribute. From here, we can add steps to this test of various types. For information on what types of steps are available, please refer to <a href="./osu.Framework.wiki/Development-and-Testing#steps-and-automated-testing">Dynamic Compilation and Visual Testing</a>.</p>
 <h2 id="example-test">Example Test</h2>
 <p>The following code adds a simple cube to the visual test browser that we created above. The cube has a rigid body attached, and should drop to the bottom of the screen when created. From here, we can choose to check the behavior of the cube by asserting that the cube eventually reaches the bottom via <code>AddAssert()</code>.</p>
 <pre><code class="lang-csharp">namespace AwesomeGame.VisualTests
@@ -328,9 +305,9 @@ Do not use spaces or hyphens in your project name. This does not play nice with 
 <p>The <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Allocation/BackgroundDependencyLoaderAttribute.cs"><code>BackgroundDependencyLoader</code></a> attribute denotes a method to be the load method of a <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Drawable.cs">Drawable</a>. You can specify a type in the method parameters to attempt to grab an object of that type that has been <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Caching/Cached.cs">cached</a>.</p>
 <h2 id="further-reading">Further reading</h2>
 <ul>
-<li>For information on how to load your own resources such as textures and audio, please read <a href="https://github.com/ppy/osu-framework/wiki/Setting-Up-Compiled-Resource-Stores">Setting Up Compiled Resource Stores</a>.</li>
-<li>For more information regarding dependency injection via the BackgroundDependencyLoader attribute, please read <a href="https://github.com/ppy/osu-framework/wiki/Dependency-Injection">Dependency Injection</a></li>
-<li>For additional reading on visual tests, please refer to <a href="https://github.com/ppy/osu-framework/wiki/Development-and-Testing">Dynamic Compilation and Visual Testing</a></li>
+<li>For information on how to load your own resources such as textures and audio, please read <a href="./osu.Framework.wiki/Setting-Up-Compiled-Resource-Stores">Setting Up Compiled Resource Stores</a>.</li>
+<li>For more information regarding dependency injection via the BackgroundDependencyLoader attribute, please read <a href="./osu.Framework.wiki/Dependency-Injection">Dependency Injection</a></li>
+<li>For additional reading on visual tests, please refer to <a href="./osu.Framework.wiki/Development-and-Testing">Dynamic Compilation and Visual Testing</a></li>
 </ul>
 
 </article>

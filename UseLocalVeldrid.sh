@@ -3,7 +3,7 @@
 # Run this script to use a local copy of veldrid rather than fetching it from nuget.
 # It expects the veldrid directory to be at the same level as the osu-framework directory
 #
-# https://github.com/ppy/osu-framework/wiki/Testing-local-framework-checkout-with-other-projects
+# ./osu.Framework.wiki/Testing-local-framework-checkout-with-other-projects
 
 FRAMEWORK_CSPROJ="osu.Framework/osu.Framework.csproj"
 SLN="osu-framework.sln"
