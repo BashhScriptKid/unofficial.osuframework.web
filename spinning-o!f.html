@@ -1,6 +1,6 @@
 <style>
 
-    @animation spinner { /* 360 degrees rotation*/
+    @keyframes spinner { /* speeen animator */
         from {
             transform: rotate(0deg);
         }
@@ -9,30 +9,111 @@
         }
     }
 
-    /* make 3 svg file overlap each other*/
+    body {
+        background-color: black;
+    }
+    
+    
+    .centeredDiv {
+        display: grid;
+        position: absolute;
+        margin: auto;
+        width: 50%;
+    }
+
+/*** SPLASH BACKGROUND ***/
+
     .splashObj1,
     .splashObj2,
     .splashObj3 {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: absolute;
         animation-name: spinner;
-        animation-duration: 60s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
     }
 
-    .splashObj1 {
-
+    /**  t = 60 * (0.25 / n)  **/
+    .splashObj3{
+        animation-duration: 60s;
     }
+    .splashObj2{
+        animation-duration: 15s;
+    }
+    .splashObj1{
+        animation-duration: 7.5s;
+    }
+
+/*** LOGO BACKGROUND ***/
+
+    .frameworkObj1,
+    .frameworkObj2,
+    .frameworkObj3,
+    .frameworkObj4,
+    .frameworkObj5,
+    .frameworkObj6,
+    .frameworkObj7,
+    .frameworkObj8,
+    .frameworkObj9 {
+        position: absolute;
+        animation-name: spinner;
+        animation-timing-function:linear;
+        animation-iteration-count: infinite;
+    }
+
+    /**  t = 60 * (0.125 * (n-1))  **/ 
+
+    .frameworkObj9 {
+        animation-duration: 60s;
+        animation-direction: reverse;
+    }
+    .frameworkObj8 {
+        animation-duration: 52.5s;
+    }
+    .frameworkObj7 {
+        animation-duration: 45s;
+        animation-direction: reverse;
+    }
+    .frameworkObj6 {
+        animation-duration: 37.5s;
+    }
+    .frameworkObj5 {
+        animation-duration: 30s;
+        animation-direction: reverse;
+    }
+    .frameworkObj4 {
+        animation-duration: 22.5s;
+    }
+    .frameworkObj3 {
+        animation-duration: 15s;
+        animation-direction: reverse;
+    }
+    .frameworkObj2 {
+        animation-duration: 7.5s;
+    }
+    .frameworkObj1 {
+        animation-duration: 4s;
+        animation-direction: reverse;
+    }
+
+
+
 
 </style>
 
-<div class="spinning-o!f">
-    <img class ="splashObj1" src="assets/o!f bg-separate splash/o!f Logo Splash_path1.svg">
-    <img class ="splashObj2" src="assets/o!f bg-separate splash/o!f Logo Splash_path2.svg">
-    <img class ="splashObj3" src="assets/o!f bg-separate splash/o!f Logo Splash_path3.svg">
+<div>
+    <img class ="splashObj3" src="assets/o!f bg-separate splash/o!f Logo Splash_path3.svg" alt="logo splash background">
+    <img class ="splashObj2" src="assets/o!f bg-separate splash/o!f Logo Splash_path2.svg" alt="logo splash background">
+    <img class ="splashObj1" src="assets/o!f bg-separate splash/o!f Logo Splash_path1.svg" alt="logo splash background">
+</div>
 
-
+<div>
+    <img class="frameworkObj1" src="assets/o!f bg-separate/o!f_path1.svg" alt="logo background">
+    <img class="frameworkObj2" src="assets/o!f bg-separate/o!f_path2.svg" alt="logo background">
+    <img class="frameworkObj3" src="assets/o!f bg-separate/o!f_path3.svg" alt="logo background">
+    <img class="frameworkObj4" src="assets/o!f bg-separate/o!f_path4.svg" alt="logo background">
+    <img class="frameworkObj5" src="assets/o!f bg-separate/o!f_path5.svg" alt="logo background">
+    <img class="frameworkObj6" src="assets/o!f bg-separate/o!f_path6.svg" alt="logo background">
+    <img class="frameworkObj7" src="assets/o!f bg-separate/o!f_path7.svg" alt="logo background">
+    <img class="frameworkObj8" src="assets/o!f bg-separate/o!f_path8.svg" alt="logo background">
+    <img class="frameworkObj9" src="assets/o!f bg-separate/o!f_path9.svg" alt="logo background">
 </div>
