@@ -24,6 +24,8 @@ docfx serve ./_site --port 8080
 (port flag is optional but it makes more clear where to navigate)
 - Update table of contents when introducing new pages, or simply renames, by navigating into `toc.yml`, respective to the folder where your changes are made, which is yes, using [YAML](https://yaml.org/). Making a whole new category would require modifying the file in the root folder (as that's where the docfx.json file resides).
 
+- Make a discussions thread if you have something in your mind, it'll get moved into issues if necessary!
+
 ### Don't:
 -	Make changes to html file, as your changes won't last as soon as you rebuild your file. PLEASE only make changes directly to the source code's commenting or markdown files, for API references and wiki pages, respectively.
 
