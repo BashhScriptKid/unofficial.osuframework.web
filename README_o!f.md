@@ -15,7 +15,7 @@
 
 ## Developing a game using osu!framework
 
-If you are interested in **creating a project** using the framework, please start from the [getting started](osu.Framework.Wiki/Setting-up-your-first-project.md) wiki resources (or jump straight over to the [project templates](https://github.com/ppy/osu-framework/tree/master/osu.Framework.Templates)). You can either start off from an empty project, or take a peek at a working sample game. Either way, full project structure, cross-platform support, and  a testing setup are included!
+If you are interested in **creating a project** using the framework, please start from the [getting started](osu-framework.Wiki/Setting-up-your-first-project.md) wiki resources (or jump straight over to the [project templates](https://github.com/ppy/osu-framework/tree/master/osu.Framework.Templates)). You can either start off from an empty project, or take a peek at a working sample game. Either way, full project structure, cross-platform support, and  a testing setup are included!
 
 The rest of the information on this page is related to working *on* the framework, not *using* it!
 
@@ -25,7 +25,7 @@ This framework is intended to take steps beyond what you would normally expect f
 
 - Anywhere we implement graphical components, they will be displayed with a generic design and will be derivable for further customisation.
 - Common elements used by games (texture caching, font loading) will be automatically initialised at runtime.
-- Allow for isolated development of components via a solid testing environment (`VisualTests` and `TestCases`). Check the [wiki](./osu.Framework.wiki/Development-and-Testing) for more information on how these can be used to streamline development.
+- Allow for isolated development of components via a solid testing environment (`VisualTests` and `TestCases`). Check the [wiki](./osu-framework.wiki/Home.md) for more information on how these can be used to streamline development.
 
 ## Requirements
 
@@ -50,7 +50,7 @@ Contributions can be made via pull requests to this repository.
 
 If you're unsure of what you can help with, check out the [list of open issues](https://github.com/ppy/osu-framework/issues) (especially those with the ["good first issue"](https://github.com/ppy/osu-framework/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22) label).
 
-Before starting, please make sure you are familiar with the [development and testing](./osu.Framework.wiki/Development-and-Testing) procedure we have set up. New component development, and where possible, bug fixing and debugging existing components **should always be done under VisualTests**.
+Before starting, please make sure you are familiar with the [development and testing](./osu-framework.wiki/Development-and-Testing.md) procedure we have set up. New component development, and where possible, bug fixing and debugging existing components **should always be done under VisualTests**.
 
 Note that while we already have certain standards in place, nothing is set in stone. If you have an issue with the way code is structured; with any libraries we are using; with any processes involved with contributing, *please* bring it up. We welcome all feedback so we can make contributing to this project as pain-free as possible.
 
@@ -58,7 +58,7 @@ We love to reward quality contributions. If you have made a large contribution, 
 
 ## Licence
 
-This framework is licensed under the [MIT licence](https://opensource.org/licenses/MIT). Please see [the licence file](LICENCE) for more information. [tl;dr](https://tldrlegal.com/license/mit-license) you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.
+This framework is licensed under the [MIT licence](https://opensource.org/licenses/MIT). Please see [the licence file](./LICENCE) for more information. [tl;dr](https://tldrlegal.com/license/mit-license) you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.
 
 The BASS audio library (a dependency of this framework) is a commercial product. While it is free for non-commercial use, please ensure to [obtain a valid licence](http://www.un4seen.com/bass.html#license) if you plan on distributing any application using it commercially.
 

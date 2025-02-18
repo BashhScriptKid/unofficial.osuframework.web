@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Namespace osu.Framework.Timing | osu!framework </title>
+      <title> Namespace osu.Framework.Timing | osu!framework </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Namespace osu.Framework.Timing | osu!framework ">
+      <meta name="title" content=" Namespace osu.Framework.Timing | osu!framework ">
       
       
       <link rel="icon" href="../assets/nupkg icon.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/BashhScriptKid/unofficial.osuframework.web/blob/master/api/osu.Framework.Timing.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -39,7 +39,7 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
@@ -84,113 +84,59 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="osu.Framework.Timing">
+        <article data-uid="">
+<h1 id="osu_Framework_Timing"> Namespace osu.Framework.Timing</h1>
 
-  <h1 id="osu_Framework_Timing" data-uid="osu.Framework.Timing" class="text-break">Namespace osu.Framework.Timing</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-
-    <h3 id="classes">
-Classes
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html">DecoupleableInterpolatingFramedClock</a></dt>
-      <dd><p>Adds the ability to keep the clock running even when the underlying source has stopped or cannot handle the current time range.
+<h3 id="classes">Classes</h3>
+<p><a href="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html">DecoupleableInterpolatingFramedClock</a></p>
+<p>Adds the ability to keep the clock running even when the underlying source has stopped or cannot handle the current time range.
 This is handled by performing seeks on the underlying source and checking whether they were successful or not.
 On failure to seek, we take over with an internal clock until control can be returned to the actual source.</p>
 <p>This clock type removes the requirement of having a source set.</p>
-<p>If a <a class="xref" href="osu.Framework.Timing.InterpolatingFramedClock.html#osu_Framework_Timing_InterpolatingFramedClock_Source">Source</a> is set, it is presumed that we have exclusive control over operations on it.
-This is used to our advantage to allow correct <a class="xref" href="osu.Framework.Timing.DecoupleableInterpolatingFramedClock.html#osu_Framework_Timing_DecoupleableInterpolatingFramedClock_IsRunning">IsRunning</a> state tracking in the event of cross-thread communication delays (with an audio thread, for instance).</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.DecouplingFramedClock.html">DecouplingFramedClock</a></dt>
-      <dd><p>A decoupling clock allows taking an existing clock which has seek limitations and provides
+<p>If a <span class="xref">osu.Framework.Timing.InterpolatingFramedClock.Source</span> is set, it is presumed that we have exclusive control over operations on it.
+This is used to our advantage to allow correct <span class="xref">osu.Framework.Timing.DecoupleableInterpolatingFramedClock.IsRunning</span> state tracking in the event of cross-thread communication delays (with an audio thread, for instance).</p>
+<p><a href="osu.Framework.Timing.DecouplingFramedClock.html">DecouplingFramedClock</a></p>
+<p>A decoupling clock allows taking an existing clock which has seek limitations and provides
 a controllable encapsulated view of that clock with the ability to seek and track time
 outside of the normally seekable bounds.</p>
 <p>Put simply, it will take a Track which can only track time from 0..trackLength and allow
 both negative seeks and seeks beyond trackLength. It will also allow time to continue counting
 beyond the end of the track even when not explicitly seeked.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.FramedClock.html">FramedClock</a></dt>
-      <dd><p>Takes a clock source and separates time reading on a per-frame level.
+<p><a href="osu.Framework.Timing.FramedClock.html">FramedClock</a></p>
+<p>Takes a clock source and separates time reading on a per-frame level.
 The CurrentTime value will only change on initial construction and whenever ProcessFrame is run.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.FramedOffsetClock.html">FramedOffsetClock</a></dt>
-      <dd><p>A framed clock which allows an offset to be added or subtracted from an underlying source clock's time.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.InterpolatingFramedClock.html">InterpolatingFramedClock</a></dt>
-      <dd><p>A clock which uses an internal stopwatch to interpolate (smooth out) a source.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.ManualClock.html">ManualClock</a></dt>
-      <dd><p>A completely manual clock implementation. Everything is settable.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.ManualFramedClock.html">ManualFramedClock</a></dt>
-      <dd><p>A completely manual framed clock implementation. Everything is settable.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.OffsetClock.html">OffsetClock</a></dt>
-      <dd></dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.StopwatchClock.html">StopwatchClock</a></dt>
-      <dd></dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.ThrottledFrameClock.html">ThrottledFrameClock</a></dt>
-      <dd><p>A FrameClock which will limit the number of frames processed by adding Thread.Sleep calls on each ProcessFrame.</p>
-</dd>
-    </dl>
-    <h3 id="structs">
-Structs
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.FrameTimeInfo.html">FrameTimeInfo</a></dt>
-      <dd></dd>
-    </dl>
-    <h3 id="interfaces">
-Interfaces
-</h3>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.IAdjustableClock.html">IAdjustableClock</a></dt>
-      <dd><p>A clock that can be started, stopped, reset etc.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.IClock.html">IClock</a></dt>
-      <dd><p>A basic clock for keeping time.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.IFrameBasedClock.html">IFrameBasedClock</a></dt>
-      <dd><p>A clock which will only update its current time when a frame process is triggered.
+<p><a href="osu.Framework.Timing.FramedOffsetClock.html">FramedOffsetClock</a></p>
+<p>A framed clock which allows an offset to be added or subtracted from an underlying source clock's time.</p>
+<p><a href="osu.Framework.Timing.InterpolatingFramedClock.html">InterpolatingFramedClock</a></p>
+<p>A clock which uses an internal stopwatch to interpolate (smooth out) a source.</p>
+<p><a href="osu.Framework.Timing.ManualClock.html">ManualClock</a></p>
+<p>A completely manual clock implementation. Everything is settable.</p>
+<p><a href="osu.Framework.Timing.ManualFramedClock.html">ManualFramedClock</a></p>
+<p>A completely manual framed clock implementation. Everything is settable.</p>
+<p><a href="osu.Framework.Timing.OffsetClock.html">OffsetClock</a></p>
+<p><a href="osu.Framework.Timing.StopwatchClock.html">StopwatchClock</a></p>
+<p><a href="osu.Framework.Timing.ThrottledFrameClock.html">ThrottledFrameClock</a></p>
+<p>A FrameClock which will limit the number of frames processed by adding Thread.Sleep calls on each ProcessFrame.</p>
+<h3 id="structs">Structs</h3>
+<p><a href="osu.Framework.Timing.FrameTimeInfo.html">FrameTimeInfo</a></p>
+<h3 id="interfaces">Interfaces</h3>
+<p><a href="osu.Framework.Timing.IAdjustableClock.html">IAdjustableClock</a></p>
+<p>A clock that can be started, stopped, reset etc.</p>
+<p><a href="osu.Framework.Timing.IClock.html">IClock</a></p>
+<p>A basic clock for keeping time.</p>
+<p><a href="osu.Framework.Timing.IFrameBasedClock.html">IFrameBasedClock</a></p>
+<p>A clock which will only update its current time when a frame process is triggered.
 Useful for keeping a consistent time state across an individual update.</p>
-</dd>
-    </dl>
-    <dl class="jumplist">
-      <dt><a class="xref" href="osu.Framework.Timing.ISourceChangeableClock.html">ISourceChangeableClock</a></dt>
-      <dd><p>A clock which has a source that can be changed.</p>
-</dd>
-    </dl>
-
+<p><a href="osu.Framework.Timing.ISourceChangeableClock.html">ISourceChangeableClock</a></p>
+<p>A clock which has a source that can be changed.</p>
 
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/BashhScriptKid/unofficial.osuframework.web/blob/master/api/osu.Framework.Timing.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
 
       </div>
 

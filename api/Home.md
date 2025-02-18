@@ -7,7 +7,7 @@ This area should cover most details on each class and method in the API that you
 
 Do note that the contents are generated (with docfx) so there may be missing or outdated informations
 
-Also check out the [wiki](../osu.Framework.Wiki/Home.md) to get a quick start!
+Also check out the [wiki](../osu-framework.wiki/Home.md) to get a quick start!
 
 
 </br>
@@ -16,7 +16,7 @@ Also check out the [wiki](../osu.Framework.Wiki/Home.md) to get a quick start!
 </br>
 
 > Last updated: 
-> <b><time>2023-10-04 23:22</time></b>
+> <b><time>2025-02-17 22:55</time></b>
 > 
 > Last commit reference build: 
 [e4cbe94](https://github.com/BashhScriptKid/unofficial.osuframework.web/commit/e4cbe949e87e6d72fbbcfca07a545abe8a1c1a37)
