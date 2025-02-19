@@ -1,0 +1,44 @@
+# <a id="osu_Framework_Input_IRequireHighFrequencyMousePosition"></a> Interface IRequireHighFrequencyMousePosition
+
+Namespace: [osu.Framework.Input](osu.Framework.Input.md)  
+Assembly: osu.Framework.dll  
+
+Guarantees that a drawable will receive at least one OnMouseMove position update
+per update frame (in addition to any input-triggered occurrences).
+
+```csharp
+public interface IRequireHighFrequencyMousePosition : IDrawable, ITransformable
+```
+
+#### Implements
+
+[IDrawable](osu.Framework.Graphics.IDrawable.md), 
+[ITransformable](osu.Framework.Graphics.Transforms.ITransformable.md)
+
+#### Extension Methods
+
+[TransformableExtensions.Animate<IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition, params TransformSequence<IRequireHighFrequencyMousePosition\>.Generator\[\]\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_Animate\_\_1\_\_\_0\_osu\_Framework\_Graphics\_Transforms\_TransformSequence\_\_\_0\_\_Generator\_\_\_), 
+[ObjectExtensions.AsNonNull<IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition?\)](osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.md\#osu\_Framework\_Extensions\_ObjectExtensions\_ObjectExtensions\_AsNonNull\_\_1\_\_\_0\_), 
+[TransformableExtensions.Delay<IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition, double, params TransformSequence<IRequireHighFrequencyMousePosition\>.Generator\[\]\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_Delay\_\_1\_\_\_0\_System\_Double\_osu\_Framework\_Graphics\_Transforms\_TransformSequence\_\_\_0\_\_Generator\_\_\_), 
+[ExtensionMethods.GetDescription\(object\)](osu.Framework.Extensions.ExtensionMethods.md\#osu\_Framework\_Extensions\_ExtensionMethods\_GetDescription\_System\_Object\_), 
+[ExtensionMethods.GetLocalisableDescription<IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition\)](osu.Framework.Extensions.ExtensionMethods.md\#osu\_Framework\_Extensions\_ExtensionMethods\_GetLocalisableDescription\_\_1\_\_\_0\_), 
+[ObjectExtensions.IsNotNull<IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition\)](osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.md\#osu\_Framework\_Extensions\_ObjectExtensions\_ObjectExtensions\_IsNotNull\_\_1\_\_\_0\_), 
+[ObjectExtensions.IsNull<IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition\)](osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.md\#osu\_Framework\_Extensions\_ObjectExtensions\_ObjectExtensions\_IsNull\_\_1\_\_\_0\_), 
+[TransformableExtensions.Loop<IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition, double, int, params TransformSequence<IRequireHighFrequencyMousePosition\>.Generator\[\]\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_Loop\_\_1\_\_\_0\_System\_Double\_System\_Int32\_osu\_Framework\_Graphics\_Transforms\_TransformSequence\_\_\_0\_\_Generator\_\_\_), 
+[TransformableExtensions.Loop<IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition, double, params TransformSequence<IRequireHighFrequencyMousePosition\>.Generator\[\]\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_Loop\_\_1\_\_\_0\_System\_Double\_osu\_Framework\_Graphics\_Transforms\_TransformSequence\_\_\_0\_\_Generator\_\_\_), 
+[TransformableExtensions.Loop<IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition, params TransformSequence<IRequireHighFrequencyMousePosition\>.Generator\[\]\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_Loop\_\_1\_\_\_0\_osu\_Framework\_Graphics\_Transforms\_TransformSequence\_\_\_0\_\_Generator\_\_\_), 
+[TransformableExtensions.Loop<IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition, double\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_Loop\_\_1\_\_\_0\_System\_Double\_), 
+[TransformableExtensions.MakeTransform<IRequireHighFrequencyMousePosition, TValue\>\(IRequireHighFrequencyMousePosition, string, TValue, double, Easing, string\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_MakeTransform\_\_2\_\_\_0\_System\_String\_\_\_1\_System\_Double\_osu\_Framework\_Graphics\_Easing\_System\_String\_), 
+[TransformableExtensions.MakeTransform<IRequireHighFrequencyMousePosition, TEasing, TValue\>\(IRequireHighFrequencyMousePosition, string, TValue, double, in TEasing, string\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_MakeTransform\_\_3\_\_\_0\_System\_String\_\_\_2\_System\_Double\_\_\_1\_\_System\_String\_), 
+[TransformableExtensions.PopulateTransform<TValue, IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition, Transform<TValue, DefaultEasingFunction, IRequireHighFrequencyMousePosition\>, TValue, double, Easing\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_PopulateTransform\_\_2\_\_\_1\_osu\_Framework\_Graphics\_Transforms\_Transform\_\_\_0\_osu\_Framework\_Graphics\_Transforms\_DefaultEasingFunction\_\_\_1\_\_\_\_0\_System\_Double\_osu\_Framework\_Graphics\_Easing\_), 
+[TransformableExtensions.PopulateTransform<TValue, TEasing, IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition, Transform<TValue, TEasing, IRequireHighFrequencyMousePosition\>, TValue, double, in TEasing\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_PopulateTransform\_\_3\_\_\_2\_osu\_Framework\_Graphics\_Transforms\_Transform\_\_\_0\_\_\_1\_\_\_2\_\_\_\_0\_System\_Double\_\_\_1\_\_), 
+[TransformableExtensions.TransformBindableTo<IRequireHighFrequencyMousePosition, TValue\>\(IRequireHighFrequencyMousePosition, Bindable<TValue\>, TValue, double, Easing\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_TransformBindableTo\_\_2\_\_\_0\_osu\_Framework\_Bindables\_Bindable\_\_\_1\_\_\_\_1\_System\_Double\_osu\_Framework\_Graphics\_Easing\_), 
+[TransformableExtensions.TransformBindableTo<IRequireHighFrequencyMousePosition, TValue, TEasing\>\(IRequireHighFrequencyMousePosition, Bindable<TValue\>, TValue, double, in TEasing\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_TransformBindableTo\_\_3\_\_\_0\_osu\_Framework\_Bindables\_Bindable\_\_\_1\_\_\_\_1\_System\_Double\_\_\_2\_\_), 
+[TransformableExtensions.TransformTo<IRequireHighFrequencyMousePosition, TValue\>\(IRequireHighFrequencyMousePosition, string, TValue, double, Easing\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_TransformTo\_\_2\_\_\_0\_System\_String\_\_\_1\_System\_Double\_osu\_Framework\_Graphics\_Easing\_), 
+[TransformableExtensions.TransformTo<IRequireHighFrequencyMousePosition, TValue, TEasing\>\(IRequireHighFrequencyMousePosition, string, TValue, double, in TEasing, string\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_TransformTo\_\_3\_\_\_0\_System\_String\_\_\_1\_System\_Double\_\_\_2\_\_System\_String\_), 
+[TransformableExtensions.TransformTo<IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition, Transform\)](osu.Framework.Graphics.TransformableExtensions.md\#osu\_Framework\_Graphics\_TransformableExtensions\_TransformTo\_\_1\_\_\_0\_osu\_Framework\_Graphics\_Transforms\_Transform\_), 
+[ContainerExtensions.WithChild<IRequireHighFrequencyMousePosition, TChild\>\(IRequireHighFrequencyMousePosition, TChild\)](osu.Framework.Graphics.Containers.ContainerExtensions.md\#osu\_Framework\_Graphics\_Containers\_ContainerExtensions\_WithChild\_\_2\_\_\_0\_\_\_1\_), 
+[ContainerExtensions.WithChildren<IRequireHighFrequencyMousePosition, TChild\>\(IRequireHighFrequencyMousePosition, IEnumerable<TChild\>\)](osu.Framework.Graphics.Containers.ContainerExtensions.md\#osu\_Framework\_Graphics\_Containers\_ContainerExtensions\_WithChildren\_\_2\_\_\_0\_System\_Collections\_Generic\_IEnumerable\_\_\_1\_\_), 
+[ContainerExtensions.Wrap<IRequireHighFrequencyMousePosition, TChild\>\(IRequireHighFrequencyMousePosition, TChild\)](osu.Framework.Graphics.Containers.ContainerExtensions.md\#osu\_Framework\_Graphics\_Containers\_ContainerExtensions\_Wrap\_\_2\_\_\_0\_\_\_1\_), 
+[EnumerableExtensions.Yield<IRequireHighFrequencyMousePosition\>\(IRequireHighFrequencyMousePosition\)](osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.md\#osu\_Framework\_Extensions\_IEnumerableExtensions\_EnumerableExtensions\_Yield\_\_1\_\_\_0\_)
+

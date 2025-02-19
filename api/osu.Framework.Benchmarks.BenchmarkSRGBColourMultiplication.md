@@ -1,0 +1,96 @@
+# <a id="osu_Framework_Benchmarks_BenchmarkSRGBColourMultiplication"></a> Class BenchmarkSRGBColourMultiplication
+
+Namespace: [osu.Framework.Benchmarks](osu.Framework.Benchmarks.md)  
+Assembly: osu.Framework.Benchmarks.dll  
+
+```csharp
+public class BenchmarkSRGBColourMultiplication : BenchmarkTest
+```
+
+#### Inheritance
+
+[object](https://learn.microsoft.com/dotnet/api/system.object) ← 
+[BenchmarkTest](osu.Framework.Benchmarks.BenchmarkTest.md) ← 
+[BenchmarkSRGBColourMultiplication](osu.Framework.Benchmarks.BenchmarkSRGBColourMultiplication.md)
+
+#### Inherited Members
+
+[BenchmarkTest.SetUp\(\)](osu.Framework.Benchmarks.BenchmarkTest.md\#osu\_Framework\_Benchmarks\_BenchmarkTest\_SetUp), 
+[BenchmarkTest.RunBenchmark\(\)](osu.Framework.Benchmarks.BenchmarkTest.md\#osu\_Framework\_Benchmarks\_BenchmarkTest\_RunBenchmark), 
+[object.Equals\(object?\)](https://learn.microsoft.com/dotnet/api/system.object.equals\#system\-object\-equals\(system\-object\)), 
+[object.Equals\(object?, object?\)](https://learn.microsoft.com/dotnet/api/system.object.equals\#system\-object\-equals\(system\-object\-system\-object\)), 
+[object.GetHashCode\(\)](https://learn.microsoft.com/dotnet/api/system.object.gethashcode), 
+[object.GetType\(\)](https://learn.microsoft.com/dotnet/api/system.object.gettype), 
+[object.MemberwiseClone\(\)](https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone), 
+[object.ReferenceEquals\(object?, object?\)](https://learn.microsoft.com/dotnet/api/system.object.referenceequals), 
+[object.ToString\(\)](https://learn.microsoft.com/dotnet/api/system.object.tostring)
+
+#### Extension Methods
+
+[ObjectExtensions.AsNonNull<BenchmarkSRGBColourMultiplication\>\(BenchmarkSRGBColourMultiplication?\)](osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.md\#osu\_Framework\_Extensions\_ObjectExtensions\_ObjectExtensions\_AsNonNull\_\_1\_\_\_0\_), 
+[ExtensionMethods.GetDescription\(object\)](osu.Framework.Extensions.ExtensionMethods.md\#osu\_Framework\_Extensions\_ExtensionMethods\_GetDescription\_System\_Object\_), 
+[ExtensionMethods.GetLocalisableDescription<BenchmarkSRGBColourMultiplication\>\(BenchmarkSRGBColourMultiplication\)](osu.Framework.Extensions.ExtensionMethods.md\#osu\_Framework\_Extensions\_ExtensionMethods\_GetLocalisableDescription\_\_1\_\_\_0\_), 
+[ObjectExtensions.IsNotNull<BenchmarkSRGBColourMultiplication\>\(BenchmarkSRGBColourMultiplication\)](osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.md\#osu\_Framework\_Extensions\_ObjectExtensions\_ObjectExtensions\_IsNotNull\_\_1\_\_\_0\_), 
+[ObjectExtensions.IsNull<BenchmarkSRGBColourMultiplication\>\(BenchmarkSRGBColourMultiplication\)](osu.Framework.Extensions.ObjectExtensions.ObjectExtensions.md\#osu\_Framework\_Extensions\_ObjectExtensions\_ObjectExtensions\_IsNull\_\_1\_\_\_0\_), 
+[ContainerExtensions.WithChild<BenchmarkSRGBColourMultiplication, TChild\>\(BenchmarkSRGBColourMultiplication, TChild\)](osu.Framework.Graphics.Containers.ContainerExtensions.md\#osu\_Framework\_Graphics\_Containers\_ContainerExtensions\_WithChild\_\_2\_\_\_0\_\_\_1\_), 
+[ContainerExtensions.WithChildren<BenchmarkSRGBColourMultiplication, TChild\>\(BenchmarkSRGBColourMultiplication, IEnumerable<TChild\>\)](osu.Framework.Graphics.Containers.ContainerExtensions.md\#osu\_Framework\_Graphics\_Containers\_ContainerExtensions\_WithChildren\_\_2\_\_\_0\_System\_Collections\_Generic\_IEnumerable\_\_\_1\_\_), 
+[ContainerExtensions.Wrap<BenchmarkSRGBColourMultiplication, TChild\>\(BenchmarkSRGBColourMultiplication, TChild\)](osu.Framework.Graphics.Containers.ContainerExtensions.md\#osu\_Framework\_Graphics\_Containers\_ContainerExtensions\_Wrap\_\_2\_\_\_0\_\_\_1\_), 
+[EnumerableExtensions.Yield<BenchmarkSRGBColourMultiplication\>\(BenchmarkSRGBColourMultiplication\)](osu.Framework.Extensions.IEnumerableExtensions.EnumerableExtensions.md\#osu\_Framework\_Extensions\_IEnumerableExtensions\_EnumerableExtensions\_Yield\_\_1\_\_\_0\_)
+
+## Methods
+
+### <a id="osu_Framework_Benchmarks_BenchmarkSRGBColourMultiplication_MultiplyConstNonOne"></a> MultiplyConstNonOne\(\)
+
+```csharp
+[Benchmark(56, "C:\\Users\\Bashh.DESKTOP-J6F27TL\\Documents\\! Codes\\unofficial.osuframework.web\\osu-framework\\osu.Framework.Benchmarks\\BenchmarkSRGBColourMultiplication.cs")]
+public SRGBColour MultiplyConstNonOne()
+```
+
+#### Returns
+
+ SRGBColour
+
+### <a id="osu_Framework_Benchmarks_BenchmarkSRGBColourMultiplication_MultiplyConstOne"></a> MultiplyConstOne\(\)
+
+```csharp
+[Benchmark(50, "C:\\Users\\Bashh.DESKTOP-J6F27TL\\Documents\\! Codes\\unofficial.osuframework.web\\osu-framework\\osu.Framework.Benchmarks\\BenchmarkSRGBColourMultiplication.cs")]
+public SRGBColour MultiplyConstOne()
+```
+
+#### Returns
+
+ SRGBColour
+
+### <a id="osu_Framework_Benchmarks_BenchmarkSRGBColourMultiplication_MultiplyNonWhite"></a> MultiplyNonWhite\(\)
+
+```csharp
+[Benchmark(32, "C:\\Users\\Bashh.DESKTOP-J6F27TL\\Documents\\! Codes\\unofficial.osuframework.web\\osu-framework\\osu.Framework.Benchmarks\\BenchmarkSRGBColourMultiplication.cs")]
+public SRGBColour MultiplyNonWhite()
+```
+
+#### Returns
+
+ SRGBColour
+
+### <a id="osu_Framework_Benchmarks_BenchmarkSRGBColourMultiplication_MultiplyWhite"></a> MultiplyWhite\(\)
+
+```csharp
+[Benchmark(38, "C:\\Users\\Bashh.DESKTOP-J6F27TL\\Documents\\! Codes\\unofficial.osuframework.web\\osu-framework\\osu.Framework.Benchmarks\\BenchmarkSRGBColourMultiplication.cs")]
+public SRGBColour MultiplyWhite()
+```
+
+#### Returns
+
+ SRGBColour
+
+### <a id="osu_Framework_Benchmarks_BenchmarkSRGBColourMultiplication_MultiplyWhiteWithOpacity"></a> MultiplyWhiteWithOpacity\(\)
+
+```csharp
+[Benchmark(44, "C:\\Users\\Bashh.DESKTOP-J6F27TL\\Documents\\! Codes\\unofficial.osuframework.web\\osu-framework\\osu.Framework.Benchmarks\\BenchmarkSRGBColourMultiplication.cs")]
+public SRGBColour MultiplyWhiteWithOpacity()
+```
+
+#### Returns
+
+ SRGBColour
+
