@@ -9,6 +9,7 @@ jobs:
   Update-framework-repo:
     runs-on: ubuntu-latest
     outputs:
+      commit_hash: ${{ steps.bump.outputs.commit_hash }}
       skip_build: ${{ steps.bump.outputs.skip_build }}
 
     steps:
@@ -37,10 +38,13 @@ jobs:
           if [ "$current_commit" = "$remote_commit" ]; then
             echo "Submodule is up to date. Skipping build."
             echo "skip_build=true" >> "$GITHUB_OUTPUT"
+            echo "commit_hash=$current_commit" >> "$GITHUB_OUTPUT"
             exit 0
-          else
-            echo "skip_build=false" >> "$GITHUB_OUTPUT"
           fi
+
+          # Not up to date — set outputs
+          echo "skip_build=false" >> "$GITHUB_OUTPUT"
+          echo "commit_hash=$remote_commit" >> "$GITHUB_OUTPUT"
 
           if ! git pull --ff-only origin master; then
             echo "Fast-forward failed, attempting rebase..."
@@ -56,7 +60,7 @@ jobs:
           git config user.email "actions@github.com"
 
           remote_commit=$(git -C osu-framework rev-parse HEAD)
-          COMMIT_MSG="Midnight chore: Bump osu!framework submodule to ${remote_commit}"
+          COMMIT_MSG="Midnight chore: Bump osu!framework submodule to ${remote_commit:0:5}"
 
           git add osu-framework
           git commit -m "$COMMIT_MSG" -m "https://github.com/ppy/osu-framework/commit/${remote_commit}" || echo "Nothing to commit"
@@ -86,7 +90,7 @@ jobs:
         run: docfx metadata ./docfx.json
 
       - name: Update API markdown info
-        run: ./.github/workflows/writeHome.sh ./api/Home.md
+        run: ./.github/workflows/writeHome.sh ./api/Home.md ${{needs.Update-framework-repo.outputs.commit_hash}}
 
       - name: Commit and push updated docs
         run: |
