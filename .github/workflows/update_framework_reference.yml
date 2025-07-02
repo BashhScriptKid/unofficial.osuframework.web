@@ -70,11 +70,32 @@ jobs:
     needs: Update-framework-repo
     if: needs.Update-framework-repo.outputs.skip_build == 'false'
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+            fetch-depth: 0 # Needed for full commit info in submodules
+            submodules: recursive
 
+      - name: Update submodule
+        run: |
+          git submodule sync
+          git submodule update --init --recursive
+
+      - name: Bump osu!framework submodule
+        id: bump
+        run: |
+          cd osu-framework
+          git fetch origin master
+
+          if ! git pull --ff-only origin master; then
+            echo "Fast-forward failed, attempting rebase..."
+            git pull --rebase origin master
+          fi
+
+          cd ..
+          
       - name: Set up .NET SDK
         uses: actions/setup-dotnet@v3.4.2
         with:
