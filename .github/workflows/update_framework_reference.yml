@@ -94,6 +94,11 @@ jobs:
             git pull --rebase origin master
           fi
 
+      - name: Restore project workload
+        run: |
+          sudo dotnet workload restore
+          dotnet restore
+          
           cd ..
           
       - name: Set up .NET SDK
