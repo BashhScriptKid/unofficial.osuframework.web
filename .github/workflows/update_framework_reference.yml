@@ -90,7 +90,7 @@ jobs:
         run: docfx metadata ./docfx.json
 
       - name: Update API markdown info
-        run: ./.github/workflows/writeHome.sh ./api/Home.md ${{needs.Update-framework-repo.outputs.commit_hash}}
+        run: chmod +x ./.github/workflows/writeHome.sh && ./.github/workflows/writeHome.sh ./api/Home.md ${{needs.Update-framework-repo.outputs.commit_hash}}
 
       - name: Commit and push updated docs
         run: |
