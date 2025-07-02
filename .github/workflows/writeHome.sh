@@ -24,3 +24,5 @@ Also check out the [wiki](../osu-framework.wiki/Home.md) to get a quick start!
 > Last commit reference build:
 [${2:0:5}](https://github.com/BashhScriptKid/unofficial.osuframework.web/commit/$2)
 <!-- can be either a commit link from origin or upstream -->
+EOF
+echo "Written to $1."
