@@ -74,7 +74,7 @@ To loop a certain transform sequence, append either of `.Loop(millisecondsPause)
 
 ## `.Loop(millisecondsPause)`
 
-This will loop the transform sequence indefinitely, with a defined pause between each iteration of the loop, until it's [interrupted by one of the interruption methods](wiki/Transforms-and-tweening#interrupting-transforms).
+This will loop the transform sequence indefinitely, with a defined pause between each iteration of the loop, until it's [interrupted by one of the interruption methods](#interrupting-transforms).
 
 ```csharp
 var box = new Box { Size = new Vector2(50) }

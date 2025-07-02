@@ -180,7 +180,7 @@ The `OnFocusLost()` method is unconditionally invoked on the un-focused `Drawabl
 
 # Input event hierarchy
 
-The following hierarchical relationship of input events can be useful to know when drilling down with the [aggregate event handler](#Aggregate-event-handler).
+The following hierarchical relationship of input events can be useful to know when drilling down with the [aggregate event handler](#aggregate-event-handler).
 
 ```mermaid
 classDiagram

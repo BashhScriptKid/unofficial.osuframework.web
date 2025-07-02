@@ -1,11 +1,11 @@
 # Setting up Fonts
 
-This tutorial assumes you have completed [setting up your first project](/ppy/osu-framework/wiki/Setting-up-your-first-project) and [setting up compiled resource stores](Setting-Up-Compiled-Resource-Stores).
+This tutorial assumes you have completed [setting up your first project](./Setting-up-your-first-project.md) and [setting up compiled resource stores](./Setting-Up-Compiled-Resource-Stores.m).
 
 In this tutorial, you will learn how to add custom fonts into your game and use it:
-* [Converting to binary font and texture files](#converting-to-bianry-font-and-texture-files)
+* [Converting to binary font and texture files](#converting-to-binary-font-and-texture-files)
 * [Adding the custom font to the font store](#adding-the-custom-font-to-the-font-store)
-* [Using specific font for sprite text](#using-specific-font-for-sprite-text)
+* [Using specific font for sprite text](#using-specific-font-for-a-sprite-text)
 
 # Converting to binary font and texture files
 For the custom font to be recognized inside osu!framework, you will have to convert it into a binary font with texture files alongside it.

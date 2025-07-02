@@ -15,7 +15,7 @@
 
 ## Developing a game using osu!framework
 
-If you are interested in **creating a project** using the framework, please start from the [getting started](osu-framework.Wiki/Setting-up-your-first-project.md) wiki resources (or jump straight over to the [project templates](https://github.com/ppy/osu-framework/tree/master/osu.Framework.Templates)). You can either start off from an empty project, or take a peek at a working sample game. Either way, full project structure, cross-platform support, and  a testing setup are included!
+If you are interested in **creating a project** using the framework, please start from the [getting started](./osu-framework.wiki/Setting-up-your-first-project.md) wiki resources (or jump straight over to the [project templates](https://github.com/ppy/osu-framework/tree/master/osu.Framework.Templates)). You can either start off from an empty project, or take a peek at a working sample game. Either way, full project structure, cross-platform support, and  a testing setup are included!
 
 The rest of the information on this page is related to working *on* the framework, not *using* it!
 
@@ -58,7 +58,7 @@ We love to reward quality contributions. If you have made a large contribution, 
 
 ## Licence
 
-This framework is licensed under the [MIT licence](https://opensource.org/licenses/MIT). Please see [the licence file](./LICENCE) for more information. [tl;dr](https://tldrlegal.com/license/mit-license) you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.
+This framework is licensed under the [MIT licence](https://opensource.org/licenses/MIT). Please see [the licence file](https://github.com/ppy/osu-framework/blob/master/LICENCE) for more information. [tl;dr](https://tldrlegal.com/license/mit-license) you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.
 
 The BASS audio library (a dependency of this framework) is a commercial product. While it is free for non-commercial use, please ensure to [obtain a valid licence](http://www.un4seen.com/bass.html#license) if you plan on distributing any application using it commercially.
 

@@ -88,7 +88,7 @@ public class MyStore
 }
 ```
 
-Members marked with either of these attributes are cached or resolved in their respective classes before the [`[BackgroundDependencyLoader]`](#using-BackgroundDependencyLoader-to-resolve)-annotated method is run.
+Members marked with either of these attributes are cached or resolved in their respective classes before the [`[BackgroundDependencyLoader]`](#using-backgrounddependencyloader-to-resolve)-annotated method is run.
 
 ### Using `[BackgroundDependencyLoader]` to resolve
 
