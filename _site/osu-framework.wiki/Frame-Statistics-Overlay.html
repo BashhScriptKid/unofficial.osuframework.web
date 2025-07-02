@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Frame Statistics | osu!framework </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Frame Statistics | osu!framework ">
+      
+      
+      <link rel="icon" href="../assets/nupkg icon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BashhScriptKid/unofficial.osuframework.web/blob/master/osu-framework.wiki/Frame-Statistics-Overlay.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../assets/docfx_icon.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="frame-statistics">Frame Statistics</h1>
+
+<p><strong>osu!framework</strong> provides in-picture debugging overlays, toggled in <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/FrameworkActionContainer.cs"><code>FrameworkActionContainer</code></a>. One such overlay is the <strong>Frame Statistics Overlay</strong>.</p>
+<ul>
+<li><a href="#overview">Overview</a>
+<ul>
+<li><a href="#minimized-view">Minimized View</a></li>
+<li><a href="#extended-view">Extended View</a></li>
+<li><a href="#detailed-view">Detailed View</a></li>
+</ul>
+</li>
+<li><a href="#statistics">Statistics</a>
+<ul>
+<li><a href="#update">Update</a></li>
+<li><a href="#draw">Draw</a></li>
+<li><a href="#audio">Audio</a></li>
+<li><a href="#input">Input</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="overview">Overview</h2>
+<h3 id="minimized-view">Minimized View</h3>
+<p><kbd>Ctrl</kbd>+<kbd>F11</kbd> toggles the frame statistics overlay. The first time you toggle this overlay, you will be greeted with a minimized version of it. This view displays the frame timings of the four main gameplay threads: Audio, Input, Update and Draw.
+<img src="https://cdn.discordapp.com/attachments/318886668889227266/538264876561203200/Screen_Shot_2019-01-25_at_3.31.08_PM.png" alt=""></p>
+<h3 id="extended-view">Extended View</h3>
+<p><strong>Pressing <kbd>Ctrl</kbd>+<kbd>F11</kbd> again</strong> will expand the overlay, displaying a graph of the activity on each thread.
+<img src="https://cdn.discordapp.com/attachments/318886668889227266/538266387014221824/Screen_Shot_2019-01-25_at_4.58.06_PM.png" alt=""></p>
+<h3 id="detailed-view">Detailed View</h3>
+<p><strong>Holding down the control key</strong> in this state will expand the graph further, allowing you to peek at how many events of each type are occurring on each thread.
+<img src="https://cdn.discordapp.com/attachments/318886668889227266/538268818951241754/unknown-2_copy.png" alt=""></p>
+<h2 id="statistics">Statistics</h2>
+<p>The statistics for this overlay are defined in <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Statistics/FrameStatistics.cs"><code>FrameStatistics</code></a>.
+These statistics are counted per frame.</p>
+<h3 id="update">Update</h3>
+<ul>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Caching/Cached.cs#L73">Invalidations</a>: The number of Invalidate() calls performed on <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Caching/Cached.cs">cached</a> objects.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Caching/Cached.cs#L83">Refreshes</a>: The number of Validate() calls performed on <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Caching/Cached.cs">cached</a> objects.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Drawable.cs#L1691">DrawNodeCtor</a>: The number of new <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/DrawNode.cs">DrawNodes</a> created.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Drawable.cs#L1697">DrawNodeAppl</a>: The number of <a href="https://github.com/ppy/osu-framework/blob/naster/osu.Framework/Graphics/DrawNode.cs">DrawNodes</a> updated due to a disagreement between the <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Drawable.cs">Drawable's</a> Invalidation ID and the node's Invalidation ID.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Containers/CompositeDrawable.cs#L721">ScheduleInvk</a>: The number of <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Threading/Scheduler.cs">timed tasks</a> ran from the queue.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/InputManager.cs#L288">InputQueue</a>: The number of <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/UserInputManager.cs">UserInputManagers</a> handling non-positional (keybinding specific) input.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/InputManager.cs#L315">PositionalIQ</a>: The number of <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/UserInputManager.cs">UserInputManagers</a> handling positional input.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/bd4ac6890a1ac7b2ec492b80975a0a2e61d9fcb0/osu.Framework/Graphics/Containers/CompositeDrawable.cs#L718">CCL</a>: The number of times a drawable's <a href="https://github.com/ppy/osu-framework/blob/9bbc6a81a2b8f035e2b043d3718d2db6e4f1d868/osu.Framework/Graphics/Drawable.cs#L373-L376">life state</a> is checked and updated.</li>
+</ul>
+<h3 id="draw">Draw</h3>
+<ul>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/OpenGL/GLWrapper.cs#L169">VBufBinds</a>: The number of <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/OpenGL/GLWrapper.cs">OpenGL</a> <a href="https://www.khronos.org/opengl/wiki/Vertex_Specification#Vertex_Buffer_Object">VBO</a> bind calls.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Batches/VertexBatch.cs#L107">VBufOverflow</a>: The number of times the vertex count has exceeded the number allocated for the current VBO.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/OpenGL/GLWrapper.cs#L218">TextureBinds</a>: The number of times <a href="https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindTexture.xhtml">glBindTexture</a> has been called.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Batches/VertexBatch.cs#L139">DrawCalls</a>: The number of active draw calls.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/OpenGL/GLWrapper.cs#L620">ShaderBinds</a>: The number of times <a href="https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glUseProgram.xhtml">glUseProgram</a> has been called.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/Batches/VertexBatch.cs#L140">VerticesDraw</a>: The number of vertices drawn using <a href="https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glDrawElements.xhtml">glDrawElements</a>.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/OpenGL/Buffers/VertexBuffer.cs#L121">VerticesUpl</a>: The number of vertices updated using <a href="https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glBufferSubData.xml">glBufferSubData</a>.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Graphics/OpenGL/Textures/TextureGLSingle.cs#L265">Pixels</a>: The amount of area covered by drawn elements.</li>
+</ul>
+<h3 id="audio">Audio</h3>
+<ul>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Audio/AudioComponent.cs#L63">TasksRun</a>: The number of actions in queue.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Audio/Track/Track.cs#L126">Tracks</a>: The number of <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Audio/Track/Track.cs">tracks</a> being updated.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Audio/Sample/SampleManager.cs#L64">Samples</a>: The number of <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Audio/Sample/Sample.cs">samples</a> being updated.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Audio/Sample/SampleChannel.cs#L46">SChannels</a>: The number of <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Audio/Sample/SampleChannel.cs">SampleChannels</a> being updated.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Audio/AudioComponent.cs#L64">Components</a>: The number of <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Audio/AudioComponent.cs">AudioComponents</a> being updated.</li>
+</ul>
+<h3 id="input">Input</h3>
+<ul>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Handlers/Mouse/OsuTKMouseHandlerBase.cs#L57">MouseEvents</a>: The number of mouse events being handled by <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Handlers/InputHandler.cs">InputHandlers</a>.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Handlers/Keyboard/OsuTKKeyboardHandler.cs#L58">KeyEvents</a>: The number of keyboard events being handled by <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Handlers/InputHandler.cs">InputHandlers</a>.</li>
+<li><a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Handlers/Joystick/OsuTKJoystickHandler.cs#L43">JoystickEvents</a>: The number of joystick events being handled by <a href="https://github.com/ppy/osu-framework/blob/master/osu.Framework/Input/Handlers/InputHandler.cs">InputHandlers</a>.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BashhScriptKid/unofficial.osuframework.web/blob/master/osu-framework.wiki/Frame-Statistics-Overlay.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          osu!framework is licensed under the MIT licence, docs powered by docfx
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
