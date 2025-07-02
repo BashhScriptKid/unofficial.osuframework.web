@@ -93,10 +93,12 @@ jobs:
             echo "Fast-forward failed, attempting rebase..."
             git pull --rebase origin master
           fi
+          cd ..
 
       - name: Restore project workload
         run: |
-          sudo dotnet workload restore
+          cd ./osu-framework
+          sudo dotnet workload restore --project ./osu-framework
           dotnet restore
           
           cd ..
