@@ -1,6 +1,6 @@
 # Setting up Fonts
 
-This tutorial assumes you have completed [setting up your first project](./Setting-up-your-first-project.md) and [setting up compiled resource stores](./Setting-Up-Compiled-Resource-Stores.m).
+This tutorial assumes you have completed [setting up your first project](./Setting-up-your-first-project.md) and [setting up compiled resource stores](./Setting-Up-Compiled-Resource-Stores.md).
 
 In this tutorial, you will learn how to add custom fonts into your game and use it:
 * [Converting to binary font and texture files](#converting-to-binary-font-and-texture-files)
