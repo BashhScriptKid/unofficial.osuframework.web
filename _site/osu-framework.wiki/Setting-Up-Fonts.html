@@ -106,21 +106,65 @@
 </thead>
 </table>
 <hr>
-<p>Next, you have to set up the tool into using and converting your custom font properly by going into the font settings and selecting your custom font and check/uncheck <code>Bold</code> and <code>Italic</code>, and going into the export settings and selecting <code>Binary</code> as the font descriptor. <strong>Without it, your game might hard crash when loading the font.</strong>
-| <img src="https://i.imgur.com/IcJNRGd.png" alt="Set up tool settings #1"> | <img src="https://i.imgur.com/XfD7Duq.png" alt="Set up tool settings #2"> |
-|---|---|
-| <img src="https://i.imgur.com/psnr8Nq.png" alt="Set up tool settings #3"> | <img src="https://i.imgur.com/Oz33p4Y.png" alt="Set up tool settings #4"> |</p>
+<table>
+<thead>
+<tr>
+<th><img src="https://i.imgur.com/IcJNRGd.png" alt="Set up tool settings #1"></th>
+<th><img src="https://i.imgur.com/XfD7Duq.png" alt="Set up tool settings #2"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://i.imgur.com/psnr8Nq.png" alt="Set up tool settings #3"></td>
+<td><img src="https://i.imgur.com/Oz33p4Y.png" alt="Set up tool settings #4"></td>
+</tr>
+</tbody>
+</table>
 <hr>
-<p>And lastly, converting the font can be accomplished by clicking on <code>Save bitmap font as</code> and saving it wherever you want inside your <code>Resources</code> folder, which then will be pointed out to later on:
-| <img src="https://i.imgur.com/hznyByh.png" alt="Save binary font #1"> | <img src="https://i.imgur.com/FtsomGj.png" alt="Save binary font #2"> |
-|---|---|</p>
-<p>The font file name should be saved in the following pattern:
-| <code>FontUsage.Family</code> | <code>FontUsage.Weight</code> | <code>FontUsage.Italics</code> | Font file name |
-|--------------------|:------------------:|:-------------------:|:--------------:|
-| MyAwesomeFont | <code>&quot;Light&quot;</code> | <code>false</code> | <code>MyAwesomeFont-Light</code> |
-| MyAwesomeFont | <code>&quot;Bold&quot;</code> | <code>true</code> | <code>MyAwesomeFont-BoldItalic</code> |
-| MyAwesomeFont | <code>null</code> | <code>false</code> | <code>MyAwesomeFont</code> |
-| MyAwesomeFont | <code>null</code> | <code>true</code> | <code>MyAwesomeFont-Italic</code> |</p>
+<table>
+<thead>
+<tr>
+<th><img src="https://i.imgur.com/hznyByh.png" alt="Save binary font #1"></th>
+<th><img src="https://i.imgur.com/FtsomGj.png" alt="Save binary font #2"></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>FontUsage.Family</code></th>
+<th style="text-align: center;"><code>FontUsage.Weight</code></th>
+<th style="text-align: center;"><code>FontUsage.Italics</code></th>
+<th style="text-align: center;">Font file name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MyAwesomeFont</td>
+<td style="text-align: center;"><code>&quot;Light&quot;</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>MyAwesomeFont-Light</code></td>
+</tr>
+<tr>
+<td>MyAwesomeFont</td>
+<td style="text-align: center;"><code>&quot;Bold&quot;</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>MyAwesomeFont-BoldItalic</code></td>
+</tr>
+<tr>
+<td>MyAwesomeFont</td>
+<td style="text-align: center;"><code>null</code></td>
+<td style="text-align: center;"><code>false</code></td>
+<td style="text-align: center;"><code>MyAwesomeFont</code></td>
+</tr>
+<tr>
+<td>MyAwesomeFont</td>
+<td style="text-align: center;"><code>null</code></td>
+<td style="text-align: center;"><code>true</code></td>
+<td style="text-align: center;"><code>MyAwesomeFont-Italic</code></td>
+</tr>
+</tbody>
+</table>
 <h1 id="adding-the-custom-font-to-the-font-store">Adding the custom font to the font store</h1>
 <p>To use the custom font inside your game, you'll need to add it to the <code>FontStore</code> by specifying:</p>
 <ul>
@@ -176,18 +220,43 @@ Certain font names may end up getting mangled by the .NET embedded resource mach
 <hr>
 <p>Now you're almost done, by default, the first font to be added to your game will automatically be used for all <code>SpriteText</code>s in your game, but you may want to use a specific font.</p>
 <h1 id="using-specific-font-for-a-sprite-text">Using specific font for a sprite text</h1>
-<p>To use a specific font for a sprite text, all you have to do is construct a new <code>FontUsage</code> with:
-| Parameter | Description | Value in this tutorial |
-| --------- | ----------- | ---------------------- |
-| <code>family</code> | The font name | <code>MyAwesomeFont</code> |
-| <code>weight</code> | The weight of the font in string | <code>null</code> |
-| <code>italics</code> | Whether the font is of italic type | <code>false</code> |</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Value in this tutorial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>family</code></td>
+<td>The font name</td>
+<td><code>MyAwesomeFont</code></td>
+</tr>
+<tr>
+<td><code>weight</code></td>
+<td>The weight of the font in string</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td><code>italics</code></td>
+<td>Whether the font is of italic type</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
 <p>Check the font file name table example above for learning more.</p>
 <p>There are also other <code>FontUsage</code> properties you can modify for rendering the font differently (e.g. <code>size</code> and <code>fixedWidth</code>)</p>
 <p>This opens up for a lot of ways to implement the usage of your custom font, either by adding static properties for constructing the <code>FontUsage</code> or adding a static function with enumeration parameters that you can pick your font and its properties from, all based on your preference.</p>
-<p>Here's an example of creating a sprite text using the custom font with <code>size: 40f</code>:
-| <img src="https://i.imgur.com/1MV0AZC.png" alt="Code"> | <img src="https://i.imgur.com/LnohnKj.png" alt="Preview">
-|---|---|</p>
+<table>
+<thead>
+<tr>
+<th><img src="https://i.imgur.com/1MV0AZC.png" alt="Code"></th>
+<th><img src="https://i.imgur.com/LnohnKj.png" alt="Preview"></th>
+</tr>
+</thead>
+</table>
 
 </article>
 

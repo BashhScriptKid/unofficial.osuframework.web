@@ -974,21 +974,101 @@ public sealed class CustomBindable : BaseBindable
 <p>This however require from all consumers to store the <code>LocalisableString</code>s in static providing classes, similar to <a href="https://github.com/ppy/osu/tree/master/osu.Game/Localisation">osu!'s <code>Strings</code> classes</a>.</p>
 <p>Benchmarks:</p>
 <ul>
-<li><p><code>EnumLocalisationMapper</code>:
-|                    Method | Times |          Mean |       Error |       StdDev |        Median |
-|-------------------------- |------ |--------------:|------------:|-------------:|--------------:|
-| GetLocalisableDescription |     1 |      6.866 us |   0.5021 us |     1.383 us |      6.316 us |
-| GetLocalisableDescription |    10 |     93.360 us |   4.9223 us |    13.883 us |     92.744 us |
-| GetLocalisableDescription |   100 |    817.775 us |  31.0268 us |    90.996 us |    812.132 us |
-| GetLocalisableDescription |  1000 | 10,794.319 us | 820.1783 us | 2,392.498 us | 10,718.182 us |</p>
+<li>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Times</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">Error</th>
+<th style="text-align: right;">StdDev</th>
+<th style="text-align: right;">Median</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GetLocalisableDescription</td>
+<td>1</td>
+<td style="text-align: right;">6.866 us</td>
+<td style="text-align: right;">0.5021 us</td>
+<td style="text-align: right;">1.383 us</td>
+<td style="text-align: right;">6.316 us</td>
+</tr>
+<tr>
+<td>GetLocalisableDescription</td>
+<td>10</td>
+<td style="text-align: right;">93.360 us</td>
+<td style="text-align: right;">4.9223 us</td>
+<td style="text-align: right;">13.883 us</td>
+<td style="text-align: right;">92.744 us</td>
+</tr>
+<tr>
+<td>GetLocalisableDescription</td>
+<td>100</td>
+<td style="text-align: right;">817.775 us</td>
+<td style="text-align: right;">31.0268 us</td>
+<td style="text-align: right;">90.996 us</td>
+<td style="text-align: right;">812.132 us</td>
+</tr>
+<tr>
+<td>GetLocalisableDescription</td>
+<td>1000</td>
+<td style="text-align: right;">10,794.319 us</td>
+<td style="text-align: right;">820.1783 us</td>
+<td style="text-align: right;">2,392.498 us</td>
+<td style="text-align: right;">10,718.182 us</td>
+</tr>
+</tbody>
+</table>
 </li>
-<li><p><code>LocalisableDescription</code>:
-|                    Method | Times |         Mean |       Error |      StdDev |       Median |
-|-------------------------- |------ |-------------:|------------:|------------:|-------------:|
-| GetLocalisableDescription |     1 |     4.631 us |   0.1148 us |   0.3331 us |     4.514 us |
-| GetLocalisableDescription |    10 |    54.555 us |   1.3511 us |   3.9412 us |    54.440 us |
-| GetLocalisableDescription |   100 |   540.643 us |  15.9231 us |  45.6864 us |   539.138 us |
-| GetLocalisableDescription |  1000 | 7,218.708 us | 270.7659 us | 768.1179 us | 7,192.596 us |</p>
+<li>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Times</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">Error</th>
+<th style="text-align: right;">StdDev</th>
+<th style="text-align: right;">Median</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GetLocalisableDescription</td>
+<td>1</td>
+<td style="text-align: right;">4.631 us</td>
+<td style="text-align: right;">0.1148 us</td>
+<td style="text-align: right;">0.3331 us</td>
+<td style="text-align: right;">4.514 us</td>
+</tr>
+<tr>
+<td>GetLocalisableDescription</td>
+<td>10</td>
+<td style="text-align: right;">54.555 us</td>
+<td style="text-align: right;">1.3511 us</td>
+<td style="text-align: right;">3.9412 us</td>
+<td style="text-align: right;">54.440 us</td>
+</tr>
+<tr>
+<td>GetLocalisableDescription</td>
+<td>100</td>
+<td style="text-align: right;">540.643 us</td>
+<td style="text-align: right;">15.9231 us</td>
+<td style="text-align: right;">45.6864 us</td>
+<td style="text-align: right;">539.138 us</td>
+</tr>
+<tr>
+<td>GetLocalisableDescription</td>
+<td>1000</td>
+<td style="text-align: right;">7,218.708 us</td>
+<td style="text-align: right;">270.7659 us</td>
+<td style="text-align: right;">768.1179 us</td>
+<td style="text-align: right;">7,192.596 us</td>
+</tr>
+</tbody>
+</table>
 </li>
 </ul>
 <h1 id="20217210"><a href="https://github.com/ppy/osu-framework/releases/tag/2021.721.0">2021.721.0</a></h1>
