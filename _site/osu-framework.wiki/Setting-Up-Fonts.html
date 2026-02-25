@@ -106,6 +106,7 @@
 </thead>
 </table>
 <hr>
+<p>Next, you have to set up the tool into using and converting your custom font properly by going into the font settings and selecting your custom font and check/uncheck <code>Bold</code> and <code>Italic</code>, and going into the export settings and selecting <code>Binary</code> as the font descriptor. <strong>Without it, your game might hard crash when loading the font.</strong></p>
 <table>
 <thead>
 <tr>
@@ -121,6 +122,7 @@
 </tbody>
 </table>
 <hr>
+<p>And lastly, converting the font can be accomplished by clicking on <code>Save bitmap font as</code> and saving it wherever you want inside your <code>Resources</code> folder, which then will be pointed out to later on:</p>
 <table>
 <thead>
 <tr>
@@ -129,6 +131,7 @@
 </tr>
 </thead>
 </table>
+<p>The font file name should be saved in the following pattern:</p>
 <table>
 <thead>
 <tr>
@@ -220,6 +223,7 @@ Certain font names may end up getting mangled by the .NET embedded resource mach
 <hr>
 <p>Now you're almost done, by default, the first font to be added to your game will automatically be used for all <code>SpriteText</code>s in your game, but you may want to use a specific font.</p>
 <h1 id="using-specific-font-for-a-sprite-text">Using specific font for a sprite text</h1>
+<p>To use a specific font for a sprite text, all you have to do is construct a new <code>FontUsage</code> with:</p>
 <table>
 <thead>
 <tr>
@@ -249,6 +253,7 @@ Certain font names may end up getting mangled by the .NET embedded resource mach
 <p>Check the font file name table example above for learning more.</p>
 <p>There are also other <code>FontUsage</code> properties you can modify for rendering the font differently (e.g. <code>size</code> and <code>fixedWidth</code>)</p>
 <p>This opens up for a lot of ways to implement the usage of your custom font, either by adding static properties for constructing the <code>FontUsage</code> or adding a static function with enumeration parameters that you can pick your font and its properties from, all based on your preference.</p>
+<p>Here's an example of creating a sprite text using the custom font with <code>size: 40f</code>:</p>
 <table>
 <thead>
 <tr>
