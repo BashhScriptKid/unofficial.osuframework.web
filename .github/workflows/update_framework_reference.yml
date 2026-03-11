@@ -66,7 +66,7 @@ jobs:
           git commit -m "$COMMIT_MSG" -m "https://github.com/ppy/osu-framework/commit/${remote_commit}" || echo "Nothing to commit"
           git push
 
-  Update-reference:
+Update-reference:
     needs: Update-framework-repo
     if: needs.Update-framework-repo.outputs.skip_build == 'false'
     runs-on: ubuntu-latest
@@ -75,7 +75,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-            fetch-depth: 0 # Needed for full commit info in submodules
+            fetch-depth: 0
             submodules: recursive
 
       - name: Update submodule
@@ -95,18 +95,13 @@ jobs:
           fi
           cd ..
 
-      - name: Restore project workload
-        run: |
-          cd ./osu-framework
-          sudo dotnet workload restore --project ./osu-framework
-          dotnet restore
-          
-          cd ..
-          
       - name: Set up .NET SDK
-        uses: actions/setup-dotnet@v3.4.2
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore ./osu-framework/osu-framework.sln
 
       - name: Install DocFX
         run: dotnet tool update -g docfx
