@@ -18,34 +18,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Required to compare full commit hashes
-
-      - name: Restore last commit hash cache
-        id: restore_commit_cache
-        uses: actions/cache/restore@v4
-        with:
-          path: ./.github/workflows/LAST_COMMIT
-          key: last-commit-hash
+          fetch-depth: 0
 
       - name: Compare current commit to last recorded
         id: commitComparison
         run: |
-          current_commit=$(git rev-parse HEAD)
-
-          if [ -f .github/workflows/LAST_COMMIT ] && [ "$current_commit" = "$(cat .github/workflows/LAST_COMMIT)" ]; then
-            echo "No new commits. Skipping build."
+          recent=$(git log --since="24 hours ago" --oneline --author="GitHub Actions" --grep="Midnight chore" | wc -l)
+          if [ "$recent" -eq 0 ]; then
+            echo "No relevant commits in the last 24 hours. Skipping build."
             echo "skip_build=true" >> "$GITHUB_OUTPUT"
           else
-            echo "$current_commit" > ./.github/workflows/LAST_COMMIT
             echo "skip_build=false" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Save updated commit hash cache
-        if: steps.commitComparison.outputs.skip_build == 'false'
-        uses: actions/cache/save@v4
-        with:
-          path: ./.github/workflows/LAST_COMMIT
-          key: last-commit-hash
     
   Build-site:
     runs-on: ubuntu-latest
