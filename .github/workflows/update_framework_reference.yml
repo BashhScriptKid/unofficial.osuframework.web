@@ -5,6 +5,9 @@ on:
     - cron: '0 0 * * *' # Midnight UTC
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   Update-framework-repo:
     runs-on: ubuntu-latest
@@ -78,22 +81,13 @@ jobs:
               fetch-depth: 0
               submodules: recursive
 
+        - name: Pull updated branch
+          run: git pull --ff-only
+
         - name: Update submodule
           run: |
             git submodule sync
             git submodule update --init --recursive
-
-        - name: Bump osu!framework submodule
-          id: bump
-          run: |
-            cd osu-framework
-            git fetch origin master
-
-            if ! git pull --ff-only origin master; then
-              echo "Fast-forward failed, attempting rebase..."
-              git pull --rebase origin master
-            fi
-            cd ..
 
         - name: Set up .NET SDK
           uses: actions/setup-dotnet@v4
@@ -113,10 +107,10 @@ jobs:
           run: docfx metadata ./docfx.json
 
         - name: Generate grouped API toc
-          run: ./.github/workflows/generate_api_toc.sh ./api
+          run: bash ./.github/workflows/generate_api_toc.sh ./api
 
         - name: Update API markdown info
-          run: chmod +x ./.github/workflows/writeHome.sh && ./.github/workflows/writeHome.sh ./api/Home.md ${{needs.Update-framework-repo.outputs.commit_hash}}
+          run: bash ./.github/workflows/writeHome.sh ./api/Home.md ${{needs.Update-framework-repo.outputs.commit_hash}}
 
         - name: Commit and push updated docs
           run: |
